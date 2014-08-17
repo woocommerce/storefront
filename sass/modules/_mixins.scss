@@ -1,0 +1,65 @@
+%clearfix {
+    &:before, &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin hoverActiveFocus() {
+    &:hover, &:active, &:focus {
+        @content;
+    }
+}
+
+@mixin message($glyph: "\f05a", $color: $info)
+{
+    padding: 1em 1.618em 1em 3.631em;
+    background: rgba( $color, .7 );
+    margin-bottom: 2.618em;
+    font-weight: normal;
+    position: relative;
+    color: #fff;
+    text-shadow: none;
+
+    &:before {
+        font-family: 'FontAwesome';
+        content: $glyph;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 2.618em;
+        background: rgba( darken( $color, 3% ), .7 );
+        text-align: center;
+        padding: 1em .618em;
+        font-weight: normal !important;
+        text-shadow: none;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: underline;
+
+        &:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    a.button {
+        background: #fff;
+        color: $color;
+        font-size: .857em;
+        padding: .202em .618em;
+
+        &:hover,
+        &:active {
+            background: rgba(#fff,.8);
+            color: $color;
+        }
+    }
+}

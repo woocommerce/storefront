@@ -1,0 +1,17 @@
+// Some common variables and mixins to get you started.
+// Variables allow you to re-use colors, sizes, and other values without repeating
+// yourself. This means that changes that should be small, such as tweaking the
+// coloring or the sizing, can be done in one place, not all over the stylesheet.
+
+$base-font: 		"Helvetica Neue", sans-serif;
+$header-font: 		$base-font;
+
+// base color scheme
+$body-background: 	#FCFCFC;
+$color_body: 		#424a4c;
+$color_links: 		#a46497;
+$color_border:		rgba(0,0,0,0.2);
+$error: 			#e2401c;
+$success: 			#17ba6f;
+$info: 				#3D9CD2;
+$vspacing: 			1.618em;

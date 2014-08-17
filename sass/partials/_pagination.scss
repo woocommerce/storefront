@@ -1,0 +1,20 @@
+/**
+ * Pagination
+ */
+
+.site-main [class*="navigation"] {
+	margin: 0 0 $vspacing;
+	overflow: hidden;
+
+	.nav-previous {
+		float: left;
+		width: 50%;
+	}
+
+	.nav-next {
+		float: right;
+		text-align: right;
+		width: 50%;
+	}
+
+}

@@ -1,0 +1,102 @@
+/**
+ * Content
+ */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 4.236em;
+	padding-bottom: 3.631em;
+	border-bottom: 6px solid rgba(0,0,0,0.05);
+
+	.wp-post-image {
+		margin-bottom: 1.618em;
+	}
+
+	.entry-header {
+		border-bottom: 3px solid $color_body;
+		margin-bottom: 3.631em;
+
+		h1 {
+			border-bottom: 1px solid $color_border;
+			padding-bottom: .618em;
+			margin-bottom: 3px;
+		}
+
+		.posted-on,
+		.byline {
+			font-size: .857em;
+
+			a {
+				font-weight: 400;
+			}
+		}
+	}
+}
+.byline,
+.updated {
+	display: none;
+}
+.single, .group-blog {
+	.byline {
+		display: inline;
+	}
+}
+.page-links {
+	clear: both;
+	margin: 0 0 $vspacing;
+}
+
+.cat-links,
+.tags-links,
+.comments-link,
+.edit-link {
+	display: block;
+	margin-bottom: 1em;
+
+	&:before {
+		content: "\f114";
+		font-family: "FontAwesome";
+		margin-right: .53em;
+		display: inline-block;
+		width: 1em;
+		color: lighten( $color_body, 50% );
+	}
+}
+
+.tags-links {
+	&:before {
+		content: "\f02b";
+	}
+}
+
+.comments-link {
+	&:before {
+		content: "\f0e5";
+	}
+}
+
+.edit-link {
+	&:before {
+		content: "\f040";
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.hentry.type-post {
+		@include clearfix;
+
+		.entry-meta {
+			@include gs-span(c, 1, 2, (1, 9));
+			@include gs-float(c, left);
+			margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+			font-size: .857em;
+		}
+
+		.entry-content {
+			@include gs-span(c, 3, 9, (1, 9));
+			@include gs-float(c, left);
+			margin-right: 0;
+		}
+	}
+}

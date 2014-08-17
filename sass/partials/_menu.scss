@@ -1,0 +1,256 @@
+/**
+ * Main Naivgation
+ */
+
+/**
+ * General Menu Styles
+ */
+.main-navigation,
+.secondary-navigation {
+
+}
+
+.secondary-navigation {
+	display: none;
+}
+
+.menu-toggle {
+	cursor: pointer;
+	margin: 1.618em auto;
+	display: block;
+	width: 100%;
+	text-align: left;
+	padding: 1.387em 1.618em;
+}
+
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+	display: block;
+}
+
+.main-navigation ul {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation,
+	.secondary-navigation {
+		clear: both;
+		display: block;
+		width: 100%;
+
+		// first level
+		ul {
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+			display: block;
+
+			li {
+				position: relative;
+				display: inline-block;
+				float: left;
+
+				a {
+					display: block;
+				}
+
+				// link hover
+				&:hover {
+					> a { }
+					> ul { display: block; }
+				}
+
+			}
+
+			// second level
+			ul {
+				display: none;
+				float: left;
+				position: absolute;
+				top: 100%;
+				left: 0;
+				z-index: 99999;
+				background-color: #2c2d33;
+
+				&:hover {
+					> a {};
+				}
+
+				li {
+					a {
+						width: 200px;
+						&:hover {};
+					}
+				}
+
+				// third level
+				ul {
+					left: 100%;
+					top: 0;
+				}
+
+			}
+		}
+
+	}
+
+	ul.menu {
+		li {
+			&.current-menu-item {
+				> a {
+					color: $color_body;
+				}
+			}
+
+			a {
+				color: #fff;
+			}
+		}
+	}
+
+	/**
+	 * Primary Navigation
+	 */
+	.main-navigation {
+		position: relative;
+
+		ul.menu {
+			> li {
+				// The first level menu item
+				> a {
+					padding: 0 1em 2.244em;
+				}
+
+				&:first-child {
+					margin-left: -1em;
+				}
+
+				&.menu-item-has-children {
+					&:hover {
+						&:after {
+							display: block;
+						}
+					}
+
+					> a {
+						&:after {
+							// The dropdown indicator
+							content: "\f107";
+							font-family: "FontAwesome";
+							margin-left: 1em;
+							line-height: 1;
+						}
+					}
+				}
+			}
+
+			ul {
+				// Dropdowns
+				background-color: #2c2d33;
+
+				li {
+					background-color: rgba(0,0,0,0.025);
+
+					a {
+						padding: .857em 1em;
+					}
+
+					&:last-child {
+						border-bottom: 0;
+					}
+
+					&.menu-item-has-children {
+						> a {
+							&:after {
+								// The dropdown indicator
+								content: "\f105";
+								font-family: "FontAwesome";
+								float: right;
+							}
+						}
+					}
+				}
+
+				ul {
+					margin-left: 0;
+					border-top-color: $color_border;
+					box-shadow: none;
+				}
+
+				a:hover,
+				li:hover > a {
+					background-color: rgba(0,0,0,0.025);
+				}
+			}
+		}
+
+		a {
+			padding: 0 1em 2.244em;
+			color: #fff;
+		}
+	}
+
+	/**
+	 * Secondary Navigation
+	 */
+	.secondary-navigation {
+		margin: 0;
+		width: auto;
+		clear: none;
+		line-height: 1;
+
+		.menu {
+			font-size: .857em;
+			width: auto;
+			float: right;
+
+			> li:hover > a {
+				text-decoration: none;
+			}
+
+			> li > a {
+				position: relative;
+
+				&:before {
+					content: "";
+					display: block;
+					width: 1px;
+					height: 25%;
+					background-color: rgba(#fff,0.1);
+					position: absolute;
+					top: 37.5%;
+					left: 0;
+				}
+			}
+
+			> li:first-child a:before {
+				display: none;
+			}
+
+			ul {
+				background-color: #2c2d33;
+				border: 1px solid rgba(0,0,0,0.1);
+				padding: .618em 0;
+
+				a {
+					padding: .326em .857em;
+				}
+			}
+
+			a {
+				padding: 1.387em .857em;
+				font-weight: 400;
+				color: lighten( $color_body, 20% );
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,179 @@
+/**
+ * General Layout
+ */
+
+@media screen and (min-width: 768px) {
+	.site {
+		overflow-x: hidden;
+	}
+
+	.woocommerce-active {
+		.site-header {
+			.site-branding,
+			.site-logo-anchor {
+				display: block;
+				@include gs-span(c, 1, 3);
+				@include gs-float(c, left);
+
+				img {
+					height: auto;
+					max-width: 100%;
+				}
+			}
+
+			.secondary-navigation {
+				@include gs-span(c, 4, 9);
+				@include gs-float(c, left);
+			}
+
+			.site-search {
+				@include gs-span(c, 10, 12);
+				@include gs-float(c, right);
+				margin-left: 0;
+			}
+
+			.main-navigation {
+				@include gs-span(c, 1, 9);
+				@include gs-float(c, left);
+			}
+
+			.site-header-cart {
+				@include gs-span(c, 10, 12);
+				@include gs-float(c, right);
+				margin-left: 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.site-description {
+		margin-bottom: 0;
+	}
+
+	.site-branding,
+	.site-search,
+	.site-header-cart,
+	.site-logo-anchor {
+		margin-bottom: 2.618em;
+	}
+
+	.col-full {
+		@include clearfix;
+		max-width: 65.141em;
+		margin: 0 auto;
+	}
+
+	.site-content {
+		@include clearfix;
+	}
+
+	.content-area {
+		@include gs-span(c, 1, 9);
+		@include gs-float(c, left);
+	}
+
+	.widget-area {
+		@include gs-span(c, 10, 12);
+		@include gs-float(c, left);
+		margin-right: 0;
+	}
+
+	.right-sidebar {
+		.content-area {
+			@include gs-span(c, 1, 9);
+			@include gs-float(c, left);
+		}
+
+		.widget-area {
+			@include gs-span(c, 10, 12);
+			@include gs-float(c, left);
+			margin-right: 0;
+		}
+	}
+
+	.left-sidebar {
+		.content-area {
+			@include gs-span(c, 4, 12);
+			@include gs-float(c, right);
+		}
+
+		.widget-area {
+			@include gs-span(c, 1, 3);
+			@include gs-float(c, right);
+			margin-left: 0;
+		}
+	}
+
+	.content-area,
+	.widget-area {
+		margin-bottom: 2.618em;
+	}
+
+	/**
+	 * Full width & homepage template
+	 */
+	.page-template-template-fullwidth-php,
+	.page-template-template-homepage-php {
+		.content-area {
+			float: none;
+			width: 100%;
+			margin-right: 0;
+		}
+	}
+
+	/**
+	 * Footer widgets
+	 */
+	.footer-widgets {
+		@include clearfix;
+		padding-top: 4.236em;
+		border-bottom: 3px solid rgba(0,0,0,0.05);
+
+		&.col-2 {
+			.block {
+				@include gs-span(c, 1, 6);
+				@include gs-float(c, left);
+
+				&.footer-widget-2 {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&.col-3 {
+			.block {
+				@include gs-span(c, 1, 4);
+				@include gs-float(c, left);
+
+				&.footer-widget-3 {
+					margin-right: 0;
+				}
+			}
+		}
+
+		&.col-4 {
+			.block {
+				@include gs-span(c, 1, 3);
+				@include gs-float(c, left);
+
+				&.footer-widget-4 {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.col-full {
+		margin-left: 1.618em;
+		margin-right: 1.618em;
+	}
+}
+
+@media screen and (max-width: 65.141em) {
+	.col-full {
+		margin-left: 1.618em;
+		margin-right: 1.618em;
+	}
+}

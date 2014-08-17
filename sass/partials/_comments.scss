@@ -1,0 +1,226 @@
+/**
+ * Comments
+ */
+
+#comments {
+	padding-top: 2.618em;
+
+	.comments-title {
+		border-bottom: 1px dotted $color_border;
+		padding-bottom: .53em;
+		margin-bottom: 1.618em;
+	}
+
+	.comment-list {
+		list-style: none;
+		margin-left: 0;
+
+		.comment-body {
+			@include clearfix;
+		}
+
+		.comment-content {
+			padding-bottom: 3.631em;
+			margin-bottom: 3.631em;
+		}
+
+		.comment-meta {
+			.avatar {
+				margin-bottom: 1em;
+			}
+
+			a.comment-date {
+				color: lighten( $color_body, 20% );
+				font-size: .857em;
+
+				&:hover {
+					color: $color_body;
+				}
+			}
+
+			cite {
+				font-style: normal;
+				clear: both;
+				display: block;
+			}
+		}
+
+		.reply {
+			@include clearfix;
+			font-size: .857em;
+			margin-bottom: 1.618em;
+
+			.comment-edit-link {
+				border-left: 1px solid $color_border;
+			}
+
+			a {
+				color: lighten( $color_body, 20% );
+				background-color: rgba(0,0,0,0.025);
+				padding: .53em 1em;
+				float: left;
+
+				&:hover {
+					color: $color_body;
+				}
+			}
+		}
+	}
+}
+
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {}
+
+#respond {
+	margin-bottom: 4.236em;
+	clear: both;
+
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		width: 30.75%;
+		margin-right: 3.8%;
+		float: left;
+
+		input {
+			width: 100%;
+		}
+	}
+
+	.comment-form-url {
+		margin-right: 0;
+	}
+
+	.comment-form-comment {
+		clear: both;
+	}
+}
+
+
+@media screen and (min-width: 768px) {
+	.comment-list {
+		@include clearfix;
+
+		.comment {
+			clear: both;
+		}
+
+		.comment-meta {
+			@include gs-span(c, 1, 2, (1, 9));
+			@include gs-float(c, left);
+			margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+
+			.avatar {
+				@include gs-span(c, 1, 1, (1, 2));
+				@include gs-float(c, left);
+			}
+		}
+
+		.comment-content,
+		#respond {
+			@include gs-span(c, 3, 9, (1, 9));
+			@include gs-float(c, left);
+			margin-right: 0;
+		}
+
+		#respond {
+			float: right;
+		}
+
+		.reply {
+			clear: both;
+		}
+
+		ol.children {
+			@include gs-span(c, 2, 9, (1, 9));
+			@include gs-float(c, right);
+			list-style: none;
+
+			.comment-meta {
+				@include gs-span(c, 2, 3, (2, 9));
+				@include gs-float(c, left);
+				margin-right: gs-adjust(c, gs-gutter(c), (2, 9), true);
+			}
+
+			.comment-content,
+			#respond {
+				@include gs-span(c, 4, 9, (2, 9));
+				@include gs-float(c, left);
+				margin-right: 0;
+			}
+
+			#respond {
+				float: right;
+			}
+
+			ol.children {
+				@include gs-span(c, 3, 9, (2, 9));
+				@include gs-float(c, right);
+
+				.comment-meta {
+					@include gs-span(c, 3, 4, (3, 9));
+					@include gs-float(c, left);
+					margin-right: gs-adjust(c, gs-gutter(c), (3, 9), true);
+				}
+
+				.comment-content,
+				#respond {
+					@include gs-span(c, 5, 9, (3, 9));
+					@include gs-float(c, left);
+					margin-right: 0;
+				}
+
+				#respond {
+					float: right;
+				}
+
+				ol.children {
+					@include gs-span(c, 4, 9, (3, 9));
+					@include gs-float(c, right);
+
+					.comment-meta {
+						@include gs-span(c, 4, 5, (4, 9));
+						@include gs-float(c, left);
+						margin-right: gs-adjust(c, gs-gutter(c), (4, 9), true);
+					}
+
+					.comment-content,
+					#respond {
+						@include gs-span(c, 6, 9, (4, 9));
+						@include gs-float(c, left);
+						margin-right: 0;
+					}
+
+					#respond {
+						float: right;
+					}
+
+					ol.children {
+						@include gs-span(c, 5, 9, (4, 9));
+						@include gs-float(c, right);
+
+						.comment-meta {
+							@include gs-span(c, 5, 6, (5, 9));
+							@include gs-float(c, left);
+							margin-right: gs-adjust(c, gs-gutter(c), (5, 9), true);
+						}
+
+						.comment-content,
+						#respond {
+							@include gs-span(c, 7, 9, (5, 9));
+							@include gs-float(c, left);
+							margin-right: 0;
+						}
+
+						#respond {
+							float: right;
+						}
+					}
+				}
+			}
+		}
+	}
+}
