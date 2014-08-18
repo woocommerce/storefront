@@ -52,9 +52,7 @@ function storefront_footer_widgets() {
 function storefront_credit() {
 	?>
 	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'storefront' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'storefront' ), 'WordPress' ); ?></a>
-		<span class="sep"> | </span>
-		<?php printf( __( 'Theme: %1$s by %2$s.', 'storefront' ), 'storefront', '<a href="http://woothemes.com" rel="designer">woothemes</a>' ); ?>
+		<?php printf( __( 'This site uses the %1$s theme, designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">woothemes</a>' ); ?>
 	</div><!-- .site-info -->
 	<?php
 }
