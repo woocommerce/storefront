@@ -87,7 +87,7 @@ class storefront_welcome {
 				<h1 style="margin-right: 0;"><?php echo __( 'Welcome to ', 'storefront' ) . '<br /><strong>Storefront</strong> <sup style="font-weight: bold; font-size: 50%; padding: 5px 10px; color: #666; background: #fff;">' . $storefront['Version'] . '</sup>'; ?></h1>
 
 				<p style="font-size: 1.2em;"><?php _e( 'Awesome! You\'ve decided to use Storefront to enrich your WooCommerce store design.', 'storefront' ); ?></p>
-				<p><?php _e( 'Whether you\'re a store owner, WordPress developer, or both - we hope you enjoy the deep integration with WooCommerce core (including several popular WooCommerce extensions), plus the flexible design and extensible codebase that Storefront provides.', 'storefront' ); ?>
+				<p><?php _e( 'Whether you\'re a store owner, WordPress developer, or both - we hope you enjoy Storefront\'s deep integration with WooCommerce core (including several popular WooCommerce extensions), plus the flexible design and extensible codebase that this theme provides.', 'storefront' ); ?>
 			</div>
 
 			<div class="col-2 last-feature">

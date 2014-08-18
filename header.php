@@ -23,9 +23,6 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'storefront' ); ?></a>
 
 	<?php
-	/**
-	 * @hooked storefront_secondary_navigation - 10
-	 */
 	do_action( 'storefront_before_header' ); ?>
 
 	<header id="masthead" class="site-header" role="banner" <?php if ( get_header_image() != '' ) { echo 'style="background-image: url(' . get_header_image() . ')";'; } ?>>
@@ -33,10 +30,12 @@
 
 			<?php
 			/**
-			 * @hooked storefront_site_branding - 10
-			 * @hooked storefront_product_search - 20
-			 * @hooked storefront_header_cart - 30
-			 * @hooked storefront_primary_navigation - 40
+			 * @hooked storefront_social_icons - 10
+			 * @hooked storefront_site_branding - 20
+			 * @hooked storefront_secondary_navigation - 30
+			 * @hooked storefront_product_search - 40
+			 * @hooked storefront_primary_navigation - 50
+			 * @hooked storefront_header_cart - 60
 			 */
 			do_action( 'storefront_header' ); ?>
 

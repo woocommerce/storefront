@@ -3125,7 +3125,8 @@ fieldset {
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 3%;
+    clear: both; }
     .woocommerce-active .site-header .site-branding img,
     .woocommerce-active .site-header .site-logo-anchor img {
       height: auto;
@@ -3182,6 +3183,18 @@ fieldset {
   .site-header-cart,
   .site-logo-anchor {
     margin-bottom: 2.618em; }
+
+  .site-header .subscribe-and-connect-connect {
+    float: right;
+    margin-bottom: 1em; }
+    .site-header .subscribe-and-connect-connect .icons {
+      list-style: none;
+      margin: 0; }
+      .site-header .subscribe-and-connect-connect .icons a {
+        font-size: 1em !important; }
+      .site-header .subscribe-and-connect-connect .icons li {
+        margin: 0 0 0 .53em !important;
+        display: inline-block; }
 
   .col-full {
     max-width: 65.141em;
