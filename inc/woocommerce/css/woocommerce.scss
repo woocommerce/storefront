@@ -306,12 +306,10 @@ ul.products {
 				border-left-width: 0;
 				display: inline-block;
 				padding: .327em .857em;
-				border: 1px solid transparent;
 
 				&.current {
 					font-weight: 700;
-					border-color: $color_border;
-					background-color: rgba(0,0,0,0.05);
+					background-color: rgba(0,0,0,0.0125);
 				}
 
 				&.dots {

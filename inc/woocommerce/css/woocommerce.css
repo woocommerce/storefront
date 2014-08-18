@@ -120,7 +120,7 @@ ul.products {
   .single-product div.product .woocommerce-product-rating {
     margin-bottom: 2.618em;
     line-height: 1;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0 0 1.618em;
     margin-top: -.618em; }
     .single-product div.product .woocommerce-product-rating:after {
@@ -143,7 +143,7 @@ ul.products {
   list-style: none;
   margin-left: 0; }
   #reviews .commentlist li {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     margin-bottom: 3.631em; }
     #reviews .commentlist li time {
       color: #717f83; }
@@ -206,7 +206,7 @@ ul.products {
  */
 .woocommerce-pagination {
   padding: 1em 0;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-width: 1px 0;
   text-align: center; }
   .woocommerce-pagination .page-numbers {
@@ -221,19 +221,17 @@ ul.products {
       .woocommerce-pagination .page-numbers li .page-numbers {
         border-left-width: 0;
         display: inline-block;
-        padding: .327em .857em;
-        border: 1px solid transparent; }
+        padding: .327em .857em; }
         .woocommerce-pagination .page-numbers li .page-numbers.current {
           font-weight: 700;
-          border-color: rgba(0, 0, 0, 0.2);
-          background-color: rgba(0, 0, 0, 0.05); }
+          background-color: rgba(0, 0, 0, 0.0125); }
         .woocommerce-pagination .page-numbers li .page-numbers.dots {
           background-color: transparent; }
         .woocommerce-pagination .page-numbers li .page-numbers.prev, .woocommerce-pagination .page-numbers li .page-numbers.next {
           padding-left: 1.387em;
           padding-right: 1.387em; }
       .woocommerce-pagination .page-numbers li a.page-numbers:hover {
-        border-color: rgba(0, 0, 0, 0.2); }
+        border-color: rgba(0, 0, 0, 0.1); }
 
 /**
  * Breadcrumbs
@@ -261,7 +259,7 @@ ul.products {
   margin-left: 0; }
   .product_list_widget li {
     padding: 1em 0;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.2); }
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1); }
     .product_list_widget li:after {
       content: "";
       display: table;
@@ -285,7 +283,7 @@ ul.products {
   margin: 0;
   text-align: center; }
 .widget_shopping_cart p.total {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2); }
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
 .site-header .widget_shopping_cart p.total,
 .site-header .widget_shopping_cart p.buttons,
@@ -368,7 +366,7 @@ table.cart {
   table.cart td.actions .coupon {
     padding-bottom: 1em;
     margin-bottom: 1em;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.2); }
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1); }
   table.cart td.actions input {
     display: block;
     width: 100%;
@@ -403,7 +401,7 @@ a.remove {
 
 #payment {
   background-color: #fff;
-  border-top: 3px solid rgba(0, 0, 0, 0.2); }
+  border-top: 3px solid rgba(0, 0, 0, 0.1); }
   #payment:after {
     content: "";
     display: table;
@@ -412,12 +410,12 @@ a.remove {
     clear: both; }
   #payment .payment_methods {
     margin: 0 !important;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
     padding: 0 !important; }
     #payment .payment_methods li {
       list-style: none !important;
       padding: 1.387em !important;
-      border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+      border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
       margin-left: 0; }
       #payment .payment_methods li img {
         float: right;
@@ -437,7 +435,7 @@ a.remove {
         padding: 1.387em;
         margin: 1.387em -1.387em -1.387em -1.387em;
         background: rgba(0, 0, 0, 0.035);
-        border-top: 1px dotted rgba(0, 0, 0, 0.2); }
+        border-top: 1px dotted rgba(0, 0, 0, 0.1); }
         #payment .payment_methods li .payment_box fieldset {
           border: 0;
           margin: 0;
@@ -485,11 +483,11 @@ a.remove {
 #customer_login .col-1 {
   padding-bottom: 1.618em;
   margin-bottom: 1.618em;
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.2); }
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.1); }
 
 ul.order_details {
   list-style: none;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   position: relative;
   margin-left: 0; }
   ul.order_details:after {
@@ -499,7 +497,7 @@ ul.order_details {
   ul.order_details li {
     float: left;
     padding: 1em 1.618em;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
     font-size: .8em;
     text-transform: uppercase; }
     ul.order_details li strong {
@@ -514,7 +512,7 @@ ul.digital-downloads {
   ul.digital-downloads li {
     padding-bottom: 1em;
     margin-bottom: 1em;
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.2); }
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1); }
     ul.digital-downloads li:before {
       font-family: "FontAwesome";
       content: "\f019";
@@ -588,7 +586,7 @@ p.stars {
     p.stars a:last-child {
       border-right: 0; }
     p.stars a.star-1, p.stars a.star-2, p.stars a.star-3, p.stars a.star-4, p.stars a.star-5 {
-      border-right: 1px solid rgba(0, 0, 0, 0.2); }
+      border-right: 1px solid rgba(0, 0, 0, 0.1); }
       p.stars a.star-1:after, p.stars a.star-2:after, p.stars a.star-3:after, p.stars a.star-4:after, p.stars a.star-5:after {
         font-family: "FontAwesome";
         text-indent: 0;
@@ -677,7 +675,7 @@ p.stars {
   float: right; }
 
 .woocommerce-tabs {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-width: 1px 0;
   padding: 1em 0; }
   .woocommerce-tabs ul.tabs {
@@ -1206,7 +1204,7 @@ dl.variation {
       .woocommerce-tabs ul.tabs li {
         display: block;
         margin: 0;
-        border-bottom: 1px dotted rgba(0, 0, 0, 0.2); }
+        border-bottom: 1px dotted rgba(0, 0, 0, 0.1); }
         .woocommerce-tabs ul.tabs li a {
           padding: 1em 0;
           display: block; }

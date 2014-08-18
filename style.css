@@ -2758,7 +2758,7 @@ table {
     table th p:last-child {
       margin-bottom: 0; }
   table thead th {
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
     text-transform: uppercase;
     padding: 1.387em;
     vertical-align: middle; }
@@ -2780,7 +2780,7 @@ table {
     border-bottom: 0; }
   table tfoot th,
   table tfoot td {
-    border-top: 1px dotted rgba(0, 0, 0, 0.2); }
+    border-top: 1px dotted rgba(0, 0, 0, 0.1); }
 
 /**
  * Typography
@@ -3445,7 +3445,7 @@ fieldset {
           float: right; }
       .main-navigation ul.menu ul ul {
         margin-left: 0;
-        border-top-color: rgba(0, 0, 0, 0.2);
+        border-top-color: rgba(0, 0, 0, 0.1);
         box-shadow: none; }
       .main-navigation ul.menu ul a:hover,
       .main-navigation ul.menu ul li:hover > a {
@@ -3506,7 +3506,7 @@ fieldset {
     border-bottom: 3px solid #424a4c;
     margin-bottom: 3.631em; }
     .hentry .entry-header h1 {
-      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
       padding-bottom: .618em;
       margin-bottom: 3px; }
     .hentry .entry-header .posted-on,
@@ -3725,7 +3725,7 @@ object {
 #comments {
   padding-top: 2.618em; }
   #comments .comments-title {
-    border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
     padding-bottom: .53em;
     margin-bottom: 1.618em; }
   #comments .comment-list {
@@ -3757,7 +3757,7 @@ object {
         display: table;
         clear: both; }
       #comments .comment-list .reply .comment-edit-link {
-        border-left: 1px solid rgba(0, 0, 0, 0.2); }
+        border-left: 1px solid rgba(0, 0, 0, 0.1); }
       #comments .comment-list .reply a {
         color: #717f83;
         background-color: rgba(0, 0, 0, 0.025);
