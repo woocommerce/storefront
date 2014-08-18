@@ -110,11 +110,12 @@ ul.products {
 		form.cart {
 			@include clearfix;
 			margin-bottom: 1.618em;
-			padding: 1.618em 0;
-			border-top: 1px solid $color_border;
+			padding: 1em;
+			background-color: rgba(0,0,0,0.025);
 
 			.quantity {
 				float: left;
+				margin-left: -1em;
 			}
 
 			.button {

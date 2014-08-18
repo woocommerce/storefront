@@ -84,14 +84,15 @@ ul.products {
     display: block; }
   .single-product div.product form.cart {
     margin-bottom: 1.618em;
-    padding: 1.618em 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.2); }
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.025); }
     .single-product div.product form.cart:after {
       content: "";
       display: table;
       clear: both; }
     .single-product div.product form.cart .quantity {
-      float: left; }
+      float: left;
+      margin-left: -1em; }
     .single-product div.product form.cart .button {
       float: right; }
   .single-product div.product .price {
