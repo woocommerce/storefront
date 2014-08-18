@@ -52,7 +52,8 @@ function storefront_footer_widgets() {
 function storefront_credit() {
 	?>
 	<div class="site-info">
-		<?php printf( __( 'This site uses the %1$s theme, designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">woothemes</a>' ); ?>
+		&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?><br />
+		<?php printf( __( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">woothemes</a>' ); ?>
 	</div><!-- .site-info -->
 	<?php
 }
