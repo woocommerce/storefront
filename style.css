@@ -3771,7 +3771,9 @@ object {
 
 #respond {
   margin-bottom: 4.236em;
-  clear: both; }
+  clear: both;
+  padding: 1.618em;
+  background-color: rgba(0, 0, 0, 0.0125); }
   #respond .comment-form-author,
   #respond .comment-form-email,
   #respond .comment-form-url {
