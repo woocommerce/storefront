@@ -6,6 +6,16 @@
  */
 
 /**
+ * Storefront display comments
+ */
+function storefront_display_comments() {
+	// If comments are open or we have at least one comment, load up the comment template
+	if ( comments_open() || '0' != get_comments_number() ) :
+		comments_template();
+	endif;
+}
+
+/**
  * Storefront comment template
  * @since 1.0.0
  */
