@@ -7,17 +7,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title" itemprop="name">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
-
-	<div class="entry-content" itemprop="mainContentOfPage">
-		<?php the_content(); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+	<?php
+	/**
+	 * @hooked storefront_page_header - 10
+	 * @hooked storefront_page_content - 20
+	 */
+	do_action( 'storefront_page' );
+	?>
 </article><!-- #post-## -->

@@ -125,14 +125,14 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_page_content' ) ) {
+if ( ! function_exists( 'storefront_homepage_content' ) ) {
 	/**
-	 * Display page content
+	 * Display homepage content
 	 * Hooked into the `homepage` action in the homepage template
 	 * @since  1.0.0
 	 * @return  void
 	 */
-	function storefront_page_content() {
+	function storefront_homepage_content() {
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'content', 'page' );

@@ -27,6 +27,7 @@ require get_template_directory() . '/inc/structure/hooks.php';
  * Template functions used throughout the theme.
  */
 require get_template_directory() . '/inc/structure/post.php';
+require get_template_directory() . '/inc/structure/page.php';
 require get_template_directory() . '/inc/structure/header.php';
 require get_template_directory() . '/inc/structure/footer.php';
 require get_template_directory() . '/inc/structure/comments.php';

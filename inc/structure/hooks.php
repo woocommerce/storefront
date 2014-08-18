@@ -38,14 +38,14 @@ add_action( 'storefront_footer', 'storefront_credit', 		20 );
 
 /**
  * Homepage
- * @see  storefront_page_content()
+ * @see  storefront_homepage_content()
  * @see  storefront_product_categories()
  * @see  storefront_recent_products()
  * @see  storefront_featured_products()
  * @see  storefront_popular_products()
  * @see  storefront_on_sale_products()
  */
-add_action( 'homepage', 'storefront_page_content', 			10 );
+add_action( 'homepage', 'storefront_homepage_content', 		10 );
 add_action( 'homepage', 'storefront_product_categories', 	20 );
 add_action( 'homepage', 'storefront_recent_products', 		30 );
 add_action( 'homepage', 'storefront_featured_products', 	40 );
@@ -60,14 +60,22 @@ add_action( 'homepage', 'storefront_on_sale_products', 		60 );
  * @see  storefront_paging_nav()
  * @see  storefront_single_post_header()
  */
-add_action( 'storefront_loop_post', 'storefront_post_header', 10 );
-add_action( 'storefront_loop_post', 'storefront_post_meta', 20 );
-add_action( 'storefront_loop_post', 'storefront_post_content', 30 );
-add_action( 'storefront_loop_after', 'storefront_paging_nav', 10 );
+add_action( 'storefront_loop_post', 'storefront_post_header', 	10 );
+add_action( 'storefront_loop_post', 'storefront_post_meta', 	20 );
+add_action( 'storefront_loop_post', 'storefront_post_content', 	30 );
+add_action( 'storefront_loop_after', 'storefront_paging_nav', 	10 );
 
-add_action( 'storefront_single_post', 'storefront_post_header', 10 );
-add_action( 'storefront_single_post', 'storefront_post_meta', 20 );
-add_action( 'storefront_single_post', 'storefront_post_content', 30 );
+add_action( 'storefront_single_post', 'storefront_post_header', 	10 );
+add_action( 'storefront_single_post', 'storefront_post_meta', 		20 );
+add_action( 'storefront_single_post', 'storefront_post_content', 	30 );
+
+/**
+ * Pages
+ * @see  storefront_page_header()
+ * @see  storefront_page_content()
+ */
+add_action( 'storefront_page', 'storefront_page_header', 	10 );
+add_action( 'storefront_page', 'storefront_page_content', 	20 );
 
 /**
  * Extras

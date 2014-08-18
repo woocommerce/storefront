@@ -1,6 +1,6 @@
 <?php
 /**
- * Template functions used for post posts.
+ * Template functions used for posts.
  *
  * @package storefront
  */
