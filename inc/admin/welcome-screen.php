@@ -134,7 +134,7 @@ class storefront_welcome {
 			<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so setup is a breeze. Here are a few things you might want to do straight away:', 'storefront' ); ?></p>
 
 			<div class="col-1">
-				<h3><?php _e( 'Install WooCommerce' ,'storefront' ); ?></h3>
+				<h4><?php _e( 'Install WooCommerce' ,'storefront' ); ?></h4>
 				<p><?php _e( 'Although Storefront works fine as a standard WordPress theme, it really shines when used for an online store. Install WooCommerce and start selling now.', 'storefront' ); ?></p>
 				<?php if ( ! class_exists( 'WooCommerce' ) ) { ?>
 					<p><a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ); ?>" class="button"><?php _e( 'Install WooCommerce', 'storefront' ); ?></a></p>
