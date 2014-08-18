@@ -12,9 +12,9 @@
  * @see  storefront_scripts()
  * @see  storefront_header_widget_region()
  */
-add_action( 'after_setup_theme', 		'storefront_setup' );
-add_action( 'widgets_init', 			'storefront_widgets_init' );
-add_action( 'wp_enqueue_scripts', 		'storefront_scripts' );
+add_action( 'after_setup_theme', 			'storefront_setup' );
+add_action( 'widgets_init', 				'storefront_widgets_init' );
+add_action( 'wp_enqueue_scripts', 			'storefront_scripts' );
 add_action( 'storefront_before_content', 	'storefront_header_widget_region', 10 );
 
 /**
@@ -45,12 +45,18 @@ add_action( 'storefront_footer', 'storefront_credit', 		20 );
  * @see  storefront_popular_products()
  * @see  storefront_on_sale_products()
  */
-add_action( 'homepage', 'storefront_page_content', 		10 );
+add_action( 'homepage', 'storefront_page_content', 			10 );
 add_action( 'homepage', 'storefront_product_categories', 	20 );
 add_action( 'homepage', 'storefront_recent_products', 		30 );
 add_action( 'homepage', 'storefront_featured_products', 	40 );
-add_action( 'homepage', 'storefront_popular_products', 	50 );
-add_action( 'homepage', 'storefront_on_sale_products', 	60 );
+add_action( 'homepage', 'storefront_popular_products', 		50 );
+add_action( 'homepage', 'storefront_on_sale_products', 		60 );
+
+/**
+ * Loop
+ * @see  storefront_paging_nav()
+ */
+add_action( 'storefront_loop_after', 'storefront_paging_nav', 10 );
 
 /**
  * Extras
