@@ -206,8 +206,11 @@ ul.products {
 			}
 
 			p.meta {
-				padding-bottom: 1em;
-				border-bottom: 1px dotted $color_border;
+				margin-bottom: 1em;
+			}
+
+			.description {
+				padding-bottom: 1.618em;
 			}
 		}
 	}

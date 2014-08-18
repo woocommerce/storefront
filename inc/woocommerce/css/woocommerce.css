@@ -152,8 +152,9 @@ ul.products {
       width: 2.618em;
       height: auto; }
     #reviews .commentlist li p.meta {
-      padding-bottom: 1em;
-      border-bottom: 1px dotted rgba(0, 0, 0, 0.2); }
+      margin-bottom: 1em; }
+    #reviews .commentlist li .description {
+      padding-bottom: 1.618em; }
 #reviews .comment-form-author,
 #reviews .comment-form-email {
   width: 48%; }
