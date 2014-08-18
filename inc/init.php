@@ -23,8 +23,13 @@ require get_template_directory() . '/inc/functions/setup.php';
 require get_template_directory() . '/inc/structure/hooks.php';
 
 /**
- * Custom template tags for this theme.
+ * Structure.
+ * Template functions used throughout the theme.
  */
+require get_template_directory() . '/inc/structure/post.php';
+require get_template_directory() . '/inc/structure/header.php';
+require get_template_directory() . '/inc/structure/footer.php';
+require get_template_directory() . '/inc/structure/comments.php';
 require get_template_directory() . '/inc/structure/template-tags.php';
 
 /**
@@ -50,7 +55,7 @@ require get_template_directory() . '/inc/jetpack/jetpack.php';
 require get_template_directory() . '/inc/admin/welcome-screen.php';
 
 /**
- * Load Jetpack WooCommerce file.
+ * Load WooCommerce compatibility files.
  */
 if ( is_woocommerce_activated() ) {
 	require get_template_directory() . '/inc/woocommerce/hooks.php';

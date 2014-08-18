@@ -53,10 +53,21 @@ add_action( 'homepage', 'storefront_popular_products', 		50 );
 add_action( 'homepage', 'storefront_on_sale_products', 		60 );
 
 /**
- * Loop
+ * Posts
+ * @see  storefront_post_header()
+ * @see  storefront_post_meta()
+ * @see  storefront_post_content()
  * @see  storefront_paging_nav()
+ * @see  storefront_single_post_header()
  */
+add_action( 'storefront_loop_post', 'storefront_post_header', 10 );
+add_action( 'storefront_loop_post', 'storefront_post_meta', 20 );
+add_action( 'storefront_loop_post', 'storefront_post_content', 30 );
 add_action( 'storefront_loop_after', 'storefront_paging_nav', 10 );
+
+add_action( 'storefront_single_post', 'storefront_post_header', 10 );
+add_action( 'storefront_single_post', 'storefront_post_meta', 20 );
+add_action( 'storefront_single_post', 'storefront_post_content', 30 );
 
 /**
  * Extras
