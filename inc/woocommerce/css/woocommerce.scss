@@ -111,7 +111,7 @@ ul.products {
 			@include clearfix;
 			margin-bottom: 1.618em;
 			padding: 1em;
-			background-color: rgba(0,0,0,0.025);
+			background-color: rgba(0,0,0,0.0125);
 
 			.quantity {
 				float: left;
@@ -340,9 +340,9 @@ ul.products {
 .woocommerce-breadcrumb {
 	margin-bottom: 4.236em;
 	font-size: .857em;
-	padding: 0 0 .618em;
+	padding: 1em 1.387em;
+	background-color: rgba(0,0,0,0.0125);
 	color: lighten( $color_body, 20% );
-	border-bottom: 1px dotted rgba(0,0,0, 0.1);
 	margin-top: -2.618em;
 
 	.separator {
