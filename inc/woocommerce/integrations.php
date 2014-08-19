@@ -21,7 +21,14 @@ function wc_theme_woocommerce_integrations_scripts() {
 	 * Brands
 	 */
 	if ( class_exists( 'WC_Brands' ) ) {
-		wp_enqueue_style( 'storefront-woocommerce-bookings-style', get_template_directory_uri() . '/inc/woocommerce/css/brands.css' );
+		wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/inc/woocommerce/css/brands.css' );
+	}
+
+	/**
+	 * Wishlists
+	 */
+	if ( class_exists( 'WC_Wishlists_Wishlist' ) ) {
+		wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/inc/woocommerce/css/wishlists.css' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wc_theme_woocommerce_integrations_scripts' );

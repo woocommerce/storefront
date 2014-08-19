@@ -1,0 +1,90 @@
+/**
+ * WooCommerce Wishlists
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../sass/modules/variables';
+@import '../../../sass/modules/mixins';
+@import '../../../sass/vendor/gridset';
+
+#wl-wrapper.wl-button-wrap {
+	padding: 1.618em 0 0 0;
+}
+
+.wl-add-link {
+	padding-left: 0 !important;
+	background: none !important;
+
+	&:before {
+		font-family: "FontAwesome";
+		content: "\f004";
+		margin-right: .53em;
+		font-weight: 400;
+	}
+}
+
+#wl-wrapper {
+	.wl-tabs {
+		border-bottom: 1px solid $color_border !important;
+
+		> li {
+			border-bottom: 0;
+
+			> a {
+				padding: 1em 1.387em;
+				border: 0 !important;
+				@include border-top-radius(0);
+				background-color: transparent !important;
+			}
+
+			&.active {
+				a {
+					box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1);
+				}
+			}
+		}
+	}
+
+	.wl-table {
+		td {
+			padding: .857em 1.387em !important;
+
+			&:first-child {
+				padding-left: 1.387em !important;
+			}
+		}
+	}
+
+	.wl-meta-share,
+	.wl-share-url {
+		border-bottom-color: $color_border;
+	}
+}
+
+.wl-tab-wrap {
+	ul.tabs,
+	.panel {
+		width: 100%;
+		margin: 0;
+	}
+
+	ul.tabs {
+		li {
+			&:after {
+				display: none !important;
+			}
+		}
+	}
+}
+
+.button.wl-create-new {
+	&:before {
+		font-family: "FontAwesome";
+		content: "\f067";
+		margin-right: .53em;
+		font-weight: 400;
+	}
+}

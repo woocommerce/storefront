@@ -60,6 +60,11 @@ input[type="submit"],
 	&.loading {
 		opacity: 0.5;
 	}
+
+	&.small {
+		padding: .53em .857em;
+		font-size: .857em;
+	}
 }
 input[type="checkbox"],
 input[type="radio"] {

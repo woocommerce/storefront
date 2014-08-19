@@ -3043,6 +3043,14 @@ input[type="submit"],
   .button.loading,
   .added_to_cart.loading {
     opacity: 0.5; }
+  button.small,
+  input[type="button"].small,
+  input[type="reset"].small,
+  input[type="submit"].small,
+  .button.small,
+  .added_to_cart.small {
+    padding: .53em .857em;
+    font-size: .857em; }
 
 input[type="checkbox"],
 input[type="radio"] {

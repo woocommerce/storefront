@@ -179,39 +179,34 @@ class storefront_welcome {
 			</p>
 
 			<div class="col-1">
+				<h4><?php _e( 'WooCommerce Extensions', 'storefront' ); ?></h4>
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
 				<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
 				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/gallery-slider.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<h4><?php _e( 'WooCommerce Product Gallery Slider', 'storefront' ); ?></h4>
+				<p><?php _e( 'The Product Gallery Slider is a nifty extension which transforms your product galleries into a fully responsive, jQuery powered slideshow.', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/product-gallery-slider/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
+				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+
 			</div>
 
 			<div class="col-2">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
-				<h4><?php _e( 'WooCommerce Product Gallery Slider', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<h4><?php _e( 'Storefront Extensions', 'storefront' ); ?></h4>
+				<p><?php _e( 'Coming soon', 'storefront' ); ?></p>
 			</div>
 
 			<div class="col-3 last-feature">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
-				<h4><?php _e( 'WooCommerce Cloud Zoom', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<h4><?php _e( 'Storefront Child Themes', 'storefront' ); ?></h4>
+				<p><?php _e( 'Coming soon', 'storefront' ); ?></p>
 			</div>
 
-			<div class="col-1">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
-				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
-			</div>
-
-			<div class="col-2">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
-				<h4><?php _e( 'WooCommerce Quick View', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
-			</div>
 		</div>
 
 		<hr style="clear: both;" />

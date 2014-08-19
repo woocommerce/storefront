@@ -939,10 +939,12 @@ dl.variation {
   table.cart .product-quantity .plus,
   table.cart .product-quantity .minus {
     display: inline-block; }
-  table.cart .quantity .qty,
-  table.cart .quantity .plus,
-  table.cart .quantity .minus {
-    padding: .618em; }
+  table.cart .quantity {
+    min-width: 9.505em; }
+    table.cart .quantity .qty,
+    table.cart .quantity .plus,
+    table.cart .quantity .minus {
+      padding: .618em; }
   table.cart td.actions {
     text-align: right; }
     table.cart td.actions label {
