@@ -36,6 +36,7 @@
 			.main-navigation {
 				@include gs-span(c, 1, 9);
 				@include gs-float(c, left);
+				clear: both;
 			}
 
 			.site-header-cart {

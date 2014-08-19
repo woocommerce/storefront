@@ -3166,7 +3166,8 @@ fieldset {
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 4%; }
+    margin-right: 4%;
+    clear: both; }
   .woocommerce-active .site-header .site-header-cart {
     display: block;
     float: left;
