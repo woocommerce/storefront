@@ -2667,6 +2667,11 @@ body {
   padding-top: 2.618em;
   color: #5a6567;
   background-position: center center; }
+  .site-header .site-logo-anchor {
+    display: block; }
+  .site-header .site-branding,
+  .site-header .site-logo-anchor {
+    margin-bottom: 1.618em; }
   .site-header .widget {
     margin-bottom: 0; }
 
@@ -3337,12 +3342,12 @@ fieldset {
         margin-right: 0; } }
 @media screen and (max-width: 767px) {
   .col-full {
-    margin-left: 1.618em;
-    margin-right: 1.618em; } }
+    margin-left: 1em;
+    margin-right: 1em; } }
 @media screen and (max-width: 65.141em) {
   .col-full {
-    margin-left: 1.618em;
-    margin-right: 1.618em; } }
+    margin-left: 1em;
+    margin-right: 1em; } }
 /**
  * Main Naivgation
  */

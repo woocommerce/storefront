@@ -21,18 +21,10 @@ ul.products {
 	li.product {
 		list-style: none;
 		margin-left: 0;
-		width: 48%;
-		float: left;
-		clear: both;
 		margin-bottom: 4.236em;
 		text-align: center;
 		overflow: hidden;
 		position: relative;
-
-		&:nth-child(2n) {
-			float: right;
-			clear: none;
-		}
 
 		.star-rating,
 		.price {
@@ -79,12 +71,6 @@ ul.products {
 	}
 }
 
-.woocommerce .page-description {
-	@include gs-span(c, 1, 6, (1, 9));
-	@include gs-float(c, left);
-	margin-bottom: 1.618em;
-}
-
 /**
  * Single Product
  */
@@ -104,6 +90,24 @@ ul.products {
 			.woocommerce-main-image {
 				margin-bottom: 1.618em;
 				display: block;
+			}
+
+			.thumbnails {
+				a.zoom {
+					display: block;
+					width: 22.05%;
+					margin-right: 3.8%;
+					float: left;
+					margin-bottom: 1em;
+
+					&.last {
+						margin-right: 0;
+					}
+
+					&.first {
+						clear: both;
+					}
+				}
 			}
 		}
 
@@ -511,10 +515,24 @@ ul.products {
 table.cart {
 	margin-bottom: 3.631em;
 
+	thead {
+		font-size: .857em;
+	}
+
 	.product-thumbnail,
 	.product-quantity .plus,
-	.product-quantity .minus {
+	.product-quantity .minus,
+	.product-remove {
 		display: none;
+	}
+
+	td,
+	th {
+		padding: .53em;
+	}
+
+	.qty {
+		padding: .236em;
 	}
 
 	td.actions {
@@ -958,17 +976,6 @@ p.stars {
 	margin-bottom: 2.618em;
 }
 
-.woocommerce-result-count {
-	float: left;
-	position: relative;
-	padding-bottom: 1em;
-	clear: both;
-}
-
-.woocommerce-ordering {
-	float: right;
-}
-
 .woocommerce-tabs {
 	border: 1px solid $color_border;
 	border-width: 1px 0;
@@ -1118,10 +1125,6 @@ dl.variation {
 			float: left;
 			font-size: .857em;
 
-			&:nth-child(2n) {
-				float: left;
-			}
-
 			&.first {
 				clear: both !important;
 			}
@@ -1203,8 +1206,6 @@ dl.variation {
 
 				.thumbnails {
 					a.zoom {
-						display: block;
-						margin-bottom: 1em;
 						@include gs-span(c, 1, 1, (1, 4));
 						@include gs-float(c, left);
 						margin-right: gs-adjust(c, gs-gutter(c), (1, 4), true);
@@ -1229,6 +1230,23 @@ dl.variation {
 		}
 	}
 
+	.woocommerce .page-description {
+		@include gs-span(c, 1, 6, (1, 9));
+		@include gs-float(c, left);
+		margin-bottom: 1.618em;
+	}
+
+	.woocommerce-result-count {
+		float: left;
+		position: relative;
+		padding-bottom: 1em;
+		clear: both;
+	}
+
+	.woocommerce-ordering {
+		float: right;
+	}
+
 	/**
 	 * Cart
 	 */
@@ -1241,6 +1259,23 @@ dl.variation {
 				height: auto;
 				border: .327em solid #fff;
 			}
+		}
+
+		thead {
+			font-size: 1em;
+		}
+
+		th,
+		td {
+			padding: .857em 1.387em;
+		}
+
+		.qty {
+			padding: .857em;
+		}
+
+		.product-remove {
+			display: table-cell;
 		}
 
 		.product-quantity .plus,

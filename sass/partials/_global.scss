@@ -15,6 +15,15 @@ body {
 	color: #5a6567;
 	background-position: center center;
 
+	.site-logo-anchor {
+		display: block;
+	}
+
+	.site-branding,
+	.site-logo-anchor {
+		margin-bottom: 1.618em;
+	}
+
 	.widget {
 		margin-bottom: 0;
 	}
