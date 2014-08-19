@@ -26,9 +26,10 @@
 		max-width: 98%;
 	}
 	.wp-caption-text {
-		text-align: center;
-		margin: 0.8075em 0;
+		text-align: left;
 		font-style: italic;
+		border-bottom: 2px solid $color_border;
+		padding: 1em 0;
 	}
 }
 

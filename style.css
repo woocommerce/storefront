@@ -3623,9 +3623,10 @@ fieldset {
     margin: 1.2% auto 0;
     max-width: 98%; }
   .wp-caption .wp-caption-text {
-    text-align: center;
-    margin: 0.8075em 0;
-    font-style: italic; }
+    text-align: left;
+    font-style: italic;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    padding: 1em 0; }
 
 /**
  * Galleries
