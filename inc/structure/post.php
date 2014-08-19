@@ -75,9 +75,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
 					if ( $tags_list ) :
 				?>
-				<span class="tags-links">
-					<?php echo $tags_list; ?>
-				</span>
+				<span class="tags-links"><?php echo $tags_list; ?></span>
 				<?php endif; // End if $tags_list ?>
 			<?php endif; // End if 'post' == get_post_type() ?>
 

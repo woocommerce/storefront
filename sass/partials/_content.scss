@@ -32,6 +32,17 @@
 			}
 		}
 	}
+
+	.entry-content,
+	.entry-meta {
+		a {
+			border-bottom: 1px solid $color_border;
+
+			&:hover {
+				border-bottom-color: rgba(0,0,0,0.2);
+			}
+		}
+	}
 }
 .byline,
 .updated {

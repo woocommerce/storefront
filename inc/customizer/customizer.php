@@ -309,7 +309,6 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 				background-color: <?php echo $accent_color; ?>;
 			}
 
-			.hentry .entry-meta a:hover,
 			#order_review_heading, #order_review {
 				border-color: <?php echo $accent_color; ?>;
 			}

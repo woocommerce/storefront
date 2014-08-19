@@ -3523,6 +3523,12 @@ fieldset {
       .hentry .entry-header .posted-on a,
       .hentry .entry-header .byline a {
         font-weight: 400; }
+  .hentry .entry-content a,
+  .hentry .entry-meta a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+    .hentry .entry-content a:hover,
+    .hentry .entry-meta a:hover {
+      border-bottom-color: rgba(0, 0, 0, 0.2); }
 
 .byline,
 .updated {
