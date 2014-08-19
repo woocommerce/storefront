@@ -279,8 +279,18 @@ ul.products {
 	font-size: .857em;
 
 	.widget_product_search {
-		input[type=text] {
-			width: 100%;
+		input[type=text],
+		input[type=search] {
+			padding: 1.387em 1.618em;
+			line-height: 1;
+			padding-left: 3.631em;
+		}
+
+		form {
+			&:before {
+				top: 1.387em;
+				left: 1.618em;
+			}
 		}
 
 		#searchsubmit {

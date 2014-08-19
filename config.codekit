@@ -114,6 +114,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/welcome\/wishlists.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7036,
+		"inputAbbreviatedPath": "\/images\/welcome\/wishlists.png",
+		"outputAbbreviatedPath": "\/images\/welcome\/wishlists.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/welcome\/woocommerce.png": {
 		"fileType": 32768,
 		"ignore": 0,

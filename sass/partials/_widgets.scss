@@ -52,24 +52,28 @@
 	}
 }
 
-.widget-search,
+.widget_search,
 .widget_product_search {
 	form {
 		position: relative;
+
+		input[type=text],
+		input[type=search] {
+			width: 100%;
+			padding-left: 2.618em;
+		}
+
+		input[type=submit] {
+			display: none;
+		}
 
 		&:before {
 			content: "\f002";
 			font-family: "FontAwesome";
 			position: absolute;
-			top: 1.387em;
-			left: 1.618em;
+			top: 1em;
+			left: 1em;
 			line-height: 1;
-		}
-
-		input[type=text] {
-			padding: 1.387em 1.618em;
-			line-height: 1;
-			padding-left: 3.631em;
 		}
 	}
 }

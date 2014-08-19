@@ -188,8 +188,14 @@ ul.products {
 
 .site-search {
   font-size: .857em; }
-  .site-search .widget_product_search input[type=text] {
-    width: 100%; }
+  .site-search .widget_product_search input[type=text],
+  .site-search .widget_product_search input[type=search] {
+    padding: 1.387em 1.618em;
+    line-height: 1;
+    padding-left: 3.631em; }
+  .site-search .widget_product_search form:before {
+    top: 1.387em;
+    left: 1.618em; }
   .site-search .widget_product_search #searchsubmit {
     display: none; }
 

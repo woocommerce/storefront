@@ -3057,14 +3057,6 @@ input[type="radio"] {
   padding: 0;
   /* Addresses excess padding in IE8/9 */ }
 
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* Addresses appearance set to searchfield in S5, Chrome */
-  -webkit-box-sizing: content-box;
-  /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
-  -moz-box-sizing: content-box;
-  box-sizing: content-box; }
-
 input[type="search"]::-webkit-search-decoration {
   /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
   -webkit-appearance: none; }
@@ -4021,22 +4013,26 @@ object {
     padding: 1em 0;
     font-size: .857em; }
 
-.widget-search form,
+.widget_search form,
 .widget_product_search form {
   position: relative; }
-  .widget-search form:before,
+  .widget_search form input[type=text],
+  .widget_search form input[type=search],
+  .widget_product_search form input[type=text],
+  .widget_product_search form input[type=search] {
+    width: 100%;
+    padding-left: 2.618em; }
+  .widget_search form input[type=submit],
+  .widget_product_search form input[type=submit] {
+    display: none; }
+  .widget_search form:before,
   .widget_product_search form:before {
     content: "\f002";
     font-family: "FontAwesome";
     position: absolute;
-    top: 1.387em;
-    left: 1.618em;
+    top: 1em;
+    left: 1em;
     line-height: 1; }
-  .widget-search form input[type=text],
-  .widget_product_search form input[type=text] {
-    padding: 1.387em 1.618em;
-    line-height: 1;
-    padding-left: 3.631em; }
 
 .widget_recent_entries ul {
   margin: 0; }
