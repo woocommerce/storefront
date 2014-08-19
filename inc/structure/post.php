@@ -67,9 +67,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 					if ( $categories_list && storefront_categorized_blog() ) :
 				?>
-				<span class="cat-links">
-					<?php echo $categories_list; ?>
-				</span>
+				<span class="cat-links"><?php echo $categories_list; ?></span>
 				<?php endif; // End if categories ?>
 
 				<?php
