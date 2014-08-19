@@ -2807,7 +2807,7 @@ textarea {
   color: #424a4c;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.5em;
-  line-height: 1.5;
+  line-height: 1.618;
   -webkit-font-smoothing: antialiased; }
 
 h1, h2, h3, h4, h5, h6 {
