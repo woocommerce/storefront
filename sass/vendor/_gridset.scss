@@ -24,7 +24,7 @@
 //
 //   @include gs-media(prefix, max) {
 //
-//   	-- CSS goes here --
+//    -- CSS goes here --
 //
 //   }
 //
@@ -54,13 +54,13 @@
 
 @function gs-grid($prefix){
 
-  @if $prefix == c	{ @return (5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333,5.58333333); }
+  @if $prefix == c  { @return (4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666,4.66666666); }
 
 }
 
 @function gs-contraints($prefix){
 
-  @if $prefix == c	{ @return (false,false,false,false,false,false,false,false,false,false,false,false); }
+  @if $prefix == c  { @return (false,false,false,false,false,false,false,false,false,false,false,false); }
 
 }
 
@@ -68,7 +68,7 @@
 
   $gutter: 0;
 
-  @if $prefix == c	{ $gutter: 3; }
+  @if $prefix == c  { $gutter: 4; }
 
   @if $unit == true { @return #{gs-adjust($prefix, $gutter, $container) + '%'}; }
   @else { @return gs-adjust($prefix, $gutter, $container); }

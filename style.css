@@ -3126,11 +3126,11 @@ fieldset {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     clear: both; }
     .woocommerce-active .site-header .site-branding img,
     .woocommerce-active .site-header .site-logo-anchor img {
@@ -3139,44 +3139,44 @@ fieldset {
   .woocommerce-active .site-header .secondary-navigation {
     display: block;
     float: left;
-    margin-left: 25.75%;
+    margin-left: 26.0%;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
   .woocommerce-active .site-header .site-search {
     display: block;
     float: left;
-    margin-left: 77.25%;
+    margin-left: 78.0%;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-left: 0; }
   .woocommerce-active .site-header .main-navigation {
     display: block;
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 74.25%;
+    width: 74.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
   .woocommerce-active .site-header .site-header-cart {
     display: block;
     float: left;
-    margin-left: 77.25%;
+    margin-left: 78.0%;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-left: 0;
     margin-bottom: 0; }
 
@@ -3219,22 +3219,22 @@ fieldset {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 74.25%;
+    width: 74.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
 
   .widget-area {
     display: block;
     float: left;
-    margin-left: 77.25%;
+    margin-left: 78.0%;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-right: 0; }
 
   .right-sidebar .content-area {
@@ -3242,43 +3242,43 @@ fieldset {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 74.25%;
+    width: 74.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
   .right-sidebar .widget-area {
     display: block;
     float: left;
-    margin-left: 77.25%;
+    margin-left: 78.0%;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-right: 0; }
 
   .left-sidebar .content-area {
     display: block;
     float: left;
-    margin-left: 25.75%;
+    margin-left: 26.0%;
     margin-right: -100%;
-    width: 74.25%;
+    width: 74.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%; }
+    margin-left: 4%; }
   .left-sidebar .widget-area {
     display: block;
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-left: 0; }
 
   .content-area,
@@ -3309,11 +3309,11 @@ fieldset {
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 48.5%;
+      width: 48.0%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%; }
+      margin-right: 4%; }
       .footer-widgets.col-2 .block.footer-widget-2 {
         margin-right: 0; }
     .footer-widgets.col-3 .block {
@@ -3321,11 +3321,11 @@ fieldset {
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 31.33333%;
+      width: 30.66667%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%; }
+      margin-right: 4%; }
       .footer-widgets.col-3 .block.footer-widget-3 {
         margin-right: 0; }
     .footer-widgets.col-4 .block {
@@ -3333,11 +3333,11 @@ fieldset {
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 22.75%;
+      width: 22.0%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%; }
+      margin-right: 4%; }
       .footer-widgets.col-4 .block.footer-widget-4 {
         margin-right: 0; } }
 @media screen and (max-width: 767px) {
@@ -3568,23 +3568,23 @@ fieldset {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 19.07969%;
+    width: 18.01802%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%;
+    margin-right: 4%;
+    margin-right: 5.40541%;
     font-size: .857em; }
   .hentry.type-post .entry-content {
     display: block;
     float: left;
-    margin-left: 23.12009%;
+    margin-left: 23.42342%;
     margin-right: -100%;
-    width: 76.87991%;
+    width: 76.57658%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-right: 0; } }
 /**
  * Post Formats
@@ -3806,33 +3806,33 @@ object {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 19.07969%;
+    width: 18.01802%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%; }
+    margin-right: 4%;
+    margin-right: 5.40541%; }
     .comment-list .comment-meta .avatar {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 39.41176%;
+      width: 35.0%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%; }
+      margin-right: 4%; }
   .comment-list .comment-content,
   .comment-list #respond {
     display: block;
     float: left;
-    margin-left: 23.12009%;
+    margin-left: 23.42342%;
     margin-right: -100%;
-    width: 76.87991%;
+    width: 76.57658%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-right: 0; }
   .comment-list #respond {
     float: right; }
@@ -3841,141 +3841,141 @@ object {
   .comment-list ol.children {
     display: block;
     float: left;
-    margin-left: 11.56004%;
+    margin-left: 11.71171%;
     margin-right: -100%;
-    width: 88.43996%;
+    width: 88.28829%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
+    margin-left: 4%;
     list-style: none; }
     .comment-list ol.children .comment-meta {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 21.5736%;
+      width: 20.40816%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 4.56853%; }
+      margin-right: 4%;
+      margin-right: 6.12245%; }
     .comment-list ol.children .comment-content,
     .comment-list ol.children #respond {
       display: block;
       float: left;
-      margin-left: 26.14213%;
+      margin-left: 26.53061%;
       margin-right: -100%;
-      width: 73.85787%;
+      width: 73.46939%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
+      margin-right: 4%;
       margin-right: 0; }
     .comment-list ol.children #respond {
       float: right; }
     .comment-list ol.children ol.children {
       display: block;
       float: left;
-      margin-left: 13.07107%;
+      margin-left: 13.26531%;
       margin-right: -100%;
-      width: 86.92893%;
+      width: 86.73469%;
       clear: none;
       float: right;
       margin-right: 0;
-      margin-left: 3%; }
+      margin-left: 4%; }
       .comment-list ol.children ol.children .comment-meta {
         display: block;
         float: left;
         margin-left: 0;
         margin-right: -100%;
-        width: 24.81752%;
+        width: 23.52941%;
         clear: none;
         float: left;
         margin-left: 0;
-        margin-right: 3%;
-        margin-right: 5.25547%; }
+        margin-right: 4%;
+        margin-right: 7.05882%; }
       .comment-list ol.children ol.children .comment-content,
       .comment-list ol.children ol.children #respond {
         display: block;
         float: left;
-        margin-left: 30.07299%;
+        margin-left: 30.58824%;
         margin-right: -100%;
-        width: 69.92701%;
+        width: 69.41176%;
         clear: none;
         float: left;
         margin-left: 0;
-        margin-right: 3%;
+        margin-right: 4%;
         margin-right: 0; }
       .comment-list ol.children ol.children #respond {
         float: right; }
       .comment-list ol.children ol.children ol.children {
         display: block;
         float: left;
-        margin-left: 15.0365%;
+        margin-left: 15.29412%;
         margin-right: -100%;
-        width: 84.9635%;
+        width: 84.70588%;
         clear: none;
         float: right;
         margin-right: 0;
-        margin-left: 3%; }
+        margin-left: 4%; }
         .comment-list ol.children ol.children ol.children .comment-meta {
           display: block;
           float: left;
           margin-left: 0;
           margin-right: -100%;
-          width: 29.20962%;
+          width: 27.77778%;
           clear: none;
           float: left;
           margin-left: 0;
-          margin-right: 3%;
-          margin-right: 6.18557%; }
+          margin-right: 4%;
+          margin-right: 8.33333%; }
         .comment-list ol.children ol.children ol.children .comment-content,
         .comment-list ol.children ol.children ol.children #respond {
           display: block;
           float: left;
-          margin-left: 35.39519%;
+          margin-left: 36.11111%;
           margin-right: -100%;
-          width: 64.60481%;
+          width: 63.88889%;
           clear: none;
           float: left;
           margin-left: 0;
-          margin-right: 3%;
+          margin-right: 4%;
           margin-right: 0; }
         .comment-list ol.children ol.children ol.children #respond {
           float: right; }
         .comment-list ol.children ol.children ol.children ol.children {
           display: block;
           float: left;
-          margin-left: 17.69759%;
+          margin-left: 18.05556%;
           margin-right: -100%;
-          width: 82.30241%;
+          width: 81.94444%;
           clear: none;
           float: right;
           margin-right: 0;
-          margin-left: 3%; }
+          margin-left: 4%; }
           .comment-list ol.children ol.children ol.children ol.children .comment-meta {
             display: block;
             float: left;
             margin-left: 0;
             margin-right: -100%;
-            width: 35.49061%;
+            width: 33.89831%;
             clear: none;
             float: left;
             margin-left: 0;
-            margin-right: 3%;
-            margin-right: 7.51566%; }
+            margin-right: 4%;
+            margin-right: 10.16949%; }
           .comment-list ol.children ol.children ol.children ol.children .comment-content,
           .comment-list ol.children ol.children ol.children ol.children #respond {
             display: block;
             float: left;
-            margin-left: 43.00626%;
+            margin-left: 44.0678%;
             margin-right: -100%;
-            width: 56.99374%;
+            width: 55.9322%;
             clear: none;
             float: left;
             margin-left: 0;
-            margin-right: 3%;
+            margin-right: 4%;
             margin-right: 0; }
           .comment-list ol.children ol.children ol.children ol.children #respond {
             float: right; } }

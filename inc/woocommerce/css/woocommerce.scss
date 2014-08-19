@@ -1431,9 +1431,9 @@ dl.variation {
 
 		#order_review_heading,
 		#order_review {
-			@include gs-span(c, 8, 12);
+			@include gs-span(c, 7, 12);
 			@include gs-float(c, right);
-			margin-right: 0;
+			margin-left: 0;
 		}
 
 		#order_review {

@@ -800,33 +800,33 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
   .page-template-template-fullwidth-php .site-main .columns-3 ul.products li.product,
   .page-template-template-homepage-php .site-main .columns-3 ul.products li.product {
     display: block;
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 31.33333%;
+    width: 30.66667%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
   .page-template-template-fullwidth-php .site-main .columns-4 ul.products li.product,
   .page-template-template-homepage-php .site-main .columns-4 ul.products li.product {
     display: block;
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 22.75%;
+    width: 22.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
 
   /**
    * Main content area (adjacent to sidebar) product layout
@@ -836,23 +836,23 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 30.63973%;
+    width: 29.72973%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%; }
+    margin-right: 4%;
+    margin-right: 5.40541%; }
   .site-main ul.products li.product {
     display: block;
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 30.63973%;
+    width: 29.72973%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%; }
+    margin-right: 4%;
+    margin-right: 5.40541%; }
 
   /**
    * Single product page
@@ -862,36 +862,36 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 42.19978%;
+    width: 41.44144%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%;
+    margin-right: 4%;
+    margin-right: 5.40541%;
     margin-bottom: 3.631em; }
     .single-product div.product .images .thumbnails a.zoom {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 17.81915%;
+      width: 15.21739%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 9.57447%; }
+      margin-right: 4%;
+      margin-right: 13.04348%; }
       .single-product div.product .images .thumbnails a.zoom.last {
         margin-right: 0; }
   .single-product div.product .summary {
     display: block;
     float: left;
-    margin-left: 46.24018%;
+    margin-left: 46.84685%;
     margin-right: -100%;
-    width: 53.75982%;
+    width: 53.15315%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-right: 0;
     margin-bottom: 3.631em; }
   .single-product div.product .woocommerce-tabs {
@@ -902,11 +902,11 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 65.31987%;
+    width: 64.86486%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-bottom: 1.618em; }
 
   .woocommerce-result-count {
@@ -967,34 +967,34 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 42.19978%;
+    width: 41.44144%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%; }
+    margin-right: 4%;
+    margin-right: 5.40541%; }
     .cart-collaterals .cross-sells ul.products li.product {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 45.21277%;
+      width: 43.47826%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 9.57447%; }
+      margin-right: 4%;
+      margin-right: 13.04348%; }
   .cart-collaterals .cart_totals,
   .cart-collaterals .shipping_calculator {
     display: block;
     float: left;
-    margin-left: 46.24018%;
+    margin-left: 46.84685%;
     margin-right: -100%;
-    width: 53.75982%;
+    width: 53.15315%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
+    margin-left: 4%;
     margin: 0;
     clear: right; }
   .cart-collaterals .shipping_calculator {
@@ -1005,33 +1005,33 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%; }
+    margin-left: 4%; }
     .page-template-template-fullwidth-php .cart-collaterals .cross-sells ul.products li.product {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 46.90722%;
+      width: 45.83333%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 6.18557%; }
+      margin-right: 4%;
+      margin-right: 8.33333%; }
   .page-template-template-fullwidth-php .cart-collaterals .cart_totals,
   .page-template-template-fullwidth-php .cart-collaterals .shipping_calculator {
     display: block;
     float: left;
-    margin-left: 51.5%;
+    margin-left: 52.0%;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
+    margin-left: 4%;
     margin-right: 0; }
 
   /**
@@ -1042,33 +1042,33 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 53.75982%;
+    width: 53.15315%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%; }
+    margin-right: 4%;
+    margin-right: 5.40541%; }
     #customer_details .form-row-first {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 35.49061%;
+      width: 33.89831%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 7.51566%; }
+      margin-right: 4%;
+      margin-right: 10.16949%; }
     #customer_details .form-row-last {
       display: block;
       float: left;
-      margin-left: 43.00626%;
+      margin-left: 44.0678%;
       margin-right: -100%;
-      width: 56.99374%;
+      width: 55.9322%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%; }
+      margin-right: 4%; }
     #customer_details .col-1,
     #customer_details .col-2 {
       margin-bottom: 1.618em; }
@@ -1077,13 +1077,13 @@ dl.variation {
   #order_review {
     display: block;
     float: left;
-    margin-left: 57.80022%;
+    margin-left: 58.55856%;
     margin-right: -100%;
-    width: 42.19978%;
+    width: 41.44144%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
+    margin-right: 4%;
     margin-right: 0;
     border: 3px solid #a46497; }
 
@@ -1095,8 +1095,8 @@ dl.variation {
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding-left: 1.5%;
-    padding-right: 1.5%; }
+    padding-left: 2%;
+    padding-right: 2%; }
 
   #order_review {
     border-width: 0 3px 3px 3px; }
@@ -1106,44 +1106,44 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
     .page-template-template-fullwidth-php #customer_details .form-row-first {
       display: block;
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 46.90722%;
+      width: 45.83333%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 6.18557%; }
+      margin-right: 4%;
+      margin-right: 8.33333%; }
     .page-template-template-fullwidth-php #customer_details .form-row-last {
       display: block;
       float: left;
-      margin-left: 53.09278%;
+      margin-left: 54.16667%;
       margin-right: -100%;
-      width: 46.90722%;
+      width: 45.83333%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%; }
+      margin-right: 4%; }
   .page-template-template-fullwidth-php #order_review_heading,
   .page-template-template-fullwidth-php #order_review {
     display: block;
     float: left;
-    margin-left: 60.08333%;
+    margin-left: 52.0%;
     margin-right: -100%;
-    width: 39.91667%;
+    width: 48.0%;
     clear: none;
     float: right;
     margin-right: 0;
-    margin-left: 3%;
-    margin-right: 0; }
+    margin-left: 4%;
+    margin-left: 0; }
   .page-template-template-fullwidth-php #order_review {
     font-size: .857em; }
 
@@ -1158,45 +1158,45 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 42.19978%;
+    width: 41.44144%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%;
-    margin-right: 4.0404%;
+    margin-right: 4%;
+    margin-right: 5.40541%;
     clear: both; }
 
   .form-row-last {
     display: block;
     float: left;
-    margin-left: 46.24018%;
+    margin-left: 46.84685%;
     margin-right: -100%;
-    width: 53.75982%;
+    width: 53.15315%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
 
   .page-template-template-fullwidth-php .form-row-first {
     display: block;
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
   .page-template-template-fullwidth-php .form-row-last {
     display: block;
     float: left;
-    margin-left: 51.5%;
+    margin-left: 52.0%;
     margin-right: -100%;
-    width: 48.5%;
+    width: 48.0%;
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 3%; }
+    margin-right: 4%; }
 
   .woocommerce-tabs {
     margin-bottom: 2.618em;
@@ -1211,12 +1211,12 @@ dl.variation {
       float: left;
       margin-left: 0;
       margin-right: -100%;
-      width: 30.63973%;
+      width: 29.72973%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
-      margin-right: 4.0404%;
+      margin-right: 4%;
+      margin-right: 5.40541%;
       text-align: left; }
       .woocommerce-tabs ul.tabs li {
         display: block;
@@ -1235,12 +1235,12 @@ dl.variation {
     .woocommerce-tabs .panel {
       display: block;
       float: left;
-      margin-left: 34.68013%;
+      margin-left: 35.13514%;
       margin-right: -100%;
-      width: 65.31987%;
+      width: 64.86486%;
       clear: none;
       float: left;
       margin-left: 0;
-      margin-right: 3%;
+      margin-right: 4%;
       margin-right: 0;
       margin-top: 0; } }
