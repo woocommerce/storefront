@@ -2876,7 +2876,9 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.618em; }
+  padding: 0 1.618em;
+  border-left: 3px solid rgba(0, 0, 0, 0.05);
+  font-style: italic; }
 
 address {
   margin: 0 0 1.618em; }
