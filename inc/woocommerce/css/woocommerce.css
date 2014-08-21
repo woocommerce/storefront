@@ -34,7 +34,7 @@ ul.products {
         background-color: transparent; }
     ul.products li.product img.wp-post-image {
       display: block;
-      margin-bottom: 1.618em; }
+      margin: 0 auto 1.618em; }
     ul.products li.product.product-category img {
       margin-bottom: 1.618em; }
     ul.products li.product.featured {
