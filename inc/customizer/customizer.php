@@ -332,12 +332,12 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 				border-color: <?php echo $accent_color; ?>;
 			}
 
-			button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget-area .widget a.button {
+			button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget-area .widget a.button, .site-header-cart .widget_shopping_cart a.button {
 				background-color: <?php echo $button_background_color; ?>;
 				color: <?php echo $button_text_color; ?>;
 			}
 
-			button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover {
+			button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
 				background-color: <?php echo storefront_adjust_color_brightness( $button_background_color, $darken_factor ); ?>;
 				color: <?php echo $button_text_color; ?>;
 			}
@@ -364,6 +364,10 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 				}
 
 				<?php } ?>
+
+				.main-navigation ul.menu ul {
+					background-color: <?php echo $header_background_color; ?>;
+				}
 
 				.secondary-navigation ul.menu a,
 				.site-header-cart .widget_shopping_cart,
