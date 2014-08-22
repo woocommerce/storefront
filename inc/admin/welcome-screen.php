@@ -77,7 +77,7 @@ class storefront_welcome {
 		?>
 		<div class="feature-section col two-col" style="margin-bottom: 1.618em; overflow: hidden;">
 			<div class="col-1">
-				<h1 style="margin-right: 0;"><?php echo __( 'Welcome to ', 'storefront' ) . '<br /><strong>Storefront</strong> <sup style="font-weight: bold; font-size: 50%; padding: 5px 10px; color: #666; background: #fff;">' . $storefront['Version'] . '</sup>'; ?></h1>
+				<h1 style="margin-right: 0;"><?php echo '<strong>Storefront</strong> <sup style="font-weight: bold; font-size: 50%; padding: 5px 10px; color: #666; background: #fff;">' . $storefront['Version'] . '</sup>'; ?></h1>
 
 				<p style="font-size: 1.2em;"><?php _e( 'Awesome! You\'ve decided to use Storefront to enrich your WooCommerce store design.', 'storefront' ); ?></p>
 				<p><?php _e( 'Whether you\'re a store owner, WordPress developer, or both - we hope you enjoy Storefront\'s deep integration with WooCommerce core (including several popular WooCommerce extensions), plus the flexible design and extensible codebase that this theme provides.', 'storefront' ); ?>
@@ -131,13 +131,14 @@ class storefront_welcome {
 		?>
 		<div class="feature-section col two-col" style="margin-bottom: 1.618em; overflow: hidden;">
 
-			<h2><?php _e ( 'Getting started with Storefront', 'storefront' ); ?> <div class="dashicons dashicons-lightbulb"></div></h2>
-			<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so setup is a breeze. Here are a few things you might want to do straight away:', 'storefront' ); ?></p>
+			<h2><?php _e ( 'Using Storefront', 'storefront' ); ?> <div class="dashicons dashicons-lightbulb"></div></h2>
+			<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so configuration is a breeze. Here are some common tasks:', 'storefront' ); ?></p>
 
 			<div class="col-1">
-				<h4><?php _e( 'Install WooCommerce' ,'storefront' ); ?></h4>
-				<p><?php _e( 'Although Storefront works fine as a standard WordPress theme, it really shines when used for an online store. Install WooCommerce and start selling now.', 'storefront' ); ?></p>
 				<?php if ( ! class_exists( 'WooCommerce' ) ) { ?>
+					<h4><?php _e( 'Install WooCommerce' ,'storefront' ); ?></h4>
+					<p><?php _e( 'Although Storefront works fine as a standard WordPress theme, it really shines when used for an online store. Install WooCommerce and start selling now.', 'storefront' ); ?></p>
+
 					<p><a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ); ?>" class="button"><?php _e( 'Install WooCommerce', 'storefront' ); ?></a></p>
 				<?php } ?>
 
@@ -180,7 +181,7 @@ class storefront_welcome {
 			<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>
 
 			<p>
-				<?php _e( 'Below you will find a selection of hand-picked WooCommerce extensions that could help improve your online store. Each of theme integrates seamlessly with Storefront for a slick display and performance.', 'storefront' ); ?>
+				<?php _e( 'Below you will find a selection of hand-picked WooCommerce extensions, Storefront extensions and Storefront child themes that could help improve your online store. Each WooCommerce extension integrates seamlessly with Storefront for enhanced performance.', 'storefront' ); ?>
 			</p>
 
 			<div class="col-1">
