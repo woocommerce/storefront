@@ -3377,7 +3377,17 @@ fieldset {
   display: block; }
 
 .main-navigation ul {
-  display: none; }
+  display: none;
+  margin-left: 0;
+  list-style: none; }
+  .main-navigation ul li a {
+    padding: 1em 1.618em;
+    display: block; }
+    .main-navigation ul li a:before {
+      font-family: "FontAwesome";
+      content: "\f0f6";
+      margin-right: .53em;
+      font-weight: 400; }
 
 @media screen and (min-width: 768px) {
   .menu-toggle {
@@ -3402,6 +3412,9 @@ fieldset {
         .main-navigation ul li a,
         .secondary-navigation ul li a {
           display: block; }
+          .main-navigation ul li a:before,
+          .secondary-navigation ul li a:before {
+            display: none; }
         .main-navigation ul li:hover > ul,
         .secondary-navigation ul li:hover > ul {
           display: block; }

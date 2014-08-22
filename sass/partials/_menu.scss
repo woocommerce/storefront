@@ -30,6 +30,22 @@
 
 .main-navigation ul {
 	display: none;
+	margin-left: 0;
+	list-style: none;
+
+	li {
+		a {
+			padding: 1em 1.618em;
+			display: block;
+
+			&:before {
+				font-family: "FontAwesome";
+				content: "\f0f6";
+				margin-right: .53em;
+				font-weight: 400;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -57,6 +73,10 @@
 
 				a {
 					display: block;
+
+					&:before {
+						display: none;
+					}
 				}
 
 				// link hover
