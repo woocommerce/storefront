@@ -14,7 +14,6 @@ class storefront_welcome {
 
 		add_action( 'admin_menu', array( $this,'storefront_welcome_register_menu' ) );
 		add_action( 'load-themes.php', array( $this,'storefront_welcome_redirect' ) );
-		add_action( 'admin_head', array( $this, 'admin_head' ) );
 
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	20 );
@@ -41,7 +40,7 @@ class storefront_welcome {
 	 * @since 1.0.0
 	 */
 	function storefront_welcome_register_menu() {
-		add_dashboard_page( 'Welcome to storefront', 'Welcome to storefront', 'read', 'storefront-welcome', array( $this,'storefront_welcome_screen' ) );
+		add_dashboard_page( 'Storefront', 'Storefront', 'read', 'storefront-welcome', array( $this,'storefront_welcome_screen' ) );
 	}
 
 	/**
@@ -66,16 +65,6 @@ class storefront_welcome {
 
 		</div>
 		<?php
-	}
-
-	/**
-	 * Remove the welcome screen menu item.
-	 *
-	 * @access public
-	 * @return void
-	 */
-	public function admin_head() {
-		remove_submenu_page( 'index.php', 'storefront-welcome' );
 	}
 
 	/**
