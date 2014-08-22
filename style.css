@@ -2799,6 +2799,10 @@ table {
 html {
   font-size: 62.5%; }
 
+body {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word; }
+
 body,
 button,
 input,
