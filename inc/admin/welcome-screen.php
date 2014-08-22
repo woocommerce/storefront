@@ -16,9 +16,9 @@ class storefront_welcome {
 		add_action( 'load-themes.php', array( $this,'storefront_welcome_redirect' ) );
 		add_action( 'admin_head', array( $this, 'admin_head' ) );
 
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 			10 );
+		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	20 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_addons' ), 			30 );
+		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_addons' ), 				30 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_who' ), 				40 );
 
 	} // end constructor
@@ -78,6 +78,10 @@ class storefront_welcome {
 		remove_submenu_page( 'index.php', 'storefront-welcome' );
 	}
 
+	/**
+	 * Welcome screen intro
+	 * @since 1.0.0
+	 */
 	function storefront_welcome_intro() {
 		$storefront = wp_get_theme();
 
@@ -99,6 +103,10 @@ class storefront_welcome {
 		<?php
 	}
 
+	/**
+	 * Welcome screen about section
+	 * @since 1.0.0
+	 */
 	function storefront_welcome_who() {
 		?>
 		<div class="feature-section col three-col" style="margin-bottom: 1.618em; overflow: hidden;">
@@ -121,6 +129,10 @@ class storefront_welcome {
 		<?php
 	}
 
+	/**
+	 * Welcome screen getting started section
+	 * @since 1.0.0
+	 */
 	function storefront_welcome_getting_started() {
 		// get theme customizer url
         $url = admin_url() . 'customize.php?';
@@ -169,6 +181,10 @@ class storefront_welcome {
 		<?php
 	}
 
+	/**
+	 * Welcome screen add ons
+	 * @since 1.0.0
+	 */
 	function storefront_welcome_addons() {
 		?>
 		<div class="feature-section col three-col" style="clear: both;">
