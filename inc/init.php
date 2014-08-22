@@ -17,15 +17,10 @@ require get_template_directory() . '/inc/customizer/custom-header.php';
 require get_template_directory() . '/inc/functions/setup.php';
 
 /**
- * Hooks.
- * Template tags hooked into actions.
- */
-require get_template_directory() . '/inc/structure/hooks.php';
-
-/**
  * Structure.
  * Template functions used throughout the theme.
  */
+require get_template_directory() . '/inc/structure/hooks.php';
 require get_template_directory() . '/inc/structure/post.php';
 require get_template_directory() . '/inc/structure/page.php';
 require get_template_directory() . '/inc/structure/header.php';
@@ -51,7 +46,7 @@ if ( current_theme_supports( 'storefront-customizer-settings' ) ) {
 require get_template_directory() . '/inc/jetpack/jetpack.php';
 
 /**
- * Load welcome screen
+ * Welcome screen
  */
 require get_template_directory() . '/inc/admin/welcome-screen.php';
 
