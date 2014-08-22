@@ -7,21 +7,23 @@
 		overflow-x: hidden;
 	}
 
+	.site-header {
+		.site-branding,
+		.site-logo-anchor {
+			display: block;
+			@include gs-span(c, 1, 3);
+			@include gs-float(c, left);
+			clear: both;
+
+			img {
+				height: auto;
+				max-width: 100%;
+			}
+		}
+	}
+
 	.woocommerce-active {
 		.site-header {
-			.site-branding,
-			.site-logo-anchor {
-				display: block;
-				@include gs-span(c, 1, 3);
-				@include gs-float(c, left);
-				clear: both;
-
-				img {
-					height: auto;
-					max-width: 100%;
-				}
-			}
-
 			.secondary-navigation {
 				@include gs-span(c, 4, 9);
 				@include gs-float(c, left);

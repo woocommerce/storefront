@@ -3130,8 +3130,8 @@ fieldset {
   .site {
     overflow-x: hidden; }
 
-  .woocommerce-active .site-header .site-branding,
-  .woocommerce-active .site-header .site-logo-anchor {
+  .site-header .site-branding,
+  .site-header .site-logo-anchor {
     display: block;
     display: block;
     float: left;
@@ -3143,10 +3143,11 @@ fieldset {
     margin-left: 0;
     margin-right: 4%;
     clear: both; }
-    .woocommerce-active .site-header .site-branding img,
-    .woocommerce-active .site-header .site-logo-anchor img {
+    .site-header .site-branding img,
+    .site-header .site-logo-anchor img {
       height: auto;
       max-width: 100%; }
+
   .woocommerce-active .site-header .secondary-navigation {
     display: block;
     float: left;
