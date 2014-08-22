@@ -432,7 +432,17 @@ ul.products {
 }
 
 .widget_layered_nav {
+	li {
+		margin-bottom: .618em;
+	}
+
 	.chosen {
+		&:before {
+			font-family: "FontAwesome";
+			content: "\f00d";
+			margin-right: .53em;
+		}
+
 		a {
 			font-weight: 700;
 		}

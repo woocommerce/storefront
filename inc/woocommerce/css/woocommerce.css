@@ -289,6 +289,12 @@ ul.products {
   padding-left: 1.387em;
   padding-right: 1.387em; }
 
+.widget_layered_nav li {
+  margin-bottom: .618em; }
+.widget_layered_nav .chosen:before {
+  font-family: "FontAwesome";
+  content: "\f00d";
+  margin-right: .53em; }
 .widget_layered_nav .chosen a {
   font-weight: 700; }
 
