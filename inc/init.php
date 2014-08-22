@@ -48,7 +48,9 @@ require get_template_directory() . '/inc/jetpack/jetpack.php';
 /**
  * Welcome screen
  */
-require get_template_directory() . '/inc/admin/welcome-screen.php';
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/welcome-screen.php';
+}
 
 /**
  * Load WooCommerce compatibility files.
