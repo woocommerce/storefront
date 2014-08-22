@@ -139,7 +139,7 @@
 	.main-navigation {
 		position: relative;
 
-		ul.menu {
+		ul.menu, ul.nav-menu {
 			> li {
 				// The first level menu item
 				> a {
@@ -150,7 +150,7 @@
 					margin-left: -1em;
 				}
 
-				&.menu-item-has-children {
+				&.menu-item-has-children, &.page_item_has_children {
 					&:hover {
 						&:after {
 							display: block;
@@ -184,7 +184,7 @@
 						border-bottom: 0;
 					}
 
-					&.menu-item-has-children {
+					&.menu-item-has-children, &.page_item_has_children {
 						> a {
 							&:after {
 								// The dropdown indicator
