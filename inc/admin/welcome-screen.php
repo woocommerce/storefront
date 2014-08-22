@@ -199,7 +199,10 @@ class storefront_welcome {
 
 			<div class="col-2">
 				<h4><?php _e( 'Storefront Extensions', 'storefront' ); ?></h4>
-				<p><?php _e( 'Coming soon', 'storefront' ); ?></p>
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<h4><?php _e( 'Storefront Parallax Hero', 'storefront' ); ?></h4>
+				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
+
 			</div>
 
 			<div class="col-3 last-feature">

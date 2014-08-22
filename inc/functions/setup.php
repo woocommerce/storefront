@@ -119,9 +119,10 @@ function storefront_widgets_init() {
 
 /**
  * Enqueue scripts and styles.
+ * @since  1.0.0
  */
 function storefront_scripts() {
-	wp_enqueue_style( 'storefront-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'storefront-style', get_stylesheet_uri(), '', '1.0.0' );
 
 	wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
