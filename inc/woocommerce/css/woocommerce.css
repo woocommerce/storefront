@@ -1115,6 +1115,18 @@ dl.variation {
   #order_review {
     border-width: 0 3px 3px 3px; }
 
+  #wc_checkout_add_ons {
+    display: block;
+    float: left;
+    margin-left: 58.55856%;
+    margin-right: -100%;
+    width: 41.44144%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 4%;
+    margin-right: 0; }
+
   .page-template-template-fullwidth-php #customer_details {
     display: block;
     float: left;
@@ -1148,6 +1160,17 @@ dl.variation {
       margin-right: 4%; }
   .page-template-template-fullwidth-php #order_review_heading,
   .page-template-template-fullwidth-php #order_review {
+    display: block;
+    float: left;
+    margin-left: 52.0%;
+    margin-right: -100%;
+    width: 48.0%;
+    clear: none;
+    float: right;
+    margin-right: 0;
+    margin-left: 4%;
+    margin-left: 0; }
+  .page-template-template-fullwidth-php #wc_checkout_add_ons {
     display: block;
     float: left;
     margin-left: 52.0%;

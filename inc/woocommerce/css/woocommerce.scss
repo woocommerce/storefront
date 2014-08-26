@@ -1434,6 +1434,12 @@ dl.variation {
 		border-width: 0 3px 3px 3px;
 	}
 
+	#wc_checkout_add_ons {
+		@include gs-span(c, 6, 9, (1, 9));
+		@include gs-float(c, left);
+		margin-right: 0;
+	}
+
 	.page-template-template-fullwidth-php {
 		#customer_details {
 			@include gs-span(c, 1, 6);
@@ -1453,6 +1459,12 @@ dl.variation {
 
 		#order_review_heading,
 		#order_review {
+			@include gs-span(c, 7, 12);
+			@include gs-float(c, right);
+			margin-left: 0;
+		}
+
+		#wc_checkout_add_ons {
 			@include gs-span(c, 7, 12);
 			@include gs-float(c, right);
 			margin-left: 0;
