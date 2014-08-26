@@ -82,7 +82,7 @@ if ( ! function_exists( 'storefront_cart_link_fragment' ) ) {
  * WooCommerce specific scripts & stylesheets
  * @since 1.0.0
  */
-function wc_theme_woocommerce_scripts() {
+function storefront_woocommerce_scripts() {
 	wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css' );
 	wp_enqueue_script( 'storefront-woocommerce-script', get_template_directory_uri() . '/inc/woocommerce/js/woocommerce.min.js' );
 }

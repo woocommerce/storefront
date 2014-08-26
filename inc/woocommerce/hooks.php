@@ -7,9 +7,9 @@
 
 /**
  * Styles
- * @see  wc_theme_woocommerce_scripts()
+ * @see  storefront_woocommerce_scripts()
  */
-add_action( 'wp_enqueue_scripts', 			'wc_theme_woocommerce_scripts' );
+add_action( 'wp_enqueue_scripts', 			'storefront_woocommerce_scripts',		20 );
 add_filter( 'woocommerce_enqueue_styles', 	'__return_false' );
 
 /**
