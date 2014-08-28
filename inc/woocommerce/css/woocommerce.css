@@ -237,10 +237,10 @@ ul.products {
 .woocommerce-breadcrumb {
   margin-bottom: 4.236em;
   font-size: .857em;
-  padding: 1em 1.387em;
-  background-color: rgba(0, 0, 0, 0.0125);
+  padding: 1em 0;
   color: #717f83;
-  margin-top: -2.618em; }
+  margin-top: -2.618em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05); }
   .woocommerce-breadcrumb .separator {
     padding: 0 1em; }
   .woocommerce-breadcrumb a.home:before {
@@ -294,9 +294,8 @@ ul.products {
 .widget_layered_nav .chosen:before {
   font-family: "FontAwesome";
   content: "\f00d";
-  margin-right: .53em; }
-.widget_layered_nav .chosen a {
-  font-weight: 700; }
+  margin-right: .53em;
+  color: #e2401c; }
 
 .widget.woocommerce li .count {
   font-size: 1em;
