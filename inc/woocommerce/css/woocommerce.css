@@ -806,8 +806,15 @@ dl.variation {
   /**
    * Full width content area product layout
    */
+  .page-template-template-fullwidth-php .site-main .columns-1 ul.products li.product,
+  .page-template-template-homepage-php .site-main .columns-1 ul.products li.product,
+  .storefront-full-width-content .site-main .columns-1 ul.products li.product {
+    width: 100%;
+    margin-right: 0;
+    float: none; }
   .page-template-template-fullwidth-php .site-main .columns-2 ul.products li.product,
-  .page-template-template-homepage-php .site-main .columns-2 ul.products li.product {
+  .page-template-template-homepage-php .site-main .columns-2 ul.products li.product,
+  .storefront-full-width-content .site-main .columns-2 ul.products li.product {
     display: block;
     float: left;
     margin-left: 0;
@@ -818,7 +825,8 @@ dl.variation {
     margin-left: 0;
     margin-right: 4%; }
   .page-template-template-fullwidth-php .site-main .columns-3 ul.products li.product,
-  .page-template-template-homepage-php .site-main .columns-3 ul.products li.product {
+  .page-template-template-homepage-php .site-main .columns-3 ul.products li.product,
+  .storefront-full-width-content .site-main .columns-3 ul.products li.product {
     display: block;
     float: left;
     margin-left: 0;
@@ -829,7 +837,8 @@ dl.variation {
     margin-left: 0;
     margin-right: 4%; }
   .page-template-template-fullwidth-php .site-main .columns-4 ul.products li.product,
-  .page-template-template-homepage-php .site-main .columns-4 ul.products li.product {
+  .page-template-template-homepage-php .site-main .columns-4 ul.products li.product,
+  .storefront-full-width-content .site-main .columns-4 ul.products li.product {
     display: block;
     float: left;
     margin-left: 0;
@@ -839,10 +848,22 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: 4%; }
+  .page-template-template-fullwidth-php .site-main .columns-5 ul.products li.product,
+  .page-template-template-homepage-php .site-main .columns-5 ul.products li.product,
+  .storefront-full-width-content .site-main .columns-5 ul.products li.product {
+    width: 16.9%;
+    margin-right: 3.8%; }
 
   /**
    * Main content area (adjacent to sidebar) product layout
    */
+  .site-main .columns-1 ul.products li.product {
+    width: 100%;
+    margin-right: 0;
+    float: none; }
+  .site-main .columns-2 ul.products li.product {
+    width: 48%;
+    margin-right: 3.8%; }
   .site-main .columns-3 ul.products li.product {
     display: block;
     float: left;
@@ -854,6 +875,12 @@ dl.variation {
     margin-left: 0;
     margin-right: 4%;
     margin-right: 5.40541%; }
+  .site-main .columns-4 ul.products li.product {
+    width: 22.05%;
+    margin-right: 3.8%; }
+  .site-main .columns-5 ul.products li.product {
+    width: 16.9%;
+    margin-right: 3.8%; }
   .site-main ul.products li.product {
     display: block;
     float: left;
@@ -908,6 +935,57 @@ dl.variation {
     margin-bottom: 3.631em; }
   .single-product div.product .woocommerce-tabs {
     clear: both; }
+
+  .storefront-full-width-content.single-product div.product .images {
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    width: 30.66667%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 4%;
+    margin-right: 4%;
+    margin-bottom: 3.631em; }
+    .storefront-full-width-content.single-product div.product .images .thumbnails a.zoom {
+      display: block;
+      float: left;
+      margin-left: 0;
+      margin-right: -100%;
+      width: 15.21739%;
+      clear: none;
+      float: left;
+      margin-left: 0;
+      margin-right: 4%;
+      margin-right: 13.04348%; }
+      .storefront-full-width-content.single-product div.product .images .thumbnails a.zoom.last {
+        margin-right: 0; }
+  .storefront-full-width-content.single-product div.product .summary {
+    display: block;
+    float: left;
+    margin-left: 34.66667%;
+    margin-right: -100%;
+    width: 65.33333%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 4%;
+    margin-right: 0;
+    margin-bottom: 3.631em; }
+  .storefront-full-width-content.single-product div.product .woocommerce-tabs {
+    clear: both; }
+  .storefront-full-width-content.single-product .related ul.products li.product,
+  .storefront-full-width-content.single-product .upsells ul.products li.product {
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    width: 30.66667%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 4%; }
 
   .woocommerce .page-description {
     display: block;
@@ -1234,6 +1312,30 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: 4%; }
+
+  .storefront-full-width-content .woocommerce-tabs ul.tabs {
+    display: block;
+    float: left;
+    margin-left: 0;
+    margin-right: -100%;
+    width: 30.66667%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 4%;
+    margin-right: 4%; }
+  .storefront-full-width-content .woocommerce-tabs .panel {
+    display: block;
+    float: left;
+    margin-left: 34.66667%;
+    margin-right: -100%;
+    width: 65.33333%;
+    clear: none;
+    float: left;
+    margin-left: 0;
+    margin-right: 4%;
+    margin-right: 0;
+    margin-bottom: 3.631em; }
 
   .woocommerce-tabs {
     margin-bottom: 2.618em;

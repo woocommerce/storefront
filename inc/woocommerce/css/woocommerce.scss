@@ -1159,8 +1159,19 @@ dl.variation {
 	 * Full width content area product layout
 	 */
 	.page-template-template-fullwidth-php,
-	.page-template-template-homepage-php {
+	.page-template-template-homepage-php,
+	.storefront-full-width-content {
 		.site-main {
+			.columns-1 {
+				ul.products {
+					li.product {
+						width: 100%;
+						margin-right: 0;
+						float: none;
+					}
+				}
+			}
+
 			.columns-2 {
 				ul.products {
 					li.product {
@@ -1187,6 +1198,16 @@ dl.variation {
 					}
 				}
 			}
+
+			// The grid wont work for 5 columns :-(
+			.columns-5 {
+				ul.products {
+					li.product {
+						width: 16.9%;
+						margin-right: 3.8%;
+					}
+				}
+			}
 		}
 	}
 
@@ -1194,12 +1215,52 @@ dl.variation {
 	 * Main content area (adjacent to sidebar) product layout
 	 */
 	.site-main {
+		.columns-1 {
+			ul.products {
+				li.product {
+					width: 100%;
+					margin-right: 0;
+					float: none;
+				}
+			}
+		}
+
+		// The grid wont work for 2 columns :-(
+		.columns-2 {
+			ul.products {
+				li.product {
+					width: 48%;
+					margin-right: 3.8%;
+				}
+			}
+		}
+
 		.columns-3 {
 			ul.products {
 				li.product {
 					@include gs-span(c, 1, 3, (1, 9));
 					@include gs-float(c, left);
 					margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+				}
+			}
+		}
+
+		// The grid wont work for 4 columns :-(
+		.columns-4 {
+			ul.products {
+				li.product {
+					width: 22.05%;
+					margin-right: 3.8%;
+				}
+			}
+		}
+
+		// The grid wont work for 5 columns :-(
+		.columns-5 {
+			ul.products {
+				li.product {
+					width: 16.9%;
+					margin-right: 3.8%;
 				}
 			}
 		}
@@ -1246,6 +1307,51 @@ dl.variation {
 
 			.woocommerce-tabs {
 				clear: both;
+			}
+		}
+	}
+
+	// Full width single product
+	.storefront-full-width-content.single-product {
+		div.product {
+			.images {
+				@include gs-span(c, 1, 4);
+				@include gs-float(c, left);
+				margin-right: gs-gutter(c, false, true);
+				margin-bottom: 3.631em;
+
+				.thumbnails {
+					a.zoom {
+						@include gs-span(c, 1, 1, (1, 4));
+						@include gs-float(c, left);
+						margin-right: gs-adjust(c, gs-gutter(c), (1, 4), true);
+
+						&.last {
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
+			.summary {
+				@include gs-span(c, 5, 12);
+				@include gs-float(c, left);
+				margin-right: 0;
+				margin-bottom: 3.631em;
+			}
+
+			.woocommerce-tabs {
+				clear: both;
+			}
+		}
+
+		.related,
+		.upsells {
+			ul.products {
+				li.product {
+					@include gs-span(c, 1, 4); // This specifies the columns
+			  		@include gs-float(c, left); // This specifies to float this column left
+				}
 			}
 		}
 	}
@@ -1505,6 +1611,23 @@ dl.variation {
 		.form-row-last {
 			@include gs-span(c, 7, 12);
 			@include gs-float(c, left);
+		}
+	}
+
+	.storefront-full-width-content {
+		.woocommerce-tabs {
+			ul.tabs {
+				@include gs-span(c, 1, 4);
+				@include gs-float(c, left);
+				margin-right: gs-gutter(c, false, true);
+			}
+
+			.panel {
+				@include gs-span(c, 5, 12);
+				@include gs-float(c, left);
+				margin-right: 0;
+				margin-bottom: 3.631em;
+			}
 		}
 	}
 

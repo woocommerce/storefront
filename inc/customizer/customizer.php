@@ -29,6 +29,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Link / accent color',
 	        'section'  => 'colors',
 	        'settings' => 'storefront_accent_color',
+	        'priority' => 20,
 	    ) ) );
 
 	    /**
@@ -43,6 +44,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Text color',
 	        'section'  => 'colors',
 	        'settings' => 'storefront_text_color',
+	        'priority' => 30,
 	    ) ) );
 
 	    /**
@@ -57,6 +59,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Heading color',
 	        'section'  => 'colors',
 	        'settings' => 'storefront_heading_color',
+	        'priority' => 40,
 	    ) ) );
 
 	    /**
@@ -129,6 +132,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Background color',
 	        'section'  => 'storefront_buttons',
 	        'settings' => 'storefront_button_background_color',
+	        'priority' => 10,
 	    ) ) );
 
 	    /**
@@ -143,6 +147,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Text color',
 	        'section'  => 'storefront_buttons',
 	        'settings' => 'storefront_button_text_color',
+	        'priority' => 20,
 	    ) ) );
 
 	    /**
@@ -157,6 +162,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Alternate button background color',
 	        'section'  => 'storefront_buttons',
 	        'settings' => 'storefront_button_alt_background_color',
+	        'priority' => 30,
 	    ) ) );
 
 	    /**
@@ -171,6 +177,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	        'label'	   => 'Alternate button text color',
 	        'section'  => 'storefront_buttons',
 	        'settings' => 'storefront_button_alt_text_color',
+	        'priority' => 40,
 	    ) ) );
 
 	    /**
@@ -247,13 +254,13 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		$heading_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_heading_color' ) );
 		$button_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_background_color' ) );
 		$button_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_text_color' ) );
-		$alt_button_background_color 	= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_background_color' ) );
-		$alt_button_text_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_text_color' ) );
+		$button_alt_background_color 	= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_background_color' ) );
+		$button_alt_text_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_text_color' ) );
 
-		$brighten_factor 			= apply_filters( 'wcheme_brighten_factor', 25 );
+		$brighten_factor 			= apply_filters( 'storefront_brighten_factor', 25 );
 		$darken_factor 				= apply_filters( 'storefront_darken_factor', -25 );
 		?>
-		<!-- column customizer CSS -->
+		<!-- storefront customizer CSS -->
 		<style>
 
 			<?php if ( isset( $$accent_color ) ) { ?>
@@ -343,13 +350,13 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			}
 
 			button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart {
-				background-color: <?php echo $alt_button_background_color; ?>;
-				color: <?php echo $alt_button_text_color; ?>;
+				background-color: <?php echo $button_alt_background_color; ?>;
+				color: <?php echo $button_alt_text_color; ?>;
 			}
 
 			button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover, input[type="submit"].alt:hover, .button.alt:hover, .added_to_cart.alt:hover, .widget-area .widget a.button.alt:hover, .added_to_cart:hover {
-				background-color: <?php echo storefront_adjust_color_brightness( $alt_button_background_color, $darken_factor ); ?>;
-				color: <?php echo $alt_button_text_color; ?>;
+				background-color: <?php echo storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ); ?>;
+				color: <?php echo $button_alt_text_color; ?>;
 			}
 
 			@media screen and ( min-width: 768px ) {

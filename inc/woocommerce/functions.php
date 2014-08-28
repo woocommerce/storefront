@@ -32,7 +32,7 @@ if ( ! function_exists( 'storefront_after_content' ) ) {
 			</main><!-- #main -->
 		</div><!-- #primary -->
 
-		<?php get_sidebar();
+		<?php do_action( 'storefront_sidebar' );
 	}
 }
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'storefront_after_content' ) ) {
  * @since  1.0.0
  */
 function storefront_loop_columns() {
-	return 3; // 3 products per row
+	return apply_filters( 'storefront_loop_columns', 3 ); // 3 products per row
 }
 
 /**
@@ -116,7 +116,7 @@ function storefront_thumbnail_columns() {
  * @since  1.0.0
  */
 function storefront_products_per_page() {
-	return 12;
+	return apply_filters( 'storefront_products_per_page', 12 );
 }
 
 /**

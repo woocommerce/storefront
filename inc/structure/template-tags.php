@@ -156,3 +156,14 @@ if ( ! function_exists( 'storefront_social_icons' ) ) {
 		}
 	}
 }
+
+if ( ! function_exists( 'storefront_get_sidebar' ) ) {
+	/**
+	 * Display storefront sidebar
+	 * @uses get_sidebar()
+	 * @since 1.0.0
+	 */
+	function storefront_get_sidebar() {
+		get_sidebar();
+	}
+}
