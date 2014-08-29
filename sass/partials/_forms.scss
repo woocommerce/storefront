@@ -48,7 +48,7 @@ input[type="submit"],
 	}
 
 	&:hover {
-		background-color: darken( $color_links, 10% );
+		opacity: 0.9;
 		color: #fff;
 	}
 

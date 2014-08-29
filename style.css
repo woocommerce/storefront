@@ -3031,7 +3031,7 @@ input[type="submit"],
   input[type="submit"]:hover,
   .button:hover,
   .added_to_cart:hover {
-    background-color: #864f7b;
+    opacity: 0.9;
     color: #fff; }
   button.added:after,
   input[type="button"].added:after,
