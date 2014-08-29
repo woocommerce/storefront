@@ -49,7 +49,7 @@
 	do_action( 'storefront_before_content' ); ?>
 
 	<div id="content" class="site-content">
-		<div class="col-full c-show c-showgrid">
+		<div class="col-full">
 
 		<?php
 		/**

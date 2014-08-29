@@ -14,7 +14,7 @@
 	<?php do_action( 'storefront_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="col-full c-show c-showgrid">
+		<div class="col-full">
 
 			<?php
 			/**
@@ -28,8 +28,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
-<script src="https://get.gridsetapp.com/30225/overlay/"></script>
 
 </body>
 </html>
