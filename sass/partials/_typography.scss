@@ -114,16 +114,13 @@ address {
 pre {
 	background: darken( $body-background, 3% );
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	font-size: 15px;
-	font-size: 1.5rem;
-	line-height: 1.6;
 	margin-bottom: 1.6em;
 	padding: 1.6em;
 	overflow: auto;
 	max-width: 100%;
 }
 code, kbd, tt, var {
-	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	background-color: #fff9c0;
 	padding: .202em .53em;
 }
