@@ -551,6 +551,20 @@ ul.digital-downloads {
   border: 0;
   color: red; }
 
+.demo_store {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 0;
+  padding: 1em 1.387em;
+  background-color: #3d9cd2;
+  color: #fff; }
+  .demo_store:before {
+    font-family: "FontAwesome";
+    margin-right: .53em;
+    content: "\f05a"; }
+
 .star-rating {
   overflow: hidden;
   position: relative;

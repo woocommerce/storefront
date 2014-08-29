@@ -804,6 +804,23 @@ ul.digital-downloads {
 	color: red;
 }
 
+.demo_store {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: 0;
+	padding: 1em 1.387em;
+	background-color: $info;
+	color: #fff;
+
+	&:before {
+		font-family: "FontAwesome";
+		margin-right: .53em;
+		content: "\f05a";
+	}
+}
+
 .star-rating {
 	overflow: hidden;
 	position: relative;
