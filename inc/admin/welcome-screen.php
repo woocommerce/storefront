@@ -209,6 +209,10 @@ class storefront_welcome {
 				<h4><?php _e( 'Storefront Parallax Hero', 'storefront' ); ?></h4>
 				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
 
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/designer.jpg'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
+				<p><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing button styles, typographical schemes/scales, the WooCommerce shop layout and more.', 'storefront' ); ?></p>
+
 			</div>
 
 			<div class="col-3 last-feature">
