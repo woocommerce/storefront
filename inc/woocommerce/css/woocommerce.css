@@ -669,7 +669,8 @@ p.stars {
   box-shadow: none; }
   .quantity .plus:hover,
   .quantity .minus:hover {
-    background-color: transparent; }
+    background-color: transparent;
+    color: inherit !important; }
 
 .woocommerce-result-count,
 .woocommerce-ordering {
