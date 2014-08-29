@@ -770,7 +770,30 @@ p.stars {
   .woocommerce-info .button,
   .woocommerce-error .button,
   .woocommerce-noreviews .button {
-    float: right; }
+    float: right;
+    padding: 0;
+    background: none;
+    color: #fff;
+    box-shadow: none;
+    line-height: 1.618;
+    padding-left: 1em;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 0; }
+    .woocommerce-message .button:hover,
+    .woocommerce-info .button:hover,
+    .woocommerce-error .button:hover,
+    .woocommerce-noreviews .button:hover {
+      background: none;
+      color: #fff;
+      opacity: 0.7; }
+    .woocommerce-message .button:after,
+    .woocommerce-info .button:after,
+    .woocommerce-error .button:after,
+    .woocommerce-noreviews .button:after {
+      content: "\f178";
+      font-family: "FontAwesome";
+      margin-left: .53em;
+      font-weight: 400; }
 
 .woocommerce-error {
   list-style: none; }
