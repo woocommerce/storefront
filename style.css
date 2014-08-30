@@ -3529,18 +3529,23 @@ fieldset {
           display: block;
           width: 1px;
           height: 25%;
-          background-color: rgba(255, 255, 255, 0.1);
+          background-color: rgba(0, 0, 0, 0.05);
           position: absolute;
           top: 37.5%;
           left: 0; }
       .secondary-navigation .menu > li:first-child a:before {
         display: none; }
       .secondary-navigation .menu ul {
-        background-color: #2c2d33;
-        border: 1px solid rgba(0, 0, 0, 0.1);
-        padding: .618em 0; }
+        background-color: #2c2d33; }
         .secondary-navigation .menu ul a {
-          padding: .326em .857em; }
+          padding: .326em .857em;
+          background: rgba(0, 0, 0, 0.05); }
+        .secondary-navigation .menu ul li:first-child a {
+          padding-top: 1em; }
+        .secondary-navigation .menu ul li:last-child a {
+          padding-bottom: 1em; }
+        .secondary-navigation .menu ul ul {
+          margin-top: -.618em; }
       .secondary-navigation .menu a {
         padding: 1.387em .857em;
         font-weight: 400;

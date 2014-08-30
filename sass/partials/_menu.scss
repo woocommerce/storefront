@@ -244,7 +244,7 @@
 					display: block;
 					width: 1px;
 					height: 25%;
-					background-color: rgba(#fff,0.1);
+					background-color: rgba(#000,0.05);
 					position: absolute;
 					top: 37.5%;
 					left: 0;
@@ -257,11 +257,22 @@
 
 			ul {
 				background-color: #2c2d33;
-				border: 1px solid rgba(0,0,0,0.1);
-				padding: .618em 0;
 
 				a {
 					padding: .326em .857em;
+					background: rgba(#000,0.05);
+				}
+
+				li:first-child a {
+					padding-top: 1em;
+				}
+
+				li:last-child a {
+					padding-bottom: 1em;
+				}
+
+				ul {
+					margin-top: -.618em;
 				}
 			}
 
