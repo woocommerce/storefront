@@ -92,13 +92,13 @@ li > ol {
 	margin-left: $vspacing;
 }
 dt {
-	font-weight: bold;
+	font-weight: 700;
 }
 dd {
-	margin: 0 $vspacing $vspacing;
+	margin: 0 0 1.618em;
 }
 b, strong {
-	font-weight: bold;
+	font-weight: 700;
 }
 dfn, cite, em, i {
 	font-style: italic;
@@ -112,10 +112,10 @@ address {
 	margin: 0 0 $vspacing;
 }
 pre {
-	background: darken( $body-background, 3% );
+	background: #fff9c0;
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	margin-bottom: 1.6em;
-	padding: 1.6em;
+	margin-bottom: 1.618em;
+	padding: 1.618em;
 	overflow: auto;
 	max-width: 100%;
 }
