@@ -17,7 +17,20 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
-		$wp_customize->get_section( 'colors' )->description 		= __( 'Adjust the general Storefront color scheme.', 'storefront' );
+		// Move background color setting alongside background image
+		$wp_customize->get_control( 'background_color' )->section 	= 'background_image';
+
+		// Change background image section title & priority
+		$wp_customize->get_section( 'background_image' )->title 	= __( 'Background', 'storefront' );
+		$wp_customize->get_section( 'background_image' )->priority 	= 30;
+
+		/**
+	     * Add the typography section
+	     */
+	    $wp_customize->add_section( 'storefront_typography' , array(
+		    'title'      => __( 'Typography', 'storefront-designer' ),
+		    'priority'   => 45,
+		) );
 
 		/**
 		 * Accent Color
@@ -29,7 +42,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_accent_color', array(
 	        'label'	   => 'Link / accent color',
-	        'section'  => 'colors',
+	        'section'  => 'storefront_typography',
 	        'settings' => 'storefront_accent_color',
 	        'priority' => 20,
 	    ) ) );
@@ -45,7 +58,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_text_color', array(
 	        'label'	   => 'Text color',
-	        'section'  => 'colors',
+	        'section'  => 'storefront_typography',
 	        'settings' => 'storefront_text_color',
 	        'priority' => 30,
 	    ) ) );
@@ -61,7 +74,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_heading_color', array(
 	        'label'	   => 'Heading color',
-	        'section'  => 'colors',
+	        'section'  => 'storefront_typography',
 	        'settings' => 'storefront_heading_color',
 	        'priority' => 40,
 	    ) ) );
