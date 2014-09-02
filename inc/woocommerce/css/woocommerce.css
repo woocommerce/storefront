@@ -526,7 +526,10 @@ ul.order_details {
     padding: 1em 1.618em;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     font-size: .8em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 25%; }
+    ul.order_details li:last-child {
+      border-right: 0; }
     ul.order_details li strong {
       display: block;
       font-size: 1.387em;

@@ -761,6 +761,11 @@ ul.order_details {
 		border-right: 1px solid $color_border;
 		font-size: .8em;
 		text-transform: uppercase;
+		width: 25%;
+
+		&:last-child {
+			border-right: 0;
+		}
 
 		strong {
 			display: block;
