@@ -291,7 +291,7 @@ add_action( 'customize_register', 'storefront_customize_register' );
  */
 if ( ! function_exists( 'storefront_customize_preview_js' ) ) {
 	function storefront_customize_preview_js() {
-		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.6', true );
+		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.8', true );
 	}
 }
 add_action( 'customize_preview_init', 'storefront_customize_preview_js' );
