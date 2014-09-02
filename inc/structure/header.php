@@ -5,6 +5,17 @@
  * @package storefront
  */
 
+if ( ! function_exists( 'storefront_title' ) ) {
+	/**
+	 * Wrapper function for displaying the page title, for use with third-party title plugins.
+	 * @since  1.0.0
+	 */
+	function storefront_title () {
+		wp_title( '|', true, 'right' );
+	} // End storefront_title()
+}
+
+
 if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	/**
 	 * Display header widget region
