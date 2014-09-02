@@ -36,8 +36,8 @@ add_action( 'storefront_header', 'storefront_primary_navigation', 		50 );
  * @see  storefront_footer_widgets()
  * @see  storefront_credit()
  */
-add_action( 'storefront_footer', 'storefront_footer_widgets', 10 );
-add_action( 'storefront_footer', 'storefront_credit', 		20 );
+add_action( 'storefront_footer', 'storefront_footer_widgets', 	10 );
+add_action( 'storefront_footer', 'storefront_credit', 			20 );
 
 /**
  * Homepage
@@ -65,16 +65,13 @@ add_action( 'homepage', 'storefront_on_sale_products', 		60 );
  * @see  storefront_post_nav()
  * @see  storefront_display_comments()
  */
-add_action( 'storefront_loop_post', 'storefront_post_header', 	10 );
-add_action( 'storefront_loop_post', 'storefront_post_meta', 	20 );
-add_action( 'storefront_loop_post', 'storefront_post_content', 	30 );
-
-add_action( 'storefront_loop_after', 'storefront_paging_nav', 	10 );
-
-add_action( 'storefront_single_post', 'storefront_post_header', 	10 );
-add_action( 'storefront_single_post', 'storefront_post_meta', 		20 );
-add_action( 'storefront_single_post', 'storefront_post_content', 	30 );
-
+add_action( 'storefront_loop_post', 'storefront_post_header', 				10 );
+add_action( 'storefront_loop_post', 'storefront_post_meta', 				20 );
+add_action( 'storefront_loop_post', 'storefront_post_content', 				30 );
+add_action( 'storefront_loop_after', 'storefront_paging_nav', 				10 );
+add_action( 'storefront_single_post', 'storefront_post_header', 			10 );
+add_action( 'storefront_single_post', 'storefront_post_meta', 				20 );
+add_action( 'storefront_single_post', 'storefront_post_content', 			30 );
 add_action( 'storefront_single_post_after', 'storefront_post_nav', 			10 );
 add_action( 'storefront_single_post_after', 'storefront_display_comments', 	10 );
 
@@ -84,8 +81,8 @@ add_action( 'storefront_single_post_after', 'storefront_display_comments', 	10 )
  * @see  storefront_page_content()
  * @see  storefront_display_comments()
  */
-add_action( 'storefront_page', 'storefront_page_header', 	10 );
-add_action( 'storefront_page', 'storefront_page_content', 	20 );
+add_action( 'storefront_page', 'storefront_page_header', 			10 );
+add_action( 'storefront_page', 'storefront_page_content', 			20 );
 add_action( 'storefront_page_after', 'storefront_display_comments', 10 );
 
 /**
