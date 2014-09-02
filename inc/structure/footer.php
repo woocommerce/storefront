@@ -56,7 +56,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 		?>
 		<div class="site-info">
 			&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?><br />
-			<?php printf( __( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">woothemes</a>' ); ?>
+			<?php printf( __( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">WooThemes</a>' ); ?>
 		</div><!-- .site-info -->
 		<?php
 	}
