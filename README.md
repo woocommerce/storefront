@@ -5,10 +5,10 @@ Storefront is a robust and flexible [WordPress](http://wordpress.org) theme, des
 
 It features deep integration with WooCommerce core plus several of the most popular extensions:
 
-* WooCommerce Bookings
-* WooCommerce Wishlists
-* WooCommerce Brands
-* WooCommerce Subscriptions
+* [WooCommerce Bookings](http://www.woothemes.com/products/woocommerce-bookings/)
+* [WooCommerce Wishlists](http://www.woothemes.com/products/woocommerce-wishlists/)
+* [WooCommerce Brands](http://www.woothemes.com/products/brands/)
+* [WooCommerce Subscriptions](http://www.woothemes.com/products/woocommerce-subscriptions/)
 
 For developers, Storefront is the perfect starting point for your project. It's lean and extensible codebase will allow you to easily add functionality to your site via child theme and/or custom plugins.
 
