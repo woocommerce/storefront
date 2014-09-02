@@ -619,6 +619,10 @@ a.remove {
 	margin-bottom: 2.618em;
 }
 
+form.checkout {
+	@include clearfix;
+}
+
 #payment {
 	@include clearfix;
 	background-color: #fff;

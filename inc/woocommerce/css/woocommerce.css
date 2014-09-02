@@ -426,6 +426,11 @@ a.remove {
 .checkout_coupon {
   margin-bottom: 2.618em; }
 
+form.checkout:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 #payment {
   background-color: #fff;
   border-top: 3px solid rgba(0, 0, 0, 0.1); }
