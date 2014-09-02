@@ -2697,6 +2697,8 @@ body {
   .site-footer h5,
   .site-footer h6 {
     color: #646c6e; }
+  .site-footer a:not(.button) {
+    color: #a46497; }
 
 .site-info {
   padding: 2.618em 0; }

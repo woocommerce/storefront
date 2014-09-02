@@ -130,12 +130,13 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_footer_heading_color', array(
 	        'default'           => apply_filters( 'storefront_default_footer_heading_color', '#646c6e' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport' 		=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_heading_color', array(
-	        'label'	   => 'Heading color',
-	        'section'  => 'storefront_footer',
-	        'settings' => 'storefront_footer_heading_color',
+	        'label'	   	=> 'Heading color',
+	        'section'  	=> 'storefront_footer',
+	        'settings' 	=> 'storefront_footer_heading_color',
 	    ) ) );
 
 		/**
@@ -144,6 +145,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_footer_text_color', array(
 	        'default'           => apply_filters( 'storefront_default_footer_text_color', '#a8b0b2' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport'			=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_text_color', array(
@@ -158,6 +160,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_footer_link_color', array(
 	        'default'           => apply_filters( 'storefront_default_footer_link_color', '#a46497' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport'			=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_link_color', array(
@@ -172,6 +175,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_footer_background_color', array(
 	        'default'           => apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport'			=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_background_color', array(
@@ -282,7 +286,7 @@ add_action( 'customize_register', 'storefront_customize_register' );
  */
 if ( ! function_exists( 'storefront_customize_preview_js' ) ) {
 	function storefront_customize_preview_js() {
-		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.0', true );
+		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.3', true );
 	}
 }
 add_action( 'customize_preview_init', 'storefront_customize_preview_js' );
@@ -440,7 +444,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 				color: <?php echo $footer_text_color; ?>;
 			}
 
-			.site-footer a {
+			.site-footer a:not(.button) {
 				color: <?php echo $footer_link_color; ?>;
 			}
 

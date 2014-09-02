@@ -60,6 +60,10 @@ body {
 	h6 {
 		color: $color_body + #222;
 	}
+
+	a:not(.button) {
+		color: $color_links;
+	}
 }
 
 .site-info {
