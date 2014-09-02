@@ -40,8 +40,7 @@ get_header(); ?>
 					<?php endif; ?>
 
 					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( __( 'Try looking in the monthly archives. %1$s', 'storefront' ), convert_smilies( ':)' ) ) . '</p>';
+						$archive_content = '<p>' . __( 'Try looking in the monthly archives.', 'storefront' ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 					?>
 
