@@ -17,6 +17,8 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 
+		$wp_customize->get_section( 'colors' )->description 		= __( 'Adjust the general Storefront color scheme.', 'storefront' );
+
 		/**
 		 * Accent Color
 		 */
@@ -66,8 +68,9 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	     * Header section
 	     */
 	    $wp_customize->add_section( 'storefront_header' , array(
-		    'title'      => __( 'Header', 'storefront' ),
-		    'priority'   => 30,
+		    'title'      	=> __( 'Header', 'storefront' ),
+		    'priority'   	=> 30,
+		    'description' 	=> __( 'Customise the look & feel of your web site header.', 'storefront' ),
 		) );
 
 		/**
@@ -116,8 +119,9 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	     * Buttons section
 	     */
 	    $wp_customize->add_section( 'storefront_buttons' , array(
-		    'title'      => __( 'Buttons', 'storefront' ),
-		    'priority'   => 45,
+		    'title'      	=> __( 'Buttons', 'storefront' ),
+		    'priority'   	=> 45,
+		    'description' 	=> __( 'Customise the look & feel of your web site buttons.', 'storefront' ),
 		) );
 
 		/**
@@ -184,8 +188,9 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	     * Layout
 	     */
 	    $wp_customize->add_section( 'storefront_layout' , array(
-		    'title'      => __( 'Layout', 'storefront' ),
-		    'priority'   => 50,
+		    'title'      	=> __( 'Layout', 'storefront' ),
+		    'priority'   	=> 50,
+		    'description' 	=> __( 'Customise the web site layout', 'storefront' ),
 		) );
 	    $wp_customize->add_setting( 'storefront_layout', array(
             'default'    => 'right',
