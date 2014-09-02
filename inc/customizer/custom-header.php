@@ -32,4 +32,3 @@ function storefront_custom_header_setup() {
 		'flex-height'            => true,
 	) ) );
 }
-add_action( 'after_setup_theme', 'storefront_custom_header_setup' );

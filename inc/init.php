@@ -6,11 +6,6 @@
  */
 
 /**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/customizer/custom-header.php';
-
-/**
  * Setup.
  * Enqueue styles, register widget regions, etc.
  */
@@ -37,7 +32,11 @@ require get_template_directory() . '/inc/functions/extras.php';
  * Customizer additions.
  */
 if ( current_theme_supports( 'storefront-customizer-settings' ) ) {
-	require get_template_directory() . '/inc/customizer/customizer.php';
+	require get_template_directory() . '/inc/customizer/hooks.php';
+	require get_template_directory() . '/inc/customizer/controls.php';
+	require get_template_directory() . '/inc/customizer/display.php';
+	require get_template_directory() . '/inc/customizer/functions.php';
+	require get_template_directory() . '/inc/customizer/custom-header.php';
 }
 
 /**
