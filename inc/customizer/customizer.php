@@ -79,6 +79,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_header_text_color', array(
 	        'default'           => apply_filters( 'storefront_default_header_text_color', '#5a6567' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport'			=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_header_text_color', array(
@@ -93,6 +94,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_header_link_color', array(
 	        'default'           => apply_filters( 'storefront_default_header_link_color', '#ffffff' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport'			=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_header_link_color', array(
@@ -107,6 +109,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_setting( 'storefront_header_background_color', array(
 	        'default'           => apply_filters( 'storefront_default_header_background_color', '#2c2d33' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	        'transport'			=> 'postMessage',
 	    ) );
 
 	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_header_background_color', array(
@@ -286,7 +289,7 @@ add_action( 'customize_register', 'storefront_customize_register' );
  */
 if ( ! function_exists( 'storefront_customize_preview_js' ) ) {
 	function storefront_customize_preview_js() {
-		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.3', true );
+		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '1.6', true );
 	}
 }
 add_action( 'customize_preview_init', 'storefront_customize_preview_js' );

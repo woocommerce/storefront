@@ -16,6 +16,23 @@
 			$( '.site-description' ).text( to );
 		} );
 	} );
+
+	wp.customize( 'storefront_header_text_color', function( value ) {
+		value.bind( function( to ) {
+			$( 'p.site-description, ul.menu li.current-menu-item > a, .secondary-navigation ul.menu li a' ).css( 'color', to );
+		} );
+	} );
+	wp.customize( 'storefront_header_link_color', function( value ) {
+		value.bind( function( to ) {
+			$( '.main-navigation ul li a, .site-title a, a.cart-contents, .site-header-cart .widget_shopping_cart a, ul.menu li a' ).css( 'color', to );
+		} );
+	} );
+	wp.customize( 'storefront_header_background_color', function( value ) {
+		value.bind( function( to ) {
+			$( '.site-header, .main-navigation ul ul, .secondary-navigation ul ul, .main-navigation ul.menu > li.menu-item-has-children:after, .site-header-cart .widget_shopping_cart, .secondary-navigation ul.menu ul' ).css( 'background-color', to );
+		} );
+	} );
+
 	wp.customize( 'storefront_footer_heading_color', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6' ).css( 'color', to );
