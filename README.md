@@ -1,7 +1,7 @@
 Storefront
 ==========
 
-Storefront is a robust and flexible [WordPress](http://wordpress.org) theme, designed by WooCommerce creators WooThemes to help you make the most out of using WooCommerce to power your online store. It's available to download for free at the WordPress [theme repository](https://wordpress.org/themes/storefront/)
+Storefront is a robust and flexible [WordPress](http://wordpress.org) theme, designed by WooCommerce creators WooThemes to help you make the most out of using WooCommerce to power your online store. It's available to download for free at the WordPress [theme repository](https://wordpress.org/themes/storefront/).
 
 It features deep integration with WooCommerce core plus several of the most popular extensions:
 
