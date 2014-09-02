@@ -132,7 +132,7 @@ class storefront_welcome {
 		<div class="feature-section col two-col" style="margin-bottom: 1.618em; overflow: hidden;">
 
 			<h2><?php _e ( 'Using Storefront', 'storefront' ); ?> <div class="dashicons dashicons-lightbulb"></div></h2>
-			<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so configuration is a breeze. Here are some common tasks:', 'storefront' ); ?></p>
+			<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so configuration is a breeze. Here are some common theme-setup tasks:', 'storefront' ); ?></p>
 
 			<div class="col-1">
 				<?php if ( ! class_exists( 'WooCommerce' ) ) { ?>
@@ -181,7 +181,7 @@ class storefront_welcome {
 			<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>
 
 			<p>
-				<?php _e( 'Below you will find a selection of hand-picked WooCommerce extensions, Storefront extensions and Storefront child themes that could help improve your online store. Each WooCommerce extension integrates seamlessly with Storefront for enhanced performance.', 'storefront' ); ?>
+				<?php _e( 'Below you will find a selection of hand-picked WooCommerce and Storefront extensions that could help improve your online store. Each WooCommerce extension integrates seamlessly with Storefront for enhanced performance.', 'storefront' ); ?>
 			</p>
 
 			<div class="col-1">
@@ -213,11 +213,6 @@ class storefront_welcome {
 				<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
 				<p><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing button styles, typographical schemes/scales, the WooCommerce shop layout and more.', 'storefront' ); ?></p>
 
-			</div>
-
-			<div class="col-3 last-feature">
-				<h4><?php _e( 'Storefront Child Themes', 'storefront' ); ?></h4>
-				<p><?php _e( 'Coming soon', 'storefront' ); ?></p>
 			</div>
 
 		</div>
