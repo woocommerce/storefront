@@ -49,7 +49,17 @@ body {
  * Footer
  */
 .site-footer {
-	background-color: rgba(0,0,0,0.035);
+	background-color: #f3f3f3;
+	color: $color_body + #666;
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: $color_body + #222;
+	}
 }
 
 .site-info {

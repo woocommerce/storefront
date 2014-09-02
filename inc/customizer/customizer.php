@@ -116,6 +116,71 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    ) ) );
 
 	    /**
+	     * Footer section
+	     */
+	    $wp_customize->add_section( 'storefront_footer' , array(
+		    'title'      	=> __( 'Footer', 'storefront' ),
+		    'priority'   	=> 40,
+		    'description' 	=> __( 'Customise the look & feel of your web site footer.', 'storefront' ),
+		) );
+
+		/**
+	     * Footer heading color
+	     */
+	    $wp_customize->add_setting( 'storefront_footer_heading_color', array(
+	        'default'           => apply_filters( 'storefront_default_footer_heading_color', '#646c6e' ),
+	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	    ) );
+
+	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_heading_color', array(
+	        'label'	   => 'Heading color',
+	        'section'  => 'storefront_footer',
+	        'settings' => 'storefront_footer_heading_color',
+	    ) ) );
+
+		/**
+	     * Footer text color
+	     */
+	    $wp_customize->add_setting( 'storefront_footer_text_color', array(
+	        'default'           => apply_filters( 'storefront_default_footer_text_color', '#a8b0b2' ),
+	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	    ) );
+
+	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_text_color', array(
+	        'label'	   => 'Text color',
+	        'section'  => 'storefront_footer',
+	        'settings' => 'storefront_footer_text_color',
+	    ) ) );
+
+	    /**
+	     * Footer link color
+	     */
+	    $wp_customize->add_setting( 'storefront_footer_link_color', array(
+	        'default'           => apply_filters( 'storefront_default_footer_link_color', '#a46497' ),
+	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	    ) );
+
+	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_link_color', array(
+	        'label'	   => 'Link color',
+	        'section'  => 'storefront_footer',
+	        'settings' => 'storefront_footer_link_color',
+	    ) ) );
+
+	    /**
+	     * Footer Background
+	     */
+	    $wp_customize->add_setting( 'storefront_footer_background_color', array(
+	        'default'           => apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ),
+	        'sanitize_callback' => 'storefront_sanitize_hex_color',
+	    ) );
+
+	    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_background_color', array(
+	        'label'	   => 'Background color',
+	        'section'  => 'storefront_footer',
+	        'settings' => 'storefront_footer_background_color',
+	    ) ) );
+
+	    /**
 	     * Buttons section
 	     */
 	    $wp_customize->add_section( 'storefront_buttons' , array(
@@ -255,6 +320,12 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color' ) );
 		$header_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_link_color' ) );
 		$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color' ) );
+
+		$footer_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_background_color' ) );
+		$footer_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_link_color' ) );
+		$footer_heading_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_heading_color' ) );
+		$footer_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_text_color' ) );
+
 		$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color' ) );
 		$heading_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_heading_color' ) );
 		$button_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_background_color' ) );
@@ -362,6 +433,19 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover, input[type="submit"].alt:hover, .button.alt:hover, .added_to_cart.alt:hover, .widget-area .widget a.button.alt:hover, .added_to_cart:hover {
 				background-color: <?php echo storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ); ?>;
 				color: <?php echo $button_alt_text_color; ?>;
+			}
+
+			.site-footer {
+				background-color: <?php echo $footer_background_color; ?>;
+				color: <?php echo $footer_text_color; ?>;
+			}
+
+			.site-footer a {
+				color: <?php echo $footer_link_color; ?>;
+			}
+
+			.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
+				color: <?php echo $footer_heading_color; ?>;
 			}
 
 			@media screen and ( min-width: 768px ) {

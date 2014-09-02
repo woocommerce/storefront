@@ -2688,7 +2688,15 @@ body {
  * Footer
  */
 .site-footer {
-  background-color: rgba(0, 0, 0, 0.035); }
+  background-color: #f3f3f3;
+  color: #a8b0b2; }
+  .site-footer h1,
+  .site-footer h2,
+  .site-footer h3,
+  .site-footer h4,
+  .site-footer h5,
+  .site-footer h6 {
+    color: #646c6e; }
 
 .site-info {
   padding: 2.618em 0; }
