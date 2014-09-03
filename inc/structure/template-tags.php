@@ -14,9 +14,9 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_product_categories( $defaults ) {
+	function storefront_product_categories( $args ) {
 
-		$defaults = apply_filters( 'storefront_product_categories_args', array(
+		$args = apply_filters( 'storefront_product_categories_args', array(
 			'limit' 			=> 3,
 			'columns' 			=> 3,
 			'child_categories' 	=> 0,
@@ -26,8 +26,8 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 
 		echo '<section class="storefront-product-section">';
 
-		echo '<h2 class="section-title">' . $defaults['title'] . '</h2>';
-		echo do_shortcode( '[product_categories number="' . $defaults['limit'] . '" columns="' . $defaults['columns'] . '" orderby="' . $defaults['orderby'] . '" parent="' . $defaults['child_categories'] . '"]' );
+		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+		echo do_shortcode( '[product_categories number="' . $args['limit'] . '" columns="' . $args['columns'] . '" orderby="' . $args['orderby'] . '" parent="' . $args['child_categories'] . '"]' );
 
 		echo '</section>';
 	}
@@ -40,8 +40,8 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_recent_products( $defaults ) {
-		$defaults = apply_filters( 'storefront_recent_products_args', array(
+	function storefront_recent_products( $args ) {
+		$args = apply_filters( 'storefront_recent_products_args', array(
 			'limit' 			=> 4,
 			'columns' 			=> 4,
 			'title'				=> __( 'Recent Products', 'storefront' ),
@@ -49,8 +49,8 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 
 		echo '<section class="storefront-product-section">';
 
-		echo '<h2 class="section-title">' . $defaults['title'] . '</h2>';
-		echo do_shortcode( '[recent_products per_page="' . $defaults['limit'] . '" columns="' . $defaults['columns'] . '"]' );
+		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+		echo do_shortcode( '[recent_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
 
 		echo '</section>';
 	}
@@ -63,8 +63,8 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_featured_products( $defaults ) {
-		$defaults = apply_filters( 'storefront_featured_products_args', array(
+	function storefront_featured_products( $args ) {
+		$args = apply_filters( 'storefront_featured_products_args', array(
 			'limit' 			=> 4,
 			'columns' 			=> 4,
 			'title'				=> __( 'Featured Products', 'storefront' ),
@@ -72,8 +72,8 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 
 		echo '<section class="storefront-product-section">';
 
-		echo '<h2 class="section-title">' . $defaults['title'] . '</h2>';
-		echo do_shortcode( '[featured_products per_page="' . $defaults['limit'] . '" columns="' . $defaults['columns'] . '"]' );
+		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+		echo do_shortcode( '[featured_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
 
 		echo '</section>';
 	}
@@ -86,8 +86,8 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_popular_products( $defaults ) {
-		$defaults = apply_filters( 'storefront_popular_products_args', array(
+	function storefront_popular_products( $args ) {
+		$args = apply_filters( 'storefront_popular_products_args', array(
 			'limit' 			=> 4,
 			'columns' 			=> 4,
 			'title'				=> __( 'Top Rated Products', 'storefront' ),
@@ -95,8 +95,8 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 
 		echo '<section class="storefront-product-section">';
 
-		echo '<h2 class="section-title">' . $defaults['title'] . '</h2>';
-		echo do_shortcode( '[top_rated_products per_page="' . $defaults['limit'] . '" columns="' . $defaults['columns'] . '"]' );
+		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+		echo do_shortcode( '[top_rated_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
 
 		echo '</section>';
 	}
@@ -109,8 +109,8 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_on_sale_products( $defaults ) {
-		$defaults = apply_filters( 'storefront_on_sale_products_args', array(
+	function storefront_on_sale_products( $args ) {
+		$args = apply_filters( 'storefront_on_sale_products_args', array(
 			'limit' 			=> 4,
 			'columns' 			=> 4,
 			'title'				=> __( 'On Sale', 'storefront' ),
@@ -118,8 +118,8 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 
 		echo '<section class="storefront-product-section">';
 
-		echo '<h2 class="section-title">' . $defaults['title'] . '</h2>';
-		echo do_shortcode( '[sale_products per_page="' . $defaults['limit'] . '" columns="' . $defaults['columns'] . '"]' );
+		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+		echo do_shortcode( '[sale_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
 
 		echo '</section>';
 	}
