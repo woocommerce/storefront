@@ -41,8 +41,7 @@ input[type="submit"],
 		0 1px 1px rgba(#000,.1);
 
 	&.cta,
-	&.alt,
-	&.added_to_cart {
+	&.alt {
 		background-color: $color_links;
 
 		&:hover {
