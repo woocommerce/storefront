@@ -33,7 +33,7 @@
 	} );
 	wp.customize( 'storefront_header_link_color', function( value ) {
 		value.bind( function( to ) {
-			$( '.main-navigation ul li a, .site-title a, a.cart-contents, .site-header-cart .widget_shopping_cart a, ul.menu li a' ).css( 'color', to );
+			$( '.main-navigation ul li a, .site-title a, a.cart-contents, .site-header-cart .widget_shopping_cart a' ).css( 'color', to );
 		} );
 	} );
 	wp.customize( 'storefront_header_background_color', function( value ) {

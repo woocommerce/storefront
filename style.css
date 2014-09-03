@@ -886,12 +886,12 @@ fieldset {
         margin-right: 0; } }
 @media screen and (max-width: 767px) {
   .col-full {
-    margin-left: 1em;
-    margin-right: 1em; } }
+    margin-left: 2.618em;
+    margin-right: 2.618em; } }
 @media screen and (max-width: 65.141em) {
   .col-full {
-    margin-left: 1em;
-    margin-right: 1em; } }
+    margin-left: 2.618em;
+    margin-right: 2.618em; } }
 /**
  * Main Naivgation
  */
