@@ -1432,6 +1432,29 @@ dl.variation {
 	/**
 	 * Cart
 	 */
+	.page-template-template-fullwidth-php {
+		table.cart {
+			.product-thumbnail {
+				display: table-cell;
+
+				img {
+					max-width: 3.631em;
+					height: auto;
+					border: .327em solid #fff;
+				}
+			}
+
+			thead {
+				font-size: 1em;
+				text-indent: 0;
+
+				th {
+					padding: .857em 1.387em;
+				}
+			}
+		}
+	}
+
 	table.cart {
 		th,
 		td {
@@ -1714,33 +1737,6 @@ dl.variation {
 		  	@include gs-float(c, left); // This specifies to float this column left
 		  	margin-right: 0;
 		  	margin-top: 0;
-		}
-	}
-}
-
-
-/**
- * Anything larger than iPad portrait
- */
-@media screen and ( min-width: 769px ) {
-	table.cart {
-		.product-thumbnail {
-			display: table-cell;
-
-			img {
-				max-width: 3.631em;
-				height: auto;
-				border: .327em solid #fff;
-			}
-		}
-
-		thead {
-			font-size: 1em;
-			text-indent: 0;
-
-			th {
-				padding: .857em 1.387em;
-			}
 		}
 	}
 }

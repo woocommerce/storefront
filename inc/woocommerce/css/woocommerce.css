@@ -1067,6 +1067,18 @@ dl.variation {
   /**
    * Cart
    */
+  .page-template-template-fullwidth-php table.cart .product-thumbnail {
+    display: table-cell; }
+    .page-template-template-fullwidth-php table.cart .product-thumbnail img {
+      max-width: 3.631em;
+      height: auto;
+      border: .327em solid #fff; }
+  .page-template-template-fullwidth-php table.cart thead {
+    font-size: 1em;
+    text-indent: 0; }
+    .page-template-template-fullwidth-php table.cart thead th {
+      padding: .857em 1.387em; }
+
   table.cart th,
   table.cart td {
     padding: .857em 1.387em; }
@@ -1432,18 +1444,3 @@ dl.variation {
       margin-right: 4%;
       margin-right: 0;
       margin-top: 0; } }
-/**
- * Anything larger than iPad portrait
- */
-@media screen and (min-width: 769px) {
-  table.cart .product-thumbnail {
-    display: table-cell; }
-    table.cart .product-thumbnail img {
-      max-width: 3.631em;
-      height: auto;
-      border: .327em solid #fff; }
-  table.cart thead {
-    font-size: 1em;
-    text-indent: 0; }
-    table.cart thead th {
-      padding: .857em 1.387em; } }
