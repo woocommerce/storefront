@@ -3,7 +3,16 @@
  */
 
 .sticky {
+	.entry-title {
+		&:before {
+			font-family: "FontAwesome";
+			font-weight: 400;
+			margin-right: .53em;
+			content: "\f08d";
+		}
+	}
 }
+
 .hentry {
 	margin: 0 0 4.236em;
 	padding-bottom: 3.631em;
