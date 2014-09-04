@@ -109,9 +109,9 @@ function storefront_widgets_init() {
 			'id' 				=> sprintf( 'footer-%d', $i ),
 			'description' 		=> sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i ),
 			'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
-			'after_widget' 		=> '</div></aside>',
+			'after_widget' 		=> '</aside>',
 			'before_title' 		=> '<h3>',
-			'after_title' 		=> '</h3><div class="widget-content">'
+			'after_title' 		=> '</h3>'
 			)
 		);
 	}
