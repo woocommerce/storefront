@@ -540,13 +540,16 @@ table.cart {
 	margin-bottom: 3.631em;
 
 	thead {
-		font-size: .857em;
+		text-indent: -999em;
+
+		th {
+			padding: 0;
+		}
 	}
 
 	.product-thumbnail,
 	.product-quantity .plus,
-	.product-quantity .minus,
-	.product-remove {
+	.product-quantity .minus {
 		display: none;
 	}
 
@@ -557,6 +560,7 @@ table.cart {
 
 	.qty {
 		padding: .236em;
+		max-width: 1.618em;
 	}
 
 	td.actions {
@@ -1441,6 +1445,11 @@ dl.variation {
 
 		thead {
 			font-size: 1em;
+			text-indent: 0;
+
+			th {
+				padding: .857em 1.387em;
+			}
 		}
 
 		th,
@@ -1450,6 +1459,7 @@ dl.variation {
 
 		.qty {
 			padding: .857em;
+			max-width: 3.632em;
 		}
 
 		.product-remove {

@@ -370,17 +370,19 @@ ul.products {
 table.cart {
   margin-bottom: 3.631em; }
   table.cart thead {
-    font-size: .857em; }
+    text-indent: -999em; }
+    table.cart thead th {
+      padding: 0; }
   table.cart .product-thumbnail,
   table.cart .product-quantity .plus,
-  table.cart .product-quantity .minus,
-  table.cart .product-remove {
+  table.cart .product-quantity .minus {
     display: none; }
   table.cart td,
   table.cart th {
     padding: .53em; }
   table.cart .qty {
-    padding: .236em; }
+    padding: .236em;
+    max-width: 1.618em; }
   table.cart td.actions label {
     display: none; }
   table.cart td.actions .coupon {
@@ -1072,12 +1074,16 @@ dl.variation {
       height: auto;
       border: .327em solid #fff; }
   table.cart thead {
-    font-size: 1em; }
+    font-size: 1em;
+    text-indent: 0; }
+    table.cart thead th {
+      padding: .857em 1.387em; }
   table.cart th,
   table.cart td {
     padding: .857em 1.387em; }
   table.cart .qty {
-    padding: .857em; }
+    padding: .857em;
+    max-width: 3.632em; }
   table.cart .product-remove {
     display: table-cell; }
   table.cart .product-quantity .plus,

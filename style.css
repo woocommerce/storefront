@@ -339,6 +339,16 @@ textarea {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
+@media screen and (max-width: 568px) {
+  /**
+   * Adjust the font size on mobile phones
+   */
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 1.387em; } }
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", sans-serif;
   clear: both;
@@ -883,8 +893,8 @@ fieldset {
     margin-right: 2.618em; } }
 @media screen and (max-width: 568px) {
   .col-full {
-    margin-left: 1.618em;
-    margin-right: 1.618em; } }
+    margin-left: 1.387em;
+    margin-right: 1.387em; } }
 /**
  * Main Naivgation
  */
