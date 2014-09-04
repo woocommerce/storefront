@@ -30,17 +30,17 @@ class storefront_welcome {
 		global $pagenow;
 
 		if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-			wp_redirect( admin_url( 'index.php?page=storefront-welcome' ) );
+			wp_redirect( admin_url( 'themes.php?page=storefront-welcome' ) );
 		}
 	}
 
 	/**
 	 * Creates the dashboard page
-	 * @see  add_dashboard_page()
+	 * @see  add_theme_page()
 	 * @since 1.0.0
 	 */
 	function storefront_welcome_register_menu() {
-		add_dashboard_page( 'Storefront', 'Storefront', 'read', 'storefront-welcome', array( $this,'storefront_welcome_screen' ) );
+		add_theme_page( 'Storefront', 'Storefront', 'read', 'storefront-welcome', array( $this,'storefront_welcome_screen' ) );
 	}
 
 	/**
