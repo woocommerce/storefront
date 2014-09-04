@@ -26,7 +26,7 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 		if ( $widget_columns > 0 ) : ?>
 
-			<section class="footer-widgets col-full col-<?php echo $widget_columns; ?> fix">
+			<section class="footer-widgets col-<?php echo $widget_columns; ?> fix">
 
 				<?php $i = 0; while ( $i < $widget_columns ) : $i++; ?>
 

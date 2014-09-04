@@ -876,14 +876,14 @@ fieldset {
       margin-right: 4%; }
       .footer-widgets.col-4 .block.footer-widget-4 {
         margin-right: 0; } }
-@media screen and (max-width: 767px) {
-  .col-full {
-    margin-left: 2.618em;
-    margin-right: 2.618em; } }
 @media screen and (max-width: 65.141em) {
   .col-full {
     margin-left: 2.618em;
     margin-right: 2.618em; } }
+@media screen and (max-width: 568px) {
+  .col-full {
+    margin-left: 1.618em;
+    margin-right: 1.618em; } }
 /**
  * Main Naivgation
  */
