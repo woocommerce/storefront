@@ -402,7 +402,7 @@ a.remove {
   display: block;
   width: 1em;
   height: 1em;
-  line-height: .85;
+  line-height: 1;
   font-weight: 700;
   padding: .236em;
   background-color: #e2401c;
