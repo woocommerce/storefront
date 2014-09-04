@@ -126,6 +126,6 @@ function storefront_products_per_page() {
  * @since  1.0.0
  */
 function storefront_breadcrumb_delimeter( $defaults ) {
-	$defaults['delimiter'] = '<span class="separator">›</span>';
+	$defaults['delimiter'] = '<span class="separator">&gt;</span>';
 	return $defaults;
 }
