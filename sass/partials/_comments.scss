@@ -47,6 +47,17 @@
 			}
 		}
 
+		.bypostauthor {
+			cite {
+				&:after {
+					font-family: "FontAwesome";
+					font-weight: 400;
+					margin-left: .53em;
+					content: "\f097";
+				}
+			}
+		}
+
 		.reply {
 			@include clearfix;
 			font-size: .857em;

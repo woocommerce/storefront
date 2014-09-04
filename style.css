@@ -1335,6 +1335,11 @@ object {
       font-style: normal;
       clear: both;
       display: block; }
+    #comments .comment-list .bypostauthor cite:after {
+      font-family: "FontAwesome";
+      font-weight: 400;
+      margin-left: .53em;
+      content: "\f097"; }
     #comments .comment-list .reply {
       font-size: .857em;
       margin-bottom: 1.618em; }
