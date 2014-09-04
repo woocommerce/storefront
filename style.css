@@ -202,7 +202,8 @@ body {
  */
 .site-footer {
   background-color: #f3f3f3;
-  color: #a8b0b2; }
+  color: #a8b0b2;
+  padding: 1.618em 0; }
   .site-footer h1,
   .site-footer h2,
   .site-footer h3,
