@@ -827,7 +827,8 @@ fieldset {
   .page-template-template-homepage-php .content-area {
     float: none;
     width: 100%;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-left: 0; }
 
   /**
    * Footer widgets
