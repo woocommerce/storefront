@@ -16,20 +16,24 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 	 */
 	function storefront_product_categories( $args ) {
 
-		$args = apply_filters( 'storefront_product_categories_args', array(
-			'limit' 			=> 3,
-			'columns' 			=> 3,
-			'child_categories' 	=> 0,
-			'orderby' 			=> 'name',
-			'title'				=> __( 'Product Categories', 'storefront' ),
-			) );
+		if ( is_woocommerce_activated() ) {
 
-		echo '<section class="storefront-product-section">';
+			$args = apply_filters( 'storefront_product_categories_args', array(
+				'limit' 			=> 3,
+				'columns' 			=> 3,
+				'child_categories' 	=> 0,
+				'orderby' 			=> 'name',
+				'title'				=> __( 'Product Categories', 'storefront' ),
+				) );
 
-		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
-		echo do_shortcode( '[product_categories number="' . $args['limit'] . '" columns="' . $args['columns'] . '" orderby="' . $args['orderby'] . '" parent="' . $args['child_categories'] . '"]' );
+			echo '<section class="storefront-product-section">';
 
-		echo '</section>';
+			echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+			echo do_shortcode( '[product_categories number="' . $args['limit'] . '" columns="' . $args['columns'] . '" orderby="' . $args['orderby'] . '" parent="' . $args['child_categories'] . '"]' );
+
+			echo '</section>';
+
+		}
 	}
 }
 
@@ -41,18 +45,23 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 	 * @return void
 	 */
 	function storefront_recent_products( $args ) {
-		$args = apply_filters( 'storefront_recent_products_args', array(
-			'limit' 			=> 4,
-			'columns' 			=> 4,
-			'title'				=> __( 'Recent Products', 'storefront' ),
-			) );
 
-		echo '<section class="storefront-product-section">';
+		if ( is_woocommerce_activated() ) {
 
-		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
-		echo do_shortcode( '[recent_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+			$args = apply_filters( 'storefront_recent_products_args', array(
+				'limit' 			=> 4,
+				'columns' 			=> 4,
+				'title'				=> __( 'Recent Products', 'storefront' ),
+				) );
 
-		echo '</section>';
+			echo '<section class="storefront-product-section">';
+
+			echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+			echo do_shortcode( '[recent_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+
+			echo '</section>';
+
+		}
 	}
 }
 
@@ -64,18 +73,23 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 	 * @return void
 	 */
 	function storefront_featured_products( $args ) {
-		$args = apply_filters( 'storefront_featured_products_args', array(
-			'limit' 			=> 4,
-			'columns' 			=> 4,
-			'title'				=> __( 'Featured Products', 'storefront' ),
-			) );
 
-		echo '<section class="storefront-product-section">';
+		if ( is_woocommerce_activated() ) {
 
-		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
-		echo do_shortcode( '[featured_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+			$args = apply_filters( 'storefront_featured_products_args', array(
+				'limit' 			=> 4,
+				'columns' 			=> 4,
+				'title'				=> __( 'Featured Products', 'storefront' ),
+				) );
 
-		echo '</section>';
+			echo '<section class="storefront-product-section">';
+
+			echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+			echo do_shortcode( '[featured_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+
+			echo '</section>';
+
+		}
 	}
 }
 
@@ -87,18 +101,23 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 	 * @return void
 	 */
 	function storefront_popular_products( $args ) {
-		$args = apply_filters( 'storefront_popular_products_args', array(
-			'limit' 			=> 4,
-			'columns' 			=> 4,
-			'title'				=> __( 'Top Rated Products', 'storefront' ),
-			) );
 
-		echo '<section class="storefront-product-section">';
+		if ( is_woocommerce_activated() ) {
 
-		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
-		echo do_shortcode( '[top_rated_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+			$args = apply_filters( 'storefront_popular_products_args', array(
+				'limit' 			=> 4,
+				'columns' 			=> 4,
+				'title'				=> __( 'Top Rated Products', 'storefront' ),
+				) );
 
-		echo '</section>';
+			echo '<section class="storefront-product-section">';
+
+			echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+			echo do_shortcode( '[top_rated_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+
+			echo '</section>';
+
+		}
 	}
 }
 
@@ -110,18 +129,23 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 	 * @return void
 	 */
 	function storefront_on_sale_products( $args ) {
-		$args = apply_filters( 'storefront_on_sale_products_args', array(
-			'limit' 			=> 4,
-			'columns' 			=> 4,
-			'title'				=> __( 'On Sale', 'storefront' ),
-			) );
 
-		echo '<section class="storefront-product-section">';
+		if ( is_woocommerce_activated() ) {
 
-		echo '<h2 class="section-title">' . $args['title'] . '</h2>';
-		echo do_shortcode( '[sale_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+			$args = apply_filters( 'storefront_on_sale_products_args', array(
+				'limit' 			=> 4,
+				'columns' 			=> 4,
+				'title'				=> __( 'On Sale', 'storefront' ),
+				) );
 
-		echo '</section>';
+			echo '<section class="storefront-product-section">';
+
+			echo '<h2 class="section-title">' . $args['title'] . '</h2>';
+			echo do_shortcode( '[sale_products per_page="' . $args['limit'] . '" columns="' . $args['columns'] . '"]' );
+
+			echo '</section>';
+
+		}
 	}
 }
 
