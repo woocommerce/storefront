@@ -37,13 +37,6 @@ ul.products {
       margin: 0 auto 1.618em; }
     ul.products li.product.product-category img {
       margin-bottom: 1.618em; }
-    ul.products li.product.featured {
-      padding-bottom: 2.244em;
-      background-color: rgba(0, 0, 0, 0.015); }
-      ul.products li.product.featured .price,
-      ul.products li.product.featured h3 {
-        padding-left: 1.618em;
-        padding-right: 1.618em; }
     ul.products li.product .button {
       margin-bottom: .236em; }
 
