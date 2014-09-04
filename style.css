@@ -1665,6 +1665,15 @@ object {
       margin-right: .53em;
       display: inline-block;
       opacity: 0.25; }
+  .widget_recent_entries ul .sub-menu,
+  .widget_pages ul .sub-menu,
+  .widget_categories ul .sub-menu,
+  .widget_archive ul .sub-menu,
+  .widget_recent_comments ul .sub-menu,
+  .widget_nav_menu ul .sub-menu,
+  .widget_links ul .sub-menu {
+    margin-top: .618em;
+    margin-left: 1.618em; }
 
 .widget_recent_entries ul li:before,
 .widget_pages ul li:before {
