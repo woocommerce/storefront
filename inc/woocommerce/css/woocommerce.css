@@ -296,7 +296,8 @@ ul.products {
 .site-header .widget_shopping_cart p.buttons,
 .site-header .widget_shopping_cart li {
   padding-left: 1.387em;
-  padding-right: 1.387em; }
+  padding-right: 1.387em;
+  background-color: rgba(0, 0, 0, 0.025); }
 
 .widget_layered_nav li {
   margin-bottom: .618em; }
