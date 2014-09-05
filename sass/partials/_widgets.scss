@@ -107,6 +107,17 @@
 	}
 }
 
+.widget-area,
+.footer-widgets {
+	#wp-calendar {
+		th,
+		td {
+			padding: .236em;
+			text-align: center;
+		}
+	}
+}
+
 .widget_recent_entries,
 .widget_pages {
 	ul {

@@ -1675,6 +1675,13 @@ object {
     margin-top: .618em;
     margin-left: 1.618em; }
 
+.widget-area #wp-calendar th,
+.widget-area #wp-calendar td,
+.footer-widgets #wp-calendar th,
+.footer-widgets #wp-calendar td {
+  padding: .236em;
+  text-align: center; }
+
 .widget_recent_entries ul li:before,
 .widget_pages ul li:before {
   content: "\f0f6"; }
