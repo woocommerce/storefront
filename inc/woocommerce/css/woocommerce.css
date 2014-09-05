@@ -739,7 +739,8 @@ p.stars {
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error,
-.woocommerce-noreviews {
+.woocommerce-noreviews,
+p.no-comments {
   padding: 1em 1.618em;
   margin-bottom: 2.618em;
   background-color: #17ba6f;
@@ -750,30 +751,35 @@ p.stars {
   .woocommerce-message:after,
   .woocommerce-info:after,
   .woocommerce-error:after,
-  .woocommerce-noreviews:after {
+  .woocommerce-noreviews:after,
+  p.no-comments:after {
     content: "";
     display: table;
     clear: both; }
   .woocommerce-message a,
   .woocommerce-info a,
   .woocommerce-error a,
-  .woocommerce-noreviews a {
+  .woocommerce-noreviews a,
+  p.no-comments a {
     color: #fff; }
     .woocommerce-message a:hover,
     .woocommerce-info a:hover,
     .woocommerce-error a:hover,
-    .woocommerce-noreviews a:hover {
+    .woocommerce-noreviews a:hover,
+    p.no-comments a:hover {
       color: #fff;
       opacity: 0.7; }
     .woocommerce-message a.button:hover,
     .woocommerce-info a.button:hover,
     .woocommerce-error a.button:hover,
-    .woocommerce-noreviews a.button:hover {
+    .woocommerce-noreviews a.button:hover,
+    p.no-comments a.button:hover {
       opacity: 1; }
   .woocommerce-message .button,
   .woocommerce-info .button,
   .woocommerce-error .button,
-  .woocommerce-noreviews .button {
+  .woocommerce-noreviews .button,
+  p.no-comments .button {
     float: right;
     padding: 0;
     background: none;
@@ -786,14 +792,16 @@ p.stars {
     .woocommerce-message .button:hover,
     .woocommerce-info .button:hover,
     .woocommerce-error .button:hover,
-    .woocommerce-noreviews .button:hover {
+    .woocommerce-noreviews .button:hover,
+    p.no-comments .button:hover {
       background: none;
       color: #fff;
       opacity: 0.7; }
     .woocommerce-message .button:after,
     .woocommerce-info .button:after,
     .woocommerce-error .button:after,
-    .woocommerce-noreviews .button:after {
+    .woocommerce-noreviews .button:after,
+    p.no-comments .button:after {
       content: "\f178";
       font-family: "FontAwesome";
       margin-left: .53em;
@@ -803,7 +811,8 @@ p.stars {
   list-style: none; }
 
 .woocommerce-info,
-.woocommerce-noreviews {
+.woocommerce-noreviews,
+p.no-comments {
   background-color: #3d9cd2; }
 
 .woocommerce-error {

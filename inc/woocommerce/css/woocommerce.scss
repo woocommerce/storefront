@@ -1071,7 +1071,8 @@ p.stars {
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error,
-.woocommerce-noreviews {
+.woocommerce-noreviews,
+p.no-comments {
 	padding: 1em 1.618em;
 	@include clearfix;
 	margin-bottom: 2.618em;
@@ -1125,7 +1126,8 @@ p.stars {
 }
 
 .woocommerce-info,
-.woocommerce-noreviews {
+.woocommerce-noreviews,
+p.no-comments {
 	background-color: $info;
 }
 
