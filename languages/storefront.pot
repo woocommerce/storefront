@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version:  \n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/storefront\n"
-"POT-Creation-Date: 2014-09-04 18:29:22+00:00\n"
+"POT-Creation-Date: 2014-09-05 13:28:16+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -468,11 +468,11 @@ msgstr ""
 msgid "On Sale"
 msgstr ""
 
-#: inc/woocommerce/template-tags.php:25
+#: inc/woocommerce/template-tags.php:24
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/woocommerce/template-tags.php:26
+#: inc/woocommerce/template-tags.php:25
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
