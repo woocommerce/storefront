@@ -14,7 +14,6 @@
  */
 if ( ! function_exists( 'storefront_cart_link' ) ) {
 	function storefront_cart_link() {
-		global $woocommerce;
 		if ( is_cart() ) {
 			$class = "current-menu-item";
 		} else {
@@ -22,8 +21,8 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 		}
 		?>
 		<li class="<?php echo $class; ?>">
-			<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart', 'storefront' ); ?>">
-				<?php echo $woocommerce->cart->get_cart_total(); ?> <span class="count"><?php echo sprintf( _n( '%d item', '%d items', $woocommerce->cart->get_cart_contents_count(), 'storefront' ), $woocommerce->cart->get_cart_contents_count() );?></span>
+			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'storefront' ); ?>">
+				<?php echo WC()->cart->get_cart_total(); ?> <span class="count"><?php echo sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() );?></span>
 			</a>
 		</li>
 		<?php
