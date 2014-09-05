@@ -1111,13 +1111,15 @@ p.no-comments {
 			color: #fff;
 			opacity: 0.7;
 		}
+	}
+}
 
-		&:after {
-			content: "\f178";
-			font-family: "FontAwesome";
-			margin-left: .53em;
-			font-weight: 400;
-		}
+.wc-forward {
+	&:after {
+		content: "\f178";
+		font-family: "FontAwesome";
+		margin-left: .53em;
+		font-weight: 400;
 	}
 }
 
