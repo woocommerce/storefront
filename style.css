@@ -1391,11 +1391,15 @@ object {
   margin-bottom: 4.236em;
   clear: both;
   padding: 1.618em;
-  background-color: rgba(0, 0, 0, 0.0125); }
+  background-color: rgba(0, 0, 0, 0.0125);
+  border-top: 0.236em solid rgba(0, 0, 0, 0.025); }
   #respond .comment-form-author input,
   #respond .comment-form-email input,
   #respond .comment-form-url input {
     width: 100%; }
+  #respond .form-submit,
+  #respond form {
+    margin-bottom: 0; }
 
 @media screen and (min-width: 768px) {
   .comment-list:after {
@@ -1445,13 +1449,8 @@ object {
     .comment-list #respond .comment-form-author,
     .comment-list #respond .comment-form-email,
     .comment-list #respond .comment-form-url {
-      width: 30.75%;
-      margin-right: 3.8%;
-      float: left; }
-    .comment-list #respond .comment-form-url {
+      width: 100%;
       margin-right: 0; }
-    .comment-list #respond .comment-form-comment {
-      clear: both; }
   .comment-list .reply {
     clear: both; }
   .comment-list ol.children {
@@ -1594,7 +1593,18 @@ object {
             margin-right: 4%;
             margin-right: 0; }
           .comment-list ol.children ol.children ol.children ol.children #respond {
-            float: right; } }
+            float: right; }
+
+  #respond .comment-form-author,
+  #respond .comment-form-email,
+  #respond .comment-form-url {
+    width: 30.75%;
+    margin-right: 3.8%;
+    float: left; }
+  #respond .comment-form-url {
+    margin-right: 0; }
+  #respond .comment-form-comment {
+    clear: both; } }
 /**
  * Widgets
  */

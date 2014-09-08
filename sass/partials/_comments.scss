@@ -96,6 +96,7 @@
 	clear: both;
 	padding: 1.618em;
 	background-color: rgba(0,0,0,0.0125);
+	border-top: .236em solid rgba(0,0,0,0.025);
 
 	.comment-form-author,
 	.comment-form-email,
@@ -103,6 +104,11 @@
 		input {
 			width: 100%;
 		}
+	}
+
+	.form-submit,
+	form {
+		margin-bottom: 0;
 	}
 }
 
@@ -140,21 +146,11 @@
 
 		#respond {
 			float: right;
-
 			.comment-form-author,
 			.comment-form-email,
 			.comment-form-url {
-				width: 30.75%;
-				margin-right: 3.8%;
-				float: left;
-			}
-
-			.comment-form-url {
+				width: 100%;
 				margin-right: 0;
-			}
-
-			.comment-form-comment {
-				clear: both;
 			}
 		}
 
@@ -249,6 +245,24 @@
 					}
 				}
 			}
+		}
+	}
+
+	#respond {
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url {
+			width: 30.75%;
+			margin-right: 3.8%;
+			float: left;
+		}
+
+		.comment-form-url {
+			margin-right: 0;
+		}
+
+		.comment-form-comment {
+			clear: both;
 		}
 	}
 }
