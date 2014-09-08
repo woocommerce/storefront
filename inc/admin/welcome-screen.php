@@ -84,7 +84,7 @@ class storefront_welcome {
 			</div>
 
 			<div class="col-2 last-feature">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" class="image-50" width="440" style="border: 2px solid #ccc;" />
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" class="image-50" width="440" />
 			</div>
 		</div>
 
@@ -100,17 +100,24 @@ class storefront_welcome {
 		?>
 		<div class="feature-section col three-col" style="margin-bottom: 1.618em; overflow: hidden;">
 			<div class="col-1">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woothemes.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woothemes.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Who are WooThemes?', 'storefront' ); ?></h4>
 				<p><?php _e( 'WooCommerce creators WooThemes is an international team of WordPress superstars building products for a passionate community of hundreds of thousands of users.', 'storefront' ); ?></p>
 			</div>
 
 			<div class="col-2">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woocommerce.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woocommerce.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'What is WooCommerce?', 'storefront' ); ?></h4>
 				<p><?php _e( 'WooCommerce is the most popular WordPress eCommerce plugin. Packed full of intuitive features and surrounded by a thriving community - it\'s the perfect solution for building an online store with WordPress.', 'storefront' ); ?></p>
 				<p><a href="<?php echo wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ); ?>" class="button button-primary"><?php _e( 'Download & Install WooCommerce', 'storefront' ); ?></a></p>
 				<p><a href="http://docs.woothemes.com/documentation/plugins/woocommerce/" class="button"><?php _e( 'View WooCommerce Documentation', 'storefront' ); ?></a></p>
+			</div>
+
+			<div class="col-3 last-feature">
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/github.png'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'Can I Contribute?', 'storefront' ); ?></h4>
+				<p><?php _e( 'Found a bug? Want to contribute a patch or create a new feature? GitHub is the place to go! Please send any pull requests to the latest develop branch, but please remember that GitHub is for code, not support.', 'storefront' ); ?></p>
+				<p><a href="http://github.com/woothemes/storefront/" class="button"><?php _e( 'Storefront at GitHub', 'storefront' ); ?></a></p>
 			</div>
 		</div>
 
@@ -144,7 +151,7 @@ class storefront_welcome {
 
 				<h4><?php _e( 'Configure menu locations' ,'storefront' ); ?></h4>
 				<p><?php _e( 'Storefront includes two menu locations for primary and secondary navigation. The primary navigation is perfect for your key pages like the shop and product categories. The secondary navigation is better suited to lower traffic pages such as terms and conditions.', 'storefront' ); ?></p>
-				<p><a href="<?php echo self_admin_url( 'nav-menus.php' ); ?>" target="_blank" class="button"><?php _e( 'Configure menus', 'storefront' ); ?></a></p>
+				<p><a href="<?php echo self_admin_url( 'nav-menus.php' ); ?>" class="button"><?php _e( 'Configure menus', 'storefront' ); ?></a></p>
 
 				<h4><?php _e( 'Create a color scheme' ,'storefront' ); ?></h4>
 				<p><?php _e( 'Using the WordPress Customizer you can tweak Storefront\'s appearance to match your brand.', 'storefront' ); ?></p>
@@ -158,11 +165,11 @@ class storefront_welcome {
 				<p><?php echo sprintf( __( 'Once set up you can toggle and re-order the homepage components using the %sHomepage Control%s plugin.', 'storefront' ), '<a href="https://wordpress.org/plugins/homepage-control/">', '</a>' ); ?></p>
 
 				<h4><?php _e( 'Add your logo', 'storefront' ); ?></h4>
-				<p><?php echo sprintf( __( 'Activate the %sSite Logo%s plugin to enable a custom logo option.', 'storefront' ), '<a href="https://github.com/Automattic/site-logo" target="_blank">', '</a>' ); ?></p>
+				<p><?php echo sprintf( __( 'Activate the %sSite Logo%s plugin to enable a custom logo option.', 'storefront' ), '<a href="https://github.com/Automattic/site-logo">', '</a>' ); ?></p>
 
 				<h4><?php _e( 'View documentation', 'storefront' ); ?></h4>
 				<p><?php _e( 'You can read detailed information on Storefronts features and how to develop on top of it in the documentation.', 'storefront' ); ?></p>
-				<p><a href="#" class="button"><?php _e( 'View documentation', 'storefront' ); ?></a></p>
+				<p><a href="http://docs.woothemes.com/documentation/themes/storefront/" class="button"><?php _e( 'View documentation', 'storefront' ); ?></a></p>
 			</div>
 
 		</div>
@@ -186,17 +193,17 @@ class storefront_welcome {
 
 			<div class="col-1">
 				<h4><?php _e( 'WooCommerce Extensions', 'storefront' ); ?></h4>
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
 				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/gallery-slider.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/gallery-slider.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Product Gallery Slider', 'storefront' ); ?></h4>
 				<p><?php _e( 'The Product Gallery Slider is a nifty extension which transforms your product galleries into a fully responsive, jQuery powered slideshow.', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/product-gallery-slider/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
 				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
@@ -205,14 +212,14 @@ class storefront_welcome {
 
 			<div class="col-2">
 				<h4><?php _e( 'Storefront Extensions', 'storefront' ); ?></h4>
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
-				<h4><?php _e( 'Storefront Parallax Hero', 'storefront' ); ?></h4>
-				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/designer.jpg'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'Storefront Designer - Coming soon', 'storefront' ); ?></h4>
+				<p style="margin-bottom: 2.618em;"><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing button styles, typographical schemes/scales, the WooCommerce shop layout and more.', 'storefront' ); ?></p>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/designer.jpg'; ?>" class="image-50" style="border: 2px solid #ccc;" width="440" />
-				<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
-				<p><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing button styles, typographical schemes/scales, the WooCommerce shop layout and more.', 'storefront' ); ?></p>
 
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'Storefront Parallax Hero - Coming soon', 'storefront' ); ?></h4>
+				<p style="margin-bottom: 2.618em;"><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
 			</div>
 
 		</div>
@@ -220,7 +227,7 @@ class storefront_welcome {
 		<hr style="clear: both;" />
 
 		<p style="font-size: 1.2em; margin: 2.618em 0;">
-			<?php echo sprintf( __( 'There are literally hundreds of awesome extensions available for you to use. Looking for Table Rate Shipping? Subscriptions? Product Add-ons? You can find these and more in the WooCommerce extension shop. %sGo shopping%s.', 'storefront' ), '<a href="http://www.woothemes.com/products/woocommerce-bookings/">', '</a>'  ); ?>
+			<?php echo sprintf( __( 'There are literally hundreds of awesome extensions available for you to use. Looking for Table Rate Shipping? Subscriptions? Product Add-ons? You can find these and more in the WooCommerce extension shop. %sGo shopping%s.', 'storefront' ), '<a href="http://www.woothemes.com/product-category/woocommerce-extensions/">', '</a>'  ); ?>
 		</p>
 
 		<hr style="clear: both;" />
