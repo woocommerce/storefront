@@ -11,6 +11,83 @@
 @import '../../../sass/vendor/gridset';
 
 /**
+ * Header Elements
+ */
+.woocommerce-active {
+	.site-header {
+		.col-full {
+			position: relative;
+		}
+	}
+
+	.site-branding,
+	.site-logo-anchor {
+		float: left;
+		margin-right: 2.618em;
+	}
+}
+
+.site-header-cart {
+	list-style-type: none;
+	margin-left: 0;
+
+	.cart-contents {
+		display: block;
+		height: 2.244em;
+		width: 2.244em;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0.05);
+
+		&:after {
+			content: "\f07a";
+			font-family: "FontAwesome";
+			position: absolute;
+			top: 0;
+			right: 0;
+			line-height: 2.244;
+			width: 100%;
+			text-align: center;
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	.widget_shopping_cart {
+		display: none;
+		background-color: #2c2d33;
+	}
+}
+
+.site-search {
+	font-size: .857em;
+	clear: both;
+
+	.widget_product_search {
+		input[type=text],
+		input[type=search] {
+			padding: 1.387em 1.618em;
+			line-height: 1;
+			padding-left: 3.631em;
+		}
+
+		form {
+			&:before {
+				top: 1.387em;
+				left: 1.618em;
+			}
+		}
+
+		#searchsubmit {
+			display: none;
+		}
+	}
+}
+
+/**
  * Products
  */
 ul.products {
@@ -219,72 +296,6 @@ ul.products {
 
 	.comment-form-rating {
 		clear: both;
-	}
-}
-
-/**
- * Header Elements
- */
-.site-header-cart {
-	position: relative;
-	list-style-type: none;
-	margin-left: 0;
-
-	.cart-contents {
-		display: block;
-		padding: 1.387em 1.618em;
-		position: relative;
-		background-color: rgba(0,0,0,0.025);
-
-		&:after {
-			content: "\f07a";
-			font-family: "FontAwesome";
-			position: absolute;
-			top: 1.387em;
-			right: 1.618em;
-			line-height: 1.387;
-			height: 1em;
-			width: 1em;
-		}
-
-		.amount {
-			margin-right: .327em;
-		}
-
-		.count {
-			font-weight: 400;
-			opacity: 0.5;
-			font-size: .857em;
-		}
-	}
-
-	.widget_shopping_cart {
-		display: none;
-		background-color: #2c2d33;
-	}
-}
-
-.site-search {
-	font-size: .857em;
-
-	.widget_product_search {
-		input[type=text],
-		input[type=search] {
-			padding: 1.387em 1.618em;
-			line-height: 1;
-			padding-left: 3.631em;
-		}
-
-		form {
-			&:before {
-				top: 1.387em;
-				left: 1.618em;
-			}
-		}
-
-		#searchsubmit {
-			display: none;
-		}
 	}
 }
 
@@ -1166,12 +1177,36 @@ dl.variation {
 	 * Header Elements
 	 */
 	.site-header-cart {
+		position: relative;
+
 		.cart-contents {
 			padding: 0 1em 2.244em;
+			display: block;
+			position: relative;
 			background-color: transparent;
+			height: auto;
+			width: auto;
 
 			&:after {
+				right: 1.618em;
+				line-height: 1.387;
+				height: 1em;
+				width: 1em;
 				top: 0;
+			}
+
+			.amount {
+				margin-right: .327em;
+			}
+
+			.count {
+				font-weight: 400;
+				opacity: 0.5;
+				font-size: .857em;
+			}
+
+			span {
+				display: inline;
 			}
 		}
 

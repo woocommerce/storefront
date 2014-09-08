@@ -5,9 +5,8 @@
 /**
  * General Menu Styles
  */
-.main-navigation,
-.secondary-navigation {
-
+.main-navigation {
+	clear: both;
 }
 
 .secondary-navigation {
@@ -20,7 +19,13 @@
 	display: block;
 	width: 100%;
 	text-align: left;
-	padding: 1.387em 1.618em;
+
+	&:before {
+		font-family: "FontAwesome";
+		font-weight: 400;
+		content: "\f0c9";
+		margin-right: .53em;
+	}
 }
 
 .menu-toggle,
@@ -33,9 +38,14 @@
 	margin-left: 0;
 	list-style: none;
 
+	ul {
+		display: block;
+		margin-left: 1.387em;
+	}
+
 	li {
 		a {
-			padding: 1em 1.618em;
+			padding: .857em 1.387em;
 			display: block;
 
 			&:before {
@@ -174,6 +184,7 @@
 			ul {
 				// Dropdowns
 				background-color: #2c2d33;
+				margin-left: 0;
 
 				li {
 					background-color: rgba(0,0,0,0.025);

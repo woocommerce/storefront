@@ -903,6 +903,9 @@ fieldset {
 /**
  * General Menu Styles
  */
+.main-navigation {
+  clear: both; }
+
 .secondary-navigation {
   display: none; }
 
@@ -911,8 +914,12 @@ fieldset {
   margin: 1.618em auto;
   display: block;
   width: 100%;
-  text-align: left;
-  padding: 1.387em 1.618em; }
+  text-align: left; }
+  .menu-toggle:before {
+    font-family: "FontAwesome";
+    font-weight: 400;
+    content: "\f0c9";
+    margin-right: .53em; }
 
 .menu-toggle,
 .main-navigation.toggled .nav-menu {
@@ -922,8 +929,11 @@ fieldset {
   display: none;
   margin-left: 0;
   list-style: none; }
+  .main-navigation ul ul {
+    display: block;
+    margin-left: 1.387em; }
   .main-navigation ul li a {
-    padding: 1em 1.618em;
+    padding: .857em 1.387em;
     display: block; }
     .main-navigation ul li a:before {
       font-family: "FontAwesome";
@@ -1006,7 +1016,8 @@ fieldset {
       line-height: 1; }
     .main-navigation ul.menu ul,
     .main-navigation ul.nav-menu ul {
-      background-color: #2c2d33; }
+      background-color: #2c2d33;
+      margin-left: 0; }
       .main-navigation ul.menu ul li,
       .main-navigation ul.nav-menu ul li {
         background-color: rgba(0, 0, 0, 0.025); }
