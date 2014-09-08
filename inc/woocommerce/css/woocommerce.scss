@@ -1176,6 +1176,13 @@ dl.variation {
 	/**
 	 * Header Elements
 	 */
+	.woocommerce-active {
+		.site-branding,
+		.site-logo-anchor {
+			margin-right: 0;
+		}
+	}
+
 	.site-header-cart {
 		position: relative;
 
