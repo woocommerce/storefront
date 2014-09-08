@@ -28,7 +28,7 @@
 	} );
 	wp.customize( 'storefront_header_text_color', function( value ) {
 		value.bind( function( to ) {
-			$( 'p.site-description, ul.menu li.current-menu-item > a, .secondary-navigation ul.menu li a' ).css( 'color', to );
+			$( 'p.site-description, ul.menu li.current-menu-item > a, .secondary-navigation ul.menu li a, .secondary-navigation ul.menu a, .site-header-cart .widget_shopping_cart, .site-header .product_list_widget li .quantity' ).css( 'color', to );
 		} );
 	} );
 	wp.customize( 'storefront_header_link_color', function( value ) {

@@ -3,8 +3,9 @@
 =====
 
 ### *2014.09.06* - 1.0.1
+* **Tweak** - Improved vertical spacing in the site header on mobile sized devices.
 * **Tweak** - Updated some links & content in the welcome screen
-** `inc/admin/welcome-screen.php`
+* **Fix** - Header text color live preview in cart dropdown
 
 =====
 
