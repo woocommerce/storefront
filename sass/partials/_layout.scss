@@ -14,6 +14,7 @@
 			img {
 				height: auto;
 				max-width: 100%;
+				max-height: none;
 			}
 		}
 	}
@@ -46,8 +47,11 @@
 		}
 	}
 
-	.site-description {
-		margin-bottom: 0;
+	.site-branding{
+		.site-description {
+			margin-bottom: 0;
+			display: block;
+		}
 	}
 
 	.site-branding,

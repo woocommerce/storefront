@@ -17,6 +17,11 @@ body {
 
 	.site-logo-anchor {
 		display: block;
+
+		img {
+			max-height: 2.618em;
+			width: auto;
+		}
 	}
 
 	.site-branding,
@@ -42,6 +47,7 @@ body {
 
 	.site-description {
 		font-size: .857em;
+		display: none;
 	}
 }
 
