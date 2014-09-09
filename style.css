@@ -960,7 +960,7 @@ fieldset {
       .secondary-navigation ul li {
         position: relative;
         display: inline-block;
-        float: left; }
+        text-align: left; }
         .main-navigation ul li a,
         .secondary-navigation ul li a {
           display: block; }
