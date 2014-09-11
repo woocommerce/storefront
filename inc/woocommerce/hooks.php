@@ -21,9 +21,10 @@ add_filter( 'woocommerce_enqueue_styles', 	'__return_false' );
 remove_action( 'woocommerce_before_main_content', 	'woocommerce_breadcrumb', 					20, 0 );
 remove_action( 'woocommerce_before_main_content', 	'woocommerce_output_content_wrapper', 		10 );
 remove_action( 'woocommerce_after_main_content', 	'woocommerce_output_content_wrapper_end', 	10 );
+remove_action( 'woocommerce_sidebar', 				'woocommerce_get_sidebar', 					10 );
 add_action( 'woocommerce_before_main_content', 		'storefront_before_content', 				10 );
 add_action( 'woocommerce_after_main_content', 		'storefront_after_content', 				10 );
-add_action( 'wc_theme_content_top', 				'woocommerce_breadcrumb', 					10 );
+add_action( 'storefront_content_top', 				'woocommerce_breadcrumb', 					10 );
 
 /**
  * Products

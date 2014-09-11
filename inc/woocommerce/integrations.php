@@ -9,7 +9,7 @@
  * Styles & Scripts
  * @return void
  */
-function wc_theme_woocommerce_integrations_scripts() {
+function storefront_woocommerce_integrations_scripts() {
 	/**
 	 * Bookings
 	 */
@@ -31,7 +31,7 @@ function wc_theme_woocommerce_integrations_scripts() {
 		wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/inc/woocommerce/css/wishlists.css' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'wc_theme_woocommerce_integrations_scripts' );
+add_action( 'wp_enqueue_scripts', 'storefront_woocommerce_integrations_scripts' );
 
 /**
  * Add CSS in <head> for integration styles handled by the theme customizer
