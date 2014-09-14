@@ -113,7 +113,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/bookings.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/welcome\/designer.jpg": {
 		"fileType": 16384,
@@ -124,7 +124,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/designer.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/welcome\/gallery-slider.png": {
 		"fileType": 32768,
@@ -135,7 +135,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/gallery-slider.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/welcome\/github.png": {
 		"fileType": 32768,
@@ -146,7 +146,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/github.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/welcome\/hero.png": {
 		"fileType": 32768,
@@ -157,7 +157,18 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/hero.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
+		},
+	"\/images\/welcome\/wc-customiser.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29764,
+		"inputAbbreviatedPath": "\/images\/welcome\/wc-customiser.png",
+		"outputAbbreviatedPath": "\/images\/welcome\/wc-customiser.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 1
 		},
 	"\/images\/welcome\/wishlists.png": {
 		"fileType": 32768,
@@ -168,7 +179,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/wishlists.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/welcome\/woocommerce.png": {
 		"fileType": 32768,
@@ -179,7 +190,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/woocommerce.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/images\/welcome\/woothemes.png": {
 		"fileType": 32768,
@@ -190,7 +201,7 @@
 		"outputAbbreviatedPath": "\/images\/welcome\/woothemes.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
-		"processed": 0
+		"processed": 1
 		},
 	"\/inc\/admin\/welcome-screen.php": {
 		"fileType": 8192,
