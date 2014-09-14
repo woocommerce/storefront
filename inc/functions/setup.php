@@ -13,6 +13,12 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
+ * Assign the Storefront version to a var
+ */
+$theme 					= wp_get_theme();
+$storefront_version 	= $theme['Version'];
+
+/**
  * Declare support for the storefront customizer settings
  * Remove via child theme using remove_theme_support()
  */
@@ -122,7 +128,9 @@ function storefront_widgets_init() {
  * @since  1.0.0
  */
 function storefront_scripts() {
-	wp_enqueue_style( 'storefront-style', get_stylesheet_uri(), '', '1.0.1' );
+	global $storefront_version;
+
+	wp_enqueue_style( 'storefront-style', get_stylesheet_uri(), '', $storefront_version );
 
 	wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/js/navigation.min.js', array(), '20120206', true );
 
