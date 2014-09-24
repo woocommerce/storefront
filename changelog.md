@@ -3,7 +3,8 @@
 =====
 
 ### *2014.09.24* - 1.0.2
-* **Tweak** Clearfixed product galleries.
+* **Tweak** - Clearfixed product galleries.
+* **Tweak** - Added `storefront_product_thumbnail_columns` filter.
 
 =====
 

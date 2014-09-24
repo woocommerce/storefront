@@ -107,7 +107,7 @@ function storefront_related_products_args( $args ) {
  * @since  1.0.0
  */
 function storefront_thumbnail_columns() {
-	return 4;
+	return apply_filters( 'storefront_product_thumbnail_columns', 4 );
 }
 
 /**
