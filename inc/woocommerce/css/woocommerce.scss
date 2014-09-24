@@ -1389,6 +1389,8 @@ dl.variation {
 				margin-bottom: 3.631em;
 
 				.thumbnails {
+					@include clearfix;
+
 					a.zoom {
 						@include gs-span(c, 1, 1, (1, 4));
 						@include gs-float(c, left);

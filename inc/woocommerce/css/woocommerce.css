@@ -1000,6 +1000,10 @@ dl.variation {
     margin-right: 4%;
     margin-right: 5.40541%;
     margin-bottom: 3.631em; }
+    .single-product div.product .images .thumbnails:after {
+      content: "";
+      display: table;
+      clear: both; }
     .single-product div.product .images .thumbnails a.zoom {
       display: block;
       float: left;
