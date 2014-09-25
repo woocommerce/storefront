@@ -180,8 +180,9 @@ ul.products {
 		form.cart {
 			@include clearfix;
 			margin-bottom: 1.618em;
-			padding: 1em;
-			background-color: rgba(0,0,0,0.0125);
+			padding: 1.618em 0;
+			border-top: 3px solid rgba(0,0,0,0.025);
+			border-bottom: 3px solid rgba(0,0,0,0.025);
 
 			.quantity {
 				float: left;
