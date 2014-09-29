@@ -514,6 +514,7 @@ input[type="submit"],
   border: 0;
   background: none;
   background-color: #424a4c;
+  border-color: #424a4c;
   color: #fff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */

@@ -114,21 +114,25 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 
 			button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget-area .widget a.button, .site-header-cart .widget_shopping_cart a.button {
 				background-color: <?php echo $button_background_color; ?>;
+				border-color: <?php echo $button_background_color; ?>;
 				color: <?php echo $button_text_color; ?>;
 			}
 
 			button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
 				background-color: <?php echo storefront_adjust_color_brightness( $button_background_color, $darken_factor ); ?>;
+				border-color: <?php echo storefront_adjust_color_brightness( $button_background_color, $darken_factor ); ?>;
 				color: <?php echo $button_text_color; ?>;
 			}
 
 			button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart {
 				background-color: <?php echo $button_alt_background_color; ?>;
+				border-color: <?php echo $button_alt_background_color; ?>;
 				color: <?php echo $button_alt_text_color; ?>;
 			}
 
 			button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover, input[type="submit"].alt:hover, .button.alt:hover, .added_to_cart.alt:hover, .widget-area .widget a.button.alt:hover, .added_to_cart:hover {
 				background-color: <?php echo storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ); ?>;
+				border-color: <?php echo storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ); ?>;
 				color: <?php echo $button_alt_text_color; ?>;
 			}
 

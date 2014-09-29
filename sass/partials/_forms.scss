@@ -24,6 +24,7 @@ input[type="submit"],
 	border: 0;
 	background: none;
 	background-color: $color_body;
+	border-color: $color_body;
 	color: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	line-height: 1;
