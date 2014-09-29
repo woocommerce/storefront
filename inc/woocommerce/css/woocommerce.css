@@ -795,7 +795,9 @@ p.no-comments {
     box-shadow: none;
     line-height: 1.618;
     padding-left: 1em;
-    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: rgba(255, 255, 255, 0.25) !important;
     border-radius: 0; }
     .woocommerce-message .button:hover,
     .woocommerce-info .button:hover,
