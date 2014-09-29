@@ -540,7 +540,8 @@ input[type="submit"],
   .button.alt,
   .added_to_cart.cta,
   .added_to_cart.alt {
-    background-color: #a46497; }
+    background-color: #a46497;
+    border-color: #a46497; }
     button.cta:hover, button.alt:hover,
     input[type="button"].cta:hover,
     input[type="button"].alt:hover,
@@ -552,7 +553,7 @@ input[type="submit"],
     .button.alt:hover,
     .added_to_cart.cta:hover,
     .added_to_cart.alt:hover {
-      opacity: 0.9;
+      opacity: 0.8;
       background-color: #a46497; }
   button:hover,
   input[type="button"]:hover,
@@ -560,7 +561,7 @@ input[type="submit"],
   input[type="submit"]:hover,
   .button:hover,
   .added_to_cart:hover {
-    opacity: 0.9;
+    opacity: 0.8;
     color: #fff; }
   button.added:after,
   input[type="button"].added:after,

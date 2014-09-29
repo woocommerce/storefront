@@ -44,15 +44,16 @@ input[type="submit"],
 	&.cta,
 	&.alt {
 		background-color: $color_links;
+		border-color: $color_links;
 
 		&:hover {
-			opacity: 0.9;
+			opacity: 0.8;
 			background-color: $color_links;
 		}
 	}
 
 	&:hover {
-		opacity: 0.9;
+		opacity: 0.8;
 		color: #fff;
 	}
 
