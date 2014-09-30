@@ -688,7 +688,8 @@ fieldset {
     clear: none;
     float: left;
     margin-left: 0;
-    margin-right: 4%; }
+    margin-right: 4%;
+    margin-right: 0; }
   .woocommerce-active .site-header .site-search {
     display: block;
     float: left;

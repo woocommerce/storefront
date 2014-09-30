@@ -9,6 +9,7 @@
 * **Tweak** - Adjusted the add to cart form design on product details pages.
 * **Tweak** - Set a default border color on buttons for extensions to utilise.
 * **Tweak** - Adjusted the max-height of images in the payment method list items.
+* **Tweak** - Secondary navigation alignment in header.
 
 =====
 

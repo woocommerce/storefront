@@ -848,7 +848,7 @@ dl.variation {
    */
   .woocommerce-active .site-branding,
   .woocommerce-active .site-logo-anchor {
-    margin-right: 0; }
+    margin-right: 4%; }
 
   .site-header-cart {
     position: relative; }

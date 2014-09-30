@@ -1183,7 +1183,7 @@ dl.variation {
 	.woocommerce-active {
 		.site-branding,
 		.site-logo-anchor {
-			margin-right: 0;
+			margin-right: gs-gutter(c, false, true);
 		}
 	}
 

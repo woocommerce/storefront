@@ -24,6 +24,7 @@
 			.secondary-navigation {
 				@include gs-span(c, 4, 9);
 				@include gs-float(c, left);
+				margin-right: 0;
 			}
 
 			.site-search {
