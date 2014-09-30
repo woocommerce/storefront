@@ -456,7 +456,8 @@ form.checkout:after {
       #payment .payment_methods li img {
         float: right;
         border: 0;
-        padding: 0; }
+        padding: 0;
+        max-height: 1.618em; }
       #payment .payment_methods li:last-child {
         padding-bottom: 0;
         border-bottom: 0; }
