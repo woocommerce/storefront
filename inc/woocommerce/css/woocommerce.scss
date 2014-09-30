@@ -1595,7 +1595,6 @@ dl.variation {
 		.cart-collaterals {
 			.cross-sells {
 				@include gs-span(c, 1, 6);
-				@include gs-float(c, right);
 				ul.products {
 			  		li.product {
 			  			@include gs-span(c, 1, 3, (1, 6));

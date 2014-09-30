@@ -3,6 +3,7 @@
 =====
 
 ### *2014.09.24* - 1.0.2
+* **Fix** - Upsell display on cart when using full width template.
 * **Tweak** - Clearfixed product galleries.
 * **Tweak** - Added `storefront_product_thumbnail_columns` filter.
 * **Tweak** - Adjusted the add to cart form design on product details pages.

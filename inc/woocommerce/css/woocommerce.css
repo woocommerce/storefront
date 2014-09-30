@@ -1202,11 +1202,7 @@ dl.variation {
     float: left;
     margin-left: 0;
     margin-right: -100%;
-    width: 48.0%;
-    clear: none;
-    float: right;
-    margin-right: 0;
-    margin-left: 4%; }
+    width: 48.0%; }
     .page-template-template-fullwidth-php .cart-collaterals .cross-sells ul.products li.product {
       display: block;
       float: left;
