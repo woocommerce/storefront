@@ -3,7 +3,6 @@
 
 # Grunt
 /node_modules/
-/deploy/
 
 # Codekit
 config.codekit
