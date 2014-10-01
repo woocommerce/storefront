@@ -183,32 +183,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// Copy files to deploy.
-		copy: {
-			deploy: {
-				src: [
-					'**',
-					'!.*',
-					'!*.md',
-					'!.*/**',
-					'.htaccess',
-					'!Gruntfile.js',
-					'!sftp-config.json',
-					'!package.json',
-					'!node_modules/**',
-				],
-				dest: 'deploy',
-				expand: true,
-				dot: true
-			}
-		},
-
-		// Clean the directory.
-		clean: {
-			deploy: {
-				src: [ 'deploy' ]
-			}
-		}
 	});
 
 	// Load NPM tasks to be used here
@@ -217,8 +191,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-sass' );
 	grunt.loadNpmTasks( 'grunt-contrib-cssmin' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
-	grunt.loadNpmTasks( 'grunt-contrib-copy' );
-	grunt.loadNpmTasks( 'grunt-contrib-clean' );
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 
@@ -236,10 +208,5 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'dev', [
 		'default',
 		'makepot'
-	]);
-
-	grunt.registerTask( 'deploy', [
-		'clean:deploy',
-		'copy:deploy'
 	]);
 };
