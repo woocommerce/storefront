@@ -5,11 +5,12 @@
 ### *2014.09.24* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
 * **Tweak** - Clearfixed product galleries.
-* **Tweak** - Added `storefront_product_thumbnail_columns` filter.
 * **Tweak** - Adjusted the add to cart form design on product details pages.
 * **Tweak** - Set a default border color on buttons for extensions to utilise.
 * **Tweak** - Adjusted the max-height of images in the payment method list items.
 * **Tweak** - Secondary navigation alignment in header.
+* **Dev** - Added `storefront_product_thumbnail_columns` filter.
+* **Dev** - Added `Gruntfile.js` and `package.json`.
 
 =====
 
