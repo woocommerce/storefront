@@ -152,7 +152,6 @@ module.exports = function( grunt ) {
 		},
 
 		// Check textdomain errors.
-		// @todo
 		checktextdomain: {
 			options:{
 				text_domain: 'storefront',
