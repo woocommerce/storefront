@@ -92,12 +92,11 @@ module.exports = function( grunt ) {
 		// Minify all .css files.
 		cssmin: {
 			minify: {
-				files: [{
-			    	'inc/woocommerce/css/bookings.css': 'inc/woocommerce/css/bookings.scss',
-			    	'inc/woocommerce/css/brands.css': 'inc/woocommerce/css/brands.scss',
-			    	'inc/woocommerce/css/wishlists.css': 'inc/woocommerce/css/wishlists.scss',
-			    	'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss',
-			    }]
+				expand: true,
+				cwd: '<%= dirs.wc_css %>/',
+				src: ['*.css'],
+				dest: '<%= dirs.wc_css %>/',
+				ext: '.css'
 			}
 		},
 
