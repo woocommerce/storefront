@@ -84,7 +84,7 @@ module.exports = function( grunt ) {
 			    	'inc/woocommerce/css/bookings.css': 'inc/woocommerce/css/bookings.scss',
 			    	'inc/woocommerce/css/brands.css': 'inc/woocommerce/css/brands.scss',
 			    	'inc/woocommerce/css/wishlists.css': 'inc/woocommerce/css/wishlists.scss',
-			    	'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss',
+			    	'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 			    }]
 			}
 		},
@@ -138,7 +138,7 @@ module.exports = function( grunt ) {
 				potHeaders: {
 					'report-msgid-bugs-to': 'https://github.com/woothemes/storefront/issues',
 					'language-team': 'LANGUAGE <EMAIL@ADDRESS>'
-				},
+				}
 			},
 			frontend: {
 				options: {
@@ -148,7 +148,7 @@ module.exports = function( grunt ) {
 						return pot;
 					}
 				}
-			},
+			}
 		},
 
 		// Check textdomain errors.
@@ -180,7 +180,7 @@ module.exports = function( grunt ) {
 				],
 				expand: true
 			}
-		},
+		}
 
 	});
 
