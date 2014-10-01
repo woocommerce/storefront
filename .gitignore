@@ -1,1 +1,6 @@
+# Sass
 .sass-cache
+
+# Grunt
+/node_modules/
+/deploy/
