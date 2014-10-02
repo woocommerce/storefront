@@ -4,15 +4,6 @@ module.exports = function( grunt ) {
 
 	grunt.initConfig({
 
-		// setting folder templates
-		dirs: {
-			wc_css: 'inc/woocommerce/css',
-			images: 'images',
-			js: 'js',
-			customizer_js: 'inc/customizer/js',
-			wc_js: 'inc/woocommerce/js'
-		},
-
 		// JavaScript linting with JSHint.
 		jshint: {
 			options: {
@@ -20,12 +11,12 @@ module.exports = function( grunt ) {
 			},
 			all: [
 				'Gruntfile.js',
-				'<%= dirs.js %>/*.js',
-				'!<%= dirs.js %>/*.min.js',
-				'<%= dirs.customizer_js %>/*.js',
-				'!<%= dirs.customizer_js %>/*.min.js',
-				'<%= dirs.wc_js %>/*.js',
-				'!<%= dirs.wc_js %>/*.min.js'
+				'js/*.js',
+				'!js/*.min.js',
+				'inc/customizer/js/*.js',
+				'!inc/customizer/js/*.min.js',
+				'inc/woocommerce/js/*.js',
+				'!inc/woocommerce/js/*.min.js'
 			]
 		},
 
@@ -37,36 +28,36 @@ module.exports = function( grunt ) {
 			main: {
 				files: [{
 					expand: true,
-					cwd: '<%= dirs.js %>/',
+					cwd: 'js/',
 					src: [
 						'*.js',
 						'!*.min.js'
 					],
-					dest: '<%= dirs.js %>/',
+					dest: 'js/',
 					ext: '.min.js'
 				}]
 			},
 			woocommerce: {
 				files: [{
 					expand: true,
-					cwd: '<%= dirs.wc_js %>/',
+					cwd: 'inc/woocommerce/js/',
 					src: [
 						'*.js',
 						'!*.min.js'
 					],
-					dest: '<%= dirs.wc_js %>/',
+					dest: 'inc/woocommerce/js/',
 					ext: '.min.js'
 				}]
 			},
 			customizer: {
 				files: [{
 					expand: true,
-					cwd: '<%= dirs.customizer_js %>/',
+					cwd: 'inc/customizer/js/',
 					src: [
 						'*.js',
 						'!*.min.js'
 					],
-					dest: '<%= dirs.customizer_js %>/',
+					dest: 'inc/customizer/js/',
 					ext: '.min.js'
 				}]
 			}
@@ -93,9 +84,9 @@ module.exports = function( grunt ) {
 		cssmin: {
 			minify: {
 				expand: true,
-				cwd: '<%= dirs.wc_css %>/',
+				cwd: 'inc/woocommerce/css/',
 				src: ['*.css'],
-				dest: '<%= dirs.wc_css %>/',
+				dest: 'inc/woocommerce/css/',
 				ext: '.css'
 			}
 		},
@@ -105,7 +96,7 @@ module.exports = function( grunt ) {
 			css: {
 				files: [
 					'style.scss',
-					'<%= dirs.wc_css %>/*.scss',
+					'inc/woocommerce/css/*.scss',
 					'sass/modules/*.scss',
 					'sass/partials/*.scss',
 					'sass/vendor/*.scss'
@@ -118,16 +109,16 @@ module.exports = function( grunt ) {
 			js: {
 				files: [
 					// main js
-					'<%= dirs.js %>/*js',
-					'!<%= dirs.js %>/*.min.js',
+					'js/*js',
+					'!js/*.min.js',
 
 					// wc js
-					'<%= dirs.wc_js %>/*js',
-					'!<%= dirs.wc_js %>/*.min.js',
+					'inc/woocommerce/js/*js',
+					'!inc/woocommerce/js/*.min.js',
 
 					// customizer js
-					'<%= dirs.customizer_js %>/*js',
-					'!<%= dirs.customizer_js %>/*.min.js'
+					'inc/customizer/js/*js',
+					'!inc/customizer/js/*.min.js'
 				],
 				tasks: ['uglify']
 			}
