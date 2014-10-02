@@ -6,6 +6,7 @@
 * **Fix** - Upsell display on cart when using full width template.
 * **Fix** - Smiley display.
 * **Fix** - Date font size in post meta.
+* **Fix** - Remove the breadcrumb separator to resolve markup errors.
 * **Tweak** - Clearfixed product galleries.
 * **Tweak** - Adjusted the add to cart form design on product details pages.
 * **Tweak** - Set a default border color on buttons for extensions to utilise.

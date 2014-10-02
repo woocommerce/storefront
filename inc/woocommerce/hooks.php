@@ -57,4 +57,3 @@ add_filter( 'woocommerce_product_thumbnails_columns', 	'storefront_thumbnail_col
 add_filter( 'woocommerce_output_related_products_args', 'storefront_related_products_args' );
 add_filter( 'loop_shop_per_page', 						'storefront_products_per_page' );
 add_filter( 'loop_shop_columns', 						'storefront_loop_columns' );
-add_filter( 'woocommerce_breadcrumb_defaults', 			'storefront_breadcrumb_delimeter' );

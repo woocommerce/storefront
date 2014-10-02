@@ -118,14 +118,3 @@ function storefront_thumbnail_columns() {
 function storefront_products_per_page() {
 	return apply_filters( 'storefront_products_per_page', 12 );
 }
-
-/**
- * Breadcrum delimeter
- * @param  array $defaults default breadcrumb args
- * @return array $detaults modified args
- * @since  1.0.0
- */
-function storefront_breadcrumb_delimeter( $defaults ) {
-	$defaults['delimiter'] = '<span class="separator">&gt;</span>';
-	return $defaults;
-}

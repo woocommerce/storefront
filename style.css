@@ -1117,13 +1117,8 @@ fieldset {
       padding-bottom: .618em;
       margin-bottom: 3px; }
     .hentry .entry-header .posted-on,
-    .hentry .entry-header .byline,
-    .hentry .entry-header .entry-date {
+    .hentry .entry-header .byline {
       font-size: .857em; }
-      .hentry .entry-header .posted-on a,
-      .hentry .entry-header .byline a,
-      .hentry .entry-header .entry-date a {
-        font-weight: 400; }
   .hentry .entry-meta a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
     .hentry .entry-meta a:hover {

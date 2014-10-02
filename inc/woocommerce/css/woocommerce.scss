@@ -358,28 +358,6 @@ ul.products {
 	margin-top: -2.618em;
 	border-bottom: 1px solid rgba(0,0,0,0.05);
 
-	.separator {
-		display: inline-block;
-		width: 1em;
-		height: 1em;
-		position: relative;
-		text-indent: -999em;
-		margin: 0 .618em;
-
-		&:before {
-			content: "\f105";
-			font-family: "FontAwesome";
-			font-weight: 400;
-			position: absolute;
-			top: 0;
-			left: 0;
-			text-indent: 0;
-			text-align: center;
-			width: 100%;
-			opacity: 0.5;
-		}
-	}
-
 	a.home {
 		&:before {
 			content: "\f015";
