@@ -4,6 +4,7 @@
 
 ### *2014.09.24* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
+* **Fix** - Smiley display.
 * **Tweak** - Clearfixed product galleries.
 * **Tweak** - Adjusted the add to cart form design on product details pages.
 * **Tweak** - Set a default border color on buttons for extensions to utilise.
