@@ -105,7 +105,10 @@ module.exports = function( grunt ) {
 			css: {
 				files: [
 					'style.scss',
-					'<%= dirs.wc_css %>/*.scss'
+					'<%= dirs.wc_css %>/*.scss',
+					'sass/modules/*.scss',
+					'sass/partials/*.scss',
+					'sass/vendor/*.scss'
 				],
 				tasks: [
 					'sass',
