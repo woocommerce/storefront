@@ -28,7 +28,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	     * Add the typography section
 	     */
 	    $wp_customize->add_section( 'storefront_typography' , array(
-		    'title'      => __( 'Typography', 'storefront-designer' ),
+		    'title'      => __( 'Typography', 'storefront' ),
 		    'priority'   => 45,
 		) );
 
@@ -283,7 +283,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
             'default'    => 'right',
         ) );
         $wp_customize->add_control( 'storefront_layout', array(
-				'label'    => __( 'Sidebar position', 'mytheme' ),
+				'label'    => __( 'Sidebar position', 'storefront' ),
 				'section'  => 'storefront_layout',
 				'settings' => 'storefront_layout',
 				'type'     => 'radio',
