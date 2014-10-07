@@ -7,6 +7,7 @@
 * **Fix** - Smiley display.
 * **Fix** - Date font size in post meta.
 * **Fix** - Remove the breadcrumb separator to resolve markup errors.
+* **Fix** - Returning to the welcome screen from the Customizer.
 * **Tweak** - Clearfixed product galleries.
 * **Tweak** - Adjusted the add to cart form design on product details pages.
 * **Tweak** - Set a default border color on buttons for extensions to utilise.
