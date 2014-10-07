@@ -103,6 +103,7 @@ class storefront_welcome {
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woothemes.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Who are WooThemes?', 'storefront' ); ?></h4>
 				<p><?php _e( 'WooCommerce creators WooThemes is an international team of WordPress superstars building products for a passionate community of hundreds of thousands of users.', 'storefront' ); ?></p>
+				<p><a href="http://woothemes.com" class="button"><?php _e( 'Visit WooThemes', 'storefront' ); ?></a></p>
 			</div>
 
 			<div class="col-2">
