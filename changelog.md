@@ -13,6 +13,7 @@
 * **Tweak** - Set a default border color on buttons for extensions to utilise.
 * **Tweak** - Adjusted the max-height of images in the payment method list items.
 * **Tweak** - Secondary navigation alignment in header.
+* **Tweak** - Sale marker display is more universally friendly and customisable.
 * **Dev** - Added `storefront_product_thumbnail_columns` filter.
 * **Dev** - Added `Gruntfile.js` and `package.json`.
 

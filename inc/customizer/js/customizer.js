@@ -18,7 +18,12 @@
 	} );
 	wp.customize( 'storefront_text_color', function( value ) {
 		value.bind( function( to ) {
-			$( 'body, .widget-area .widget a' ).css( 'color', to );
+			$( 'body, .widget-area .widget a, .onsale, .woocommerce-tabs ul.tabs li.active a, ul.products li.product .price, .widget-area .widget a' ).css( 'color', to );
+		} );
+	} );
+	wp.customize( 'storefront_text_color', function( value ) {
+		value.bind( function( to ) {
+			$( '.onsale' ).css( 'border-color', to );
 		} );
 	} );
 	wp.customize( 'storefront_heading_color', function( value ) {

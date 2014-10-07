@@ -91,8 +91,13 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			.secondary-navigation a,
 			.woocommerce-tabs ul.tabs li.active a,
 			ul.products li.product .price,
-			.widget-area .widget a {
+			.widget-area .widget a,
+			.onsale {
 				color: <?php echo $text_color; ?>;
+			}
+
+			.onsale {
+				border-color: <?php echo $text_color; ?>;
 			}
 
 			a,

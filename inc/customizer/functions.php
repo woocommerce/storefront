@@ -12,7 +12,7 @@
  */
 if ( ! function_exists( 'storefront_customize_preview_js' ) ) {
 	function storefront_customize_preview_js() {
-		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/inc/customizer/js/customizer.min.js', array( 'customize-preview' ), '1.10', true );
+		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/inc/customizer/js/customizer.min.js', array( 'customize-preview' ), '1.12', true );
 	}
 }
 
