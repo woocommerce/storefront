@@ -573,6 +573,21 @@ table.cart {
 	}
 }
 
+.wc-proceed-to-checkout {
+	@include clearfix;
+	margin-bottom: 1.618em;
+
+	.button {
+		display: block;
+		text-align: center;
+		margin-bottom: 1em;
+
+		&.checkout-button {
+			font-size: 1.387em;
+		}
+	}
+}
+
 ul#shipping_method {
 	margin: 0;
 	list-style: none;
