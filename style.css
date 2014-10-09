@@ -1633,7 +1633,6 @@ object {
     color: #fff; }
 
 .header-widget-region {
-  border-bottom: 1px dotted rgba(0, 0, 0, 0.1);
   margin-bottom: 4.236em; }
   .header-widget-region .widget {
     margin: 0;
