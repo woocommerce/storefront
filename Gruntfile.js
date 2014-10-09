@@ -15,8 +15,6 @@ module.exports = function( grunt ) {
 				'!js/*.min.js',
 				'inc/customizer/js/*.js',
 				'!inc/customizer/js/*.min.js',
-				'inc/woocommerce/js/*.js',
-				'!inc/woocommerce/js/*.min.js'
 			]
 		},
 
@@ -34,18 +32,6 @@ module.exports = function( grunt ) {
 						'!*.min.js'
 					],
 					dest: 'js/',
-					ext: '.min.js'
-				}]
-			},
-			woocommerce: {
-				files: [{
-					expand: true,
-					cwd: 'inc/woocommerce/js/',
-					src: [
-						'*.js',
-						'!*.min.js'
-					],
-					dest: 'inc/woocommerce/js/',
 					ext: '.min.js'
 				}]
 			},
@@ -111,10 +97,6 @@ module.exports = function( grunt ) {
 					// main js
 					'js/*js',
 					'!js/*.min.js',
-
-					// wc js
-					'inc/woocommerce/js/*js',
-					'!inc/woocommerce/js/*.min.js',
 
 					// customizer js
 					'inc/customizer/js/*js',
