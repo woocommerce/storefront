@@ -15,6 +15,7 @@
 * **Tweak** - Secondary navigation alignment in header.
 * **Tweak** - Sale marker display is more universally friendly and customisable.
 * **Tweak** - Moved the header controls in to the header image section.
+* **Tweak** - Removed header widget border.
 * **Dev** - Added `storefront_product_thumbnail_columns` filter.
 * **Dev** - Added `Gruntfile.js` and `package.json`.
 
