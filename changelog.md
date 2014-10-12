@@ -2,7 +2,7 @@
 
 =====
 
-### *2014.09.24* - 1.0.2
+### *2014.10.12* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
 * **Fix** - Smiley display.
 * **Fix** - Date font size in post meta.
@@ -16,8 +16,7 @@
 * **Tweak** - Sale marker display is more universally friendly and customisable.
 * **Tweak** - Moved the header controls in to the header image section.
 * **Tweak** - Removed header widget border.
-* **Tweak - `.site-main` margin.
-
+* **Tweak** - `.site-main` margin.
 * **Dev** - Added `storefront_product_thumbnail_columns` filter.
 * **Dev** - Added `Gruntfile.js` and `package.json`.
 
