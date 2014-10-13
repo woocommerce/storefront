@@ -92,7 +92,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			.woocommerce-tabs ul.tabs li.active a,
 			ul.products li.product .price,
 			.widget-area .widget a,
-			.onsale {
+			.onsale,
+			#comments .comment-list .reply a {
 				color: <?php echo $text_color; ?>;
 			}
 

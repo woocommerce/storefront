@@ -1382,12 +1382,12 @@ object {
       #comments .comment-list .reply .comment-edit-link {
         border-left: 1px solid rgba(0, 0, 0, 0.1); }
       #comments .comment-list .reply a {
-        color: #717f83;
+        color: #424a4c;
         background-color: rgba(0, 0, 0, 0.025);
         padding: .53em 1em;
         float: left; }
         #comments .comment-list .reply a:hover {
-          color: #424a4c; }
+          background-color: rgba(0, 0, 0, 0.05); }
     #comments .comment-list .children {
       list-style: none; }
 

@@ -68,13 +68,13 @@
 			}
 
 			a {
-				color: lighten( $color_body, 20% );
+				color: $color_body;
 				background-color: rgba(0,0,0,0.025);
 				padding: .53em 1em;
 				float: left;
 
 				&:hover {
-					color: $color_body;
+					background-color: rgba(0,0,0,0.05);
 				}
 			}
 		}
