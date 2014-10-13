@@ -2,6 +2,9 @@
 
 =====
 
+### *2014.10.13* - 1.0.3
+* **Fix** - Comment date link color.
+
 ### *2014.10.12* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
 * **Fix** - Smiley display.
