@@ -1,4 +1,4 @@
-# Storefront [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+# Storefront [![Designed for WooCommerce](http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg)](http://woothemes.com/woocommerce/) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 *Storefront* is a robust and flexible [WordPress](http://wordpress.org) theme, designed by WooCommerce creators [WooThemes](http://woothemes.com/) to help you make the most out of using [WooCommerce](http://woothemes.com/woocommerce/) to power your online store. It's available to download for free at the WordPress [theme repository](https://wordpress.org/themes/storefront/).
 
