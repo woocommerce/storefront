@@ -12,7 +12,7 @@ It features deep integration with WooCommerce core plus several of the most popu
 For developers, Storefront is the perfect starting point for your project. It's lean and extensible codebase will allow you to easily add functionality to your site via child theme and/or custom plugin(s).
 
 ## Storefront extensions
-Looking to take your storefront powered store to the next level? Be sure to checkout the premium Storefront extensions.
+Looking to take your storefront powered store to the next level? Be sure to checkout the premium [Storefront extensions](http://www.woothemes.com/product-category/plugins/storefront/).
 
 ## Storefront Documentation
 You can view detailed Storefront documentation on the [WooThemes documentation web site](http://docs.woothemes.com/documentation/themes/storefront/).
