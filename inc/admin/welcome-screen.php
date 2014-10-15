@@ -13,7 +13,7 @@ class storefront_welcome {
 	function __construct() {
 
 		add_action( 'admin_menu', array( $this,'storefront_welcome_register_menu' ) );
-		add_action( 'load-themes.php', array( $this,'storefront_welcome_redirect' ) );
+		add_action( 'load-themes.php', array( $this,'storefront_activation_admin_notice' ) );
 
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	20 );
@@ -23,15 +23,28 @@ class storefront_welcome {
 	} // end constructor
 
 	/**
-	 * Redirects to the welcome screen after storefront has been activated
-	 * @since 1.0.0
+	 * Adds an admin notice upon successful activation.
+	 * @since 1.0.3
 	 */
-	function storefront_welcome_redirect() {
+	function storefront_activation_admin_notice() {
 		global $pagenow;
 
 		if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
-			wp_redirect( admin_url( 'themes.php?page=storefront-welcome' ) );
+			add_action( 'admin_notices', array( $this, 'storefront_welcome_admin_notice' ), 99 );
 		}
+	}
+
+	/**
+	 * Display an admin notice linking to the welcome screen
+	 * @since 1.0.3
+	 */
+	function storefront_welcome_admin_notice() {
+		?>
+			<div class="updated fade">
+				<p><?php echo sprintf( __( 'Thanks for choosing Storefront! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'storefront' ), '<a href="' . admin_url( 'themes.php?page=storefront-welcome' ) . '">', '</a>' ); ?></p>
+				<p><a href="<?php echo admin_url( 'themes.php?page=storefront-welcome' ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Storefront', 'storefront' ); ?></a></p>
+			</div>
+		<?php
 	}
 
 	/**

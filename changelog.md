@@ -6,6 +6,7 @@
 * **Fix** - Comment date link color.
 * **Fix** - Comment reply link color.
 * **Tweak** - Sanitize layout setting.
+* **Tweak** - No redirect to welcome screen on activation.
 
 ### *2014.10.12* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
