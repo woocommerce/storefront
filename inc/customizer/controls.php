@@ -279,7 +279,8 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		    'description' 	=> __( 'Customise the web site layout', 'storefront' ),
 		) );
 	    $wp_customize->add_setting( 'storefront_layout', array(
-            'default'    => 'right',
+            'default'    		=> 'right',
+            'sanitize_callback' => 'storefront_sanitize_layout',
         ) );
         $wp_customize->add_control( 'storefront_layout', array(
 				'label'    => __( 'Sidebar position', 'storefront' ),

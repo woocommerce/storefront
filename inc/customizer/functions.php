@@ -38,6 +38,28 @@ if ( ! function_exists( 'storefront_sanitize_hex_color' ) ) {
 }
 
 /**
+ * Sanitizes the layout setting
+ *
+ * Ensures only array keys matching the original settings specified in add_control() are valid
+ *
+ * @since 1.0.3
+ */
+if ( ! function_exists( 'storefront_sanitize_layout' ) ) {
+    function storefront_sanitize_layout( $input ) {
+        $valid = array(
+            'right' => 'Right',
+            'left'  => 'Left',
+        );
+
+        if ( array_key_exists( $input, $valid ) ) {
+            return $input;
+        } else {
+            return '';
+        }
+    }
+}
+
+/**
  * Layout classes
  * Adds 'right-sidebar' and 'left-sidebar' classes to the body tag
  * @param  array $classes current body classes
