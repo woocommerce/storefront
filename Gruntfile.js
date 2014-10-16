@@ -62,6 +62,7 @@ module.exports = function( grunt ) {
 			    	'inc/woocommerce/css/brands.css': 'inc/woocommerce/css/brands.scss',
 			    	'inc/woocommerce/css/wishlists.css': 'inc/woocommerce/css/wishlists.scss',
 			    	'inc/woocommerce/css/ajax-layered-nav.css': 'inc/woocommerce/css/ajax-layered-nav.scss',
+			    	'inc/woocommerce/css/variation-swatches.css': 'inc/woocommerce/css/variation-swatches.scss',
 			    	'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 			    }]
 			}

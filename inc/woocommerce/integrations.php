@@ -37,6 +37,13 @@ function storefront_woocommerce_integrations_scripts() {
 	if ( class_exists( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/inc/woocommerce/css/ajax-layered-nav.css' );
 	}
+
+	/**
+	 * Variation Swatches
+	 */
+	if ( class_exists( 'WC_SwatchesPlugin' ) ) {
+		wp_enqueue_style( 'storefront-variation-swatches-style', get_template_directory_uri() . '/inc/woocommerce/css/variation-swatches.css' );
+	}
 }
 
 /**

@@ -1,0 +1,35 @@
+/**
+ * WooCommerce Variation Swatches
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../sass/modules/variables';
+@import '../../../sass/modules/mixins';
+@import '../../../sass/vendor/gridset';
+
+.variations-table {
+	.swatch-wrapper {
+		padding: 0;
+		border: 0;
+		opacity: 0.5;
+
+		.swatch-anchor {
+			border-radius: .236em;
+		}
+
+		&.selected,
+		&:hover {
+			padding: 0;
+			border: 0;
+			opacity: 1;
+		}
+	}
+}
+
+#variations_clear {
+	display: block;
+	margin-bottom: 1em;
+}
