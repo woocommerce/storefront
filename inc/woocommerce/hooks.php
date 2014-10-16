@@ -60,3 +60,11 @@ add_filter( 'woocommerce_product_thumbnails_columns', 	'storefront_thumbnail_col
 add_filter( 'woocommerce_output_related_products_args', 'storefront_related_products_args' );
 add_filter( 'loop_shop_per_page', 						'storefront_products_per_page' );
 add_filter( 'loop_shop_columns', 						'storefront_loop_columns' );
+
+/**
+ * Integrations
+ * @see  storefront_woocommerce_integrations_scripts()
+ * @see  storefront_add_bookings_customizer_css()
+ */
+add_action( 'wp_enqueue_scripts', 						'storefront_woocommerce_integrations_scripts' );
+add_action( 'wp_head', 									'storefront_add_bookings_customizer_css' );

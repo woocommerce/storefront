@@ -30,8 +30,14 @@ function storefront_woocommerce_integrations_scripts() {
 	if ( class_exists( 'WC_Wishlists_Wishlist' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/inc/woocommerce/css/wishlists.css' );
 	}
+
+	/**
+	 * AJAX Layered Nav
+	 */
+	if ( class_exists( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
+		wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/inc/woocommerce/css/ajax-layered-nav.css' );
+	}
 }
-add_action( 'wp_enqueue_scripts', 'storefront_woocommerce_integrations_scripts' );
 
 /**
  * Add CSS in <head> for integration styles handled by the theme customizer
@@ -77,4 +83,3 @@ if ( ! function_exists( 'storefront_add_bookings_customizer_css' ) ) {
 	<?php }
 	}
 }
-add_action( 'wp_head', 'storefront_add_bookings_customizer_css' );
