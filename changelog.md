@@ -5,6 +5,7 @@
 ### *2014.10.16* - 1.1.0
 * **New** - Integration with AJAX Layered Navigation extension.
 * **New** - Integration with Variation Swatches and Photos extension.
+* **New** - Integration with Composite Products extension.
 
 ### *2014.10.15* - 1.0.3
 * **Fix** - Comment date link color.
