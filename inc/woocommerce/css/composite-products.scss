@@ -13,7 +13,7 @@
 .single-product div.product {
 	.component_selections {
 		.component_summary {
-			.images {
+			.composited_product_images {
 				@include gs-span(c, 5, 5, (5, 9));
 				@include gs-float(c, left);
 
@@ -33,6 +33,11 @@
 				margin-left: 0;
 			}
 		}
+
+		.component_content,
+		.component_options {
+			padding: 0;
+		}
 	}
 }
 
@@ -40,7 +45,7 @@
 	&.single-product div.product {
 		.component_selections {
 			.component_summary {
-				.images {
+				.composited_product_images {
 					@include gs-span(c, 5, 6, (5, 12));
 					@include gs-float(c, left);
 
@@ -64,7 +69,7 @@
 	&.single-product div.product {
 		.component_selections {
 			.component_summary {
-				.images {
+				.composited_product_images {
 					@include gs-span(c, 1, 2, (1, 9));
 					@include gs-float(c, left);
 
@@ -86,7 +91,7 @@
 		&.single-product div.product {
 			.component_selections {
 				.component_summary {
-					.images {
+					.composited_product_images {
 						@include gs-span(c, 1, 2);
 						@include gs-float(c, left);
 

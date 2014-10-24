@@ -817,8 +817,19 @@ ul.digital-downloads {
 		width: 100%;
 	}
 
+	input[type=checkbox],
+	input[type=radio] {
+		width: auto;
+	}
+
 	.button {
 		width: auto;
+	}
+
+	&.create-account {
+		label {
+			display: inline-block;
+		}
 	}
 }
 

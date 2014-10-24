@@ -6,6 +6,7 @@
 * **New** - Integration with AJAX Layered Navigation extension.
 * **New** - Integration with Variation Swatches and Photos extension.
 * **New** - Integration with Composite Products extension.
+* **Tweak** - Create account checkbox at checkout.
 
 ### *2014.10.15* - 1.0.3
 * **Fix** - Comment date link color.
