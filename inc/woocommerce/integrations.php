@@ -45,12 +45,6 @@ function storefront_woocommerce_integrations_scripts() {
 		wp_enqueue_style( 'storefront-variation-swatches-style', get_template_directory_uri() . '/inc/woocommerce/css/variation-swatches.css' );
 	}
 
-	/**
-	 * Composite Products
-	 */
-	if ( class_exists( 'WC_Composite_Products' ) ) {
-		wp_enqueue_style( 'storefront-composite-products-style', get_template_directory_uri() . '/inc/woocommerce/css/composite-products.css' );
-	}
 }
 
 /**
