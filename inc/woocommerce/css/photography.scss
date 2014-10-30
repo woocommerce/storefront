@@ -1,0 +1,52 @@
+/**
+ * WooCommerce Photography
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../sass/modules/variables';
+@import '../../../sass/modules/mixins';
+@import '../../../sass/vendor/gridset';
+
+@media screen and (min-width: 768px) {
+	.woocommerce,
+	.woocommerce-page {
+		.photography-products {
+			.tools {
+				margin-bottom: 2.618em;
+				background-color: rgba(0,0,0,0.025);
+				padding: 1em 1em 1em 1.618em;
+				border: 0;
+			}
+		}
+
+		ul.products {
+			li.product-type-photography {
+				@include clearfix;
+				@include gs-span(c, 1, 6);
+				@include gs-float(c, left);
+
+				.photography-image {
+					@include gs-span(c, 1, 2, (1, 6));
+					@include gs-float(c, left, (1, 6));
+				}
+
+				.photography-content {
+					@include gs-span(c, 3, 6, (1, 6));
+					@include gs-float(c, right, (1, 6));
+					margin-left: 0;
+				}
+
+				.photography-sku {
+					border-bottom: 1px dotted rgba(0,0,0,0.1);
+				}
+
+				.sku {
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}

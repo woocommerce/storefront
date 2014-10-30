@@ -2,10 +2,11 @@
 
 =====
 
-### *2014.10.16* - 1.1.0
+### *2014.10.30* - 1.1.0
 * **New** - Integration with AJAX Layered Navigation extension.
 * **New** - Integration with Variation Swatches and Photos extension.
 * **New** - Integration with Composite Products extension.
+* **New** - Integration with WooCommerce Photography extension.
 * **Tweak** - Create account checkbox at checkout.
 
 ### *2014.10.15* - 1.0.3

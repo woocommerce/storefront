@@ -51,6 +51,26 @@ function storefront_woocommerce_integrations_scripts() {
 	if ( class_exists( 'WC_Composite_Products' ) ) {
 		wp_enqueue_style( 'storefront-composite-products-style', get_template_directory_uri() . '/inc/woocommerce/css/composite-products.css' );
 	}
+
+	/**
+	 * WooCommerce Photography
+	 */
+	if ( class_exists( 'WC_Photography' ) ) {
+		wp_enqueue_style( 'storefront-woocommerce-photography-style', get_template_directory_uri() . '/inc/woocommerce/css/photography.css' );
+	}
+}
+
+/**
+ * Integrations layout tweaks
+ * @return void
+ */
+function storefront_woocommerce_integrations_layout() {
+	/**
+	 * WooCommerce Photography
+	 */
+	if ( class_exists( 'WC_Photography' ) ) {
+		remove_action( 'wc_photography_before_main_content', 'woocommerce_breadcrumb', 20 );
+	}
 }
 
 /**
