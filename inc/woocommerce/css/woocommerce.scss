@@ -606,7 +606,7 @@ a.remove {
 	color: #fff;
 
 	&:hover {
-		background-color: $color_body;
+		background-color: darken($error,10%);
 		color: #fff;
 	}
 }
