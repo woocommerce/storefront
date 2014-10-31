@@ -9,6 +9,7 @@
 * **New** - Integration with WooCommerce Photography extension.
 * **Tweak** - Create account checkbox at checkout.
 * **Tweak** - Added support for WordPress 4.1s `title-tag` theme feature.
+* **Tweak** - Softened default text color slightly.
 
 ### *2014.10.15* - 1.0.3
 * **Fix** - Comment date link color.

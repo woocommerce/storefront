@@ -209,7 +209,7 @@ body {
  */
 .site-footer {
   background-color: #f3f3f3;
-  color: #a8b0b2;
+  color: #dee4ed;
   padding: 1.618em 0; }
   .site-footer h1,
   .site-footer h2,
@@ -217,7 +217,7 @@ body {
   .site-footer h4,
   .site-footer h5,
   .site-footer h6 {
-    color: #646c6e; }
+    color: #9aa0a9; }
   .site-footer a:not(.button) {
     color: #a46497; }
 
@@ -339,7 +339,7 @@ button,
 input,
 select,
 textarea {
-  color: #424a4c;
+  color: #787E87;
   font-family: "Helvetica Neue", sans-serif;
   font-size: 1.5em;
   line-height: 1.618;
@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 700;
   margin-bottom: .618em;
-  color: #2a2f31; }
+  color: #60656c; }
 
 h1,
 .alpha {
@@ -520,8 +520,8 @@ input[type="submit"],
 .added_to_cart {
   border: 0;
   background: none;
-  background-color: #424a4c;
-  border-color: #424a4c;
+  background-color: #787E87;
+  border-color: #787E87;
   color: #fff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -619,7 +619,7 @@ textarea,
 .input-text {
   padding: .857em;
   background-color: #efefef;
-  color: #424a4c;
+  color: #787E87;
   line-height: 1;
   outline: none;
   border: 0;
@@ -634,7 +634,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
   background-color: #e3e3e3;
-  color: #2a2f31; }
+  color: #60656c; }
 
 textarea {
   overflow: auto;
@@ -998,7 +998,7 @@ fieldset {
           top: 0; }
 
   ul.menu li.current-menu-item > a {
-    color: #424a4c; }
+    color: #787E87; }
   ul.menu li a {
     color: #fff; }
 
@@ -1098,7 +1098,7 @@ fieldset {
       .secondary-navigation .menu a {
         padding: 1.387em .857em;
         font-weight: 400;
-        color: #717f83; }
+        color: #aeb2b7; }
         .secondary-navigation .menu a:hover {
           text-decoration: none; } }
 /**
@@ -1117,7 +1117,7 @@ fieldset {
   .hentry .wp-post-image {
     margin-bottom: 1.618em; }
   .hentry .entry-header {
-    border-bottom: 3px solid #424a4c;
+    border-bottom: 3px solid #787E87;
     margin-bottom: 3.631em; }
     .hentry .entry-header h1 {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1157,7 +1157,7 @@ fieldset {
     margin-right: .53em;
     display: inline-block;
     width: 1em;
-    color: #c3c9ca; }
+    color: white; }
 
 .tags-links:before {
   content: "\f02b"; }
@@ -1363,7 +1363,7 @@ object {
       opacity: 0.8;
       font-size: .857em; }
       #comments .comment-list .comment-meta a.comment-date:hover {
-        color: #424a4c; }
+        color: #787E87; }
     #comments .comment-list .comment-meta cite {
       font-style: normal;
       clear: both;
@@ -1383,7 +1383,7 @@ object {
       #comments .comment-list .reply .comment-edit-link {
         border-left: 1px solid rgba(0, 0, 0, 0.1); }
       #comments .comment-list .reply a {
-        color: #424a4c;
+        color: #787E87;
         background-color: rgba(0, 0, 0, 0.025);
         padding: .53em 1em;
         float: left; }
@@ -1625,7 +1625,7 @@ object {
   .widget h1 {
     font-size: 1em;
     letter-spacing: 0;
-    border-bottom: 3px solid #424a4c;
+    border-bottom: 3px solid #787E87;
     padding: 0 0 1em;
     margin-bottom: 1em;
     font-weight: 700; }
@@ -1739,7 +1739,7 @@ object {
   .widget-area .widget h1.widget-title {
     font-size: 1.387em; }
   .widget-area .widget a {
-    color: #424a4c;
+    color: #787E87;
     font-weight: 400;
     opacity: 0.5; }
     .widget-area .widget a:hover {
