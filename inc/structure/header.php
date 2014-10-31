@@ -5,14 +5,20 @@
  * @package storefront
  */
 
-if ( ! function_exists( 'storefront_title' ) ) {
-	/**
-	 * Wrapper function for displaying the page title, for use with third-party title plugins.
-	 * @since  1.0.0
-	 */
-	function storefront_title () {
-		wp_title( '|', true, 'right' );
-	} // End storefront_title()
+if ( ! function_exists( '_wp_render_title_tag' ) ) {
+	if ( ! function_exists( 'storefront_title' ) ) {
+		/**
+		 * Wrapper function for displaying the page title, for use with third-party title plugins.
+		 * This function provides backwards compatibility for WordPress < 4.1.
+		 * 4.1 + uses native `title-tag` theme feature.
+		 * @since  1.0.0
+		 */
+		function storefront_title () {
+			echo '<title>' . wp_title( '|', false, 'right' ) . '</title>';
+		} // End storefront_title()
+	}
+
+	add_action( 'wp_head', 'storefront_title' );
 }
 
 /**

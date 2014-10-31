@@ -78,6 +78,9 @@ function storefront_setup() {
 
 	// Declare WooCommerce support
 	add_theme_support( 'woocommerce' );
+
+	// Declare support for title theme feature
+	add_theme_support( 'title-tag' );
 }
 endif; // storefront_setup
 
