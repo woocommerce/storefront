@@ -1156,8 +1156,7 @@ fieldset {
     font-family: "FontAwesome";
     margin-right: .53em;
     display: inline-block;
-    width: 1em;
-    color: white; }
+    width: 1em; }
 
 .tags-links:before {
   content: "\f02b"; }
