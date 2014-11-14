@@ -75,8 +75,8 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @return void
 	 */
 	function storefront_site_branding() {
-		if ( function_exists( 'has_site_logo' ) && has_site_logo() ) {
-			the_site_logo();
+		if ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+			jetpack_the_site_logo();
 		} else {
 		?>
 			<div class="site-branding">

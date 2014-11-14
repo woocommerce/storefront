@@ -668,7 +668,8 @@ fieldset {
  */
 @media screen and (min-width: 768px) {
   .site-header .site-branding,
-  .site-header .site-logo-anchor {
+  .site-header .site-logo-anchor,
+  .site-header .site-logo-link {
     display: block;
     display: block;
     float: left;
@@ -681,7 +682,8 @@ fieldset {
     margin-right: 4%;
     clear: both; }
     .site-header .site-branding img,
-    .site-header .site-logo-anchor img {
+    .site-header .site-logo-anchor img,
+    .site-header .site-logo-link img {
       height: auto;
       max-width: 100%;
       max-height: none; }

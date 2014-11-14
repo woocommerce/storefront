@@ -7,6 +7,7 @@
 * **New** - Integration with Variation Swatches and Photos extension.
 * **New** - Integration with Composite Products extension.
 * **New** - Integration with WooCommerce Photography extension.
+* **New** - Integration with Jetpacks `site-logo` feature.
 * **Tweak** - Create account checkbox at checkout.
 * **Tweak** - Added support for WordPress 4.1s `title-tag` theme feature.
 * **Tweak** - Softened default text color slightly.

@@ -179,7 +179,7 @@ class storefront_welcome {
 				<p><?php echo sprintf( __( 'Once set up you can toggle and re-order the homepage components using the %sHomepage Control%s plugin.', 'storefront' ), '<a href="https://wordpress.org/plugins/homepage-control/">', '</a>' ); ?></p>
 
 				<h4><?php _e( 'Add your logo', 'storefront' ); ?></h4>
-				<p><?php echo sprintf( __( 'Activate the %sSite Logo%s plugin to enable a custom logo option.', 'storefront' ), '<a href="https://github.com/Automattic/site-logo">', '</a>' ); ?></p>
+				<p><?php echo sprintf( __( 'Activate %sJetpack%s to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ); ?></p>
 
 				<h4><?php _e( 'View documentation', 'storefront' ); ?></h4>
 				<p><?php _e( 'You can read detailed information on Storefronts features and how to develop on top of it in the documentation.', 'storefront' ); ?></p>
