@@ -831,6 +831,18 @@ ul.digital-downloads {
 			display: inline-block;
 		}
 	}
+
+	&.woocommerce-validated {
+		input.input-text {
+			box-shadow: inset 2px 0 0 $success;
+		}
+	}
+
+	&.woocommerce-invalid {
+		input.input-text {
+			box-shadow: inset 2px 0 0 $error;
+		}
+	}
 }
 
 .form-row-last {
