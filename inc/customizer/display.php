@@ -110,7 +110,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 				color: <?php echo $accent_color; ?>;
 			}
 
-			.widget_price_filter .ui-slider .ui-slider-range {
+			.widget_price_filter .ui-slider .ui-slider-range,
+			.widget_price_filter .ui-slider .ui-slider-handle {
 				background-color: <?php echo $accent_color; ?>;
 			}
 

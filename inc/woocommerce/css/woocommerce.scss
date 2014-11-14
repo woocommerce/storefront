@@ -479,13 +479,20 @@ ul.products {
 		height: 1em;
 		@include border-top-radius(1em);
 		@include border-bottom-radius(1em);
-		cursor: pointer;
+		cursor: ew-resize;
 		outline: none;
-		background: #000;
+		background: $color_links;
 		@include box-sizing(border-box);
+		margin-top: -.25em;
+		opacity: 1;
 
 		&:last-child {
 			margin-left: -1em;
+		}
+
+		&:hover,
+		&.ui-state-active {
+			box-shadow: 0 0 0 .236em rgba(#000, 0.1);
 		}
 	}
 
@@ -507,7 +514,7 @@ ul.products {
 	}
 
     .ui-slider-horizontal {
-		height: 1em;
+		height: .5em;
 	}
 
     .ui-slider-horizontal .ui-slider-range {
