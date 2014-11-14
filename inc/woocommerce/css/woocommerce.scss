@@ -403,6 +403,18 @@ ul.products {
 .widget_shopping_cart {
 	.product_list_widget {
 		margin-bottom: 0;
+
+		li {
+			padding-left: 2em;
+			position: relative;
+
+			a.remove {
+				position: absolute;
+				top: 1em;
+				left: 0;
+				opacity: 1;
+			}
+		}
 	}
 
 	p.total,
@@ -602,19 +614,26 @@ ul#shipping_method {
 
 a.remove {
 	display: block;
-	width: 1em;
-	height: 1em;
-	line-height: 1;
-	font-weight: 700;
-	padding: .236em;
-	background-color: $error;
-	text-align: center;
-	@include box-sizing(content-box);
-	color: #fff;
+	width: 1.618em;
+	height: 1.618em;
+	line-height: 1.618;
+	font-weight: 400;
+	text-indent: -9999px;
+	position: relative;
 
-	&:hover {
-		background-color: darken($error,10%);
-		color: #fff;
+	&:before {
+		content: "\f057";
+		font-family: 'FontAwesome';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		color: $error;
+		line-height: 1.618;
+		text-indent: 0;
+		text-align: center;
+		font-weight: 400;
 	}
 }
 
