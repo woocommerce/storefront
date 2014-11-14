@@ -42,6 +42,7 @@ body {
 
 		a {
 			font-weight: 700;
+			color: #fff;
 		}
 	}
 
@@ -63,7 +64,7 @@ body {
  */
 .site-footer {
 	background-color: #f3f3f3;
-	color: $color_body + #666;
+	color: $color_body + #333;
 	padding: 1.618em 0;
 
 	h1,

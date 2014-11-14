@@ -50,12 +50,17 @@ textarea {
 	}
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-family: $header-font;
 	clear: both;
 	font-weight: 700;
 	margin-bottom: .618em;
-	color: darken( $color_body, 10% );
+	color: darken( $color_body, 20% );
 }
 h1,
 .alpha {

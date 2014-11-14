@@ -72,7 +72,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	     * Heading color
 	     */
 	    $wp_customize->add_setting( 'storefront_heading_color', array(
-	        'default'           => apply_filters( 'storefront_default_heading_color', '#2c2d33' ),
+	        'default'           => apply_filters( 'storefront_default_heading_color', '#484c51' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
 	        'transport'			=> 'postMessage',
 	    ) );
@@ -160,7 +160,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	     * Footer text color
 	     */
 	    $wp_customize->add_setting( 'storefront_footer_text_color', array(
-	        'default'           => apply_filters( 'storefront_default_footer_text_color', '#a8b0b2' ),
+	        'default'           => apply_filters( 'storefront_default_footer_text_color', '#abb1ba' ),
 	        'sanitize_callback' => 'storefront_sanitize_hex_color',
 	        'transport'			=> 'postMessage',
 	    ) );

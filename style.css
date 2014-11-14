@@ -193,7 +193,8 @@ body {
   letter-spacing: -1px;
   margin: 0; }
   .site-branding h1 a {
-    font-weight: 700; }
+    font-weight: 700;
+    color: #fff; }
 .site-branding .site-description {
   font-size: .857em;
   display: none; }
@@ -209,7 +210,7 @@ body {
  */
 .site-footer {
   background-color: #f3f3f3;
-  color: #dee4ed;
+  color: #abb1ba;
   padding: 1.618em 0; }
   .site-footer h1,
   .site-footer h2,
@@ -356,12 +357,17 @@ textarea {
   select,
   textarea {
     font-size: 1.387em; } }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Helvetica Neue", sans-serif;
   clear: both;
   font-weight: 700;
   margin-bottom: .618em;
-  color: #60656c; }
+  color: #484c51; }
 
 h1,
 .alpha {
@@ -946,12 +952,15 @@ fieldset {
     margin-left: 1.387em; }
   .main-navigation ul li a {
     padding: .857em 1.387em;
-    display: block; }
+    display: block;
+    color: #fff; }
     .main-navigation ul li a:before {
       font-family: "FontAwesome";
       content: "\f0f6";
       margin-right: .53em;
       font-weight: 400; }
+    .main-navigation ul li a:hover {
+      color: #e6e6e6; }
 
 @media screen and (min-width: 768px) {
   .menu-toggle {

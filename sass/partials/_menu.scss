@@ -47,12 +47,17 @@
 		a {
 			padding: .857em 1.387em;
 			display: block;
+			color: #fff;
 
 			&:before {
 				font-family: "FontAwesome";
 				content: "\f0f6";
 				margin-right: .53em;
 				font-weight: 400;
+			}
+
+			&:hover {
+				color: #e6e6e6;
 			}
 		}
 	}
