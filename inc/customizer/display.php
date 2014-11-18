@@ -12,22 +12,22 @@
  */
 if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 	function storefront_add_customizer_css() {
-		$accent_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_accent_color' ) );
-		$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color' ) );
-		$header_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_link_color' ) );
-		$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color' ) );
+		$accent_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#a46497' ) ) );
+		$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) ) );
+		$header_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#ffffff' ) ) );
+		$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#5a6567' ) ) );
 
-		$footer_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_background_color' ) );
-		$footer_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_link_color' ) );
-		$footer_heading_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_heading_color' ) );
-		$footer_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_text_color' ) );
+		$footer_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_background_color', apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ) ) );
+		$footer_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_link_color', apply_filters( 'storefront_default_footer_link_color', '#a46497' ) ) );
+		$footer_heading_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_heading_color', apply_filters( 'storefront_default_footer_heading_color', '#646c6e' ) ) );
+		$footer_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_text_color', apply_filters( 'storefront_default_footer_text_color', '#abb1ba' ) ) );
 
-		$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color' ) );
-		$heading_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_heading_color' ) );
-		$button_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_background_color' ) );
-		$button_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_text_color' ) );
-		$button_alt_background_color 	= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_background_color' ) );
-		$button_alt_text_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_text_color' ) );
+		$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#787E87' ) ) );
+		$heading_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_heading_color', apply_filters( 'storefront_default_heading_color', '#484c51' ) ) );
+		$button_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#787E87' ) ) );
+		$button_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) ) );
+		$button_alt_background_color 	= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_background_color', apply_filters( 'storefront_default_button_alt_background_color', '#a46497' ) ) );
+		$button_alt_text_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_alt_text_color', apply_filters( 'storefront_default_button_alt_text_color', '#ffffff' ) ) );
 
 		$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );
 		$darken_factor 					= apply_filters( 'storefront_darken_factor', -25 );

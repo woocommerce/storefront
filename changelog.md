@@ -13,6 +13,7 @@
 * **Tweak** - Softened default text color slightly.
 * **Tweak** - Styling for valid/invalid inputs.
 * **Tweak** - Price filter slider styling.
+* **Tweak** - Default settings for display options.
 
 ### *2014.10.15* - 1.0.3
 * **Fix** - Comment date link color.
