@@ -30,6 +30,11 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		$wp_customize->get_section( 'header_image' )->priority 		= 35;
 
 		/**
+		 * Custom controls
+		 */
+		require_once dirname( __FILE__ ) . '/controls/layout.php';
+
+		/**
 	     * Add the typography section
 	     */
 	    $wp_customize->add_section( 'storefront_typography' , array(
@@ -276,22 +281,19 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 	    $wp_customize->add_section( 'storefront_layout' , array(
 		    'title'      	=> __( 'Layout', 'storefront' ),
 		    'priority'   	=> 50,
-		    'description' 	=> __( 'Customise the web site layout', 'storefront' ),
 		) );
+
 	    $wp_customize->add_setting( 'storefront_layout', array(
             'default'    		=> 'right',
             'sanitize_callback' => 'storefront_sanitize_layout',
         ) );
-        $wp_customize->add_control( 'storefront_layout', array(
-				'label'    => __( 'Sidebar position', 'storefront' ),
+
+        $wp_customize->add_control( new Layout_Picker_Custom_Control( $wp_customize, 'storefront_layout', array(
+				'label'    => __( 'General layout', 'storefront' ),
 				'section'  => 'storefront_layout',
 				'settings' => 'storefront_layout',
-				'type'     => 'radio',
-				'choices'  => array(
-					'right' => 'Right',
-					'left'  => 'Left',
-				),
+				'priority' => 1,
 			)
-		);
+		) );
 	}
 }
