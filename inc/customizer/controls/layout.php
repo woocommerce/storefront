@@ -2,7 +2,7 @@
 /**
  * Class to create a custom layout control
  */
-class Layout_Picker_Custom_Control extends WP_Customize_Control {
+class Layout_Picker_Storefront_Control extends WP_Customize_Control {
 
 	/**
 	* Render the content on the theme customizer page

@@ -33,6 +33,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Custom controls
 		 */
 		require_once dirname( __FILE__ ) . '/controls/layout.php';
+		require_once dirname( __FILE__ ) . '/controls/divider.php';
 
 		/**
 	     * Add the typography section
@@ -288,11 +289,18 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
             'sanitize_callback' => 'storefront_sanitize_layout',
         ) );
 
-        $wp_customize->add_control( new Layout_Picker_Custom_Control( $wp_customize, 'storefront_layout', array(
+        $wp_customize->add_control( new Layout_Picker_Storefront_Control( $wp_customize, 'storefront_layout', array(
 				'label'    => __( 'General layout', 'storefront' ),
 				'section'  => 'storefront_layout',
 				'settings' => 'storefront_layout',
 				'priority' => 1,
+			)
+		) );
+
+		$wp_customize->add_control( new Divider_Storefront_Control( $wp_customize, 'storefront_separator', array(
+				'section'  => 'storefront_layout',
+				'settings' => 'storefront_layout',
+				'priority' => 2,
 			)
 		) );
 	}
