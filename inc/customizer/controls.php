@@ -297,7 +297,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 			)
 		) );
 
-		$wp_customize->add_control( new Divider_Storefront_Control( $wp_customize, 'storefront_separator', array(
+		$wp_customize->add_control( new Divider_Storefront_Control( $wp_customize, 'storefront_divider', array(
 				'section'  => 'storefront_layout',
 				'settings' => 'storefront_layout',
 				'priority' => 2,
