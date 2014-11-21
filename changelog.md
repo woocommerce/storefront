@@ -2,7 +2,7 @@
 
 =====
 
-### *2014.10.30* - 1.1.0
+### *2014.11.21* - 1.1.0
 * **New** - Integration with AJAX Layered Navigation extension.
 * **New** - Integration with Variation Swatches and Photos extension.
 * **New** - Integration with Composite Products extension.
@@ -14,12 +14,18 @@
 * **Tweak** - Styling for valid/invalid inputs.
 * **Tweak** - Price filter slider styling.
 * **Tweak** - Default settings for display options.
+* **Tweak** - Added custom layout picker control.
+* **Tweak** - Removed unused animation styles.
+
+=====
 
 ### *2014.10.15* - 1.0.3
 * **Fix** - Comment date link color.
 * **Fix** - Comment reply link color.
 * **Tweak** - Sanitize layout setting.
 * **Tweak** - No redirect to welcome screen on activation.
+
+=====
 
 ### *2014.10.12* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
