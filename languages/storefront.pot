@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 1.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2014-11-21 16:03:27+00:00\n"
+"POT-Creation-Date: 2014-11-21 16:15:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -123,7 +123,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: header.php:22
+#: header.php:25
 msgid "Skip to content"
 msgstr ""
 
@@ -417,7 +417,7 @@ msgstr ""
 msgid "General layout"
 msgstr ""
 
-#: inc/functions/setup.php:57 inc/structure/header.php:99
+#: inc/functions/setup.php:57 inc/structure/header.php:83
 msgid "Primary Menu"
 msgstr ""
 
@@ -453,7 +453,7 @@ msgstr ""
 msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: inc/structure/header.php:49
+#: inc/structure/header.php:33
 msgid "Page %s"
 msgstr ""
 
