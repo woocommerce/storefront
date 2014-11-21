@@ -8,7 +8,7 @@
 * **New** - Integration with Composite Products extension.
 * **New** - Integration with WooCommerce Photography extension.
 * **New** - Integration with Jetpacks `site-logo` feature.
-* **Tweak** - Create account checkbox at checkout.
+* **Tweak** - Create account checkbox styling at checkout.
 * **Tweak** - Added support for WordPress 4.1s `title-tag` theme feature.
 * **Tweak** - Softened default text color slightly.
 * **Tweak** - Styling for valid/invalid inputs.
@@ -16,6 +16,7 @@
 * **Tweak** - Default settings for display options.
 * **Tweak** - Added custom layout picker control.
 * **Tweak** - Removed unused animation styles.
+* **Tweak** - Default customizer settings added.
 
 =====
 
