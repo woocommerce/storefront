@@ -17,9 +17,9 @@
 /**
  * WordPress 4.1 + uses native `title-tag` theme feature.
  */
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
-	echo '<title>' . wp_title( '|', false, 'right' ) . '</title>';
-} ?>
+if ( ! function_exists( '_wp_render_title_tag' ) ) { ?>
+	<title><?php wp_title( '|', false, 'right' ); ?></title>
+<?php } ?>
 
 <?php wp_head(); ?>
 </head>
