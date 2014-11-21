@@ -600,6 +600,13 @@ input[type="submit"],
   .added_to_cart.small {
     padding: .53em .857em;
     font-size: .857em; }
+  button.disabled,
+  input[type="button"].disabled,
+  input[type="reset"].disabled,
+  input[type="submit"].disabled,
+  .button.disabled,
+  .added_to_cart.disabled {
+    opacity: 0.5; }
 
 input[type="checkbox"],
 input[type="radio"] {
