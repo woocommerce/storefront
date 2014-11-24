@@ -1,12 +1,8 @@
 # Storefront Changelog
 
-=====
-
 ### *2014.11.24* - 1.1.1
 * **Fix** - Title tag now displays correctly.
 * **Localisation** - Tweaked how translation files are loaded.
-
-=====
 
 ### *2014.11.21* - 1.1.0
 * **New** - Integration with AJAX Layered Navigation extension.
@@ -24,15 +20,11 @@
 * **Tweak** - Removed unused animation styles.
 * **Tweak** - Default customizer settings added.
 
-=====
-
 ### *2014.10.15* - 1.0.3
 * **Fix** - Comment date link color.
 * **Fix** - Comment reply link color.
 * **Tweak** - Sanitize layout setting.
 * **Tweak** - No redirect to welcome screen on activation.
-
-=====
 
 ### *2014.10.12* - 1.0.2
 * **Fix** - Upsell display on cart when using full width template.
@@ -52,15 +44,11 @@
 * **Dev** - Added `storefront_product_thumbnail_columns` filter.
 * **Dev** - Added `Gruntfile.js` and `package.json`.
 
-=====
-
 ### *2014.09.14* - 1.0.1
 * **Tweak** - Improved vertical spacing in the site header on mobile sized devices.
 * **Tweak** - Updated some links & content in the welcome screen.
 * **Tweak** - Improved comment/review respond form layout.
 * **Fix** - Header text color live preview in cart dropdown.
-
-=====
 
 ### *2014.09.05* - 1.0.0
 * Initial release
