@@ -2,6 +2,12 @@
 
 =====
 
+### *2014.11.24* - 1.1.1
+* **Fix** - Title tag now displays correctly.
+* **Localisation** - Tweaked how translation files are loaded.
+
+=====
+
 ### *2014.11.21* - 1.1.0
 * **New** - Integration with AJAX Layered Navigation extension.
 * **New** - Integration with Variation Swatches and Photos extension.

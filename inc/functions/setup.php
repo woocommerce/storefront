@@ -35,14 +35,23 @@ if ( ! function_exists( 'storefront_setup' ) ) :
 function storefront_setup() {
 
 	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on storefront, use a find and replace
-	 * to change 'storefront' to the name of your theme in all the template files
+	 * Load Localisation files.
+	 *
+	 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
 	 */
+
+	// wp-content/languages/theme-name/it_IT.mo
+	load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes/' );
+
+	// wp-content/themes/child-theme-name/languages/it_IT.mo
+	load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
+
+	// wp-content/themes/theme-name/languages/it_IT.mo
 	load_theme_textdomain( 'storefront', get_template_directory() . '/languages' );
 
-	// Add default posts and comments RSS feed links to head.
+	/**
+	 * Add default posts and comments RSS feed links to head.
+	 */
 	add_theme_support( 'automatic-feed-links' );
 
 	/*
