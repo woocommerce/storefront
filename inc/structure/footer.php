@@ -55,7 +55,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 	function storefront_credit() {
 		?>
 		<div class="site-info">
-			&copy; <?php echo get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ); ?>
+			<?php echo apply_filters( 'storefront_copyright_text', '&copy; ' . get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
 			<br /> <?php printf( __( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">WooThemes</a>' ); ?>
 			<?php } ?>
