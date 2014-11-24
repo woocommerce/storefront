@@ -159,7 +159,25 @@ module.exports = function( grunt ) {
 				],
 				expand: true
 			}
-		}
+		},
+
+		// Creates deploy-able theme
+		copy: {
+			deploy: {
+				src: [
+					'**',
+					'!.*',
+					'!.*/**',
+					'.htaccess',
+					'!Gruntfile.js',
+					'!package.json',
+					'!node_modules/**'
+				],
+				dest: 'storefront',
+				expand: true,
+				dot: true
+			}
+		},
 
 	});
 
@@ -171,6 +189,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
+	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -186,5 +205,9 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'dev', [
 		'default',
 		'makepot'
+	]);
+
+	grunt.registerTask( 'deploy', [
+		'copy'
 	]);
 };
