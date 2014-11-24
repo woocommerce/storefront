@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2014.11.25* - 1.1.2
+* **Dev** - Added `storefront_copyright_text` filter.
+
 ### *2014.11.24* - 1.1.1
 * **Fix** - Title tag now displays correctly.
 * **Localisation** - Tweaked how translation files are loaded.
