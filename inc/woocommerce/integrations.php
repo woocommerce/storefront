@@ -81,7 +81,7 @@ function storefront_woocommerce_integrations_layout() {
 if ( ! function_exists( 'storefront_add_bookings_customizer_css' ) ) {
 	function storefront_add_bookings_customizer_css() {
 
-		if ( current_theme_supports( 'storefront-customizer-settings' ) ) {
+		if ( is_storefront_customizer_enabled() ) {
 			$accent_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_accent_color' ) );
 			$header_background_color 	= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color' ) );
 			$header_link_color 			= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_link_color' ) );

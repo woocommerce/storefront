@@ -18,12 +18,6 @@ if ( ! isset( $content_width ) ) {
 $theme 					= wp_get_theme();
 $storefront_version 	= $theme['Version'];
 
-/**
- * Declare support for the storefront customizer settings
- * Remove via child theme using remove_theme_support()
- */
-add_theme_support( 'storefront-customizer-settings' );
-
 if ( ! function_exists( 'storefront_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.

@@ -31,7 +31,7 @@ require get_template_directory() . '/inc/functions/extras.php';
 /**
  * Customizer additions.
  */
-if ( current_theme_supports( 'storefront-customizer-settings' ) ) {
+if ( is_storefront_customizer_enabled() ) {
 	require get_template_directory() . '/inc/customizer/hooks.php';
 	require get_template_directory() . '/inc/customizer/controls.php';
 	require get_template_directory() . '/inc/customizer/display.php';

@@ -8,6 +8,15 @@
  */
 
 /**
+ * Check whether the Storefront Customizer settings ar enabled
+ * @return boolean
+ * @since  1.1.2
+ */
+function is_storefront_customizer_enabled() {
+	return apply_filters( 'storefront_customizer_enabled', true );
+}
+
+/**
  * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
  *
  * @param array $args Configuration arguments.

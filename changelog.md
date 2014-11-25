@@ -2,6 +2,7 @@
 
 ### *2014.11.25* - 1.1.2
 * **Dev** - Added `storefront_copyright_text` filter.
+* **Dev** - Tweaked how Storefront determines whether Customizer logic should be loaded.
 
 ### *2014.11.24* - 1.1.1
 * **Fix** - Title tag now displays correctly.
