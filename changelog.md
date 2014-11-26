@@ -3,6 +3,7 @@
 ### *2014.11.25* - 1.1.2
 * **Fix** - Layout picker images when using a child theme.
 * **Fix** - Header link color now properly applied to site title.
+* **Fix** - Included styling for `.form-row-wide`.
 * **Dev** - Added `storefront_copyright_text` filter.
 * **Dev** - Tweaked how Storefront determines whether Customizer logic should be loaded.
 * **Dev** - Added `storefront_after_footer` action.
