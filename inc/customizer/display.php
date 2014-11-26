@@ -37,7 +37,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		.site-title a,
 		a.cart-contents,
 		.site-header-cart .widget_shopping_cart a,
-		ul.menu li a {
+		ul.menu li a,
+		.site-branding h1 a {
 			color: ' . $header_link_color . ';
 		}
 
