@@ -25,6 +25,8 @@
 
 		</div><!-- .col-full -->
 	</footer><!-- #colophon -->
+	
+	<?php do_action( 'storefront_after_footer' ); ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
