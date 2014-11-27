@@ -95,47 +95,49 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 			$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#5a6567' ) ) );
 			$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#787E87' ) ) );
 			$heading_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_heading_color', apply_filters( 'storefront_default_heading_color', '#484c51' ) ) );
-			?>
-			<!-- column customizer CSS -->
-			<style>
-				<?php
-				/**
-				 * Bookings
-				 */
-				if ( class_exists( 'WC_Bookings' ) ) { ?>
-					#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
-					#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
-					#wc-bookings-booking-form .block-picker li a:hover,
-					#wc-bookings-booking-form .block-picker li a.selected {
-						background-color: <?php echo $accent_color; ?> !important;
-					}
+			$style 							= '';
 
-					#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.ui-state-disabled .ui-state-default,
-					#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker th {
-						color: <?php echo $text_color; ?>;
-					}
+			if ( class_exists( 'WC_Bookings' ) ) {
+				$style 						.= '
+				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
+				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
+				#wc-bookings-booking-form .block-picker li a:hover,
+				#wc-bookings-booking-form .block-picker li a.selected {
+					background-color:' . $accent_color . ' !important;
+				}
 
-					#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker-header {
-						background-color: <?php echo $header_background_color; ?>;
-						color: <?php echo $header_text_color; ?>;
-					}
-				<?php }
+				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.ui-state-disabled .ui-state-default,
+				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker th {
+					color:' . $text_color . ';
+				}
 
-				if ( class_exists( 'WC_Product_Reviews_Pro' ) ) { ?>
+				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker-header {
+					background-color: <?php echo $header_background_color; ?>;
+					color:' . $header_text_color . ';
+				}';
+			}
+
+			if ( class_exists( 'WC_Product_Reviews_Pro' ) ) {
+				$style 						.= '
 					.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 					.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
-						background-color: <?php echo $text_color; ?>;
+						background-color:' . $text_color . ';
 					}
 
 					.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
 					.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
 					.star-rating-selector:not(:checked) input:checked ~ label.checkbox,
 					.star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
-					.star-rating-selector:not(:checked) label.checkbox:hover {
-						color: <?php echo $accent_color; ?>;
+					.star-rating-selector:not(:checked) label.checkbox:hover,
+					.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+					.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a {
+						color:' . $accent_color . ' !important;
 					}
-				<?php } ?>
-			</style>
-	<?php }
+				}';
+			}
+
+			wp_add_inline_style( 'storefront-style', $style );
+
+		}
 	}
 }
