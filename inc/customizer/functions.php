@@ -47,9 +47,9 @@ if ( ! function_exists( 'storefront_sanitize_hex_color' ) ) {
 if ( ! function_exists( 'storefront_sanitize_layout' ) ) {
     function storefront_sanitize_layout( $input ) {
         $valid  = array(
-                'right' => 'Right',
-                'left'  => 'Left',
-            );
+                'right'     => 'Right',
+                'left'      => 'Left',
+        );
 
         if ( array_key_exists( $input, $valid ) ) {
             return $input;
@@ -92,6 +92,7 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
 
     // Format the hex color string
     $hex    = str_replace( '#', '', $hex );
+
     if ( strlen( $hex ) == 3 ) {
         $hex    = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
     }

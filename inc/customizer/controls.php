@@ -58,20 +58,20 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 			'priority' => 20,
 		) ) );
 
-	   	/**
-	   	 * Text Color
-	     */
+		/**
+		 * Text Color
+		 */
 		$wp_customize->add_setting( 'storefront_text_color', array(
 			'default'           => apply_filters( 'storefront_default_text_color', '#787E87' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport'			=> 'postMessage',
-	   	) );
+		) );
 
-	   	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_text_color', array(
-	    	'label'	   => 'Text color',
-	    	'section'  => 'storefront_typography',
-	    	'settings' => 'storefront_text_color',
-	    	'priority' => 30,
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_text_color', array(
+	   		'label'	   	=> 'Text color',
+	    	'section'  	=> 'storefront_typography',
+	    	'settings' 	=> 'storefront_text_color',
+	    	'priority' 	=> 30,
 		) ) );
 
 		/**
