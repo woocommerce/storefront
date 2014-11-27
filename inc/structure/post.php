@@ -11,22 +11,22 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_header() {
-		?>
+	?>
 		<header class="entry-header">
-			<?php
-			if ( is_single() ) {
-				storefront_posted_on();
-				the_title( '<h1 class="entry-title" itemprop="name headline">', '</h1>' );
-			} else {
-				if ( 'post' == get_post_type() ) {
-					storefront_posted_on();
-				}
-
-				the_title( sprintf( '<h1 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
-			}
-			?>
-		</header><!-- .entry-header -->
 		<?php
+		if ( is_single() ) {
+			storefront_posted_on();
+			the_title( '<h1 class="entry-title" itemprop="name headline">', '</h1>' );
+		} else {
+			if ( 'post' == get_post_type() ) {
+				storefront_posted_on();
+			}
+
+			the_title( sprintf( '<h1 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+		}
+		?>
+		</header><!-- .entry-header -->
+	<?php
 	}
 }
 
@@ -63,7 +63,8 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	function storefront_post_meta() {
 		?>
 		<aside class="entry-meta">
-			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php
+			if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 				<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'storefront' ) );

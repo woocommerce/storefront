@@ -29,8 +29,6 @@ class Storefront_Welcome {
 	public function storefront_activation_admin_notice() {
 		global $pagenow;
 
-		var_dump( $_GET['activated'] );
-
 		if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) { // input var okay
 			add_action( 'admin_notices', array( $this, 'storefront_welcome_admin_notice' ), 99 );
 		}
