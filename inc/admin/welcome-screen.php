@@ -4,7 +4,7 @@
  * Sets up the welcome screen page, hides the menu item
  * and contains the screen content.
  */
-class storefront_welcome {
+class Storefront_Welcome {
 
 	/**
 	 * Constructor
@@ -147,10 +147,10 @@ class storefront_welcome {
 	 */
 	public function storefront_welcome_getting_started() {
 		// get theme customizer url
-        $url = admin_url() . 'customize.php?';
-        $url .= 'url=' . urlencode( site_url() . '?storefront-customizer=true' ) ;
-        $url .= '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' );
-        $url .= '&storefront-customizer=true';
+        $url 	= admin_url() . 'customize.php?';
+        $url 	.= 'url=' . urlencode( site_url() . '?storefront-customizer=true' ) ;
+        $url 	.= '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' );
+        $url 	.= '&storefront-customizer=true';
 		?>
 		<div class="feature-section col two-col" style="margin-bottom: 1.618em; overflow: hidden;">
 
@@ -258,4 +258,4 @@ class storefront_welcome {
 	}
 }
 
-$GLOBALS['storefront_welcome'] = new storefront_welcome();
+$GLOBALS['Storefront_Welcome'] = new Storefront_Welcome();

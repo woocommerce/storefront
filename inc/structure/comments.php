@@ -34,7 +34,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			$tag = 'li';
 			$add_below = 'div-comment';
 		}
-	?>
+		?>
 		<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 		<div class="comment-body">
 		<div class="comment-meta commentmetadata">

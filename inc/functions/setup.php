@@ -19,73 +19,73 @@ $theme 					= wp_get_theme();
 $storefront_version 	= $theme['Version'];
 
 if ( ! function_exists( 'storefront_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function storefront_setup() {
-
-	/*
-	 * Load Localisation files.
-	 *
-	 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
-	 */
-
-	// wp-content/languages/theme-name/it_IT.mo
-	load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes/' );
-
-	// wp-content/themes/child-theme-name/languages/it_IT.mo
-	load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
-
-	// wp-content/themes/theme-name/languages/it_IT.mo
-	load_theme_textdomain( 'storefront', get_template_directory() . '/languages' );
-
 	/**
-	 * Add default posts and comments RSS feed links to head.
-	 */
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function storefront_setup() {
 
-	// This theme uses wp_nav_menu() in two locations.
-	register_nav_menus( array(
-		'primary' 	=> __( 'Primary Menu', 'storefront' ),
-		'secondary' => __( 'Secondary Menu', 'storefront' ),
-	) );
+		/*
+		 * Load Localisation files.
+		 *
+		 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
+		 */
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
-	) );
+		// wp-content/languages/theme-name/it_IT.mo
+		load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes/' );
 
-	// Setup the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
-		'default-color' => apply_filters( 'storefront_default_background_color', 'fcfcfc' ),
-		'default-image' => '',
-	) ) );
+		// wp-content/themes/child-theme-name/languages/it_IT.mo
+		load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
 
-	// Add support for the Site Logo plugin and the site logo functionality in JetPack
-	// https://github.com/automattic/site-logo
-	// http://jetpack.me/
-	add_theme_support( 'site-logo', array( 'size' => 'full' ) );
+		// wp-content/themes/theme-name/languages/it_IT.mo
+		load_theme_textdomain( 'storefront', get_template_directory() . '/languages' );
 
-	// Declare WooCommerce support
-	add_theme_support( 'woocommerce' );
+		/**
+		 * Add default posts and comments RSS feed links to head.
+		 */
+		add_theme_support( 'automatic-feed-links' );
 
-	// Declare support for title theme feature
-	add_theme_support( 'title-tag' );
-}
+		/*
+		 * Enable support for Post Thumbnails on posts and pages.
+		 *
+		 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+		 */
+		add_theme_support( 'post-thumbnails' );
+
+		// This theme uses wp_nav_menu() in two locations.
+		register_nav_menus( array(
+			'primary'		=> __( 'Primary Menu', 'storefront' ),
+			'secondary'		=> __( 'Secondary Menu', 'storefront' ),
+		) );
+
+		/*
+		 * Switch default core markup for search form, comment form, and comments
+		 * to output valid HTML5.
+		 */
+		add_theme_support( 'html5', array(
+			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
+		) );
+
+		// Setup the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
+			'default-color' => apply_filters( 'storefront_default_background_color', 'fcfcfc' ),
+			'default-image' => '',
+		) ) );
+
+		// Add support for the Site Logo plugin and the site logo functionality in JetPack
+		// https://github.com/automattic/site-logo
+		// http://jetpack.me/
+		add_theme_support( 'site-logo', array( 'size' => 'full' ) );
+
+		// Declare WooCommerce support
+		add_theme_support( 'woocommerce' );
+
+		// Declare support for title theme feature
+		add_theme_support( 'title-tag' );
+	}
 endif; // storefront_setup
 
 /**

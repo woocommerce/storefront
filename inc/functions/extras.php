@@ -76,25 +76,25 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
  * @return string schema itemprop type
  */
 function storefront_html_tag_schema() {
-    $schema = 'http://schema.org/';
-    $type 	= 'WebPage';
+	$schema 	= 'http://schema.org/';
+	$type 		= 'WebPage';
 
-    // Is single post
-    if ( is_singular( 'post' ) ) {
-        $type = "Article";
-    }
+	// Is single post
+	if ( is_singular( 'post' ) ) {
+		$type 	= 'Article';
+	}
 
-    // Is author page
-    elseif ( is_author() ) {
-        $type = 'ProfilePage';
-    }
+	// Is author page
+	elseif ( is_author() ) {
+		$type 	= 'ProfilePage';
+	}
 
-    // Is search results page
-    elseif ( is_search() ) {
-        $type = 'SearchResultsPage';
-    }
+	// Is search results page
+	elseif ( is_search() ) {
+		$type 	= 'SearchResultsPage';
+	}
 
-    echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
+	echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
 }
 
 /**

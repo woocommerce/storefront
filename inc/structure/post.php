@@ -13,7 +13,8 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	function storefront_post_header() {
 		?>
 		<header class="entry-header">
-			<?php if ( is_single() ) {
+			<?php
+			if ( is_single() ) {
 				storefront_posted_on();
 				the_title( '<h1 class="entry-title" itemprop="name headline">', '</h1>' );
 			} else {
@@ -22,7 +23,8 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 				}
 
 				the_title( sprintf( '<h1 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
-			} ?>
+			}
+			?>
 		</header><!-- .entry-header -->
 		<?php
 	}
@@ -37,9 +39,9 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		?>
 		<div class="entry-content" itemprop="articleBody">
 			<?php
-				if ( has_post_thumbnail() ) {
-					the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
-				}
+			if ( has_post_thumbnail() ) {
+				the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
+			}
 			?>
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'storefront' ) ); ?>
 			<?php
@@ -63,24 +65,24 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 		<aside class="entry-meta">
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 				<?php
-					/* translators: used between list items, there is a space after the comma */
-					$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
-					if ( $categories_list && storefront_categorized_blog() ) :
-				?>
-				<span class="cat-links"><?php echo esc_attr( $categories_list ); ?></span>
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+
+				if ( $categories_list && storefront_categorized_blog() ) : ?>
+					<span class="cat-links"><?php echo esc_attr( $categories_list ); ?></span>
 				<?php endif; // End if categories ?>
 
 				<?php
-					/* translators: used between list items, there is a space after the comma */
-					$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
-					if ( $tags_list ) :
-				?>
-				<span class="tags-links"><?php echo esc_attr( $tags_list ); ?></span>
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
+
+				if ( $tags_list ) : ?>
+					<span class="tags-links"><?php echo esc_attr( $tags_list ); ?></span>
 				<?php endif; // End if $tags_list ?>
 			<?php endif; // End if 'post' == get_post_type() ?>
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) ); ?></span>
+				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) ); ?></span>
 			<?php endif; ?>
 		</aside>
 		<?php
@@ -160,7 +162,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 
 		$posted_on = sprintf(
 			_x( 'Posted on %s', 'post date', 'storefront' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_attr( $time_string ) . '</a>'
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
 		$byline = sprintf(
@@ -168,7 +170,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			'<span class="author vcard" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a class="url fn n" itemprop="name" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . esc_attry( $posted_on ) . '</span><span class="byline"> ' . esc_attry( $byline ) . '</span>';
+		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
 
 	}
 }

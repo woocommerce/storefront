@@ -15,9 +15,9 @@
 if ( ! function_exists( 'storefront_cart_link' ) ) {
 	function storefront_cart_link() {
 		if ( is_cart() ) {
-			$class = "current-menu-item";
+			$class = 'current-menu-item';
 		} else {
-			$class = "";
+			$class = '';
 		}
 		?>
 		<li class="<?php echo esc_attr( $class ); ?>">
@@ -69,6 +69,6 @@ function storefront_header_cart() {
  */
 if ( ! function_exists( 'storefront_upsell_display' ) ) {
 	function storefront_upsell_display() {
-	    woocommerce_upsell_display( -1, 3 );
+		woocommerce_upsell_display( -1, 3 );
 	}
 }
