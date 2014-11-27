@@ -1,0 +1,131 @@
+/**
+ * WooCommerce Product Reviews Pro
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../sass/modules/variables';
+@import '../../../sass/modules/mixins';
+@import '../../../sass/vendor/gridset';
+
+.woocommerce,
+.woocommerce-page {
+	#reviews {
+		.product-rating {
+			.product-rating-summary,
+			.product-rating-details {
+				display: block;
+				width: 100%;
+			}
+
+			.product-rating-summary {
+				text-align: left;
+			}
+
+			.product-rating-details {
+				table {
+					td {
+						padding: .202em .53em;
+
+						&.rating-graph {
+							.bar {
+								background-color: $color_body;
+							}
+						}
+
+						&.rating-count {
+							a {
+								text-decoration: none;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.form-contribution {
+			border-color: $color_border;
+			padding: 1em;
+
+			#review_rating_field {
+				label:first-of-type {
+					display: block;
+				}
+
+				label {
+					display: inline-block;
+
+					&.checkbox:before {
+						font-size: .857em;
+					}
+				}
+
+				.star-label {
+					float: none;
+					margin-left: .618em;
+				}
+			}
+		}
+
+		#comments {
+			ol.commentlist {
+				li {
+					padding-top: 0;
+
+					img.avatar {
+						width: 2.618em;
+						height: auto;
+						margin: 0;
+						float: right;
+					}
+
+					.comment-text {
+						margin-left: 0;
+					}
+
+					h3.contribution-title {
+						margin: 0;
+						font-size: 1em;
+					}
+
+					.contribution-actions {
+						margin-top: -1.618em;
+
+						a {
+							color: $color_links;
+						}
+					}
+				}
+			}
+
+			.form-contribution_comment {
+				@include gs-span(c, 5, 9, (4, 9));
+				float: none;
+				margin-bottom: 2.618em;
+			}
+		}
+	}
+
+	.contribution-type-selector {
+		margin: 0;
+
+		> a {
+			display: inline-block;
+			margin-right: 1em;
+			padding: .53em 0;
+			border-bottom: .202em solid rgba(0,0,0,0.05);
+
+			&.active {
+				border-bottom-color: $color_border;
+			}
+		}
+	}
+
+	.star-rating-selector:not(:checked) {
+		label.checkbox {
+			float: none;
+		}
+	}
+}

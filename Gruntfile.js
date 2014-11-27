@@ -65,6 +65,7 @@ module.exports = function( grunt ) {
 			    	'inc/woocommerce/css/variation-swatches.css': 'inc/woocommerce/css/variation-swatches.scss',
 			    	'inc/woocommerce/css/composite-products.css': 'inc/woocommerce/css/composite-products.scss',
 			    	'inc/woocommerce/css/photography.css': 'inc/woocommerce/css/photography.scss',
+			    	'inc/woocommerce/css/product-reviews-pro.css': 'inc/woocommerce/css/product-reviews-pro.scss',
 			    	'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 			    }]
 			}

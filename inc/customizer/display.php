@@ -96,8 +96,13 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		.widget-area .widget a:hover,
 		.product_list_widget a:hover,
 		.quantity .plus, .quantity .minus,
-		p.stars a:hover:after {
+		p.stars a:hover:after,
+		.star-rating span:before {
 			color: ' . $accent_color . ';
+		}
+
+		.star-rating span:before {
+			color: ' . $accent_color . ' !important;
 		}
 
 		.widget_price_filter .ui-slider .ui-slider-range,

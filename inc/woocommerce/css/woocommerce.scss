@@ -265,6 +265,7 @@ ul.products {
 		li {
 			border-bottom: 1px solid $color_border;
 			margin-bottom: 3.631em;
+			list-style: none;
 
 			time {
 				color: lighten( $color_body, 20% );
@@ -282,6 +283,13 @@ ul.products {
 
 			.description {
 				padding-bottom: 1.618em;
+			}
+
+			ul.children {
+				margin-left: 0;
+				border-top: 1px solid $color_border;
+				@include gs-span(c, 5, 9, (4, 9)); // This specifies the columns
+				float: none;
 			}
 		}
 	}

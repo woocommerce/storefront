@@ -69,4 +69,4 @@ add_filter( 'loop_shop_columns', 						'storefront_loop_columns' );
  */
 add_action( 'wp_enqueue_scripts', 						'storefront_woocommerce_integrations_scripts' );
 add_action( 'wp',										'storefront_woocommerce_integrations_layout' );
-add_action( 'wp_head', 									'storefront_add_bookings_customizer_css' );
+add_action( 'wp_head', 									'storefront_add_integrations_customizer_css' );
