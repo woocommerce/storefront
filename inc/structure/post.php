@@ -10,8 +10,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	 * Display the post header with a link to the single post
 	 * @since 1.0.0
 	 */
-	function storefront_post_header() {
-	?>
+	function storefront_post_header() { ?>
 		<header class="entry-header">
 		<?php
 		if ( is_single() ) {
@@ -26,7 +25,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		}
 		?>
 		</header><!-- .entry-header -->
-	<?php
+		<?php
 	}
 }
 
@@ -63,8 +62,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	function storefront_post_meta() {
 		?>
 		<aside class="entry-meta">
-			<?php
-			if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 				<?php
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
