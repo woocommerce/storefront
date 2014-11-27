@@ -109,7 +109,7 @@ function storefront_related_products_args( $args = array() ) {
  * @since  1.0.0
  */
 function storefront_thumbnail_columns() {
-	return apply_filters( 'storefront_product_thumbnail_columns', 4 );
+	return intval( apply_filters( 'storefront_product_thumbnail_columns', 4 ) );
 }
 
 /**
@@ -118,5 +118,5 @@ function storefront_thumbnail_columns() {
  * @since  1.0.0
  */
 function storefront_products_per_page() {
-	return apply_filters( 'storefront_products_per_page', 12 );
+	return intval( apply_filters( 'storefront_products_per_page', 12 ) );
 }
