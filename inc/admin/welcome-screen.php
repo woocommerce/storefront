@@ -146,7 +146,7 @@ class Storefront_Welcome {
 	public function storefront_welcome_getting_started() {
 		// get theme customizer url
 		$url 	= admin_url() . 'customize.php?';
-		$url 	.= 'url=' . urlencode( site_url() . '?storefront-customizer=true' ) ;
+		$url 	.= 'url=' . urlencode( site_url() . '?storefront-customizer=true' );
 		$url 	.= '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' );
 		$url 	.= '&storefront-customizer=true';
 		?>
