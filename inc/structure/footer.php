@@ -32,7 +32,7 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 					<?php if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
 
-						<section class="block footer-widget-<?php echo $i; ?>">
+						<section class="block footer-widget-<?php echo intval( $i ); ?>">
 				        	<?php dynamic_sidebar( 'footer-' . intval( $i ) ); ?>
 						</section>
 
