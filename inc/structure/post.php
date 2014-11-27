@@ -63,21 +63,23 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 		?>
 		<aside class="entry-meta">
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
-				<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
-				if ( $categories_list && storefront_categorized_blog() ) : ?>
-					<span class="cat-links"><?php echo esc_attr( $categories_list ); ?></span>
-				<?php endif; // End if categories ?>
+			<?php
+			/* translators: used between list items, there is a space after the comma */
+			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
-				<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
+			if ( $categories_list && storefront_categorized_blog() ) : ?>
+				<span class="cat-links"><?php echo esc_attr( $categories_list ); ?></span>
+			<?php endif; // End if categories ?>
 
-				if ( $tags_list ) : ?>
-					<span class="tags-links"><?php echo esc_attr( $tags_list ); ?></span>
-				<?php endif; // End if $tags_list ?>
+			<?php
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
+
+			if ( $tags_list ) : ?>
+				<span class="tags-links"><?php echo esc_attr( $tags_list ); ?></span>
+			<?php endif; // End if $tags_list ?>
+
 			<?php endif; // End if 'post' == get_post_type() ?>
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
