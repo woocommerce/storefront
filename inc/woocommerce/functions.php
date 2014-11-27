@@ -92,11 +92,14 @@ function storefront_woocommerce_scripts() {
  * @since 1.0.0
  * @return  array $args related products args
  */
-function storefront_related_products_args( $args ) {
-	$args = array(
+function storefront_related_products_args( $args = array() ) {
+	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
 	);
+
+	$args = wp_parse_args( $args, $defaults );
+
 	return $args;
 }
 
