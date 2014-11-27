@@ -66,7 +66,7 @@ function storefront_setup() {
 	 * to output valid HTML5.
 	 */
 	add_theme_support( 'html5', array(
-		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption'
+		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 
 	// Setup the WordPress core custom background feature.
@@ -124,7 +124,7 @@ function storefront_widgets_init() {
 			'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
 			'after_widget' 		=> '</aside>',
 			'before_title' 		=> '<h3>',
-			'after_title' 		=> '</h3>'
+			'after_title' 		=> '</h3>',
 			)
 		);
 	}

@@ -35,7 +35,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			$add_below = 'div-comment';
 		}
 	?>
-		<<?php echo $tag ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+		<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 		<div class="comment-body">
 		<div class="comment-meta commentmetadata">
 			<div class="comment-author vcard">
@@ -47,7 +47,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 				<br />
 			<?php endif; ?>
 
-			<a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ); ?>" class="comment-date">
+			<a href="<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>" class="comment-date">
 				<?php echo '<time>' . get_comment_date() . '</time>'; ?>
 			</a>
 		</div>

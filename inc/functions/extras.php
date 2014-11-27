@@ -94,7 +94,7 @@ function storefront_html_tag_schema() {
         $type = 'SearchResultsPage';
     }
 
-    echo 'itemscope="itemscope" itemtype="' . $schema . $type . '"';
+    echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
 }
 
 /**

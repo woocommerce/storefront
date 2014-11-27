@@ -26,14 +26,14 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 		if ( $widget_columns > 0 ) : ?>
 
-			<section class="footer-widgets col-<?php echo $widget_columns; ?> fix">
+			<section class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
 
 				<?php $i = 0; while ( $i < $widget_columns ) : $i++; ?>
 
 					<?php if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
 
 						<section class="block footer-widget-<?php echo $i; ?>">
-				        	<?php dynamic_sidebar( 'footer-' . $i ); ?>
+				        	<?php dynamic_sidebar( 'footer-' . intval( $i ) ); ?>
 						</section>
 
 			        <?php endif; ?>
@@ -55,7 +55,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 	function storefront_credit() {
 		?>
 		<div class="site-info">
-			<?php echo apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ) ); ?>
+			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . get_the_date( 'Y' ) ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
 			<br /> <?php printf( __( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://woothemes.com" rel="designer">WooThemes</a>' ); ?>
 			<?php } ?>

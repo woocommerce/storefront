@@ -67,7 +67,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 					if ( $categories_list && storefront_categorized_blog() ) :
 				?>
-				<span class="cat-links"><?php echo $categories_list; ?></span>
+				<span class="cat-links"><?php echo esc_attr( $categories_list ); ?></span>
 				<?php endif; // End if categories ?>
 
 				<?php
@@ -75,7 +75,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
 					if ( $tags_list ) :
 				?>
-				<span class="tags-links"><?php echo $tags_list; ?></span>
+				<span class="tags-links"><?php echo esc_attr( $tags_list ); ?></span>
 				<?php endif; // End if $tags_list ?>
 			<?php endif; // End if 'post' == get_post_type() ?>
 
@@ -160,7 +160,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 
 		$posted_on = sprintf(
 			_x( 'Posted on %s', 'post date', 'storefront' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . esc_attr( $time_string ) . '</a>'
 		);
 
 		$byline = sprintf(
@@ -168,7 +168,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			'<span class="author vcard" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a class="url fn n" itemprop="name" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>';
+		echo '<span class="posted-on">' . esc_attry( $posted_on ) . '</span><span class="byline"> ' . esc_attry( $byline ) . '</span>';
 
 	}
 }
