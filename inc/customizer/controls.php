@@ -68,10 +68,10 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		) );
 
 		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_text_color', array(
-	   		'label'		=> 'Text color',
-	    	'section'	=> 'storefront_typography',
-	    	'settings'	=> 'storefront_text_color',
-	    	'priority'	=> 30,
+			'label'		=> 'Text color',
+			'section'	=> 'storefront_typography',
+			'settings'	=> 'storefront_text_color',
+			'priority'	=> 30,
 		) ) );
 
 		/**
