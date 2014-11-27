@@ -10,7 +10,7 @@ class storefront_welcome {
 	 * Constructor
 	 * Sets up the welcome screen
 	 */
-	function __construct() {
+	public function __construct() {
 
 		add_action( 'admin_menu', array( $this,'storefront_welcome_register_menu' ) );
 		add_action( 'load-themes.php', array( $this,'storefront_activation_admin_notice' ) );
@@ -26,7 +26,7 @@ class storefront_welcome {
 	 * Adds an admin notice upon successful activation.
 	 * @since 1.0.3
 	 */
-	function storefront_activation_admin_notice() {
+	public function storefront_activation_admin_notice() {
 		global $pagenow;
 
 		if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) {
@@ -38,7 +38,7 @@ class storefront_welcome {
 	 * Display an admin notice linking to the welcome screen
 	 * @since 1.0.3
 	 */
-	function storefront_welcome_admin_notice() {
+	public function storefront_welcome_admin_notice() {
 		?>
 			<div class="updated fade">
 				<p><?php echo sprintf( __( 'Thanks for choosing Storefront! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'storefront' ), '<a href="' . admin_url( 'themes.php?page=storefront-welcome' ) . '">', '</a>' ); ?></p>
@@ -52,7 +52,7 @@ class storefront_welcome {
 	 * @see  add_theme_page()
 	 * @since 1.0.0
 	 */
-	function storefront_welcome_register_menu() {
+	public function storefront_welcome_register_menu() {
 		add_theme_page( 'Storefront', 'Storefront', 'read', 'storefront-welcome', array( $this,'storefront_welcome_screen' ) );
 	}
 
@@ -60,7 +60,7 @@ class storefront_welcome {
 	 * The welcome screen
 	 * @since 1.0.0
 	 */
-	function storefront_welcome_screen() {
+	public function storefront_welcome_screen() {
 		require_once( ABSPATH . 'wp-load.php' );
 		require_once( ABSPATH . 'wp-admin/admin.php' );
 		require_once( ABSPATH . 'wp-admin/admin-header.php' );
@@ -84,7 +84,7 @@ class storefront_welcome {
 	 * Welcome screen intro
 	 * @since 1.0.0
 	 */
-	function storefront_welcome_intro() {
+	public function storefront_welcome_intro() {
 		$storefront = wp_get_theme();
 
 		?>
@@ -109,7 +109,7 @@ class storefront_welcome {
 	 * Welcome screen about section
 	 * @since 1.0.0
 	 */
-	function storefront_welcome_who() {
+	public function storefront_welcome_who() {
 		?>
 		<div class="feature-section col three-col" style="margin-bottom: 1.618em; overflow: hidden;">
 			<div class="col-1">
@@ -143,7 +143,7 @@ class storefront_welcome {
 	 * Welcome screen getting started section
 	 * @since 1.0.0
 	 */
-	function storefront_welcome_getting_started() {
+	public function storefront_welcome_getting_started() {
 		// get theme customizer url
         $url = admin_url() . 'customize.php?';
         $url .= 'url=' . urlencode( site_url() . '?storefront-customizer=true' ) ;
@@ -196,7 +196,7 @@ class storefront_welcome {
 	 * Welcome screen add ons
 	 * @since 1.0.0
 	 */
-	function storefront_welcome_addons() {
+	public function storefront_welcome_addons() {
 		?>
 		<div class="feature-section col three-col" style="clear: both;">
 			<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>

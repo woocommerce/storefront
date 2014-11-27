@@ -92,11 +92,14 @@ function storefront_woocommerce_scripts() {
  * @since 1.0.0
  * @return  array $args related products args
  */
-function storefront_related_products_args( $args ) {
-	$args = array(
+function storefront_related_products_args( $args = array() ) {
+	$defaults = array(
 		'posts_per_page' => 3,
 		'columns'        => 3,
 	);
+
+	$args = wp_parse_args( $args, $defaults );
+
 	return $args;
 }
 
@@ -106,7 +109,7 @@ function storefront_related_products_args( $args ) {
  * @since  1.0.0
  */
 function storefront_thumbnail_columns() {
-	return apply_filters( 'storefront_product_thumbnail_columns', 4 );
+	return intval( apply_filters( 'storefront_product_thumbnail_columns', 4 ) );
 }
 
 /**
@@ -115,5 +118,5 @@ function storefront_thumbnail_columns() {
  * @since  1.0.0
  */
 function storefront_products_per_page() {
-	return apply_filters( 'storefront_products_per_page', 12 );
+	return intval( apply_filters( 'storefront_products_per_page', 12 ) );
 }

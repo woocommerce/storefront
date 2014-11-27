@@ -100,7 +100,7 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
 				#wc-bookings-booking-form .block-picker li a:hover,
 				#wc-bookings-booking-form .block-picker li a.selected {
-					background-color:' . $accent_color . ' !important;
+					background-color: ' . $accent_color . ' !important;
 				}
 
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.ui-state-disabled .ui-state-default,
@@ -109,8 +109,8 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				}
 
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker-header {
-					background-color: <?php echo $header_background_color; ?>;
-					color:' . $header_text_color . ';
+					background-color: ' . $header_background_color . ';
+					color: ' . $header_text_color . ';
 				}';
 			}
 
