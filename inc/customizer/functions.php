@@ -46,10 +46,10 @@ if ( ! function_exists( 'storefront_sanitize_hex_color' ) ) {
  */
 if ( ! function_exists( 'storefront_sanitize_layout' ) ) {
     function storefront_sanitize_layout( $input ) {
-        $valid  = array(
-                'right'     => 'Right',
-                'left'      => 'Left',
-        );
+        $valid = array(
+            'right' => 'Right',
+            'left'  => 'Left',
+            );
 
         if ( array_key_exists( $input, $valid ) ) {
             return $input;
