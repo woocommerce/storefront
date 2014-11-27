@@ -63,7 +63,7 @@ if ( ! function_exists( 'storefront_sanitize_layout' ) ) {
  * Layout classes
  * Adds 'right-sidebar' and 'left-sidebar' classes to the body tag
  * @param  array $classes current body classes
- * @return array          modified body classes
+ * @return string[]          modified body classes
  * @since  1.0.0
  */
 function storefront_layout_class( $classes ) {

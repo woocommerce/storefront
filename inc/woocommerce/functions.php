@@ -105,7 +105,7 @@ function storefront_related_products_args( $args = array() ) {
 
 /**
  * Product gallery thumnail columns
- * @return integrer number of columns
+ * @return integer number of columns
  * @since  1.0.0
  */
 function storefront_thumbnail_columns() {
@@ -114,7 +114,7 @@ function storefront_thumbnail_columns() {
 
 /**
  * Products per page
- * @return integrer number of products
+ * @return integer number of products
  * @since  1.0.0
  */
 function storefront_products_per_page() {
