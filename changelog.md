@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2014.11.25* - 1.1.2
+### *2014.11.25* - 1.2.0
 * **New** - Integration with Product Reviews Pro extension.
 * **Fix** - Layout picker images when using a child theme.
 * **Fix** - Header link color now properly applied to site title.
