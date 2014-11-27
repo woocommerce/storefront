@@ -37,18 +37,18 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 	function storefront_post_content() {
 		?>
 		<div class="entry-content" itemprop="articleBody">
-			<?php
-			if ( has_post_thumbnail() ) {
-				the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
-			}
-			?>
-			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'storefront' ) ); ?>
-			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
-					'after'  => '</div>',
-				) );
-			?>
+		<?php
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
+		}
+		?>
+		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'storefront' ) ); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+				'after'  => '</div>',
+			) );
+		?>
 		</div><!-- .entry-content -->
 		<?php
 	}
