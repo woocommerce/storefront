@@ -57,17 +57,18 @@ module.exports = function( grunt ) {
 					loadPath: require( 'node-bourbon' ).includePaths
 				},
 				files: [{
-			    	'style.css': 'style.scss',
-			    	'inc/woocommerce/css/bookings.css': 'inc/woocommerce/css/bookings.scss',
-			    	'inc/woocommerce/css/brands.css': 'inc/woocommerce/css/brands.scss',
-			    	'inc/woocommerce/css/wishlists.css': 'inc/woocommerce/css/wishlists.scss',
-			    	'inc/woocommerce/css/ajax-layered-nav.css': 'inc/woocommerce/css/ajax-layered-nav.scss',
-			    	'inc/woocommerce/css/variation-swatches.css': 'inc/woocommerce/css/variation-swatches.scss',
-			    	'inc/woocommerce/css/composite-products.css': 'inc/woocommerce/css/composite-products.scss',
-			    	'inc/woocommerce/css/photography.css': 'inc/woocommerce/css/photography.scss',
-			    	'inc/woocommerce/css/product-reviews-pro.css': 'inc/woocommerce/css/product-reviews-pro.scss',
-			    	'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
-			    }]
+					'style.css': 'style.scss',
+					'inc/woocommerce/css/bookings.css': 'inc/woocommerce/css/bookings.scss',
+					'inc/woocommerce/css/brands.css': 'inc/woocommerce/css/brands.scss',
+					'inc/woocommerce/css/wishlists.css': 'inc/woocommerce/css/wishlists.scss',
+					'inc/woocommerce/css/ajax-layered-nav.css': 'inc/woocommerce/css/ajax-layered-nav.scss',
+					'inc/woocommerce/css/variation-swatches.css': 'inc/woocommerce/css/variation-swatches.scss',
+					'inc/woocommerce/css/composite-products.css': 'inc/woocommerce/css/composite-products.scss',
+					'inc/woocommerce/css/photography.css': 'inc/woocommerce/css/photography.scss',
+					'inc/woocommerce/css/product-reviews-pro.css': 'inc/woocommerce/css/product-reviews-pro.scss',
+					'inc/woocommerce/css/smart-coupons.css': 'inc/woocommerce/css/smart-coupons.scss',
+					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
+				}]
 			}
 		},
 
