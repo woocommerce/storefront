@@ -8,6 +8,7 @@
 * **Dev** - Added `storefront_copyright_text` filter.
 * **Dev** - Tweaked how Storefront determines whether Customizer logic should be loaded.
 * **Dev** - Added `storefront_after_footer` action.
+* **Dev** - Customizer CSS now correctly appended to appropriate stylesheets.
 * **Tweak** - Several minor code optimisations (thanks https://scrutinizer-ci.com).
 
 ### *2014.11.24* - 1.1.1

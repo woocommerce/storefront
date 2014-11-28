@@ -93,10 +93,10 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 			$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#5a6567' ) ) );
 			$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) ) );
 			$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#787E87' ) ) );
-			$style 							= '';
+			$woocommerce_style 				= '';
 
 			if ( class_exists( 'WC_Bookings' ) ) {
-				$style 						.= '
+				$woocommerce_style 					.= '
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
 				#wc-bookings-booking-form .block-picker li a:hover,
@@ -116,7 +116,7 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 			}
 
 			if ( class_exists( 'WC_Product_Reviews_Pro' ) ) {
-				$style 						.= '
+				$woocommerce_style 					.= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
 					background-color: ' . $text_color . ';
@@ -133,7 +133,7 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				}';
 			}
 
-			wp_add_inline_style( 'storefront-style', $style );
+			wp_add_inline_style( 'storefront-woocommerce-style', $woocommerce_style );
 
 		}
 	}

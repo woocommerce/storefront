@@ -29,7 +29,7 @@
 	wp.customize( 'storefront_heading_color', function( value ) {
 		value.bind( function( to ) {
 			$( '.site-content h1, .site-content h2, .site-content h3, .site-content h4, .site-content h5, .site-content h6' ).css( 'color', to );
-			$( '.hentry .entry-header' ).css( 'border-color', to );
+			$( '.hentry .entry-header, .widget h1' ).css( 'border-color', to );
 		} );
 	} );
 	wp.customize( 'storefront_header_text_color', function( value ) {
