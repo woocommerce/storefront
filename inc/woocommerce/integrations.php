@@ -65,6 +65,13 @@ function storefront_woocommerce_integrations_scripts() {
 	if ( class_exists( 'WC_Product_Reviews_Pro' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/inc/woocommerce/css/product-reviews-pro.css' );
 	}
+
+	/**
+	 * WooCommerce Smart Coupons
+	 */
+	if ( class_exists( 'WC_Smart_Coupons' ) ) {
+		wp_enqueue_style( 'storefront-woocommerce-smart-coupons-style', get_template_directory_uri() . '/inc/woocommerce/css/smart-coupons.css' );
+	}
 }
 
 /**
