@@ -117,20 +117,19 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 
 			if ( class_exists( 'WC_Product_Reviews_Pro' ) ) {
 				$style 						.= '
-					.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
-					.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
-						background-color:' . $text_color . ';
-					}
+				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
+				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
+					background-color: ' . $text_color . ';
+				}
 
-					.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
-					.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
-					.star-rating-selector:not(:checked) input:checked ~ label.checkbox,
-					.star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
-					.star-rating-selector:not(:checked) label.checkbox:hover,
-					.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
-					.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a {
-						color:' . $accent_color . ' !important;
-					}
+				.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+				.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+				.star-rating-selector:not(:checked) input:checked ~ label.checkbox,
+				.star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
+				.star-rating-selector:not(:checked) label.checkbox:hover,
+				.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
+				.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a {
+					color: ' . $accent_color . ' !important;
 				}';
 			}
 

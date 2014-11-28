@@ -57,7 +57,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		.secondary-navigation ul.menu ul,
 		.main-navigation ul.menu ul,
 		.main-navigation ul.nav-menu ul {
-			background-color: ' . $header_background_color . ';
+			background-color: ' . $header_background_color . ' !important;
 		}
 
 		p.site-description,
@@ -156,13 +156,9 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 				border-top-color: ' . $header_background_color . '}
 			}
 
-			<?php if ( isset( $header_link_color ) ) { ?>
-
 			.secondary-navigation ul.menu a:hover {
 				color: ' . storefront_adjust_color_brightness( $header_text_color, $brighten_factor ) . ';
 			}
-
-			<?php } ?>
 
 			.main-navigation ul.menu ul {
 				background-color: ' . $header_background_color . ';

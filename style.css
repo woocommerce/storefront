@@ -157,8 +157,7 @@ body {
   letter-spacing: -1px;
   margin: 0; }
   .site-branding h1 a {
-    font-weight: 700;
-    color: #fff; }
+    font-weight: 700; }
 .site-branding .site-description {
   font-size: .857em;
   display: none; }
@@ -923,8 +922,7 @@ fieldset {
     margin-left: 1.387em; }
   .main-navigation ul li a {
     padding: .857em 1.387em;
-    display: block;
-    color: #fff; }
+    display: block; }
     .main-navigation ul li a:before {
       font-family: "FontAwesome";
       content: "\f0f6";
@@ -981,8 +979,6 @@ fieldset {
 
   ul.menu li.current-menu-item > a {
     color: #787E87; }
-  ul.menu li a {
-    color: #fff; }
 
   /**
    * Primary Navigation
@@ -1036,8 +1032,7 @@ fieldset {
       .main-navigation ul.nav-menu ul li:hover > a {
         background-color: rgba(0, 0, 0, 0.025); }
     .main-navigation a {
-      padding: 0 1em 2.244em;
-      color: #fff; }
+      padding: 0 1em 2.244em; }
 
   /**
    * Secondary Navigation
