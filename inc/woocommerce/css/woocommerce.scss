@@ -1285,6 +1285,16 @@ dl.variation {
 			h2.widgettitle {
 				display: none;
 			}
+
+			.product_list_widget li a.remove {
+				position: relative;
+				float: left;
+				top: auto;
+
+				&:before {
+					text-align: left;
+				}
+			}
 		}
 
 		&:hover {
