@@ -1,1 +1,1 @@
-.sc_info_box{float:right;width:48%}
+@media screen and (min-width:768px){.sc_info_box{display:block;width:41.44144%;clear:none;float:left;margin-left:0;margin-right:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:2%;padding-right:2%}.page-template-template-fullwidth-php .sc_info_box{display:block;width:48%;clear:none;float:right;margin-right:0;margin-left:0}}

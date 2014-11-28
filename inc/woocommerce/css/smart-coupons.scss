@@ -7,8 +7,19 @@
  */
 @import '../../../sass/vendor/gridset';
 
+@media screen and (min-width: 768px) {
+	.sc_info_box {
+	    @include gs-span(c, 6, 9, (1, 9));
+		@include gs-float(c, left);
+		margin-right: 0;
+		@include gs-pad(c, padin);
+	}
 
-.sc_info_box {
-    float: right;
-    width: 48%;
+	.page-template-template-fullwidth-php {
+		.sc_info_box {
+		    @include gs-span(c, 7, 12);
+			@include gs-float(c, right);
+			margin-left: 0;
+		}
+	}
 }
