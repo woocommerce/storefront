@@ -85,7 +85,7 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_intro() {
-		$storefront = wp_get_theme();
+		$storefront = wp_get_theme( 'storefront' );
 
 		?>
 		<div class="feature-section col two-col" style="margin-bottom: 1.618em; overflow: hidden;">
