@@ -100,6 +100,9 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 			$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#5a6567' ) ) );
 			$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) ) );
 			$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#787E87' ) ) );
+			$button_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#787E87' ) ) );
+			$button_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) ) );
+
 			$woocommerce_style 				= '';
 
 			if ( is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
@@ -145,6 +148,18 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
 				.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
 					color: ' . $accent_color . ' !important;
+				}';
+			}
+
+			if ( is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
+				$woocommerce_style 					.= '
+				.coupon-container {
+					background-color: ' . $button_background_color . ' !important;
+					color: ' . $button_text_color . ';
+				}
+
+				.coupon-content {
+					border-color: ' . $button_text_color . ' !important;
 				}';
 			}
 
