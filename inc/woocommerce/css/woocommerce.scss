@@ -268,7 +268,7 @@ ul.products {
 			list-style: none;
 
 			time {
-				color: lighten( $color_body, 20% );
+				opacity: 0.8;
 			}
 
 			.avatar {
@@ -290,6 +290,7 @@ ul.products {
 				border-top: 1px solid $color_border;
 				@include gs-span(c, 5, 9, (4, 9)); // This specifies the columns
 				float: none;
+				padding-top: 1.618em;
 			}
 		}
 	}

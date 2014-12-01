@@ -126,7 +126,13 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				$woocommerce_style 					.= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
-					background-color: ' . $text_color . ';
+					background-color: ' . $text_color . ' !important;
+				}
+
+				.woocommerce #reviews .contribution-actions .feedback,
+				.woocommerce-page #reviews .contribution-actions .feedback,
+				.star-rating-selector:not(:checked) label.checkbox {
+					color: ' . $text_color . ';
 				}
 
 				.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
@@ -135,12 +141,14 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				.star-rating-selector:not(:checked) label.checkbox:hover ~ label.checkbox,
 				.star-rating-selector:not(:checked) label.checkbox:hover,
 				.woocommerce #reviews #comments ol.commentlist li .contribution-actions a,
-				.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a {
+				.woocommerce-page #reviews #comments ol.commentlist li .contribution-actions a,
+				.woocommerce #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before,
+				.woocommerce-page #reviews .form-contribution .attachment-type:not(:checked) label.checkbox:before {
 					color: ' . $accent_color . ' !important;
 				}';
 			}
 
-			wp_add_inline_style( 'storefront-woocommerce-style', $woocommerce_style );
+			wp_add_inline_style( 'storefront-style', $woocommerce_style );
 
 		}
 	}

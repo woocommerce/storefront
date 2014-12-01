@@ -69,6 +69,10 @@
 			}
 		}
 
+		.contribution-karma {
+			margin-left: 0;
+		}
+
 		#comments {
 			ol.commentlist {
 				li {
@@ -81,8 +85,17 @@
 						float: right;
 					}
 
+					.description {
+						padding-bottom: 0;
+					}
+
 					.comment-text {
 						margin-left: 0;
+
+						img,
+						iframe {
+							margin-bottom: 1.618em;
+						}
 					}
 
 					h3.contribution-title {
@@ -91,10 +104,19 @@
 					}
 
 					.contribution-actions {
-						margin-top: -1.618em;
 
 						a {
 							color: $color_links;
+
+							&.done {
+								opacity: 0.5;
+							}
+						}
+					}
+
+					ul.children {
+						li {
+							margin-bottom: 1.618em;
 						}
 					}
 				}
@@ -103,8 +125,28 @@
 			.form-contribution_comment {
 				@include gs-span(c, 5, 9, (4, 9));
 				float: none;
-				margin-bottom: 2.618em;
+				margin-bottom: 3.631em;
+				padding-top: 1.618em;
+				border-top: 1px solid $color_border;
 			}
+
+			ul.children + .form-contribution_comment {
+				border-top: 0;
+				padding-top: 0;
+			}
+		}
+
+		.contribution-flag-form {
+			background-color: rgba(0,0,0,0.1);
+			padding: 1.618em;
+			margin-bottom: 1.618em;
+		}
+	}
+
+	.form-photo {
+		#photo_attachment_file {
+			color: inherit;
+			margin: 1em 0;
 		}
 	}
 
@@ -128,4 +170,16 @@
 			float: none;
 		}
 	}
+}
+
+#tiptip_content,
+.chart-tooltip {
+	font-size: .857em;
+	padding: .618em 1em;
+	background-color: rgba(0,0,0,0.8);
+}
+
+#tiptip_holder.tip_bottom #tiptip_arrow_inner {
+	border-bottom-color: rgba(0,0,0,0.8);
+	margin-top: -6px;
 }
