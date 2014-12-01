@@ -949,18 +949,15 @@ ul.digital-downloads {
 
 p.stars {
 	position: relative;
-	height: 1em;
-	font-size: 1em;
-	display: inline-block;
+	font-size: 1.618em;
 
 	a {
-		display: inline-block;
+		display: block;
 		font-weight: 700;
 		margin-right: 1em;
 		text-indent: -9999px;
 		position: relative;
 		color: $color_body;
-		padding-bottom: 0.5em;
 
 		&:hover {
 			color: $color_links;
@@ -975,8 +972,6 @@ p.stars {
 		&.star-3,
 		&.star-4,
 		&.star-5 {
-			border-right:1px solid $color_border;
-
 			&:after {
 				font-family: "FontAwesome";
 				text-indent: 0;
@@ -1232,6 +1227,20 @@ dl.variation {
 }
 
 @media screen and (min-width: 768px) {
+	p.stars {
+		font-size: 1em;
+
+		a {
+			display: inline-block;
+
+			&.star-1,
+			&.star-2,
+			&.star-3,
+			&.star-4 {
+				border-right:1px solid $color_border;
+			}
+		}
+	}
 	/**
 	 * Header Elements
 	 */

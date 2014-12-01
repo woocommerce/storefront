@@ -169,6 +169,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		.product_list_widget a:hover,
 		.quantity .plus, .quantity .minus,
 		p.stars a:hover:after,
+		p.stars a:after,
 		.star-rating span:before {
 			color: ' . $accent_color . ';
 		}
