@@ -951,6 +951,7 @@ p.stars {
 	position: relative;
 	height: 1em;
 	font-size: 1em;
+	display: inline-block;
 
 	a {
 		display: inline-block;
@@ -959,6 +960,7 @@ p.stars {
 		text-indent: -9999px;
 		position: relative;
 		color: $color_body;
+		padding-bottom: 0.5em;
 
 		&:hover {
 			color: $color_links;
