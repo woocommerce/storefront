@@ -28,6 +28,13 @@
 	}
 }
 
+.sd-buttons-transparent {
+	.coupon-container {
+		background: transparent !important;
+		padding: 0 !important;
+	}
+}
+
 @media screen and (min-width: 768px) {
 	.sc_info_box {
 	    @include gs-span(c, 6, 9, (1, 9));
