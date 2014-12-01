@@ -27,6 +27,7 @@
 				@include clearfix;
 				@include gs-span(c, 1, 6);
 				@include gs-float(c, left);
+				text-align: left;
 
 				.photography-image {
 					@include gs-span(c, 1, 2, (1, 6));
