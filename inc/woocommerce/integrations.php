@@ -13,63 +13,63 @@ function storefront_woocommerce_integrations_scripts() {
 	/**
 	 * Bookings
 	 */
-	if ( class_exists( 'WC_Bookings' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-bookings-style', get_template_directory_uri() . '/inc/woocommerce/css/bookings.css' );
 	}
 
 	/**
 	 * Brands
 	 */
-	if ( class_exists( 'WC_Brands' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Brands' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/inc/woocommerce/css/brands.css' );
 	}
 
 	/**
 	 * Wishlists
 	 */
-	if ( class_exists( 'WC_Wishlists_Wishlist' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Wishlists_Wishlist' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/inc/woocommerce/css/wishlists.css' );
 	}
 
 	/**
 	 * AJAX Layered Nav
 	 */
-	if ( class_exists( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
+	if ( is_woocommerce_extension_activated( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/inc/woocommerce/css/ajax-layered-nav.css' );
 	}
 
 	/**
 	 * Variation Swatches
 	 */
-	if ( class_exists( 'WC_SwatchesPlugin' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_SwatchesPlugin' ) ) {
 		wp_enqueue_style( 'storefront-variation-swatches-style', get_template_directory_uri() . '/inc/woocommerce/css/variation-swatches.css' );
 	}
 
 	/**
 	 * Composite Products
 	 */
-	if ( class_exists( 'WC_Composite_Products' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Composite_Products' ) ) {
 		wp_enqueue_style( 'storefront-composite-products-style', get_template_directory_uri() . '/inc/woocommerce/css/composite-products.css' );
 	}
 
 	/**
 	 * WooCommerce Photography
 	 */
-	if ( class_exists( 'WC_Photography' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Photography' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-photography-style', get_template_directory_uri() . '/inc/woocommerce/css/photography.css' );
 	}
 
 	/**
 	 * Product Reviews Pro
 	 */
-	if ( class_exists( 'WC_Product_Reviews_Pro' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/inc/woocommerce/css/product-reviews-pro.css' );
 	}
 
 	/**
 	 * WooCommerce Smart Coupons
 	 */
-	if ( class_exists( 'WC_Smart_Coupons' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-smart-coupons-style', get_template_directory_uri() . '/inc/woocommerce/css/smart-coupons.css' );
 	}
 }
@@ -82,7 +82,7 @@ function storefront_woocommerce_integrations_layout() {
 	/**
 	 * WooCommerce Photography
 	 */
-	if ( class_exists( 'WC_Photography' ) ) {
+	if ( is_woocommerce_extension_activated( 'WC_Photography' ) ) {
 		remove_action( 'wc_photography_before_main_content', 'woocommerce_breadcrumb', 20 );
 	}
 }
@@ -102,7 +102,7 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 			$text_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#787E87' ) ) );
 			$woocommerce_style 				= '';
 
-			if ( class_exists( 'WC_Bookings' ) ) {
+			if ( is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
 				$woocommerce_style 					.= '
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
@@ -122,7 +122,7 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				}';
 			}
 
-			if ( class_exists( 'WC_Product_Reviews_Pro' ) ) {
+			if ( is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
 				$woocommerce_style 					.= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {

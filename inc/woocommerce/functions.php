@@ -122,3 +122,12 @@ function storefront_thumbnail_columns() {
 function storefront_products_per_page() {
 	return intval( apply_filters( 'storefront_products_per_page', 12 ) );
 }
+
+/**
+ * Query WooCommerce Extension Activation.
+ * @var  $extension main extension class name
+ * @return boolean
+ */
+function is_woocommerce_extension_activated( $extension = 'WC_Bookings' ) {
+	return class_exists( $extension ) ? true : false;
+}
