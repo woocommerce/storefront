@@ -7,31 +7,41 @@
  */
 @import '../../../sass/vendor/gridset';
 
-.coupon-container {
-	margin: 0;
-	box-shadow: none;
+.woocommerce,
+.woocommerce-page {
+	.coupon-container {
+		margin: 0;
+		box-shadow: none;
 
-	&.medium {
-		line-height: inherit;
-		padding: .618em;
-	}
-}
-
-.coupon-content {
-	&.small {
-		padding: .618em 1.387em;
+		&.medium {
+			line-height: inherit;
+			padding: .618em;
+		}
 	}
 
-	.coupon-expire,
-	.discount-info {
-		font-family: inherit;
+	.generated_coupon_summary {
+		margin: 0;
+	}
+
+	.coupon-content {
+		&.small {
+			padding: .618em 1.387em;
+		}
+
+		.coupon-expire,
+		.discount-info {
+			font-family: inherit;
+		}
 	}
 }
 
 .sd-buttons-transparent {
-	.coupon-container {
-		background: transparent !important;
-		padding: 0 !important;
+	&.woocommerce,
+	&.woocommerce-page {
+		.coupon-container {
+			background: transparent !important;
+			padding: 0;
+		}
 	}
 }
 

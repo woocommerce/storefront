@@ -160,6 +160,11 @@ if ( ! function_exists( 'storefront_add_integrations_customizer_css' ) ) {
 				.coupon-content {
 					border-color: ' . $button_text_color . ' !important;
 					color: ' . $button_text_color . ';
+				}
+
+				.sd-buttons-transparent.woocommerce .coupon-content,
+				.sd-buttons-transparent.woocommerce-page .coupon-content {
+					border-color: ' . $button_background_color . ' !important;
 				}';
 			}
 
