@@ -130,8 +130,8 @@ class Storefront_Welcome {
 			<div class="col-3 last-feature">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/github.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Can I Contribute?', 'storefront' ); ?></h4>
-				<p><?php _e( 'Found a bug? Want to contribute a patch or create a new feature? GitHub is the place to go! Please send any pull requests to the latest develop branch, but please remember that GitHub is for code, not support.', 'storefront' ); ?></p>
-				<p><a href="http://github.com/woothemes/storefront/" class="button"><?php _e( 'Storefront at GitHub', 'storefront' ); ?></a></p>
+				<p><?php _e( 'Found a bug? Want to contribute a patch or create a new feature? GitHub is the place to go! Or would you like to translate Storefront in to your language? Get involved at Transifex.', 'storefront' ); ?></p>
+				<p><a href="http://github.com/woothemes/storefront/" class="button"><?php _e( 'Storefront at GitHub', 'storefront' ); ?></a> <a href="https://www.transifex.com/projects/p/storefront-1/" class="button"><?php _e( 'Storefront at Transifex', 'storefront' ); ?></a></p>
 			</div>
 		</div>
 
@@ -241,6 +241,11 @@ class Storefront_Welcome {
 				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-parallax-hero/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
+			</div>
+
+			<div class="col-3 last-feature">
+				<h4><?php _e( 'Can\'t find a feature?', 'storefront' ); ?></h4>
+				<p><?php echo sprintf( esc_html__( 'Please suggest and vote on ideas / feature requests at the %sStorefront Ideasboard%s. The most popular ideas will see prioritised development.', 'storefront' ), '<a href="http://ideas.woothemes.com/forums/275029-storefront">', '</a>' ); ?></p>
 			</div>
 
 		</div>
