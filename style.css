@@ -140,7 +140,9 @@ body {
   background-color: #2c2d33;
   padding-top: 2.618em;
   color: #5a6567;
-  background-position: center center; }
+  background-position: center center;
+  position: relative;
+  z-index: 99; }
   .site-header .site-logo-anchor {
     display: block; }
     .site-header .site-logo-anchor img {
