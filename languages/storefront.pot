@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.1.1\n"
+"Project-Id-Version: Storefront 1.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2014-11-24 11:45:13+00:00\n"
+"POT-Creation-Date: 2014-12-02 16:58:17+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -31,59 +31,59 @@ msgstr ""
 msgid "Try looking in the monthly archives."
 msgstr ""
 
-#: archive.php:27
+#: archive.php:29
 msgid "Author: %s"
 msgstr ""
 
-#: archive.php:30
+#: archive.php:32
 msgid "Day: %s"
 msgstr ""
 
-#: archive.php:33
+#: archive.php:35
 msgid "Month: %s"
 msgstr ""
 
-#: archive.php:36
+#: archive.php:38
 msgid "Year: %s"
 msgstr ""
 
-#: archive.php:39
+#: archive.php:41
 msgid "Asides"
 msgstr ""
 
-#: archive.php:42
+#: archive.php:44
 msgid "Galleries"
 msgstr ""
 
-#: archive.php:45
+#: archive.php:47
 msgid "Images"
 msgstr ""
 
-#: archive.php:48
+#: archive.php:50
 msgid "Videos"
 msgstr ""
 
-#: archive.php:51
+#: archive.php:53
 msgid "Quotes"
 msgstr ""
 
-#: archive.php:54
+#: archive.php:56
 msgid "Links"
 msgstr ""
 
-#: archive.php:57
+#: archive.php:59
 msgid "Statuses"
 msgstr ""
 
-#: archive.php:60
+#: archive.php:62
 msgid "Audios"
 msgstr ""
 
-#: archive.php:63
+#: archive.php:65
 msgid "Chats"
 msgstr ""
 
-#: archive.php:66
+#: archive.php:68
 msgid "Archives"
 msgstr ""
 
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:63
+#: comments.php:60
 msgid "Comments are closed."
 msgstr ""
 
@@ -123,7 +123,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: header.php:29
+#: header.php:30
 msgid "Skip to content"
 msgstr ""
 
@@ -192,12 +192,16 @@ msgstr ""
 #: inc/admin/welcome-screen.php:133
 msgid ""
 "Found a bug? Want to contribute a patch or create a new feature? GitHub is "
-"the place to go! Please send any pull requests to the latest develop "
-"branch, but please remember that GitHub is for code, not support."
+"the place to go! Or would you like to translate Storefront in to your "
+"language? Get involved at Transifex."
 msgstr ""
 
 #: inc/admin/welcome-screen.php:134
 msgid "Storefront at GitHub"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:134
+msgid "Storefront at Transifex"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:155
@@ -374,7 +378,17 @@ msgid ""
 "copy and give your visitors a warm welcome!"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:251
+#: inc/admin/welcome-screen.php:247
+msgid "Can't find a feature?"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:248
+msgid ""
+"Please suggest and vote on ideas / feature requests at the %sStorefront "
+"Ideasboard%s. The most popular ideas will see prioritised development."
+msgstr ""
+
+#: inc/admin/welcome-screen.php:256
 msgid ""
 "There are literally hundreds of awesome extensions available for you to "
 "use. Looking for Table Rate Shipping? Subscriptions? Product Add-ons? You "
@@ -385,7 +399,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/controls.php:29 inc/functions/setup.php:114
+#: inc/customizer/controls.php:29 inc/functions/setup.php:108
 msgid "Header"
 msgstr ""
 
@@ -417,35 +431,35 @@ msgstr ""
 msgid "General layout"
 msgstr ""
 
-#: inc/functions/setup.php:66 inc/structure/header.php:83
+#: inc/functions/setup.php:60 inc/structure/header.php:82
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/functions/setup.php:67
+#: inc/functions/setup.php:61
 msgid "Secondary Menu"
 msgstr ""
 
-#: inc/functions/setup.php:104
+#: inc/functions/setup.php:98
 msgid "Sidebar"
 msgstr ""
 
-#: inc/functions/setup.php:127
+#: inc/functions/setup.php:121
 msgid "Footer %d"
 msgstr ""
 
-#: inc/functions/setup.php:129
+#: inc/functions/setup.php:123
 msgid "Widgetized Footer Region %d."
 msgstr ""
 
-#: inc/structure/comments.php:43
+#: inc/structure/comments.php:42
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: inc/structure/comments.php:46
+#: inc/structure/comments.php:45
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: inc/structure/comments.php:62
+#: inc/structure/comments.php:61
 msgid "Edit"
 msgstr ""
 
@@ -457,44 +471,44 @@ msgstr ""
 msgid "Page %s"
 msgstr ""
 
-#: inc/structure/page.php:33 inc/structure/post.php:47
+#: inc/structure/page.php:33 inc/structure/post.php:48
 msgid "Pages:"
 msgstr ""
 
-#: inc/structure/post.php:44
+#: inc/structure/post.php:45
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/structure/post.php:67 inc/structure/post.php:75
+#: inc/structure/post.php:69 inc/structure/post.php:77
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/structure/post.php:83
+#: inc/structure/post.php:86
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/structure/post.php:83
+#: inc/structure/post.php:86
 msgid "1 Comment"
 msgstr ""
 
-#: inc/structure/post.php:83
+#: inc/structure/post.php:86
 msgid "% Comments"
 msgstr ""
 
-#: inc/structure/post.php:101
+#: inc/structure/post.php:104
 msgid "Posts navigation"
 msgstr ""
 
-#: inc/structure/post.php:105
+#: inc/structure/post.php:108
 msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
 msgstr ""
 
-#: inc/structure/post.php:109
+#: inc/structure/post.php:112
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/structure/post.php:132
+#: inc/structure/post.php:135
 msgid "Post navigation"
 msgstr ""
 
@@ -566,12 +580,12 @@ msgstr ""
 msgid "Homepage"
 msgstr ""
 
-#: archive.php:33
+#: archive.php:35
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: archive.php:36
+#: archive.php:38
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
@@ -583,22 +597,22 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/structure/post.php:135
+#: inc/structure/post.php:138
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr ""
 
-#: inc/structure/post.php:136
+#: inc/structure/post.php:139
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/structure/post.php:162
+#: inc/structure/post.php:165
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/structure/post.php:167
+#: inc/structure/post.php:170
 msgctxt "post author"
 msgid "by %s"
 msgstr ""

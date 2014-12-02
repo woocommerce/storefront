@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2014.11.25* - 1.2.0
+### *2014.12.02* - 1.2.0
 * **New** - Integration with Product Reviews Pro extension.
 * **New** - Integration with Smart Coupons extension.
 * **Fix** - Layout picker images when using a child theme.

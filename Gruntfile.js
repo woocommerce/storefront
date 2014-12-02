@@ -14,7 +14,7 @@ module.exports = function( grunt ) {
 				'js/*.js',
 				'!js/*.min.js',
 				'inc/customizer/js/*.js',
-				'!inc/customizer/js/*.min.js',
+				'!inc/customizer/js/*.min.js'
 			]
 		},
 
@@ -179,7 +179,7 @@ module.exports = function( grunt ) {
 				expand: true,
 				dot: true
 			}
-		},
+		}
 
 	});
 
