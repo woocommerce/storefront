@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2014.12.04* - 1.2.1
+* **Fix** - Blog post category and tag link output.
+
 ### *2014.12.02* - 1.2.0
 * **New** - Integration with Product Reviews Pro extension.
 * **New** - Integration with Smart Coupons extension.

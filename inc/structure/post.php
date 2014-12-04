@@ -69,7 +69,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
 			if ( $categories_list && storefront_categorized_blog() ) : ?>
-				<span class="cat-links"><?php echo esc_attr( $categories_list ); ?></span>
+				<span class="cat-links"><?php echo wp_kses_post( $categories_list ); ?></span>
 			<?php endif; // End if categories ?>
 
 			<?php
@@ -77,7 +77,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
 
 			if ( $tags_list ) : ?>
-				<span class="tags-links"><?php echo esc_attr( $tags_list ); ?></span>
+				<span class="tags-links"><?php echo wp_kses_post( $tags_list ); ?></span>
 			<?php endif; // End if $tags_list ?>
 
 			<?php endif; // End if 'post' == get_post_type() ?>
