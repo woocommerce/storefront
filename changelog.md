@@ -1,7 +1,8 @@
 # Storefront Changelog
 
-### *2014.12.04* - 1.2.1
+### *2014.12.05* - 1.2.1
 * **Fix** - Blog post category and tag link output.
+* **Fix** - Cart link in handheld orientation.
 
 ### *2014.12.02* - 1.2.0
 * **New** - Integration with Product Reviews Pro extension.

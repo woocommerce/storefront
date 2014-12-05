@@ -39,6 +39,7 @@
 		top: 0;
 		right: 0;
 		background-color: rgba(0,0,0,0.05);
+		text-indent: -9999px;
 
 		&:after {
 			content: "\f07a";
@@ -49,6 +50,7 @@
 			line-height: 2.244;
 			width: 100%;
 			text-align: center;
+			text-indent: 0;
 		}
 
 		span {
@@ -1261,6 +1263,7 @@ dl.variation {
 			background-color: transparent;
 			height: auto;
 			width: auto;
+			text-indent: 0;
 
 			&:after {
 				right: 1.618em;
