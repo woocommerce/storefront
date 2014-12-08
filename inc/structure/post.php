@@ -171,7 +171,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			'<span class="author vcard" itemprop="author" itemscope="" itemtype="http://schema.org/Person"><a class="url fn n" itemprop="name" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo apply_filters( 'storefront_single_post_posted_on_html', <span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>' );
+		echo apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>' );
 
 	}
 }
