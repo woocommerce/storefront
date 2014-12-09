@@ -2,6 +2,10 @@
  * Global styles
  */
 
+* {
+	@include box-sizing(border-box);
+}
+
 body {
 	background-color: $body-background;
 }

@@ -14,14 +14,10 @@
   font-style: normal;
 }
 
-
-html {
-	font-size: 62.5%;
-}
-
 body {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
+	font-size: .938em;
 }
 
 body,
@@ -31,7 +27,6 @@ select,
 textarea {
 	color: $color_body;
 	font-family: $base-font;
-	font-size: 1.5em;
 	line-height: 1.618;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -59,9 +54,10 @@ h6 {
 	font-family: $header-font;
 	clear: both;
 	font-weight: 700;
-	margin-bottom: .618em;
+	margin: 0 0 .618em;
 	color: darken( $color_body, 20% );
 }
+
 h1,
 .alpha {
 	font-size: 2.244em;
@@ -73,63 +69,84 @@ h1,
 		font-weight: 300;
 	}
 }
+
 h2,
 .beta {
 	font-size: 1.618em;
 	letter-spacing: -1px;
 }
+
 h3,
 .gamma {
 	font-size: 1.387em;
 }
+
 h4,
 .delta {
 	font-size: 1em;
 }
+
 hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: $vspacing;
+	margin: 0 0 $vspacing;
 }
 
 p {
-	margin-bottom: $vspacing;
+	margin: 0 0 $vspacing;
 }
-ul, ol {
+
+ul,
+ol {
 	margin: 0 0 $vspacing 3em;
+	padding: 0;
 }
+
 ul {
 	list-style: disc;
 }
+
 ol {
 	list-style: decimal;
 }
+
 li > ul,
 li > ol {
 	margin-bottom: 0;
 	margin-left: $vspacing;
 }
+
 dt {
 	font-weight: 700;
 }
+
 dd {
 	margin: 0 0 1.618em;
 }
-b, strong {
+
+b,
+strong {
 	font-weight: 700;
 }
-dfn, cite, em, i {
+
+dfn,
+cite,
+em,
+i {
 	font-style: italic;
 }
+
 blockquote {
 	padding: 0 $vspacing;
 	border-left: 3px solid rgba(0,0,0,0.05);
 	font-style: italic;
 }
+
 address {
 	margin: 0 0 $vspacing;
 }
+
 pre {
 	background: #fff9c0;
 	font-family: "Courier 10 Pitch", Courier, monospace;
@@ -138,20 +155,29 @@ pre {
 	overflow: auto;
 	max-width: 100%;
 }
-code, kbd, tt, var {
+
+code,
+kbd,
+tt,
+var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	background-color: #fff9c0;
+	background-color: rgba(0,0,0,0.05);
 	padding: .202em .53em;
 }
-abbr, acronym {
+
+abbr,
+acronym {
 	border-bottom: 1px dotted #666;
 	cursor: help;
 }
-mark, ins {
+
+mark,
+ins {
 	background: #fff9c0;
 	text-decoration: none;
 	padding: .202em .53em;
 }
+
 sup,
 sub {
 	font-size: 75%;
@@ -160,33 +186,42 @@ sub {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sup {
 	bottom: 1ex;
 }
+
 sub {
 	top: .5ex;
 }
+
 small {
 	font-size: 75%;
 }
+
 big {
 	font-size: 125%;
 }
+
 figure {
 	margin: 0;
 }
+
 table {
 	margin: 0 0 $vspacing;
 	width: 100%;
 }
+
 th {
 	font-weight: bold;
 }
+
 img {
 	height: auto; /* Make sure images are scaled correctly. */
 	max-width: 100%; /* Adhere to container width. */
 	display: block;
 }
+
 a {
 	color: $color_links;
 	text-decoration: none;
