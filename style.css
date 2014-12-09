@@ -1411,7 +1411,7 @@ fieldset {
       border-bottom-color: rgba(0, 0, 0, 0.2); }
 
 .byline,
-.updated {
+.updated:not(.published) {
   display: none; }
 
 .single .byline, .group-blog .byline {
