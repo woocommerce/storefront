@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2014.12.10* - 1.2.2
+* **Fix** - hidden publish date on single post
+
 ### *2014.12.09* - 1.2.1
 * **Fix** - Blog post category and tag link output.
 * **Fix** - Cart link in handheld orientation.
