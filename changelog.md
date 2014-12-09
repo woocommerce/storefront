@@ -4,6 +4,7 @@
 * **Fix** - Blog post category and tag link output.
 * **Fix** - Cart link in handheld orientation.
 * **Tweak** - Improved payment form display when using a dark background colour.
+* **Dev** - Added `storefront_single_post_posted_on_html` filter.
 
 ### *2014.12.02* - 1.2.0
 * **New** - Integration with Product Reviews Pro extension.
