@@ -49,7 +49,7 @@
 	}
 }
 .byline,
-.updated {
+.updated:not(.published) {
 	display: none;
 }
 .single, .group-blog {
