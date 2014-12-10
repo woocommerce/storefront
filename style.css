@@ -437,6 +437,10 @@ body {
   .site-header .widget {
     margin-bottom: 0; }
 
+.header-widget-region {
+  position: relative;
+  z-index: 99; }
+
 .site-branding h1 {
   font-size: 1.618em;
   letter-spacing: -1px;

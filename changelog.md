@@ -1,8 +1,9 @@
 # Storefront Changelog
 
 ### *2014.12.10* - 1.2.2
-* **Fix** - Hidden publish date on single post
+* **Fix** - Hidden publish date on single post.
 * **Fix** - Order details color.
+* **Tweak** - Header widget z-index for when used with Parallax Hero.
 
 ### *2014.12.09* - 1.2.1
 * **Fix** - Blog post category and tag link output.

@@ -40,6 +40,11 @@ body {
 	}
 }
 
+.header-widget-region {
+	position: relative;
+	z-index: 99;
+}
+
 .site-branding {
 	h1 {
 		font-size: 1.618em;
