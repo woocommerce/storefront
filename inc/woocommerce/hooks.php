@@ -55,11 +55,16 @@ add_action( 'storefront_header', 'storefront_header_cart', 		60 );
  * @see  storefront_breadcrumb_delimeter()
  */
 add_filter( 'body_class', 								'storefront_woocommerce_body_class' );
-add_filter( 'add_to_cart_fragments', 					'storefront_cart_link_fragment' );
 add_filter( 'woocommerce_product_thumbnails_columns', 	'storefront_thumbnail_columns' );
 add_filter( 'woocommerce_output_related_products_args', 'storefront_related_products_args' );
 add_filter( 'loop_shop_per_page', 						'storefront_products_per_page' );
 add_filter( 'loop_shop_columns', 						'storefront_loop_columns' );
+
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
+	add_filter( 'woocommerce_add_to_cart_fragments', 'storefront_cart_link_fragment' );
+} else {
+	add_filter( 'add_to_cart_fragments', 'storefront_cart_link_fragment' );
+}
 
 /**
  * Integrations
