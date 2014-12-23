@@ -5,6 +5,7 @@
 * **Fix** - Order details color.
 * **Tweak** - Header widget z-index for when used with Parallax Hero.
 * **Tweak** - Nested `ul`s in widgets.
+* **Tweak** - Product category widget styling.
 
 ### *2014.12.09* - 1.2.1
 * **Fix** - Blog post category and tag link output.

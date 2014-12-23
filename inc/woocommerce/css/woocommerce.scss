@@ -440,6 +440,30 @@ ul.products {
 	}
 }
 
+.widget_product_categories {
+	ul {
+		margin: 0;
+
+		li {
+			list-style: none;
+			margin-bottom: .618em;
+
+			&:before {
+				font-family: "FontAwesome";
+				margin-right: .53em;
+				display: inline-block;
+				opacity: 0.25;
+				content: "\f114";
+			}
+		}
+	}
+
+	.children {
+		margin-top: .618em;
+		margin-left: 1.618em;
+	}
+}
+
 .site-header {
 	.widget_shopping_cart {
 		p.total,
