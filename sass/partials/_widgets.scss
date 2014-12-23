@@ -25,6 +25,10 @@
 	ul {
 		margin-left: 0;
 		list-style: none;
+
+		ul {
+			margin-left: 1.618em;
+		}
 	}
 }
 

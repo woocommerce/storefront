@@ -1914,6 +1914,8 @@ object {
   .widget ul {
     margin-left: 0;
     list-style: none; }
+    .widget ul ul {
+      margin-left: 1.618em; }
 
 .widget-area .widget a.button {
   font-weight: 700 !important;
