@@ -1,11 +1,12 @@
 # Storefront Changelog
 
-### *2014.12.16* - 1.2.2
+### *2015.01.03* - 1.2.2
 * **Fix** - Hidden publish date on single post.
 * **Fix** - Order details color.
 * **Tweak** - Header widget z-index for when used with Parallax Hero.
 * **Tweak** - Nested `ul`s in widgets.
 * **Tweak** - Product category widget styling.
+* **Tweak** - Make use of WordPress 4.1's `title-tag` theme feature. (Requires WordPress 4.1).
 
 ### *2014.12.09* - 1.2.1
 * **Fix** - Blog post category and tag link output.

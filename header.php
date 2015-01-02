@@ -13,14 +13,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<?php
-/**
- * WordPress 4.1 + uses native `title-tag` theme feature.
- */
-if ( ! function_exists( '_wp_render_title_tag' ) ) { ?>
-	<title><?php wp_title( '|', true, 'right' ); ?></title><?php
-}
-?>
 
 <?php wp_head(); ?>
 </head>

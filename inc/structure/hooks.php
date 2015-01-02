@@ -91,6 +91,5 @@ add_action( 'storefront_page_after', 'storefront_display_comments', 10 );
  * @see  storefront_page_menu_args()
  */
 add_action( 'wp', 					'storefront_setup_author' );
-add_filter( 'wp_title', 			'storefront_wp_title', 	10, 2 );
 add_filter( 'body_class', 			'storefront_body_classes' );
 add_filter( 'wp_page_menu_args', 	'storefront_page_menu_args' );
