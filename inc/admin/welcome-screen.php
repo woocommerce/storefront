@@ -111,7 +111,7 @@ class Storefront_Welcome {
 	 */
 	public function storefront_welcome_who() {
 		?>
-		<div class="feature-section col three-col" style="margin-bottom: 1.618em; overflow: hidden;">
+		<div class="feature-section col three-col" style="margin-bottom: 1.618em; padding-top: 1.618em; overflow: hidden;">
 			<div class="col-1">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woothemes.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Who are WooThemes?', 'storefront' ); ?></h4>
@@ -150,7 +150,7 @@ class Storefront_Welcome {
 		$url 	.= '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' );
 		$url 	.= '&storefront-customizer=true';
 		?>
-		<div class="feature-section col two-col" style="margin-bottom: 1.618em; overflow: hidden;">
+		<div class="feature-section col two-col" style="margin-bottom: 1.618em; padding-top: 1.618em; overflow: hidden;">
 
 			<h2><?php _e( 'Using Storefront', 'storefront' ); ?> <div class="dashicons dashicons-lightbulb"></div></h2>
 			<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so configuration is a breeze. Here are some common theme-setup tasks:', 'storefront' ); ?></p>
@@ -198,7 +198,7 @@ class Storefront_Welcome {
 	 */
 	public function storefront_welcome_addons() {
 		?>
-		<div class="feature-section col three-col" style="clear: both;">
+		<div class="feature-section col three-col" style="padding-top: 1.618em; clear: both;">
 			<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>
 
 			<p>

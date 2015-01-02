@@ -7,6 +7,7 @@
 * **Tweak** - Nested `ul`s in widgets.
 * **Tweak** - Product category widget styling.
 * **Tweak** - Make use of WordPress 4.1's `title-tag` theme feature. (Requires WordPress 4.1).
+* **Tweak** - Welcome screen tweaks for WordPress 4.1.
 
 ### *2014.12.09* - 1.2.1
 * **Fix** - Blog post category and tag link output.
