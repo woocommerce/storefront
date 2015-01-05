@@ -8,6 +8,7 @@
 * **Tweak** - Product category widget styling.
 * **Tweak** - Make use of WordPress 4.1's `title-tag` theme feature. (Requires WordPress 4.1).
 * **Tweak** - Welcome screen tweaks for WordPress 4.1.
+* **Tweak** - Slightly reduced button/input size.
 * **Dev** - Made `storefront_product_search()` pluggable.
 
 ### *2014.12.09* - 1.2.1

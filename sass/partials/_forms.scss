@@ -28,7 +28,7 @@ input[type="submit"],
 	color: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	line-height: 1;
-	padding: .857em 1.387em;
+	padding: .618em 1em;
 	text-decoration: none;
 	font-weight: 700;
 	text-shadow: none;
@@ -105,7 +105,7 @@ input[type="password"],
 input[type="search"],
 textarea,
 .input-text {
-	padding: .857em;
+	padding: .618em;
 	background-color: darken($body-background,5%);
 	color: $color_body;
 	line-height: 1;
