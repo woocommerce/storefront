@@ -1,14 +1,14 @@
-# Copyright (C) 2014 WooThemes
+# Copyright (C) 2015 WooThemes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.2.1\n"
+"Project-Id-Version: Storefront 1.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2014-12-09 14:12:53+00:00\n"
+"POT-Creation-Date: 2015-01-05 10:23:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.4.9\n"
@@ -123,7 +123,7 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: header.php:30
+#: header.php:22
 msgid "Skip to content"
 msgstr ""
 
@@ -315,7 +315,7 @@ msgstr ""
 msgid "WooCommerce Bookings"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:212 inc/admin/welcome-screen.php:222
+#: inc/admin/welcome-screen.php:212
 msgid ""
 "Allows you to sell your time or date based bookings, adding a new product "
 "type to your WooCommerce site. Perfect for those wanting to offer "
@@ -329,17 +329,25 @@ msgid "Buy now"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:216
-msgid "WooCommerce Product Gallery Slider"
+msgid "WooCommerce Smart Coupons"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:217
 msgid ""
-"The Product Gallery Slider is a nifty extension which transforms your "
-"product galleries into a fully responsive, jQuery powered slideshow."
+"Smart coupons provide the most comprehensive and powerful solution for "
+"discount coupons, gift certificates, store credits and vouchers. It also "
+"allows customers to buy credits for themselves or gift to others."
 msgstr ""
 
 #: inc/admin/welcome-screen.php:221
 msgid "WooCommerce Wishlists"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:222
+msgid ""
+"Allows guests and customers to create and add products to an unlimited "
+"number of Wishlists. From birthdays to weddings and everything in between, "
+"WooCommerce Wishlists are a welcome addition to any WooCommerce store."
 msgstr ""
 
 #: inc/admin/welcome-screen.php:228
@@ -431,7 +439,7 @@ msgstr ""
 msgid "General layout"
 msgstr ""
 
-#: inc/functions/setup.php:60 inc/structure/header.php:82
+#: inc/functions/setup.php:60 inc/structure/header.php:51
 msgid "Primary Menu"
 msgstr ""
 
@@ -465,10 +473,6 @@ msgstr ""
 
 #: inc/structure/footer.php:60
 msgid "%1$s designed by %2$s."
-msgstr ""
-
-#: inc/structure/header.php:33
-msgid "Page %s"
 msgstr ""
 
 #: inc/structure/page.php:33 inc/structure/post.php:48
