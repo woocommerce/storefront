@@ -15,3 +15,11 @@ $error: 			#e2401c;
 $success: 			#17ba6f;
 $info: 				#3D9CD2;
 $vspacing: 			1.618em;
+
+$susy: (
+	columns: 12,
+	gutters: 1,
+	math: fluid,
+	output: float,
+	gutter-position: after
+);

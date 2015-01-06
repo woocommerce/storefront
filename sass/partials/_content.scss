@@ -101,16 +101,12 @@
 		@include clearfix;
 
 		.entry-meta {
-			@include gs-span(c, 1, 2, (1, 9));
-			@include gs-float(c, left);
-			margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+			@include span(2 of 9);
 			font-size: .857em;
 		}
 
 		.entry-content {
-			@include gs-span(c, 3, 9, (1, 9));
-			@include gs-float(c, left);
-			margin-right: 0;
+			@include span(last 7 of 9);
 		}
 	}
 }

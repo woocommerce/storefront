@@ -8,8 +8,7 @@
 		.site-logo-anchor,
 		.site-logo-link {
 			display: block;
-			@include gs-span(c, 1, 3);
-			@include gs-float(c, left);
+			@include span(3 of 12);
 			clear: both;
 
 			img {
@@ -23,27 +22,21 @@
 	.woocommerce-active {
 		.site-header {
 			.secondary-navigation {
-				@include gs-span(c, 4, 9);
-				@include gs-float(c, left);
-				margin-right: 0;
+				@include span(6 of 12);
 			}
 
 			.site-search {
-				@include gs-span(c, 10, 12);
-				@include gs-float(c, right);
-				margin-left: 0;
+				@include span(last 3 of 12);
+				clear: none;
 			}
 
 			.main-navigation {
-				@include gs-span(c, 1, 9);
-				@include gs-float(c, left);
+				@include span(9 of 12);
 				clear: both;
 			}
 
 			.site-header-cart {
-				@include gs-span(c, 10, 12);
-				@include gs-float(c, right);
-				margin-left: 0;
+				@include span(last 3 of 12);
 				margin-bottom: 0;
 			}
 		}
@@ -86,8 +79,7 @@
 
 	.col-full {
 		@include clearfix;
-		max-width: 65.141em;
-		margin: 0 auto;
+		@include container(65.141em);
 	}
 
 	.site-content {
@@ -95,47 +87,36 @@
 	}
 
 	.content-area {
-		@include gs-span(c, 1, 9);
-		@include gs-float(c, left);
+		@include span(9 of 12);
 	}
 
 	.widget-area {
-		@include gs-span(c, 10, 12);
-		@include gs-float(c, left);
-		margin-right: 0;
+		@include span(last 3 of 12);
 	}
 
 	.right-sidebar {
 		.content-area {
-			@include gs-span(c, 1, 9);
-			@include gs-float(c, left);
+			@include span(9 of 12);
 		}
 
 		.widget-area {
-			@include gs-span(c, 10, 12);
-			@include gs-float(c, left);
-			margin-right: 0;
+			@include span(last 3 of 12);
 		}
 	}
 
 	.left-sidebar {
 		.content-area {
-			@include gs-span(c, 4, 12);
-			@include gs-float(c, right);
+			@include span(last 9 of 12);
 		}
 
 		.widget-area {
-			@include gs-span(c, 1, 3);
-			@include gs-float(c, right);
-			margin-left: 0;
+			@include span(3 of 12);
 		}
 	}
 
 	.storefront-full-width-content {
 		.content-area {
-			margin-left: 0;
-			margin-right: 0;
-			width: 100%;
+			@include span(full);
 		}
 	}
 
@@ -150,10 +131,7 @@
 	.page-template-template-fullwidth-php,
 	.page-template-template-homepage-php {
 		.content-area {
-			float: none;
-			width: 100%;
-			margin-right: 0;
-			margin-left: 0;
+			@include span(full);
 		}
 	}
 
@@ -167,33 +145,30 @@
 
 		&.col-2 {
 			.block {
-				@include gs-span(c, 1, 6);
-				@include gs-float(c, left);
+				@include span(6 of 12);
 
 				&.footer-widget-2 {
-					margin-right: 0;
+					@include last;
 				}
 			}
 		}
 
 		&.col-3 {
 			.block {
-				@include gs-span(c, 1, 4);
-				@include gs-float(c, left);
+				@include span(4 of 12);
 
 				&.footer-widget-3 {
-					margin-right: 0;
+					@include last;
 				}
 			}
 		}
 
 		&.col-4 {
 			.block {
-				@include gs-span(c, 1, 3);
-				@include gs-float(c, left);
+				@include span(3 of 12);
 
 				&.footer-widget-4 {
-					margin-right: 0;
+					@include last;
 				}
 			}
 		}

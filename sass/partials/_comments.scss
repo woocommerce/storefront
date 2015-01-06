@@ -122,13 +122,10 @@
 		}
 
 		.comment-meta {
-			@include gs-span(c, 1, 2, (1, 9));
-			@include gs-float(c, left);
-			margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+			@include span(2 of 9);
 
 			.avatar {
-				@include gs-span(c, 1, 1, (1, 2));
-				@include gs-float(c, left);
+				@include span(1 of 1);
 			}
 		}
 
@@ -139,9 +136,7 @@
 
 		.comment-content,
 		#respond {
-			@include gs-span(c, 3, 9, (1, 9));
-			@include gs-float(c, left);
-			margin-right: 0;
+			@include span(last 7 of 9);
 		}
 
 		#respond {
@@ -159,88 +154,51 @@
 		}
 
 		ol.children {
-			@include gs-span(c, 2, 9, (1, 9));
-			@include gs-float(c, right);
+			@include span(last 8 of 9);
 			list-style: none;
 
 			.comment-meta {
-				@include gs-span(c, 2, 3, (2, 9));
-				@include gs-float(c, left);
-				margin-right: gs-adjust(c, gs-gutter(c), (2, 9), true);
-			}
-
-			.comment-content,
-			#respond {
-				@include gs-span(c, 4, 9, (2, 9));
-				@include gs-float(c, left);
-				margin-right: 0;
+				@include span(2 of 8);
 			}
 
 			#respond {
-				float: right;
+				@include span(last 6 of 8);
 			}
 
 			ol.children {
-				@include gs-span(c, 3, 9, (2, 9));
-				@include gs-float(c, right);
+				@include span(last 7 of 8);
 
 				.comment-meta {
-					@include gs-span(c, 3, 4, (3, 9));
-					@include gs-float(c, left);
-					margin-right: gs-adjust(c, gs-gutter(c), (3, 9), true);
+					@include span(2 of 7);
 				}
 
 				.comment-content,
 				#respond {
-					@include gs-span(c, 5, 9, (3, 9));
-					@include gs-float(c, left);
-					margin-right: 0;
-				}
-
-				#respond {
-					float: right;
+					@include span(last 5 of 7);
 				}
 
 				ol.children {
-					@include gs-span(c, 4, 9, (3, 9));
-					@include gs-float(c, right);
+					@include span(last 6 of 7);
 
 					.comment-meta {
-						@include gs-span(c, 4, 5, (4, 9));
-						@include gs-float(c, left);
-						margin-right: gs-adjust(c, gs-gutter(c), (4, 9), true);
+						@include span(2 of 6);
 					}
 
 					.comment-content,
 					#respond {
-						@include gs-span(c, 6, 9, (4, 9));
-						@include gs-float(c, left);
-						margin-right: 0;
-					}
-
-					#respond {
-						float: right;
+						@include span(last 4 of 6);
 					}
 
 					ol.children {
-						@include gs-span(c, 5, 9, (4, 9));
-						@include gs-float(c, right);
+						@include span(last 5 of 6);
 
 						.comment-meta {
-							@include gs-span(c, 5, 6, (5, 9));
-							@include gs-float(c, left);
-							margin-right: gs-adjust(c, gs-gutter(c), (5, 9), true);
+							@include span(2 of 5);
 						}
 
 						.comment-content,
 						#respond {
-							@include gs-span(c, 7, 9, (5, 9));
-							@include gs-float(c, left);
-							margin-right: 0;
-						}
-
-						#respond {
-							float: right;
+							@include span(last 3 of 5);
 						}
 					}
 				}
@@ -252,13 +210,11 @@
 		.comment-form-author,
 		.comment-form-email,
 		.comment-form-url {
-			width: 30.75%;
-			margin-right: 3.8%;
-			float: left;
+			@include span(3 of 9);
 		}
 
 		.comment-form-url {
-			margin-right: 0;
+			@include last;
 		}
 
 		.comment-form-comment {

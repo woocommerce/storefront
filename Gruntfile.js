@@ -53,6 +53,7 @@ module.exports = function( grunt ) {
 		sass: {
 			compile: {
 				options: {
+					require: 'susy',
 					sourcemap: 'none',
 					loadPath: require( 'node-bourbon' ).includePaths
 				},
@@ -91,7 +92,6 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/*.scss',
 					'sass/modules/*.scss',
 					'sass/partials/*.scss',
-					'sass/vendor/*.scss'
 				],
 				tasks: [
 					'sass',

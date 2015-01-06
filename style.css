@@ -953,15 +953,9 @@ fieldset {
   .site-header .site-logo-anchor,
   .site-header .site-logo-link {
     display: block;
-    display: block;
+    width: 21.73913%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 22.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
+    margin-right: 4.34783%;
     clear: both; }
     .site-header .site-branding img,
     .site-header .site-logo-anchor img,
@@ -971,49 +965,23 @@ fieldset {
       max-height: none; }
 
   .woocommerce-active .site-header .secondary-navigation {
-    display: block;
+    width: 47.82609%;
     float: left;
-    margin-left: 26.0%;
-    margin-right: -100%;
-    width: 48.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
-    margin-right: 0; }
+    margin-right: 4.34783%; }
   .woocommerce-active .site-header .site-search {
-    display: block;
-    float: left;
-    margin-left: 78.0%;
-    margin-right: -100%;
-    width: 22.0%;
-    clear: none;
+    width: 21.73913%;
     float: right;
     margin-right: 0;
-    margin-left: 4%;
-    margin-left: 0; }
+    clear: none; }
   .woocommerce-active .site-header .main-navigation {
-    display: block;
+    width: 73.91304%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 74.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
+    margin-right: 4.34783%;
     clear: both; }
   .woocommerce-active .site-header .site-header-cart {
-    display: block;
-    float: left;
-    margin-left: 78.0%;
-    margin-right: -100%;
-    width: 22.0%;
-    clear: none;
+    width: 21.73913%;
     float: right;
     margin-right: 0;
-    margin-left: 4%;
-    margin-left: 0;
     margin-bottom: 0; }
 
   .site-branding .site-description {
@@ -1040,10 +1008,15 @@ fieldset {
 
   .col-full {
     max-width: 65.141em;
-    margin: 0 auto; }
+    margin-left: auto;
+    margin-right: auto; }
     .col-full:after {
       content: "";
       display: table;
+      clear: both; }
+    .col-full:after {
+      content: " ";
+      display: block;
       clear: both; }
 
   .site-content:after {
@@ -1052,76 +1025,38 @@ fieldset {
     clear: both; }
 
   .content-area {
-    display: block;
+    width: 73.91304%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 74.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%; }
+    margin-right: 4.34783%; }
 
   .widget-area {
-    display: block;
-    float: left;
-    margin-left: 78.0%;
-    margin-right: -100%;
-    width: 22.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
+    width: 21.73913%;
+    float: right;
     margin-right: 0; }
 
   .right-sidebar .content-area {
-    display: block;
+    width: 73.91304%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 74.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%; }
+    margin-right: 4.34783%; }
   .right-sidebar .widget-area {
-    display: block;
-    float: left;
-    margin-left: 78.0%;
-    margin-right: -100%;
-    width: 22.0%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
+    width: 21.73913%;
+    float: right;
     margin-right: 0; }
 
   .left-sidebar .content-area {
-    display: block;
-    float: left;
-    margin-left: 26.0%;
-    margin-right: -100%;
-    width: 74.0%;
-    clear: none;
+    width: 73.91304%;
     float: right;
-    margin-right: 0;
-    margin-left: 4%; }
+    margin-right: 0; }
   .left-sidebar .widget-area {
-    display: block;
+    width: 21.73913%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 22.0%;
-    clear: none;
-    float: right;
-    margin-right: 0;
-    margin-left: 4%;
-    margin-left: 0; }
+    margin-right: 4.34783%; }
 
   .storefront-full-width-content .content-area {
+    width: 100%;
+    float: left;
     margin-left: 0;
-    margin-right: 0;
-    width: 100%; }
+    margin-right: 0; }
 
   .content-area,
   .widget-area {
@@ -1132,10 +1067,10 @@ fieldset {
    */
   .page-template-template-fullwidth-php .content-area,
   .page-template-template-homepage-php .content-area {
-    float: none;
     width: 100%;
-    margin-right: 0;
-    margin-left: 0; }
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
 
   /**
    * Footer widgets
@@ -1148,40 +1083,25 @@ fieldset {
       display: table;
       clear: both; }
     .footer-widgets.col-2 .block {
-      display: block;
+      width: 47.82609%;
       float: left;
-      margin-left: 0;
-      margin-right: -100%;
-      width: 48.0%;
-      clear: none;
-      float: left;
-      margin-left: 0;
-      margin-right: 4%; }
+      margin-right: 4.34783%; }
       .footer-widgets.col-2 .block.footer-widget-2 {
+        float: right;
         margin-right: 0; }
     .footer-widgets.col-3 .block {
-      display: block;
+      width: 30.43478%;
       float: left;
-      margin-left: 0;
-      margin-right: -100%;
-      width: 30.66667%;
-      clear: none;
-      float: left;
-      margin-left: 0;
-      margin-right: 4%; }
+      margin-right: 4.34783%; }
       .footer-widgets.col-3 .block.footer-widget-3 {
+        float: right;
         margin-right: 0; }
     .footer-widgets.col-4 .block {
-      display: block;
+      width: 21.73913%;
       float: left;
-      margin-left: 0;
-      margin-right: -100%;
-      width: 22.0%;
-      clear: none;
-      float: left;
-      margin-left: 0;
-      margin-right: 4%; }
+      margin-right: 4.34783%; }
       .footer-widgets.col-4 .block.footer-widget-4 {
+        float: right;
         margin-right: 0; } }
 @media screen and (max-width: 65.141em) {
   .col-full {
@@ -1456,27 +1376,13 @@ fieldset {
     display: table;
     clear: both; }
   .hentry.type-post .entry-meta {
-    display: block;
+    width: 17.64706%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 18.01802%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
-    margin-right: 5.40541%;
+    margin-right: 5.88235%;
     font-size: .857em; }
   .hentry.type-post .entry-content {
-    display: block;
-    float: left;
-    margin-left: 23.42342%;
-    margin-right: -100%;
-    width: 76.57658%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
+    width: 76.47059%;
+    float: right;
     margin-right: 0; } }
 /**
  * Post Formats
@@ -1699,40 +1605,21 @@ object {
   .comment-list .comment {
     clear: both; }
   .comment-list .comment-meta {
-    display: block;
+    width: 17.64706%;
     float: left;
-    margin-left: 0;
-    margin-right: -100%;
-    width: 18.01802%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
-    margin-right: 5.40541%; }
+    margin-right: 5.88235%; }
     .comment-list .comment-meta .avatar {
-      display: block;
+      width: 100%;
       float: left;
       margin-left: 0;
-      margin-right: -100%;
-      width: 35.0%;
-      clear: none;
-      float: left;
-      margin-left: 0;
-      margin-right: 4%; }
+      margin-right: 0; }
   .comment-list .comment-content {
     padding-bottom: 3.631em;
     margin-bottom: 3.631em; }
   .comment-list .comment-content,
   .comment-list #respond {
-    display: block;
-    float: left;
-    margin-left: 23.42342%;
-    margin-right: -100%;
-    width: 76.57658%;
-    clear: none;
-    float: left;
-    margin-left: 0;
-    margin-right: 4%;
+    width: 76.47059%;
+    float: right;
     margin-right: 0; }
   .comment-list #respond {
     float: right; }
@@ -1744,154 +1631,66 @@ object {
   .comment-list .reply {
     clear: both; }
   .comment-list ol.children {
-    display: block;
-    float: left;
-    margin-left: 11.71171%;
-    margin-right: -100%;
-    width: 88.28829%;
-    clear: none;
+    width: 88.23529%;
     float: right;
     margin-right: 0;
-    margin-left: 4%;
     list-style: none; }
     .comment-list ol.children .comment-meta {
-      display: block;
+      width: 20%;
       float: left;
-      margin-left: 0;
-      margin-right: -100%;
-      width: 20.40816%;
-      clear: none;
-      float: left;
-      margin-left: 0;
-      margin-right: 4%;
-      margin-right: 6.12245%; }
-    .comment-list ol.children .comment-content,
+      margin-right: 6.66667%; }
     .comment-list ol.children #respond {
-      display: block;
-      float: left;
-      margin-left: 26.53061%;
-      margin-right: -100%;
-      width: 73.46939%;
-      clear: none;
-      float: left;
-      margin-left: 0;
-      margin-right: 4%;
-      margin-right: 0; }
-    .comment-list ol.children #respond {
-      float: right; }
-    .comment-list ol.children ol.children {
-      display: block;
-      float: left;
-      margin-left: 13.26531%;
-      margin-right: -100%;
-      width: 86.73469%;
-      clear: none;
+      width: 73.33333%;
       float: right;
-      margin-right: 0;
-      margin-left: 4%; }
+      margin-right: 0; }
+    .comment-list ol.children ol.children {
+      width: 86.66667%;
+      float: right;
+      margin-right: 0; }
       .comment-list ol.children ol.children .comment-meta {
-        display: block;
+        width: 23.07692%;
         float: left;
-        margin-left: 0;
-        margin-right: -100%;
-        width: 23.52941%;
-        clear: none;
-        float: left;
-        margin-left: 0;
-        margin-right: 4%;
-        margin-right: 7.05882%; }
+        margin-right: 7.69231%; }
       .comment-list ol.children ol.children .comment-content,
       .comment-list ol.children ol.children #respond {
-        display: block;
-        float: left;
-        margin-left: 30.58824%;
-        margin-right: -100%;
-        width: 69.41176%;
-        clear: none;
-        float: left;
-        margin-left: 0;
-        margin-right: 4%;
-        margin-right: 0; }
-      .comment-list ol.children ol.children #respond {
-        float: right; }
-      .comment-list ol.children ol.children ol.children {
-        display: block;
-        float: left;
-        margin-left: 15.29412%;
-        margin-right: -100%;
-        width: 84.70588%;
-        clear: none;
+        width: 69.23077%;
         float: right;
-        margin-right: 0;
-        margin-left: 4%; }
+        margin-right: 0; }
+      .comment-list ol.children ol.children ol.children {
+        width: 84.61538%;
+        float: right;
+        margin-right: 0; }
         .comment-list ol.children ol.children ol.children .comment-meta {
-          display: block;
+          width: 27.27273%;
           float: left;
-          margin-left: 0;
-          margin-right: -100%;
-          width: 27.77778%;
-          clear: none;
-          float: left;
-          margin-left: 0;
-          margin-right: 4%;
-          margin-right: 8.33333%; }
+          margin-right: 9.09091%; }
         .comment-list ol.children ol.children ol.children .comment-content,
         .comment-list ol.children ol.children ol.children #respond {
-          display: block;
-          float: left;
-          margin-left: 36.11111%;
-          margin-right: -100%;
-          width: 63.88889%;
-          clear: none;
-          float: left;
-          margin-left: 0;
-          margin-right: 4%;
-          margin-right: 0; }
-        .comment-list ol.children ol.children ol.children #respond {
-          float: right; }
-        .comment-list ol.children ol.children ol.children ol.children {
-          display: block;
-          float: left;
-          margin-left: 18.05556%;
-          margin-right: -100%;
-          width: 81.94444%;
-          clear: none;
+          width: 63.63636%;
           float: right;
-          margin-right: 0;
-          margin-left: 4%; }
+          margin-right: 0; }
+        .comment-list ol.children ol.children ol.children ol.children {
+          width: 81.81818%;
+          float: right;
+          margin-right: 0; }
           .comment-list ol.children ol.children ol.children ol.children .comment-meta {
-            display: block;
+            width: 33.33333%;
             float: left;
-            margin-left: 0;
-            margin-right: -100%;
-            width: 33.89831%;
-            clear: none;
-            float: left;
-            margin-left: 0;
-            margin-right: 4%;
-            margin-right: 10.16949%; }
+            margin-right: 11.11111%; }
           .comment-list ol.children ol.children ol.children ol.children .comment-content,
           .comment-list ol.children ol.children ol.children ol.children #respond {
-            display: block;
-            float: left;
-            margin-left: 44.0678%;
-            margin-right: -100%;
-            width: 55.9322%;
-            clear: none;
-            float: left;
-            margin-left: 0;
-            margin-right: 4%;
+            width: 55.55556%;
+            float: right;
             margin-right: 0; }
-          .comment-list ol.children ol.children ol.children ol.children #respond {
-            float: right; }
 
   #respond .comment-form-author,
   #respond .comment-form-email,
   #respond .comment-form-url {
-    width: 30.75%;
-    margin-right: 3.8%;
-    float: left; }
+    width: 29.41176%;
+    float: left;
+    margin-right: 5.88235%; }
   #respond .comment-form-url {
+    float: right;
     margin-right: 0; }
   #respond .comment-form-comment {
     clear: both; } }

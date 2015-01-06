@@ -8,7 +8,7 @@
 @import 'bourbon';
 @import '../../../sass/modules/variables';
 @import '../../../sass/modules/mixins';
-@import '../../../sass/vendor/gridset';
+@import 'susy';
 
 @media screen and (min-width: 768px) {
 	.woocommerce,
@@ -25,18 +25,15 @@
 		ul.products {
 			li.product-type-photography {
 				@include clearfix;
-				@include gs-span(c, 1, 6);
-				@include gs-float(c, left);
+				@include span(6 of 12);
 				text-align: left;
 
 				.photography-image {
-					@include gs-span(c, 1, 2, (1, 6));
-					@include gs-float(c, left, (1, 6));
+					@include span(1 of 6);
 				}
 
 				.photography-content {
-					@include gs-span(c, 3, 6, (1, 6));
-					@include gs-float(c, right, (1, 6));
+					@include span(last 5 of 6);
 					margin-left: 0;
 				}
 

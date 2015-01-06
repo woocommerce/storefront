@@ -8,7 +8,7 @@
 @import 'bourbon';
 @import '../../../sass/modules/variables';
 @import '../../../sass/modules/mixins';
-@import '../../../sass/vendor/gridset';
+@import 'susy';
 
 /**
  * Header Elements
@@ -289,10 +289,8 @@ ul.products {
 			}
 
 			ul.children {
-				margin-left: 0;
 				border-top: 1px solid $color_border;
-				@include gs-span(c, 5, 9, (4, 9)); // This specifies the columns
-				float: none;
+				@include span(last 5 of 6);
 				padding-top: 1.618em;
 			}
 		}
@@ -1382,8 +1380,7 @@ dl.variation {
 			.columns-2 {
 				ul.products {
 					li.product {
-						@include gs-span(c, 1, 6); // This specifies the columns
-				  		@include gs-float(c, left); // This specifies to float this column left
+						@include span(6 of 12);
 					}
 				}
 			}
@@ -1391,8 +1388,7 @@ dl.variation {
 			.columns-3 {
 				ul.products {
 					li.product {
-						@include gs-span(c, 1, 4); // This specifies the columns
-				  		@include gs-float(c, left); // This specifies to float this column left
+						@include span(4 of 12);
 					}
 				}
 			}
@@ -1400,8 +1396,7 @@ dl.variation {
 			.columns-4 {
 				ul.products {
 					li.product {
-						@include gs-span(c, 1, 3); // This specifies the columns
-				  		@include gs-float(c, left); // This specifies to float this column left
+						@include span(3 of 12);
 					}
 				}
 			}
@@ -1445,9 +1440,7 @@ dl.variation {
 		.columns-3 {
 			ul.products {
 				li.product {
-					@include gs-span(c, 1, 3, (1, 9));
-					@include gs-float(c, left);
-					margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+					@include span(3 of 9);
 				}
 			}
 		}
@@ -1474,9 +1467,7 @@ dl.variation {
 
 		ul.products {
 			li.product {
-				@include gs-span(c, 1, 3, (1, 9));
-				@include gs-float(c, left);
-				margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+				@include span(3 of 9);
 			}
 		}
 	}
@@ -1487,30 +1478,24 @@ dl.variation {
 	.single-product {
 		div.product {
 			.images {
-				@include gs-span(c, 1, 4, (1, 9));
-				@include gs-float(c, left);
-				margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+				@include span(4 of 9);
 				margin-bottom: 3.631em;
 
 				.thumbnails {
 					@include clearfix;
 
 					a.zoom {
-						@include gs-span(c, 1, 1, (1, 4));
-						@include gs-float(c, left);
-						margin-right: gs-adjust(c, gs-gutter(c), (1, 4), true);
+						@include span(1 of 4);
 
 						&.last {
-							margin-right: 0;
+							@include last;
 						}
 					}
 				}
 			}
 
 			.summary {
-				@include gs-span(c, 5, 9, (1, 9));
-				@include gs-float(c, left);
-				margin-right: 0;
+				@include span(last 5 of 9);
 				margin-bottom: 3.631em;
 			}
 
@@ -1524,16 +1509,12 @@ dl.variation {
 	.storefront-full-width-content.single-product {
 		div.product {
 			.images {
-				@include gs-span(c, 1, 4);
-				@include gs-float(c, left);
-				margin-right: gs-gutter(c, false, true);
+				@include span(4 of 12);
 				margin-bottom: 3.631em;
 
 				.thumbnails {
 					a.zoom {
-						@include gs-span(c, 1, 1, (1, 4));
-						@include gs-float(c, left);
-						margin-right: gs-adjust(c, gs-gutter(c), (1, 4), true);
+						@include span(1 of 4);
 
 						&.last {
 							margin-right: 0;
@@ -1543,9 +1524,7 @@ dl.variation {
 			}
 
 			.summary {
-				@include gs-span(c, 5, 12);
-				@include gs-float(c, left);
-				margin-right: 0;
+				@include span(last 8 of 12);
 				margin-bottom: 3.631em;
 			}
 
@@ -1558,16 +1537,14 @@ dl.variation {
 		.upsells {
 			ul.products {
 				li.product {
-					@include gs-span(c, 1, 4); // This specifies the columns
-			  		@include gs-float(c, left); // This specifies to float this column left
+					@include span(4 of 12);
 				}
 			}
 		}
 	}
 
 	.woocommerce .page-description {
-		@include gs-span(c, 1, 6, (1, 9));
-		@include gs-float(c, left);
+		@include span(6 of 9);
 		margin-bottom: 1.618em;
 	}
 
@@ -1665,23 +1642,18 @@ dl.variation {
 		@include clearfix;
 
 		.cross-sells {
-			@include gs-span(c, 1, 4, (1, 9));
-		  	@include gs-float(c, left); // This specifies to float this column left
-		  	margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+			@include span(4 of 9);
 
-		  	ul.products {
-		  		li.product {
-		  			@include gs-span(c, 1, 2, (1, 4));
-		  			@include gs-float(c, left); // This specifies to float this column left
-		  			margin-right: gs-adjust(c, gs-gutter(c), (1, 4), true);
-		  		}
-		  	}
+			ul.products {
+				li.product {
+					@include span(2 of 4);
+				}
+			}
 		}
 
 		.cart_totals,
 		.shipping_calculator {
-			@include gs-span(c, 5, 9, (1, 9));
-		  	@include gs-float(c, right); // This specifies to float this column left
+			@include span(last 5 of 9);
 		  	margin: 0;
 		  	clear: right;
 		}
@@ -1694,21 +1666,18 @@ dl.variation {
 	.page-template-template-fullwidth-php {
 		.cart-collaterals {
 			.cross-sells {
-				@include gs-span(c, 1, 6);
+				@include span(6 of 12);
+
 				ul.products {
 			  		li.product {
-			  			@include gs-span(c, 1, 3, (1, 6));
-			  			@include gs-float(c, left); // This specifies to float this column left
-			  			margin-right: gs-adjust(c, gs-gutter(c), (1, 6), true);
+			  			@include span(3 of 6);
 			  		}
 			  	}
 			}
 
 			.cart_totals,
 			.shipping_calculator {
-				@include gs-span(c, 7, 12);
-				@include gs-float(c, right);
-				margin-right: 0;
+				@include span(last 6 of 12);
 			}
 		}
 	}
@@ -1717,19 +1686,14 @@ dl.variation {
 	 * Checkout
 	 */
 	#customer_details {
-		@include gs-span(c, 1, 5, (1, 9));
-		@include gs-float(c, left);
-		margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+		@include span(5 of 9);
 
 		.form-row-first {
-			@include gs-span(c, 1, 2, (1, 5));
-			@include gs-float(c, left);
-			margin-right: gs-adjust(c, gs-gutter(c), (1, 5), true);
+			@include span(2 of 5);
 		}
 
 		.form-row-last {
-			@include gs-span(c, 3, 5, (1, 5));
-			@include gs-float(c, left);
+			@include span(last 3 of 5);
 		}
 
 		.col-1,
@@ -1740,10 +1704,9 @@ dl.variation {
 
 	#order_review_heading,
 	#order_review {
-		@include gs-span(c, 6, 9, (1, 9));
-		@include gs-float(c, left);
-		margin-right: 0;
+		@include span(last 4 of 9);
 		border: 3px solid $color_links;
+		clear: none;
 	}
 
 	#order_review_heading {
@@ -1751,7 +1714,7 @@ dl.variation {
 		padding-bottom: .618em;
 		padding-top: .618em;
 		border-width: 3px 3px 0 3px;
-		@include gs-pad(c, padin);
+		@include gutters(inside);
 	}
 
 	#order_review {
@@ -1759,39 +1722,29 @@ dl.variation {
 	}
 
 	#wc_checkout_add_ons {
-		@include gs-span(c, 6, 9, (1, 9));
-		@include gs-float(c, left);
-		margin-right: 0;
+		@include span(4 of 9);
 	}
 
 	.page-template-template-fullwidth-php {
 		#customer_details {
-			@include gs-span(c, 1, 6);
-			@include gs-float(c, left);
+			@include span(6 of 12);
 
 			.form-row-first {
-				@include gs-span(c, 1, 3, (1, 6));
-				@include gs-float(c, left);
-				margin-right: gs-adjust(c, gs-gutter(c), (1, 6), true);
+				@include span(3 of 6);
 			}
 
 			.form-row-last {
-				@include gs-span(c, 4, 6, (1, 6));
-				@include gs-float(c, left);
+				@include span(last 3 of 6);
 			}
 		}
 
 		#order_review_heading,
 		#order_review {
-			@include gs-span(c, 7, 12);
-			@include gs-float(c, right);
-			margin-left: 0;
+			@include span(last 6 of 12);
 		}
 
 		#wc_checkout_add_ons {
-			@include gs-span(c, 7, 12);
-			@include gs-float(c, right);
-			margin-left: 0;
+			@include span(last 6 of 12);
 		}
 
 		#order_review {
@@ -1809,41 +1762,32 @@ dl.variation {
 	 * General WooCommerce Components
 	 */
 	.form-row-first {
-		@include gs-span(c, 1, 4, (1, 9));
-		@include gs-float(c, left);
-		margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+		@include span(4.5 of 9);
 		clear: both;
 	}
 
 	.form-row-last {
-		@include gs-span(c, 5, 9, (1, 9));
-		@include gs-float(c, left);
+		@include span(last 4.5 of 9);
 	}
 
 	.page-template-template-fullwidth-php {
 		.form-row-first {
-			@include gs-span(c, 1, 6);
-			@include gs-float(c, left);
+			@include span(6 of 12);
 		}
 
 		.form-row-last {
-			@include gs-span(c, 7, 12);
-			@include gs-float(c, left);
+			@include span(last 6 of 12);
 		}
 	}
 
 	.storefront-full-width-content {
 		.woocommerce-tabs {
 			ul.tabs {
-				@include gs-span(c, 1, 4);
-				@include gs-float(c, left);
-				margin-right: gs-gutter(c, false, true);
+				@include span(4 of 12);
 			}
 
 			.panel {
-				@include gs-span(c, 5, 12);
-				@include gs-float(c, left);
-				margin-right: 0;
+				@include span(last 8 of 12);
 				margin-bottom: 3.631em;
 			}
 		}
@@ -1856,9 +1800,7 @@ dl.variation {
 		padding-bottom: 2.618em;
 
 		ul.tabs {
-			@include gs-span(c, 1, 3, (1, 9));
-		  	@include gs-float(c, left); // This specifies to float this column left
-		  	margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+			@include span(3 of 9);
 		  	text-align: left;
 
 		  	li {
@@ -1885,9 +1827,7 @@ dl.variation {
 		}
 
 		.panel {
-			@include gs-span(c, 4, 9, (1, 9));
-		  	@include gs-float(c, left); // This specifies to float this column left
-		  	margin-right: 0;
+			@include span(last 6 of 9);
 		  	margin-top: 0;
 		}
 	}

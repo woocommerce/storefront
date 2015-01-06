@@ -8,7 +8,7 @@
 @import 'bourbon';
 @import '../../../sass/modules/variables';
 @import '../../../sass/modules/mixins';
-@import '../../../sass/vendor/gridset';
+@import 'susy';
 
 .woocommerce,
 .woocommerce-page {
@@ -123,8 +123,7 @@
 			}
 
 			.form-contribution_comment {
-				@include gs-span(c, 5, 9, (4, 9));
-				float: none;
+				@include span(last 5 of 6);
 				margin-bottom: 3.631em;
 				padding-top: 1.618em;
 				border-top: 1px solid $color_border;

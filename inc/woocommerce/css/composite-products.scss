@@ -8,7 +8,7 @@
 @import 'bourbon';
 @import '../../../sass/modules/variables';
 @import '../../../sass/modules/mixins';
-@import '../../../sass/vendor/gridset';
+@import 'susy';
 
 .single-product div.product {
 	.component_selections {
@@ -20,8 +20,7 @@
 
 			.composited_product_images,
 			.images {
-				@include gs-span(c, 5, 5, (5, 9));
-				@include gs-float(c, left);
+				@include span(1 of 5);
 
 				a {
 					margin: 0;
@@ -34,8 +33,7 @@
 			}
 
 			.component_data {
-				@include gs-span(c, 6, 9, (5, 9));
-				@include gs-float(c, right);
+				@include span(4 of 5);
 				margin-left: 0;
 			}
 		}
@@ -56,8 +54,7 @@
 			.component_option_thumbnail {
 				padding: 0;
 				margin: 0;
-				@include gs-span(c, 5, 5, (5, 9));
-				@include gs-float(c, left, (5, 9));
+				@include span(1 of 5);
 				margin-bottom: 1.618em;
 				box-shadow: none !important;
 				opacity: 0.5;
@@ -86,8 +83,7 @@
 			.component_summary {
 				.composited_product_images,
 				.images {
-					@include gs-span(c, 5, 6, (5, 12));
-					@include gs-float(c, left);
+					@include span(1 of 8);
 
 					a {
 						margin: 0;
@@ -95,8 +91,7 @@
 				}
 
 				.component_data {
-					@include gs-span(c, 7, 12, (5, 12));
-					@include gs-float(c, right);
+					@include span(last 6 of 8);
 					margin-left: 0;
 				}
 			}
@@ -104,11 +99,10 @@
 		.component_option_thumbnails {
 
 			.component_option_thumbnail {
-				@include gs-span(c, 5, 5, (5, 12));
-				@include gs-float(c, left, (5, 12));
+				@include span(1 of 8);
 
 				&:nth-child(5n) {
-					margin-right: gs-adjust(c, gs-gutter(c), (5, 12), true);
+					margin-right: gutter(8);
 				}
 
 				&:nth-child(8n) {
@@ -126,8 +120,7 @@
 			.component_summary {
 				.composited_product_images,
 				.images {
-					@include gs-span(c, 1, 2, (1, 9));
-					@include gs-float(c, left);
+					@include span(1 of 9);
 
 					a {
 						margin: 0;
@@ -135,9 +128,7 @@
 				}
 
 				.component_data {
-					@include gs-span(c, 3, 9, (1, 9));
-					@include gs-float(c, right);
-					margin-left: 0;
+					@include span(last 7 of 9);
 				}
 			}
 		}
@@ -145,11 +136,10 @@
 		.component_option_thumbnails {
 
 			.component_option_thumbnail {
-				@include gs-span(c, 1, 1, (1, 9));
-				@include gs-float(c, left, (1, 9));
+				@include span(1 of 9);
 
 				&:nth-child(5n) {
-					margin-right: gs-adjust(c, gs-gutter(c), (1, 9), true);
+					margin-right: gutter(9);
 				}
 
 				&:nth-child(9n) {
@@ -165,8 +155,7 @@
 				.component_summary {
 					.composited_product_images,
 					.images {
-						@include gs-span(c, 1, 2);
-						@include gs-float(c, left);
+						@include span(1 of 12);
 
 						a {
 							margin: 0;
@@ -174,21 +163,18 @@
 					}
 
 					.component_data {
-						@include gs-span(c, 3, 12);
-						@include gs-float(c, right);
-						margin-left: 0;
+						@include span(last 3 of 12);
 					}
 				}
 			}
 
 			.component_option_thumbnails {
 				.component_option_thumbnail {
-					@include gs-span(c, 1, 2, (1, 12));
-					@include gs-float(c, left, (1, 12));
+					@include span(last 1 of 12);
 
 					&:nth-child(5n),
 					&:nth-child(8n) {
-						margin-right: gs-adjust(c, gs-gutter(c), (1, 12), true);
+						margin-right: gutter();
 					}
 
 					&:nth-child(6n) {
