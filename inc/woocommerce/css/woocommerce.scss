@@ -250,6 +250,21 @@ ul.products {
 		.product_meta {
 			font-size: .857em;
 		}
+
+		p.stock {
+			&:before {
+				font-family: "FontAwesome";
+				margin-right: .53em;
+			}
+
+			&.in-stock:before {
+				content: "\f118";
+			}
+
+			&.out-of-stock:before {
+				content: "\f119";
+			}
+		}
 	}
 }
 

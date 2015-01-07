@@ -425,7 +425,7 @@ body {
   color: #5a6567;
   background-position: center center;
   position: relative;
-  z-index: 99; }
+  z-index: 999; }
   .site-header .site-logo-anchor {
     display: block; }
     .site-header .site-logo-anchor img {
