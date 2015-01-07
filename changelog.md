@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2015.01.06* - 1.2.3
+### *2015.01.07* - 1.2.3
 * **Fix** - Button border in WooCommerce messages when using the Storefront Designer extension.
 * **Tweak** - Stock icon.
 * **Dev** - Grid system now powered by Susy.

@@ -91,7 +91,7 @@ module.exports = function( grunt ) {
 					'style.scss',
 					'inc/woocommerce/css/*.scss',
 					'sass/modules/*.scss',
-					'sass/partials/*.scss',
+					'sass/partials/*.scss'
 				],
 				tasks: [
 					'sass',
