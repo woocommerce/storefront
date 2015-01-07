@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.01.08* - 1.2.4
+* **Dev** - Reorganised sass files.
+
 ### *2015.01.07* - 1.2.3
 * **Fix** - Button border in WooCommerce messages when using the Storefront Designer extension.
 * **Tweak** - Stock icon.
