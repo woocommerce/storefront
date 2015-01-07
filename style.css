@@ -866,7 +866,14 @@ input[type="submit"],
   input[type="submit"].disabled,
   .button.disabled,
   .added_to_cart.disabled {
-    opacity: 0.5; }
+    opacity: 0.5 !important; }
+    button.disabled:hover,
+    input[type="button"].disabled:hover,
+    input[type="reset"].disabled:hover,
+    input[type="submit"].disabled:hover,
+    .button.disabled:hover,
+    .added_to_cart.disabled:hover {
+      opacity: 0.5 !important; }
 
 input[type="checkbox"],
 input[type="radio"] {
