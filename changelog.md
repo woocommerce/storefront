@@ -1,6 +1,7 @@
 # Storefront Changelog
 
 ### *2015.01.08* - 1.2.4
+* **Tweak** - Improved font size on handheld devices.
 * **Dev** - Reorganised sass files.
 
 ### *2015.01.07* - 1.2.3

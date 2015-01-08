@@ -32,19 +32,6 @@ textarea {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (max-width: 568px) {
-	/**
-	 * Adjust the font size on mobile phones
-	 */
-	body,
-	button,
-	input,
-	select,
-	textarea {
-		font-size: 1.387em;
-	}
-}
-
 h1,
 h2,
 h3,
