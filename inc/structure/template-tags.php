@@ -26,7 +26,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 				'title'				=> __( 'Product Categories', 'storefront' ),
 				) );
 
-			echo '<section class="storefront-product-section">';
+			echo '<section class="storefront-product-section storefront-product-categories">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
 			echo do_shortcode( '[product_categories number="' . $args['limit'] . '" columns="' . $args['columns'] . '" orderby="' . $args['orderby'] . '" parent="' . $args['child_categories'] . '"]' );
@@ -54,7 +54,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 				'title'				=> __( 'Recent Products', 'storefront' ),
 				) );
 
-			echo '<section class="storefront-product-section">';
+			echo '<section class="storefront-product-section storefront-recent-products">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
 			echo do_shortcode( '[recent_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
@@ -82,7 +82,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'title'				=> __( 'Featured Products', 'storefront' ),
 				) );
 
-			echo '<section class="storefront-product-section">';
+			echo '<section class="storefront-product-section storefront-feautred-products">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
 			echo do_shortcode( '[featured_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
@@ -110,7 +110,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				'title'				=> __( 'Top Rated Products', 'storefront' ),
 				) );
 
-			echo '<section class="storefront-product-section">';
+			echo '<section class="storefront-product-section storefront-popular-products">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
 			echo do_shortcode( '[top_rated_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
@@ -138,7 +138,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				'title'				=> __( 'On Sale', 'storefront' ),
 				) );
 
-			echo '<section class="storefront-product-section">';
+			echo '<section class="storefront-product-section storefront-on-sale-products">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
 			echo do_shortcode( '[sale_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );

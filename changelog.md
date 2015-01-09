@@ -3,6 +3,7 @@
 ### *2015.01.08* - 1.2.4
 * **Tweak** - Improved font size on handheld devices.
 * **Dev** - Reorganised sass files.
+* **Dev** - Added some handy class names to homepage product sections.
 
 ### *2015.01.07* - 1.2.3
 * **Fix** - Button border in WooCommerce messages when using the Storefront Designer extension.
