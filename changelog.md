@@ -2,6 +2,7 @@
 
 ### *2015.01.08* - 1.2.4
 * **Tweak** - Improved font size on handheld devices.
+* **Tweak** - Wishlist table design.
 * **Dev** - Reorganised sass files.
 * **Dev** - Added some handy class names to homepage product sections.
 * **Dev** - Added `storefront_menu_toggle_text` filter.
