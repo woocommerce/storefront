@@ -5,6 +5,7 @@
 * **Dev** - Reorganised sass files.
 * **Dev** - Added some handy class names to homepage product sections.
 * **Dev** - Added `storefront_menu_toggle_text` filter.
+* **Dev** - Updated how WooCommerce styles are dequeued.
 
 ### *2015.01.07* - 1.2.3
 * **Fix** - Button border in WooCommerce messages when using the Storefront Designer extension.
