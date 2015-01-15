@@ -161,6 +161,7 @@
 				@include span(2 of 8);
 			}
 
+			.comment-content,
 			#respond {
 				@include span(last 6 of 8);
 			}

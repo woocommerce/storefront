@@ -1636,6 +1636,7 @@ object {
       width: 20%;
       float: left;
       margin-right: 6.66667%; }
+    .comment-list ol.children .comment-content,
     .comment-list ol.children #respond {
       width: 73.33333%;
       float: right;

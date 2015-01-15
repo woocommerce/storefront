@@ -1,6 +1,7 @@
 # Storefront Changelog
 
-### *2015.01.08* - 1.2.4
+### *2015.01.15* - 1.2.4
+* **Fix** - First level threaded comment layout.
 * **Tweak** - Improved font size on handheld devices.
 * **Tweak** - Wishlist table design.
 * **Dev** - Reorganised sass files.

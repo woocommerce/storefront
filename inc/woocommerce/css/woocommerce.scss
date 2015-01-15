@@ -306,7 +306,7 @@ ul.products {
 			ul.children {
 				border-top: 1px solid $color_border;
 				@include span(last 5 of 6);
-				padding-top: 1.618em;
+				padding-top: 2.618em;
 			}
 		}
 	}
