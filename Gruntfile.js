@@ -176,7 +176,8 @@ module.exports = function( grunt ) {
 					'.htaccess',
 					'!Gruntfile.js',
 					'!package.json',
-					'!node_modules/**'
+					'!node_modules/**',
+					'!.DS_Store'
 				],
 				dest: 'storefront',
 				expand: true,
