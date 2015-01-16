@@ -52,13 +52,15 @@ if ( ! function_exists( 'storefront_product_search' ) ) {
  * @uses  is_woocommerce_activated() check if WooCommerce is activated
  * @return void
  */
-function storefront_header_cart() {
-	if ( is_woocommerce_activated() ) { ?>
-		<ul class="site-header-cart menu">
-			<?php storefront_cart_link(); ?>
-			<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-		</ul>
-	<?php
+if ( ! function_exists( 'storefront_header_cart' ) ) {
+	function storefront_header_cart() {
+		if ( is_woocommerce_activated() ) { ?>
+			<ul class="site-header-cart menu">
+				<?php storefront_cart_link(); ?>
+				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+			</ul>
+		<?php
+		}
 	}
 }
 
