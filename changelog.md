@@ -1,5 +1,7 @@
 # Storefront Changelog
 
+### *2015.01.16* - 1.2.5
+
 ### *2015.01.15* - 1.2.4
 * **Fix** - First level threaded comment layout.
 * **Tweak** - Improved font size on handheld devices.

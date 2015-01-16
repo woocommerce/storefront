@@ -98,7 +98,7 @@ module.exports = function( grunt ) {
 				],
 				tasks: [
 					'sass',
-					'cssmin'
+					'css'
 				]
 			},
 			js: {
