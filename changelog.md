@@ -1,6 +1,7 @@
 # Storefront Changelog
 
 ### *2015.01.16* - 1.2.5
+* **Dev** - `storefront_header_cart()` is now pluggable.
 
 ### *2015.01.15* - 1.2.4
 * **Fix** - First level threaded comment layout.
