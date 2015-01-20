@@ -468,6 +468,12 @@ ul.products {
 				opacity: 0.25;
 				content: "\f114";
 			}
+
+			&.current-cat {
+				&:before {
+					content: "\f115";
+				}
+			}
 		}
 	}
 

@@ -210,17 +210,17 @@ class Storefront_Welcome {
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
 				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/smart-coupons.jpg'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Smart Coupons', 'storefront' ); ?></h4>
 				<p><?php _e( 'Smart coupons provide the most comprehensive and powerful solution for discount coupons, gift certificates, store credits and vouchers. It also allows customers to buy credits for themselves or gift to others.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
 				<p><?php _e( 'Allows guests and customers to create and add products to an unlimited number of Wishlists. From birthdays to weddings and everything in between, WooCommerce Wishlists are a welcome addition to any WooCommerce store.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
 			</div>
 
@@ -229,17 +229,17 @@ class Storefront_Welcome {
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/designer.jpg'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
 				<p><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing the header layout, button styles, typographical schemes/scales and more.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-designer/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-designer?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wc-customiser.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Storefront WooCommerce Customiser', 'storefront' ); ?></h4>
 				<p><?php _e( 'Gives you further control over the look and feel of your shop. Change the product archive and single layouts, toggle various shop components, enable a distraction free checkout design and more.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-woocommerce-customizer/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-woocommerce-customizer?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Storefront Parallax Hero', 'storefront' ); ?></h4>
 				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-parallax-hero/" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-parallax-hero?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
 			</div>
 

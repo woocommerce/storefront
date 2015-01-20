@@ -1,6 +1,7 @@
 # Storefront Changelog
 
-### *2015.01.16* - 1.2.5
+### *2015.01.20* - 1.2.5
+* **Tweak** - Styling for current post / product category in widgets.
 * **Dev** - `storefront_header_cart()` is now pluggable.
 
 ### *2015.01.15* - 1.2.4
