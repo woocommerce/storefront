@@ -35,6 +35,10 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		require_once dirname( __FILE__ ) . '/controls/layout.php';
 		require_once dirname( __FILE__ ) . '/controls/divider.php';
 
+		if ( apply_filters( 'storefront_customizer_more', true ) ) {
+			require_once dirname( __FILE__ ) . '/controls/more.php';
+		}
+
 		/**
 		 * Add the typography section
 	     */
@@ -301,5 +305,27 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 			'settings' => 'storefront_layout',
 			'priority' => 2,
 		) ) );
+
+		/**
+		 * More
+		 */
+		if ( apply_filters( 'storefront_customizer_more', true ) ) {
+			$wp_customize->add_section( 'storefront_more' , array(
+				'title'      	=> __( 'More', 'storefront' ),
+				'priority'   	=> 999,
+			) );
+
+			$wp_customize->add_setting( 'storefront_more', array(
+				'default'    		=> null,
+				'sanitize_callback' => 'sanitize_text_field',
+			) );
+
+			$wp_customize->add_control( new More_Storefront_Control( $wp_customize, 'storefront_more', array(
+				'label'    => __( 'Looking for more options?', 'storefront' ),
+				'section'  => 'storefront_more',
+				'settings' => 'storefront_more',
+				'priority' => 1,
+			) ) );
+		}
 	}
 }

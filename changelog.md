@@ -2,6 +2,7 @@
 
 ### *2015.01.20* - 1.2.5
 * **Tweak** - Styling for current post / product category in widgets.
+* **Tweak** - Added an informational section to the Customizer.
 * **Dev** - `storefront_header_cart()` is now pluggable.
 
 ### *2015.01.15* - 1.2.4

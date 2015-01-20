@@ -198,7 +198,7 @@ class Storefront_Welcome {
 	 */
 	public function storefront_welcome_addons() {
 		?>
-		<div class="feature-section col three-col" style="padding-top: 1.618em; clear: both;">
+		<div id="add-ons" class="feature-section col three-col" style="padding-top: 1.618em; clear: both;">
 			<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>
 
 			<p>
@@ -206,25 +206,6 @@ class Storefront_Welcome {
 			</p>
 
 			<div class="col-1">
-				<h4><?php _e( 'WooCommerce Extensions', 'storefront' ); ?></h4>
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" width="440" />
-				<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
-
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/smart-coupons.jpg'; ?>" class="image-50" width="440" />
-				<h4><?php _e( 'WooCommerce Smart Coupons', 'storefront' ); ?></h4>
-				<p><?php _e( 'Smart coupons provide the most comprehensive and powerful solution for discount coupons, gift certificates, store credits and vouchers. It also allows customers to buy credits for themselves or gift to others.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
-
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" class="image-50" width="440" />
-				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows guests and customers to create and add products to an unlimited number of Wishlists. From birthdays to weddings and everything in between, WooCommerce Wishlists are a welcome addition to any WooCommerce store.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
-
-			</div>
-
-			<div class="col-2">
 				<h4><?php _e( 'Storefront Extensions', 'storefront' ); ?></h4>
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/designer.jpg'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
@@ -241,6 +222,27 @@ class Storefront_Welcome {
 				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-parallax-hero?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
 
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php _e( 'View all Storefront extensions &rarr;', 'storefront' ); ?></a></p>
+			</div>
+
+			<div class="col-2">
+				<h4><?php _e( 'WooCommerce Extensions', 'storefront' ); ?></h4>
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
+				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/smart-coupons.jpg'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'WooCommerce Smart Coupons', 'storefront' ); ?></h4>
+				<p><?php _e( 'Smart coupons provide the most comprehensive and powerful solution for discount coupons, gift certificates, store credits and vouchers. It also allows customers to buy credits for themselves or gift to others.', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
+				<p><?php _e( 'Allows guests and customers to create and add products to an unlimited number of Wishlists. From birthdays to weddings and everything in between, WooCommerce Wishlists are a welcome addition to any WooCommerce store.', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'Buy now', 'storefront' ); ?></a></p>
+
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/woocommerce-extensions/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php _e( 'View all WooCommerce extensions &rarr;', 'storefront' ); ?></a></p>
 			</div>
 
 			<div class="col-3 last-feature">
