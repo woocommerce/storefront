@@ -102,7 +102,7 @@ if ( ! function_exists( 'storefront_paging_nav' ) ) {
 
 		echo '<nav class="storefront-pagination">';
 
-		echo paginate_links( array(
+		echo wp_kses_post( paginate_links( array(
 			'base'					=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
 			'format'				=> '?paged=%#%',
 			'current'				=> max( 1, get_query_var( 'paged' ) ),
@@ -110,8 +110,8 @@ if ( ! function_exists( 'storefront_paging_nav' ) ) {
 			'next_text'				=> __( '&rarr;', 'storefront' ),
 			'type'					=> 'list',
 			'total'					=> $wp_query->max_num_pages,
-		    'before_page_number'	=> '<span class="screen-reader-text">' . $translated . ' </span>'
-		) );
+			'before_page_number'	=> '<span class="screen-reader-text">' . esc_attr( $translated ) . ' </span>',
+		) ) );
 
 		echo '</nav>';
 	}
