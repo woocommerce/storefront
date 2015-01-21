@@ -1,6 +1,7 @@
 # Storefront Changelog
 
 ### *2015.01.20* - 1.2.5
+* **Tweak** - Widget region order in dashboard.
 * **Tweak** - Post archive pagination is now numbered.
 * **Tweak** - Styling for current post / product category in widgets.
 * **Tweak** - Added an informational section to the Customizer.
