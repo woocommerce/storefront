@@ -38,6 +38,7 @@
 			.site-header-cart {
 				@include span(last 3 of 12);
 				margin-bottom: 0;
+				padding-top: 1.618em;
 			}
 		}
 	}
@@ -53,7 +54,7 @@
 	.site-search,
 	.site-header-cart,
 	.site-logo-anchor {
-		margin-bottom: 2.618em;
+		margin-bottom: 1em;
 	}
 
 	.site-header {

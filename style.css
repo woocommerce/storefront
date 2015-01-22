@@ -786,7 +786,8 @@ a {
     width: 21.73913%;
     float: right;
     margin-right: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    padding-top: 1.618em; }
 
   .site-branding .site-description {
     margin-bottom: 0;
@@ -796,7 +797,7 @@ a {
   .site-search,
   .site-header-cart,
   .site-logo-anchor {
-    margin-bottom: 2.618em; }
+    margin-bottom: 1em; }
 
   .site-header .subscribe-and-connect-connect {
     float: right;
@@ -1207,7 +1208,8 @@ fieldset {
    * Primary Navigation
    */
   .main-navigation {
-    position: relative; }
+    position: relative;
+    padding-top: 1.618em; }
     .main-navigation ul.menu > li > a,
     .main-navigation ul.nav-menu > li > a {
       padding: 0 1em 2.244em; }
