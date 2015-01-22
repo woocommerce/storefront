@@ -47,6 +47,7 @@
 
 .header-widget-region {
 	margin-bottom: 4.236em;
+	@include clearfix;
 
 	.widget {
 		margin: 0;
