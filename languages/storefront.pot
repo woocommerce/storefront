@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.2.4\n"
+"Project-Id-Version: Storefront 1.2.5\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-01-15 15:49:29+00:00\n"
+"POT-Creation-Date: 2015-01-22 15:45:49+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -29,62 +29,6 @@ msgstr ""
 
 #: 404.php:43
 msgid "Try looking in the monthly archives."
-msgstr ""
-
-#: archive.php:29
-msgid "Author: %s"
-msgstr ""
-
-#: archive.php:32
-msgid "Day: %s"
-msgstr ""
-
-#: archive.php:35
-msgid "Month: %s"
-msgstr ""
-
-#: archive.php:38
-msgid "Year: %s"
-msgstr ""
-
-#: archive.php:41
-msgid "Asides"
-msgstr ""
-
-#: archive.php:44
-msgid "Galleries"
-msgstr ""
-
-#: archive.php:47
-msgid "Images"
-msgstr ""
-
-#: archive.php:50
-msgid "Videos"
-msgstr ""
-
-#: archive.php:53
-msgid "Quotes"
-msgstr ""
-
-#: archive.php:56
-msgid "Links"
-msgstr ""
-
-#: archive.php:59
-msgid "Statuses"
-msgstr ""
-
-#: archive.php:62
-msgid "Audios"
-msgstr ""
-
-#: archive.php:65
-msgid "Chats"
-msgstr ""
-
-#: archive.php:68
-msgid "Archives"
 msgstr ""
 
 #: comments.php:33 comments.php:51
@@ -308,135 +252,158 @@ msgid ""
 msgstr ""
 
 #: inc/admin/welcome-screen.php:209
-msgid "WooCommerce Extensions"
-msgstr ""
-
-#: inc/admin/welcome-screen.php:211
-msgid "WooCommerce Bookings"
-msgstr ""
-
-#: inc/admin/welcome-screen.php:212
-msgid ""
-"Allows you to sell your time or date based bookings, adding a new product "
-"type to your WooCommerce site. Perfect for those wanting to offer "
-"appointments, services or rentals."
-msgstr ""
-
-#: inc/admin/welcome-screen.php:213 inc/admin/welcome-screen.php:218
-#: inc/admin/welcome-screen.php:223 inc/admin/welcome-screen.php:232
-#: inc/admin/welcome-screen.php:237 inc/admin/welcome-screen.php:242
-msgid "Buy now"
-msgstr ""
-
-#: inc/admin/welcome-screen.php:216
-msgid "WooCommerce Smart Coupons"
-msgstr ""
-
-#: inc/admin/welcome-screen.php:217
-msgid ""
-"Smart coupons provide the most comprehensive and powerful solution for "
-"discount coupons, gift certificates, store credits and vouchers. It also "
-"allows customers to buy credits for themselves or gift to others."
-msgstr ""
-
-#: inc/admin/welcome-screen.php:221
-msgid "WooCommerce Wishlists"
-msgstr ""
-
-#: inc/admin/welcome-screen.php:222
-msgid ""
-"Allows guests and customers to create and add products to an unlimited "
-"number of Wishlists. From birthdays to weddings and everything in between, "
-"WooCommerce Wishlists are a welcome addition to any WooCommerce store."
-msgstr ""
-
-#: inc/admin/welcome-screen.php:228
 msgid "Storefront Extensions"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:230
+#: inc/admin/welcome-screen.php:211
 msgid "Storefront Designer"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:231
+#: inc/admin/welcome-screen.php:212
 msgid ""
 "Adds a bunch of additional appearance settings allowing you to further "
 "tweak and perfect your Storefront design by changing the header layout, "
 "button styles, typographical schemes/scales and more."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:235
+#: inc/admin/welcome-screen.php:213 inc/admin/welcome-screen.php:218
+#: inc/admin/welcome-screen.php:223 inc/admin/welcome-screen.php:233
+#: inc/admin/welcome-screen.php:238 inc/admin/welcome-screen.php:243
+msgid "Buy now"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:216
 msgid "Storefront WooCommerce Customiser"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:236
+#: inc/admin/welcome-screen.php:217
 msgid ""
 "Gives you further control over the look and feel of your shop. Change the "
 "product archive and single layouts, toggle various shop components, enable "
 "a distraction free checkout design and more."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:240
+#: inc/admin/welcome-screen.php:221
 msgid "Storefront Parallax Hero"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:241
+#: inc/admin/welcome-screen.php:222
 msgid ""
 "Adds a parallax hero component to your homepage. Easily change the colors / "
 "copy and give your visitors a warm welcome!"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:247
+#: inc/admin/welcome-screen.php:225
+msgid "View all Storefront extensions &rarr;"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:229
+msgid "WooCommerce Extensions"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:231
+msgid "WooCommerce Bookings"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:232
+msgid ""
+"Allows you to sell your time or date based bookings, adding a new product "
+"type to your WooCommerce site. Perfect for those wanting to offer "
+"appointments, services or rentals."
+msgstr ""
+
+#: inc/admin/welcome-screen.php:236
+msgid "WooCommerce Smart Coupons"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:237
+msgid ""
+"Smart coupons provide the most comprehensive and powerful solution for "
+"discount coupons, gift certificates, store credits and vouchers. It also "
+"allows customers to buy credits for themselves or gift to others."
+msgstr ""
+
+#: inc/admin/welcome-screen.php:241
+msgid "WooCommerce Wishlists"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:242
+msgid ""
+"Allows guests and customers to create and add products to an unlimited "
+"number of Wishlists. From birthdays to weddings and everything in between, "
+"WooCommerce Wishlists are a welcome addition to any WooCommerce store."
+msgstr ""
+
+#: inc/admin/welcome-screen.php:245
+msgid "View all WooCommerce extensions &rarr;"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:249
 msgid "Can't find a feature?"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:248
+#: inc/admin/welcome-screen.php:250
 msgid ""
 "Please suggest and vote on ideas / feature requests at the %sStorefront "
 "Ideasboard%s. The most popular ideas will see prioritised development."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:256
+#: inc/admin/welcome-screen.php:258
 msgid ""
 "There are literally hundreds of awesome extensions available for you to "
 "use. Looking for Table Rate Shipping? Subscriptions? Product Add-ons? You "
 "can find these and more in the WooCommerce extension shop. %sGo shopping%s."
 msgstr ""
 
+#: inc/customizer/controls/more.php:16
+msgid ""
+"There's a range of Storefront extensions available to put additional power "
+"in your hands. Check out the %sStorefront%s page in your dashboard for more "
+"information."
+msgstr ""
+
 #: inc/customizer/controls.php:25
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/controls.php:29 inc/functions/setup.php:108
+#: inc/customizer/controls.php:29 inc/functions/setup.php:98
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/controls.php:42
+#: inc/customizer/controls.php:46
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer/controls.php:145
+#: inc/customizer/controls.php:149
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/controls.php:147
+#: inc/customizer/controls.php:151
 msgid "Customise the look & feel of your web site footer."
 msgstr ""
 
-#: inc/customizer/controls.php:214
+#: inc/customizer/controls.php:218
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/controls.php:216
+#: inc/customizer/controls.php:220
 msgid "Customise the look & feel of your web site buttons."
 msgstr ""
 
-#: inc/customizer/controls.php:283
+#: inc/customizer/controls.php:287
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/controls.php:293
+#: inc/customizer/controls.php:297
 msgid "General layout"
+msgstr ""
+
+#: inc/customizer/controls.php:314
+msgid "More"
+msgstr ""
+
+#: inc/customizer/controls.php:324
+msgid "Looking for more options?"
 msgstr ""
 
 #: inc/functions/setup.php:60 inc/structure/header.php:51
@@ -447,7 +414,7 @@ msgstr ""
 msgid "Secondary Menu"
 msgstr ""
 
-#: inc/functions/setup.php:98
+#: inc/functions/setup.php:108
 msgid "Sidebar"
 msgstr ""
 
@@ -500,19 +467,19 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: inc/structure/post.php:104
-msgid "Posts navigation"
+#: inc/structure/post.php:101
+msgid "Page"
 msgstr ""
 
-#: inc/structure/post.php:108
-msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+#: inc/structure/post.php:109
+msgid "&larr;"
 msgstr ""
 
-#: inc/structure/post.php:112
-msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+#: inc/structure/post.php:110
+msgid "&rarr;"
 msgstr ""
 
-#: inc/structure/post.php:135
+#: inc/structure/post.php:134
 msgid "Post navigation"
 msgstr ""
 
@@ -560,12 +527,12 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Storefront is the perfect theme for your next eCommerce project. Designed "
+"Storefront is the perfect theme for your next WooCommerce project. Designed "
 "and developed by WooThemes, it features a deep integration with our market "
 "leading WooCommerce plugin, several layout & color options to personalise "
 "your shop, multiple widget regions, a responsive design and much more. "
 "Developers will love it's lean and extensible codebase making it a joy to "
-"customise and extend."
+"customise and extend. Looking for a WooCommerce theme? Look no further!"
 msgstr ""
 
 #. Author of the plugin/theme
@@ -584,16 +551,6 @@ msgstr ""
 msgid "Homepage"
 msgstr ""
 
-#: archive.php:35
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: archive.php:38
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
 #: comments.php:26
 msgctxt "comments title"
 msgid "One thought on &ldquo;%2$s&rdquo;"
@@ -601,22 +558,22 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/structure/post.php:138
+#: inc/structure/post.php:137
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr ""
 
-#: inc/structure/post.php:139
+#: inc/structure/post.php:138
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/structure/post.php:165
+#: inc/structure/post.php:164
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/structure/post.php:170
+#: inc/structure/post.php:169
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
