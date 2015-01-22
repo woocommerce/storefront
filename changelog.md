@@ -6,6 +6,7 @@
 * **Tweak** - Styling for current post / product category in widgets.
 * **Tweak** - Added an informational section to the Customizer.
 * **Tweak** - Link color in the sidebar.
+* **Tweak** - Breadcrumb position.
 * **Dev** - `storefront_header_cart()` is now pluggable.
 * **Dev** - Make use of WordPress 4.1 functions `the_archive_title()` and `the_archive_description()`.
 
