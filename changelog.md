@@ -1,6 +1,7 @@
 # Storefront Changelog
 
-### *2015.01.20* - 1.2.5
+### *2015.01.22* - 1.2.5
+* **Fix** - Review form input alignment.
 * **Tweak** - Widget region order in dashboard.
 * **Tweak** - Post archive pagination is now numbered.
 * **Tweak** - Styling for current post / product category in widgets.
