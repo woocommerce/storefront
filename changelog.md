@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.01.23* - 1.2.6
+* **Fix** - Margin on site title / logo.
+
 ### *2015.01.22* - 1.2.5
 * **Fix** - Review form input alignment.
 * **Tweak** - Widget region order in dashboard.
