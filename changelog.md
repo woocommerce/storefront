@@ -2,6 +2,7 @@
 
 ### *2015.01.23* - 1.2.6
 * **Fix** - Margin on site title / logo.
+* **Dev** - Added `storefront_sanitize_choices()`.
 
 ### *2015.01.22* - 1.2.5
 * **Fix** - Review form input alignment.
