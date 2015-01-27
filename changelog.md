@@ -1,7 +1,8 @@
 # Storefront Changelog
 
-### *2015.01.23* - 1.2.6
+### *2015.01.27* - 1.2.6
 * **Fix** - Margin on site title / logo.
+* **Tweak** - Select width in WooCommerce forms.
 * **Dev** - Added `storefront_sanitize_choices()`.
 
 ### *2015.01.22* - 1.2.5
