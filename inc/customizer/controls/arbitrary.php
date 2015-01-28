@@ -10,7 +10,7 @@ class Arbitrary_Storefront_Control extends WP_Customize_Control {
 		switch ( $this->type ) {
 			default:
 			case 'text' :
-				echo '<p class="description">' . $this->description . '</p>';
+				echo '<p class="description">' . esc_html( $this->description ) . '</p>';
 			break;
 
 			case 'heading':
