@@ -33,7 +33,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Custom controls
 		 */
 		require_once dirname( __FILE__ ) . '/controls/layout.php';
-		require_once dirname( __FILE__ ) . '/controls/divider.php';
+		require_once dirname( __FILE__ ) . '/controls/arbitrary.php';
 
 		if ( apply_filters( 'storefront_customizer_more', true ) ) {
 			require_once dirname( __FILE__ ) . '/controls/more.php';
@@ -300,10 +300,10 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 			'priority' => 1,
 		) ) );
 
-		$wp_customize->add_control( new Divider_Storefront_Control( $wp_customize, 'storefront_layout_divider', array(
-			'section'  => 'storefront_layout',
-			'settings' => 'storefront_layout',
-			'priority' => 2,
+		$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_divider', array(
+			'section'  	=> 'storefront_layout',
+			'type' 		=> 'divider',
+			'priority' 	=> 2,
 		) ) );
 
 		/**

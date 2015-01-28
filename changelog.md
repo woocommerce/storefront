@@ -4,6 +4,7 @@
 * **Fix** - Margin on site title / logo.
 * **Tweak** - Select width in WooCommerce forms.
 * **Dev** - Added `storefront_sanitize_choices()`.
+* **Dev** - Tweaked the divider Customizer control to allow text/title.
 
 ### *2015.01.22* - 1.2.5
 * **Fix** - Review form input alignment.
