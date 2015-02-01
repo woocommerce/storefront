@@ -13,15 +13,14 @@
 .composite_summary .summary_element {
 
 	.summary_element_wrapper {
-		box-shadow: 0px 0px 0px 3px rgba( 0, 0, 0, 0 );
+		box-shadow: 0px 0px 0px 4px rgba( 0, 0, 0, 0 );
 
-		&:hover,
 		&.selected {
-			box-shadow: 0px 0px 0px 3px rgba( 0, 0, 0, 0.07 );
+			box-shadow: 0px 0px 0px 4px rgba( 0, 0, 0, 0.06 );
 		}
 
 		&.disabled:hover {
-			box-shadow: 0px 0px 0px 3px rgba( 0, 0, 0, 0 );
+			box-shadow: 0px 0px 0px 4px rgba( 0, 0, 0, 0 );
 		}
 	}
 }
@@ -70,15 +69,10 @@
 
 			.component_option_thumbnail {
 				margin-left: 5px; /* v2.5.5 compat */
-				box-shadow: 0px 0px 0px 3px rgba( 0, 0, 0, 0 );
+				box-shadow: 0px 0px 0px 4px rgba( 0, 0, 0, 0 );
 
-				&:hover,
 				&.selected {
-					box-shadow: 0px 0px 0px 3px rgba( 0, 0, 0, 0.07 );
-				}
-
-				&.disabled:hover {
-					box-shadow: 0px 0px 0px 3px rgba( 0, 0, 0, 0 );
+					box-shadow: 0px 0px 0px 4px rgba( 0, 0, 0, 0.06 );
 				}
 			}
 		}
