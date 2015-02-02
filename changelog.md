@@ -1,8 +1,9 @@
 # Storefront Changelog
 
-### *2015.01.27* - 1.2.6
+### *2015.02.02* - 1.2.6
 * **Fix** - Margin on site title / logo.
 * **Tweak** - Select width in WooCommerce forms.
+* **Tweak** - Composite Products integration.
 * **Dev** - Added `storefront_sanitize_choices()`.
 * **Dev** - Tweaked the divider Customizer control to allow text/title.
 
