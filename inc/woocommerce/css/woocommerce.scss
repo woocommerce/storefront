@@ -1651,7 +1651,7 @@ dl.variation {
 	/**
 	 * Checkout
 	 */
-	#customer_details {
+	.col2-set {
 		@include span(5 of 9);
 
 		.form-row-first {
@@ -1666,13 +1666,17 @@ dl.variation {
 		.col-2 {
 			margin-bottom: 1.618em;
 		}
+
+		& + #customer_details {
+			display: none;
+		}
 	}
 
 	#order_review_heading,
 	#order_review {
 		@include span(last 4 of 9);
 		border: 3px solid $color_links;
-		clear: none;
+		clear: right;
 	}
 
 	#order_review_heading {
@@ -1692,7 +1696,7 @@ dl.variation {
 	}
 
 	.page-template-template-fullwidth-php {
-		#customer_details {
+		.col2-set {
 			@include span(6 of 12);
 
 			.form-row-first {
