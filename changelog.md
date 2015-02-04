@@ -6,7 +6,7 @@
 * **Fix** - Layout selector in Firefox.
 * **Tweak** - Product Reviews Pro integration.
 * **Tweak** - Select width in WooCommerce forms.
-* **Tweak** - Composite Products integration.
+* **Tweak** - Composite Products integration improvements.
 * **Tweak** - Removed header widget region bottom margin.
 * **Tweak** - Increased size of photos displayed in the WooCommerce Photography extension.
 * **Dev** - Added `storefront_sanitize_choices()`.
