@@ -29,11 +29,11 @@
 				text-align: left;
 
 				.photography-image {
-					@include span(1 of 6);
+					@include span(3 of 6);
 				}
 
 				.photography-content {
-					@include span(last 5 of 6);
+					@include span(last 3 of 6);
 					margin-left: 0;
 				}
 
