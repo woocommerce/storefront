@@ -7,6 +7,7 @@
 * **Tweak** - Product Reviews Pro integration.
 * **Tweak** - Select width in WooCommerce forms.
 * **Tweak** - Composite Products integration.
+* **Tweak** - Removed header widget region bottom margin.
 * **Dev** - Added `storefront_sanitize_choices()`.
 * **Dev** - Tweaked the divider Customizer control to allow text/title.
 
