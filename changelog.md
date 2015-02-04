@@ -3,6 +3,7 @@
 ### *2015.02.02* - 1.2.6
 * **Fix** - Margin on site title / logo.
 * **Fix** - Tweaked some css selectors in the checkout to improve compatiiblity with Amazon Payments Advanced gateway.
+* **Fix** - Layout selector in Firefox.
 * **Tweak** - Select width in WooCommerce forms.
 * **Tweak** - Composite Products integration.
 * **Dev** - Added `storefront_sanitize_choices()`.

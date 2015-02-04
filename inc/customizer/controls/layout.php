@@ -9,7 +9,7 @@ class Layout_Picker_Storefront_Control extends WP_Customize_Control {
 	*/
 	public function render_content() {
 		?>
-		<label style="overflow: hidden; zoom: 1;">
+		<div style="overflow: hidden; zoom: 1;">
 			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 			<label style="width: 48%; float: left; margin-right: 3.8%; text-align: center;">
@@ -22,7 +22,7 @@ class Layout_Picker_Storefront_Control extends WP_Customize_Control {
 				<input type="radio" value="right" style="margin: 5px 0 0 0;"name="<?php echo esc_attr( $this->id ); ?>" <?php $this->link(); checked( $this->value(), 'right' ); ?> />
 				<br/>
 			</label>
-		</label>
+		</div>
 		<?php
 	}
 }
