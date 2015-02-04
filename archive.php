@@ -6,7 +6,6 @@
  *
  * @package storefront
  *
- * @todo  replace archive header title / description with the_archive_title / the_archive_description when wp 4.1 lands
  */
 
 get_header(); ?>
