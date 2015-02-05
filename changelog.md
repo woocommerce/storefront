@@ -10,6 +10,7 @@
 * **Tweak** - Removed header widget region bottom margin.
 * **Tweak** - Increased size of photos displayed in the WooCommerce Photography extension.
 * **Tweak** - Page / term description width.
+* **Tweak** - Hide 'What is WooCommerce' section on welcome screen when it's already installed.
 * **Dev** - Added `storefront_sanitize_choices()`.
 * **Dev** - Tweaked the divider Customizer control to allow text/title.
 

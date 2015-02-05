@@ -119,6 +119,8 @@ class Storefront_Welcome {
 				<p><a href="http://woothemes.com" class="button"><?php _e( 'Visit WooThemes', 'storefront' ); ?></a></p>
 			</div>
 
+			<?php if ( ! class_exists( 'WooCommerce' ) ) { ?>
+
 			<div class="col-2">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/woocommerce.png'; ?>" class="image-50" width="440" />
 				<h4><?php _e( 'What is WooCommerce?', 'storefront' ); ?></h4>
@@ -126,6 +128,8 @@ class Storefront_Welcome {
 				<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ) ); ?>" class="button button-primary"><?php _e( 'Download & Install WooCommerce', 'storefront' ); ?></a></p>
 				<p><a href="http://docs.woothemes.com/documentation/plugins/woocommerce/" class="button"><?php _e( 'View WooCommerce Documentation', 'storefront' ); ?></a></p>
 			</div>
+
+			<?php } ?>
 
 			<div class="col-3 last-feature">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/github.png'; ?>" class="image-50" width="440" />
