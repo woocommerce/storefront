@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2015.02.02* - 1.2.6
+### *2015.02.05* - 1.2.6
 * **Fix** - Margin on site title / logo.
 * **Fix** - Tweaked some css selectors in the checkout to improve compatiiblity with Amazon Payments Advanced gateway.
 * **Fix** - Layout selector in Firefox.
@@ -13,6 +13,7 @@
 * **Tweak** - Hide 'What is WooCommerce' section on welcome screen when it's already installed.
 * **Dev** - Added `storefront_sanitize_choices()`.
 * **Dev** - Tweaked the divider Customizer control to allow text/title.
+* **Dev** - Updated FontAwesome to version 4.3.0.
 
 ### *2015.01.22* - 1.2.5
 * **Fix** - Review form input alignment.
