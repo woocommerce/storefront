@@ -41,7 +41,7 @@ if ( ! function_exists( 'storefront_sanitize_hex_color' ) ) {
  * Sanitizes choices (selects / radios)
  * Checks that the input matches one of the available choices
  *
- * @since  1.2.6
+ * @since  1.3.0
  */
 if ( ! function_exists( 'storefront_sanitize_choices' ) ) {
     function storefront_sanitize_choices( $input, $setting ) {
