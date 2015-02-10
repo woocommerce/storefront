@@ -19,7 +19,7 @@ get_header(); ?>
 
 			<?php
 			/**
-			 * @hooked storefront_page_content - 10
+			 * @hooked storefront_homepage_content - 10
 			 * @hooked storefront_product_categories - 20
 			 * @hooked storefront_recent_products - 30
 			 * @hooked storefront_featured_products - 40
