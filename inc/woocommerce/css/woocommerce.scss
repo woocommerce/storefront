@@ -90,6 +90,32 @@
 }
 
 /**
+ * Shop tables
+ */
+table.shop_table_responsive {
+	thead {
+		display: none;
+	}
+
+	tbody {
+		th {
+			display: none;
+		}
+	}
+
+	tr {
+		td {
+			display: block;
+
+			&:before {
+				content: attr(data-title) ': ';
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+/**
  * Products
  */
 ul.products {
@@ -1218,6 +1244,32 @@ dl.variation {
 			}
 		}
 	}
+
+	/**
+	 * Responsive tables
+	 */
+	table.shop_table_responsive {
+		thead {
+			display: table-header-group;
+		}
+
+		tbody {
+			th {
+				display: table-cell;
+			}
+		}
+
+		tr {
+			td {
+				display: table-cell;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
 	/**
 	 * Header Elements
 	 */
