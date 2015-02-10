@@ -13,6 +13,7 @@
 * **Tweak** - Page / term description width.
 * **Tweak** - Hide 'What is WooCommerce' section on welcome screen when it's already installed.
 * **Tweak** - Widget region order in dashboard.
+* **Tweak** - Add the correct page content hook in the inline docs ( template-homepage.php ).
 * **Dev** - Added `storefront_sanitize_choices()`.
 * **Dev** - Tweaked the divider Customizer control to allow text/title.
 * **Dev** - Updated FontAwesome to version 4.3.0.
