@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.2.5\n"
+"Project-Id-Version: Storefront 1.3.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-01-22 15:45:49+00:00\n"
+"POT-Creation-Date: 2015-02-10 12:38:18+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -110,70 +110,70 @@ msgstr ""
 msgid "Visit WooThemes"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:124
+#: inc/admin/welcome-screen.php:126
 msgid "What is WooCommerce?"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:125
+#: inc/admin/welcome-screen.php:127
 msgid ""
 "WooCommerce is the most popular WordPress eCommerce plugin. Packed full of "
 "intuitive features and surrounded by a thriving community - it's the "
 "perfect solution for building an online store with WordPress."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:126
+#: inc/admin/welcome-screen.php:128
 msgid "Download & Install WooCommerce"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:127
+#: inc/admin/welcome-screen.php:129
 msgid "View WooCommerce Documentation"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:132
+#: inc/admin/welcome-screen.php:136
 msgid "Can I Contribute?"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:133
+#: inc/admin/welcome-screen.php:137
 msgid ""
 "Found a bug? Want to contribute a patch or create a new feature? GitHub is "
 "the place to go! Or would you like to translate Storefront in to your "
 "language? Get involved at Transifex."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:134
+#: inc/admin/welcome-screen.php:138
 msgid "Storefront at GitHub"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:134
+#: inc/admin/welcome-screen.php:138
 msgid "Storefront at Transifex"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:155
+#: inc/admin/welcome-screen.php:159
 msgid "Using Storefront"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:156
+#: inc/admin/welcome-screen.php:160
 msgid ""
 "We've purposely kept Storefront lean & mean so configuration is a breeze. "
 "Here are some common theme-setup tasks:"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:160 inc/admin/welcome-screen.php:163
+#: inc/admin/welcome-screen.php:164 inc/admin/welcome-screen.php:167
 msgid "Install WooCommerce"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:161
+#: inc/admin/welcome-screen.php:165
 msgid ""
 "Although Storefront works fine as a standard WordPress theme, it really "
 "shines when used for an online store. Install WooCommerce and start selling "
 "now."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:166
+#: inc/admin/welcome-screen.php:170
 msgid "Configure menu locations"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:167
+#: inc/admin/welcome-screen.php:171
 msgid ""
 "Storefront includes two menu locations for primary and secondary "
 "navigation. The primary navigation is perfect for your key pages like the "
@@ -181,174 +181,174 @@ msgid ""
 "lower traffic pages such as terms and conditions."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:168
+#: inc/admin/welcome-screen.php:172
 msgid "Configure menus"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:170
+#: inc/admin/welcome-screen.php:174
 msgid "Create a color scheme"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:171
+#: inc/admin/welcome-screen.php:175
 msgid ""
 "Using the WordPress Customizer you can tweak Storefront's appearance to "
 "match your brand."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:172
+#: inc/admin/welcome-screen.php:176
 msgid "Open the Customizer"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:176
+#: inc/admin/welcome-screen.php:180
 msgid "Configure homepage template"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:177
+#: inc/admin/welcome-screen.php:181
 msgid ""
 "Storefront includes a homepage template that displays a selection of "
 "products from your store."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:178
+#: inc/admin/welcome-screen.php:182
 msgid ""
 "To set this up you will need to create a new page and assign the "
 "\"Homepage\" template to it. You can then set that as a static homepage in "
 "the %sReading%s settings."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:179
+#: inc/admin/welcome-screen.php:183
 msgid ""
 "Once set up you can toggle and re-order the homepage components using the "
 "%sHomepage Control%s plugin."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:181
+#: inc/admin/welcome-screen.php:185
 msgid "Add your logo"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:182
+#: inc/admin/welcome-screen.php:186
 msgid "Activate %sJetpack%s to enable a custom logo option in the Customizer."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:184 inc/admin/welcome-screen.php:186
+#: inc/admin/welcome-screen.php:188 inc/admin/welcome-screen.php:190
 msgid "View documentation"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:185
+#: inc/admin/welcome-screen.php:189
 msgid ""
 "You can read detailed information on Storefronts features and how to "
 "develop on top of it in the documentation."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:202
+#: inc/admin/welcome-screen.php:206
 msgid "Enhance your site"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:205
+#: inc/admin/welcome-screen.php:209
 msgid ""
 "Below you will find a selection of hand-picked WooCommerce and Storefront "
 "extensions that could help improve your online store. Each WooCommerce "
 "extension integrates seamlessly with Storefront for enhanced performance."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:209
+#: inc/admin/welcome-screen.php:213
 msgid "Storefront Extensions"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:211
+#: inc/admin/welcome-screen.php:215
 msgid "Storefront Designer"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:212
+#: inc/admin/welcome-screen.php:216
 msgid ""
 "Adds a bunch of additional appearance settings allowing you to further "
 "tweak and perfect your Storefront design by changing the header layout, "
 "button styles, typographical schemes/scales and more."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:213 inc/admin/welcome-screen.php:218
-#: inc/admin/welcome-screen.php:223 inc/admin/welcome-screen.php:233
-#: inc/admin/welcome-screen.php:238 inc/admin/welcome-screen.php:243
+#: inc/admin/welcome-screen.php:217 inc/admin/welcome-screen.php:222
+#: inc/admin/welcome-screen.php:227 inc/admin/welcome-screen.php:237
+#: inc/admin/welcome-screen.php:242 inc/admin/welcome-screen.php:247
 msgid "Buy now"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:216
+#: inc/admin/welcome-screen.php:220
 msgid "Storefront WooCommerce Customiser"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:217
+#: inc/admin/welcome-screen.php:221
 msgid ""
 "Gives you further control over the look and feel of your shop. Change the "
 "product archive and single layouts, toggle various shop components, enable "
 "a distraction free checkout design and more."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:221
+#: inc/admin/welcome-screen.php:225
 msgid "Storefront Parallax Hero"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:222
+#: inc/admin/welcome-screen.php:226
 msgid ""
 "Adds a parallax hero component to your homepage. Easily change the colors / "
 "copy and give your visitors a warm welcome!"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:225
+#: inc/admin/welcome-screen.php:229
 msgid "View all Storefront extensions &rarr;"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:229
+#: inc/admin/welcome-screen.php:233
 msgid "WooCommerce Extensions"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:231
+#: inc/admin/welcome-screen.php:235
 msgid "WooCommerce Bookings"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:232
+#: inc/admin/welcome-screen.php:236
 msgid ""
 "Allows you to sell your time or date based bookings, adding a new product "
 "type to your WooCommerce site. Perfect for those wanting to offer "
 "appointments, services or rentals."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:236
+#: inc/admin/welcome-screen.php:240
 msgid "WooCommerce Smart Coupons"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:237
+#: inc/admin/welcome-screen.php:241
 msgid ""
 "Smart coupons provide the most comprehensive and powerful solution for "
 "discount coupons, gift certificates, store credits and vouchers. It also "
 "allows customers to buy credits for themselves or gift to others."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:241
+#: inc/admin/welcome-screen.php:245
 msgid "WooCommerce Wishlists"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:242
+#: inc/admin/welcome-screen.php:246
 msgid ""
 "Allows guests and customers to create and add products to an unlimited "
 "number of Wishlists. From birthdays to weddings and everything in between, "
 "WooCommerce Wishlists are a welcome addition to any WooCommerce store."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:245
+#: inc/admin/welcome-screen.php:249
 msgid "View all WooCommerce extensions &rarr;"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:249
+#: inc/admin/welcome-screen.php:253
 msgid "Can't find a feature?"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:250
+#: inc/admin/welcome-screen.php:254
 msgid ""
 "Please suggest and vote on ideas / feature requests at the %sStorefront "
 "Ideasboard%s. The most popular ideas will see prioritised development."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:258
+#: inc/admin/welcome-screen.php:262
 msgid ""
 "There are literally hundreds of awesome extensions available for you to "
 "use. Looking for Table Rate Shipping? Subscriptions? Product Add-ons? You "
@@ -366,7 +366,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/controls.php:29 inc/functions/setup.php:98
+#: inc/customizer/controls.php:29 inc/functions/setup.php:108
 msgid "Header"
 msgstr ""
 
@@ -414,7 +414,7 @@ msgstr ""
 msgid "Secondary Menu"
 msgstr ""
 
-#: inc/functions/setup.php:108
+#: inc/functions/setup.php:98
 msgid "Sidebar"
 msgstr ""
 

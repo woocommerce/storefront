@@ -3,7 +3,7 @@
 ### *2015.02.10* - 1.3.0
 * **New** - Support for WooCommerce 2.3 features like responsive tables.
 * **Fix** - Margin on site title / logo.
-* **Fix** - Tweaked some css selectors in the checkout to improve compatiiblity with Amazon Payments Advanced gateway.
+* **Fix** - Tweaked some css selectors in the checkout to improve compatiblity with Amazon Payments Advanced gateway.
 * **Fix** - Layout selector in Firefox.
 * **Fix** - `storefront_menu_toggle_text` filter. Props [jesinwp](https://github.com/jesinwp).
 * **Tweak** - Product Reviews Pro integration.
