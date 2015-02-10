@@ -16,6 +16,7 @@
 * **Dev** - Added `storefront_sanitize_choices()`.
 * **Dev** - Tweaked the divider Customizer control to allow text/title.
 * **Dev** - Updated FontAwesome to version 4.3.0.
+* **Dev** - Libsass / node susy for faster compiling. Please do a fresh `npm install` when working with this version.
 
 ### *2015.01.22* - 1.2.5
 * **Fix** - Review form input alignment.

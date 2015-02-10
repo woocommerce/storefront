@@ -64,32 +64,3 @@
 	}
 
 }
-
-@mixin gallery_column ( $margin: 2, $num: 4 ){
-	.gallery-columns-#{$num} .gallery-item {
-     width: ( 100% - $margin * ( $num - 1 ) ) / $num;
-     margin-right: $margin;
-  }
-  	.gallery-columns-#{$num} .gallery-item:nth-of-type(#{$num}n - #{$num}) {
-     margin-right: 0;
-     clear: right;
-  }
-
-}
-
-/* Fluid Gallery Columns
-   works well if you remove the default gallery styling
-   by adding the following to your functions.php
-   add_filter( 'use_default_gallery_style', '__return_false' );
-*/
-
-@for $i from 2 through 9 {
-	@include gallery_column( 2, $i );
-}
-
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
