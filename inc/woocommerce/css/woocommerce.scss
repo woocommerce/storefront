@@ -188,7 +188,6 @@ ul.products {
 
 			.quantity {
 				float: left;
-				margin-left: -1em;
 			}
 
 			.button {
@@ -1060,28 +1059,9 @@ p.stars {
 }
 
 .quantity {
-	input::-webkit-outer-spin-button,
-	input::-webkit-inner-spin-button {
-		display: none;
-	}
-
 	.qty {
 		max-width: 3.631em;
 		text-align: center;
-		-moz-appearance: textfield;
-	}
-
-	.plus,
-	.minus {
-		font-weight: 700;
-		color: $color_links;
-		background-color: transparent;
-		box-shadow: none;
-
-		&:hover {
-			background-color: transparent;
-			color: inherit !important;
-		}
 	}
 }
 
@@ -1572,11 +1552,7 @@ dl.variation {
 		}
 
 		.quantity {
-			min-width: 9.505em;
-
-			.qty,
-			.plus,
-			.minus {
+			.qty {
 				padding: .618em;
 			}
 		}
