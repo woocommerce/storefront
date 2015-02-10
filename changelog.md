@@ -4,6 +4,7 @@
 * **Fix** - Margin on site title / logo.
 * **Fix** - Tweaked some css selectors in the checkout to improve compatiiblity with Amazon Payments Advanced gateway.
 * **Fix** - Layout selector in Firefox.
+* **Fix** - `storefront_menu_toggle_text` filter. Props [jesinwp](https://github.com/jesinwp).
 * **Tweak** - Product Reviews Pro integration.
 * **Tweak** - Select width in WooCommerce forms.
 * **Tweak** - Composite Products integration improvements.
