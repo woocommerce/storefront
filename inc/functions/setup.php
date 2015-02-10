@@ -95,8 +95,8 @@ endif; // storefront_setup
  */
 function storefront_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Header', 'storefront' ),
-		'id'            => 'header-1',
+		'name'          => __( 'Sidebar', 'storefront' ),
+		'id'            => 'sidebar-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
@@ -105,8 +105,8 @@ function storefront_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'storefront' ),
-		'id'            => 'sidebar-1',
+		'name'          => __( 'Header', 'storefront' ),
+		'id'            => 'header-1',
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
