@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.02.11* - 1.3.1
+* **Tweak** - Product Reviews Pro submission form.
+
 ### *2015.02.10* - 1.3.0
 * **New** - Support for WooCommerce 2.3 features like responsive tables.
 * **Fix** - Margin on site title / logo.
