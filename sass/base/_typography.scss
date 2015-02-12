@@ -205,8 +205,8 @@ th {
 }
 
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
 	display: block;
 }
 
@@ -214,4 +214,11 @@ a {
 	color: $color_links;
 	text-decoration: none;
 	font-weight: 700;
+}
+
+// Wait, what..?
+// Don't look at the following, and definitely dont look at
+// inc/functions/extras.php for more information...
+.storefront-cute * {
+	font-family: "Comic Sans MS", sans-serif;
 }

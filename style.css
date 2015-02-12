@@ -655,15 +655,16 @@ th {
 
 img {
   height: auto;
-  /* Make sure images are scaled correctly. */
   max-width: 100%;
-  /* Adhere to container width. */
   display: block; }
 
 a {
   color: #a46497;
   text-decoration: none;
   font-weight: 700; }
+
+.storefront-cute * {
+  font-family: "Comic Sans MS", sans-serif; }
 
 /**
  * General Layout

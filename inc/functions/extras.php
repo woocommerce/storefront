@@ -39,6 +39,17 @@ function storefront_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	/**
+	 * What is this?!
+	 * Take the blue pill, close this file and forget you saw the following code.
+	 * Or take the red pill, filter storefront_make_me_cute and see how deep the rabbit hole goes...
+	 */
+	$cute	= apply_filters( 'storefront_make_me_cute', false );
+
+	if ( true == $cute ) {
+		$classes[] = 'storefront-cute';
+	}
+
 	return $classes;
 }
 
