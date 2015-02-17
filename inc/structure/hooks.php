@@ -86,10 +86,8 @@ add_action( 'storefront_page_after', 	'storefront_display_comments',	10 );
 /**
  * Extras
  * @see  storefront_setup_author()
- * @see  storefront_wp_title()
  * @see  storefront_body_classes()
  * @see  storefront_page_menu_args()
  */
-add_action( 'wp',					'storefront_setup_author' );
 add_filter( 'body_class',			'storefront_body_classes' );
 add_filter( 'wp_page_menu_args',	'storefront_page_menu_args' );

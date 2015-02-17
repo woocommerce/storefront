@@ -26,12 +26,14 @@ if ( ! function_exists( 'storefront_customize_preview_js' ) ) {
  */
 if ( ! function_exists( 'storefront_sanitize_hex_color' ) ) {
 	function storefront_sanitize_hex_color( $color ) {
-		if ( '' === $color )
+		if ( '' === $color ) {
 			return '';
+        }
 
 		// 3 or 6 hex digits, or the empty string.
-		if ( preg_match( '|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) )
+		if ( preg_match( '|^#([A-Fa-f0-9]{3}){1,2}$|', $color ) ) {
 			return $color;
+        }
 
 		return null;
 	}

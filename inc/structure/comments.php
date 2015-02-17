@@ -24,8 +24,6 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_comment( $comment, $args, $depth ) {
-		$GLOBALS['comment'] = $comment;
-
 		if ( 'div' == $args['style'] ) {
 			$tag = 'div';
 			$add_below = 'comment';
@@ -41,7 +39,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			<?php echo get_avatar( $comment, 128 ); ?>
 			<?php printf( __( '<cite class="fn">%s</cite>', 'storefront' ), get_comment_author_link() ); ?>
 			</div>
-			<?php if ( $comment->comment_approved == '0' ) : ?>
+			<?php if ( '0' == $comment->comment_approved ) : ?>
 				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'storefront' ); ?></em>
 				<br />
 			<?php endif; ?>
