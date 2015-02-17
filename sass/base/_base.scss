@@ -40,6 +40,13 @@ body {
 	}
 }
 
+.home.blog,
+.home.page:not(.page-template-template-homepage) {
+	.site-header {
+		margin-bottom: 4.236em;
+	}
+}
+
 .header-widget-region {
 	position: relative;
 	z-index: 99;

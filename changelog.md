@@ -1,6 +1,7 @@
 # Storefront Changelog
 
 ### *2015.02.17* - 1.3.1
+* **Fix** - Header margin when using static page or latest posts for homepage.
 * **Tweak** - Product Reviews Pro submission form.
 * **Tweak** - Review form input alignment.
 * **Tweak** - Improved integration with WooCommerce Photography extension.
