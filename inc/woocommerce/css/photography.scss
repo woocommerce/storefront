@@ -22,19 +22,22 @@
 			}
 		}
 
-		ul.products {
+		.site-main ul.products {
 			li.product-type-photography {
 				@include clearfix;
-				@include span(6 of 12);
+				@include span(3 of 9);
 				text-align: left;
 
-				.photography-image {
-					@include span(3 of 6);
+				.photography-image,
+				.photography-content {
+					float: none;
+					width: 100%;
 				}
 
-				.photography-content {
-					@include span(last 3 of 6);
-					margin-left: 0;
+				.photography-image {
+					img {
+						width: 100%;
+					}
 				}
 
 				.photography-sku {

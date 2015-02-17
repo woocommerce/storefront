@@ -1,7 +1,9 @@
 # Storefront Changelog
 
-### *2015.02.11* - 1.3.1
+### *2015.02.17* - 1.3.1
 * **Tweak** - Product Reviews Pro submission form.
+* **Tweak** - Review form input alignment.
+* **Tweak** - Improved integration with WooCommerce Photography extension.
 
 ### *2015.02.10* - 1.3.0
 * **New** - Support for WooCommerce 2.3 features like responsive tables.

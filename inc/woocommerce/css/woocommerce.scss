@@ -336,15 +336,6 @@ ul.products {
 		}
 	}
 
-	.comment-form-author,
-	.comment-form-email {
-		width: 47%;
-	}
-
-	.comment-form-email {
-		margin-right: 0;
-	}
-
 	.comment-form-rating {
 		clear: both;
 	}
@@ -1501,6 +1492,17 @@ dl.variation {
 			.woocommerce-tabs {
 				clear: both;
 			}
+		}
+	}
+
+	#reviews {
+		.comment-form-author,
+		.comment-form-email {
+			width: 47%;
+		}
+
+		.comment-form-email {
+			margin-right: 0;
 		}
 	}
 

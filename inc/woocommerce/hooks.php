@@ -69,9 +69,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 /**
  * Integrations
  * @see  storefront_woocommerce_integrations_scripts()
- * @see  storefront_woocommerce_integrations_layout()
  * @see  storefront_add_bookings_customizer_css()
  */
 add_action( 'wp_enqueue_scripts', 						'storefront_woocommerce_integrations_scripts' );
-add_action( 'wp',										'storefront_woocommerce_integrations_layout' );
 add_action( 'wp_enqueue_scripts', 						'storefront_add_integrations_customizer_css' );
