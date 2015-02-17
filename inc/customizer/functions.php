@@ -69,8 +69,8 @@ if ( ! function_exists( 'storefront_sanitize_choices' ) ) {
 if ( ! function_exists( 'storefront_sanitize_layout' ) ) {
     function storefront_sanitize_layout( $input ) {
         $valid = array(
-            'right' =>  'Right',
-            'left'  =>  'Left',
+            'right' => 'Right',
+            'left'  => 'Left',
             );
 
         if ( array_key_exists( $input, $valid ) ) {
