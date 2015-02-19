@@ -2,9 +2,11 @@
 
 ### *2015.02.17* - 1.3.1
 * **Fix** - Header margin when using static page or latest posts for homepage.
+* **Fix** - Related products total / columns.
 * **Tweak** - Product Reviews Pro submission form.
 * **Tweak** - Review form input alignment.
 * **Tweak** - Improved integration with WooCommerce Photography extension.
+* **Dev** - Added `storefront_related_products_args` filter.
 
 ### *2015.02.10* - 1.3.0
 * **New** - Support for WooCommerce 2.3 features like responsive tables.
