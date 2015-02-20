@@ -140,6 +140,18 @@ class Storefront_Welcome {
 		</div>
 
 		<hr style="clear: both;">
+
+		<div class="feature-section col three-col" style="margin-bottom: 1.618em; padding-top: 1.618em; overflow: hidden;">
+			<div class="col-1">
+				<h4><?php _e( 'Can\'t find a feature?', 'storefront' ); ?></h4>
+				<p><?php echo sprintf( esc_html__( 'Please suggest and vote on ideas / feature requests at the %sStorefront Ideasboard%s. The most popular ideas will see prioritised development.', 'storefront' ), '<a href="http://ideas.woothemes.com/forums/275029-storefront">', '</a>' ); ?></p>
+			</div>
+
+			<div class="col-2">
+				<h4><?php _e( 'Are you enjoying Storefront?', 'storefront' ); ?></h4>
+				<p><?php echo sprintf( esc_html__( 'Why not leave a review on %sWordPress.org%s? We\'d really appreciate it! :-)', 'storefront' ), '<a href="https://wordpress.org/themes/storefront">', '</a>' ); ?></p>
+			</div>
+		</div>
 		<?php
 	}
 
@@ -250,8 +262,7 @@ class Storefront_Welcome {
 			</div>
 
 			<div class="col-3 last-feature">
-				<h4><?php _e( 'Can\'t find a feature?', 'storefront' ); ?></h4>
-				<p><?php echo sprintf( esc_html__( 'Please suggest and vote on ideas / feature requests at the %sStorefront Ideasboard%s. The most popular ideas will see prioritised development.', 'storefront' ), '<a href="http://ideas.woothemes.com/forums/275029-storefront">', '</a>' ); ?></p>
+
 			</div>
 
 		</div>
