@@ -262,7 +262,19 @@ class Storefront_Welcome {
 			</div>
 
 			<div class="col-3 last-feature">
-
+				<?php
+					$theme = wp_get_theme();
+				?>
+				<h4><?php _e( 'Storefront Child Themes', 'storefront' ); ?></h4>
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/boutique.jpg'; ?>" class="image-50" width="440" />
+				<h4><?php _e( 'Boutique', 'storefront' ); ?></h4>
+				<p><?php _e( 'Boutique is a simple, traditionally designed Storefront child theme, ideal for small stores or boutiques. Add your logo, create a unique color scheme and start selling!', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;">
+					<?php if ( 'Boutique' != $theme['Name'] ) { ?>
+						<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-theme&theme=boutique' ), 'install-theme_boutique' ) ); ?>" class="button button-primary"><?php _e( 'Install now', 'storefront' ); ?></a>
+					<?php } ?>
+					<a href="http://www.woothemes.com/products/boutique/" class="button"><?php _e( 'Read more &rarr;', 'storefront' ); ?></a>
+				</p>
 			</div>
 
 		</div>
