@@ -50,7 +50,7 @@ function storefront_body_classes( $classes ) {
 	 */
 	$cute	= apply_filters( 'storefront_make_me_cute', false );
 
-	if ( true == $cute ) {
+	if ( true === $cute ) {
 		$classes[] = 'storefront-cute';
 	}
 
