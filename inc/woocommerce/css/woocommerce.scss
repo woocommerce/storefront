@@ -1721,6 +1721,22 @@ dl.variation {
 		border-width: 0 3px 3px 3px;
 	}
 
+	// Changing a payment method for a subscription
+	.woocommerce-info + #order_review {
+		border-width: 3px;
+		width: 100%;
+		float: none;
+
+		.payment_methods + .form-row {
+			padding: 1em;
+		}
+
+		.button#place_order {
+			display: block;
+			width: 100%;
+		}
+	}
+
 	#wc_checkout_add_ons {
 		@include span(4 of 9);
 	}

@@ -2,6 +2,7 @@
 
 ### *2015.03.02* - 1.3.2
 * **Fix** - Header margin when WooCommerce isn't activated.
+* **Fix** - Subscription payment form layout.
 * **Tweak** - Pagination now clears content.
 * **Tweak** - Header cart now displays sub total.
 * **Dev** - Removed npm-debug.log.
