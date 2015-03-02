@@ -1,7 +1,9 @@
 # Storefront Changelog
 
-### *2015.02.20* - 1.3.2
+### *2015.03.02* - 1.3.2
+* **Fix** - Header margin when WooCommerce isn't activated.
 * **Tweak** - Pagination now clears content.
+* **Dev** - Removed npm-debug.log.
 
 ### *2015.02.20* - 1.3.1
 * **Fix** - Header margin when using static page or latest posts for homepage.

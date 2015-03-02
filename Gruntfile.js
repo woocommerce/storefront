@@ -177,7 +177,8 @@ module.exports = function( grunt ) {
 					'!Gruntfile.js',
 					'!package.json',
 					'!node_modules/**',
-					'!.DS_Store'
+					'!.DS_Store',
+					'!npm-debug.log'
 				],
 				dest: 'storefront',
 				expand: true,
