@@ -3,6 +3,7 @@
 ### *2015.03.02* - 1.3.2
 * **Fix** - Header margin when WooCommerce isn't activated.
 * **Tweak** - Pagination now clears content.
+* **Tweak** - Header cart now displays sub total.
 * **Dev** - Removed npm-debug.log.
 
 ### *2015.02.20* - 1.3.1
