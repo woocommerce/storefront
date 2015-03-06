@@ -1,6 +1,7 @@
 # Storefront Changelog
 
-### *2015.03.02* - 1.4.0
+### *2015.03.06* - 1.4.0
+* **New** - Added a 'Handheld' menu location.
 * **New** - Many accessibility improvements.
 * **Fix** - Header margin when WooCommerce isn't activated.
 * **Fix** - Subscription payment form layout.

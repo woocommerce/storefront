@@ -28,13 +28,21 @@
 	}
 }
 
-.menu-toggle,
-.main-navigation.toggled .nav-menu {
-	display: block;
+.primary-navigation {
+	display: none;
+}
+
+.handheld-navigation {
+	display: none;
+}
+
+.main-navigation.toggled {
+	.handheld-navigation {
+		display: block;
+	}
 }
 
 .main-navigation ul {
-	display: none;
 	margin-left: 0;
 	list-style: none;
 
@@ -63,8 +71,14 @@
 }
 
 @media screen and (min-width: 768px) {
-	.menu-toggle {
+	.menu-toggle,
+	.handheld-navigation,
+	.main-navigation.toggled .handheld-navigation {
 		display: none;
+	}
+
+	.primary-navigation {
+		display: block;
 	}
 
 	.main-navigation,

@@ -59,6 +59,7 @@ if ( ! function_exists( 'storefront_setup' ) ) :
 		register_nav_menus( array(
 			'primary'		=> __( 'Primary Menu', 'storefront' ),
 			'secondary'		=> __( 'Secondary Menu', 'storefront' ),
+			'handheld'		=> __( 'Handheld Menu', 'storefront' ),
 		) );
 
 		/*
