@@ -55,7 +55,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 					'theme_location'	=> 'primary',
 					'container_class'	=> 'primary-navigation',
 					)
-				);
+			);
 
 			wp_nav_menu(
 				array(
@@ -63,7 +63,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 					'container_class'	=> 'handheld-navigation',
 					'fallback_cb'		=> '',
 					)
-				);
+			);
 			?>
 		</nav><!-- #site-navigation -->
 		<?php
@@ -81,11 +81,11 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 		<nav class="secondary-navigation" role="navigation" aria-label="<?php _e( 'Secondary Navigation', 'storefront' ); ?>">
 			<?php
 				wp_nav_menu(
-						array(
-							'theme_location'	=> 'secondary',
-							'fallback_cb'		=> '',
-							)
-						);
+					array(
+						'theme_location'	=> 'secondary',
+						'fallback_cb'		=> '',
+					)
+				);
 			?>
 		</nav><!-- #site-navigation -->
 		<?php
