@@ -50,20 +50,20 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Primary Navigation', 'storefront' ); ?>">
 		<button class="menu-toggle"><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Navigation', 'storefront' ) ) ); ?></button>
 			<?php
-				wp_nav_menu(
-						array(
-							'theme_location'	=> 'primary',
-							'container_class'	=> 'primary-navigation'
-							)
-						);
+			wp_nav_menu(
+					array(
+						'theme_location'	=> 'primary',
+						'container_class'	=> 'primary-navigation',
+						)
+					);
 
-				wp_nav_menu(
-						array(
-							'theme_location'	=> 'handheld',
-							'container_class'	=> 'handheld-navigation',
-							'fallback_cb'		=> ''
-							)
-						);
+			wp_nav_menu(
+					array(
+						'theme_location'	=> 'handheld',
+						'container_class'	=> 'handheld-navigation',
+						'fallback_cb'		=> '',
+						)
+					);
 			?>
 		</nav><!-- #site-navigation -->
 		<?php
@@ -83,7 +83,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 				wp_nav_menu(
 						array(
 							'theme_location'	=> 'secondary',
-							'fallback_cb'		=> ''
+							'fallback_cb'		=> '',
 							)
 						);
 			?>
