@@ -47,8 +47,8 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	 */
 	function storefront_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-		<button class="menu-toggle"><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Primary Menu', 'storefront' ) ) ); ?></button>
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php _e( 'Primary Navigation', 'storefront' ); ?>">
+		<button class="menu-toggle"><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Navigation', 'storefront' ) ) ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- #site-navigation -->
 		<?php
@@ -63,7 +63,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	 */
 	function storefront_secondary_navigation() {
 		?>
-		<nav class="secondary-navigation" role="navigation">
+		<nav class="secondary-navigation" role="navigation" aria-label="<?php _e( 'Secondary Navigation', 'storefront' ); ?>">
 			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'fallback_cb' => '' ) ); ?>
 		</nav><!-- #site-navigation -->
 		<?php

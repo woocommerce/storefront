@@ -20,11 +20,11 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 			$class = '';
 		}
 		?>
-		<li class="<?php echo esc_attr( $class ); ?>">
+
 			<a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'storefront' ); ?>">
 				<?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'storefront' ), WC()->cart->get_cart_contents_count() ) );?></span>
 			</a>
-		</li>
+
 		<?php
 	}
 }
@@ -54,11 +54,19 @@ if ( ! function_exists( 'storefront_product_search' ) ) {
  */
 if ( ! function_exists( 'storefront_header_cart' ) ) {
 	function storefront_header_cart() {
-		if ( is_woocommerce_activated() ) { ?>
-			<ul class="site-header-cart menu">
+		if ( is_woocommerce_activated() ) {
+			if ( is_cart() ) {
+				$class = 'current-menu-item';
+			} else {
+				$class = '';
+			}
+		?>
+		<ul class="site-header-cart menu">
+			<li class="<?php echo esc_attr( $class ); ?>">
 				<?php storefront_cart_link(); ?>
-				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</ul>
+			</li>
+			<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+		</ul>
 		<?php
 		}
 	}

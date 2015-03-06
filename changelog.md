@@ -1,6 +1,7 @@
 # Storefront Changelog
 
-### *2015.03.02* - 1.3.2
+### *2015.03.02* - 1.4.0
+* **New** - Many accessibility improvements.
 * **Fix** - Header margin when WooCommerce isn't activated.
 * **Fix** - Subscription payment form layout.
 * **Tweak** - Pagination now clears content.

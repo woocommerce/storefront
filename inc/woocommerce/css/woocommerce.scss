@@ -1301,12 +1301,12 @@ dl.variation {
 
 		.widget_shopping_cart {
 			position: absolute;
-			left: 0;
 			top: 100%;
 			width: 100%;
-			display: none;
 			z-index: 999999;
 			font-size: .857em;
+			left: -999em;
+			display: block;
 
 			h2.widgettitle {
 				display: none;
@@ -1325,7 +1325,7 @@ dl.variation {
 
 		&:hover {
 			.widget_shopping_cart {
-				display: block;
+				left: 0;
 			}
 		}
 	}

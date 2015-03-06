@@ -203,15 +203,9 @@
 		a {
 			color: $color_body;
 			font-weight: 400;
-			opacity: 0.75;
 
 			&:hover {
 				color: $color_links;
-				opacity: 1;
-			}
-
-			&.button {
-				opacity: 1;
 			}
 		}
 	}

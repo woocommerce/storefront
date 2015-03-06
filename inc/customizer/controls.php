@@ -51,7 +51,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Accent Color
 		 */
 		$wp_customize->add_setting( 'storefront_accent_color', array(
-			'default'           => apply_filters( 'storefront_default_accent_color', '#a46497' ),
+			'default'           => apply_filters( 'storefront_default_accent_color', '#96588a' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 		) );
 
@@ -66,7 +66,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Text Color
 		 */
 		$wp_customize->add_setting( 'storefront_text_color', array(
-			'default'           => apply_filters( 'storefront_default_text_color', '#787E87' ),
+			'default'           => apply_filters( 'storefront_default_text_color', '#6c717a' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -114,7 +114,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Header text color
 		 */
 		$wp_customize->add_setting( 'storefront_header_text_color', array(
-			'default'           => apply_filters( 'storefront_default_header_text_color', '#5a6567' ),
+			'default'           => apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -155,7 +155,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Footer heading color
 		 */
 		$wp_customize->add_setting( 'storefront_footer_heading_color', array(
-			'default'           => apply_filters( 'storefront_default_footer_heading_color', '#646c6e' ),
+			'default'           => apply_filters( 'storefront_default_footer_heading_color', '#494c50' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport' 		=> 'postMessage',
 		) );
@@ -170,7 +170,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Footer text color
 		 */
 		$wp_customize->add_setting( 'storefront_footer_text_color', array(
-			'default'           => apply_filters( 'storefront_default_footer_text_color', '#abb1ba' ),
+			'default'           => apply_filters( 'storefront_default_footer_text_color', '#61656b' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -185,7 +185,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Footer link color
 		 */
 		$wp_customize->add_setting( 'storefront_footer_link_color', array(
-			'default'           => apply_filters( 'storefront_default_footer_link_color', '#a46497' ),
+			'default'           => apply_filters( 'storefront_default_footer_link_color', '#96588a' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -224,7 +224,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Button background color
 		 */
 		$wp_customize->add_setting( 'storefront_button_background_color', array(
-			'default'           => apply_filters( 'storefront_default_button_background_color', '#787E87' ),
+			'default'           => apply_filters( 'storefront_default_button_background_color', '#6c717a' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 		) );
 
@@ -254,7 +254,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Button alt background color
 		 */
 		$wp_customize->add_setting( 'storefront_button_alt_background_color', array(
-			'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#a46497' ),
+			'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#96588a' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 		) );
 

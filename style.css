@@ -1,14 +1,14 @@
 /*
-Theme Name:   Storefront
-Theme URI:    http://www.woothemes.com/storefront
-Author:       WooThemes
-Author URI: 	http://www.woothemes.com
-Description:  Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooThemes, it features a deep integration with our market leading WooCommerce plugin, several layout & color options to personalise your shop, multiple widget regions, a responsive design and much more. Developers will love it's lean and extensible codebase making it a joy to customise and extend. Looking for a WooCommerce theme? Look no further!
-Version:      1.3.2
-License:      GNU General Public License v2 or later
-License URI:  http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain:  storefront
-Tags:         black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments
+Theme Name:   	Storefront
+Theme URI:    	http://www.woothemes.com/storefront
+Author:       	WooThemes
+Author URI:		http://www.woothemes.com
+Description:  	Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooThemes, it features a deep integration with our market leading WooCommerce plugin, several layout & color options to personalise your shop, multiple widget regions, a responsive design and much more. Developers will love it's lean and extensible codebase making it a joy to customise and extend. Looking for a WooCommerce theme? Look no further!
+Version:      	1.4.0
+License:      	GNU General Public License v2 or later
+License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:  	storefront
+Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -371,7 +371,7 @@ body {
 .site-header {
   background-color: #2c2d33;
   padding-top: 2.618em;
-  color: #5a6567;
+  color: #9aa0a7;
   background-position: center center;
   position: relative;
   z-index: 999; }
@@ -411,6 +411,9 @@ body {
 .site-main {
   margin-bottom: 2.618em; }
 
+.site-content {
+  outline: none; }
+
 .page-template-template-homepage .site-main {
   padding-top: 4.236em; }
 
@@ -419,12 +422,12 @@ body {
  */
 .site-footer {
   background-color: #f3f3f3;
-  color: #abb1ba;
+  color: #9fa4ad;
   padding: 1.618em 0; }
   .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
-    color: #9aa0a9; }
+    color: #8e939c; }
   .site-footer a:not(.button) {
-    color: #a46497; }
+    color: #96588a; }
 
 .site-info {
   padding: 2.618em 0; }
@@ -534,7 +537,7 @@ body {
   font-size: 0.938em; }
 
 body, button, input, select, textarea {
-  color: #787E87;
+  color: #6c717a;
   font-family: "Helvetica Neue", sans-serif;
   line-height: 1.618;
   -webkit-font-smoothing: antialiased;
@@ -545,7 +548,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 700;
   margin: 0 0 0.618em;
-  color: #484c51; }
+  color: #3c3f44; }
 
 h1, .alpha {
   font-size: 2.244em;
@@ -665,9 +668,11 @@ img {
   display: block; }
 
 a {
-  color: #a46497;
+  color: #96588a;
   text-decoration: none;
   font-weight: 700; }
+  a:focus {
+    outline: thin dotted; }
 
 .storefront-cute * {
   font-family: "Comic Sans MS", sans-serif; }
@@ -949,8 +954,8 @@ button, input, select, textarea {
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart {
   border: 0;
   background: none;
-  background-color: #787E87;
-  border-color: #787E87;
+  background-color: #6c717a;
+  border-color: #6c717a;
   color: #fff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -966,11 +971,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
   border-radius: 0;
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.1); }
   button.cta, button.alt, input[type="button"].cta, input[type="button"].alt, input[type="reset"].cta, input[type="reset"].alt, input[type="submit"].cta, input[type="submit"].alt, .button.cta, .button.alt, .added_to_cart.cta, .added_to_cart.alt {
-    background-color: #a46497;
-    border-color: #a46497; }
+    background-color: #96588a;
+    border-color: #96588a; }
     button.cta:hover, button.alt:hover, input[type="button"].cta:hover, input[type="button"].alt:hover, input[type="reset"].cta:hover, input[type="reset"].alt:hover, input[type="submit"].cta:hover, input[type="submit"].alt:hover, .button.cta:hover, .button.alt:hover, .added_to_cart.cta:hover, .added_to_cart.alt:hover {
       opacity: 0.8;
-      background-color: #a46497; }
+      background-color: #96588a; }
   button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover {
     opacity: 0.8;
     color: #fff; }
@@ -1009,7 +1014,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
   padding: 0.618em;
   background-color: #efefef;
-  color: #787E87;
+  color: #6c717a;
   line-height: 1;
   outline: none;
   border: 0;
@@ -1023,7 +1028,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 
 input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
   background-color: #e3e3e3;
-  color: #60656c; }
+  color: #54585f; }
 
 textarea {
   overflow: auto;
@@ -1118,14 +1123,17 @@ fieldset {
           display: block; }
           .main-navigation ul li a:before, .secondary-navigation ul li a:before {
             display: none; }
-        .main-navigation ul li:hover > ul, .secondary-navigation ul li:hover > ul {
-          display: block; }
+        .main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul, .secondary-navigation ul li:hover > ul, .secondary-navigation ul li.focus > ul {
+          left: 0; }
+          .main-navigation ul li:hover > ul li ul, .main-navigation ul li.focus > ul li ul, .secondary-navigation ul li:hover > ul li ul, .secondary-navigation ul li.focus > ul li ul {
+            left: -999em; }
+          .main-navigation ul li:hover > ul li:hover ul, .main-navigation ul li:hover > ul li.focus ul, .main-navigation ul li.focus > ul li:hover ul, .main-navigation ul li.focus > ul li.focus ul, .secondary-navigation ul li:hover > ul li:hover ul, .secondary-navigation ul li:hover > ul li.focus ul, .secondary-navigation ul li.focus > ul li:hover ul, .secondary-navigation ul li.focus > ul li.focus ul {
+            left: 100%; }
       .main-navigation ul ul, .secondary-navigation ul ul {
-        display: none;
         float: left;
         position: absolute;
         top: 100%;
-        left: 0;
+        left: -999em;
         z-index: 99999;
         background-color: #2c2d33; }
         .main-navigation ul ul li a, .secondary-navigation ul ul li a {
@@ -1135,7 +1143,7 @@ fieldset {
           top: 0; }
 
   ul.menu li.current-menu-item > a {
-    color: #787E87; }
+    color: #6c717a; }
 
   /**
 	 * Primary Navigation
@@ -1217,7 +1225,7 @@ fieldset {
       .secondary-navigation .menu a {
         padding: 1.387em 0.857em;
         font-weight: 400;
-        color: #aeb2b7; }
+        color: #a1a4ab; }
         .secondary-navigation .menu a:hover {
           text-decoration: none; }
  }
@@ -1238,7 +1246,7 @@ fieldset {
   .hentry .wp-post-image {
     margin-bottom: 1.618em; }
   .hentry .entry-header {
-    border-bottom: 3px solid #787E87;
+    border-bottom: 3px solid #6c717a;
     margin-bottom: 3.631em; }
     .hentry .entry-header h1 {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1431,7 +1439,7 @@ fieldset {
       opacity: 0.8;
       font-size: 0.857em; }
       #comments .comment-list .comment-meta a.comment-date:hover {
-        color: #787E87; }
+        color: #6c717a; }
     #comments .comment-list .comment-meta cite {
       font-style: normal;
       clear: both;
@@ -1451,7 +1459,7 @@ fieldset {
       #comments .comment-list .reply .comment-edit-link {
         border-left: 1px solid rgba(0, 0, 0, 0.1); }
       #comments .comment-list .reply a {
-        color: #787E87;
+        color: #6c717a;
         background-color: rgba(0, 0, 0, 0.025);
         padding: 0.53em 1em;
         float: left; }
@@ -1672,7 +1680,7 @@ fieldset {
   .widget h1 {
     font-size: 1em;
     letter-spacing: 0;
-    border-bottom: 3px solid #787E87;
+    border-bottom: 3px solid #6c717a;
     padding: 0 0 1em;
     margin-bottom: 1em;
     font-weight: 700; }
@@ -1757,14 +1765,10 @@ fieldset {
   .widget-area .widget h1.widget-title {
     font-size: 1.387em; }
   .widget-area .widget a {
-    color: #787E87;
-    font-weight: 400;
-    opacity: 0.75; }
+    color: #6c717a;
+    font-weight: 400; }
     .widget-area .widget a:hover {
-      color: #a46497;
-      opacity: 1; }
-    .widget-area .widget a.button {
-      opacity: 1; }
+      color: #96588a; }
 
 /**
  * Infinite Scroll

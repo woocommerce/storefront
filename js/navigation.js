@@ -1,7 +1,7 @@
 /**
  * navigation.js
  *
- * Handles toggling the navigation menu for small screens.
+ * Handles toggling the navigation menu for small screens and adds a focus class to parent li's for accessibility.
  */
 ( function() {
 	var container, button, menu;
@@ -35,4 +35,9 @@
 			container.className += ' toggled';
 		}
 	};
+
+	// Add focus class to li
+	jQuery( '.main-navigation, .secondary-navigation' ).find( 'a' ).on( 'focus.storefront blur.storefront', function() {
+		jQuery( this ).parents().toggleClass( 'focus' );
+	} );
 } )();

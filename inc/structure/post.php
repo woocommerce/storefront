@@ -41,13 +41,18 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
 		}
-		?>
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'storefront' ) ); ?>
-		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
-				'after'  => '</div>',
-			) );
+
+		the_content(
+			sprintf(
+				__( 'Continue reading %s', 'storefront' ),
+				'<span class="screen-reader-text">' . get_the_title() . '</span>'
+			)
+		);
+
+		wp_link_pages( array(
+			'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+			'after'  => '</div>',
+		) );
 		?>
 		</div><!-- .entry-content -->
 		<?php
