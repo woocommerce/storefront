@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.3.1\n"
+"Project-Id-Version: Storefront 1.4.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-02-20 10:11:09+00:00\n"
+"POT-Creation-Date: 2015-03-09 09:40:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -68,6 +68,10 @@ msgid ""
 msgstr ""
 
 #: header.php:22
+msgid "Skip to navigation"
+msgstr ""
+
+#: header.php:23
 msgid "Skip to content"
 msgstr ""
 
@@ -95,6 +99,10 @@ msgid ""
 "extensible codebase that this theme provides."
 msgstr ""
 
+#: inc/admin/welcome-screen.php:116
+msgid "The Woo Team"
+msgstr ""
+
 #: inc/admin/welcome-screen.php:117
 msgid "Who are WooThemes?"
 msgstr ""
@@ -108,6 +116,10 @@ msgstr ""
 
 #: inc/admin/welcome-screen.php:119
 msgid "Visit WooThemes"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:125
+msgid "WooCommerce logo"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:126
@@ -127,6 +139,10 @@ msgstr ""
 
 #: inc/admin/welcome-screen.php:129
 msgid "View WooCommerce Documentation"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:135
+msgid "Can I contribute to Storefront?"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:136
@@ -273,7 +289,7 @@ msgstr ""
 msgid "Storefront Extensions"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:227
+#: inc/admin/welcome-screen.php:226 inc/admin/welcome-screen.php:227
 msgid "Storefront Designer"
 msgstr ""
 
@@ -284,13 +300,11 @@ msgid ""
 "button styles, typographical schemes/scales and more."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:229 inc/admin/welcome-screen.php:234
-#: inc/admin/welcome-screen.php:239 inc/admin/welcome-screen.php:249
-#: inc/admin/welcome-screen.php:254 inc/admin/welcome-screen.php:259
-msgid "Buy now"
+#: inc/admin/welcome-screen.php:229
+msgid "Buy %sStorefront Designer%s now"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:232
+#: inc/admin/welcome-screen.php:231 inc/admin/welcome-screen.php:232
 msgid "Storefront WooCommerce Customiser"
 msgstr ""
 
@@ -301,7 +315,11 @@ msgid ""
 "a distraction free checkout design and more."
 msgstr ""
 
-#: inc/admin/welcome-screen.php:237
+#: inc/admin/welcome-screen.php:234
+msgid "Buy %sStorefront WooCommerce Customiser%s now"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:236 inc/admin/welcome-screen.php:237
 msgid "Storefront Parallax Hero"
 msgstr ""
 
@@ -309,6 +327,10 @@ msgstr ""
 msgid ""
 "Adds a parallax hero component to your homepage. Easily change the colors / "
 "copy and give your visitors a warm welcome!"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:239
+msgid "Buy %sStorefront Parallax Hero%s now"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:241
@@ -319,7 +341,7 @@ msgstr ""
 msgid "WooCommerce Extensions"
 msgstr ""
 
-#: inc/admin/welcome-screen.php:247
+#: inc/admin/welcome-screen.php:246 inc/admin/welcome-screen.php:247
 msgid "WooCommerce Bookings"
 msgstr ""
 
@@ -328,6 +350,14 @@ msgid ""
 "Allows you to sell your time or date based bookings, adding a new product "
 "type to your WooCommerce site. Perfect for those wanting to offer "
 "appointments, services or rentals."
+msgstr ""
+
+#: inc/admin/welcome-screen.php:249
+msgid "Buy %sWooCommerce Bookins%s now"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:251
+msgid "Smart Coupons"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:252
@@ -341,6 +371,14 @@ msgid ""
 "allows customers to buy credits for themselves or gift to others."
 msgstr ""
 
+#: inc/admin/welcome-screen.php:254
+msgid "Buy %sSmart Counpons%s now"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:256
+msgid "Wishlists"
+msgstr ""
+
 #: inc/admin/welcome-screen.php:257
 msgid "WooCommerce Wishlists"
 msgstr ""
@@ -352,12 +390,20 @@ msgid ""
 "WooCommerce Wishlists are a welcome addition to any WooCommerce store."
 msgstr ""
 
+#: inc/admin/welcome-screen.php:259
+msgid "Buy %sWooCommerce Wishlists%s now"
+msgstr ""
+
 #: inc/admin/welcome-screen.php:261
 msgid "View all WooCommerce extensions &rarr;"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:268
 msgid "Storefront Child Themes"
+msgstr ""
+
+#: inc/admin/welcome-screen.php:269
+msgid "Boutique Child Theme"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:270
@@ -372,11 +418,11 @@ msgid ""
 msgstr ""
 
 #: inc/admin/welcome-screen.php:274
-msgid "Install now"
+msgid "Install %s now"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:276
-msgid "Read more &rarr;"
+msgid "Read more %sabout Boutique%s &rarr;"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:285
@@ -405,7 +451,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/controls.php:29 inc/functions/setup.php:108
+#: inc/customizer/controls.php:29 inc/functions/setup.php:109
 msgid "Header"
 msgstr ""
 
@@ -445,7 +491,7 @@ msgstr ""
 msgid "Looking for more options?"
 msgstr ""
 
-#: inc/functions/setup.php:60 inc/structure/header.php:51
+#: inc/functions/setup.php:60
 msgid "Primary Menu"
 msgstr ""
 
@@ -453,15 +499,19 @@ msgstr ""
 msgid "Secondary Menu"
 msgstr ""
 
-#: inc/functions/setup.php:98
+#: inc/functions/setup.php:62
+msgid "Handheld Menu"
+msgstr ""
+
+#: inc/functions/setup.php:99
 msgid "Sidebar"
 msgstr ""
 
-#: inc/functions/setup.php:121
+#: inc/functions/setup.php:122
 msgid "Footer %d"
 msgstr ""
 
-#: inc/functions/setup.php:123
+#: inc/functions/setup.php:124
 msgid "Widgetized Footer Region %d."
 msgstr ""
 
@@ -481,44 +531,56 @@ msgstr ""
 msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: inc/structure/page.php:33 inc/structure/post.php:48
+#: inc/structure/header.php:50
+msgid "Primary Navigation"
+msgstr ""
+
+#: inc/structure/header.php:51
+msgid "Navigation"
+msgstr ""
+
+#: inc/structure/header.php:81
+msgid "Secondary Navigation"
+msgstr ""
+
+#: inc/structure/page.php:33 inc/structure/post.php:53
 msgid "Pages:"
 msgstr ""
 
-#: inc/structure/post.php:45
-msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+#: inc/structure/post.php:47
+msgid "Continue reading %s"
 msgstr ""
 
-#: inc/structure/post.php:69 inc/structure/post.php:77
+#: inc/structure/post.php:74 inc/structure/post.php:82
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/structure/post.php:86
+#: inc/structure/post.php:91
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/structure/post.php:86
+#: inc/structure/post.php:91
 msgid "1 Comment"
 msgstr ""
 
-#: inc/structure/post.php:86
+#: inc/structure/post.php:91
 msgid "% Comments"
 msgstr ""
 
-#: inc/structure/post.php:101
+#: inc/structure/post.php:106
 msgid "Page"
 msgstr ""
 
-#: inc/structure/post.php:109
+#: inc/structure/post.php:114
 msgid "&larr;"
 msgstr ""
 
-#: inc/structure/post.php:110
+#: inc/structure/post.php:115
 msgid "&rarr;"
 msgstr ""
 
-#: inc/structure/post.php:134
+#: inc/structure/post.php:139
 msgid "Post navigation"
 msgstr ""
 
@@ -542,11 +604,11 @@ msgstr ""
 msgid "On Sale"
 msgstr ""
 
-#: inc/woocommerce/template-tags.php:24
+#: inc/woocommerce/template-tags.php:18
 msgid "View your shopping cart"
 msgstr ""
 
-#: inc/woocommerce/template-tags.php:25
+#: inc/woocommerce/template-tags.php:19
 msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
@@ -561,7 +623,7 @@ msgid "Storefront"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://woothemes.com/storefront"
+msgid "http://www.woothemes.com/storefront"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -579,7 +641,7 @@ msgid "WooThemes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://woothemes.com"
+msgid "http://www.woothemes.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -597,22 +659,22 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/structure/post.php:137
+#: inc/structure/post.php:142
 msgctxt "Previous post link"
 msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
 msgstr ""
 
-#: inc/structure/post.php:138
+#: inc/structure/post.php:143
 msgctxt "Next post link"
 msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: inc/structure/post.php:164
+#: inc/structure/post.php:169
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/structure/post.php:169
+#: inc/structure/post.php:174
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
