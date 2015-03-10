@@ -174,10 +174,6 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			color: ' . $accent_color . ';
 		}
 
-		.star-rating span:before {
-			color: ' . $accent_color . ' !important;
-		}
-
 		.widget_price_filter .ui-slider .ui-slider-range,
 		.widget_price_filter .ui-slider .ui-slider-handle {
 			background-color: ' . $accent_color . ';
