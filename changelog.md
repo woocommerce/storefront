@@ -3,6 +3,8 @@
 ### *2015.03.10* - 1.4.1
 * **Fix** - Remove unnecessary `!important` declaration on star rating color.
 * **Tweak** - Layout selector graphics.
+* **Dev** - Replaced `paginate_links()` with `the_posts_pagination()`.
+* **Dev** - Replaced `previous_post_link()` and `next_post_link()` with `the_post_navigation()`.
 
 ### *2015.03.09* - 1.4.0
 * **New** - Added a 'Handheld' menu location.

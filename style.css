@@ -4,7 +4,7 @@ Theme URI:    	http://www.woothemes.com/storefront
 Author:       	WooThemes
 Author URI:		http://www.woothemes.com
 Description:  	Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooThemes, it features a deep integration with our market leading WooCommerce plugin, several layout & color options to personalise your shop, multiple widget regions, a responsive design and much more. Developers will love it's lean and extensible codebase making it a joy to customise and extend. Looking for a WooCommerce theme? Look no further!
-Version:      	1.4.0
+Version:      	1.4.1
 License:      	GNU General Public License v2 or later
 License URI:  	http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  	storefront
@@ -1390,34 +1390,34 @@ fieldset {
 /**
  * Pagination
  */
-.storefront-pagination, .woocommerce-pagination {
+.pagination, .woocommerce-pagination {
   padding: 1em 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-width: 1px 0;
   text-align: center;
   clear: both; }
-  .storefront-pagination .page-numbers, .woocommerce-pagination .page-numbers {
+  .pagination .page-numbers, .woocommerce-pagination .page-numbers {
     list-style: none;
     margin: 0; }
-    .storefront-pagination .page-numbers:after, .woocommerce-pagination .page-numbers:after {
+    .pagination .page-numbers:after, .woocommerce-pagination .page-numbers:after {
       content: "";
       display: table;
       clear: both; }
-    .storefront-pagination .page-numbers li, .woocommerce-pagination .page-numbers li {
+    .pagination .page-numbers li, .woocommerce-pagination .page-numbers li {
       display: inline-block; }
-      .storefront-pagination .page-numbers li .page-numbers, .woocommerce-pagination .page-numbers li .page-numbers {
+      .pagination .page-numbers li .page-numbers, .woocommerce-pagination .page-numbers li .page-numbers {
         border-left-width: 0;
         display: inline-block;
         padding: 0.327em 0.857em; }
-        .storefront-pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
+        .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
           font-weight: 700;
           background-color: rgba(0, 0, 0, 0.0125); }
-        .storefront-pagination .page-numbers li .page-numbers.dots, .woocommerce-pagination .page-numbers li .page-numbers.dots {
+        .pagination .page-numbers li .page-numbers.dots, .woocommerce-pagination .page-numbers li .page-numbers.dots {
           background-color: transparent; }
-        .storefront-pagination .page-numbers li .page-numbers.prev, .storefront-pagination .page-numbers li .page-numbers.next, .woocommerce-pagination .page-numbers li .page-numbers.prev, .woocommerce-pagination .page-numbers li .page-numbers.next {
+        .pagination .page-numbers li .page-numbers.prev, .pagination .page-numbers li .page-numbers.next, .woocommerce-pagination .page-numbers li .page-numbers.prev, .woocommerce-pagination .page-numbers li .page-numbers.next {
           padding-left: 1.387em;
           padding-right: 1.387em; }
-      .storefront-pagination .page-numbers li a.page-numbers:hover, .woocommerce-pagination .page-numbers li a.page-numbers:hover {
+      .pagination .page-numbers li a.page-numbers:hover, .woocommerce-pagination .page-numbers li a.page-numbers:hover {
         border-color: rgba(0, 0, 0, 0.1); }
 
 /**

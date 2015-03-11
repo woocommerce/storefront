@@ -102,23 +102,13 @@ if ( ! function_exists( 'storefront_paging_nav' ) ) {
 	function storefront_paging_nav() {
 		global $wp_query;
 
-		$big 		= 999999999; 					// need an unlikely integer
-		$translated = __( 'Page', 'storefront' );	// Supply translatable string
+		$args = array(
+			'type' 		=> 'list',
+			'next_text' => __( 'Next', 'storefront' ) . '&nbsp;<span class="meta-nav">&rarr;</span>',
+			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp' . __( 'Previous', 'storefront' ),
+			);
 
-		echo '<nav class="storefront-pagination">';
-
-		echo wp_kses_post( paginate_links( array(
-			'base'					=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
-			'format'				=> '?paged=%#%',
-			'current'				=> max( 1, get_query_var( 'paged' ) ),
-			'prev_text'				=> __( '&larr;', 'storefront' ),
-			'next_text'				=> __( '&rarr;', 'storefront' ),
-			'type'					=> 'list',
-			'total'					=> $wp_query->max_num_pages,
-			'before_page_number'	=> '<span class="screen-reader-text">' . esc_attr( $translated ) . ' </span>',
-		) ) );
-
-		echo '</nav>';
+		the_posts_pagination( $args );
 	}
 }
 
@@ -127,24 +117,11 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	 * Display navigation to next/previous post when applicable.
 	 */
 	function storefront_post_nav() {
-		// Don't print empty markup if there's nowhere to navigate.
-		$previous = ( is_attachment() ) ? get_post( get_post()->post_parent ) : get_adjacent_post( false, '', true );
-		$next     = get_adjacent_post( false, '', false );
-
-		if ( ! $next && ! $previous ) {
-			return;
-		}
-		?>
-		<nav class="navigation post-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Post navigation', 'storefront' ); ?></h1>
-			<div class="nav-links">
-				<?php
-					previous_post_link( '<div class="nav-previous">%link</div>', _x( '<span class="meta-nav">&larr;</span>&nbsp;%title', 'Previous post link', 'storefront' ) );
-					next_post_link( '<div class="nav-next">%link</div>', _x( '%title&nbsp;<span class="meta-nav">&rarr;</span>', 'Next post link', 'storefront' ) );
-				?>
-			</div><!-- .nav-links -->
-		</nav><!-- .navigation -->
-		<?php
+		$args = array(
+			'next_text' => '%title &nbsp;<span class="meta-nav">&rarr;</span>',
+			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp;%title'
+			);
+		the_post_navigation( $args );
 	}
 }
 
