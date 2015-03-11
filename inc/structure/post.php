@@ -119,7 +119,7 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	function storefront_post_nav() {
 		$args = array(
 			'next_text' => '%title &nbsp;<span class="meta-nav">&rarr;</span>',
-			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp;%title'
+			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp;%title',
 			);
 		the_post_navigation( $args );
 	}
