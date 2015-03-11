@@ -2,6 +2,7 @@
 
 ### *2015.03.10* - 1.4.1
 * **Fix** - Remove unnecessary `!important` declaration on star rating color.
+* **Tweak** - Layout selector graphics.
 
 ### *2015.03.09* - 1.4.0
 * **New** - Added a 'Handheld' menu location.
