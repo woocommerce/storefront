@@ -6,6 +6,7 @@
 * **Dev** - Replaced `paginate_links()` with `the_posts_pagination()`.
 * **Dev** - Replaced `previous_post_link()` and `next_post_link()` with `the_post_navigation()`.
 * **Dev** - HTML5 widget support.
+* **Dev** - Fixed typo in classname `storefront-feautred-products` is now `storefront-featured-products`.
 
 ### *2015.03.09* - 1.4.0
 * **New** - Added a 'Handheld' menu location.

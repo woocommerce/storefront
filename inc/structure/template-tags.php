@@ -82,7 +82,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'title'				=> __( 'Featured Products', 'storefront' ),
 				) );
 
-			echo '<section class="storefront-product-section storefront-feautred-products">';
+			echo '<section class="storefront-product-section storefront-featured-products">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
 			echo do_shortcode( '[featured_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
