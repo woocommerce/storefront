@@ -10,6 +10,18 @@
 @import '../../../sass/utils/mixins';
 @import '../../../node_modules/susy/sass/susy';
 
+// Star font, FontAwesome doesn't work :(
+@font-face {
+	font-family: 'star';
+	src: url('../../../../../plugins/woocommerce/assets/fonts/star.eot');
+	src: url('../../../../../plugins/woocommerce/assets/fonts/star.eot?#iefix') format('embedded-opentype'),
+		url('../../../../../plugins/woocommerce/assets/fonts/star.woff') format('woff'),
+		url('../../../../../plugins/woocommerce/assets/fonts/star.ttf') format('truetype'),
+		url('../../../../../plugins/woocommerce/assets/fonts/star.svg#star') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /**
  * Header Elements
  */
@@ -926,19 +938,18 @@ ul.digital-downloads {
 	overflow: hidden;
 	position: relative;
 	height: 1em;
-	line-height: 1em;
+	line-height: 1;
 	font-size: 1em;
-	width: 4.64em;
-	font-family: "fontawesome";
-	font-weight: 400;
+	width: 5.3em;
+	font-family: 'star';
 
 	&:before {
-		content: "\f005\f005\f005\f005\f005";
+		content: "\73\73\73\73\73";
+		color: rgba(0,0,0,0.2);
 		float: left;
 		top: 0;
 		left: 0;
 		position: absolute;
-		color: rgba(0,0,0,0.2);
 	}
 
 	span {
@@ -947,11 +958,11 @@ ul.digital-downloads {
 		top: 0;
 		left: 0;
 		position: absolute;
-		padding-top: 1.618em;
+		padding-top: 1.5em;
 	}
 
 	span:before {
-		content: "\f005\f005\f005\f005\f005";
+		content: "\53\53\53\53\53";
 		top: 0;
 		position: absolute;
 		left: 0;

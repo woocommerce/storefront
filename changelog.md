@@ -2,6 +2,7 @@
 
 ### *2015.03.10* - 1.4.1
 * **Fix** - Remove unnecessary `!important` declaration on star rating color.
+* **Fix** - Star rating display in IE11.
 * **Tweak** - Layout selector graphics.
 * **Tweak** - Accessibility improvements in post meta.
 * **Dev** - Replaced `paginate_links()` with `the_posts_pagination()`.
