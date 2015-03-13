@@ -76,7 +76,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			if ( $categories_list && storefront_categorized_blog() ) : ?>
 				<span class="cat-links">
 					<?php
-					echo '<span class="screen-reader-text">' . __( 'Categories: ', 'storefront' ) . '</span>';
+					echo '<span class="screen-reader-text">' . esc_attr( __( 'Categories: ', 'storefront' ) ) . '</span>';
 					echo wp_kses_post( $categories_list );
 					?>
 				</span>
@@ -89,7 +89,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			if ( $tags_list ) : ?>
 				<span class="tags-links">
 					<?php
-					echo '<span class="screen-reader-text">' . __( 'Tags: ', 'storefront' ) . '</span>';
+					echo '<span class="screen-reader-text">' . esc_attr( __( 'Tags: ', 'storefront' ) ) . '</span>';
 					echo wp_kses_post( $tags_list );
 					?>
 				</span>
