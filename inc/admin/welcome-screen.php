@@ -251,7 +251,7 @@ class Storefront_Welcome {
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/smart-coupons.jpg'; ?>" alt="<?php _e( 'Smart Coupons', 'storefront' ); ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Smart Coupons', 'storefront' ); ?></h4>
 				<p><?php _e( 'Smart coupons provide the most comprehensive and powerful solution for discount coupons, gift certificates, store credits and vouchers. It also allows customers to buy credits for themselves or gift to others.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sSmart Counpons%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sSmart Coupons%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
 
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" alt="<?php _e( 'Wishlists', 'storefront' ); ?>" class="image-50" width="440" />
 				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
