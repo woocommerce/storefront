@@ -34,7 +34,7 @@ if ( ! function_exists( 'storefront_setup' ) ) :
 		 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
 		 */
 
-		// wp-content/languages/theme-name/it_IT.mo
+		// wp-content/languages/themes/storefront-it_IT.mo
 		load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes/' );
 
 		// wp-content/themes/child-theme-name/languages/it_IT.mo

@@ -528,7 +528,7 @@ ul.products {
 		cursor: ew-resize;
 		outline: none;
 		background: $color_links;
-		@include box-sizing(border-box);
+		box-sizing: border-box;
 		margin-top: -.25em;
 		opacity: 1;
 

@@ -358,8 +358,6 @@ td, th {
  * Global styles
  */
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -766,19 +764,19 @@ a {
     max-width: 65.141em;
     margin-left: auto;
     margin-right: auto; }
-    .col-full:after {
+    .col-full::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     .col-full:after {
       content: " ";
       display: block;
       clear: both; }
 
-  .site-content:after {
+  .site-content::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
 
   .content-area {
     
@@ -878,10 +876,10 @@ a {
   .footer-widgets {
     padding-top: 4.236em;
     border-bottom: 3px solid rgba(0, 0, 0, 0.05); }
-    .footer-widgets:after {
+    .footer-widgets::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     .footer-widgets.col-2 .block {
       
       
@@ -1002,8 +1000,6 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 button::-moz-focus-inner, input::-moz-focus-inner {
@@ -1020,8 +1016,6 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   border: 0;
   -webkit-appearance: none;
   border-radius: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: normal;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125); }
@@ -1297,10 +1291,10 @@ fieldset {
   content: "\f040"; }
 
 @media screen and (min-width: 768px) {
-  .hentry.type-post:after {
+  .hentry.type-post::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .hentry.type-post .entry-meta {
     
     
@@ -1399,10 +1393,10 @@ fieldset {
   .pagination .page-numbers, .woocommerce-pagination .page-numbers {
     list-style: none;
     margin: 0; }
-    .pagination .page-numbers:after, .woocommerce-pagination .page-numbers:after {
+    .pagination .page-numbers::after, .woocommerce-pagination .page-numbers::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     .pagination .page-numbers li, .woocommerce-pagination .page-numbers li {
       display: inline-block; }
       .pagination .page-numbers li .page-numbers, .woocommerce-pagination .page-numbers li .page-numbers {
@@ -1432,10 +1426,10 @@ fieldset {
   #comments .comment-list {
     list-style: none;
     margin-left: 0; }
-    #comments .comment-list .comment-body:after {
+    #comments .comment-list .comment-body::after {
+      clear: both;
       content: "";
-      display: table;
-      clear: both; }
+      display: table; }
     #comments .comment-list .comment-content {
       padding-bottom: 1.618em;
       margin-bottom: 1.618em; }
@@ -1460,10 +1454,10 @@ fieldset {
     #comments .comment-list .reply {
       font-size: 0.857em;
       margin-bottom: 1.618em; }
-      #comments .comment-list .reply:after {
+      #comments .comment-list .reply::after {
+        clear: both;
         content: "";
-        display: table;
-        clear: both; }
+        display: table; }
       #comments .comment-list .reply .comment-edit-link {
         border-left: 1px solid rgba(0, 0, 0, 0.1); }
       #comments .comment-list .reply a {
@@ -1491,10 +1485,10 @@ fieldset {
     margin-bottom: 0; }
 
 @media screen and (min-width: 768px) {
-  .comment-list:after {
+  .comment-list::after {
+    clear: both;
     content: "";
-    display: table;
-    clear: both; }
+    display: table; }
   .comment-list .comment {
     clear: both; }
   .comment-list .comment-meta {
@@ -1704,10 +1698,10 @@ fieldset {
   .widget-area .widget a.button:hover {
     color: #fff; }
 
-.header-widget-region:after {
+.header-widget-region::after {
+  clear: both;
   content: "";
-  display: table;
-  clear: both; }
+  display: table; }
 .header-widget-region .widget {
   margin: 0;
   padding: 1em 0;
