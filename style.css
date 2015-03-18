@@ -383,7 +383,7 @@ body {
   .site-header .widget {
     margin-bottom: 0; }
 
-.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header {
+.home.blog .site-header, .home.page:not(.page-template-template-homepage) .site-header, .home.post-type-archive-product .site-header {
   margin-bottom: 4.236em; }
 
 .no-wc-breadcrumb .site-header {
