@@ -6,6 +6,7 @@
 * **Fix** - Site header margin when using shop page as homepage.
 * **Tweak** - Layout selector graphics.
 * **Tweak** - Accessibility improvements in post meta.
+* **Tweak** - Products widget styling.
 * **Dev** - Replaced `paginate_links()` with `the_posts_pagination()`.
 * **Dev** - Replaced `previous_post_link()` and `next_post_link()` with `the_post_navigation()`.
 * **Dev** - HTML5 widget support.
