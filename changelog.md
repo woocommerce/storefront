@@ -4,6 +4,7 @@
 * **Fix** - Remove unnecessary `!important` declaration on star rating color.
 * **Fix** - Star rating display in IE11.
 * **Fix** - Site header margin when using shop page as homepage.
+* **Fix** - Navigation on handheld devices when no menu is set.
 * **Tweak** - Layout selector graphics.
 * **Tweak** - Accessibility improvements in post meta.
 * **Tweak** - Products widget styling.

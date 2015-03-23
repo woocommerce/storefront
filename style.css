@@ -1078,7 +1078,7 @@ fieldset {
 .primary-navigation {
   display: none; }
 
-.handheld-navigation {
+.handheld-navigation, .nav-menu {
   display: none; }
 
 .main-navigation.toggled .handheld-navigation {
