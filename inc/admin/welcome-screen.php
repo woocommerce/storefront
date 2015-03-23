@@ -233,10 +233,10 @@ class Storefront_Welcome {
 				<p><?php _e( 'Gives you further control over the look and feel of your shop. Change the product archive and single layouts, toggle various shop components, enable a distraction free checkout design and more.', 'storefront' ); ?></p>
 				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-woocommerce-customiser?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sStorefront WooCommerce Customiser%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" alt="<?php _e( 'Storefront Parallax Hero', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'Storefront Parallax Hero', 'storefront' ); ?></h4>
-				<p><?php _e( 'Adds a parallax hero component to your homepage. Easily change the colors / copy and give your visitors a warm welcome!', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-parallax-hero?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sStorefront Parallax Hero%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" alt="<?php _e( 'Storefront Product Hero', 'storefront' ); ?>" class="image-50" width="440" />
+				<h4><?php _e( 'Storefront Product Hero', 'storefront' ); ?></h4>
+				<p><?php _e( 'Adds a parallax hero component to your homepage highlighting a specific product at your store. Use the shortcode to add attractive hero components to posts, pages or widgets.', 'storefront' ); ?></p>
+				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-product-hero?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sStorefront Product Hero%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
 
 				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php _e( 'View all Storefront extensions &rarr;', 'storefront' ); ?></a></p>
 			</div>
