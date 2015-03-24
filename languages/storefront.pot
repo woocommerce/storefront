@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.4.0\n"
+"Project-Id-Version: Storefront 1.4.1\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-03-09 09:40:04+00:00\n"
+"POT-Creation-Date: 2015-03-24 10:29:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -65,14 +65,6 @@ msgstr ""
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
-msgstr ""
-
-#: header.php:22
-msgid "Skip to navigation"
-msgstr ""
-
-#: header.php:23
-msgid "Skip to content"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:44
@@ -320,17 +312,18 @@ msgid "Buy %sStorefront WooCommerce Customiser%s now"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:236 inc/admin/welcome-screen.php:237
-msgid "Storefront Parallax Hero"
+msgid "Storefront Product Hero"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:238
 msgid ""
-"Adds a parallax hero component to your homepage. Easily change the colors / "
-"copy and give your visitors a warm welcome!"
+"Adds a parallax hero component to your homepage highlighting a specific "
+"product at your store. Use the shortcode to add attractive hero components "
+"to posts, pages or widgets."
 msgstr ""
 
 #: inc/admin/welcome-screen.php:239
-msgid "Buy %sStorefront Parallax Hero%s now"
+msgid "Buy %sStorefront Product Hero%s now"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:241
@@ -372,7 +365,7 @@ msgid ""
 msgstr ""
 
 #: inc/admin/welcome-screen.php:254
-msgid "Buy %sSmart Counpons%s now"
+msgid "Buy %sSmart Coupons%s now"
 msgstr ""
 
 #: inc/admin/welcome-screen.php:256
@@ -451,43 +444,47 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/controls.php:29 inc/functions/setup.php:109
+#: inc/customizer/controls.php:29 inc/functions/setup.php:114
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/controls.php:46
+#: inc/customizer/controls.php:49
+msgid "Looking to add a logo? Install the %sJetpack%s plugin!"
+msgstr ""
+
+#: inc/customizer/controls.php:58
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer/controls.php:149
+#: inc/customizer/controls.php:161
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/controls.php:151
+#: inc/customizer/controls.php:163
 msgid "Customise the look & feel of your web site footer."
 msgstr ""
 
-#: inc/customizer/controls.php:218
+#: inc/customizer/controls.php:230
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/controls.php:220
+#: inc/customizer/controls.php:232
 msgid "Customise the look & feel of your web site buttons."
 msgstr ""
 
-#: inc/customizer/controls.php:287
+#: inc/customizer/controls.php:299
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/controls.php:297
+#: inc/customizer/controls.php:309
 msgid "General layout"
 msgstr ""
 
-#: inc/customizer/controls.php:314
+#: inc/customizer/controls.php:326
 msgid "More"
 msgstr ""
 
-#: inc/customizer/controls.php:324
+#: inc/customizer/controls.php:336
 msgid "Looking for more options?"
 msgstr ""
 
@@ -503,15 +500,15 @@ msgstr ""
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/functions/setup.php:99
+#: inc/functions/setup.php:104
 msgid "Sidebar"
 msgstr ""
 
-#: inc/functions/setup.php:122
+#: inc/functions/setup.php:127
 msgid "Footer %d"
 msgstr ""
 
-#: inc/functions/setup.php:124
+#: inc/functions/setup.php:129
 msgid "Widgetized Footer Region %d."
 msgstr ""
 
@@ -531,16 +528,24 @@ msgstr ""
 msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: inc/structure/header.php:50
+#: inc/structure/header.php:52
 msgid "Primary Navigation"
 msgstr ""
 
-#: inc/structure/header.php:51
+#: inc/structure/header.php:53
 msgid "Navigation"
 msgstr ""
 
-#: inc/structure/header.php:81
+#: inc/structure/header.php:82
 msgid "Secondary Navigation"
+msgstr ""
+
+#: inc/structure/header.php:104
+msgid "Skip to navigation"
+msgstr ""
+
+#: inc/structure/header.php:105
+msgid "Skip to content"
 msgstr ""
 
 #: inc/structure/page.php:33 inc/structure/post.php:53
@@ -551,37 +556,37 @@ msgstr ""
 msgid "Continue reading %s"
 msgstr ""
 
-#: inc/structure/post.php:74 inc/structure/post.php:82
+#: inc/structure/post.php:74 inc/structure/post.php:87
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/structure/post.php:91
+#: inc/structure/post.php:79
+msgid "Categories: "
+msgstr ""
+
+#: inc/structure/post.php:92
+msgid "Tags: "
+msgstr ""
+
+#: inc/structure/post.php:101
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/structure/post.php:91
+#: inc/structure/post.php:101
 msgid "1 Comment"
 msgstr ""
 
-#: inc/structure/post.php:91
+#: inc/structure/post.php:101
 msgid "% Comments"
 msgstr ""
 
-#: inc/structure/post.php:106
-msgid "Page"
+#: inc/structure/post.php:117
+msgid "Next"
 msgstr ""
 
-#: inc/structure/post.php:114
-msgid "&larr;"
-msgstr ""
-
-#: inc/structure/post.php:115
-msgid "&rarr;"
-msgstr ""
-
-#: inc/structure/post.php:139
-msgid "Post navigation"
+#: inc/structure/post.php:118
+msgid "Previous"
 msgstr ""
 
 #: inc/structure/template-tags.php:26
@@ -659,22 +664,12 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/structure/post.php:142
-msgctxt "Previous post link"
-msgid "<span class=\"meta-nav\">&larr;</span>&nbsp;%title"
-msgstr ""
-
-#: inc/structure/post.php:143
-msgctxt "Next post link"
-msgid "%title&nbsp;<span class=\"meta-nav\">&rarr;</span>"
-msgstr ""
-
-#: inc/structure/post.php:169
+#: inc/structure/post.php:156
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/structure/post.php:174
+#: inc/structure/post.php:161
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
