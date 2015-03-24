@@ -10,10 +10,10 @@
 	}
 
 	.widget-search .search-submit {
-		display: none;
+		@include screen-reader-text();
 	}
 
-	h2.widget-title {
+	h3.widget-title {
 		font-size: 1.387em;
 		letter-spacing: 0;
 		border-bottom: 3px solid $color_body;
@@ -67,7 +67,7 @@
 		}
 
 		input[type=submit] {
-			display: none;
+			@include screen-reader-text();
 		}
 
 		&:before {

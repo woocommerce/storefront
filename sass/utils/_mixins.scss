@@ -14,6 +14,12 @@
     }
 }
 
+@mixin screen-reader-text() {
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+}
+
 @mixin message($glyph: "\f05a", $color: $info)
 {
     padding: 1em 1.618em 1em 3.631em;

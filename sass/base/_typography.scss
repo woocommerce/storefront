@@ -216,7 +216,7 @@ a {
 	font-weight: 700;
 
 	&:focus {
-		outline: thin dotted;
+		outline: 2px solid $color_links;
 	}
 }
 

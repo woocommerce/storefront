@@ -420,10 +420,10 @@ body {
  */
 .site-footer {
   background-color: #f3f3f3;
-  color: #9fa4ad;
+  color: #93979f;
   padding: 1.618em 0; }
   .site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
-    color: #8e939c; }
+    color: #82868e; }
   .site-footer a:not(.button) {
     color: #96588a; }
 
@@ -462,19 +462,18 @@ body {
   border-radius: 3px;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
-  color: #21759b;
   display: block;
-  font-size: 14px;
   font-weight: bold;
   height: auto;
-  left: 5px;
+  left: 0;
   line-height: normal;
-  padding: 15px 23px 14px;
+  padding: 1em 1.618em;
   text-decoration: none;
-  top: 5px;
+  top: 0;
   width: auto;
   z-index: 100000;
-  /* Above WP toolbar */ }
+  /* Above WP toolbar */
+  outline: none; }
 
 /**
  * Clearing
@@ -535,7 +534,7 @@ body {
   font-size: 0.938em; }
 
 body, button, input, select, textarea {
-  color: #6c717a;
+  color: #60646c;
   font-family: "Helvetica Neue", sans-serif;
   line-height: 1.618;
   -webkit-font-smoothing: antialiased;
@@ -546,7 +545,7 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 700;
   margin: 0 0 0.618em;
-  color: #3c3f44; }
+  color: #303236; }
 
 h1, .alpha {
   font-size: 2.244em;
@@ -670,7 +669,7 @@ a {
   text-decoration: none;
   font-weight: 700; }
   a:focus {
-    outline: thin dotted; }
+    outline: 2px solid #96588a; }
 
 .storefront-cute * {
   font-family: "Comic Sans MS", sans-serif; }
@@ -952,8 +951,8 @@ button, input, select, textarea {
 button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart {
   border: 0;
   background: none;
-  background-color: #6c717a;
-  border-color: #6c717a;
+  background-color: #60646c;
+  border-color: #60646c;
   color: #fff;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -977,6 +976,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"], .button
   button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover {
     opacity: 0.8;
     color: #fff; }
+  button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, .button:focus, .added_to_cart:focus {
+    outline: 2px solid #96588a; }
   button.added:after, input[type="button"].added:after, input[type="reset"].added:after, input[type="submit"].added:after, .button.added:after, .added_to_cart.added:after {
     content: "\f00c";
     font-family: "FontAwesome";
@@ -1010,7 +1011,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
   padding: 0.618em;
   background-color: #efefef;
-  color: #6c717a;
+  color: #60646c;
   line-height: 1;
   outline: none;
   border: 0;
@@ -1019,10 +1020,9 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   box-sizing: border-box;
   font-weight: normal;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.125); }
-
-input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus {
-  background-color: #e3e3e3;
-  color: #54585f; }
+  input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus, .input-text:focus {
+    background-color: #e3e3e3;
+    color: #484b51; }
 
 textarea {
   overflow: auto;
@@ -1078,7 +1078,7 @@ fieldset {
 .primary-navigation {
   display: none; }
 
-.handheld-navigation, .nav-menu, .main-navigation .menu {
+.handheld-navigation, .nav-menu, .main-navigation div.menu {
   display: none; }
 
 .main-navigation.toggled .handheld-navigation, .main-navigation.toggled .menu {
@@ -1145,7 +1145,7 @@ fieldset {
           top: 0; }
 
   ul.menu li.current-menu-item > a {
-    color: #6c717a; }
+    color: #60646c; }
 
   /**
 	 * Primary Navigation
@@ -1227,7 +1227,7 @@ fieldset {
       .secondary-navigation .menu a {
         padding: 1.387em 0.857em;
         font-weight: 400;
-        color: #a1a4ab; }
+        color: #93979f; }
         .secondary-navigation .menu a:hover {
           text-decoration: none; }
  }
@@ -1248,7 +1248,7 @@ fieldset {
   .hentry .wp-post-image {
     margin-bottom: 1.618em; }
   .hentry .entry-header {
-    border-bottom: 3px solid #6c717a;
+    border-bottom: 3px solid #60646c;
     margin-bottom: 3.631em; }
     .hentry .entry-header h1 {
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1441,7 +1441,7 @@ fieldset {
       opacity: 0.8;
       font-size: 0.857em; }
       #comments .comment-list .comment-meta a.comment-date:hover {
-        color: #6c717a; }
+        color: #60646c; }
     #comments .comment-list .comment-meta cite {
       font-style: normal;
       clear: both;
@@ -1461,7 +1461,7 @@ fieldset {
       #comments .comment-list .reply .comment-edit-link {
         border-left: 1px solid rgba(0, 0, 0, 0.1); }
       #comments .comment-list .reply a {
-        color: #6c717a;
+        color: #60646c;
         background-color: rgba(0, 0, 0, 0.025);
         padding: 0.53em 1em;
         float: left; }
@@ -1678,11 +1678,14 @@ fieldset {
   .widget select {
     max-width: 100%; }
   .widget .widget-search .search-submit {
-    display: none; }
-  .widget h2.widget-title {
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important; }
+  .widget h3.widget-title {
     font-size: 1.387em;
     letter-spacing: 0;
-    border-bottom: 3px solid #6c717a;
+    border-bottom: 3px solid #60646c;
     padding: 0 0 1em;
     margin-bottom: 1em;
     font-weight: 700; }
@@ -1713,7 +1716,10 @@ fieldset {
     width: 100%;
     padding-left: 2.618em; }
   .widget_search form input[type=submit], .widget_product_search form input[type=submit] {
-    display: none; }
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important; }
   .widget_search form:before, .widget_product_search form:before {
     content: "\f002";
     font-family: "FontAwesome";
@@ -1767,7 +1773,7 @@ fieldset {
   .widget-area .widget h1.widget-title {
     font-size: 1.387em; }
   .widget-area .widget a {
-    color: #6c717a;
+    color: #60646c;
     font-weight: 400; }
     .widget-area .widget a:hover {
       color: #96588a; }

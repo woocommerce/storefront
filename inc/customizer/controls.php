@@ -40,6 +40,18 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		}
 
 		/**
+		 * Jetpack logo
+		 */
+		if ( ! class_exists( 'Jetpack' ) ) {
+			$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_jetpack_logo_info', array(
+				'section'  		=> 'title_tagline',
+				'type' 			=> 'text',
+				'description'	=> sprintf( __( 'Looking to add a logo? Install the %sJetpack%s plugin!', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ),
+				'priority' 		=> 40,
+			) ) );
+		}
+
+		/**
 		 * Add the typography section
 	     */
 		$wp_customize->add_section( 'storefront_typography' , array(
@@ -66,7 +78,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Text Color
 		 */
 		$wp_customize->add_setting( 'storefront_text_color', array(
-			'default'           => apply_filters( 'storefront_default_text_color', '#6c717a' ),
+			'default'           => apply_filters( 'storefront_default_text_color', '#60646c' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -224,7 +236,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		 * Button background color
 		 */
 		$wp_customize->add_setting( 'storefront_button_background_color', array(
-			'default'           => apply_filters( 'storefront_default_button_background_color', '#6c717a' ),
+			'default'           => apply_filters( 'storefront_default_button_background_color', '#60646c' ),
 			'sanitize_callback' => 'storefront_sanitize_hex_color',
 		) );
 
