@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.03.24* - 1.4.2
+* **Fix** - Navigation not displaying if no menu is assigned to primary location.
+
 ### *2015.03.24* - 1.4.1
 * **Fix** - Remove unnecessary `!important` declaration on star rating color.
 * **Fix** - Star rating display in IE11.
