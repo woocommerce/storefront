@@ -1078,10 +1078,10 @@ fieldset {
 .primary-navigation {
   display: none; }
 
-.handheld-navigation, .nav-menu {
+.handheld-navigation, .nav-menu, .main-navigation .menu {
   display: none; }
 
-.main-navigation.toggled .handheld-navigation {
+.main-navigation.toggled .handheld-navigation, .main-navigation.toggled .menu {
   display: block; }
 
 .main-navigation ul {

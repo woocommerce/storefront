@@ -63,7 +63,6 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 				array(
 					'theme_location'	=> 'handheld',
 					'container_class'	=> 'handheld-navigation',
-					'fallback_cb'		=> '',
 					)
 			);
 			?>

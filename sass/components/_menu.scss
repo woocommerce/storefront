@@ -33,12 +33,14 @@
 }
 
 .handheld-navigation,
-.nav-menu {
+.nav-menu,
+.main-navigation .menu {
 	display: none;
 }
 
 .main-navigation.toggled {
-	.handheld-navigation {
+	.handheld-navigation,
+	.menu {
 		display: block;
 	}
 }
