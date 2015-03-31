@@ -1340,7 +1340,8 @@ dl.variation {
 			}
 		}
 
-		&:hover {
+		&:hover,
+		&.focus {
 			.widget_shopping_cart {
 				left: 0;
 			}

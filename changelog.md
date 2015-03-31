@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.03.31* - 1.4.3
+* **Tweak** - Cart dropdown appears on focus.
+
 ### *2015.03.24* - 1.4.2
 * **Fix** - Navigation not displaying if no menu is assigned to primary location.
 
