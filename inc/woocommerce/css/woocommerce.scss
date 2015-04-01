@@ -1739,19 +1739,28 @@ dl.variation {
 		border-width: 0 3px 3px 3px;
 	}
 
-	// Changing a payment method for a subscription
-	.woocommerce-info + #order_review {
-		border-width: 3px;
-		width: 100%;
-		float: none;
-
-		.payment_methods + .form-row {
-			padding: 1em;
-		}
-
-		.button#place_order {
-			display: block;
+	// Payment forms in account
+	.woocommerce-order-pay {
+		#order_review {
+			border-width: 3px;
 			width: 100%;
+			float: none;
+
+			#payment {
+				h3 {
+					padding-left: 1em;
+					padding-top: 1em;
+				}
+			}
+
+			.payment_methods + .form-row {
+				padding: 1em;
+			}
+
+			.button#place_order {
+				display: block;
+				width: 100%;
+			}
 		}
 	}
 
