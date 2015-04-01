@@ -3,6 +3,7 @@
 ### *2015.01.01* - 1.4.3
 * **Tweak** - Cart dropdown appears on focus.
 * **Tweak** - Payment form layout/styling when paying from My Account.
+* **Tweak** - Improvements to the product archive sorting / pagination layout and styling.
 
 ### *2015.03.24* - 1.4.2
 * **Fix** - Navigation not displaying if no menu is assigned to primary location.

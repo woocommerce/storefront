@@ -1402,17 +1402,21 @@ fieldset {
       .pagination .page-numbers li .page-numbers, .woocommerce-pagination .page-numbers li .page-numbers {
         border-left-width: 0;
         display: inline-block;
-        padding: 0.327em 0.857em; }
+        padding: 0.327em 0.857em;
+        background-color: rgba(0, 0, 0, 0.025);
+        color: #60646c; }
         .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
           font-weight: 700;
-          background-color: rgba(0, 0, 0, 0.0125); }
+          background-color: #96588a;
+          border-color: #96588a;
+          color: #fff; }
         .pagination .page-numbers li .page-numbers.dots, .woocommerce-pagination .page-numbers li .page-numbers.dots {
           background-color: transparent; }
         .pagination .page-numbers li .page-numbers.prev, .pagination .page-numbers li .page-numbers.next, .woocommerce-pagination .page-numbers li .page-numbers.prev, .woocommerce-pagination .page-numbers li .page-numbers.next {
-          padding-left: 1.387em;
-          padding-right: 1.387em; }
+          padding-left: 1em;
+          padding-right: 1em; }
       .pagination .page-numbers li a.page-numbers:hover, .woocommerce-pagination .page-numbers li a.page-numbers:hover {
-        border-color: rgba(0, 0, 0, 0.1); }
+        background-color: rgba(0, 0, 0, 0.05); }
 
 /**
  * Comments

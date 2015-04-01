@@ -18,7 +18,7 @@
 	} );
 	wp.customize( 'storefront_text_color', function( value ) {
 		value.bind( function( to ) {
-			$( 'body, .widget-area .widget a, .onsale, .woocommerce-tabs ul.tabs li.active a, ul.products li.product .price, .widget-area .widget a' ).css( 'color', to );
+			$( 'body, .widget-area .widget a, .onsale, .woocommerce-tabs ul.tabs li.active a, ul.products li.product .price, .widget-area .widget a, .pagination .page-numbers li .page-numbers:not(.current), .woocommerce-pagination .page-numbers li .page-numbers:not(.current)' ).css( 'color', to );
 		} );
 	} );
 	wp.customize( 'storefront_text_color', function( value ) {

@@ -42,10 +42,14 @@
 				border-left-width: 0;
 				display: inline-block;
 				padding: .327em .857em;
+				background-color: rgba(#000,.025);
+				color: $color_body;
 
 				&.current {
 					font-weight: 700;
-					background-color: rgba(0,0,0,0.0125);
+					background-color: $color_links;
+					border-color: $color_links;
+					color: #fff;
 				}
 
 				&.dots {
@@ -54,14 +58,14 @@
 
 				&.prev,
 				&.next {
-					padding-left: 1.387em;
-					padding-right: 1.387em;
+					padding-left: 1em;
+					padding-right: 1em;
 				}
 			}
 
 			a.page-numbers {
 				&:hover {
-					border-color: $color_border;
+					background-color: rgba(#000,.05);
 				}
 			}
 		}

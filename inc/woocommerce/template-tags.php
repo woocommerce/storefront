@@ -77,3 +77,21 @@ if ( ! function_exists( 'storefront_upsell_display' ) ) {
 		woocommerce_upsell_display( -1, 3 );
 	}
 }
+
+/**
+ * Sorting wrapper
+ * @since   1.4.3
+ * @return  void
+ */
+function storefront_sorting_wrapper() {
+	echo '<div class="storefront-sorting">';
+}
+
+/**
+ * Sorting wrapper close
+ * @since   1.4.3
+ * @return  void
+ */
+function storefront_sorting_wrapper_close() {
+	echo '</div>';
+}

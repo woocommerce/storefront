@@ -76,7 +76,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		.secondary-navigation a,
 		.widget-area .widget a,
 		.onsale,
-		#comments .comment-list .reply a {
+		#comments .comment-list .reply a,
+		.pagination .page-numbers li .page-numbers:not(.current), .woocommerce-pagination .page-numbers li .page-numbers:not(.current) {
 			color: ' . $text_color . ';
 		}
 
@@ -108,7 +109,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 			color: ' . $button_text_color . ';
 		}
 
-		button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart {
+		button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
 			background-color: ' . $button_alt_background_color . ';
 			border-color: ' . $button_alt_background_color . ';
 			color: ' . $button_alt_text_color . ';
