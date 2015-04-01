@@ -285,6 +285,18 @@ ul.products {
 
 		.product_meta {
 			font-size: .857em;
+
+			.sku_wrapper,
+			.posted_in,
+			.tagged_as {
+				border-bottom: 1px dotted $color_border;
+				display: block;
+				padding: .53em 0;
+
+				&:last-child {
+					border-bottom: 0;
+				}
+			}
 		}
 
 		p.stock {
