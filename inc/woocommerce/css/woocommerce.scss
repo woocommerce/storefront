@@ -484,14 +484,19 @@ ul.products {
 .widget_layered_nav {
 	li {
 		margin-bottom: .618em;
+
+		&:before {
+			font-family: "FontAwesome";
+			margin-right: .53em;
+			display: inline-block;
+			opacity: 0.35;
+			content: "\f0c8";
+		}
 	}
 
 	.chosen {
 		&:before {
-			font-family: "FontAwesome";
-			content: "\f00d";
-			margin-right: .53em;
-			color: $error;
+			content: "\f14a";
 		}
 	}
 }
