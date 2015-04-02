@@ -6,6 +6,7 @@
 * **Tweak** - Improvements to the product archive sorting / pagination layout and styling.
 * **Tweak** - Layered nav list item styling.
 * **Tweak** - Product meta styling.
+* **Tweak** - Heading and Star Rating size on product loops.
 
 ### *2015.03.24* - 1.4.2
 * **Fix** - Navigation not displaying if no menu is assigned to primary location.
