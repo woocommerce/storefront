@@ -410,13 +410,10 @@ ul.products {
 
 		.quantity {
 			display: block;
-			color: lighten( $color_body, 20% );
 		}
 	}
 
 	a {
-		color: darken( $color_body, 10% );
-
 		&:hover {
 			color: $color_links;
 		}
