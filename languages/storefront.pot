@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.4.2\n"
+"Project-Id-Version: Storefront 1.4.3\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-03-24 15:09:51+00:00\n"
+"POT-Creation-Date: 2015-04-02 22:09:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -456,6 +456,28 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
+#: inc/customizer/controls.php:71
+msgid "Link / accent color"
+msgstr ""
+
+#: inc/customizer/controls.php:87 inc/customizer/controls.php:135
+#: inc/customizer/controls.php:191 inc/customizer/controls.php:259
+msgid "Text color"
+msgstr ""
+
+#: inc/customizer/controls.php:103 inc/customizer/controls.php:176
+msgid "Heading color"
+msgstr ""
+
+#: inc/customizer/controls.php:119 inc/customizer/controls.php:221
+#: inc/customizer/controls.php:244
+msgid "Background color"
+msgstr ""
+
+#: inc/customizer/controls.php:151 inc/customizer/controls.php:206
+msgid "Link color"
+msgstr ""
+
 #: inc/customizer/controls.php:161
 msgid "Footer"
 msgstr ""
@@ -470,6 +492,14 @@ msgstr ""
 
 #: inc/customizer/controls.php:232
 msgid "Customise the look & feel of your web site buttons."
+msgstr ""
+
+#: inc/customizer/controls.php:274
+msgid "Alternate button background color"
+msgstr ""
+
+#: inc/customizer/controls.php:289
+msgid "Alternate button text color"
 msgstr ""
 
 #: inc/customizer/controls.php:299
