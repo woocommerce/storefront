@@ -7,6 +7,7 @@
 * **Tweak** - Layered nav list item styling.
 * **Tweak** - Product meta styling.
 * **Tweak** - Heading and Star Rating size on product loops.
+* **Dev** - Updated node-sass and grunt-sass dependency versions.
 
 ### *2015.03.24* - 1.4.2
 * **Fix** - Navigation not displaying if no menu is assigned to primary location.
