@@ -1,6 +1,7 @@
 # Storefront Changelog
 
-### *2015.01.01* - 1.4.3
+### *2015.04.08* - 1.4.3
+* **Fix** - Star rating display in Safari.
 * **Tweak** - Cart dropdown appears on focus.
 * **Tweak** - Payment form layout/styling when paying from My Account.
 * **Tweak** - Improvements to the product archive sorting / pagination layout and styling.
