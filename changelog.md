@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.04.13* - 1.4.4
+* **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.
+
 ### *2015.04.08* - 1.4.3
 * **Fix** - Star rating display in Safari.
 * **Tweak** - Cart dropdown appears on focus.
