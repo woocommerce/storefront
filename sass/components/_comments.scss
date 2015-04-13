@@ -48,7 +48,7 @@
 		}
 
 		.bypostauthor {
-			cite {
+			> .comment-body cite {
 				&:after {
 					font-family: "FontAwesome";
 					font-weight: 400;
