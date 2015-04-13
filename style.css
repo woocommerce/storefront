@@ -1320,7 +1320,7 @@ fieldset {
       font-style: normal;
       clear: both;
       display: block; }
-    #comments .comment-list .bypostauthor cite:after {
+    #comments .comment-list .bypostauthor > .comment-body cite:after {
       font-family: "FontAwesome";
       font-weight: 400;
       margin-left: .53em;
