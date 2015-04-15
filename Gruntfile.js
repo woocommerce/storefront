@@ -246,14 +246,14 @@ module.exports = function( grunt ) {
 		'cssmin'
 	]);
 
-	grunt.registerTask( 'dev', [
-		'default',
-		'makepot'
-	]);
-
 	grunt.registerTask( 'tx_update', [
 		'makepot',
 		'shell:txpush'
+	]);
+
+	grunt.registerTask( 'dev', [
+		'default',
+		'tx_update'
 	]);
 
 	grunt.registerTask( 'mo', [
@@ -262,6 +262,7 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'deploy', [
+		'mo',
 		'copy'
 	]);
 };
