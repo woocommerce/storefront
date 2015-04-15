@@ -128,6 +128,9 @@ module.exports = function( grunt ) {
 			frontend: {
 				options: {
 					potFilename: 'storefront.pot',
+					exclude: [
+						'storefront/.*' // Exclude deploy directory
+					],
 					processPot: function ( pot ) {
 						pot.headers['project-id-version'];
 						return pot;
@@ -184,8 +187,40 @@ module.exports = function( grunt ) {
 				expand: true,
 				dot: true
 			}
-		}
+		},
 
+		// Shell actions for transifex client
+		shell: {
+			options: {
+				stdout: true,
+				stderr: true
+			},
+			txpush: {
+				command: 'tx push -s' // push the resources
+			},
+			txpull: {
+				command: 'tx pull -a -f' // pull the .po files
+			}
+		},
+
+		// Convert .po to .mo
+		potomo: {
+			options: {
+				poDel: false
+			},
+			dist: {
+				files: [{
+					expand: true,
+					cwd: 'languages/',
+					src: [
+						'*.po'
+					],
+					dest: 'languages/',
+					ext: '.mo',
+					nonull: true
+				}]
+			}
+		}
 	});
 
 	// Load NPM tasks to be used here
@@ -197,6 +232,8 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
+	grunt.loadNpmTasks( 'grunt-shell' );
+	grunt.loadNpmTasks( 'grunt-potomo' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -212,6 +249,16 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'dev', [
 		'default',
 		'makepot'
+	]);
+
+	grunt.registerTask( 'tx_update', [
+		'makepot',
+		'shell:txpush'
+	]);
+
+	grunt.registerTask( 'mo', [
+		'shell:txpull',
+		'potomo'
 	]);
 
 	grunt.registerTask( 'deploy', [

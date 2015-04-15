@@ -20,7 +20,9 @@
     "node-sass": "^2.1.1",
     "susy": "^2.2.2",
     "node-bourbon": "~4.2.1-beta1",
-    "grunt-contrib-copy": "~0.5.0"
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-potomo": "~3.2.1",
+    "grunt-shell": "~1.1.2"
   },
   "engines": {
     "node": ">=0.8.0",
