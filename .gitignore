@@ -8,3 +8,8 @@ npm-debug.log
 
 # Codekit
 config.codekit
+
+# Transifex
+.transifexrc
+/languages/*.po
+/languages/*.mo
