@@ -69,7 +69,6 @@ add_action( 'storefront_header', 'storefront_header_cart', 		60 );
  * @see  storefront_related_products_args()
  * @see  storefront_products_per_page()
  * @see  storefront_loop_columns()
- * @see  storefront_breadcrumb_delimeter()
  */
 add_filter( 'body_class', 								'storefront_woocommerce_body_class' );
 add_filter( 'woocommerce_product_thumbnails_columns', 	'storefront_thumbnail_columns' );
