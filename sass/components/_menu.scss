@@ -117,14 +117,15 @@
 						left: 0;
 
 						li {
-							ul {
+							> ul {
 								left: -999em;
 							}
 
 							&:hover,
 							&.focus {
-								ul {
+								> ul {
 									left: 100%;
+									top: 0;
 								}
 							}
 						}
@@ -142,22 +143,11 @@
 				z-index: 99999;
 				background-color: #2c2d33;
 
-				&:hover {
-					> a {};
-				}
-
 				li {
 					a {
 						width: 200px;
 					}
 				}
-
-				// third level
-				ul {
-					left: 100%;
-					top: 0;
-				}
-
 			}
 		}
 

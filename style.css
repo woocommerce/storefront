@@ -1014,10 +1014,11 @@ fieldset {
             display: none; }
         .main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul, .secondary-navigation ul li:hover > ul, .secondary-navigation ul li.focus > ul {
           left: 0; }
-          .main-navigation ul li:hover > ul li ul, .main-navigation ul li.focus > ul li ul, .secondary-navigation ul li:hover > ul li ul, .secondary-navigation ul li.focus > ul li ul {
+          .main-navigation ul li:hover > ul li > ul, .main-navigation ul li.focus > ul li > ul, .secondary-navigation ul li:hover > ul li > ul, .secondary-navigation ul li.focus > ul li > ul {
             left: -999em; }
-          .main-navigation ul li:hover > ul li:hover ul, .main-navigation ul li:hover > ul li.focus ul, .main-navigation ul li.focus > ul li:hover ul, .main-navigation ul li.focus > ul li.focus ul, .secondary-navigation ul li:hover > ul li:hover ul, .secondary-navigation ul li:hover > ul li.focus ul, .secondary-navigation ul li.focus > ul li:hover ul, .secondary-navigation ul li.focus > ul li.focus ul {
-            left: 100%; }
+          .main-navigation ul li:hover > ul li:hover > ul, .main-navigation ul li:hover > ul li.focus > ul, .main-navigation ul li.focus > ul li:hover > ul, .main-navigation ul li.focus > ul li.focus > ul, .secondary-navigation ul li:hover > ul li:hover > ul, .secondary-navigation ul li:hover > ul li.focus > ul, .secondary-navigation ul li.focus > ul li:hover > ul, .secondary-navigation ul li.focus > ul li.focus > ul {
+            left: 100%;
+            top: 0; }
       .main-navigation ul ul, .secondary-navigation ul ul {
         float: left;
         position: absolute;
@@ -1027,9 +1028,6 @@ fieldset {
         background-color: #2c2d33; }
         .main-navigation ul ul li a, .secondary-navigation ul ul li a {
           width: 200px; }
-        .main-navigation ul ul ul, .secondary-navigation ul ul ul {
-          left: 100%;
-          top: 0; }
   ul.menu li.current-menu-item > a {
     color: #60646c; }
   /**
