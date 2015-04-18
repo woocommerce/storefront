@@ -3,6 +3,7 @@
 ### *2015.04.13* - 1.4.4
 * **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.
 * **Fix** - Third level dropdowns (and beyond) are now revealed in the correct situation.
+* **Fix** - Header margin on homepage template when WooCommerce isn't activated.
 
 ### *2015.04.08* - 1.4.3
 * **Fix** - Star rating display in Safari.

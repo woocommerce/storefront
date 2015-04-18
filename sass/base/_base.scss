@@ -52,6 +52,12 @@ body {
 	.site-header {
 		margin-bottom: 4.236em;
 	}
+
+	&.page-template-template-homepage {
+		.site-header {
+			margin-bottom: 0;
+		}
+	}
 }
 
 .header-widget-region {

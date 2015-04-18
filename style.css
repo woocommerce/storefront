@@ -388,6 +388,8 @@ body {
 
 .no-wc-breadcrumb .site-header {
   margin-bottom: 4.236em; }
+.no-wc-breadcrumb.page-template-template-homepage .site-header {
+  margin-bottom: 0; }
 
 .header-widget-region {
   position: relative;
