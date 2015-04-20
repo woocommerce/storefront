@@ -115,10 +115,11 @@
 				&.focus {
 					> ul {
 						left: 0;
+						display: block;
 
 						li {
 							> ul {
-								left: -999em;
+								display: none; // display: none; is required to make dropdowns work on touch devices
 							}
 
 							&:hover,
@@ -126,6 +127,7 @@
 								> ul {
 									left: 100%;
 									top: 0;
+									display: block;
 								}
 							}
 						}
@@ -139,9 +141,9 @@
 				float: left;
 				position: absolute;
 				top: 100%;
-				left: -999em;
 				z-index: 99999;
 				background-color: #2c2d33;
+				display: none; // display: none; is required to make dropdowns work on touch devices
 
 				li {
 					a {

@@ -1015,19 +1015,21 @@ fieldset {
           .main-navigation ul li a:before, .secondary-navigation ul li a:before {
             display: none; }
         .main-navigation ul li:hover > ul, .main-navigation ul li.focus > ul, .secondary-navigation ul li:hover > ul, .secondary-navigation ul li.focus > ul {
-          left: 0; }
+          left: 0;
+          display: block; }
           .main-navigation ul li:hover > ul li > ul, .main-navigation ul li.focus > ul li > ul, .secondary-navigation ul li:hover > ul li > ul, .secondary-navigation ul li.focus > ul li > ul {
-            left: -999em; }
+            display: none; }
           .main-navigation ul li:hover > ul li:hover > ul, .main-navigation ul li:hover > ul li.focus > ul, .main-navigation ul li.focus > ul li:hover > ul, .main-navigation ul li.focus > ul li.focus > ul, .secondary-navigation ul li:hover > ul li:hover > ul, .secondary-navigation ul li:hover > ul li.focus > ul, .secondary-navigation ul li.focus > ul li:hover > ul, .secondary-navigation ul li.focus > ul li.focus > ul {
             left: 100%;
-            top: 0; }
+            top: 0;
+            display: block; }
       .main-navigation ul ul, .secondary-navigation ul ul {
         float: left;
         position: absolute;
         top: 100%;
-        left: -999em;
         z-index: 99999;
-        background-color: #2c2d33; }
+        background-color: #2c2d33;
+        display: none; }
         .main-navigation ul ul li a, .secondary-navigation ul ul li a {
           width: 200px; }
   ul.menu li.current-menu-item > a {
