@@ -95,3 +95,14 @@ function storefront_sorting_wrapper() {
 function storefront_sorting_wrapper_close() {
 	echo '</div>';
 }
+
+/**
+ * Storefront shop messages
+ * @since   1.4.4
+ * @uses    do_shortcode
+ */
+function storefront_shop_messages() {
+	if ( ! is_checkout() ) {
+		echo do_shortcode( '[woocommerce_messages]' );
+	}
+}
