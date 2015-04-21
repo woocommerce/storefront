@@ -40,13 +40,13 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		}
 
 		/**
-		 * Jetpack logo
+		 * Logo
 		 */
-		if ( ! class_exists( 'Jetpack' ) ) {
-			$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_jetpack_logo_info', array(
+		if ( ! class_exists( 'Jetpack' ) && ! class_exists( 'Storefront_Site_Logo' ) ) {
+			$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_logo_info', array(
 				'section'  		=> 'title_tagline',
 				'type' 			=> 'text',
-				'description'	=> sprintf( __( 'Looking to add a logo? Install the %sJetpack%s plugin!', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ),
+				'description'	=> sprintf( __( 'Looking to add a logo? Install the %sJetpack%s or %sStorefront Site Logo%s plugin!', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>', '<a href="https://wordpress.org/plugins/storefront-site-logo/">', '</a>' ),
 				'priority' 		=> 40,
 			) ) );
 		}
