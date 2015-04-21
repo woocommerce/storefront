@@ -127,14 +127,14 @@ if ( ! function_exists( 'storefront_woocommerce_pagination' ) ) {
 					$wp_query->max_num_pages = 0;
 				break;
 				case '' :
-					if ( get_option( 'woocommerce_category_archive_display' ) == 'subcategories' ) {
+					if ( 'subcategories' == get_option( 'woocommerce_category_archive_display' ) ) {
 						$wp_query->max_num_pages = 0;
 					}
 				break;
 			}
 		}
 
-		if ( is_shop() && get_option( 'woocommerce_shop_page_display' ) == 'subcategories' ) {
+		if ( is_shop() && 'subcategories' == get_option( 'woocommerce_shop_page_display' ) ) {
 			$wp_query->max_num_pages = 0;
 		}
 
