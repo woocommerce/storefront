@@ -201,13 +201,10 @@ class Storefront_Welcome {
 
 				<?php if ( ! class_exists( 'Jetpack' ) || ! class_exists( 'Storefront_Site_Logo' ) ) { ?>
 					<h4><?php _e( 'Add your logo', 'storefront' ); ?></h4>
-					<p><?php echo sprintf( esc_html__( 'Install and activate either %sJetpack%s or the %sStorefront Site Logo plugin%s to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>', '<a href="https://wordpress.org/plugins/storefront-site-logo/">', '</a>' ); ?></p>
+					<p><?php echo sprintf( esc_html__( 'Install and activate either %sJetpack%s or the to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ); ?></p>
 					<p>
 						<?php if ( ! class_exists( 'Jetpack' ) ) { ?>
 							<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=jetpack' ), 'install-plugin_jetpack' ) ); ?>" class="button button-primary"><?php _e( 'Install Jetpack', 'storefront' ); ?></a>
-						<?php } ?>
-						<?php if ( ! class_exists( 'Storefront_Site_Logo' ) ) { ?>
-							<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=storefront-site-logo' ), 'install-plugin_storefront-site-logo' ) ); ?>" class="button button-primary"><?php _e( 'Install Storefront Site Logo', 'storefront' ); ?></a>
 						<?php } ?>
 					</p>
 				<?php } ?>
@@ -244,7 +241,6 @@ class Storefront_Welcome {
 		$wc_bookings 						= false;
 		$wc_smart_coupons 					= false;
 		$wc_wishlists 						= false;
-		$storefront_site_logo				= false;
 		$storefront_product_pagination 		= false;
 		$storefront_top_bar 				= false;
 
@@ -270,10 +266,6 @@ class Storefront_Welcome {
 
 		if ( class_exists( 'WC_Wishlists_Plugin' ) ) {
 			$wc_wishlists = true;
-		}
-
-		if ( class_exists( 'Storefront_Site_Logo' ) ) {
-			$storefront_site_logo = true;
 		}
 
 		if ( class_exists( 'Storefront_Product_Pagination' ) ) {
@@ -383,19 +375,6 @@ class Storefront_Welcome {
 
 			<div class="col-3 last-feature">
 				<h5><?php _e( 'Free Storefront Extensions', 'storefront' ); ?></h5>
-
-				<div class="add-on <?php if ( $storefront_site_logo ) { echo 'activated'; } ?>">
-					<h4><?php _e( 'Storefront Site Logo', 'storefront' ); ?></h4>
-					<div class="content">
-						<p><?php echo sprintf( __( 'Quickly and easily configure and display your logo in the header of your web site. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-site-logo/">', '</a>' );?></p>
-
-						<?php if ( $storefront_site_logo ) { ?>
-							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
-						<?php } else { ?>
-							<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=storefront-site-logo' ), 'install-plugin_storefront-site-logo' ) ); ?>" class="button button-primary"><?php _e( 'Install Storefront Site Logo', 'storefront' ); ?></a></p>
-						<?php } ?>
-					</div>
-				</div>
 
 				<div class="add-on <?php if ( $storefront_product_pagination ) { echo 'activated'; } ?>">
 					<h4><?php _e( 'Storefront Product Pagination', 'storefront' ); ?></h4>
