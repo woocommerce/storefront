@@ -14,6 +14,7 @@ class Storefront_Welcome {
 
 		add_action( 'admin_menu', array( $this, 'storefront_welcome_register_menu' ) );
 		add_action( 'load-themes.php', array( $this, 'storefront_activation_admin_notice' ) );
+		add_action( 'admin_enqueue_scripts', array( $this, 'storefront_welcome_style' ) );
 
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	20 );
@@ -45,6 +46,17 @@ class Storefront_Welcome {
 				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Storefront', 'storefront' ); ?></a></p>
 			</div>
 		<?php
+	}
+
+	/**
+	 * Load welcome screen css
+	 * @return void
+	 * @since  1.4.4
+	 */
+	public function storefront_welcome_style() {
+		global $storefront_version;
+
+		wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
 	}
 
 	/**
@@ -176,16 +188,29 @@ class Storefront_Welcome {
 					<h4><?php _e( 'Install WooCommerce' ,'storefront' ); ?></h4>
 					<p><?php _e( 'Although Storefront works fine as a standard WordPress theme, it really shines when used for an online store. Install WooCommerce and start selling now.', 'storefront' ); ?></p>
 
-					<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ) ); ?>" class="button"><?php _e( 'Install WooCommerce', 'storefront' ); ?></a></p>
+					<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ) ); ?>" class="button button-primary"><?php _e( 'Install WooCommerce', 'storefront' ); ?></a></p>
 				<?php } ?>
 
 				<h4><?php _e( 'Configure menu locations' ,'storefront' ); ?></h4>
-				<p><?php _e( 'Storefront includes two menu locations for primary and secondary navigation. The primary navigation is perfect for your key pages like the shop and product categories. The secondary navigation is better suited to lower traffic pages such as terms and conditions.', 'storefront' ); ?></p>
+				<p><?php _e( 'Storefront includes three menu locations for primary, secondary and handheld navigation. The primary navigation is perfect for your key pages like the shop and product categories. The secondary navigation is better suited to lower traffic pages such as terms and conditions. The handheld navigation gives you complete control over what menu items to serve to handheld devices.', 'storefront' ); ?></p>
 				<p><a href="<?php echo esc_url( self_admin_url( 'nav-menus.php' ) ); ?>" class="button"><?php _e( 'Configure menus', 'storefront' ); ?></a></p>
 
 				<h4><?php _e( 'Create a color scheme' ,'storefront' ); ?></h4>
 				<p><?php _e( 'Using the WordPress Customizer you can tweak Storefront\'s appearance to match your brand.', 'storefront' ); ?></p>
 				<p><a href="<?php echo esc_url( $url ); ?>" class="button"><?php _e( 'Open the Customizer', 'storefront' ); ?></a></p>
+
+				<?php if ( ! class_exists( 'Jetpack' ) || ! class_exists( 'Storefront_Site_Logo' ) ) { ?>
+					<h4><?php _e( 'Add your logo', 'storefront' ); ?></h4>
+					<p><?php echo sprintf( esc_html__( 'Install and activate either %sJetpack%s or the %sStorefront Site Logo plugin%s to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>', '<a href="https://wordpress.org/plugins/storefront-site-logo/">', '</a>' ); ?></p>
+					<p>
+						<?php if ( ! class_exists( 'Jetpack' ) ) { ?>
+							<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=jetpack' ), 'install-plugin_jetpack' ) ); ?>" class="button button-primary"><?php _e( 'Install Jetpack', 'storefront' ); ?></a>
+						<?php } ?>
+						<?php if ( ! class_exists( 'Storefront_Site_Logo' ) ) { ?>
+							<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=storefront-site-logo' ), 'install-plugin_storefront-site-logo' ) ); ?>" class="button button-primary"><?php _e( 'Install Storefront Site Logo', 'storefront' ); ?></a>
+						<?php } ?>
+					</p>
+				<?php } ?>
 			</div>
 
 			<div class="col-2 last-feature">
@@ -194,14 +219,14 @@ class Storefront_Welcome {
 				<p><?php echo sprintf( esc_html__( 'To set this up you will need to create a new page and assign the "Homepage" template to it. You can then set that as a static homepage in the %sReading%s settings.', 'storefront' ), '<a href="' . esc_url( self_admin_url( 'options-reading.php' ) ) . '">', '</a>' ); ?></p>
 				<p><?php echo sprintf( esc_html__( 'Once set up you can toggle and re-order the homepage components using the %sHomepage Control%s plugin.', 'storefront' ), '<a href="https://wordpress.org/plugins/homepage-control/">', '</a>' ); ?></p>
 
-				<h4><?php _e( 'Add your logo', 'storefront' ); ?></h4>
-				<p><?php echo sprintf( esc_html__( 'Activate %sJetpack%s to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ); ?></p>
+				<?php if ( ! class_exists( 'Homepage_Control' ) ) { ?>
+					<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=homepage-control' ), 'install-plugin_homepage-control' ) ); ?>" class="button button-primary"><?php _e( 'Install Homepage Control', 'storefront' ); ?></a></p>
+				<?php } ?>
 
 				<h4><?php _e( 'View documentation', 'storefront' ); ?></h4>
 				<p><?php _e( 'You can read detailed information on Storefronts features and how to develop on top of it in the documentation.', 'storefront' ); ?></p>
-				<p><a href="http://docs.woothemes.com/documentation/themes/storefront/" class="button"><?php _e( 'View documentation', 'storefront' ); ?></a></p>
+				<p><a href="http://docs.woothemes.com/documentation/themes/storefront/" class="button"><?php _e( 'View documentation &rarr;', 'storefront' ); ?></a></p>
 			</div>
-
 		</div>
 
 		<hr style="clear: both;">
@@ -213,8 +238,53 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_addons() {
+		$storefront_designer 				= false;
+		$storefront_woocommerce_customiser 	= false;
+		$storefront_product_hero 			= false;
+		$wc_bookings 						= false;
+		$wc_smart_coupons 					= false;
+		$wc_wishlists 						= false;
+		$storefront_site_logo				= false;
+		$storefront_product_pagination 		= false;
+		$storefront_top_bar 				= false;
+
+		if ( class_exists( 'Storefront_Designer' ) ) {
+			$storefront_designer = true;
+		}
+
+		if ( class_exists( 'Storefront_WooCommerce_Customiser' ) ) {
+			$storefront_woocommerce_customiser = true;
+		}
+
+		if ( class_exists( 'Storefront_Product_Hero' ) ) {
+			$storefront_product_hero = true;
+		}
+
+		if ( class_exists( 'WC_Bookings' ) ) {
+			$wc_bookings = true;
+		}
+
+		if ( class_exists( 'WC_Smart_Coupons' ) ) {
+			$wc_smart_coupons = true;
+		}
+
+		if ( class_exists( 'WC_Wishlists_Plugin' ) ) {
+			$wc_wishlists = true;
+		}
+
+		if ( class_exists( 'Storefront_Site_Logo' ) ) {
+			$storefront_site_logo = true;
+		}
+
+		if ( class_exists( 'Storefront_Product_Pagination' ) ) {
+			$storefront_product_pagination = true;
+		}
+
+		if ( class_exists( 'Storefront_Top_Bar' ) ) {
+			$storefront_top_bar = true;
+		}
 		?>
-		<div id="add-ons" class="feature-section col three-col" style="padding-top: 1.618em; clear: both;">
+		<div id="add-ons" class="storefront-add-ons feature-section three-col col" style="padding-top: 1.618em; clear: both;">
 			<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>
 
 			<p>
@@ -222,50 +292,153 @@ class Storefront_Welcome {
 			</p>
 
 			<div class="col-1">
-				<h4><?php _e( 'Storefront Extensions', 'storefront' ); ?></h4>
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/designer.jpg'; ?>" alt="<?php _e( 'Storefront Designer', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
-				<p><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing the header layout, button styles, typographical schemes/scales and more.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-designer?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sStorefront Designer%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+			 	<h5><?php _e( 'Commercial Storefront Extensions', 'storefront' ); ?></h5>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wc-customiser.png'; ?>" alt="<?php _e( 'Storefront WooCommerce Customiser', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'Storefront WooCommerce Customiser', 'storefront' ); ?></h4>
-				<p><?php _e( 'Gives you further control over the look and feel of your shop. Change the product archive and single layouts, toggle various shop components, enable a distraction free checkout design and more.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-woocommerce-customiser?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sStorefront WooCommerce Customiser%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<div class="add-on <?php if ( $storefront_designer ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'Storefront Designer', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php _e( 'Adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing the header layout, button styles, typographical schemes/scales and more.', 'storefront' ); ?></p>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/hero.png'; ?>" alt="<?php _e( 'Storefront Product Hero', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'Storefront Product Hero', 'storefront' ); ?></h4>
-				<p><?php _e( 'Adds a parallax hero component to your homepage highlighting a specific product at your store. Use the shortcode to add attractive hero components to posts, pages or widgets.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="https://www.woothemes.com/products/storefront-product-hero?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sStorefront Product Hero%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php if ( $storefront_designer ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="https://www.woothemes.com/products/storefront-designer?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront Designer%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
 
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php _e( 'View all Storefront extensions &rarr;', 'storefront' ); ?></a></p>
+				<div class="add-on <?php if ( $storefront_woocommerce_customiser ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'Storefront WooCommerce Customiser', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php _e( 'Gives you further control over the look and feel of your shop. Change the product archive and single layouts, toggle various shop components, enable a distraction free checkout design and more.', 'storefront' ); ?></p>
+
+						<?php if ( $storefront_woocommerce_customiser ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="https://www.woothemes.com/products/storefront-woocommerce-customiser?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront WooCommerce Customiser%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+
+				<div class="add-on <?php if ( $storefront_product_hero ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'Storefront Product Hero', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php _e( 'Adds a parallax hero component to your homepage highlighting a specific product at your store. Use the shortcode to add attractive hero components to posts, pages or widgets.', 'storefront' ); ?></p>
+
+						<?php if ( $storefront_product_hero ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="https://www.woothemes.com/products/storefront-product-hero?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront Product Hero%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'View all Storefront extensions &rarr;', 'storefront' ); ?></a></p>
 			</div>
 
 			<div class="col-2">
-				<h4><?php _e( 'WooCommerce Extensions', 'storefront' ); ?></h4>
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/bookings.png'; ?>" alt="<?php _e( 'WooCommerce Bookings', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-bookings?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sWooCommerce Bookins%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<h5><?php _e( 'Commercial WooCommerce Extensions', 'storefront' ); ?></h5>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/smart-coupons.jpg'; ?>" alt="<?php _e( 'Smart Coupons', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'WooCommerce Smart Coupons', 'storefront' ); ?></h4>
-				<p><?php _e( 'Smart coupons provide the most comprehensive and powerful solution for discount coupons, gift certificates, store credits and vouchers. It also allows customers to buy credits for themselves or gift to others.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sSmart Coupons%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<div class="add-on <?php if ( $wc_bookings ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'WooCommerce Bookings', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php _e( 'Allows you to sell your time or date based bookings, adding a new product type to your WooCommerce site. Perfect for those wanting to offer appointments, services or rentals.', 'storefront' ); ?></p>
 
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/wishlists.png'; ?>" alt="<?php _e( 'Wishlists', 'storefront' ); ?>" class="image-50" width="440" />
-				<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
-				<p><?php _e( 'Allows guests and customers to create and add products to an unlimited number of Wishlists. From birthdays to weddings and everything in between, WooCommerce Wishlists are a welcome addition to any WooCommerce store.', 'storefront' ); ?></p>
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/products/woocommerce-wishlists?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php printf( __( 'Buy %sWooCommerce Wishlists%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php if ( $wc_bookings ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="http://www.woothemes.com/products/woocommerce-bookings?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sWooCommerce Bookins%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
 
-				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/woocommerce-extensions/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php _e( 'View all WooCommerce extensions &rarr;', 'storefront' ); ?></a></p>
+				<div class="add-on <?php if ( $wc_smart_coupons ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'WooCommerce Smart Coupons', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php _e( 'Smart coupons provide the most comprehensive and powerful solution for discount coupons, gift certificates, store credits and vouchers. It also allows customers to buy credits for themselves or gift to others.', 'storefront' ); ?></p>
+
+						<?php if ( $wc_smart_coupons ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="http://www.woothemes.com/products/smart-coupons?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sSmart Coupons%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+
+				<div class="add-on <?php if ( $wc_wishlists ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'WooCommerce Wishlists', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php _e( 'Allows guests and customers to create and add products to an unlimited number of Wishlists. From birthdays to weddings and everything in between, WooCommerce Wishlists are a welcome addition to any WooCommerce store.', 'storefront' ); ?></p>
+
+						<?php if ( $wc_wishlists ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="http://www.woothemes.com/products/woocommerce-wishlists?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sWooCommerce Wishlists%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+
+				<p style="margin-bottom: 2.618em;"><a href="http://www.woothemes.com/product-category/woocommerce-extensions/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button"><?php _e( 'View all WooCommerce extensions &rarr;', 'storefront' ); ?></a></p>
 			</div>
 
 			<div class="col-3 last-feature">
-				<?php
-					$theme = wp_get_theme();
-				?>
-				<h4><?php _e( 'Storefront Child Themes', 'storefront' ); ?></h4>
+				<h5><?php _e( 'Free Storefront Extensions', 'storefront' ); ?></h5>
+
+				<div class="add-on <?php if ( $storefront_site_logo ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'Storefront Site Logo', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php echo sprintf( __( 'Quickly and easily configure and display your logo in the header of your web site. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-site-logo/">', '</a>' );?></p>
+
+						<?php if ( $storefront_site_logo ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=storefront-site-logo' ), 'install-plugin_storefront-site-logo' ) ); ?>" class="button button-primary"><?php _e( 'Install Storefront Site Logo', 'storefront' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+
+				<div class="add-on <?php if ( $storefront_product_pagination ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'Storefront Product Pagination', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php echo sprintf( __( 'Add unobstrusive links to next/previous products on your WooCommerce single product pages. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-product-pagination/">', '</a>' );?></p>
+
+						<?php if ( $storefront_product_pagination ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=storefront-product-pagination' ), 'install-plugin_storefront-product-pagination' ) ); ?>" class="button button-primary"><?php _e( 'Install Storefront Product Pagination', 'storefront' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+
+				<div class="add-on <?php if ( $storefront_top_bar ) { echo 'activated'; } ?>">
+					<h4><?php _e( 'Storefront Top Bar', 'storefront' ); ?></h4>
+					<div class="content">
+						<p><?php echo sprintf( __( 'Add a widgetised content area at the top of your site and customise it\'s appearance in the Customizer. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-top-bar/">', '</a>' ); ?></p>
+
+						<?php if ( $storefront_top_bar ) { ?>
+							<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+						<?php } else { ?>
+							<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=storefront-top-bar' ), 'install-plugin_storefront-top-bar' ) ); ?>" class="button button-primary"><?php _e( 'Install Storefront Top Bar', 'storefront' ); ?></a></p>
+						<?php } ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr />
+
+		<div id="add-ons" class="storefront-add-ons feature-section three-col col" style="padding-top: 1.618em; clear: both;">
+			<?php
+				$theme = wp_get_theme();
+			?>
+
+			<h2><?php _e( 'Get a whole new look', 'storefront' ); ?> <div class="dashicons dashicons-admin-appearance"></div></h2>
+
+			<p>
+				<?php _e( 'Below you will find a selection of Storefront child themes that will transform the look and feel of your site while retaining the rock solid Storefront foundation.', 'storefront' ); ?>
+			</p>
+
+			<div class="col-1">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/images/welcome/boutique.jpg'; ?>" alt="<?php _e( 'Boutique Child Theme', 'storefront' ); ?>" class="image-50" width="440" />
 				<h4><?php _e( 'Boutique', 'storefront' ); ?></h4>
 				<p><?php _e( 'Boutique is a simple, traditionally designed Storefront child theme, ideal for small stores or boutiques. Add your logo, create a unique color scheme and start selling!', 'storefront' ); ?></p>
@@ -276,7 +449,6 @@ class Storefront_Welcome {
 					<a href="http://www.woothemes.com/products/boutique/" class="button"><?php printf( __( 'Read more %sabout Boutique%s &rarr;', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a>
 				</p>
 			</div>
-
 		</div>
 
 		<hr style="clear: both;" />

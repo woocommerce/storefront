@@ -1,0 +1,52 @@
+.storefront-add-ons {
+	.add-on {
+		border: 1px solid #ddd;
+		background: #f8f8f8;
+		margin-bottom: 2.618em;
+		border-radius: 2px;
+
+		h4 {
+			margin-top: 0;
+			font-size: 1em;
+			padding: 1.387em 1.618em;
+			line-height: 1.4;
+			background: #fff;
+			margin: 0;
+		}
+
+		.content {
+			padding: 1em 1.618em 1.618em 1.618em;
+
+			p:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		&.activated {
+			border-color: #7ad03a;
+			border-width: 2px;
+		}
+
+		.activated {
+			background: #7ad03a;
+			color: #fff;
+			font-size: 13px;
+			line-height: 26px;
+			height: 28px;
+			margin: 0;
+			padding: 0 10px 1px;
+			display: inline-block;
+			border-radius: 3px;
+
+			span {
+				line-height: 26px;
+			}
+		}
+	}
+
+	img {
+		padding: .618em;
+		background: #fff;
+		box-sizing: border-box;
+	}
+}

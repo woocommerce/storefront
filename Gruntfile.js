@@ -59,6 +59,7 @@ module.exports = function( grunt ) {
 				},
 				files: [{
 					'style.css': 'style.scss',
+					'inc/admin/css/welcome.css': 'inc/admin/css/welcome.scss',
 					'inc/woocommerce/css/bookings.css': 'inc/woocommerce/css/bookings.scss',
 					'inc/woocommerce/css/brands.css': 'inc/woocommerce/css/brands.scss',
 					'inc/woocommerce/css/wishlists.css': 'inc/woocommerce/css/wishlists.scss',
@@ -89,6 +90,7 @@ module.exports = function( grunt ) {
 			css: {
 				files: [
 					'style.scss',
+					'inc/admin/css/*.scss',
 					'inc/woocommerce/css/*.scss',
 					'sass/base/*.scss',
 					'sass/components/*.scss',

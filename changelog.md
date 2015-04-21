@@ -7,6 +7,7 @@
 * **Fix** - Dropdowns on touch devices.
 * **Fix** - Pagination hidden correctly when only displaying categories / subcategories.
 * **Tweak** - Output WooCommerce messages on all appropriate pages.
+* **Tweak** - Revamped 'Enhance' section of welcome screen.
 
 ### *2015.04.08* - 1.4.3
 * **Fix** - Star rating display in Safari.
