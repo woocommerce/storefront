@@ -19,7 +19,8 @@ class Storefront_Welcome {
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	20 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_addons' ), 				30 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_who' ), 				40 );
+		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_child_themes' ), 		40 );
+		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_who' ), 				50 );
 
 	} // end constructor
 
@@ -405,7 +406,15 @@ class Storefront_Welcome {
 		</div>
 
 		<hr />
+		<?php
+	}
 
+	/**
+	 * Welcome screen add ons
+	 * @since 1.4.4
+	 */
+	public function storefront_welcome_child_themes() {
+		?>
 		<div id="add-ons" class="storefront-add-ons feature-section three-col col" style="padding-top: 1.618em; clear: both;">
 			<?php
 				$theme = wp_get_theme();
