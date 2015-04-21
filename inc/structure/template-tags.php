@@ -29,7 +29,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 			echo '<section class="storefront-product-section storefront-product-categories">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[product_categories number="' . $args['limit'] . '" columns="' . $args['columns'] . '" orderby="' . $args['orderby'] . '" parent="' . $args['child_categories'] . '"]' );
+			echo do_shortcode( '[product_categories number="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '" orderby="' . esc_attr( $args['orderby'] ) . '" parent="' . intval( $args['child_categories'] ) . '"]' );
 
 			echo '</section>';
 
