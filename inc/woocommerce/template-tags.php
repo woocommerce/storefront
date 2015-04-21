@@ -106,3 +106,42 @@ function storefront_shop_messages() {
 		echo do_shortcode( '[woocommerce_messages]' );
 	}
 }
+
+/**
+ * Storefront WooCommerce Pagination
+ * WooCommerce disables the product pagination inside the woocommerce_product_subcategories() function
+ * but since Storefront adds pagination before that function is excuted we need a separate function to
+ * determine whether or not to display the pagination.
+ * @since 1.4.4
+ */
+if ( ! function_exists( 'storefront_woocommerce_pagination' ) ) {
+	function storefront_woocommerce_pagination() {
+		global $wp_query;
+		$term = get_queried_object();
+
+		if ( is_product_category() ) {
+			$display_type = get_woocommerce_term_meta( $term->term_id, 'display_type', true );
+
+			switch ( $display_type ) {
+				case 'subcategories' :
+					$wp_query->max_num_pages = 0;
+				break;
+				case '' :
+					if ( get_option( 'woocommerce_category_archive_display' ) == 'subcategories' ) {
+						$wp_query->max_num_pages = 0;
+					}
+				break;
+			}
+		}
+
+		if ( is_shop() && get_option( 'woocommerce_shop_page_display' ) == 'subcategories' ) {
+			$wp_query->max_num_pages = 0;
+		}
+
+		if ( $wp_query->max_num_pages <= 1 ) {
+			return;
+		} else {
+			woocommerce_pagination();
+		}
+	}
+}
