@@ -98,7 +98,7 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_intro() {
-		require_once( 'sections/intro.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
 	}
 
 	/**
@@ -106,7 +106,7 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_who() {
-		require_once( 'sections/who.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/who.php' );
 	}
 
 	/**
@@ -114,7 +114,7 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_getting_started() {
-		require_once( 'sections/getting-started.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/getting-started.php' );
 	}
 
 	/**
@@ -122,7 +122,7 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_addons() {
-		require_once( 'sections/add-ons.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/add-ons.php' );
 	}
 
 	/**
@@ -130,7 +130,7 @@ class Storefront_Welcome {
 	 * @since 1.4.4
 	 */
 	public function storefront_welcome_child_themes() {
-		require_once( 'sections/child-themes.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/child-themes.php' );
 	}
 }
 
