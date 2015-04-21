@@ -48,7 +48,7 @@ require get_template_directory() . '/inc/jetpack/jetpack.php';
  * Welcome screen
  */
 if ( is_admin() ) {
-	require get_template_directory() . '/inc/admin/welcome-screen.php';
+	require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
 }
 
 /**
