@@ -19,5 +19,3 @@ $storefront = wp_get_theme( 'storefront' );
 		<img src="<?php echo esc_url( get_template_directory_uri() ) . '/screenshot.png'; ?>" alt="Storefront" class="image-50" width="440" />
 	</div>
 </div>
-
-<hr />
