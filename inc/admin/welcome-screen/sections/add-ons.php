@@ -11,7 +11,7 @@
 	</p>
 
 	<div class="add-on">
-		<h4><?php _e( 'Make your site instantly recognisable by adding your logo', 'storefront' ); ?> <span class="free"><?php _e( 'Free', 'storefront' ); ?></span></h4>
+		<h4><?php _e( 'Make your site instantly recognisable by adding your logo', 'storefront' ); ?> <span class="free"><?php _e( 'Free (Third Party)', 'storefront' ); ?></span></h4>
 		<div class="content">
 			<p><?php echo sprintf( __( 'Jetpack is probably a plugin you\'re already familiar with. Storefront fully supports Jetpacks site logo feature making it easy to upload and display your logo via the Customizer. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' );?></p>
 
@@ -102,7 +102,7 @@
 	</div>
 
 	<div class="add-on">
-		<h4><?php _e( 'Add practical information to your pages with Storefront Top Bar', 'storefront' ); ?> <span class="free"><?php _e( 'Free', 'storefront' ); ?></span></h4>
+		<h4><?php _e( 'Add practical information to your pages with Storefront Top Bar', 'storefront' ); ?> <span class="free"><?php _e( 'Free (Third Party)', 'storefront' ); ?></span></h4>
 		<div class="content">
 			<p><?php echo sprintf( __( 'Storefront Top Bar adds a widgetised content area at the top of your site and customise it\'s appearance in the Customizer. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-top-bar/">', '</a>' ); ?></p>
 
