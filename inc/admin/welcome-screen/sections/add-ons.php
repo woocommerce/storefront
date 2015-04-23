@@ -78,7 +78,7 @@
 	<div class="add-on image-horizontal product-pagination">
 		<h4><?php _e( 'Storefront Product Pagination', 'storefront' ); ?> <span class="free"><?php _e( 'Free', 'storefront' ); ?></span></h4>
 		<div class="content">
-			<p><?php echo sprintf( __( 'Add unobstrusive links to next/previous products on your WooCommerce single product pages. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-product-pagination/">', '</a>' );?></p>
+			<p><?php echo sprintf( __( 'Storefront Product Pagination adds unobtrusive links to next/previous products on your WooCommerce single product pages. %sMore info &rarr;%s', 'storefront' ), '<a href="https://wordpress.org/plugins/storefront-product-pagination/">', '</a>' );?></p>
 
 			<?php if ( class_exists( 'Storefront_Product_Pagination' ) ) { ?>
 				<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
