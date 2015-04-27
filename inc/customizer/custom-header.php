@@ -27,7 +27,7 @@ function storefront_custom_header_setup() {
 		'default-image'          => '',
 		'header-text'     		 => false,
 		'width'                  => 1950,
-		'height'                 => 250,
+		'height'                 => 500,
 		'flex-width'             => true,
 		'flex-height'            => true,
 	) ) );
