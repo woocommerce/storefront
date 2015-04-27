@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.04.27* - 1.4.5
+* **Fix** - Use the correct escaping function in `storefront_product_categories()`.
+
 ### *2015.04.23* - 1.4.4
 * **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.
 * **Fix** - Third level dropdowns (and beyond) are now revealed in the correct situation.
