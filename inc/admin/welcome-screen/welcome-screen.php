@@ -43,7 +43,7 @@ class Storefront_Welcome {
 	 */
 	public function storefront_welcome_admin_notice() {
 		?>
-			<div class="updated fade">
+			<div class="updated notice is-dismissible">
 				<p><?php echo sprintf( esc_html__( 'Thanks for choosing Storefront! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'storefront' ), '<a href="' . esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ) . '">', '</a>' ); ?></p>
 				<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php _e( 'Get started with Storefront', 'storefront' ); ?></a></p>
 			</div>

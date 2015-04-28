@@ -4,6 +4,7 @@
 * **Fix** - Use the correct escaping function in `storefront_product_categories()`.
 * **Tweak** - Logo prompt in Header section in Customizer.
 * **Tweak** - Updated header image dimension recommendation.
+* **Tweak** - Dismissible notices.
 
 ### *2015.04.23* - 1.4.4
 * **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.
