@@ -3,6 +3,7 @@
 ### *2015.04.27* - 1.4.5
 * **Fix** - Use the correct escaping function in `storefront_product_categories()`.
 * **Tweak** - Logo prompt in Header section in Customizer.
+* **Tweak** - Only output description paragraph in header if one is set.
 * **Tweak** - Updated header image dimension recommendation.
 * **Tweak** - Dismissible notices.
 
