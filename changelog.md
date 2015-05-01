@@ -7,6 +7,7 @@
 * **Tweak** - Only output description paragraph in header if one is set.
 * **Tweak** - Updated header image dimension recommendation.
 * **Tweak** - Dismissible notices.
+* **Dev** - Bump npm susy to 2.2.3.
 
 ### *2015.04.23* - 1.4.4
 * **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.

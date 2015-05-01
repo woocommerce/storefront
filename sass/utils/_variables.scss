@@ -21,5 +21,9 @@ $susy: (
 	gutters: 1,
 	math: fluid,
 	output: float,
-	gutter-position: after
+	gutter-position: after,
+
+	use-custom: (
+		box-sizing: false
+	)
 );
