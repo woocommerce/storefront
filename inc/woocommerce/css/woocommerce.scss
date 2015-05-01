@@ -1589,9 +1589,6 @@ dl.variation {
 	.storefront-sorting {
 		@include clearfix;
 		margin-bottom: 2.618em;
-		border: 1px solid $color_border;
-		border-width: 1px 0;
-		padding: 1em 0;
 
 		select {
 			width: 9.505em;
