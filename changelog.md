@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.05.07* - 1.4.6
+* **Tweak** - Added order and orderby parameters to homepage featured products
+
 ### *2015.04.27* - 1.4.5
 * **Fix** - Use the correct escaping function in `storefront_product_categories()`.
 * **Fix** - Pagination when only showing product categories / subcategories on archives.
