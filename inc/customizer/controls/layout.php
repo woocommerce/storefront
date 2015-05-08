@@ -2,6 +2,7 @@
 /**
  * Class to create a custom layout control
  */
+if (!class_exists('Layout_Picker_Storefront_Control')) { 
 class Layout_Picker_Storefront_Control extends WP_Customize_Control {
 
 	/**
@@ -25,4 +26,5 @@ class Layout_Picker_Storefront_Control extends WP_Customize_Control {
 		</div>
 		<?php
 	}
+}
 }
