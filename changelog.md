@@ -1,8 +1,5 @@
 # Storefront Changelog
 
-### *2015.05.07* - 1.4.6
-* **Tweak** - Added order and orderby parameters to homepage featured products
-
 ### *2015.04.27* - 1.4.5
 * **Fix** - Use the correct escaping function in `storefront_product_categories()`.
 * **Fix** - Pagination when only showing product categories / subcategories on archives.
@@ -10,6 +7,7 @@
 * **Tweak** - Only output description paragraph in header if one is set.
 * **Tweak** - Updated header image dimension recommendation.
 * **Tweak** - Dismissible notices.
+* **Tweak** - Added order and orderby parameters to homepage featured products
 * **Dev** - Bump npm susy to 2.2.3.
 
 ### *2015.04.23* - 1.4.4
