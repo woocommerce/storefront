@@ -10,7 +10,7 @@ $url 	.= 'url=' . urlencode( site_url() . '?storefront-customizer=true' );
 $url 	.= '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' );
 $url 	.= '&storefront-customizer=true';
 ?>
-<div id="getting_started" class="feature-section col two-col panel" style="margin-bottom: 1.618em; padding-top: 1.618em; overflow: hidden;">
+<div id="getting_started" class="col two-col panel" style="margin-bottom: 1.618em; padding-top: 1.618em; overflow: hidden;">
 
 	<h2><?php _e( 'Using Storefront', 'storefront' ); ?> <div class="dashicons dashicons-lightbulb"></div></h2>
 	<p><?php _e( 'We\'ve purposely kept Storefront lean & mean so configuration is a breeze. Here are some common theme-setup tasks:', 'storefront' ); ?></p>

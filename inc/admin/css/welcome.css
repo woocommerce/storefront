@@ -73,6 +73,9 @@
     background: #fff;
     box-sizing: border-box; }
 
+.last-feature {
+  margin-right: 0 !important; }
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .storefront-add-ons .add-on.image-vertical.product-hero .content {
     background-image: url(../welcome-screen/img/product-hero@2x.png);

@@ -3,7 +3,7 @@
  * Welcome screen add-ons template
  */
 ?>
-<div id="add_ons" class="storefront-add-ons feature-section panel" style="padding-top: 1.618em; clear: both;">
+<div id="add_ons" class="storefront-add-ons panel" style="padding-top: 1.618em; clear: both;">
 	<h2><?php _e( 'Enhance your site', 'storefront' ); ?> <div class="dashicons dashicons-admin-plugins"></div></h2>
 
 	<p>
