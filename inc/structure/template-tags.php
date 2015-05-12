@@ -79,14 +79,15 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 			$args = apply_filters( 'storefront_featured_products_args', array(
 				'limit' 			=> 4,
 				'columns' 			=> 4,
+				'orderby'			=> 'date',
+				'order'				=> 'desc',
 				'title'				=> __( 'Featured Products', 'storefront' ),
 				) );
 
 			echo '<section class="storefront-product-section storefront-featured-products">';
 
 			echo '<h2 class="section-title">' . esc_attr( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[featured_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
-
+			echo do_shortcode( '[featured_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '" orderby="' . esc_attr( $args['orderby'] ) . '" order="' . esc_attr( $args['order'] ) . '"]' );
 			echo '</section>';
 
 		}
