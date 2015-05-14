@@ -11,6 +11,7 @@
 * **Dev** - Bump npm susy to 2.2.3.
 * **Dev** - Made `Layout_Picker_Storefront_Control` class pluggable. Props @niravmehta
 * **Dev** - Added order and orderby parameters to homepage featured products template tag.
+* **Dev** - Added before/after hooks inside homepage product sections.
 
 ### *2015.04.23* - 1.4.4
 * **Fix** - Post author styles applied to incorrect child comments. Props @ibndawood.
