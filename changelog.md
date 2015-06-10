@@ -1,6 +1,7 @@
 # Storefront Changelog
 
 ### *2015.06.xx* - 1.4.6
+* **Fix** - `font-family` delcaration on `select`s.
 * **Tweak** - Escaping function used on homepage section titles.
 * **Dev** - `$storefront_version` global when using a child theme.
 

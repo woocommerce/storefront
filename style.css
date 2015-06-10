@@ -540,12 +540,15 @@ body {
   word-wrap: break-word;
   font-size: .938em; }
 
-body, button, input, select, textarea {
+body, button, input, textarea {
   color: #60646c;
   font-family: "Helvetica Neue", sans-serif;
   line-height: 1.618;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+
+select {
+  font-family: initial !important; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", sans-serif;
