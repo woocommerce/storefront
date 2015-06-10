@@ -103,7 +103,7 @@ function storefront_sorting_wrapper_close() {
  */
 function storefront_shop_messages() {
 	if ( ! is_checkout() ) {
-		echo wp_kses_post( do_shortcode( '[woocommerce_messages]' ) );
+		echo wp_kses_post( do_shortcode_func( 'woocommerce_messages' ) );
 	}
 }
 

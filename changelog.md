@@ -3,6 +3,7 @@
 ### *2015.06.xx* - 1.4.6
 * **Fix** - `font-family` delcaration on `select`s.
 * **Tweak** - Escaping function used on homepage section titles.
+* **Tweak** - Remove all instances of `do_shortcode()` to improve performance.
 * **Dev** - `$storefront_version` global when using a child theme.
 
 ### *2015.05.14* - 1.4.5

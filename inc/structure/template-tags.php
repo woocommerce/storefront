@@ -31,7 +31,14 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 			do_action( 'storefront_homepage_before_product_categories' );
 
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[product_categories number="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '" orderby="' . esc_attr( $args['orderby'] ) . '" parent="' . esc_attr( $args['child_categories'] ) . '"]' );
+
+			echo do_shortcode_func( 'product_categories',
+				array(
+					'number' 	=> intval( $args['limit'] ),
+					'columns'	=> intval( $args['columns'] ),
+					'orderby'	=> esc_attr( $args['orderby'] ),
+					'parent'	=> esc_attr( $args['child_categories'] ),
+					) );
 
 			do_action( 'storefront_homepage_after_product_categories' );
 
@@ -63,12 +70,16 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 			do_action( 'storefront_homepage_before_recent_products' );
 
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[recent_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
+
+			echo do_shortcode_func( 'recent_products',
+				array(
+					'per_page' 	=> intval( $args['limit'] ),
+					'columns'	=> intval( $args['columns'] ),
+					) );
 
 			do_action( 'storefront_homepage_after_recent_products' );
 
 			echo '</section>';
-
 		}
 	}
 }
@@ -97,7 +108,14 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 			do_action( 'storefront_homepage_before_featured_products' );
 
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[featured_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '" orderby="' . esc_attr( $args['orderby'] ) . '" order="' . esc_attr( $args['order'] ) . '"]' );
+
+			echo do_shortcode_func( 'featured_products',
+				array(
+					'per_page' 	=> intval( $args['limit'] ),
+					'columns'	=> intval( $args['columns'] ),
+					'orderby'	=> esc_attr( $args['orderby'] ),
+					'order'		=> esc_attr( $args['order'] ),
+					) );
 
 			do_action( 'storefront_homepage_after_featured_products' );
 
@@ -129,7 +147,12 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 			do_action( 'storefront_homepage_before_popular_products' );
 
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[top_rated_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
+
+			echo do_shortcode_func( 'top_rated_products',
+				array(
+					'per_page' 	=> intval( $args['limit'] ),
+					'columns'	=> intval( $args['columns'] ),
+					) );
 
 			do_action( 'storefront_homepage_after_popular_products' );
 
@@ -161,7 +184,12 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 			do_action( 'storefront_homepage_before_on_sale_products' );
 
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
-			echo do_shortcode( '[sale_products per_page="' . intval( $args['limit'] ) . '" columns="' . intval( $args['columns'] ) . '"]' );
+
+			echo do_shortcode_func( 'sale_products',
+				array(
+					'per_page' 	=> intval( $args['limit'] ),
+					'columns'	=> intval( $args['columns'] ),
+					) );
 
 			do_action( 'storefront_homepage_after_on_sale_products' );
 
