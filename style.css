@@ -679,7 +679,7 @@ a {
   text-decoration: none;
   font-weight: 700; }
   a:focus {
-    outline: 2px solid #96588a; }
+    outline: 1px solid #96588a; }
 
 .storefront-cute * {
   font-family: "Comic Sans MS", sans-serif; }

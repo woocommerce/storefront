@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 1.4.6\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-06-10 09:45:10+00:00\n"
+"POT-Creation-Date: 2015-06-10 15:02:20+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -244,27 +244,26 @@ msgid ""
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:20
-msgid "Boutique Child Theme"
+msgid "Galleria Child Theme"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:21
-msgid "Boutique"
+msgid "Galleria"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:22
 msgid ""
-"Boutique is a simple, traditionally designed Storefront child theme, ideal "
-"for small stores or boutiques. Add your logo, create a unique color scheme "
-"and start selling!"
+"Galleria is a Storefront child theme perfect for fashion and design stores. "
+"Stylish and minimalist, it gives sites a high class look and keeps products "
+"centerstage."
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:25
-#: inc/admin/welcome-screen/sections/child-themes.php:37
-msgid "Install %s now"
+msgid "Buy %s now"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:27
-msgid "Read more %sabout Boutique%s &rarr;"
+msgid "Read more %sabout Galleria%s &rarr;"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/child-themes.php:32
@@ -281,8 +280,32 @@ msgid ""
 "natural, organic or hand made goods."
 msgstr ""
 
+#: inc/admin/welcome-screen/sections/child-themes.php:37
+#: inc/admin/welcome-screen/sections/child-themes.php:49
+msgid "Install %s now"
+msgstr ""
+
 #: inc/admin/welcome-screen/sections/child-themes.php:39
 msgid "Read more %sabout Deli%s &rarr;"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/child-themes.php:44
+msgid "Boutique Child Theme"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/child-themes.php:45
+msgid "Boutique"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/child-themes.php:46
+msgid ""
+"Boutique is a simple, traditionally designed Storefront child theme, ideal "
+"for small stores or boutiques. Add your logo, create a unique color scheme "
+"and start selling!"
+msgstr ""
+
+#: inc/admin/welcome-screen/sections/child-themes.php:51
+msgid "Read more %sabout Boutique%s &rarr;"
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/getting-started.php:15
@@ -711,19 +734,19 @@ msgstr ""
 msgid "Product Categories"
 msgstr ""
 
-#: inc/structure/template-tags.php:58
+#: inc/structure/template-tags.php:65
 msgid "Recent Products"
 msgstr ""
 
-#: inc/structure/template-tags.php:92
+#: inc/structure/template-tags.php:103
 msgid "Featured Products"
 msgstr ""
 
-#: inc/structure/template-tags.php:124
+#: inc/structure/template-tags.php:142
 msgid "Top Rated Products"
 msgstr ""
 
-#: inc/structure/template-tags.php:156
+#: inc/structure/template-tags.php:179
 msgid "On Sale"
 msgstr ""
 
