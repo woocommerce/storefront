@@ -15,7 +15,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Assign the Storefront version to a var
  */
-$theme 					= wp_get_theme();
+$theme 					= wp_get_theme( 'storefront' );
 $storefront_version 	= $theme['Version'];
 
 if ( ! function_exists( 'storefront_setup' ) ) :

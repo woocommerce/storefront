@@ -1215,6 +1215,20 @@ p.no-comments {
 	}
 }
 
+.site-content {
+	> .col-full {
+		> .woocommerce {
+			> .woocommerce-message,
+			> .woocommerce-info,
+			> .woocommerce-error {
+				&:first-child {
+					margin-top: 2.618em;
+				}
+			}
+		}
+	}
+}
+
 .wc-forward {
 	&:after {
 		content: "\f178";

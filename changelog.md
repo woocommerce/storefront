@@ -1,6 +1,10 @@
 # Storefront Changelog
 
-### *2015.04.27* - 1.4.5
+### *2015.06.xx* - 1.4.6
+* **Tweak** - Escaping function used on homepage section titles.
+* **Dev** - `$storefront_version` global when using a child theme.
+
+### *2015.05.14* - 1.4.5
 * **Fix** - Use the correct escaping function in `storefront_product_categories()`.
 * **Fix** - Pagination when only showing product categories / subcategories on archives.
 * **Tweak** - Logo prompt in Header section in Customizer.
