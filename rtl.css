@@ -413,6 +413,14 @@ table td,table th,.menu-toggle {
   }
 }
 
+/**
+ * Deposits
+ */
+.wc-deposits-wrapper .wc-deposits-option li input {
+  margin-right: 0;
+  margin-left: .618em;
+}
+
 
 /**
  * WooCommerce

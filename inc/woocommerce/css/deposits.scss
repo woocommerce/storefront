@@ -24,6 +24,10 @@
 			&:hover {
 				background: rgba(#000,.02);
 			}
+
+			input {
+				margin-right: .618em;
+			}
 		}
 	}
 
@@ -42,6 +46,10 @@
 			border: 1em solid rgba(#000,.0125);
 			padding: 1.618em;
 			margin-bottom: 1em;
+
+			input {
+				margin-right: 0;
+			}
 
 			&:hover {
 				background: rgba(#000,.0125);
