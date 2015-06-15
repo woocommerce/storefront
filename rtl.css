@@ -54,11 +54,6 @@ blockquote {
   border-left:none;
 }
 
-button.added:after,input[type="button"].added:after,input[type="reset"].added:after,input[type="submit"].added:after,.button.added:after,.added_to_cart.added:after {
-  margin-right:.53em;
-  margin-left:auto;
-}
-
 textarea {
   padding-right:.857em;
   padding-left:0;
@@ -692,8 +687,7 @@ p.stars a.star-1:after,p.stars a.star-2:after,p.stars a.star-3:after,p.stars a.s
 }
 
 .wc-forward:after {
-  margin-right:.53em;
-  margin-left:auto;
+  content: "\f177"
 }
 
 .woocommerce-active .site-branding,.woocommerce-active .site-logo-anchor,.single-product div.product form.cart .quantity,.widget_price_filter .price_slider_amount .button {
