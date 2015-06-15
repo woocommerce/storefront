@@ -449,6 +449,10 @@ table td,table th,.menu-toggle {
   left:auto;
 }
 
+.woocommerce-pagination .page-numbers li a.next, .woocommerce-pagination .page-numbers li a.prev {
+  transform: rotate(180deg);
+}
+
 ul.products {
   margin-right:0;
   margin-left:auto;
