@@ -69,6 +69,7 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/photography.css': 'inc/woocommerce/css/photography.scss',
 					'inc/woocommerce/css/product-reviews-pro.css': 'inc/woocommerce/css/product-reviews-pro.scss',
 					'inc/woocommerce/css/smart-coupons.css': 'inc/woocommerce/css/smart-coupons.scss',
+					'inc/woocommerce/css/deposits.css': 'inc/woocommerce/css/deposits.scss',
 					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 				}]
 			}
