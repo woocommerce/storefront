@@ -67,7 +67,7 @@ class Storefront_Welcome {
 	 * @since 1.0.0
 	 */
 	public function storefront_welcome_register_menu() {
-		add_theme_page( 'Storefront', 'Storefront', 'read', 'storefront-welcome', array( $this, 'storefront_welcome_screen' ) );
+		add_theme_page( 'Storefront', 'Storefront', 'activate_plugins', 'storefront-welcome', array( $this, 'storefront_welcome_screen' ) );
 	}
 
 	/**
