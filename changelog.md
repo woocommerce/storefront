@@ -5,6 +5,7 @@
 * **New** - Integration with WooCommerce Deposits.
 * **Fix** - Welcome screen now only visible to admins.
 * **Dev** - Added various sanitization functions: `storefront_sanitize_checkbox()`, `storefront_sanitize_html()`, `storefront_sanitize_image(), `storefront_sanitize_number_absint()`, `storefront_sanitize_url()`.
+* **Dev* - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
 
 ### *2015.06.10* - 1.4.6
 * **Fix** - `font-family` delcaration on `select`s.

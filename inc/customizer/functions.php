@@ -257,3 +257,51 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
 
     return '#' . $r_hex . $g_hex . $b_hex;
 }
+
+/**
+ * Add CSS for custom controls
+ *
+ * This function incorporates CSS from the Kirki Customizer Framework
+ *
+ * The Kirki Customizer Framework, Copyright Aristeides Stathopoulos (@aristath),
+ * is licensed under the terms of the GNU GPL, Version 2 (or later)
+ *
+ * @link https://github.com/reduxframework/kirki/
+ * @since  1.5.0
+ */
+function storefront_customizer_custom_control_css() {
+    ?>
+    <style>
+    .customize-control-radio-image .image.ui-buttonset input[type=radio] {
+        height: auto;
+    }
+    .customize-control-radio-image .image.ui-buttonset label {
+        display: inline-block;
+        width: 48%;
+        padding: 1%;
+        box-sizing: border-box;
+    }
+    .customize-control-radio-image .image.ui-buttonset label.ui-state-active {
+        background: none;
+    }
+    .customize-control-radio-image .customize-control-radio-buttonset label {
+        background: #f7f7f7;
+        line-height: 35px;
+    }
+    .customize-control-radio-image label img {
+        opacity: 0.5;
+    }
+    #customize-controls .customize-control-radio-image label img {
+        height: auto;
+    }
+    .customize-control-radio-image label.ui-state-active img {
+        background: #dedede;
+        opacity: 1;
+    }
+    .customize-control-radio-image label.ui-state-hover img {
+        opacity: 1;
+        box-shadow: 0 0 0 3px #f6f6f6;
+    }
+    </style>
+    <?php
+}

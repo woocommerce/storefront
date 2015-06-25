@@ -31,7 +31,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		/**
 		 * Custom controls
 		 */
-		require_once dirname( __FILE__ ) . '/controls/layout.php';
+		require_once dirname( __FILE__ ) . '/controls/radio-image.php';
 		require_once dirname( __FILE__ ) . '/controls/arbitrary.php';
 
 		if ( apply_filters( 'storefront_customizer_more', true ) ) {
@@ -317,17 +317,15 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 			'sanitize_callback' => 'storefront_sanitize_layout',
 		) );
 
-		$wp_customize->add_control( new Layout_Picker_Storefront_Control( $wp_customize, 'storefront_layout', array(
-			'label'    => __( 'General layout', 'storefront' ),
-			'section'  => 'storefront_layout',
-			'settings' => 'storefront_layout',
-			'priority' => 1,
-		) ) );
-
-		$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_divider', array(
-			'section'  	=> 'storefront_layout',
-			'type' 		=> 'divider',
-			'priority' 	=> 2,
+		$wp_customize->add_control( new Storefront_Custom_Radio_Image_Control( $wp_customize, 'storefront_layout', array(
+					'settings'		=> 'storefront_layout',
+					'section'		=> 'storefront_layout',
+					'label'			=> __( 'General Layout', 'storefront' ),
+					'priority'		=> 1,
+					'choices'		=> array(
+						'right' 		=> get_template_directory_uri() . '/inc/customizer/controls/img/2cr.png',
+						'left' 			=> get_template_directory_uri() . '/inc/customizer/controls/img/2cl.png',
+					)
 		) ) );
 
 		/**
