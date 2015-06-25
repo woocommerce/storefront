@@ -51,16 +51,16 @@ class Storefront_Custom_Radio_Image_Control extends WP_Customize_Control {
 				<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 			<?php endif; ?>
 		</span>
-		<div id="input_<?php echo $this->id; ?>" class="image">
+		<div id="input_<?php echo esc_attr( $this->id ); ?>" class="image">
 			<?php foreach ( $this->choices as $value => $label ) : ?>
 				<input class="image-select" type="radio" value="<?php echo esc_attr( $value ); ?>" id="<?php echo $this->id . $value; ?>" name="<?php echo esc_attr( $name ); ?>" <?php $this->link(); checked( $this->value(), $value ); ?>>
-					<label for="<?php echo $this->id . $value; ?>">
+					<label for="<?php echo esc_attr( $this->id ) . esc_attr( $value ); ?>">
 						<img src="<?php echo esc_html( $label ); ?>" alt="<?php echo esc_attr( $value ); ?>" title="<?php echo esc_attr( $value ); ?>">
 					</label>
 				</input>
 			<?php endforeach; ?>
 		</div>
-		<script>jQuery(document).ready(function($) { $( '[id="input_<?php echo $this->id; ?>"]' ).buttonset(); });</script>
+		<script>jQuery(document).ready(function($) { $( '[id="input_<?php echo esc_attr( $this->id ); ?>"]' ).buttonset(); });</script>
 		<?php
 	}
 }
