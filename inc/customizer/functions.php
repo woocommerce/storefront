@@ -47,15 +47,14 @@ if ( ! function_exists( 'storefront_sanitize_hex_color' ) ) {
  */
 if ( ! function_exists( 'storefront_sanitize_choices' ) ) {
     function storefront_sanitize_choices( $input, $setting ) {
-        global $wp_customize;
+        // Ensure input is a slug.
+        $input = sanitize_key( $input );
 
-        $control = $wp_customize->get_control( $setting->id );
+        // Get list of choices from the control associated with the setting.
+        $choices = $setting->manager->get_control( $setting->id )->choices;
 
-        if ( array_key_exists( $input, $control->choices ) ) {
-            return $input;
-        } else {
-            return $setting->default;
-        }
+        // If the input is a valid key, return it; otherwise, return the default.
+        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
     }
 }
 
@@ -79,6 +78,129 @@ if ( ! function_exists( 'storefront_sanitize_layout' ) ) {
             return '';
         }
     }
+}
+
+/**
+ * Checkbox sanitization callback.
+ *
+ * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+ * as a boolean value, either TRUE or FALSE.
+ *
+ * @param bool $checked Whether the checkbox is checked.
+ * @return bool Whether the checkbox is checked.
+ * @since  1.5.0
+ */
+function storefront_sanitize_checkbox( $checked ) {
+    // Boolean check.
+    return ( ( isset( $checked ) && true == $checked ) ? true : false );
+}
+
+/**
+ * HTML sanitization callback.
+ *
+ * - Sanitization: html
+ * - Control: text, textarea
+ *
+ * Sanitization callback for 'html' type text inputs. This callback sanitizes `$html`
+ * for HTML allowable in posts.
+ *
+ * NOTE: wp_filter_post_kses() can be passed directly as `$wp_customize->add_setting()`
+ * 'sanitize_callback'. It is wrapped in a callback here merely for example purposes.
+ *
+ * @see wp_filter_post_kses() https://developer.wordpress.org/reference/functions/wp_filter_post_kses/
+ *
+ * @param string $html HTML to sanitize.
+ * @return string Sanitized HTML.
+ * @since  1.5.0
+ */
+function storefront_sanitize_html( $html ) {
+    return wp_filter_post_kses( $html );
+}
+
+
+/**
+ * Image sanitization callback.
+ *
+ * Checks the image's file extension and mime type against a whitelist. If they're allowed,
+ * send back the filename, otherwise, return the setting default.
+ *
+ * - Sanitization: image file extension
+ * - Control: text, WP_Customize_Image_Control
+ *
+ * @see wp_check_filetype() https://developer.wordpress.org/reference/functions/wp_check_filetype/
+ *
+ * @param string               $image   Image filename.
+ * @param WP_Customize_Setting $setting Setting instance.
+ * @return string The image filename if the extension is allowed; otherwise, the setting default.
+ * @since  1.5.0
+ */
+function storefront_sanitize_image( $image, $setting ) {
+    /*
+     * Array of valid image file types.
+     *
+     * The array includes image mime types that are included in wp_get_mime_types()
+     */
+    $mimes = array(
+        'jpg|jpeg|jpe' => 'image/jpeg',
+        'gif'          => 'image/gif',
+        'png'          => 'image/png',
+        'bmp'          => 'image/bmp',
+        'tif|tiff'     => 'image/tiff',
+        'ico'          => 'image/x-icon'
+    );
+    // Return an array with file extension and mime_type.
+    $file = wp_check_filetype( $image, $mimes );
+    // If $image has a valid mime_type, return it; otherwise, return the default.
+    return ( $file['ext'] ? $image : $setting->default );
+}
+
+
+/**
+ * Number sanitization callback.
+ *
+ * - Sanitization: number_absint
+ * - Control: number
+ *
+ * Sanitization callback for 'number' type text inputs. This callback sanitizes `$number`
+ * as an absolute integer (whole number, zero or greater).
+ *
+ * NOTE: absint() can be passed directly as `$wp_customize->add_setting()` 'sanitize_callback'.
+ * It is wrapped in a callback here merely for example purposes.
+ *
+ * @see absint() https://developer.wordpress.org/reference/functions/absint/
+ *
+ * @param int                  $number  Number to sanitize.
+ * @param WP_Customize_Setting $setting Setting instance.
+ * @return int Sanitized number; otherwise, the setting default.
+ * @since  1.5.0
+ */
+function storefront_sanitize_number_absint( $number, $setting ) {
+    // Ensure $number is an absolute integer (whole number, zero or greater).
+    $number = absint( $number );
+
+    // If the input is an absolute integer, return it; otherwise, return the default
+    return ( $number ? $number : $setting->default );
+}
+
+/**
+ * URL sanitization callback.
+ *
+ * - Sanitization: url
+ * - Control: text, url
+ *
+ * Sanitization callback for 'url' type text inputs. This callback sanitizes `$url` as a valid URL.
+ *
+ * NOTE: esc_url_raw() can be passed directly as `$wp_customize->add_setting()` 'sanitize_callback'.
+ * It is wrapped in a callback here merely for example purposes.
+ *
+ * @see esc_url_raw() https://developer.wordpress.org/reference/functions/esc_url_raw/
+ *
+ * @param string $url URL to sanitize.
+ * @return string Sanitized URL.
+ * @since  1.5.0
+ */
+function storefront_sanitize_url( $url ) {
+    return esc_url_raw( $url );
 }
 
 /**
