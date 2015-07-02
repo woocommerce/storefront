@@ -40,7 +40,7 @@ if ( ! function_exists( 'storefront_setup' ) ) :
 		// wp-content/themes/child-theme-name/languages/it_IT.mo
 		load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
 
-		// wp-content/themes/theme-name/languages/it_IT.mo
+		// wp-content/themes/storefront/languages/it_IT.mo
 		load_theme_textdomain( 'storefront', get_template_directory() . '/languages' );
 
 		/**
