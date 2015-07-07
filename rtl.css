@@ -153,6 +153,10 @@ table td,table th,.menu-toggle {
     margin-right:auto;
   }
 
+  #respond .comment-form-email input {
+    direction:ltr;
+  }
+
   .comment-list ol.children .comment-meta {
     float:right;
     margin-left:6.6666666667%;
