@@ -687,6 +687,8 @@ p.stars a.star-1:after,p.stars a.star-2:after,p.stars a.star-3:after,p.stars a.s
 }
 
 .wc-forward:after {
+  margin-left: 0;
+  margin-right: .53em;
   content: "\f177"
 }
 
