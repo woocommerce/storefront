@@ -216,7 +216,11 @@ function storefront_layout_class( $classes ) {
 	$layout = get_theme_mod( 'storefront_layout' );
 
 	if ( '' == $layout ) {
-		$layout = 'right';
+		if ( is_rtl() ) {
+			$layout = 'left';
+		} else {
+			$layout = 'right';
+		}
 	}
 
 	$classes[] = $layout . '-sidebar';
