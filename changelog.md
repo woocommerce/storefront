@@ -3,9 +3,11 @@
 ### *2015.06.xx* - 1.5.0
 * **New** - rtl support.
 * **New** - Integration with WooCommerce Deposits.
+* **New** - Pages now display featured images above the page title.
 * **Fix** - Welcome screen now only visible to admins.
 * **Dev** - Added various sanitization functions: `storefront_sanitize_checkbox()`, `storefront_sanitize_html()`, `storefront_sanitize_image(), `storefront_sanitize_number_absint()`, `storefront_sanitize_url()`.
-* **Dev* - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
+* **Dev** - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
+* **Dev** - Added `storefront_post_thumbnail()`.
 
 ### *2015.06.10* - 1.4.6
 * **Fix** - `font-family` delcaration on `select`s.

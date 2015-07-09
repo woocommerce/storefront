@@ -38,9 +38,7 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		?>
 		<div class="entry-content" itemprop="articleBody">
 		<?php
-		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( 'full', array( 'itemprop' => 'image' ) );
-		}
+		storefront_post_thumbnail( 'full' );
 
 		the_content(
 			sprintf(

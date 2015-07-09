@@ -13,7 +13,10 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	function storefront_page_header() {
 		?>
 		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title" itemprop="name">', '</h1>' ); ?>
+			<?php
+			storefront_post_thumbnail( 'full' );
+			the_title( '<h1 class="entry-title" itemprop="name">', '</h1>' );
+			?>
 		</header><!-- .entry-header -->
 		<?php
 	}
