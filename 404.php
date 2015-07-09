@@ -31,7 +31,7 @@ get_header(); ?>
 
 					<?php
 					if ( is_woocommerce_activated() ) {
-						echo '<h2>' . __( 'Popular Products', 'storefront' ) . '</h2>';
+						echo '<h2>' . esc_attr( __( 'Popular Products', 'storefront' ) ) . '</h2>';
 
 						echo storefront_do_shortcode( 'best_selling_products',
 							array(
