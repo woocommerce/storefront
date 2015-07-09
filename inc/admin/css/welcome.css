@@ -28,12 +28,13 @@
     .storefront-add-ons .add-on.image-horizontal.product-pagination .content {
       padding-bottom: 155px;
       background: url(../welcome-screen/img/product-pagination.png) bottom left no-repeat; }
-    .storefront-add-ons .add-on .premium, .storefront-add-ons .add-on .free {
+    .storefront-add-ons .add-on .premium,
+    .storefront-add-ons .add-on .free {
       background: #333;
       color: #fff;
       font-size: .618em;
       text-transform: uppercase;
-      padding: .53em 1em;
+      padding: 0.53em 1em;
       position: absolute;
       top: 0;
       right: 0; }
@@ -101,8 +102,11 @@
 
 .about-wrap h2 .nav-tab {
   margin-bottom: 0; }
-.about-wrap h2 .nav-tab-active, .about-wrap h2 .nav-tab-active:hover {
+
+.about-wrap h2 .nav-tab-active,
+.about-wrap h2 .nav-tab-active:hover {
   border-bottom: 0; }
+
 .about-wrap h2 .nav-tab-active {
   position: relative; }
   .about-wrap h2 .nav-tab-active:after {

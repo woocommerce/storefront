@@ -144,7 +144,7 @@ add_action( 'save_post',     'storefront_category_transient_flusher' );
  *
  * @return string|bool False on failure, the result of the shortcode on success.
  */
-function do_shortcode_func( $tag, array $atts = array(), $content = null ) {
+function storefront_do_shortcode( $tag, array $atts = array(), $content = null ) {
 
 	global $shortcode_tags;
 
