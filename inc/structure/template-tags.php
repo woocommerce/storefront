@@ -248,6 +248,7 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 * @var $size thumbnail size. thumbnail|medium|large|full|$custom
 	 * @uses has_post_thumbnail()
 	 * @uses the_post_thumbnail
+	 * @param string $size
 	 * @since 1.5.0
 	 */
 	function storefront_post_thumbnail( $size ) {
