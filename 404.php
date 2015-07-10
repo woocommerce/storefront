@@ -33,21 +33,21 @@ get_header(); ?>
 					if ( is_woocommerce_activated() ) {
 
 						echo '<div class="fourohfour-columns-2">';
+
 							echo '<div class="col-1">';
 
 								echo '<h2>' . esc_attr( __( 'Featured Products', 'storefront' ) ) . '</h2>';
 
-								echo storefront_do_shortcode( 'featured_products',
-									array(
-										'per_page' 	=> intval( '2' ),
-										'columns'	=> intval( '2' ),
-										) );
+								echo storefront_do_shortcode( 'featured_products', array(
+															'per_page' 	=> intval( '2' ),
+															'columns'	=> intval( '2' ),
+														) );
 
 							echo '</div>';
 
 							echo '<div class="col-2">';
 
-								echo '<h2>' . __( 'Product Categories', 'storefront' ) . '</h2>';
+								echo '<h2>' . esc_attr( __( 'Product Categories', 'storefront' ) ) . '</h2>';
 
 								the_widget( 'WC_Widget_Product_Categories', array(
 															'count'		=> 1,
@@ -58,11 +58,10 @@ get_header(); ?>
 
 						echo '<h2>' . __( 'Popular Products', 'storefront' ) . '</h2>';
 
-						echo storefront_do_shortcode( 'best_selling_products',
-								array(
-									'per_page' 	=> intval( '4' ),
-									'columns'	=> intval( '4' ),
-									) );
+						echo storefront_do_shortcode( 'best_selling_products', array(
+															'per_page' 	=> intval( '4' ),
+															'columns'	=> intval( '4' ),
+														) );
 					}
 					?>
 
