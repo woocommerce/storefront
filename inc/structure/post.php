@@ -111,9 +111,9 @@ if ( ! function_exists( 'storefront_paging_nav' ) ) {
 		global $wp_query;
 
 		$args = array(
-			'type' 		=> 'list',
-			'next_text' => __( 'Next', 'storefront' ) . '&nbsp;<span class="meta-nav">&rarr;</span>',
-			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp' . __( 'Previous', 'storefront' ),
+			'type' 	    => 'list',
+			'next_text' => _x( 'Next', 'Next post', 'storefront' ) . '&nbsp;<span class="meta-nav">&rarr;</span>',
+			'prev_text' => '<span class="meta-nav">&larr;</span>&nbsp' . _x( 'Previous', 'Previous post', 'storefront' ),
 			);
 
 		the_posts_pagination( $args );
@@ -127,7 +127,7 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	function storefront_post_nav() {
 		$args = array(
 			'next_text' => '%title &nbsp;<span class="meta-nav">&rarr;</span>',
-			'prev_text'	=> '<span class="meta-nav">&larr;</span>&nbsp;%title',
+			'prev_text' => '<span class="meta-nav">&larr;</span>&nbsp;%title',
 			);
 		the_post_navigation( $args );
 	}
