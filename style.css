@@ -1769,7 +1769,9 @@ fieldset {
     clip: rect(1px 1px 1px 1px);
     /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important; }
+    position: absolute !important;
+    top: 0;
+    left: 0; }
   .widget_search form:before,
   .widget_product_search form:before {
     content: "\f002";

@@ -69,6 +69,8 @@
 
 		input[type=submit] {
 			@include screen-reader-text();
+			top: 0;
+			left: 0;
 		}
 
 		&:before {
