@@ -79,6 +79,13 @@ function storefront_woocommerce_integrations_scripts() {
 	if ( is_woocommerce_extension_activated( 'WC_Deposits' ) ) {
 		wp_enqueue_style( 'storefront-woocommerce-deposits-style', get_template_directory_uri() . '/inc/woocommerce/css/deposits.css', 'storefront-woocommerce-style' );
 	}
+
+	/**
+	 * WooCommerce Product Bundles
+	 */
+	if ( is_woocommerce_extension_activated( 'WC_Bundles' ) ) {
+		wp_enqueue_style( 'storefront-woocommerce-product-bundles', get_template_directory_uri() . '/inc/woocommerce/css/bundles.css', 'storefront-woocommerce-style' );
+	}
 }
 
 /**

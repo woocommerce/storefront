@@ -70,6 +70,7 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/product-reviews-pro.css': 'inc/woocommerce/css/product-reviews-pro.scss',
 					'inc/woocommerce/css/smart-coupons.css': 'inc/woocommerce/css/smart-coupons.scss',
 					'inc/woocommerce/css/deposits.css': 'inc/woocommerce/css/deposits.scss',
+					'inc/woocommerce/css/bundles.css': 'inc/woocommerce/css/bundles.scss',
 					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 				}]
 			}
