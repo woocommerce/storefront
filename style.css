@@ -1143,7 +1143,7 @@ fieldset {
 
 .menu-toggle {
   cursor: pointer;
-  margin: 1.618em auto;
+  margin: 2.244em auto;
   display: block;
   width: 100%;
   text-align: left; }
@@ -1160,6 +1160,11 @@ fieldset {
 .nav-menu,
 .main-navigation div.menu > ul:not(.nav-menu) {
   display: none; }
+
+.handheld-navigation {
+  margin-bottom: 2.244em; }
+  .handheld-navigation ul {
+    margin: 0; }
 
 .main-navigation.toggled .handheld-navigation,
 .main-navigation.toggled .menu > ul:not(.nav-menu) {
