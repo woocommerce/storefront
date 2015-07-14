@@ -24,14 +24,14 @@
 	</div>
 
 	<div class="add-on image-vertical storefront-designer">
-		<h4><?php _e( 'Further customise your store with the Storefront Designer', 'storefront' ); ?> <span class="premium"><?php _e( 'Premium', 'storefront' ); ?></span></h4>
+		<h4><?php _e( 'Refine your shop archives and product pages with the Storefront WooCommerce Customiser', 'storefront' ); ?> <span class="premium"><?php _e( 'Premium', 'storefront' ); ?></span></h4>
 		<div class="content">
-			<p><?php _e( 'Storefront Designer adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing the header layout, button styles, typographical schemes/scales and more.', 'storefront' ); ?></p>
+			<p><?php _e( 'The Storefront WooCommerce Customiser extension gives you further control over the look and feel of your shop. Change the product archive and single layouts, toggle various shop components and more.', 'storefront' ); ?></p>
 
-			<?php if ( class_exists( 'Storefront_Designer' ) ) { ?>
+			<?php if ( class_exists( 'Storefront_WooCommerce_Customiser' ) ) { ?>
 				<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
 			<?php } else { ?>
-				<p><a href="https://www.woothemes.com/products/storefront-designer?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront Designer%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<p><a href="https://www.woothemes.com/products/storefront-woocommerce-customiser?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront WooCommerce Customiser%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
 			<?php } ?>
 		</div>
 	</div>
@@ -89,14 +89,14 @@
 	</div>
 
 	<div class="add-on image-vertical wc-customiser">
-		<h4><?php _e( 'Refine your shop archives and product pages with the Storefront WooCommerce Customiser', 'storefront' ); ?> <span class="premium"><?php _e( 'Premium', 'storefront' ); ?></span></h4>
+		<h4><?php _e( 'Further customise your store with the Storefront Designer', 'storefront' ); ?> <span class="premium"><?php _e( 'Premium', 'storefront' ); ?></span></h4>
 		<div class="content">
-			<p><?php _e( 'The Storefront WooCommerce Customiser extension gives you further control over the look and feel of your shop. Change the product archive and single layouts, toggle various shop components and more.', 'storefront' ); ?></p>
+			<p><?php _e( 'Storefront Designer adds a bunch of additional appearance settings allowing you to further tweak and perfect your Storefront design by changing the header layout, button styles, typographical schemes/scales and more.', 'storefront' ); ?></p>
 
-			<?php if ( class_exists( 'Storefront_WooCommerce_Customiser' ) ) { ?>
+			<?php if ( class_exists( 'Storefront_Designer' ) ) { ?>
 				<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
 			<?php } else { ?>
-				<p><a href="https://www.woothemes.com/products/storefront-woocommerce-customiser?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront WooCommerce Customiser%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+				<p><a href="https://www.woothemes.com/products/storefront-designer?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront Designer%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
 			<?php } ?>
 		</div>
 	</div>
@@ -114,9 +114,22 @@
 		</div>
 	</div>
 
+	<div class="add-on image-horizontal storefront-reviews">
+		<h4><?php _e( 'Highlight favourable reviews throughout your store with Storefront Reviews', 'storefront' ); ?> <span class="premium"><?php _e( 'Premium', 'storefront' ); ?></span></h4>
+		<div class="content">
+			<p><?php _e( 'Reading a positive review can be what converts a visitor into a customer. The Storefront Reviews extension allows you to highlight positive reviews across your site to showcase your most popular products.', 'storefront' ); ?></p>
+
+			<?php if ( class_exists( 'Storefront_Reviews' ) ) { ?>
+				<p><span class="activated"><?php _e( 'Activated', 'storefront' ); ?></span></p>
+			<?php } else { ?>
+				<p><a href="https://www.woothemes.com/products/storefront-reviews?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( __( 'Buy %sStorefront Reviews%s now', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a></p>
+			<?php } ?>
+		</div>
+	</div>
+
 	<hr style="clear: both;" />
 
 	<p style="font-size: 1.2em; margin: 2.618em 0;">
-		<?php echo sprintf( esc_html__( 'There are literally hundreds of awesome extensions available for you to use. Looking for Table Rate Shipping? Subscriptions? Product Add-ons? You can find these and more in the WooCommerce extension shop. %sGo shopping%s.', 'storefront' ), '<a href="http://www.woothemes.com/product-category/woocommerce-extensions/">', '</a>' ); ?>
+		<?php echo sprintf( esc_html__( 'Looking for more Storefront goodies? Take a look at the extensions available at woothemes.com. %sGo shopping &rarr;%s', 'storefront' ), '<a href="http://www.woothemes.com/product-category/storefront-extensions/" class="button-primary" style="float: right;">', '</a>' ); ?>
 	</p>
 </div>

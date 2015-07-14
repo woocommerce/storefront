@@ -28,6 +28,9 @@
     .storefront-add-ons .add-on.image-horizontal.product-pagination .content {
       padding-bottom: 155px;
       background: url(../welcome-screen/img/product-pagination.png) bottom left no-repeat; }
+    .storefront-add-ons .add-on.image-horizontal.storefront-reviews .content {
+      padding-bottom: 105px;
+      background: url(../welcome-screen/img/storefront-reviews.png) bottom left no-repeat; }
     .storefront-add-ons .add-on .premium,
     .storefront-add-ons .add-on .free {
       background: #333;
@@ -95,6 +98,9 @@
     background-size: 570px 120px; }
   .storefront-add-ons .add-on.image-horizontal.product-pagination .content {
     background-image: url(../welcome-screen/img/product-pagination@2x.png);
+    background-size: 570px 130px; }
+  .storefront-add-ons .add-on.image-horizontal.storefront-reviews .content {
+    background-image: url(../welcome-screen/img/storefront-reviews@2x.png);
     background-size: 570px 130px; } }
 
 .panel {

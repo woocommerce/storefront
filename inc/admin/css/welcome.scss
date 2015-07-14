@@ -60,6 +60,13 @@
 					background: url(../welcome-screen/img/product-pagination.png) bottom left no-repeat;
 				}
 			}
+
+			&.storefront-reviews {
+				.content {
+					padding-bottom: 105px;
+					background: url(../welcome-screen/img/storefront-reviews.png) bottom left no-repeat;
+				}
+			}
 		}
 
 		.premium,
@@ -179,6 +186,13 @@
 				&.product-pagination {
 					.content {
 						background-image: url(../welcome-screen/img/product-pagination@2x.png);
+						background-size: 570px 130px;
+					}
+				}
+
+				&.storefront-reviews {
+					.content {
+						background-image: url(../welcome-screen/img/storefront-reviews@2x.png);
 						background-size: 570px 130px;
 					}
 				}
