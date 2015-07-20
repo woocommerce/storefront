@@ -1799,7 +1799,8 @@ dl.variation {
 	}
 
 	// Payment forms in account
-	.woocommerce-order-pay {
+	.woocommerce-order-pay,
+	.page-template-template-fullwidth-php.woocommerce-order-pay {
 		#order_review {
 			border-width: 3px;
 			width: 100%;
@@ -1810,6 +1811,10 @@ dl.variation {
 					padding-left: 1em;
 					padding-top: 1em;
 				}
+
+				.form-row {
+					padding: 1em;
+				}
 			}
 
 			.payment_methods + .form-row {
@@ -1819,6 +1824,7 @@ dl.variation {
 			.button#place_order {
 				display: block;
 				width: 100%;
+				font-size: 1.387em;
 			}
 		}
 	}
