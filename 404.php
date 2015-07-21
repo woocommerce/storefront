@@ -16,10 +16,10 @@ get_header(); ?>
 				<div class="page-content">
 
 					<header class="page-header">
-						<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'storefront' ); ?></h1>
+						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'storefront' ); ?></h1>
 					</header><!-- .page-header -->
 
-					<p><?php _e( 'Nothing was found at this location. Try searching, or check out the links below.', 'storefront' ); ?></p>
+					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'storefront' ); ?></p>
 
 					<?php
 					if ( is_woocommerce_activated() ) {
@@ -36,18 +36,18 @@ get_header(); ?>
 
 							echo '<div class="col-1">';
 
-								echo '<h2>' . esc_attr( __( 'Featured Products', 'storefront' ) ) . '</h2>';
+								echo '<h2>' . esc_html__( 'Featured Products', 'storefront' ) . '</h2>';
 
 								echo storefront_do_shortcode( 'featured_products', array(
-															'per_page' 	=> intval( '2' ),
-															'columns'	=> intval( '2' ),
+															'per_page' 	=> 2,
+															'columns'	=> 2,
 														) );
 
 							echo '</div>';
 
 							echo '<div class="col-2">';
 
-								echo '<h2>' . esc_attr( __( 'Product Categories', 'storefront' ) ) . '</h2>';
+								echo '<h2>' . esc_html__( 'Product Categories', 'storefront' ) . '</h2>';
 
 								the_widget( 'WC_Widget_Product_Categories', array(
 															'count'		=> 1,
@@ -56,11 +56,11 @@ get_header(); ?>
 
 						echo '</div>';
 
-						echo '<h2>' . __( 'Popular Products', 'storefront' ) . '</h2>';
+						echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
 
 						echo storefront_do_shortcode( 'best_selling_products', array(
-															'per_page' 	=> intval( '4' ),
-															'columns'	=> intval( '4' ),
+															'per_page' 	=> 4,
+															'columns'	=> 4,
 														) );
 					}
 					?>
