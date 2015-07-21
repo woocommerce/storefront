@@ -6,31 +6,9 @@
     background: #f8f8f8;
     margin-bottom: 2.618em;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    width: 47.6%;
-    float: left;
     clear: both;
     position: relative;
     min-height: 330px; }
-    .storefront-add-ons .add-on.image-vertical .content {
-      padding-left: 225px; }
-    .storefront-add-ons .add-on.image-vertical.product-hero .content {
-      background: url(../welcome-screen/img/product-hero.png) top left no-repeat; }
-    .storefront-add-ons .add-on.image-vertical.share .content {
-      background: url(../welcome-screen/img/share.png) top left no-repeat; }
-    .storefront-add-ons .add-on.image-vertical.wc-customiser .content {
-      background: url(../welcome-screen/img/wc-customiser.png) top left no-repeat; }
-    .storefront-add-ons .add-on.image-vertical.storefront-designer .content {
-      background: url(../welcome-screen/img/storefront-designer.png) top left no-repeat; }
-    .storefront-add-ons .add-on.image-horizontal .content {
-      padding-bottom: 130px; }
-    .storefront-add-ons .add-on.image-horizontal.footer-bar .content {
-      background: url(../welcome-screen/img/footer-bar.png) bottom center no-repeat; }
-    .storefront-add-ons .add-on.image-horizontal.product-pagination .content {
-      padding-bottom: 155px;
-      background: url(../welcome-screen/img/product-pagination.png) bottom left no-repeat; }
-    .storefront-add-ons .add-on.image-horizontal.storefront-reviews .content {
-      padding-bottom: 105px;
-      background: url(../welcome-screen/img/storefront-reviews.png) bottom left no-repeat; }
     .storefront-add-ons .add-on .premium,
     .storefront-add-ons .add-on .free {
       background: #333;
@@ -43,9 +21,6 @@
       right: 0; }
     .storefront-add-ons .add-on .premium {
       background: #0074a2; }
-    .storefront-add-ons .add-on:nth-child(even) {
-      float: right;
-      clear: none; }
     .storefront-add-ons .add-on h4 {
       margin-top: 0;
       font-size: 1em;
@@ -60,51 +35,45 @@
     .storefront-add-ons .add-on.activated {
       border-color: #7ad03a;
       border-width: 2px; }
-    .storefront-add-ons .add-on .activated {
-      background: #7ad03a;
-      color: #fff;
-      font-size: 13px;
-      line-height: 26px;
-      height: 28px;
-      margin: 0;
-      padding: 0 10px 1px;
-      display: inline-block;
-      border-radius: 3px; }
-      .storefront-add-ons .add-on .activated span {
-        line-height: 26px; }
   .storefront-add-ons img {
     padding: .618em;
     background: #fff;
     box-sizing: border-box; }
 
+#getting_started .activated,
+#add_ons .activated,
+#child_themes .activated {
+  background: #7ad03a;
+  color: #fff;
+  font-size: 13px;
+  line-height: 26px;
+  height: 28px;
+  margin: 0;
+  padding: 0 10px 1px;
+  display: inline-block;
+  border-radius: 3px; }
+  #getting_started .activated span,
+  #add_ons .activated span,
+  #child_themes .activated span {
+    line-height: 26px; }
+
+#getting_started hr,
+#add_ons hr,
+#child_themes hr {
+  margin: 2.618em 0; }
+
 .last-feature {
   margin-right: 0 !important; }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .storefront-add-ons .add-on.image-vertical.product-hero .content {
-    background-image: url(../welcome-screen/img/product-hero@2x.png);
-    background-size: 245px 345px; }
-  .storefront-add-ons .add-on.image-vertical.share .content {
-    background-image: url(../welcome-screen/img/share@2x.png);
-    background-size: 245px 303px; }
-  .storefront-add-ons .add-on.image-vertical.wc-customiser .content {
-    background-image: url(../welcome-screen/img/wc-customiser@2x.png);
-    background-size: 245px 303px; }
-  .storefront-add-ons .add-on.image-vertical.storefront-designer .content {
-    background-image: url(../welcome-screen/img/storefront-designer@2x.png);
-    background-size: 245px 303px; }
-  .storefront-add-ons .add-on.image-horizontal.footer-bar .content {
-    background-image: url(../welcome-screen/img/footer-bar@2x.png);
-    background-size: 570px 120px; }
-  .storefront-add-ons .add-on.image-horizontal.product-pagination .content {
-    background-image: url(../welcome-screen/img/product-pagination@2x.png);
-    background-size: 570px 130px; }
-  .storefront-add-ons .add-on.image-horizontal.storefront-reviews .content {
-    background-image: url(../welcome-screen/img/storefront-reviews@2x.png);
-    background-size: 570px 130px; } }
-
 .panel {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+  width: 30.75%;
+  float: left;
+  margin-right: 3.8%; }
+  .panel#child_themes {
+    margin-right: 0; }
+
+#who {
+  clear: both; }
 
 .about-wrap h2 .nav-tab {
   margin-bottom: 0; }

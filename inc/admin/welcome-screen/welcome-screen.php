@@ -17,7 +17,6 @@ class Storefront_Welcome {
 		add_action( 'admin_enqueue_scripts', array( $this, 'storefront_welcome_style' ) );
 
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_tabs' ), 				20 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	30 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_addons' ), 				40 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_child_themes' ), 		50 );
@@ -100,14 +99,6 @@ class Storefront_Welcome {
 	 */
 	public function storefront_welcome_intro() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
-	}
-
-	/**
-	 * Welcome screen intro
-	 * @since 1.4.4
-	 */
-	public function storefront_welcome_tabs() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/tabs.php' );
 	}
 
 	/**
