@@ -33,7 +33,7 @@ $url 	.= '&storefront-customizer=true';
 
 		<?php if ( ! class_exists( 'Jetpack' ) || ! class_exists( 'Storefront_Site_Logo' ) ) { ?>
 			<h4><?php _e( 'Add your logo', 'storefront' ); ?></h4>
-			<p><?php echo sprintf( esc_html__( 'Install and activate either %sJetpack%s or the to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ); ?></p>
+			<p><?php echo sprintf( esc_html__( 'Install and activate %sJetpack%s to enable a custom logo option in the Customizer.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>' ); ?></p>
 			<p>
 				<?php if ( ! class_exists( 'Jetpack' ) ) { ?>
 					<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=jetpack' ), 'install-plugin_jetpack' ) ); ?>" class="button button-primary"><?php _e( 'Install Jetpack', 'storefront' ); ?></a>
