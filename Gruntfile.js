@@ -224,6 +224,38 @@ module.exports = function( grunt ) {
 					nonull: true
 				}]
 			}
+		},
+
+		// RTLCSS
+		rtlcss: {
+			options: {
+				config: {
+					swapLeftRightInUrl: false,
+					swapLtrRtlInUrl: false,
+					autoRename: false,
+					preserveDirectives: true
+				},
+				properties : [
+					{
+						name: 'swap-fontawesome-left-right-angles',
+						expr: /content/im,
+						action: function( prop, value ) {
+							if ( value === '"\\f105"' ) { // fontawesome-angle-left
+								value = '"\\f104"';
+							}
+							return { prop: prop, value: value };
+						}
+					}
+				]
+			},
+			main: {
+				expand: true,
+				ext: '-rtl.css',
+				src: [
+					'style.css',
+					'inc/woocommerce/css/woocommerce.css'
+				]
+			}
 		}
 	});
 
@@ -238,6 +270,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-shell' );
 	grunt.loadNpmTasks( 'grunt-potomo' );
+	grunt.loadNpmTasks( 'grunt-rtlcss' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
