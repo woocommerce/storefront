@@ -253,7 +253,18 @@ module.exports = function( grunt ) {
 				ext: '-rtl.css',
 				src: [
 					'style.css',
-					'inc/woocommerce/css/woocommerce.css'
+					'inc/woocommerce/css/bookings.css',
+					'inc/woocommerce/css/brands.css',
+					'inc/woocommerce/css/wishlists.css',
+					'inc/woocommerce/css/ajax-layered-nav.css',
+					'inc/woocommerce/css/variation-swatches.css',
+					'inc/woocommerce/css/composite-products.css',
+					'inc/woocommerce/css/photography.css',
+					'inc/woocommerce/css/product-reviews-pro.css',
+					'inc/woocommerce/css/smart-coupons.css',
+					'inc/woocommerce/css/deposits.css',
+					'inc/woocommerce/css/bundles.css',
+					'inc/woocommerce/css/woocommerce.css',
 				]
 			}
 		}
@@ -280,7 +291,8 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'css', [
 		'sass',
-		'cssmin'
+		'cssmin',
+		'rtlcss',
 	]);
 
 	grunt.registerTask( 'tx_update', [
@@ -290,7 +302,8 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'dev', [
 		'default',
-		'tx_update'
+		'tx_update',
+		'rtlcss',
 	]);
 
 	grunt.registerTask( 'mo', [
