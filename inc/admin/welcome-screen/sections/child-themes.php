@@ -23,7 +23,6 @@
 		<?php if ( 'Proshop' != $theme['Name'] ) { ?>
 			<a href="http://www.woothemes.com/products/proshop/" class="button button-primary"><?php printf( esc_html__( 'Buy %s now', 'storefront' ), '<span class="screen-reader-text">Proshop</span>' ); ?></a>
 		<?php } ?>
-		<a href="http://www.woothemes.com/products/proshop/" class="button"><?php printf( esc_html__( 'Read more %sabout Proshop%s &rarr;', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a>
 	</p>
 
 	<hr />
@@ -35,7 +34,6 @@
 		<?php if ( 'Galleria' != $theme['Name'] ) { ?>
 			<a href="http://www.woothemes.com/products/galleria/" class="button button-primary"><?php printf( esc_html__( 'Buy %s now', 'storefront' ), '<span class="screen-reader-text">Galleria</span>' ); ?></a>
 		<?php } ?>
-		<a href="http://www.woothemes.com/products/galleria/" class="button"><?php printf( esc_html__( 'Read more %sabout Galleria%s &rarr;', 'storefront' ), '<span class="screen-reader-text">', '</span>' ); ?></a>
 	</p>
 
 	<hr />
