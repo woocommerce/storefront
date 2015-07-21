@@ -9,7 +9,7 @@
 * **Fix** - Welcome screen now only visible to admins.
 * **Fix** - Horizontal scroll bar in Safari at small sizes.
 * **Fix** - Pay for order screen layout when using full width page template on my account.
-* **Dev** - Added various sanitization functions: `storefront_sanitize_checkbox()`, `storefront_sanitize_html()`, `storefront_sanitize_image(), `storefront_sanitize_number_absint()`, `storefront_sanitize_url()`.
+* **Dev** - Added `storefront_sanitize_checkbox()` sanitization function.
 * **Dev** - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
 * **Dev** - Added `storefront_post_thumbnail()`.
 * **Dev** - Renamed `do_shortcode_func()` to `storefront_do_shortcode()`.
