@@ -412,7 +412,8 @@ th {
   box-sizing: border-box; }
 
 body {
-  background-color: #FCFCFC; }
+  background-color: #FCFCFC;
+  direction: rtl; }
 
 .clearfix::after {
   clear: both;
