@@ -233,7 +233,7 @@ module.exports = function( grunt ) {
 					swapLeftRightInUrl: false,
 					swapLtrRtlInUrl: false,
 					autoRename: false,
-					preserveDirectives: true,
+					preserveDirectives: true
 				},
 				properties : [
 					{
@@ -248,16 +248,6 @@ module.exports = function( grunt ) {
 							}
 							return { prop: prop, value: value };
 						}
-					}
-				],
-				stringMap : [
-					{
-					    'name'    : 'after',
-					    'search'  : ':after',
-					    'replace' : ':before',
-					    'options' : {
-					    	'scope': 'selector',
-					    }
 					}
 				]
 			},
