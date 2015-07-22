@@ -118,6 +118,13 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 			) ) );
 		}
 
+		$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_header_image_heading', array(
+			'section'  		=> 'header_image',
+			'type' 			=> 'heading',
+			'label'			=> __( 'Header background image', 'storefront' ),
+			'priority' 		=> 6,
+		) ) );
+
 		/**
 		 * Header Background
 		 */
