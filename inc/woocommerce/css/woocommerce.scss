@@ -453,6 +453,16 @@ ul.products {
 	p.total {
 		border-bottom: 1px solid $color_border;
 	}
+
+	.buttons {
+		.button {
+			display: block;
+
+			&:nth-child(odd) {
+				margin-bottom: .618em;
+			}
+		}
+	}
 }
 
 .widget_product_categories {

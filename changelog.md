@@ -14,6 +14,7 @@
 * **Dev** - Added `storefront_post_thumbnail()`.
 * **Dev** - Renamed `do_shortcode_func()` to `storefront_do_shortcode()`.
 * **Tweak** - Menu button spacing on handheld.
+* **Tweak** - Button display in cart widgets.
 
 ### *2015.06.10* - 1.4.6
 * **Fix** - `font-family` delcaration on `select`s.
