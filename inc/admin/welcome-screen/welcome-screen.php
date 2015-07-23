@@ -54,10 +54,12 @@ class Storefront_Welcome {
 	 * @return void
 	 * @since  1.4.4
 	 */
-	public function storefront_welcome_style() {
+	public function storefront_welcome_style( $hook_suffix ) {
 		global $storefront_version;
 
-		wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
+		if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
+			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
+		}
 	}
 
 	/**
