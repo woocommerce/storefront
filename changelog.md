@@ -6,6 +6,7 @@
 * **New** - Pages now display featured images above the page title.
 * **New** - Revamped 404 page helpfulness to include product search, popular products and product ctegories.
 * **New** - Integration with WooCommerce Bundles extension.
+* **New** - Scrolling header cart.
 * **Fix** - Welcome screen now only visible to admins.
 * **Fix** - Horizontal scroll bar in Safari at small sizes.
 * **Fix** - Pay for order screen layout when using full width page template on my account.

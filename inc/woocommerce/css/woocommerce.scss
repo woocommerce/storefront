@@ -73,6 +73,11 @@
 	.widget_shopping_cart {
 		display: none;
 		background-color: #2c2d33;
+
+		.product_list_widget {
+			max-height: 15em;
+			overflow: scroll;
+		}
 	}
 }
 
