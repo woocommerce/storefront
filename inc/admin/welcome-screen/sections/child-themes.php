@@ -39,6 +39,7 @@
 	<hr />
 
 	<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/boutique.jpg'; ?>" alt="<?php esc_html_e( 'Boutique Child Theme', 'storefront' ); ?>" class="image-50" />
+	<p class="free"><?php esc_html_e( 'Free!', 'storefront' ); ?></p>
 	<h4><?php esc_html_e( 'Boutique', 'storefront' ); ?></h4>
 	<p><?php esc_html_e( 'Boutique is a simple, traditionally designed Storefront child theme, ideal for small stores or boutiques. Add your logo, create a unique color scheme and start selling!', 'storefront' ); ?></p>
 	<p style="margin-bottom: 2.618em;">
@@ -51,6 +52,7 @@
 	<hr />
 
 	<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/deli.jpg'; ?>" alt="<?php esc_html_e( 'Deli Child Theme', 'storefront' ); ?>" class="image-50" />
+	<p class="free"><?php esc_html_e( 'Free!', 'storefront' ); ?></p>
 	<h4><?php esc_html_e( 'Deli', 'storefront' ); ?></h4>
 	<p><?php esc_html_e( 'Deli features a texturised, earthy design, perfect for stores selling natural, organic or hand made goods.', 'storefront' ); ?></p>
 	<p style="margin-bottom: 2.618em;">
