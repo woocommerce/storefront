@@ -1,3 +1,6 @@
+# Compiled CSS
+/inc/woocommerce/css/*.css
+
 # Sass
 .sass-cache
 
