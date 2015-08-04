@@ -3,6 +3,10 @@
 style.css
 style-rtl.css
 
+# Minified js
+/js/*.min.js
+/inc/customizer/js/*.min.js
+
 # Sass
 .sass-cache
 
