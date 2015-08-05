@@ -48,6 +48,14 @@
 				margin-bottom: 1.618em;
 			}
 
+			.composited_product_details_wrapper {
+				padding-left: 0;
+			}
+
+			.composited_product_images {
+				margin-left: 0;
+			}
+
 			.composited_product_images,
 			.images {
 				@include span(3 of 12);
