@@ -14,7 +14,7 @@
 * **Dev** - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
 * **Dev** - Added `storefront_post_thumbnail()`.
 * **Dev** - Renamed `do_shortcode_func()` to `storefront_do_shortcode()`.
-* **Dev** - Updated Composite Products and Product Bundles extension integrations for compatibility with latest versions (3.2 / 4.11).
+* **Dev** - Updated Composite Products integration for compatibility with 3.2.
 * **Tweak** - Menu button spacing on handheld.
 * **Tweak** - Button display in cart widgets.
 
