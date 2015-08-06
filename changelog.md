@@ -10,6 +10,7 @@
 * **Fix** - Welcome screen now only visible to admins.
 * **Fix** - Horizontal scroll bar in Safari at small sizes.
 * **Fix** - Pay for order screen layout when using full width page template on my account.
+* **Fix** - Fixed display of disabled `option`s in Firefox.
 * **Dev** - Added `storefront_sanitize_checkbox()` sanitization function.
 * **Dev** - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
 * **Dev** - Added `storefront_post_thumbnail()`.

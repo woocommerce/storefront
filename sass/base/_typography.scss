@@ -33,7 +33,8 @@ textarea {
 }
 
 select {
-	font-family: initial !important;
+	color: initial;
+	font-family: $base-font;
 }
 
 h1,
