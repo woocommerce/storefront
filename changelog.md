@@ -15,6 +15,7 @@
 * **Dev** - Added `storefront_post_thumbnail()`.
 * **Dev** - Renamed `do_shortcode_func()` to `storefront_do_shortcode()`.
 * **Dev** - Updated Composite Products integration for compatibility with 3.2.
+* **Dev** - Updated normalize.css to 3.0.3.
 * **Tweak** - Menu button spacing on handheld.
 * **Tweak** - Button display in cart widgets.
 
