@@ -19,6 +19,7 @@
 * **Dev** - Updated normalize.css to 3.0.3.
 * **Tweak** - Menu button spacing on handheld.
 * **Tweak** - Button display in cart widgets.
+* **Tweak** - The 'Configure Menus' button in the welcome screen now points to the Customizer.
 
 ### *2015.06.10* - 1.4.6
 * **Fix** - `font-family` delcaration on `select`s.
