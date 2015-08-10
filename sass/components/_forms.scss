@@ -88,28 +88,6 @@ input[type="submit"],
 	}
 }
 
-.rtl button.added:after,
-.rtl input[type="button"].added:after,
-.rtl input[type="reset"].added:after,
-.rtl input[type="submit"].added:after,
-.rtl .button.added:after,
-.rtl .added_to_cart.added:after {
-	display: none;
-}
-
-/* rtl:ignore */
-.rtl button.added:before,
-.rtl input[type="button"].added:before,
-.rtl input[type="reset"].added:before,
-.rtl input[type="submit"].added:before,
-.rtl .button.added:before,
-.rtl .added_to_cart.added:before {
-	content: "\f00c";
-	font-family: "FontAwesome";
-	margin-right: .53em;
-	display: inline;
-}
-
 input[type="checkbox"],
 input[type="radio"] {
 	padding: 0; /* Addresses excess padding in IE8/9 */

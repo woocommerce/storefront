@@ -1253,18 +1253,6 @@ p.no-comments {
 	}
 }
 
-.rtl .wc-forward:after {
-	display: none;
-}
-
-/* rtl:ignore */
-.rtl .wc-forward:before {
-	content: "\f177";
-	font-family: "FontAwesome";
-	margin-left: .53em;
-	font-weight: 400;
-}
-
 .woocommerce-error {
 	list-style: none;
 }

@@ -243,6 +243,9 @@ module.exports = function( grunt ) {
 							if ( value === '"\\f105"' ) { // fontawesome-angle-left
 								value = '"\\f104"';
 							}
+							if ( value === '"\\f178"' ) { // fontawesome-long-arrow-right
+								value = '"\\f177"';
+							}
 							return { prop: prop, value: value };
 						}
 					}

@@ -201,18 +201,13 @@
 					}
 
 					> a {
-						&:after,
-						&:before {
+						&:after {
 							// The dropdown indicator
 							content: "\f107";
 							font-family: "FontAwesome";
 							margin-left: 1em;
 							line-height: 1;
 							font-weight: inherit;
-						}
-
-						&:before {
-							display: none;
 						}
 					}
 				}
@@ -333,21 +328,5 @@
 				}
 			}
 		}
-	}
-
-	.rtl .main-navigation ul.menu > li.menu-item-has-children > a:after,
-	.rtl .main-navigation ul.menu > li.page_item_has_children > a:after,
-	.rtl .main-navigation ul.nav-menu > li.menu-item-has-children > a:after,
-	.rtl .main-navigation ul.nav-menu > li.page_item_has_children > a:after {
-		display: none;
-	}
-
-	/*rtl:ignore*/
-	.rtl .main-navigation ul.menu > li.menu-item-has-children > a:before,
-	.rtl .main-navigation ul.menu > li.page_item_has_children > a:before,
-	.rtl .main-navigation ul.nav-menu > li.menu-item-has-children > a:before,
-	.rtl .main-navigation ul.nav-menu > li.page_item_has_children > a:before {
-		display: inline;
-		margin-left: 0;
 	}
 }
