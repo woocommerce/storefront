@@ -267,7 +267,7 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/smart-coupons.css',
 					'inc/woocommerce/css/deposits.css',
 					'inc/woocommerce/css/bundles.css',
-					'inc/woocommerce/css/woocommerce.css',
+					'inc/woocommerce/css/woocommerce.css'
 				]
 			}
 		}
@@ -295,7 +295,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'css', [
 		'sass',
 		'cssmin',
-		'rtlcss',
+		'rtlcss'
 	]);
 
 	grunt.registerTask( 'tx_update', [
@@ -306,7 +306,7 @@ module.exports = function( grunt ) {
 	grunt.registerTask( 'dev', [
 		'default',
 		'tx_update',
-		'rtlcss',
+		'rtlcss'
 	]);
 
 	grunt.registerTask( 'mo', [

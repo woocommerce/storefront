@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2015.06.xx* - 1.5.0
+### *2015.08.11* - 1.5.0
 * **New** - rtl support.
 * **New** - Integration with WooCommerce Deposits.
 * **New** - Pages now display featured images above the page title.
