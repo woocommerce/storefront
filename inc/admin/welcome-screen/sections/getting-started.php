@@ -59,7 +59,9 @@ $menus_url 			= admin_url() . 'customize.php?autofocus%5Bsection%5D=nav&?url=' .
 	<p><?php echo sprintf( esc_html__( 'To set this up you will need to create a new page and assign the "Homepage" template to it. You can then set that as a static homepage in the %sReading%s settings.', 'storefront' ), '<a href="' . esc_url( self_admin_url( 'options-reading.php' ) ) . '">', '</a>' ); ?></p>
 	<p><?php echo sprintf( esc_html__( 'Once set up you can toggle and re-order the homepage components using the %sHomepage Control%s plugin.', 'storefront' ), '<a href="https://wordpress.org/plugins/homepage-control/">', '</a>' ); ?></p>
 
-	<?php if ( ! class_exists( 'Homepage_Control' ) ) { ?>
+	<?php if ( class_exists( 'Homepage_Control' ) ) { ?>
+		<p><span class="activated"><?php esc_html_e( 'Activated', 'storefront' ); ?></span></p>
+	<?php } else { ?>
 		<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=homepage-control' ), 'install-plugin_homepage-control' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Install Homepage Control', 'storefront' ); ?></a></p>
 	<?php } ?>
 
