@@ -59,6 +59,8 @@ class Storefront_Welcome {
 
 		if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
 			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
+			wp_enqueue_style( 'thickbox' );
+			wp_enqueue_script( 'thickbox' );
 		}
 	}
 

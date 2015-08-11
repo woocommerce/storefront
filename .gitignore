@@ -1,5 +1,6 @@
 # Compiled CSS
 /inc/woocommerce/css/*.css
+/inc/admin/css/*.css
 style.css
 style-rtl.css
 

@@ -89,4 +89,18 @@
 			line-height: 26px;
 		}
 	}
+
+	.free-plugins {
+		li {
+			border-bottom: 1px solid rgba(#000,.1);
+			padding-bottom: .53em;
+			margin-bottom: .53em;
+
+			&:last-child {
+				padding-bottom:0;
+				margin-bottom: 0;
+				border-bottom: 0;
+			}
+		}
+	}
 }
