@@ -143,11 +143,9 @@ function storefront_widgets_init() {
 function storefront_scripts() {
 	global $storefront_version;
 
-	if ( is_rtl() ) {
-		wp_enqueue_style( 'storefront-style', get_stylesheet_directory_uri() . '/style-rtl.css', $storefront_version );
-	} else {
-		wp_enqueue_style( 'storefront-style', get_stylesheet_uri(), '', $storefront_version );
-	}
+
+	wp_enqueue_style( 'storefront-style', get_stylesheet_uri(), '', $storefront_version );
+	wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/js/navigation.min.js', array(), '20120206', true );
 
