@@ -1,5 +1,10 @@
 # Storefront Changelog
 
+### *2015.xx.xx* - 1.5.1
+* **Fix** - Occasional text wrapping on product sorting dropdown.
+* **Tweak** - Embedded objects (videos etc) width will no longer exceed the width of their containing element.
+* **Dev** - Improved how RTL stylesheets are enqueued.
+
 ### *2015.08.11* - 1.5.0
 * **New** - rtl support.
 * **New** - Integration with WooCommerce Deposits.
