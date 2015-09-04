@@ -2,6 +2,7 @@
 
 ### *2015.xx.xx* - 1.5.1
 * **Fix** - Occasional text wrapping on product sorting dropdown.
+* **Fix** - Double taps no longer required to click buttons in iOS browsers.
 * **Tweak** - Embedded objects (videos etc) width will no longer exceed the width of their containing element.
 * **Dev** - Improved how RTL stylesheets are enqueued.
 
