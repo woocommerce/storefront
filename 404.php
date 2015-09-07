@@ -36,23 +36,7 @@ get_header(); ?>
 
 							echo '<div class="col-1">';
 
-								if ( wc_get_featured_product_ids() ) {
-
-									echo '<h2>' . esc_html__( 'Featured Products', 'storefront' ) . '</h2>';
-
-									echo storefront_do_shortcode( 'featured_products', array(
-																'per_page' 	=> 2,
-																'columns'	=> 2,
-															) );
-								} else {
-
-									echo '<h2>' . esc_html__( 'Recently Added Products', 'storefront' ) . '</h2>';
-
-									echo storefront_do_shortcode( 'recent_products', array(
-																'per_page' 	=> 2,
-																'columns'	=> 2,
-															) );
-								}
+								storefront_featured_and_on_sale_products();
 
 							echo '</div>';
 

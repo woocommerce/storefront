@@ -123,3 +123,47 @@ if ( ! function_exists( 'storefront_woocommerce_pagination' ) ) {
 		}
 	}
 }
+
+/**
+ * Featured and On-Sale Products
+ * Check for featured products then on-sale products and use the appropiate shortcode. 
+ * If neither exist, it will show recently added products.
+ * @since  1.5.1
+ * @uses  is_woocommerce_activated()
+ * @uses  wc_get_featured_product_ids()
+ * @uses  wc_get_product_ids_on_sale()
+ * @uses  storefront_do_shortcode()
+ * @return void
+ */
+if ( ! function_exists( 'storefront_featured_and_on_sale_products' ) ) {
+	function storefront_featured_and_on_sale_products( $per_page = '2', $columns = '2' ) {
+		if ( is_woocommerce_activated() ) { 
+
+			if ( wc_get_featured_product_ids() ) {
+
+				echo '<h2>' . esc_html__( 'Featured Products', 'storefront' ) . '</h2>';
+
+				echo storefront_do_shortcode( 'featured_products', array(
+											'per_page' 	=> $per_page,
+											'columns'	=> $columns,
+										) );
+			} elseif ( wc_get_product_ids_on_sale() ) {
+
+				echo '<h2>' . esc_html__( 'Products On Sale', 'storefront' ) . '</h2>';
+
+				echo storefront_do_shortcode( 'sale_products', array(
+											'per_page' 	=> $per_page,
+											'columns'	=> $columns,
+										) );
+			} else {
+
+				echo '<h2>' . esc_html__( 'Recently Added Products', 'storefront' ) . '</h2>';
+
+				echo storefront_do_shortcode( 'recent_products', array(
+											'per_page' 	=> $per_page,
+											'columns'	=> $columns,
+										) );
+			}
+		}
+	}
+}
