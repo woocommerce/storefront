@@ -2,11 +2,11 @@
 /**
  * Welcome screen getting started template
  */
-?>
-<?php
-// get theme customizer url
-$customizer_url 	= admin_url() . 'customize.php?url=' . urlencode( site_url() . '?storefront-customizer=true' ) . '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' ) . '&storefront-customizer=true';
-$menus_url 			= admin_url() . 'customize.php?autofocus%5Bsection%5D=nav&?url=' . urlencode( site_url() . '?storefront-customizer=true' ) . '&return=' . urlencode( admin_url() . 'themes.php?page=storefront-welcome' ) . '&storefront-customizer=true';
+
+$customizer_args = array(
+	'url'    => urlencode( site_url( '?storefront-customizer=true' ) ),
+	'return' => urlencode( admin_url( 'themes.php?page=storefront-welcome&storefront-customizer=true' ) ),
+);
 
 ?>
 <div id="getting_started" class="col panel" style="margin-bottom: 1.618em; padding-top: 1.618em; overflow: hidden;">
@@ -33,13 +33,13 @@ $menus_url 			= admin_url() . 'customize.php?autofocus%5Bsection%5D=nav&?url=' .
 	<p><?php esc_html_e( 'The secondary navigation is better suited to lower traffic pages such as terms and conditions.', 'storefront' ); ?></p>
 	<p><?php esc_html_e( 'The handheld navigation gives you complete control over what menu items to serve to handheld devices.', 'storefront' ); ?></p>
 
-	<p><a href="<?php echo esc_url( $menus_url ); ?>" class="button"><?php esc_html_e( 'Configure menus', 'storefront' ); ?></a></p>
+	<p><a href="<?php echo esc_url( admin_url( add_query_arg( $customizer_args, 'customize.php?autofocus%5Bpanel%5D=nav_menus' ) ) ); ?>" class="button"><?php esc_html_e( 'Configure menus', 'storefront' ); ?></a></p>
 
 	<hr />
 
 	<h4><?php esc_html_e( 'Create a color scheme' ,'storefront' ); ?></h4>
 	<p><?php esc_html_e( 'Using the WordPress Customizer you can tweak Storefront\'s appearance to match your brand.', 'storefront' ); ?></p>
-	<p><a href="<?php echo esc_url( $customizer_url ); ?>" class="button"><?php esc_html_e( 'Open the Customizer', 'storefront' ); ?></a></p>
+	<p><a href="<?php echo esc_url( admin_url( add_query_arg( $customizer_args, 'customize.php' ) ) ); ?>" class="button"><?php esc_html_e( 'Open the Customizer', 'storefront' ); ?></a></p>
 
 	<hr />
 
