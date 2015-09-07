@@ -21,7 +21,7 @@
 	<p><?php esc_html_e( 'Unlock the true potential of your sports clothing and equipment store with ProShop! It\'s metropolitan design provides an active aesthetic giving your store oodles of character.', 'storefront' ); ?></p>
 	<p style="margin-bottom: 2.618em;">
 		<?php if ( 'Proshop' != $theme['Name'] ) { ?>
-			<a href="http://www.woothemes.com/products/proshop/" class="button button-primary"><?php printf( esc_html__( 'Buy %s now', 'storefront' ), '<span class="screen-reader-text">Proshop</span>' ); ?></a>
+			<a href="http://www.woothemes.com/products/proshop?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( esc_html__( 'Buy %s now', 'storefront' ), '<span class="screen-reader-text">Proshop</span>' ); ?></a>
 		<?php } ?>
 	</p>
 
@@ -32,7 +32,7 @@
 	<p><?php esc_html_e( 'Galleria is a Storefront child theme perfect for fashion and design stores. Stylish and minimalist, it gives sites a high class look and keeps products centerstage.', 'storefront' ); ?></p>
 	<p style="margin-bottom: 2.618em;">
 		<?php if ( 'Galleria' != $theme['Name'] ) { ?>
-			<a href="http://www.woothemes.com/products/galleria/" class="button button-primary"><?php printf( esc_html__( 'Buy %s now', 'storefront' ), '<span class="screen-reader-text">Galleria</span>' ); ?></a>
+			<a href="http://www.woothemes.com/products/galleria?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary"><?php printf( esc_html__( 'Buy %s now', 'storefront' ), '<span class="screen-reader-text">Galleria</span>' ); ?></a>
 		<?php } ?>
 	</p>
 

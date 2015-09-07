@@ -7,7 +7,7 @@
 <div id="who" class="feature-section col three-col" style="margin-bottom: 1.618em; overflow: hidden;">
 
 	<p style="font-size: 1.2em; padding: 1.618em 0; margin: 1.618em 0 2.618em 0; border-top: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1);">
-		<?php echo sprintf( esc_html__( 'Looking for more Storefront goodies? Take a look at the extensions available at woothemes.com. %sGo shopping &rarr;%s', 'storefront' ), '<a href="http://www.woothemes.com/product-category/storefront-extensions/" class="button-primary" style="float: right;">', '</a>' ); ?>
+		<?php echo sprintf( esc_html__( 'Looking for more Storefront goodies? Take a look at the extensions available at woothemes.com. %sGo shopping &rarr;%s', 'storefront' ), '<a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button-primary" style="float: right;">', '</a>' ); ?>
 	</p>
 
 	<div class="col">
