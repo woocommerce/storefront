@@ -36,7 +36,7 @@ get_header(); ?>
 
 							echo '<div class="col-1">';
 
-								storefront_featured_and_on_sale_products();
+								storefront_promoted_products();
 
 							echo '</div>';
 
