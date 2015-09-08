@@ -5,6 +5,7 @@
 * **Fix** - Double taps no longer required to click buttons in iOS browsers.
 * **Fix** - Fixed the landing page layout in WordPress 4.3+
 * **Tweak** - Embedded objects (videos etc) width will no longer exceed the width of their containing element.
+* **Tweak** - Improved the ligibility of the active swatch when using the Variation Swatches extension.
 * **Dev** - Improved how RTL stylesheets are enqueued.
 
 ### *2015.08.11* - 1.5.0
