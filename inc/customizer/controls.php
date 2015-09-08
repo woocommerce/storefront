@@ -325,7 +325,7 @@ if ( ! function_exists( 'storefront_customize_register' ) ) {
 		) );
 
 		$wp_customize->add_setting( 'storefront_layout', array(
-			'default'    		=> is_rtl() ? 'left' : 'right',
+			'default'    		=> apply_filters( 'storefront_default_layout', $layout = is_rtl() ? 'left' : 'right' ),
 			'sanitize_callback' => 'storefront_sanitize_layout',
 		) );
 

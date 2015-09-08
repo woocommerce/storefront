@@ -102,17 +102,9 @@ function storefront_sanitize_checkbox( $checked ) {
  * @since  1.0.0
  */
 function storefront_layout_class( $classes ) {
-	$layout = get_theme_mod( 'storefront_layout' );
+	$left_or_right = get_theme_mod( 'storefront_layout', apply_filters( 'storefront_default_layout', $layout = is_rtl() ? 'left' : 'right' ) );
 
-	if ( '' == $layout ) {
-		if ( is_rtl() ) {
-			$layout = 'left';
-		} else {
-			$layout = 'right';
-		}
-	}
-
-	$classes[] = $layout . '-sidebar';
+	$classes[] = $left_or_right . '-sidebar';
 
 	return $classes;
 }

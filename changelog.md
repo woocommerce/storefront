@@ -8,6 +8,7 @@
 * **Tweak** - Embedded objects (videos etc) width will no longer exceed the width of their containing element.
 * **Tweak** - Improved the ligibility of the active swatch when using the Variation Swatches extension.
 * **Dev** - Improved how RTL stylesheets are enqueued.
+* **Dev** - The default layout is now  filterable via `storefront_default_layout`.
 
 ### *2015.08.11* - 1.5.0
 * **New** - rtl support.
