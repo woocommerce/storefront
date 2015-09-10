@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2015.xx.xx* - 1.5.1
+### *2015.09.10* - 1.5.1
 * **Fix** - Occasional text wrapping on product sorting dropdown.
 * **Fix** - Double taps no longer required to click buttons in iOS browsers.
 * **Fix** - Fixed the landing page layout in WordPress 4.3+

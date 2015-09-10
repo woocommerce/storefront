@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.5.0\n"
+"Project-Id-Version: Storefront 1.5.1\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-08-11 11:08:07+00:00\n"
+"POT-Creation-Date: 2015-09-10 10:48:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,15 +23,11 @@ msgid ""
 "below."
 msgstr ""
 
-#: 404.php:39 inc/structure/template-tags.php:103
-msgid "Featured Products"
-msgstr ""
-
-#: 404.php:50 inc/structure/template-tags.php:26
+#: 404.php:45 inc/structure/template-tags.php:26
 msgid "Product Categories"
 msgstr ""
 
-#: 404.php:59
+#: 404.php:54
 msgid "Popular Products"
 msgstr ""
 
@@ -718,6 +714,10 @@ msgstr ""
 msgid "Recent Products"
 msgstr ""
 
+#: inc/structure/template-tags.php:103 inc/woocommerce/template-tags.php:144
+msgid "Featured Products"
+msgstr ""
+
 #: inc/structure/template-tags.php:142
 msgid "Top Rated Products"
 msgstr ""
@@ -735,6 +735,14 @@ msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inc/woocommerce/template-tags.php:152
+msgid "On Sale Now"
+msgstr ""
+
+#: inc/woocommerce/template-tags.php:160
+msgid "New In Store"
+msgstr ""
 
 #: search.php:16
 msgid "Search Results for: %s"
