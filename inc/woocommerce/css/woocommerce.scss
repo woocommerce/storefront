@@ -413,7 +413,8 @@ ul.products {
 			float: right;
 		}
 
-		.quantity {
+		.quantity,
+		> .amount {
 			display: block;
 		}
 	}
