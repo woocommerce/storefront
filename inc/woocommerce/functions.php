@@ -86,6 +86,7 @@ function storefront_woocommerce_scripts() {
 	global $storefront_version;
 
 	wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $storefront_version );
+	wp_style_add_data( 'storefront-woocommerce-style', 'rtl', 'replace' );
 }
 
 /**

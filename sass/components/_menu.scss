@@ -15,7 +15,7 @@
 
 .menu-toggle {
 	cursor: pointer;
-	margin: 1.618em auto;
+	margin: 2.244em auto;
 	display: block;
 	width: 100%;
 	text-align: left;
@@ -36,6 +36,14 @@
 .nav-menu,
 .main-navigation div.menu > ul:not(.nav-menu) {
 	display: none;
+}
+
+.handheld-navigation {
+	margin-bottom: 2.244em;
+
+	ul {
+		margin: 0;
+	}
 }
 
 .main-navigation.toggled {
@@ -199,6 +207,7 @@
 							font-family: "FontAwesome";
 							margin-left: 1em;
 							line-height: 1;
+							font-weight: inherit;
 						}
 					}
 				}

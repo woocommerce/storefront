@@ -17,7 +17,6 @@ class Storefront_Welcome {
 		add_action( 'admin_enqueue_scripts', array( $this, 'storefront_welcome_style' ) );
 
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_tabs' ), 				20 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	30 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_addons' ), 				40 );
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_child_themes' ), 		50 );
@@ -55,10 +54,14 @@ class Storefront_Welcome {
 	 * @return void
 	 * @since  1.4.4
 	 */
-	public function storefront_welcome_style() {
+	public function storefront_welcome_style( $hook_suffix ) {
 		global $storefront_version;
 
-		wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
+		if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
+			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
+			wp_enqueue_style( 'thickbox' );
+			wp_enqueue_script( 'thickbox' );
+		}
 	}
 
 	/**
@@ -100,14 +103,6 @@ class Storefront_Welcome {
 	 */
 	public function storefront_welcome_intro() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
-	}
-
-	/**
-	 * Welcome screen intro
-	 * @since 1.4.4
-	 */
-	public function storefront_welcome_tabs() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/tabs.php' );
 	}
 
 	/**

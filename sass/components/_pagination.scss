@@ -71,3 +71,13 @@
 		}
 	}
 }
+
+.rtl {
+	.pagination,
+	.woocommerce-pagination {
+		a.next,
+		a.prev {
+			transform: rotateY(180deg);
+		}
+	}
+}

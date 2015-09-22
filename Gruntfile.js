@@ -70,6 +70,7 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/product-reviews-pro.css': 'inc/woocommerce/css/product-reviews-pro.scss',
 					'inc/woocommerce/css/smart-coupons.css': 'inc/woocommerce/css/smart-coupons.scss',
 					'inc/woocommerce/css/deposits.css': 'inc/woocommerce/css/deposits.scss',
+					'inc/woocommerce/css/bundles.css': 'inc/woocommerce/css/bundles.scss',
 					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 				}]
 			}
@@ -223,6 +224,52 @@ module.exports = function( grunt ) {
 					nonull: true
 				}]
 			}
+		},
+
+		// RTLCSS
+		rtlcss: {
+			options: {
+				config: {
+					swapLeftRightInUrl: false,
+					swapLtrRtlInUrl: false,
+					autoRename: false,
+					preserveDirectives: true
+				},
+				properties : [
+					{
+						name: 'swap-fontawesome-left-right-angles',
+						expr: /content/im,
+						action: function( prop, value ) {
+							if ( value === '"\\f105"' ) { // fontawesome-angle-left
+								value = '"\\f104"';
+							}
+							if ( value === '"\\f178"' ) { // fontawesome-long-arrow-right
+								value = '"\\f177"';
+							}
+							return { prop: prop, value: value };
+						}
+					}
+				]
+			},
+			main: {
+				expand: true,
+				ext: '-rtl.css',
+				src: [
+					'style.css',
+					'inc/woocommerce/css/bookings.css',
+					'inc/woocommerce/css/brands.css',
+					'inc/woocommerce/css/wishlists.css',
+					'inc/woocommerce/css/ajax-layered-nav.css',
+					'inc/woocommerce/css/variation-swatches.css',
+					'inc/woocommerce/css/composite-products.css',
+					'inc/woocommerce/css/photography.css',
+					'inc/woocommerce/css/product-reviews-pro.css',
+					'inc/woocommerce/css/smart-coupons.css',
+					'inc/woocommerce/css/deposits.css',
+					'inc/woocommerce/css/bundles.css',
+					'inc/woocommerce/css/woocommerce.css'
+				]
+			}
 		}
 	});
 
@@ -237,6 +284,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-shell' );
 	grunt.loadNpmTasks( 'grunt-potomo' );
+	grunt.loadNpmTasks( 'grunt-rtlcss' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -246,7 +294,8 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'css', [
 		'sass',
-		'cssmin'
+		'cssmin',
+		'rtlcss'
 	]);
 
 	grunt.registerTask( 'tx_update', [
@@ -256,7 +305,8 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'dev', [
 		'default',
-		'tx_update'
+		'tx_update',
+		'rtlcss'
 	]);
 
 	grunt.registerTask( 'mo', [

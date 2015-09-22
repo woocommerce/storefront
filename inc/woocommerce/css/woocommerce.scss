@@ -73,6 +73,11 @@
 	.widget_shopping_cart {
 		display: none;
 		background-color: #2c2d33;
+
+		.product_list_widget {
+			max-height: 15em;
+			overflow-y: scroll;
+		}
 	}
 }
 
@@ -408,7 +413,8 @@ ul.products {
 			float: right;
 		}
 
-		.quantity {
+		.quantity,
+		> .amount {
 			display: block;
 		}
 	}
@@ -452,6 +458,16 @@ ul.products {
 
 	p.total {
 		border-bottom: 1px solid $color_border;
+	}
+
+	.buttons {
+		.button {
+			display: block;
+
+			&:nth-child(odd) {
+				margin-bottom: .618em;
+			}
+		}
 	}
 }
 
@@ -823,6 +839,7 @@ form.checkout {
 		.button {
 			font-size: 1.387em;
 			width: 100%;
+			white-space: pre-wrap;
 		}
 	}
 }
@@ -1334,10 +1351,10 @@ dl.variation {
 
 			&:after {
 				right: 1.618em;
-				line-height: 1.387;
+				line-height: 1;
 				height: 1em;
 				width: 1em;
-				top: 0;
+				top: .3em;
 			}
 
 			.amount {
@@ -1610,7 +1627,7 @@ dl.variation {
 		margin-bottom: 2.618em;
 
 		select {
-			width: 9.505em;
+			width: auto;
 		}
 	}
 
@@ -1799,7 +1816,8 @@ dl.variation {
 	}
 
 	// Payment forms in account
-	.woocommerce-order-pay {
+	.woocommerce-order-pay,
+	.page-template-template-fullwidth-php.woocommerce-order-pay {
 		#order_review {
 			border-width: 3px;
 			width: 100%;
@@ -1810,6 +1828,10 @@ dl.variation {
 					padding-left: 1em;
 					padding-top: 1em;
 				}
+
+				.form-row {
+					padding: 1em;
+				}
 			}
 
 			.payment_methods + .form-row {
@@ -1819,6 +1841,7 @@ dl.variation {
 			.button#place_order {
 				display: block;
 				width: 100%;
+				font-size: 1.387em;
 			}
 		}
 	}

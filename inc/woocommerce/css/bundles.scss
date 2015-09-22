@@ -1,0 +1,80 @@
+/**
+ * WooCommerce AJAX Layered Nav
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../sass/utils/variables';
+@import '../../../sass/utils/mixins';
+@import '../../../node_modules/susy/sass/susy';
+
+.bundle_form {
+	.bundled_product_summary {
+		padding-bottom: 1.618em !important;
+		margin-bottom: 1.618em;
+		border-bottom: 1px solid $color_border;
+		p.stock,
+		.price {
+			margin-bottom: 0 !important;
+			margin-top: 0 !important;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.bundle_form {
+		.bundled_product_summary {
+			padding-left: 0;
+			.bundled_product_images {
+				margin-left: 0;
+				@include span( 2 of 10 );
+
+				a {
+					margin: 0 !important;
+				}
+
+				img {
+					width: 100% !important;
+				}
+			}
+
+			.details {
+				@include span( last 8 of 10 );
+				font-size: .857em;
+			}
+		}
+		.bundled_product_summary.thumbnail_hidden {
+			padding-left: 0;
+			.details {
+				@include span( 10 of 10 );
+			}
+		}
+	}
+
+	.page-template-template-fullwidth-php,
+	.storefront-full-width-content {
+		.bundle_form {
+			.bundled_product_summary {
+				padding-left: 0;
+				.bundled_product_images {
+					margin-left: 0;
+					@include span( 2 of 8 );
+				}
+
+				.details {
+					@include span( last 6 of 8 );
+					font-size: 1em;
+				}
+			}
+			.bundled_product_summary.thumbnail_hidden {
+				padding-left: 0;
+				.details {
+					@include span( 8 of 8 );
+				}
+			}
+		}
+	}
+}
+

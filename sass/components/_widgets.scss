@@ -13,7 +13,8 @@
 		@include screen-reader-text();
 	}
 
-	h3.widget-title {
+	h3.widget-title,
+	h2.widgettitle {
 		font-size: 1.387em;
 		letter-spacing: 0;
 		border-bottom: 3px solid $color_body;
@@ -68,6 +69,8 @@
 
 		input[type=submit] {
 			@include screen-reader-text();
+			top: 0;
+			left: 0;
 		}
 
 		&:before {

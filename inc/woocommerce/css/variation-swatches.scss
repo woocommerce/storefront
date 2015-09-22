@@ -14,9 +14,13 @@
 		padding: 0;
 		border: 0;
 		opacity: 0.5;
+		margin-right: .53em;
 
 		.swatch-anchor {
-			border-radius: .236em;
+
+			&:focus {
+				outline: none;
+			}
 		}
 
 		&.selected,
@@ -24,6 +28,14 @@
 			padding: 0;
 			border: 0;
 			opacity: 1;
+		}
+
+		&.selected {
+			box-shadow: 0 0 0 1px rgba(#000,0.25);
+
+			.swatch-anchor {
+				border: 2px solid #fff;
+			}
 		}
 	}
 }

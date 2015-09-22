@@ -1,11 +1,40 @@
 # Storefront Changelog
 
-### *2015.06.xx* - 1.5.0
+### *2015.09.xx* - 1.5.2
+* **Tweak** - Adjusts how CSS is enqueued for child theme compatibility with RTL.
+* **Tweak** - Better display of prices in WooCommerce product widgets.
+* **Tweak** - Improved caption display.
+
+### *2015.09.10* - 1.5.1
+* **Fix** - Occasional text wrapping on product sorting dropdown.
+* **Fix** - Double taps no longer required to click buttons in iOS browsers.
+* **Fix** - Fixed the landing page layout in WordPress 4.3+
+* **Fix** - Header cart now compatible with Currency Converter extension.
+* **Tweak** - Embedded objects (videos etc) width will no longer exceed the width of their containing element.
+* **Tweak** - Improved the ligibility of the active swatch when using the Variation Swatches extension.
+* **Dev** - Improved how RTL stylesheets are enqueued.
+* **Dev** - The default layout is now  filterable via `storefront_default_layout`.
+
+### *2015.08.11* - 1.5.0
 * **New** - rtl support.
 * **New** - Integration with WooCommerce Deposits.
+* **New** - Pages now display featured images above the page title.
+* **New** - Revamped 404 page helpfulness to include product search, popular products and product ctegories.
+* **New** - Integration with WooCommerce Bundles extension.
+* **New** - Scrolling header cart.
 * **Fix** - Welcome screen now only visible to admins.
-* **Dev** - Added various sanitization functions: `storefront_sanitize_checkbox()`, `storefront_sanitize_html()`, `storefront_sanitize_image(), `storefront_sanitize_number_absint()`, `storefront_sanitize_url()`.
-* **Dev* - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
+* **Fix** - Horizontal scroll bar in Safari at small sizes.
+* **Fix** - Pay for order screen layout when using full width page template on my account.
+* **Fix** - Fixed display of disabled `option`s in Firefox.
+* **Dev** - Added `storefront_sanitize_checkbox()` sanitization function.
+* **Dev** - Added `Storefront_Custom_Radio_Image_Control` class for creating radio image controls in the Customizer.
+* **Dev** - Added `storefront_post_thumbnail()`.
+* **Dev** - Renamed `do_shortcode_func()` to `storefront_do_shortcode()`.
+* **Dev** - Updated Composite Products integration for compatibility with 3.2.
+* **Dev** - Updated normalize.css to 3.0.3.
+* **Tweak** - Menu button spacing on handheld.
+* **Tweak** - Button display in cart widgets.
+* **Tweak** - The 'Configure Menus' button in the welcome screen now points to the Customizer.
 
 ### *2015.06.10* - 1.4.6
 * **Fix** - `font-family` delcaration on `select`s.

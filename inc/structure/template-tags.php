@@ -32,7 +32,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 
 				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 
-				echo do_shortcode_func( 'product_categories',
+				echo storefront_do_shortcode( 'product_categories',
 					array(
 						'number' 	=> intval( $args['limit'] ),
 						'columns'	=> intval( $args['columns'] ),
@@ -71,7 +71,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 
 				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 
-				echo do_shortcode_func( 'recent_products',
+				echo storefront_do_shortcode( 'recent_products',
 					array(
 						'per_page' 	=> intval( $args['limit'] ),
 						'columns'	=> intval( $args['columns'] ),
@@ -109,7 +109,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 
 				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 
-				echo do_shortcode_func( 'featured_products',
+				echo storefront_do_shortcode( 'featured_products',
 					array(
 						'per_page' 	=> intval( $args['limit'] ),
 						'columns'	=> intval( $args['columns'] ),
@@ -148,7 +148,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 
 				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 
-				echo do_shortcode_func( 'top_rated_products',
+				echo storefront_do_shortcode( 'top_rated_products',
 					array(
 						'per_page' 	=> intval( $args['limit'] ),
 						'columns'	=> intval( $args['columns'] ),
@@ -185,7 +185,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 
 				echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 
-				echo do_shortcode_func( 'sale_products',
+				echo storefront_do_shortcode( 'sale_products',
 					array(
 						'per_page' 	=> intval( $args['limit'] ),
 						'columns'	=> intval( $args['columns'] ),
@@ -239,5 +239,21 @@ if ( ! function_exists( 'storefront_get_sidebar' ) ) {
 	 */
 	function storefront_get_sidebar() {
 		get_sidebar();
+	}
+}
+
+if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
+	/**
+	 * Display post thumbnail
+	 * @var $size thumbnail size. thumbnail|medium|large|full|$custom
+	 * @uses has_post_thumbnail()
+	 * @uses the_post_thumbnail
+	 * @param string $size
+	 * @since 1.5.0
+	 */
+	function storefront_post_thumbnail( $size ) {
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( $size, array( 'itemprop' => 'image' ) );
+		}
 	}
 }

@@ -1,31 +1,32 @@
 {
-  "name": "storefront",
-  "title": "Storefront",
-  "version": "1.5.0",
+  "name":     "storefront",
+  "title":    "Storefront",
+  "version":  "1.5.1",
   "homepage": "http://www.woothemes.com/storefront/",
   "repository": {
     "type": "git",
-    "url": "https://github.com/woothemes/storefront.git"
+    "url":  "https://github.com/woothemes/storefront.git"
   },
   "main": "Gruntfile.js",
   "devDependencies": {
-    "grunt": "~0.4.5",
-    "grunt-checktextdomain": "^0.1.1",
-    "grunt-contrib-cssmin": "~0.10.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "~0.5.1",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-wp-i18n": "^0.4.8",
-    "grunt-sass": "^0.18.1",
-    "node-sass": "^2.1.1",
-    "susy": "^2.2.3",
-    "node-bourbon": "~4.2.1-beta1",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-potomo": "~3.2.1",
-    "grunt-shell": "~1.1.2"
+    "grunt":                  "~0.4.5",
+    "grunt-checktextdomain":  "^1.0.0",
+    "grunt-contrib-cssmin":   "~0.12.3",
+    "grunt-contrib-jshint":   "^0.11.2",
+    "grunt-contrib-uglify":   "~0.9.1",
+    "grunt-contrib-watch":    "~0.6.1",
+    "grunt-wp-i18n":          "^0.5.2",
+    "grunt-rtlcss":           "~1.6.0",
+    "grunt-sass":             "^1.0.0",
+    "node-sass":              "^3.2.0",
+    "susy":                   "^2.2.5",
+    "node-bourbon":           "~4.2.3",
+    "grunt-contrib-copy":     "~0.8.0",
+    "grunt-potomo":           "~3.3.3",
+    "grunt-shell":            "~1.1.2"
   },
   "engines": {
-    "node": ">=0.8.0",
-    "npm": ">=1.1.0"
+    "node":                   ">=0.8.0",
+    "npm":                    ">=1.1.0"
   }
 }
