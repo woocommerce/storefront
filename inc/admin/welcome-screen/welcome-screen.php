@@ -17,10 +17,8 @@ class Storefront_Welcome {
 		add_action( 'admin_enqueue_scripts', array( $this, 'storefront_welcome_style' ) );
 
 		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_intro' ), 				10 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_getting_started' ), 	30 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_addons' ), 				40 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_child_themes' ), 		50 );
-		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_who' ), 				60 );
+		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_enhance' ), 			20 );
+		add_action( 'storefront_welcome', array( $this, 'storefront_welcome_contribute' ), 			30 );
 
 	} // end constructor
 
@@ -58,7 +56,7 @@ class Storefront_Welcome {
 		global $storefront_version;
 
 		if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
-			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/css/welcome.css', $storefront_version );
+			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/inc/admin/welcome-screen/css/welcome.css', $storefront_version );
 			wp_enqueue_style( 'thickbox' );
 			wp_enqueue_script( 'thickbox' );
 		}
@@ -87,9 +85,8 @@ class Storefront_Welcome {
 			<?php
 			/**
 			 * @hooked storefront_welcome_intro - 10
-			 * @hooked storefront_welcome_getting_started - 20
-			 * @hooked storefront_welcome_addons - 30
-			 * @hooked storefront_welcome_who - 40
+			 * @hooked storefront_welcome_enhance - 20
+			 * @hooked storefront_welcome_contribute - 30
 			 */
 			do_action( 'storefront_welcome' ); ?>
 
@@ -105,36 +102,21 @@ class Storefront_Welcome {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
 	}
 
+
 	/**
-	 * Welcome screen about section
-	 * @since 1.0.0
+	 * Welcome screen enhance section
+	 * @since 1.5.2
 	 */
-	public function storefront_welcome_who() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/who.php' );
+	public function storefront_welcome_enhance() {
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/enhance.php' );
 	}
 
 	/**
-	 * Welcome screen getting started section
-	 * @since 1.0.0
+	 * Welcome screen contribute section
+	 * @since 1.5.2
 	 */
-	public function storefront_welcome_getting_started() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/getting-started.php' );
-	}
-
-	/**
-	 * Welcome screen add ons
-	 * @since 1.0.0
-	 */
-	public function storefront_welcome_addons() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/add-ons.php' );
-	}
-
-	/**
-	 * Welcome screen child themes
-	 * @since 1.4.4
-	 */
-	public function storefront_welcome_child_themes() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/child-themes.php' );
+	public function storefront_welcome_contribute() {
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/contribute.php' );
 	}
 }
 
