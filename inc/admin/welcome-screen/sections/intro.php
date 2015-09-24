@@ -32,21 +32,22 @@ $storefront = wp_get_theme( 'storefront' );
 			<div class="col-1 news">
 				<h4><?php esc_html_e( 'Recent News', 'storefront' ); ?></h4>
 				<?php
-				$rss = fetch_feed( 'http://www.woothemes.com/blog/product-news/storefront/feed/' );
+				$rss		= fetch_feed( 'http://www.woothemes.com/blog/product-news/storefront/feed/' );
+				$rss_items	= array();
 
 				if ( ! is_wp_error( $rss ) ) {
-				    $maxitems 	= $rss->get_item_quantity( 1 );
-				    $rss_items 	= $rss->get_items( 0, $maxitems );
+					$maxitems 	= $rss->get_item_quantity( 1 );
+					$rss_items 	= $rss->get_items( 0, $maxitems );
 				}
 
 				foreach ( $rss_items as $item ) : ?>
-	                <h5>
-	                	<a href="<?php echo esc_url( $item->get_permalink() ); ?>">
-	                    	<?php echo esc_html( $item->get_title() ); ?>
-	                	</a>
-	                </h5>
-	                <span class="date"><?php echo esc_attr( $item->get_date( 'j F Y' ) ); ?></span>
-		        <?php endforeach; ?>
+					<h5>
+						<a href="<?php echo esc_url( $item->get_permalink() ); ?>">
+							<?php echo esc_html( $item->get_title() ); ?>
+						</a>
+					</h5>
+					<span class="date"><?php echo esc_attr( $item->get_date( 'j F Y' ) ); ?></span>
+				<?php endforeach; ?>
 			</div>
 			<div class="col-2 docs">
 				<h4><?php esc_html_e( 'Featured Docs', 'storefront' ); ?></h4>
