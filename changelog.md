@@ -5,6 +5,7 @@
 * **Tweak** - Better display of prices in WooCommerce product widgets.
 * **Tweak** - Improved caption display.
 * **Tweak** - Re-organised welcome screen.
+* **Tweak** - Adjusted Product Bundles integration to include support for the WooCommerce Product Bundles - Tabular Layout extension.
 
 ### *2015.09.10* - 1.5.1
 * **Fix** - Occasional text wrapping on product sorting dropdown.
