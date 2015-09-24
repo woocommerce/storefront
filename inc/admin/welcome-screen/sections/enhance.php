@@ -49,6 +49,13 @@
 		<p><?php esc_html_e( 'Take a look at our range of child themes for Storefront that allow you to easily change the look of your store to suit a specific industry.', 'storefront' ); ?></p>
 
 		<div class="child-theme">
+			<a href="http://www.woothemes.com/products/outlet?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">
+				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/outlet.jpg'; ?>" alt="<?php esc_html_e( 'Proshop Child Theme', 'storefront' ); ?>" class="image-50" />
+				<span class="child-theme-title"><?php esc_html_e( 'Outlet', 'storefront' ); ?></span>
+			</a>
+		</div>
+
+		<div class="child-theme">
 			<a href="http://www.woothemes.com/products/proshop?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/proshop.jpg'; ?>" alt="<?php esc_html_e( 'Proshop Child Theme', 'storefront' ); ?>" class="image-50" />
 				<span class="child-theme-title"><?php esc_html_e( 'Proshop', 'storefront' ); ?></span>
@@ -67,14 +74,6 @@
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/boutique.jpg'; ?>" alt="<?php esc_html_e( 'Boutique Child Theme', 'storefront' ); ?>" class="image-50" />
 				<p class="free"><?php esc_html_e( 'Free!', 'storefront' ); ?></p>
 				<span class="child-theme-title"><?php esc_html_e( 'Boutique', 'storefront' ); ?></span>
-			</a>
-		</div>
-
-		<div class="child-theme">
-			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-theme&theme=deli' ), 'install-theme_deli' ) ); ?>">
-				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/deli.jpg'; ?>" alt="<?php esc_html_e( 'Deli Child Theme', 'storefront' ); ?>" class="image-50" />
-				<p class="free"><?php esc_html_e( 'Free!', 'storefront' ); ?></p>
-				<span class="child-theme-title"><?php esc_html_e( 'Deli', 'storefront' ); ?></span>
 			</a>
 		</div>
 
