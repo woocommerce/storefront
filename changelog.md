@@ -4,6 +4,7 @@
 * **Tweak** - Adjusts how CSS is enqueued for child theme compatibility with RTL.
 * **Tweak** - Better display of prices in WooCommerce product widgets.
 * **Tweak** - Improved caption display.
+* **Tweak** - Re-organised welcome screen.
 
 ### *2015.09.10* - 1.5.1
 * **Fix** - Occasional text wrapping on product sorting dropdown.
