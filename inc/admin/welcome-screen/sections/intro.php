@@ -41,7 +41,7 @@ $storefront = wp_get_theme( 'storefront' );
 
 				foreach ( $rss_items as $item ) : ?>
 	                <h5>
-	                	<a href="<?php echo esc_url( $item->get_permalink() ); ?>" title="<?php printf( __( 'Posted %s', 'storefront' ), $item->get_date( 'j F Y | g:i a' ) ); ?>">
+	                	<a href="<?php echo esc_url( $item->get_permalink() ); ?>">
 	                    	<?php echo esc_html( $item->get_title() ); ?>
 	                	</a>
 	                </h5>
