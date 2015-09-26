@@ -9,7 +9,7 @@
 <div class="col two-col" style="overflow: hidden;">
 	<div class="col boxed contribute">
 		<h2><?php esc_html_e( 'Contribute to Storefront', 'storefront' ); ?></h2>
-		<p><?php echo sprintf( esc_html__( 'Found a bug? Want to contribute a patch or create a new feature? %sGitHub is the place to go!%s Or would you like to translate Storefront into your language? %sGet involved on Transifex%s.', 'storefront' ), '<a href="https://github.com/woothemes/storefront">', '</a>', '<a href="https://www.transifex.com/projects/p/storefront-1/">', '</a>' ); ?></p>
+		<p><?php echo sprintf( esc_html__( 'Found a bug? Want to contribute a patch or create a new feature? %sGitHub is the place to go!%s Or would you like to translate Storefront into your language? %sGet involved on WordPress.org%s.', 'storefront' ), '<a href="https://github.com/woothemes/storefront">', '</a>', '<a href="https://translate.wordpress.org/projects/wp-themes/storefront">', '</a>' ); ?></p>
 	</div>
 
 	<div class="col boxed suggest">
