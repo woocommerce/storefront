@@ -51,21 +51,21 @@
 		<div class="child-theme">
 			<a href="http://www.woothemes.com/products/outlet?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/outlet.jpg'; ?>" alt="<?php esc_html_e( 'Proshop Child Theme', 'storefront' ); ?>" class="image-50" />
-				<span class="child-theme-title"><?php esc_html_e( 'Outlet', 'storefront' ); ?></span>
+				<span class="child-theme-title">Outlet</span>
 			</a>
 		</div>
 
 		<div class="child-theme">
 			<a href="http://www.woothemes.com/products/proshop?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/proshop.jpg'; ?>" alt="<?php esc_html_e( 'Proshop Child Theme', 'storefront' ); ?>" class="image-50" />
-				<span class="child-theme-title"><?php esc_html_e( 'Proshop', 'storefront' ); ?></span>
+				<span class="child-theme-title">ProShop</span>
 			</a>
 		</div>
 
 		<div class="child-theme">
 			<a href="http://www.woothemes.com/products/galleria?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/galleria.jpg'; ?>" alt="<?php esc_html_e( 'Galleria Child Theme', 'storefront' ); ?>" class="image-50" />
-				<span class="child-theme-title"><?php esc_html_e( 'Galleria', 'storefront' ); ?></span>
+				<span class="child-theme-title">Galleria</span>
 			</a>
 		</div>
 
@@ -73,7 +73,7 @@
 			<a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-theme&theme=boutique' ), 'install-theme_boutique' ) ); ?>">
 				<img src="<?php echo esc_url( get_template_directory_uri() ) . '/inc/admin/welcome-screen/img/boutique.jpg'; ?>" alt="<?php esc_html_e( 'Boutique Child Theme', 'storefront' ); ?>" class="image-50" />
 				<p class="free"><?php esc_html_e( 'Free!', 'storefront' ); ?></p>
-				<span class="child-theme-title"><?php esc_html_e( 'Boutique', 'storefront' ); ?></span>
+				<span class="child-theme-title">Boutique</span>
 			</a>
 		</div>
 
