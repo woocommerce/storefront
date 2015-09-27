@@ -1,8 +1,0 @@
-[main]
-host = https://www.transifex.com
-
-[storefront-1.storefront]
-file_filter = languages/<lang>.po
-source_file = languages/storefront.pot
-source_lang = en
-type = PO

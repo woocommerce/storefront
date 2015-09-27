@@ -193,39 +193,6 @@ module.exports = function( grunt ) {
 			}
 		},
 
-		// Shell actions for transifex client
-		shell: {
-			options: {
-				stdout: true,
-				stderr: true
-			},
-			txpush: {
-				command: 'tx push -s' // push the resources
-			},
-			txpull: {
-				command: 'tx pull -a -f' // pull the .po files
-			}
-		},
-
-		// Convert .po to .mo
-		potomo: {
-			options: {
-				poDel: false
-			},
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'languages/',
-					src: [
-						'*.po'
-					],
-					dest: 'languages/',
-					ext: '.mo',
-					nonull: true
-				}]
-			}
-		},
-
 		// RTLCSS
 		rtlcss: {
 			options: {
@@ -282,8 +249,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-wp-i18n' );
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
-	grunt.loadNpmTasks( 'grunt-shell' );
-	grunt.loadNpmTasks( 'grunt-potomo' );
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
 
 	// Register tasks
@@ -298,20 +263,10 @@ module.exports = function( grunt ) {
 		'rtlcss'
 	]);
 
-	grunt.registerTask( 'tx_update', [
-		'makepot',
-		'shell:txpush'
-	]);
-
 	grunt.registerTask( 'dev', [
 		'default',
-		'tx_update',
+		'makepot',
 		'rtlcss'
-	]);
-
-	grunt.registerTask( 'mo', [
-		'shell:txpull',
-		'potomo'
 	]);
 
 	grunt.registerTask( 'deploy', [

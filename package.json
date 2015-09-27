@@ -22,8 +22,6 @@
     "susy":                   "^2.2.5",
     "node-bourbon":           "~4.2.3",
     "grunt-contrib-copy":     "~0.8.0",
-    "grunt-potomo":           "~3.3.3",
-    "grunt-shell":            "~1.1.2"
   },
   "engines": {
     "node":                   ">=0.8.0",
