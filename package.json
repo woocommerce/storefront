@@ -21,7 +21,7 @@
     "node-sass":              "^3.2.0",
     "susy":                   "^2.2.5",
     "node-bourbon":           "~4.2.3",
-    "grunt-contrib-copy":     "~0.8.0",
+    "grunt-contrib-copy":     "~0.8.0"
   },
   "engines": {
     "node":                   ">=0.8.0",
