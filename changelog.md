@@ -6,6 +6,8 @@
 * **Tweak** - Improved caption display.
 * **Tweak** - Re-organised welcome screen.
 * **Tweak** - Adjusted Product Bundles integration to include support for the WooCommerce Product Bundles - Tabular Layout extension.
+* **Localisation** - All translations are now managed on [WordPress.org](https://translate.wordpress.org/projects/wp-themes/storefront)
+* **Localisation** - Product names can no longer be translated.
 
 ### *2015.09.10* - 1.5.1
 * **Fix** - Occasional text wrapping on product sorting dropdown.
