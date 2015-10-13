@@ -328,6 +328,18 @@ ul.products {
 	}
 }
 
+a.reset_variations {
+	display: inline-block;
+	margin-left: 1em;
+
+	&:before {
+		font-family: "FontAwesome";
+		content: "\f021";
+		font-weight: 400;
+		margin-right: .53em;
+	}
+}
+
 /**
  * Reviews
  */
