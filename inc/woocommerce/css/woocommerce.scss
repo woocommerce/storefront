@@ -857,6 +857,39 @@ form.checkout {
 }
 
 /**
+ * WooCommerce Password strength meter
+ */
+.woocommerce-password-strength {
+	text-align: center;
+	font-weight: 600;
+	padding: 3px 0px 3px 0px;
+
+	&.strong {
+		background-color: #0F834B;
+		border-color: #0F834B;
+		color:#FFFFFF;
+	}
+
+	&.short {
+		background-color: #e2401c;
+		border-color: #e2401c;
+		color:#FFFFFF;
+	}
+
+	&.bad {
+		background-color: #60646c;
+		border-color: #60646c;
+		color:#FFFFFF;
+	}
+
+	&.good {
+		background-color: #96588a;
+		border-color: #96588a;
+		color:#FFFFFF;
+	}
+}
+
+/**
  * My Account
  */
 #customer_login {
