@@ -77,7 +77,8 @@ input[type="submit"],
 		font-size: .857em;
 	}
 
-	&.disabled {
+	&.disabled,
+	&:disabled {
 		opacity: 0.5 !important;
 
 		&:hover {
