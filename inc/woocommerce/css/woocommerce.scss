@@ -902,13 +902,6 @@ form.checkout {
 /**
  * My Account
  */
-#customer_login {
-	.col-1 {
-		padding-bottom: 1.618em;
-		margin-bottom: 1.618em;
-		border-bottom: 1px dotted $color_border;
-	}
-}
 
 ul.order_details {
 	@include clearfix;
@@ -1873,6 +1866,33 @@ dl.variation {
 	#order_review {
 		.shop_table {
 			margin-bottom: 2.618em;
+		}
+	}
+
+	/**
+	 * My Account
+	 */
+	.col2-set#customer_login {
+		@include span( full );
+
+		.col-1 {
+			@include span( 4 of 9 );
+		}
+
+		.col-2 {
+			@include span( 5 of 9 last );
+		}
+	}
+
+	.page-template-template-fullwidth-php {
+		.col2-set#customer_login {
+			.col-1 {
+				@include span( 6 of 12 );
+			}
+
+			.col-2 {
+				@include span( 6 of 12 last );
+			}
 		}
 	}
 
