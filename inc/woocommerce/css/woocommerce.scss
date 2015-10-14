@@ -859,29 +859,43 @@ form.checkout {
 /**
  * Password strength meter
  */
-#pass-strength-result {
-	text-align: center;
+.woocommerce-password-strength {
+	text-align: left;
 	font-weight: 600;
-	padding: 3px 0px 3px 0px;
+	padding: .53em 0;
+	text-align: right;
+	font-size: .857em;
+
+	&:after {
+		content: "\f119";
+		font-family: 'FontAwesome';
+		display: inline-block;
+		font-weight: 400;
+		margin-left: .53em;
+	}
 
 	&.strong {
-		background-color: #c1e1b9;
-		border-color: #83c373;
+		color: $success;
+
+		&:after {
+			content: "\f118";
+		}
 	}
 
 	&.short {
-		background-color: #f1adad;
-		border-color: #e35b5b;
+		color: $error;
 	}
 
 	&.bad {
-		background-color: #fbc5a9;
-		border-color: #f78b53;
+		color: $error;
 	}
 
 	&.good {
-		background-color: #ffe399;
-		border-color: #ffc733;
+		color: $info;
+
+		&:after {
+			content: "\f11a";
+		}
 	}
 }
 

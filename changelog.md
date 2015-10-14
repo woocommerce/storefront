@@ -9,6 +9,7 @@
 * **Tweak** - Adjusted Product Bundles integration to include support for the WooCommerce Product Bundles - Tabular Layout extension.
 * **Tweak** - Styled the variation reset link.
 * **Tweak** - Start rating input now more intuitive.
+* **Tweak** - Added styles for WooCommerce password strength meter.
 * **Localisation** - All translations are now managed on [WordPress.org](https://translate.wordpress.org/projects/wp-themes/storefront)
 * **Localisation** - Product names can no longer be translated.
 
