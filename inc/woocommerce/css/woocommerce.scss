@@ -857,6 +857,35 @@ form.checkout {
 }
 
 /**
+ * Password strength meter
+ */
+#pass-strength-result {
+	text-align: center;
+	font-weight: 600;
+	padding: 3px 0px 3px 0px;
+
+	&.strong {
+		background-color: #c1e1b9;
+		border-color: #83c373;
+	}
+
+	&.short {
+		background-color: #f1adad;
+		border-color: #e35b5b;
+	}
+
+	&.bad {
+		background-color: #fbc5a9;
+		border-color: #f78b53;
+	}
+
+	&.good {
+		background-color: #ffe399;
+		border-color: #ffc733;
+	}
+}
+
+/**
  * My Account
  */
 #customer_login {
