@@ -19,6 +19,7 @@ get_header(); ?>
 
 			/**
 			 * @hooked storefront_post_nav - 10
+			 * @hooked storefront_display_comments - 20
 			 */
 			do_action( 'storefront_single_post_after' );
 			?>
