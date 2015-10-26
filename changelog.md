@@ -11,6 +11,7 @@
 * **Tweak** - Start rating input now more intuitive.
 * **Tweak** - Added styles for WooCommerce password strength meter.
 * **Tweak** - Arrange the login/registration forms on the account page into two columns.
+* **Tweak** - Support for the most recent class applied to the site logo added by Jetpack.
 * **Localisation** - All translations are now managed on [WordPress.org](https://translate.wordpress.org/projects/wp-themes/storefront)
 * **Localisation** - Product names can no longer be translated.
 

@@ -25,7 +25,8 @@ body {
 	position: relative;
 	z-index: 999;
 
-	.site-logo-anchor {
+	.site-logo-anchor,
+	.site-logo-link {
 		display: block;
 
 		img {
@@ -35,7 +36,8 @@ body {
 	}
 
 	.site-branding,
-	.site-logo-anchor {
+	.site-logo-anchor,
+	.site-logo-link {
 		margin-bottom: 1.618em;
 	}
 
