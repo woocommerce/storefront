@@ -21,10 +21,6 @@ You can view detailed Storefront documentation on the [WooThemes documentation w
 WooThemes customers can get support at the [WooThemes support portal](https://support.woothemes.com/). Otherwise you can try posting on the [WordPress support forums](https://wordpress.org/support/theme/storefront/). Please remember, github is for bug reports and contributions, _not_ support.
 
 ## Contributing to Storefront
+If you have a patch, or stumbled you've upon an issue with Storefront core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/woothemes/storefront/blob/master/CONTRIBUTING.md) for more information about how you can do this.
+
 If you have an idea or feature request please take a look at the [Storefront Ideasboard](http://ideas.woothemes.com/forums/275029-storefront) to see if it's already been suggested, planned, or is under development. If not, please add it there. Ideas with the most votes will be consdiered and planned / discussed on the public [Storefront Roadmap](https://trello.com/b/i2Yxx45p/storefront-roadmap).
-
-Github is the place to discuss bugs, changes and enhancements to the Storefront codebase. Create an issue to discuss any code related queries and if you want to send a pull request, please do so to the master branch.
-
-Remember to subscribe to our [theme development blog](http://develop.woothemes.com/themes/) for the latest info relating to the development of Storefront and our other themes.
-
-Translated Storefront into another language? You rock! Please submit your translation to our project on [Transifex](https://www.transifex.com/projects/p/storefront-1/).
