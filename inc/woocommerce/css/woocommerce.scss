@@ -311,21 +311,21 @@ ul.products {
 				}
 			}
 		}
+	}
+}
 
-		p.stock {
-			&:before {
-				font-family: "FontAwesome";
-				margin-right: .53em;
-			}
+.stock {
+	&:before {
+		font-family: "FontAwesome";
+		margin-right: .53em;
+	}
 
-			&.in-stock:before {
-				content: "\f118";
-			}
+	&.in-stock:before {
+		content: "\f118";
+	}
 
-			&.out-of-stock:before {
-				content: "\f119";
-			}
-		}
+	&.out-of-stock:before {
+		content: "\f119";
 	}
 }
 
