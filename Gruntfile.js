@@ -115,7 +115,7 @@ module.exports = function( grunt ) {
 					'inc/customizer/js/*js',
 					'!inc/customizer/js/*.min.js'
 				],
-				tasks: ['uglify']
+				tasks: ['jshint', 'uglify']
 			}
 		},
 
@@ -179,6 +179,7 @@ module.exports = function( grunt ) {
 				src: [
 					'**',
 					'!.*',
+					'!*.md',
 					'!.*/**',
 					'.htaccess',
 					'!Gruntfile.js',
@@ -254,6 +255,7 @@ module.exports = function( grunt ) {
 	// Register tasks
 	grunt.registerTask( 'default', [
 		'css',
+		'jshint',
 		'uglify'
 	]);
 
@@ -265,12 +267,11 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'dev', [
 		'default',
-		'makepot',
-		'rtlcss'
+		'makepot'
 	]);
 
 	grunt.registerTask( 'deploy', [
-		'mo',
+		'dev',
 		'copy'
 	]);
 };
