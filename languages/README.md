@@ -5,6 +5,3 @@ Storefront will look in this directory for translations as a fallback. If you're
 Alternatively you can put translations in your child theme: `/wp-content/themes/your-child-theme/languages/it_IT.mo`.
 
 You can read more about installing Storefront in your language [here](http://docs.woothemes.com/document/installing-storefront-in-your-language/).
-
-## Contributing your translations back to Storefront
-If you would like to help out translating Storefront, please contribute on our translation page at [Transifex](https://www.transifex.com/projects/p/storefront-1/). Read more about that [here](http://docs.woothemes.com/document/translating-storefront/).
