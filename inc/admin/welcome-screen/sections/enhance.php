@@ -40,6 +40,7 @@
 				<li><a class="thickbox" href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=storefront-product-pagination&TB_iframe=true&width=744&height=800' ), 'install-plugin_storefront-product-pagination' ) ); ?>">Product Pagination</a></li>
 				<li><a class="thickbox" href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=storefront-product-sharing&TB_iframe=true&width=744&height=800' ), 'install-plugin_storefront-product-sharing' ) ); ?>">Product Sharing</a></li>
 				<li><a class="thickbox" href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=storefront-footer-bar&TB_iframe=true&width=744&height=800' ), 'install-plugin_storefront-footer-bar' ) ); ?>">Footer Bar</a></li>
+				<li><a class="thickbox" href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=storefront-sticky-add-to-cart&TB_iframe=true&width=744&height=800' ), 'install-plugin_storefront-sticky-add-to-cart' ) ); ?>">Sticky Add to Cart</a></li>
 			</ul>
 		</div>
 	</div>
