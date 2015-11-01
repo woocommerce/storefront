@@ -149,6 +149,7 @@ function storefront_scripts() {
 	} else {
 		// If a child theme is loaded, load the parent theme styles as normal (includes rtl) as well as the child themes style.css file.
 		wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
+		wp_enqueue_style( 'storefront-child-style', get_stylesheet_uri(), '' );
 	}
 
 	wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
