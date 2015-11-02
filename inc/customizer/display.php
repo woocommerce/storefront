@@ -14,7 +14,9 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 	function storefront_add_customizer_css() {
 		$accent_color 					= storefront_sanitize_hex_color( get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#96588a' ) ) );
 		$header_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) ) );
+		$header_background_color 		= 'transparent';
 		$header_link_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#ffffff' ) ) );
+		$header_link_color 				= '#000000';
 		$header_text_color 				= storefront_sanitize_hex_color( get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) ) );
 
 		$footer_background_color 		= storefront_sanitize_hex_color( get_theme_mod( 'storefront_footer_background_color', apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ) ) );
@@ -31,6 +33,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 
 		$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );
 		$darken_factor 					= apply_filters( 'storefront_darken_factor', -25 );
+
+		$cart_background_color 			= '#FFFFFF';
 
 		$style 							= '
 		.main-navigation ul li a,
@@ -164,7 +168,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		}
 
 		.site-header-cart .widget_shopping_cart {
-			background-color: ' . $header_background_color . ';
+			background-color: ' . $cart_background_color . ';
 		}
 
 		.woocommerce-tabs ul.tabs li.active a,

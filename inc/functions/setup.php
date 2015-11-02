@@ -160,4 +160,8 @@ function storefront_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script('slick', '//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.min.js', array('jquery'), true);
+	wp_enqueue_style('slick-style', '//cdn.jsdelivr.net/jquery.slick/1.5.8/slick.css');
+	wp_enqueue_style('slick-style-theme', '//cdn.jsdelivr.net/jquery.slick/1.5.8/slick-theme.css');
 }

@@ -3,7 +3,23 @@
  */
 
 @media screen and (min-width: 768px) {
+  	  .admin-bar {
+	  .site-header {
+		top: 42px;
+	  }
+	}
+
+	.no-wc-breadcrumb {
+	  .site-content {
+		padding-top: 4.236em;
+	  }
+	}
+
 	.site-header {
+	  left: 0;
+	  right: 0;
+	  background: url(img/menu_bg.png) repeat-x top left;
+
 		.site-branding,
 		.site-logo-anchor,
 		.site-logo-link {
@@ -26,19 +42,19 @@
 			}
 
 			.site-search {
-				@include span(last 3 of 12);
-				clear: none;
+				// @include span(last 2 of 12);
+				// clear: none;
 			}
 
 			.main-navigation {
-				@include span(9 of 12);
-				clear: both;
+				@include span(6 of 12);
+				clear: none;
 			}
 
 			.site-header-cart {
 				@include span(last 3 of 12);
 				margin-bottom: 0;
-				padding-top: 1.618em;
+				// padding-top: 1.618em;
 			}
 		}
 	}
@@ -54,8 +70,11 @@
 	.site-search,
 	.site-header-cart,
 	.site-logo-anchor,
-	.site-logo-link {
-		margin-bottom: 1em;
+	.site-logo-link
+	.primary-navigation {
+	  margin-bottom: 0px;
+	  padding: 21px 10px;
+
 	}
 
 	.site-header {
@@ -81,7 +100,7 @@
 
 	.col-full {
 		@include clearfix;
-		@include container(65.141em);
+		@include container(75.999em);
 	}
 
 	.site-content {
@@ -177,7 +196,7 @@
 	}
 }
 
-@media screen and (max-width: 65.141em) {
+@media screen and (max-width: 75.999em) {
 	.col-full {
 		margin-left: 2.618em;
 		margin-right: 2.618em;

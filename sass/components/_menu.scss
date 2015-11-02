@@ -89,8 +89,46 @@
 		display: none;
 	}
 
-	.primary-navigation {
-		display: block;
+	.primary-navigation, #mega-menu-wrap-primary {
+	  // background: url(img/menu.png) no-repeat center center;
+	  // background-size: 100%;
+	  display: block;
+	  ul#menu-primary, ul#mega-menu-primary {
+		& > li {
+		  background: {
+			repeat: no-repeat;
+			position: center center;
+			size: 100%;
+		  }
+		  text-indent: -9999px;
+		  position: initial;
+
+		  &.menu-item-about, &.mega-menu-item-about {
+			width: 40%;
+			background-image: url(img/menu_about.png);
+		  }
+
+		  &.menu-item-blog,  &.mega-menu-item-blog {
+			background-image: url(img/menu_blog.png);
+			width: 29%;
+		  }
+
+		  &.menu-item-shop,  &.mega-menu-item-shop {
+			background-image: url(img/menu_shop.png);
+			width: 31%;
+		  }
+		  ul {
+			text-indent: initial;
+			background: {
+			  color: white;
+			}
+
+			&:hover {
+			  left: -10px;
+			}
+		  }
+		}
+	  }
 	}
 
 	.main-navigation,
@@ -178,7 +216,12 @@
 	 * Primary Navigation
 	 */
 	.main-navigation {
+<<<<<<< HEAD
+		position: relative;
+		// padding-top: 1.618em;
+=======
 		padding-top: 1.618em;
+>>>>>>> woothemes/master
 
 		ul.menu,
 		ul.nav-menu {
