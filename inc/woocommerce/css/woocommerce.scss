@@ -152,6 +152,8 @@ table.shop_table_responsive {
 
 	&.my_account_orders {
 		.order-actions {
+			text-align: left;
+
 			&:before {
 				display: none;
 			}
