@@ -5,10 +5,12 @@
 /**
  * Imports
  */
-@import 'bourbon';
+// @import 'bourbon';
+@import '../../../sass/bourbon/bourbon';
 @import '../../../sass/utils/variables';
 @import '../../../sass/utils/mixins';
-@import '../../../node_modules/susy/sass/susy';
+// @import '../../../node_modules/susy/sass/susy';
+@import '../../../sass/susy/language/susy';
 
 // Star font, FontAwesome doesn't work :(
 @font-face {
@@ -33,7 +35,10 @@
 	}
 
 	.site-branding,
+<<<<<<< HEAD
+=======
 	.site-logo-anchor,
+>>>>>>> woothemes/master
 	.site-logo-link {
 		float: left;
 	}
@@ -64,10 +69,12 @@
 			width: 100%;
 			text-align: center;
 			text-indent: 0;
+		  	color: $yellow;
 		}
 
 		span {
 			display: none;
+		  	float: right;
 		}
 	}
 
@@ -80,6 +87,7 @@
 			overflow-y: auto;
 		}
 	}
+
 }
 
 .site-search {
@@ -1326,6 +1334,7 @@ dl.variation {
 	 */
 	.site-header-cart {
 		position: relative;
+	  	padding: 39px 0 0;
 
 		.cart-contents {
 			padding: 0 1em 2.244em;
@@ -1345,13 +1354,14 @@ dl.variation {
 			}
 
 			.amount {
-				margin-right: .327em;
+				margin-right: 2.327em;
 			}
 
 			.count {
 				font-weight: 400;
 				opacity: 0.5;
 				font-size: .857em;
+			  	display: none;
 			}
 
 			span {
@@ -1386,7 +1396,9 @@ dl.variation {
 		&:hover,
 		&.focus {
 			.widget_shopping_cart {
-				left: 0;
+				left: auto;
+			  	right: 0px;
+			  	width: 166%;
 			}
 		}
 	}

@@ -28,6 +28,8 @@ body {
 	.site-logo-anchor,
 	.site-logo-link {
 		display: block;
+	  	background-color: $yellow;
+
 
 		img {
 			max-height: 2.618em;
@@ -38,7 +40,9 @@ body {
 	.site-branding,
 	.site-logo-anchor,
 	.site-logo-link {
-		margin-bottom: 1.618em;
+	  margin-bottom: 0px;
+	  display: block;
+	  background-color: $yellow;
 	}
 
 	.widget {

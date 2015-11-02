@@ -52,22 +52,24 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	function storefront_primary_navigation() {
 		?>
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
-		<button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Navigation', 'storefront' ) ) ); ?></button>
-			<?php
+<!-- Only needed for Handheld ...
+		<button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><?php /*echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Navigation', 'storefront' ) ) ); */?></button>
+
+-->			<?php
 			wp_nav_menu(
 				array(
 					'theme_location'	=> 'primary',
 					'container_class'	=> 'primary-navigation',
 					)
 			);
-
+/*  Handheld Navigation -> enbale if needed -> add stylesheet as needed!
 			wp_nav_menu(
 				array(
 					'theme_location'	=> 'handheld',
 					'container_class'	=> 'handheld-navigation',
 					)
 			);
-			?>
+			*/?>
 		</nav><!-- #site-navigation -->
 		<?php
 	}
@@ -105,6 +107,62 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 		?>
 		<a class="skip-link screen-reader-text" href="#site-navigation"><?php _e( 'Skip to navigation', 'storefront' ); ?></a>
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'storefront' ); ?></a>
+		<?php
+	}
+
+}if ( ! function_exists( 'storefront_genuss_slider' ) ) {
+	/**
+	 * Slider
+	 * @since  1.5.1
+	 * @return void
+	 */
+	function storefront_genuss_slider() {
+		?>
+
+		<div id="slider" class="slider">
+			<div><a href="http://www.gronau.at" ><img src="/wp-content/themes/storefront/img/slider1.jpg" class=""/></a></div>
+			<div><img src="/wp-content/themes/storefront/img/slider2.jpg" class=""/></div>
+			<div><img src="/wp-content/themes/storefront/img/slider3.jpg" class=""/></div>
+			<div><img src="/wp-content/themes/storefront/img/slider3.jpg" class=""/></div>
+		</div>
+
+		<script type="text/javascript">
+			jQuery('.slider').slick({
+				// centerMode: true,
+				// centerPadding: '0px',
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				lazyLoad: 'progressive',
+				easing:"linear",
+				infinite: true,
+				// variableWidth: true,
+				autoplaySpeed: 5000,
+				arrows: false,
+				// dots: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							arrows: false,
+							// centerMode: true,
+							// centerPadding: '40px',
+							slidesToShow: 1
+						}
+					},
+					{
+						breakpoint: 480,
+						settings: {
+							arrows: false,
+							// centerMode: true,
+							// centerPadding: '40px',
+							slidesToShow: 1
+						}
+					}
+				]
+			});
+		</script>
+
 		<?php
 	}
 }
