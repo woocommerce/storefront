@@ -134,11 +134,7 @@ module.exports = function( grunt ) {
 					potFilename: 'storefront.pot',
 					exclude: [
 						'storefront/.*' // Exclude deploy directory
-					],
-					processPot: function ( pot ) {
-						pot.headers['project-id-version'];
-						return pot;
-					}
+					]
 				}
 			}
 		},
