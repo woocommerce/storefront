@@ -124,10 +124,36 @@ table.shop_table_responsive {
 	tr {
 		td {
 			display: block;
+			text-align: right;
 
 			&:before {
 				content: attr(data-title) ': ';
 				font-weight: 700;
+				float: left;
+			}
+
+			&.product-remove {
+				a {
+					text-align: left;
+				}
+
+				&:before {
+					display: none;
+				}
+			}
+
+			&.actions {
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&.my_account_orders {
+		.order-actions {
+			&:before {
+				display: none;
 			}
 		}
 	}
