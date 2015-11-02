@@ -143,13 +143,7 @@ function storefront_widgets_init() {
 function storefront_scripts() {
 	global $storefront_version;
 
-	if ( ! is_child_theme() ) {
-		// If a child theme's not loaded, just load the stylesheet as usual.
-		wp_enqueue_style( 'storefront-style', get_stylesheet_uri(), '', $storefront_version );
-	} else {
-		// If a child theme is loaded, load the parent theme styles as normal (includes rtl) as well as the child themes style.css file.
-		wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
-	}
+	wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 
 	wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
@@ -159,5 +153,17 @@ function storefront_scripts() {
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
+	}
+}
+
+/**
+ * Enqueue child theme stylesheet.
+ * A separate function is required as the child theme css needs to be enqueued _after_ the parent theme
+ * primary css and the separate WooCommerce css.
+ * @since  1.0.0
+ */
+function storefront_child_scripts() {
+	if ( is_child_theme() ) {
+		wp_enqueue_style( 'storefront-child-style', get_stylesheet_uri(), '' );
 	}
 }
