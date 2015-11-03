@@ -136,7 +136,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 
 		@media screen and ( min-width: 768px ) {
 			.main-navigation ul.menu > li > ul {
-				border-top-color: ' . $header_background_color . '}
+				border-top-color: ' . $header_background_color . ';
 			}
 
 			.secondary-navigation ul.menu a:hover {
