@@ -1,5 +1,10 @@
 # Storefront Changelog
 
+### *2015.11.03* - 1.5.3
+* **Fix** - Storefront will now automatically load a child themes stylesheet.
+* **Fix** - CSS Syntax error in Customizer output.
+* **Tweak** - WooCommerce responsive table styles.
+
 ### *2015.10.30* - 1.5.2
 * **Fix** - Duplicate menu display when not using a handheld menu and switching between desktop/handheld orientations.
 * **Tweak** - Adjusts how CSS is enqueued for child theme compatibility with RTL.
