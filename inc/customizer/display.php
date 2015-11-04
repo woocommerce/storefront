@@ -56,7 +56,8 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		}
 
 		p.site-description,
-		ul.menu li.current-menu-item > a {
+		ul.menu li.current-menu-item > a,
+		.site-header {
 			color: ' . $header_text_color . ';
 		}
 

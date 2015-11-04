@@ -160,7 +160,7 @@ function storefront_scripts() {
  * Enqueue child theme stylesheet.
  * A separate function is required as the child theme css needs to be enqueued _after_ the parent theme
  * primary css and the separate WooCommerce css.
- * @since  1.0.0
+ * @since  1.5.3
  */
 function storefront_child_scripts() {
 	if ( is_child_theme() ) {
