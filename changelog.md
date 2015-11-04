@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2015.11.04* - 1.6.0
+* **New** - Mega Menus integration.
+
 ### *2015.11.03* - 1.5.3
 * **Fix** - Storefront will now automatically load a child themes stylesheet.
 * **Fix** - CSS Syntax error in Customizer output.
