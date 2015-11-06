@@ -319,10 +319,18 @@ ul.products {
 
 			&.in-stock:before {
 				content: "\f118";
+				color: $success;
+			}
+			&.in-stock {
+				color: $success;
 			}
 
 			&.out-of-stock:before {
 				content: "\f119";
+				color: $error;
+			}
+			&.out-of-stock {
+				color: $error;
 			}
 		}
 	}
