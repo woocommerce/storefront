@@ -351,9 +351,15 @@ ul.products {
 	&.in-stock:before {
 		content: "\f118";
 	}
+	&.in-stock {
+		color: $success;
+	}
 
 	&.out-of-stock:before {
 		content: "\f119";
+	}
+	&.out-of-stock {
+		color: $error;
 	}
 }
 
