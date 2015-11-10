@@ -2,6 +2,7 @@
 
 ### *2015.11.04* - 1.6.0
 * **New** - Mega Menus integration.
+* **Tweak** - Styled the in stock/out of stock message. Props @nishitlangaliya.
 
 ### *2015.11.03* - 1.5.3
 * **Fix** - Storefront will now automatically load a child themes stylesheet.
