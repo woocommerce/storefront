@@ -348,12 +348,20 @@ ul.products {
 		margin-right: .53em;
 	}
 
-	&.in-stock:before {
-		content: "\f118";
+	&.in-stock {
+		color: $success;
+		
+		&:before {
+			content: "\f118";
+		}
 	}
 
-	&.out-of-stock:before {
-		content: "\f119";
+	&.out-of-stock {
+		color: $error;
+		
+		&:before {
+			content: "\f119";
+		}
 	}
 }
 
