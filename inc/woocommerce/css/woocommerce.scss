@@ -355,6 +355,9 @@ ul.products {
 			content: "\f118";
 		}
 	}
+	&.in-stock {
+		color: $success;
+	}
 
 	&.out-of-stock {
 		color: $error;
@@ -362,6 +365,9 @@ ul.products {
 		&:before {
 			content: "\f119";
 		}
+	}
+	&.out-of-stock {
+		color: $error;
 	}
 }
 
