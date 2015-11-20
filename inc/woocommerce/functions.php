@@ -90,6 +90,25 @@ function storefront_woocommerce_scripts() {
 }
 
 /**
+ * Star rating backwards compatibility script (WooCommerce <2.5).
+ * @since 1.6.0
+ */
+function storefront_star_rating_script() {
+	if ( wp_script_is( 'jquery', 'done' ) && is_product() ) {
+?>
+	<script type="text/javascript">
+		jQuery( function( $ ) {
+			$( 'body' ).on( 'click', '#respond p.stars a', function() {
+				var $container = $( this ).closest( '.stars' );
+				$container.addClass( 'selected' );
+			});
+		});
+	</script>
+<?php
+	}
+}
+
+/**
  * Related Products Args
  * @param  array $args related products args
  * @since 1.0.0

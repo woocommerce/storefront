@@ -12,6 +12,10 @@
 add_action( 'wp_enqueue_scripts', 			'storefront_woocommerce_scripts',		20 );
 add_filter( 'woocommerce_enqueue_styles', 	'__return_empty_array' );
 
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {
+	add_action( 'wp_footer', 'storefront_star_rating_script' );
+}
+
 /**
  * Layout
  * @see  storefront_before_content()
