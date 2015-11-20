@@ -14,7 +14,7 @@
 
 	<div class="col boxed suggest">
 		<h2><?php esc_html_e( 'Suggest a feature', 'storefront' ); ?></h2>
-		<p><?php printf( esc_html__( 'Please suggest and vote on ideas at the %s%s Ideasboard%s. The most popular ideas will see prioritised development.', 'storefront' ), '<a href="http://ideas.woothemes.com/forums/275029-storefront">', 'Storefront', '</a>' ); ?></p>
+		<p><?php printf( esc_html__( 'Please suggest and vote on ideas at the %s%s Ideas board%s. The most popular ideas will see prioritised development.', 'storefront' ), '<a href="http://ideas.woothemes.com/forums/275029-storefront">', 'Storefront', '</a>' ); ?></p>
 	</div>
 
 	<div class="automattic">
