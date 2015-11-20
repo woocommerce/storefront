@@ -23,6 +23,7 @@
 				<li><a href="https://www.woothemes.com/products/storefront-reviews?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">Reviews</a></li>
 				<li><a href="https://www.woothemes.com/products/storefront-pricing-tables?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">Pricing Tables</a></li>
 				<li><a href="https://www.woothemes.com/products/storefront-blog-customiser?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">Blog Customiser</a></li>
+				<li><a href="https://www.woothemes.com/products/storefront-mega-menus?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons">Mega Menus</a></li>
 			</ul>
 
 			<a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary">
