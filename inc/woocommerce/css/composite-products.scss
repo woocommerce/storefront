@@ -76,14 +76,20 @@
 			}
 		}
 
-		.component_content,
-		.component_options {
-			padding: 0;
+		> div {
+			padding-left: 0;
 		}
 
 		.select_label {
 			display: block;
 			margin-bottom: 1em;
+		}
+
+		.clear_component_options:before {
+			content: "\f021";
+			font-weight: 400;
+			font-family: FontAwesome;
+			margin-right: .53em;
 		}
 
 		.component_option_thumbnails {
