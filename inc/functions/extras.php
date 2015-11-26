@@ -54,6 +54,11 @@ function storefront_body_classes( $classes ) {
 		$classes[] = 'storefront-cute';
 	}
 
+	// If our main sidebar doesn't contain widgets, adjust the layout to be full-width.
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+		$classes[] = 'storefront-full-width-content';
+	}
+
 	return $classes;
 }
 
