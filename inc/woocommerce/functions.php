@@ -87,6 +87,12 @@ function storefront_woocommerce_scripts() {
 
 	wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/inc/woocommerce/css/woocommerce.css', $storefront_version );
 	wp_style_add_data( 'storefront-woocommerce-style', 'rtl', 'replace' );
+
+	wp_register_script( 'storefront-sticky-payment', get_template_directory_uri() . '/js/checkout.min.js', 'jquery', $storefront_version, true );
+
+	if ( is_checkout() ) {
+		wp_enqueue_script( 'storefront-sticky-payment' );
+	}
 }
 
 /**

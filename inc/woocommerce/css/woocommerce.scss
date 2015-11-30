@@ -350,7 +350,7 @@ ul.products {
 
 	&.in-stock {
 		color: $success;
-		
+
 		&:before {
 			content: "\f118";
 		}
@@ -358,7 +358,7 @@ ul.products {
 
 	&.out-of-stock {
 		color: $error;
-		
+
 		&:before {
 			content: "\f119";
 		}
@@ -889,6 +889,21 @@ form.checkout {
 			font-size: 1.387em;
 			width: 100%;
 			white-space: pre-wrap;
+		}
+	}
+}
+
+.woocommerce-checkout {
+	.payment-fixed {
+		position: fixed;
+		top: 0;
+	}
+}
+
+.admin-bar {
+	.woocommerce-checkout {
+		.payment-fixed {
+			top: 32px;
 		}
 	}
 }
