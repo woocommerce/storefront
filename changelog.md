@@ -4,6 +4,7 @@
 * **New** - Mega Menus integration.
 * **Tweak** - Styled the in stock/out of stock message. Props @nishitlangaliya.
 * **Tweak** - Added new function `storefront_star_rating_script`. Outputs JavaScript for the new star rating input while we wait for WooCommerce 2.5 to be released.
+* **Fix** - Table alignment on desktop.
 
 ### *2015.11.03* - 1.5.3
 * **Fix** - Storefront will now automatically load a child themes stylesheet.

@@ -3,6 +3,17 @@
  */
 
 @media screen and (min-width: 768px) {
+	table.shop_table_responsive {
+		tbody {
+			tr {
+				td,
+				th {
+					text-align: left;
+				}
+			}
+		}
+	}
+
 	.site-header {
 		.site-branding,
 		.site-logo-anchor,
