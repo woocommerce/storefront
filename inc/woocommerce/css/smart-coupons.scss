@@ -50,7 +50,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@include susy-media(768px) {
 	.sc_info_box {
 		@include span(last 4 of 9);
 		@include gutters(inside);
