@@ -14,7 +14,12 @@ $color_border:		rgba(0,0,0,0.1);
 $error: 			#e2401c;
 $success: 			#0f834d;
 $info: 				#3D9CD2;
+
+// layout sizes
 $vspacing: 			1.618em;
+$desktop:			768px;
+$handheld:			568px;
+$container-width:	65.141em;
 
 $susy: (
 	columns: 12,

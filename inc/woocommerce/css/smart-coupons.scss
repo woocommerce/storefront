@@ -50,7 +50,7 @@
 	}
 }
 
-@include susy-media(768px) {
+@include susy-media($desktop) {
 	.sc_info_box {
 		@include span(last 4 of 9);
 		@include gutters(inside);

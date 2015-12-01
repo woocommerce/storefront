@@ -81,7 +81,7 @@
 	}
 }
 
-@include susy-media(768px) {
+@include susy-media($desktop) {
 	.menu-toggle,
 	.handheld-navigation,
 	.main-navigation.toggled .handheld-navigation,

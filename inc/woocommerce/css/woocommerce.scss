@@ -1346,7 +1346,7 @@ dl.variation {
 	}
 }
 
-@include susy-media(768px) {
+@include susy-media($desktop) {
 	/**
 	 * Responsive tables
 	 */

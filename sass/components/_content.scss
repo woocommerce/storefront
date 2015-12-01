@@ -96,7 +96,7 @@
 	}
 }
 
-@include susy-media(768px) {
+@include susy-media($desktop) {
 	.hentry.type-post {
 		@include clearfix;
 

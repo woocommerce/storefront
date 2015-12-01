@@ -113,7 +113,7 @@
 }
 
 
-@include susy-media(768px) {
+@include susy-media($desktop) {
 	.comment-list {
 		@include clearfix;
 
