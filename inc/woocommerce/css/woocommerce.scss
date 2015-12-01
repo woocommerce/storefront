@@ -1331,7 +1331,7 @@ dl.variation {
 	}
 }
 
-@media screen and (min-width: 768px) {
+@include susy-media(768px) {
 	/**
 	 * Responsive tables
 	 */
