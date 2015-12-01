@@ -8,6 +8,7 @@
 @import 'bourbon';
 @import '../../../sass/utils/variables';
 @import '../../../sass/utils/mixins';
+@import '../../../node_modules/susy/sass/susy';
 
 #wl-wrapper.wl-button-wrap {
 	padding: 1.618em 0 0 0;
@@ -95,7 +96,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@include susy-media(768px) {
 	#wl-wrapper {
 		.wl-tabs {
 			> li {

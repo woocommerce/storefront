@@ -23,7 +23,7 @@
 	}
 }
 
-@media screen and (min-width: 768px) {
+@include susy-media(768px) {
 	.bundle_form {
 		div.bundled_product_summary {
 			padding-left: 0;

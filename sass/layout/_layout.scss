@@ -2,7 +2,7 @@
  * General Layout
  */
 
-@media screen and (min-width: 768px) {
+@include susy-media(768px) {
 	table.shop_table_responsive {
 		tbody {
 			tr {
@@ -188,14 +188,14 @@
 	}
 }
 
-@media screen and (max-width: 65.141em) {
+@include susy-media (max-width 65.141em) {
 	.col-full {
 		margin-left: 2.618em;
 		margin-right: 2.618em;
 	}
 }
 
-@media screen and (max-width: 568px) {
+@include susy-media (max-width 568px) {
 	.col-full {
 		margin-left: 1.387em;
 		margin-right: 1.387em;
