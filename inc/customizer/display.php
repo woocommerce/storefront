@@ -32,15 +32,6 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );
 		$darken_factor 					= apply_filters( 'storefront_darken_factor', -25 );
 
-		// Set the bg color var based on whether the Storefront designer has set a content bg color or not.
-		$content_bg_color	= storefront_sanitize_hex_color( get_theme_mod( 'sd_content_background_color' ) );
-		$content_frame 		= get_theme_mod( 'sd_fixed_width' );
-		if ( $content_bg_color && 'true' == $content_frame && class_exists( 'Storefront_Designer' ) ) {
-			$bg_color 	= str_replace( '#', '', $content_bg_color );
-		} else {
-			$bg_color	= str_replace( '#', '', get_theme_mod( 'background_color' ) );
-		}
-
 		$style 							= '
 		.main-navigation ul li a,
 		.site-title a,
@@ -149,7 +140,7 @@ if ( ! function_exists( 'storefront_add_customizer_css' ) ) {
 		}
 
 		#order_review {
-			background-color: #' . $bg_color . ';
+			background-color: ' . storefront_get_content_background_color() . ';
 		}
 
 		@media screen and ( min-width: 768px ) {

@@ -192,3 +192,22 @@ function storefront_customizer_custom_control_css() {
     </style>
     <?php
 }
+
+/**
+ * Get the content background color
+ * Accounts for the Storefront Designer's content background option.
+ * @since  1.6.0
+ * @return string the backgrounc color
+ */
+function storefront_get_content_background_color() {
+    // Set the bg color var based on whether the Storefront designer has set a content bg color or not.
+    $content_bg_color   = storefront_sanitize_hex_color( get_theme_mod( 'sd_content_background_color' ) );
+    $content_frame      = get_theme_mod( 'sd_fixed_width' );
+    if ( $content_bg_color && 'true' == $content_frame && class_exists( 'Storefront_Designer' ) ) {
+        $bg_color   = str_replace( '#', '', $content_bg_color );
+    } else {
+        $bg_color   = str_replace( '#', '', get_theme_mod( 'background_color' ) );
+    }
+
+    return '#' . $bg_color;
+}
