@@ -12,13 +12,13 @@ jQuery( document ).ready( function( $ ) {
 		var	addressWidth		= $( '#customer_details' ).outerWidth();
 		var	gutter				= checkoutWidth - addressWidth - paymentWidth;
 		var	paymentOffset		= addressWidth + gutter;
-		var orderReviewPosition = $( '#order_review' ).position();
+		var checkoutPosition 	= $( 'form.woocommerce-checkout' ).offset();
 
 		// If we're in desktop orientation...
 		if ( $( window ).width() > 768 ) {
 
 			// When we reach the order review element during scroll...
-		   	if ( topDistance > orderReviewPosition.top ) {
+		   	if ( topDistance > checkoutPosition.top ) {
 				$( '#order_review' ).addClass( 'payment-fixed' );
 				$( '#order_review' ).css({
 					'margin-left':		paymentOffset,
