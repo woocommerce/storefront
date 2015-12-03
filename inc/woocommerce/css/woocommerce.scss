@@ -1840,6 +1840,18 @@ dl.variation {
 		& + #customer_details {
 			display: none;
 		}
+
+		&.addresses {
+			@include span(full);
+
+			.col-1 {
+				@include span(4.5 of 9);
+			}
+
+			.col-2 {
+				@include span(last 4.5 of 9)
+			}
+		}
 	}
 
 	#order_review_heading,
@@ -1907,6 +1919,16 @@ dl.variation {
 			.form-row-last {
 				@include span(last 3 of 6);
 			}
+
+			&.addresses {
+				.col-1 {
+					@include span(6 of 12);
+				}
+
+				.col-2 {
+					@include span(last 6 of 12)
+				}
+			}
 		}
 
 		#order_review_heading,
@@ -1952,6 +1974,40 @@ dl.variation {
 
 			.col-2 {
 				@include span( 6 of 12 last );
+			}
+		}
+	}
+
+	.addresses {
+		header.title {
+			@include clearfix;
+
+			h3 {
+				float: left;
+			}
+
+			a {
+				float: right;
+				display: block;
+				width: 1em;
+				height: 1em;
+				text-indent: -9999px;
+				position: relative;
+				padding: .857em;
+				margin-top: .4em;
+
+				&:before {
+					font-family: "FontAwesome";
+					content: "\f044";
+					position: absolute;
+					top :0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					text-align: center;
+					text-indent: 0;
+					font-weight: 400;
+				}
 			}
 		}
 	}

@@ -1,0 +1,122 @@
+/**
+ * WooCommerce Product Reviews Pro
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../sass/utils/variables';
+@import '../../../sass/utils/mixins';
+@import '../../../node_modules/susy/sass/susy';
+
+.woocommerce-page {
+	.woocommerce-checkout-review-order-table {
+		th.product-name {
+			width: 70%;
+		}
+	}
+
+	#shipping_addresses {
+		padding-top: 1.618em;
+	}
+
+	.ship_address,
+	.no_shipping_address {
+		float: none;
+		width: auto;
+		margin: 0 0 1.618em;
+		background-color: rgba(#000,.025);
+		border: 0;
+		padding: 1em;
+		line-height: inherit;
+		border-radius: 0;
+		font-size: .857em;
+
+		dl {
+			margin-top: 0;
+
+			dd {
+				margin-bottom: 1em;
+			}
+		}
+
+		address {
+			margin: 0;
+		}
+
+		.note-form {
+			margin-bottom: 1.618em;
+			padding-top: 1em;
+		}
+
+		.gift-form {
+			label {
+				&:after {
+					content: "\f06b";
+					font-family: "FontAwesome";
+					display: inline-block;
+					margin-left: .236em;
+					font-weight: 400;
+				}
+			}
+		}
+
+		.modify-address-button {
+			display: block;
+			margin-top: 1em;
+
+			&:before {
+				content: "\f044";
+				font-family: "FontAwesome";
+				display: inline-block;
+				margin-right: .387em;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.addresses {
+		clear: both;
+		@include clearfix;
+
+		.address-block {
+			margin: 0 0 1.618em;
+			@include span(4.5 of 9);
+
+			&:nth-child(3),
+			&:nth-child(5),
+			&:nth-child(7) {
+				margin-right: 0 !important;
+			}
+
+			.buttons {
+				text-align: inherit;
+				position: static;
+
+				.button {
+					width: auto;
+				}
+			}
+		}
+
+		+ .addresses {
+			header.title {
+				a:before {
+					content: "\f067";
+				}
+			}
+		}
+	}
+
+	&.page-template-template-fullwidth-php {
+		.ship_address,
+		.no_shipping_address {
+			font-size: 1em;
+		}
+
+		.address-block {
+			@include span(6 of 12);
+		}
+	}
+}

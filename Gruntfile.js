@@ -71,6 +71,7 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/smart-coupons.css': 'inc/woocommerce/css/smart-coupons.scss',
 					'inc/woocommerce/css/deposits.css': 'inc/woocommerce/css/deposits.scss',
 					'inc/woocommerce/css/bundles.css': 'inc/woocommerce/css/bundles.scss',
+					'inc/woocommerce/css/ship-multiple-addresses.css': 'inc/woocommerce/css/ship-multiple-addresses.scss',
 					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
 				}]
 			}
@@ -231,6 +232,7 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/smart-coupons.css',
 					'inc/woocommerce/css/deposits.css',
 					'inc/woocommerce/css/bundles.css',
+					'inc/woocommerce/css/ship-multiple-addresses.css',
 					'inc/woocommerce/css/woocommerce.css'
 				]
 			}

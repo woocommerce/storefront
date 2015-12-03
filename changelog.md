@@ -1,7 +1,8 @@
 # Storefront Changelog
 
 ### *2015.11.04* - 1.6.0
-* **New** - Mega Menus integration.
+* **New** - [Storefront Mega Menus](http://www.woothemes.com/products/storefront-mega-menus/) integration.
+* **New** - Integration with [Ship to Multiple Addresses](http://www.woothemes.com/products/shipping-multiple-addresses/) extension.
 * **New** - Sticky order review on checkout.
 * **Tweak** - Styled the in stock/out of stock message. Props @nishitlangaliya.
 * **Tweak** - Added new function `storefront_star_rating_script`. Outputs JavaScript for the new star rating input while we wait for WooCommerce 2.5 to be released.
