@@ -423,6 +423,10 @@ a.reset_variations {
 
 	.comment-form-rating {
 		clear: both;
+
+		label {
+			display: block;
+		}
 	}
 }
 
@@ -1117,6 +1121,9 @@ ul.digital-downloads {
 }
 
 p.stars {
+	display: inline-block;
+	margin: 0;
+
 	a {
 		position: relative;
 		height: 1em;
