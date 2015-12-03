@@ -7,6 +7,7 @@
 * **Tweak** - Added new function `storefront_star_rating_script`. Outputs JavaScript for the new star rating input while we wait for WooCommerce 2.5 to be released.
 * **Tweak** - Contrast on hovered links in the primary navigation.
 * **Fix** - Table alignment on desktop.
+* **Dev** - Added some new hooks to the homepage template tags; `storefront_homepage_after_product_categories_title`, `storefront_homepage_after_recent_products_title`, `storefront_homepage_after_featured_products_title`, `storefront_homepage_after_popular_products_title`, `storefront_homepage_after_on_sale_products_title`
 
 ### *2015.11.03* - 1.5.3
 * **Fix** - Storefront will now automatically load a child themes stylesheet.
