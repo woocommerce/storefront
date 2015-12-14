@@ -1565,6 +1565,14 @@ dl.variation {
 					}
 				}
 			}
+
+			.columns-6 {
+				ul.products {
+					li.product {
+						@include span(2 of 12);
+					}
+				}
+			}
 		}
 	}
 
@@ -1616,6 +1624,14 @@ dl.variation {
 				li.product {
 					width: 16.9%;
 					margin-right: 3.8%;
+				}
+			}
+		}
+
+		.columns-6 {
+			ul.products {
+				li.product {
+					@include span(1.5 of 9);
 				}
 			}
 		}
