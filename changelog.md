@@ -9,6 +9,7 @@
 * **Tweak** - Added new function `storefront_star_rating_script`. Outputs JavaScript for the new star rating input while we wait for WooCommerce 2.5 to be released.
 * **Tweak** - Contrast on hovered links in the primary navigation.
 * **Tweak** - If no widgets are present in the sidebar a full width layout will be applied to all pages.
+* **Tweak** - Updated integration with the Variation Swatches extension.
 * **Fix** - Table alignment on desktop.
 * **Dev** - Added some new hooks to the homepage template tags; `storefront_homepage_after_product_categories_title`, `storefront_homepage_after_recent_products_title`, `storefront_homepage_after_featured_products_title`, `storefront_homepage_after_popular_products_title`, `storefront_homepage_after_on_sale_products_title`
 * **Dev** - Styling for 6 column product layouts.
