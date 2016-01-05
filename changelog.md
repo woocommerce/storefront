@@ -14,6 +14,7 @@
 * **Fix** - Table alignment on desktop.
 * **Dev** - Added some new hooks to the homepage template tags; `storefront_homepage_after_product_categories_title`, `storefront_homepage_after_recent_products_title`, `storefront_homepage_after_featured_products_title`, `storefront_homepage_after_popular_products_title`, `storefront_homepage_after_on_sale_products_title`
 * **Dev** - Styling for 6 column product layouts.
+* **Dev** - Updates FontAwesome to version 4.5.0.
 
 ### *2015.11.03* - 1.5.3
 * **Fix** - Storefront will now automatically load a child themes stylesheet.
