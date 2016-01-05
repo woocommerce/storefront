@@ -1,14 +1,14 @@
-# Copyright (C) 2015 WooThemes
+# Copyright (C) 2016 WooThemes
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 1.5.3\n"
+"Project-Id-Version: Storefront 1.6.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2015-11-03 10:15:14+00:00\n"
+"POT-Creation-Date: 2016-01-05 12:09:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2016-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 0.5.3\n"
@@ -84,8 +84,8 @@ msgstr ""
 
 #: inc/admin/welcome-screen/sections/contribute.php:17
 msgid ""
-"Please suggest and vote on ideas at the %s%s Ideasboard%s. The most popular "
-"ideas will see prioritised development."
+"Please suggest and vote on ideas at the %s%s Ideas board%s. The most "
+"popular ideas will see prioritised development."
 msgstr ""
 
 #: inc/admin/welcome-screen/sections/contribute.php:22
@@ -102,48 +102,48 @@ msgid ""
 "functionality."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:29
+#: inc/admin/welcome-screen/sections/enhance.php:30
 msgid "View all %s extensions &rarr;"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:35
+#: inc/admin/welcome-screen/sections/enhance.php:36
 msgid "Install free plugins"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:37
+#: inc/admin/welcome-screen/sections/enhance.php:38
 msgid ""
 "There are a number of free plugins available for %s on the WordPress.org "
 "%splugin repository%s. Here are just a few:"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:49
+#: inc/admin/welcome-screen/sections/enhance.php:50
 msgid "Child themes"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:50
+#: inc/admin/welcome-screen/sections/enhance.php:51
 msgid ""
 "Take a look at our range of child themes for %s that allow you to easily "
 "change the look of your store to suit a specific industry."
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:54
-#: inc/admin/welcome-screen/sections/enhance.php:61
+#: inc/admin/welcome-screen/sections/enhance.php:55
+#: inc/admin/welcome-screen/sections/enhance.php:62
 msgid "Proshop Child Theme"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:68
+#: inc/admin/welcome-screen/sections/enhance.php:69
 msgid "Galleria Child Theme"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:75
+#: inc/admin/welcome-screen/sections/enhance.php:76
 msgid "Boutique Child Theme"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:76
+#: inc/admin/welcome-screen/sections/enhance.php:77
 msgid "Free!"
 msgstr ""
 
-#: inc/admin/welcome-screen/sections/enhance.php:82
+#: inc/admin/welcome-screen/sections/enhance.php:83
 msgid "View all %s child themes &rarr;"
 msgstr ""
 
@@ -398,19 +398,19 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: inc/structure/template-tags.php:65
+#: inc/structure/template-tags.php:67
 msgid "Recent Products"
 msgstr ""
 
-#: inc/structure/template-tags.php:103 inc/woocommerce/template-tags.php:144
+#: inc/structure/template-tags.php:107 inc/woocommerce/template-tags.php:144
 msgid "Featured Products"
 msgstr ""
 
-#: inc/structure/template-tags.php:142
+#: inc/structure/template-tags.php:148
 msgid "Top Rated Products"
 msgstr ""
 
-#: inc/structure/template-tags.php:179
+#: inc/structure/template-tags.php:187
 msgid "On Sale"
 msgstr ""
 

@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2015.xx.xx* - 1.6.0
+### *2016.01.05* - 1.6.0
 * **New** - [Storefront Mega Menus](http://www.woothemes.com/products/storefront-mega-menus/) integration.
 * **New** - Integration with [Ship to Multiple Addresses](http://www.woothemes.com/products/shipping-multiple-addresses/) extension.
 * **New** - Sticky order review on checkout.
