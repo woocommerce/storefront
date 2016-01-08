@@ -2,6 +2,7 @@
 
 ### * 2016.01.xx - 1.6.1
 * **Tweak** - Jetpack integration updates.
+* **Fix** - WooCommerce active filters widget now styled.
 * **Fix** - Image gallery layouts.
 
 ### *2016.01.05* - 1.6.0

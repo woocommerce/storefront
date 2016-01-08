@@ -585,6 +585,23 @@ a.reset_variations {
 	}
 }
 
+.widget_layered_nav_filters {
+	ul {
+		li {
+			&.chosen {
+				a {
+					&:before {
+						font-family: "FontAwesome";
+						content: "\f00d";
+						margin-right: .53em;
+						color: $error;
+					}
+				}
+			}
+		}
+	}
+}
+
 .widget.woocommerce {
 	li {
 		.count {
