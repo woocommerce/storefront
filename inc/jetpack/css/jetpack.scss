@@ -9,3 +9,12 @@
 @import '../../../sass/utils/variables';
 @import '../../../sass/utils/mixins';
 
+// Subscription widget
+.jetpack_subscription_widget {
+	#subscribe-email {
+		input {
+			padding: .618em !important;
+			width: 100% !important;
+		}
+	}
+}
