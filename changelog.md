@@ -1,5 +1,9 @@
 # Storefront Changelog
 
+### * 2016.01.xx - 1.6.1
+* **Tweak** - Jetpack integration updates.
+* **Fix** - Image gallery layouts.
+
 ### *2016.01.05* - 1.6.0
 * **New** - [Storefront Mega Menus](http://www.woothemes.com/products/storefront-mega-menus/) integration.
 * **New** - Integration with [Ship to Multiple Addresses](http://www.woothemes.com/products/shipping-multiple-addresses/) extension.
