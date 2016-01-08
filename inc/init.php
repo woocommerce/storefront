@@ -42,7 +42,8 @@ if ( is_storefront_customizer_enabled() ) {
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack/jetpack.php';
+require get_template_directory() . '/inc/jetpack/hooks.php';
+require get_template_directory() . '/inc/jetpack/functions.php';
 
 /**
  * Welcome screen

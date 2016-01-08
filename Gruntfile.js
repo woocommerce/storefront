@@ -72,7 +72,8 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/deposits.css': 'inc/woocommerce/css/deposits.scss',
 					'inc/woocommerce/css/bundles.css': 'inc/woocommerce/css/bundles.scss',
 					'inc/woocommerce/css/ship-multiple-addresses.css': 'inc/woocommerce/css/ship-multiple-addresses.scss',
-					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss'
+					'inc/woocommerce/css/woocommerce.css': 'inc/woocommerce/css/woocommerce.scss',
+					'inc/jetpack/css/jetpack.css': 'inc/jetpack/css/jetpack.scss'
 				}]
 			}
 		},
@@ -95,6 +96,7 @@ module.exports = function( grunt ) {
 					'style.scss',
 					'inc/admin/welcome-screen/css/*.scss',
 					'inc/woocommerce/css/*.scss',
+					'inc/jetpack/css/*.scss',
 					'sass/base/*.scss',
 					'sass/components/*.scss',
 					'sass/layout/*.scss',
@@ -233,7 +235,8 @@ module.exports = function( grunt ) {
 					'inc/woocommerce/css/deposits.css',
 					'inc/woocommerce/css/bundles.css',
 					'inc/woocommerce/css/ship-multiple-addresses.css',
-					'inc/woocommerce/css/woocommerce.css'
+					'inc/woocommerce/css/woocommerce.css',
+					'inc/jetpack/css/jetpack.css'
 				]
 			}
 		}
