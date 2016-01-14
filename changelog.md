@@ -4,6 +4,7 @@
 * **Tweak** - Jetpack integration updates.
 * **Fix** - WooCommerce active filters widget now styled.
 * **Fix** - Image gallery layouts.
+* **Fix** - Sticky order review feature now accounts for any size of payment box to avoid cutting off the Place Order button.
 
 ### *2016.01.05* - 1.6.0
 * **New** - [Storefront Mega Menus](http://www.woothemes.com/products/storefront-mega-menus/) integration.
