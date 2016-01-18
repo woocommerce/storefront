@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 1.6.1\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2016-01-18 11:45:13+00:00\n"
+"POT-Creation-Date: 2016-01-18 13:18:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -223,7 +223,7 @@ msgstr ""
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/controls.php:28 inc/functions/setup.php:114
+#: inc/customizer/controls.php:28
 msgid "Header"
 msgstr ""
 
@@ -319,6 +319,10 @@ msgstr ""
 
 #: inc/functions/setup.php:104
 msgid "Sidebar"
+msgstr ""
+
+#: inc/functions/setup.php:114
+msgid "Below Header"
 msgstr ""
 
 #: inc/functions/setup.php:127
