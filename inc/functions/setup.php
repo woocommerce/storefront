@@ -111,7 +111,7 @@ function storefront_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name'          => __( 'Header', 'storefront' ),
+		'name'          => __( 'Below Header', 'storefront' ),
 		'id'            => 'header-1',
 		'description'   => 'Widgets added to this region will appear beneath the header and above the main content.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',

@@ -1,7 +1,11 @@
 # Storefront Changelog
 
-### * 2016.01.xx - 1.6.1
+### * 2016.01.18 - 1.6.1
 * **Tweak** - Jetpack integration updates.
+* **Tweak** - Styling for WooCommerce 2.5's terms positioning on the checkout.
+* **Tweak** - Styling for WooCommerce 2.5's totals inc tax on the cart.
+* **Tweak** - Removed the bottom border on the cart / checkout pages.
+* **Tweak** - Renamed 'Header' widget region to 'Below Header'.
 * **Fix** - WooCommerce active filters widget now styled.
 * **Fix** - Image gallery layouts.
 * **Fix** - Sticky order review feature now accounts for any size of payment box to avoid cutting off the Place Order button.

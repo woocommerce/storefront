@@ -930,10 +930,11 @@ form.checkout {
 		clear: both;
 		float: none;
 		margin-bottom: 0;
-		margin-top: 1em;
+		margin-bottom: 1em;
 
 		label {
-			display: inline;
+			display: inline-block;
+			margin-left: .618em;
 		}
 
 		input {
@@ -1779,6 +1780,14 @@ dl.variation {
 	/**
 	 * Cart
 	 */
+	.woocommerce-cart,
+	.woocommerce-checkout {
+		.hentry {
+			border-bottom: 0;
+			padding-bottom: 0;
+		}
+	}
+
 	.page-template-template-fullwidth-php {
 		table.cart {
 			.product-thumbnail {
@@ -1869,6 +1878,12 @@ dl.variation {
 			@include span(last 5 of 9);
 		  	margin: 0;
 		  	clear: right;
+		}
+
+		.cart_totals {
+			small.includes_tax {
+				display: block;
+			}
 		}
 
 		.shipping_calculator {
