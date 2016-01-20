@@ -99,11 +99,11 @@ module.exports = function( grunt ) {
 					'assets/css/welcome-screen/*.scss',
 					'assets/css/woocommerce/*.scss',
 					'assets/css/jetpack/*.scss',
-					'sass/base/*.scss',
-					'sass/components/*.scss',
-					'sass/layout/*.scss',
-					'sass/utils/*.scss',
-					'sass/vendors/*.scss'
+					'assets/sass/base/*.scss',
+					'assets/sass/components/*.scss',
+					'assets/sass/layout/*.scss',
+					'assets/sass/utils/*.scss',
+					'assets/sass/vendors/*.scss'
 				],
 				tasks: [
 					'sass',
