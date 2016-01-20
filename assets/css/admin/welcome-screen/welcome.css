@@ -1,0 +1,156 @@
+.appearance_page_storefront-welcome .col {
+  margin-bottom: 0; }
+
+.appearance_page_storefront-welcome .col2-set::after {
+  clear: both;
+  content: "";
+  display: table; }
+
+.appearance_page_storefront-welcome .col2-set .col-1,
+.appearance_page_storefront-welcome .col2-set .col-2 {
+  width: 48%;
+  float: left; }
+
+.appearance_page_storefront-welcome .col2-set .col-2 {
+  float: right; }
+
+.appearance_page_storefront-welcome .sf-title {
+  float: left;
+  margin-bottom: .53em; }
+
+.appearance_page_storefront-welcome .version {
+  font-size: 30%;
+  padding: 0.387em 0.857em;
+  border-radius: 3px;
+  background-color: #fff;
+  font-weight: 700; }
+
+.appearance_page_storefront-welcome .sf-review {
+  max-width: 360px;
+  float: right;
+  margin-bottom: .53em; }
+  .appearance_page_storefront-welcome .sf-review p {
+    font-size: .857em; }
+  .appearance_page_storefront-welcome .sf-review + .boxed {
+    clear: both; }
+
+.appearance_page_storefront-welcome .boxed {
+  padding: 1.387em 2.244em;
+  background: #fff;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 2.618em; }
+  .appearance_page_storefront-welcome .boxed > h2:first-child {
+    font-weight: 700;
+    font-size: 1.1em; }
+  .appearance_page_storefront-welcome .boxed .button {
+    line-height: 16px;
+    height: 38px;
+    padding: 10px 20px; }
+  .appearance_page_storefront-welcome .boxed p,
+  .appearance_page_storefront-welcome .boxed ul {
+    font-size: .857em; }
+  .appearance_page_storefront-welcome .boxed ul.extensions::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .appearance_page_storefront-welcome .boxed ul.extensions li {
+    width: 48%;
+    float: left; }
+    .appearance_page_storefront-welcome .boxed ul.extensions li:nth-child(2n) {
+      float: right; }
+  .appearance_page_storefront-welcome .boxed:before {
+    content: "\f127";
+    display: block;
+    position: absolute;
+    top: 1.387em;
+    right: 1.387em;
+    font-size: 1.618em;
+    font-family: 'Dashicons';
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased; }
+  .appearance_page_storefront-welcome .boxed.enrich:before {
+    content: "\f513"; }
+  .appearance_page_storefront-welcome .boxed.enhance {
+    border-width: 2px;
+    border-color: #0073aa; }
+    .appearance_page_storefront-welcome .boxed.enhance:before {
+      content: "\f502";
+      color: #0073aa; }
+  .appearance_page_storefront-welcome .boxed.free-plugins:before {
+    content: "\f106"; }
+  .appearance_page_storefront-welcome .boxed.contribute:before {
+    content: "\f487"; }
+  .appearance_page_storefront-welcome .boxed.suggest:before {
+    content: "\f488"; }
+  .appearance_page_storefront-welcome .boxed.child-themes:before {
+    content: "\f309"; }
+  .appearance_page_storefront-welcome .boxed.child-themes .child-theme-title {
+    font-size: .857em; }
+  .appearance_page_storefront-welcome .boxed.child-themes .child-theme {
+    width: 48%;
+    float: left;
+    clear: both;
+    margin-bottom: 1.618em; }
+    .appearance_page_storefront-welcome .boxed.child-themes .child-theme img {
+      margin-bottom: 1em;
+      border: 2px solid #ddd; }
+    .appearance_page_storefront-welcome .boxed.child-themes .child-theme:nth-child(2n) {
+      float: right;
+      clear: none; }
+  .appearance_page_storefront-welcome .boxed.news .col2-set h4 {
+    font-size: .857em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #999; }
+  .appearance_page_storefront-welcome .boxed.news .col2-set ul {
+    margin-top: 0; }
+  .appearance_page_storefront-welcome .boxed.news h5 {
+    margin: 0; }
+  .appearance_page_storefront-welcome .boxed.news .date {
+    text-transform: uppercase;
+    color: #999;
+    font-size: .75em; }
+  .appearance_page_storefront-welcome .boxed.news:before {
+    content: "\f319"; }
+
+.appearance_page_storefront-welcome .free {
+  text-transform: uppercase;
+  color: #fff;
+  background: #45B964;
+  display: inline-block;
+  padding: 2px 8px;
+  float: right;
+  margin: 0;
+  font-size: .75em !important;
+  border-radius: 3px; }
+
+.appearance_page_storefront-welcome .activated {
+  background: #45B964;
+  color: #fff;
+  font-size: 13px;
+  line-height: 26px;
+  height: 26px;
+  margin: 0;
+  padding: 9px 20px;
+  display: inline-block;
+  border-radius: 3px; }
+  .appearance_page_storefront-welcome .activated span {
+    line-height: 26px; }
+
+.appearance_page_storefront-welcome .automattic {
+  text-align: center;
+  clear: both; }
+  .appearance_page_storefront-welcome .automattic p {
+    font-size: .75em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aaa; }
+  .appearance_page_storefront-welcome .automattic img {
+    max-height: 9px;
+    margin: 0 0.53em;
+    margin-top: -3px;
+    opacity: 0.5; }
