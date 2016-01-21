@@ -106,7 +106,7 @@ class Storefront_Admin {
 	 * @since 1.0.0
 	 */
 	public function welcome_intro() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/intro.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/component-intro.php' );
 	}
 
 
@@ -115,7 +115,7 @@ class Storefront_Admin {
 	 * @since 1.5.2
 	 */
 	public function welcome_enhance() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/enhance.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/component-enhance.php' );
 	}
 
 	/**
@@ -123,7 +123,7 @@ class Storefront_Admin {
 	 * @since 1.5.2
 	 */
 	public function welcome_contribute() {
-		require_once( get_template_directory() . '/inc/admin/welcome-screen/sections/contribute.php' );
+		require_once( get_template_directory() . '/inc/admin/welcome-screen/component-contribute.php' );
 	}
 }
 

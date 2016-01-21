@@ -9,8 +9,8 @@
  * Initialize all the things.
  */
 include_once( 'inc/class-storefront.php' );
-include_once( 'inc/class-storefront-customizer.php' );
-include_once( 'inc/class-storefront-jetpack.php' );
+include_once( 'inc/jetpack/class-storefront-jetpack.php' );
+include_once( 'inc/customizer/class-storefront-customizer.php' );
 
 include_once( 'inc/storefront-functions.php' );
 include_once( 'inc/storefront-template-hooks.php' );
