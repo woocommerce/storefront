@@ -57,6 +57,21 @@ function storefront_get_content_background_color() {
 }
 
 /**
+ * Apply inline style to the Storefront header.
+ * @uses  get_header_image()
+ * @since  2.0.0
+ */
+function storefront_header_styles() {
+    $styles = apply_filters( 'storefront_header_styles', array(
+        'background-image' => 'url(' . esc_url( get_header_image() ) . ')',
+        ) );
+
+    foreach( $styles as $style => $value ) {
+        echo $style . ': ' . $value . '; ';
+    }
+}
+
+/**
  * Adjust a hex color brightness
  * Allows us to create hover styles for custom link colors
  * @param  strong $hex   hex color e.g. #111111
