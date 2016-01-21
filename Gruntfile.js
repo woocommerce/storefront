@@ -40,12 +40,24 @@ module.exports = function( grunt ) {
 			customizer: {
 				files: [{
 					expand: true,
-					cwd: 'assets/js/',
+					cwd: 'assets/js/customizer/',
 					src: [
 						'*.js',
 						'!*.min.js'
 					],
-					dest: 'assets/js/',
+					dest: 'assets/js/customizer/',
+					ext: '.min.js'
+				}]
+			},
+			woocommerce: {
+				files: [{
+					expand: true,
+					cwd: 'assets/js/woocommerce/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: 'assets/js/woocommerce/',
 					ext: '.min.js'
 				}]
 			}
