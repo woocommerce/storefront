@@ -93,6 +93,59 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
 }
 
 /**
+ * Sanitizes choices (selects / radios)
+ * Checks that the input matches one of the available choices
+ *
+ * @since  1.3.0
+ */
+function storefront_sanitize_choices( $input, $setting ) {
+    // Ensure input is a slug.
+    $input = sanitize_key( $input );
+
+    // Get list of choices from the control associated with the setting.
+    $choices = $setting->manager->get_control( $setting->id )->choices;
+
+    // If the input is a valid key, return it; otherwise, return the default.
+    return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+
+/**
+ * Checkbox sanitization callback.
+ *
+ * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
+ * as a boolean value, either TRUE or FALSE.
+ *
+ * @param bool $checked Whether the checkbox is checked.
+ * @return bool Whether the checkbox is checked.
+ * @since  1.5.0
+ */
+function storefront_sanitize_checkbox( $checked ) {
+    return (bool) $checked;
+}
+
+/**
+ * Sanitizes the layout setting
+ *
+ * Ensures only array keys matching the original settings specified in add_control() are valid
+ *
+ * @since 1.0.3
+ */
+function storefront_sanitize_layout( $input ) {
+    _deprecated_function( 'storefront_sanitize_layout', '2.0', 'storefront_sanitize_choices' );
+
+    $valid = array(
+        'right' => 'Right',
+        'left'  => 'Left',
+        );
+
+    if ( array_key_exists( $input, $valid ) ) {
+        return $input;
+    } else {
+        return '';
+    }
+}
+
+/**
  * Storefront Sanitize Hex Color
  *
  * @todo remove in 2.1.

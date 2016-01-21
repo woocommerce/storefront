@@ -366,7 +366,7 @@ class Storefront_Customizer {
 
 		$wp_customize->add_setting( 'storefront_layout', array(
 			'default'    		=> apply_filters( 'storefront_default_layout', $layout = is_rtl() ? 'left' : 'right' ),
-			'sanitize_callback' => 'storefront_sanitize_layout',
+			'sanitize_callback' => 'storefront_sanitize_choices',
 		) );
 
 		$wp_customize->add_control( new Storefront_Custom_Radio_Image_Control( $wp_customize, 'storefront_layout', array(
@@ -614,58 +614,7 @@ class Storefront_Customizer {
 	 * @since  1.0.0
 	 */
 	public function customize_preview_js() {
-		wp_enqueue_script( 'storefront_customizer', get_template_directory_uri() . '/assets/js/customizer/customizer.min.js', array( 'customize-preview' ), '1.15', true );
-	}
-
-	/**
-	 * Sanitizes choices (selects / radios)
-	 * Checks that the input matches one of the available choices
-	 *
-	 * @since  1.3.0
-	 */
-    public function storefront_sanitize_choices( $input, $setting ) {
-        // Ensure input is a slug.
-        $input = sanitize_key( $input );
-
-        // Get list of choices from the control associated with the setting.
-        $choices = $setting->manager->get_control( $setting->id )->choices;
-
-        // If the input is a valid key, return it; otherwise, return the default.
-        return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-    }
-
-	/**
-	 * Sanitizes the layout setting
-	 *
-	 * Ensures only array keys matching the original settings specified in add_control() are valid
-	 *
-	 * @since 1.0.3
-	 */
-    public function storefront_sanitize_layout( $input ) {
-        $valid = array(
-            'right' => 'Right',
-            'left'  => 'Left',
-            );
-
-        if ( array_key_exists( $input, $valid ) ) {
-            return $input;
-        } else {
-            return '';
-        }
-    }
-
-	/**
-	 * Checkbox sanitization callback.
-	 *
-	 * Sanitization callback for 'checkbox' type controls. This callback sanitizes `$checked`
-	 * as a boolean value, either TRUE or FALSE.
-	 *
-	 * @param bool $checked Whether the checkbox is checked.
-	 * @return bool Whether the checkbox is checked.
-	 * @since  1.5.0
-	 */
-	public function storefront_sanitize_checkbox( $checked ) {
-	    return (bool) $checked;
+		wp_enqueue_script( 'storefront-customizer', get_template_directory_uri() . '/assets/js/customizer/customizer.min.js', array( 'customize-preview' ), '1.16', true );
 	}
 
 	/**
