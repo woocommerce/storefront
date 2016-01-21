@@ -24,8 +24,6 @@ class Storefront {
 		add_action( 'widgets_init',	array( $this, 'widgets_init' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce
-		add_action( 'edit_category', array( $this, 'category_transient_flusher' ) );
-		add_action( 'save_post', array( $this, 'category_transient_flusher' ) );
 		add_filter( 'body_class', array( $this, 'body_classes' ) );
 		add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 	}
@@ -235,45 +233,6 @@ class Storefront {
 		}
 
 		return $classes;
-	}
-
-	/**
-	 * Returns true if a blog has more than 1 category.
-	 *
-	 * @return bool
-	 */
-	public function categorized_blog() {
-		if ( false === ( $all_the_cool_cats = get_transient( 'storefront_categories' ) ) ) {
-			// Create an array of all the categories that are attached to posts.
-			$all_the_cool_cats = get_categories( array(
-				'fields'     => 'ids',
-				'hide_empty' => 1,
-
-				// We only need to know if there is more than one category.
-				'number'     => 2,
-			) );
-
-			// Count the number of categories that are attached to the posts.
-			$all_the_cool_cats = count( $all_the_cool_cats );
-
-			set_transient( 'storefront_categories', $all_the_cool_cats );
-		}
-
-		if ( $all_the_cool_cats > 1 ) {
-			// This blog has more than 1 category so storefront_categorized_blog should return true.
-			return true;
-		} else {
-			// This blog has only 1 category so storefront_categorized_blog should return false.
-			return false;
-		}
-	}
-
-	/**
-	 * Flush out the transients used in storefront_categorized_blog.
-	 */
-	public function category_transient_flusher() {
-		// Like, beat it. Dig?
-		delete_transient( 'storefront_categories' );
 	}
 }
 

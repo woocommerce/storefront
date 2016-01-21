@@ -109,3 +109,9 @@ function storefront_sanitize_hex_color( $color ) {
 
     return null;
 }
+
+function storefront_categorized_blog() {
+    _deprecated_function( 'storefront_categorized_blog', '2.0' );
+
+    return null;
+}

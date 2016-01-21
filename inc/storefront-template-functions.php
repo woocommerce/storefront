@@ -419,7 +419,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
-			if ( $categories_list && storefront_categorized_blog() ) : ?>
+			if ( $categories_list ) : ?>
 				<span class="cat-links">
 					<?php
 					echo '<span class="screen-reader-text">' . esc_attr( __( 'Categories: ', 'storefront' ) ) . '</span>';
