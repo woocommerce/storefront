@@ -66,7 +66,7 @@ class Storefront_Customizer {
 
 		// Change header image section title & priority
 		$wp_customize->get_section( 'header_image' )->title 		= __( 'Header', 'storefront' );
-		$wp_customize->get_section( 'header_image' )->priority 		= 35;
+		$wp_customize->get_section( 'header_image' )->priority 		= 25;
 
 		/**
 		 * Custom controls
@@ -218,7 +218,7 @@ class Storefront_Customizer {
 		 */
 		$wp_customize->add_section( 'storefront_footer' , array(
 			'title'      	=> __( 'Footer', 'storefront' ),
-			'priority'   	=> 40,
+			'priority'   	=> 28,
 			'description' 	=> __( 'Customise the look & feel of your web site footer.', 'storefront' ),
 		) );
 
