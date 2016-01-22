@@ -1,6 +1,7 @@
 # Compiled CSS
-/inc/woocommerce/css/*.css
-/inc/admin/welcome-screen/css/*.css
+/assets/css/woocommerce/*.css
+/assets/css/admin/welcome-screen/*.css
+/assets/css/jetpack/*.css
 style.css
 style-rtl.css
 
