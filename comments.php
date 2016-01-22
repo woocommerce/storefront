@@ -52,14 +52,14 @@ if ( post_password_required() ) {
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
+		<?php endif; // check for comment navigation
 
-	<?php endif; // have_comments() ?>
+	endif; // have_comments()
 
-	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'storefront' ); ?></p>
-	<?php endif; ?>
+	<?php endif;
 
-	<?php comment_form(); ?>
+	comment_form(); ?>
 
 </div><!-- #comments -->

@@ -27,9 +27,7 @@ get_header(); ?>
 					} else {
 						get_search_form();
 					}
-					?>
 
-					<?php
 					if ( is_woocommerce_activated() ) {
 
 						echo '<div class="fourohfour-columns-2">';

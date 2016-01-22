@@ -1,0 +1,135 @@
+/**
+ * WooCommerce Bookings
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../assets/sass/utils/variables';
+@import '../../../assets/sass/utils/mixins';
+
+#wc-bookings-booking-form {
+	border: 0;
+	padding: 0;
+
+	.wc-bookings-booking-cost {
+		margin: 0;
+		border: 0;
+		background: rgba(0,0,0,0.05);
+	}
+
+	.wc-bookings-date-picker-date-fields {
+		input {
+			margin-bottom: 0;
+		}
+
+		label {
+			width: 20%;
+		}
+	}
+
+	.wc-bookings-date-picker {
+		.ui-datepicker-header {
+			border: 0;
+			background-color: $color_body;
+			background-image: none;
+		}
+
+		.ui-widget-content {
+			box-shadow: none;
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			background: none;
+		}
+
+		.ui-datepicker {
+			.ui-datepicker-prev,
+			.ui-datepicker-next {
+				background-color: rgba(0,0,0,0.1) !important;
+			}
+
+			th {
+				background: rgba(0,0,0,0.1);
+				border: 0;
+				color: $color_body;
+			}
+
+			td {
+				border: 0;
+
+				&.ui-state-disabled {
+					background: none;
+
+					.ui-state-default {
+						background-color: rgba(0,0,0,0.1);
+						color: $color_body;
+					}
+				}
+
+				&.bookable {
+					a {
+						text-shadow: none;
+						background-color: $color_links !important;
+
+						&:hover {
+							background-color: $color_links !important;
+						}
+
+						&.ui-state-active {
+							box-shadow:
+								inset 0 0 0 1.618em rgba(0,0,0,0.1);
+						}
+					}
+				}
+
+				&.ui-datepicker-current-day,
+				&.ui-datepicker-today {
+					background-color: rgba(0,0,0,0.1) !important;
+
+					a {
+						background-color: rgba(0,0,0,0.1) !important;
+					}
+				}
+			}
+		}
+	}
+
+	.wc-bookings-date-picker-choose-date {
+		color: $color_links;
+	}
+
+	.block-picker {
+		text-align: left;
+
+		li {
+			a {
+				border: 0 !important;
+				padding: .236em .53em;
+				display: inline-block;
+				text-align: center;
+				color: #fff;
+				background-color: $color_body;
+
+				&:hover {
+					color: #fff;
+					background-color: $color_links;
+					text-decoration: none;
+					border: 0;
+				}
+
+				&.selected {
+					background-color: $color_links;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.product-type-booking {
+	form.cart {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
