@@ -55,11 +55,6 @@ h1,
 	font-size: 2.244em;
 	letter-spacing: -1px;
 	line-height: 1.214;
-	font-weight: 300;
-
-	a {
-		font-weight: 300;
-	}
 }
 
 h2,
@@ -225,8 +220,6 @@ a {
 }
 
 // Wait, what..?
-// Don't look at the following, and definitely dont look at
-// inc/functions/extras.php for more information...
 .storefront-cute * {
 	font-family: "Comic Sans MS", sans-serif;
 }
