@@ -8,22 +8,22 @@
 /**
  * Initialize all the things.
  */
-include_once( 'inc/class-storefront.php' );
-include_once( 'inc/jetpack/class-storefront-jetpack.php' );
-include_once( 'inc/customizer/class-storefront-customizer.php' );
+require 'inc/class-storefront.php';
+require 'inc/jetpack/class-storefront-jetpack.php';
+require 'inc/customizer/class-storefront-customizer.php';
 
-include_once( 'inc/storefront-functions.php' );
-include_once( 'inc/storefront-template-hooks.php' );
-include_once( 'inc/storefront-template-functions.php' );
+require 'inc/storefront-functions.php';
+require 'inc/storefront-template-hooks.php';
+require 'inc/storefront-template-functions.php';
 
 if ( is_woocommerce_activated() ) {
-	include_once( 'inc/woocommerce/class-storefront-woocommerce.php' );
-	include_once( 'inc/woocommerce/storefront-woocommerce-template-hooks.php' );
-	include_once( 'inc/woocommerce/storefront-woocommerce-template-functions.php' );
+	require 'inc/woocommerce/class-storefront-woocommerce.php';
+	require 'inc/woocommerce/storefront-woocommerce-template-hooks.php';
+	require 'inc/woocommerce/storefront-woocommerce-template-functions.php';
 }
 
 if ( is_admin() ) {
-	include_once( 'inc/admin/class-storefront-admin.php' );
+	require 'inc/admin/class-storefront-admin.php';
 }
 
 /**
