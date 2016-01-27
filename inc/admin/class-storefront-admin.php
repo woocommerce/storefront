@@ -67,6 +67,8 @@ class Storefront_Admin {
 			wp_style_add_data( 'storefront-welcome-screen', 'rtl', 'replace' );
 			wp_enqueue_style( 'thickbox' );
 			wp_enqueue_script( 'thickbox' );
+			wp_enqueue_script( 'masonry' );
+			wp_enqueue_script( 'storefront-welcome-screen-script', get_template_directory_uri() . '/assets/js/admin/welcome-screen/welcome.min.js', array( 'masonry'), $storefront_version );
 		}
 	}
 

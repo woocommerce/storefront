@@ -7,14 +7,14 @@
 $storefront = wp_get_theme( 'storefront' );
 
 ?>
-<div class="col col2-set" style="overflow: hidden;">
-	<h1 class="sf-title"><?php echo '<strong>Storefront</strong> <sup class="version">' . esc_attr( $storefront['Version'] ) . '</sup>'; ?></h1>
+<h1 class="sf-title"><?php echo '<strong>Storefront</strong> <sup class="version">' . esc_attr( $storefront['Version'] ) . '</sup>'; ?></h1>
 
-	<section class="sf-review">
-		<p><?php echo sprintf( esc_html__( '%sEnjoying %s?%s Why not %sleave a review%s on WordPress.org? We\'d really appreciate it!', 'storefront' ), '<strong>', 'Storefront', '</strong>', '<a href="https://wordpress.org/themes/storefront">', '</a>' ); ?></p>
-	</section>
+<section class="sf-review">
+	<p><?php echo sprintf( esc_html__( '%sEnjoying %s?%s Why not %sleave a review%s on WordPress.org? We\'d really appreciate it!', 'storefront' ), '<strong>', 'Storefront', '</strong>', '<a href="https://wordpress.org/themes/storefront">', '</a>' ); ?></p>
+</section>
 
-	<div class="col-1 boxed enrich">
+<div class="boxes">
+	<div class="boxed enrich">
 		<h2><?php printf( esc_html__( 'Built to enrich your %s store', 'storefront' ), 'WooCommerce' ); ?></h2>
 
 		<p><?php printf( esc_html__( 'Although %s works fine as a regular WordPress theme, it really shines when used for an online store. Install %s and start selling now.', 'storefront' ), 'Storefront', 'WooCommerce' ); ?></p>
@@ -26,7 +26,7 @@ $storefront = wp_get_theme( 'storefront' );
 		<?php } ?>
 	</div>
 
-	<div class="col-2 boxed news">
+	<div class="boxed news">
 		<h2><?php printf( esc_html__( 'Latest %s news', 'storefront' ), 'Storefront' ); ?></h2>
 		<div class="col2-set">
 			<div class="col-1 news">
@@ -59,4 +59,3 @@ $storefront = wp_get_theme( 'storefront' );
 			</div>
 		</div>
 	</div>
-</div>
