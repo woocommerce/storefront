@@ -47,7 +47,7 @@ $green: #45B964;
 	}
 
 	.boxed {
-		padding: 1.387em 2.244em;
+		padding: 1.387em 2.244em 2.244em 2.244em;
 		background: #fff;
 		box-sizing: border-box;
 		border: 1px solid #ddd;
@@ -68,6 +68,13 @@ $green: #45B964;
 			padding: 10px 20px;
 		}
 
+		.more-button {
+			padding: 1em 0 0 0;
+			border-top: 1px solid #eee;
+			clear: both;
+			text-align: right;
+		}
+
 		p,
 		ul {
 			font-size: .857em;
@@ -76,6 +83,7 @@ $green: #45B964;
 		ul {
 			&.extensions {
 				@include clearfix;
+				margin-bottom: 0;
 
 				li {
 					width: 50%;

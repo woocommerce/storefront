@@ -38,9 +38,11 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 			?>
 		</ul>
 
-		<a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary">
-			<?php printf( esc_html__( 'View all %s extensions &rarr;', 'storefront' ), 'Storefront' ); ?>
-		</a>
+		<div class="more-button">
+			<a href="http://www.woothemes.com/product-category/storefront-extensions?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary">
+				<?php printf( esc_html__( 'View all %s extensions &rarr;', 'storefront' ), 'Storefront' ); ?>
+			</a>
+		</div>
 
 	</div>
 
@@ -76,34 +78,36 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 
 		<?php
 		if ( $child_themes ) {
-				foreach ( $child_themes as $child_theme ) {
-					foreach ( $child_theme as $product ) {
-						$price 				= $product->price;
+			foreach ( $child_themes as $child_theme ) {
+				foreach ( $child_theme as $product ) {
+					$price 				= $product->price;
 
-						if ( $price == '&#36;0.00' ) {
-							$price = __( 'Free!', 'storefront' );
-						}
-
-						$link 				= $product->link;
-						$image 				= $product->image;
-						$excerpt			= $product->excerpt;
-						$title 				= $product->title; ?>
-
-						<div class="child-theme">
-							<a href="<?php echo esc_url( $link ); ?>">
-								<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $title ); ?>" />
-								<span class="child-theme-title"><?php echo esc_attr( $title ); ?></span>
-								<span class="price"><?php echo $price; ?></span>
-							</a>
-						</div>
-					<?php
+					if ( $price == '&#36;0.00' ) {
+						$price = __( 'Free!', 'storefront' );
 					}
+
+					$link 				= $product->link;
+					$image 				= $product->image;
+					$excerpt			= $product->excerpt;
+					$title 				= $product->title; ?>
+
+					<div class="child-theme">
+						<a href="<?php echo esc_url( $link ); ?>">
+							<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $title ); ?>" />
+							<span class="child-theme-title"><?php echo esc_attr( $title ); ?></span>
+							<span class="price"><?php echo $price; ?></span>
+						</a>
+					</div>
+				<?php
 				}
-			} else {
-				echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
 			}
-			?>
-		<a href="http://www.woothemes.com/product-category/themes/storefront-child-theme-themes?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary">
-			<?php printf( esc_html__( 'View all %s child themes &rarr;', 'storefront' ), 'Storefront' ); ?>
-		</a>
+		} else {
+			echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
+		}
+		?>
+		<div class="more-button">
+			<a href="http://www.woothemes.com/product-category/themes/storefront-child-theme-themes?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="button button-primary">
+				<?php printf( esc_html__( 'View all %s child themes &rarr;', 'storefront' ), 'Storefront' ); ?>
+			</a>
+		</div>
 	</div>
