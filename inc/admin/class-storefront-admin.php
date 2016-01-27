@@ -64,6 +64,7 @@ class Storefront_Admin {
 
 		if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
 			wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/assets/css/admin/welcome-screen/welcome.css', $storefront_version );
+			wp_style_add_data( 'storefront-welcome-screen', 'rtl', 'replace' );
 			wp_enqueue_style( 'thickbox' );
 			wp_enqueue_script( 'thickbox' );
 		}
@@ -124,6 +125,23 @@ class Storefront_Admin {
 	 */
 	public function welcome_contribute() {
 		require_once( get_template_directory() . '/inc/admin/welcome-screen/component-contribute.php' );
+	}
+
+	/**
+	 * Get product data from json
+	 * @param  string $url       URL to the json file
+	 * @param  string $transient Name the transient
+	 * @return [type]            [description]
+	 */
+	public function get_storefront_product_data( $url, $transient ) {
+		$raw_products 	= wp_safe_remote_get( $url );
+		$products 		= json_decode( wp_remote_retrieve_body( $raw_products ) );
+
+		if ( ! empty( $extensions_json->products ) ) {
+			set_transient( $transient, $raw_products, WEEK_IN_SECONDS );
+		}
+
+		return $products;
 	}
 }
 

@@ -1,6 +1,16 @@
 @import 'bourbon';
 
+$green: #45B964;
+
 .appearance_page_storefront-welcome {
+	.storefront-notice {
+		padding: 1em 1.387em;
+		border: 1px solid #ddd;
+		color: #999;
+		border-radius: 2px;
+		background-color: #fafafa;
+	}
+
 	.col {
 		margin-bottom: 0;
 	}
@@ -76,11 +86,49 @@
 				@include clearfix;
 
 				li {
-					width: 48%;
+					width: 50%;
 					float: left;
+					clear: both;
+					border-top: 1px solid #eee;
+					padding-top: 2em;
+					padding-bottom: 2em;
+					padding-right: 2em;
+					margin-bottom: 0;
+					box-sizing: border-box;
+					position: relative;
+
+					&:after {
+						content: "";
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						width: 1px;
+						background-color: #eee;
+					}
+
+					a {
+						text-decoration: none;
+
+						.price {
+							color: $green;
+						}
+					}
+
+					p {
+						margin-bottom: 0;
+					}
 
 					&:nth-child(2n) {
 						float: right;
+						clear: none;
+						padding-right: 0;
+						padding-left: 2em;
+
+						&:after {
+							right: auto;
+							left: -1px;
+						}
 					}
 				}
 			}
@@ -131,12 +179,26 @@
 		}
 
 		&.child-themes {
+			.storefront-notice {
+				font-size: .857em;
+				margin-bottom: 1em;
+			}
+
 			&:before {
 				content: "\f309";
 			}
 
 			.child-theme-title {
 				font-size: .857em;
+			}
+
+			a {
+				text-decoration: none;
+			}
+
+			.price {
+				float: right;
+				color: $green;
 			}
 
 			.child-theme {
@@ -191,7 +253,7 @@
 	.free {
 		text-transform: uppercase;
 		color: #fff;
-		background: #45B964;
+		background: $green;
 		display: inline-block;
 		padding: 2px 8px;
 		float: right;
@@ -201,7 +263,7 @@
 	}
 
 	.activated {
-		background: #45B964;
+		background: $green;
 		color: #fff;
 		font-size: 13px;
 		line-height: 26px;
