@@ -27,7 +27,7 @@ remove_action( 'woocommerce_before_shop_loop', 		'woocommerce_result_count', 			
 remove_action( 'woocommerce_before_shop_loop', 		'woocommerce_catalog_ordering', 			30 );
 add_action( 'woocommerce_before_main_content', 		'storefront_before_content', 				10 );
 add_action( 'woocommerce_after_main_content', 		'storefront_after_content', 				10 );
-add_action( 'storefront_content_top', 				'storefront_shop_messages', 				1 );
+add_action( 'storefront_content_top', 				'storefront_shop_messages', 				15 );
 add_action( 'storefront_content_top', 				'woocommerce_breadcrumb', 					10 );
 
 add_action( 'woocommerce_after_shop_loop',			'storefront_sorting_wrapper',				9 );
