@@ -466,10 +466,6 @@ class Storefront_Customizer {
 			color: ' . $heading_color . ';
 		}
 
-		.hentry .entry-header {
-			border-color: ' . $heading_color . ';
-		}
-
 		.widget h1 {
 			border-bottom-color: ' . $heading_color . ';
 		}

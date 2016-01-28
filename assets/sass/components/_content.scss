@@ -15,8 +15,6 @@
 
 .hentry {
 	margin: 0 0 4.236em;
-	padding-bottom: 3.631em;
-	border-bottom: 6px solid rgba(0,0,0,0.05);
 
 	.wp-post-image {
 		margin-bottom: 1.618em;
@@ -25,14 +23,8 @@
 	}
 
 	.entry-header {
-		border-bottom: 3px solid $color_body;
-		margin-bottom: 3.631em;
-
-		h1 {
-			border-bottom: 1px solid $color_border;
-			padding-bottom: .618em;
-			margin-bottom: 3px;
-		}
+		margin-bottom: 2.618em;
+		border-bottom: 1px solid $color_border;
 
 		.posted-on,
 		.byline {

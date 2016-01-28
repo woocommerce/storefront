@@ -437,7 +437,7 @@ a.reset_variations {
 	margin-bottom: 4.236em;
 	font-size: .857em;
 	padding: 1em 0;
-	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-bottom: 1px dotted $color_border;
 
 	a.home {
 		&:before {
@@ -1404,9 +1404,6 @@ dl.variation {
  * Homepage
  */
 .storefront-product-section {
-	border-bottom: 3px solid rgba(0,0,0,0.025);
-	margin-bottom: 4.236em;
-
 	.section-title {
 		text-align: center;
 	}
