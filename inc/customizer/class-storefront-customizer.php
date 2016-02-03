@@ -122,7 +122,7 @@ class Storefront_Customizer {
 		 * Accent Color
 		 */
 		$wp_customize->add_setting( 'storefront_accent_color', array(
-			'default'           => apply_filters( 'storefront_default_accent_color', '#96588a' ),
+			'default'           => apply_filters( 'storefront_default_accent_color', '#FFA107' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 
@@ -274,7 +274,7 @@ class Storefront_Customizer {
 		 * Footer link color
 		 */
 		$wp_customize->add_setting( 'storefront_footer_link_color', array(
-			'default'           => apply_filters( 'storefront_default_footer_link_color', '#96588a' ),
+			'default'           => apply_filters( 'storefront_default_footer_link_color', '#FFA107' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -330,7 +330,7 @@ class Storefront_Customizer {
 		 * Button alt background color
 		 */
 		$wp_customize->add_setting( 'storefront_button_alt_background_color', array(
-			'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#96588a' ),
+			'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#FFA107' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 
@@ -409,13 +409,13 @@ class Storefront_Customizer {
 	 * @since 1.0.0
 	 */
 	public function add_customizer_css() {
-		$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#96588a' ) );
+		$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#FFA107' ) );
 		$header_background_color 		= get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) );
 		$header_link_color 				= get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#ffffff' ) );
 		$header_text_color 				= get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) );
 
 		$footer_background_color 		= get_theme_mod( 'storefront_footer_background_color', apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ) );
-		$footer_link_color 				= get_theme_mod( 'storefront_footer_link_color', apply_filters( 'storefront_default_footer_link_color', '#96588a' ) );
+		$footer_link_color 				= get_theme_mod( 'storefront_footer_link_color', apply_filters( 'storefront_default_footer_link_color', '#FFA107' ) );
 		$footer_heading_color 			= get_theme_mod( 'storefront_footer_heading_color', apply_filters( 'storefront_default_footer_heading_color', '#494c50' ) );
 		$footer_text_color 				= get_theme_mod( 'storefront_footer_text_color', apply_filters( 'storefront_default_footer_text_color', '#61656b' ) );
 
@@ -423,7 +423,7 @@ class Storefront_Customizer {
 		$heading_color 					= get_theme_mod( 'storefront_heading_color', apply_filters( 'storefront_default_heading_color', '#484c51' ) );
 		$button_background_color 		= get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#60646c' ) );
 		$button_text_color 				= get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) );
-		$button_alt_background_color 	= get_theme_mod( 'storefront_button_alt_background_color', apply_filters( 'storefront_default_button_alt_background_color', '#96588a' ) );
+		$button_alt_background_color 	= get_theme_mod( 'storefront_button_alt_background_color', apply_filters( 'storefront_default_button_alt_background_color', '#FFA107' ) );
 		$button_alt_text_color 			= get_theme_mod( 'storefront_button_alt_text_color', apply_filters( 'storefront_default_button_alt_text_color', '#ffffff' ) );
 
 		$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );

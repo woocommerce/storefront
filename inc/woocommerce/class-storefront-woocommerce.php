@@ -246,7 +246,7 @@ class Storefront_WooCommerce {
 	 */
 	public function add_integrations_customizer_css() {
 
-		$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#96588a' ) );
+		$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#FFA107' ) );
 		$header_text_color 				= get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) );
 		$header_background_color 		= get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) );
 		$text_color 					= get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#60646c' ) );
