@@ -1446,7 +1446,7 @@ dl.variation {
 		position: relative;
 
 		.cart-contents {
-			padding: 0 1em 2.244em;
+			padding: 0 0 2.244em 0;
 			display: block;
 			position: relative;
 			background-color: transparent;
@@ -1455,7 +1455,7 @@ dl.variation {
 			text-indent: 0;
 
 			&:after {
-				right: 1.618em;
+				right: 0;
 				line-height: 1;
 				height: 1em;
 				width: 1em;
