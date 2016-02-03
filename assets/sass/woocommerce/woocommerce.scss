@@ -437,7 +437,7 @@ a.reset_variations {
 	margin-bottom: 4.236em;
 	font-size: .857em;
 	padding: 1em 0;
-	border-bottom: 1px dotted $color_border;
+	background-color: rgba(#000,.025);
 
 	a.home {
 		&:before {
