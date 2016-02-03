@@ -122,7 +122,7 @@ class Storefront_Customizer {
 		 * Accent Color
 		 */
 		$wp_customize->add_setting( 'storefront_accent_color', array(
-			'default'           => apply_filters( 'storefront_default_accent_color', '#FFA107' ),
+			'default'           => apply_filters( 'storefront_default_accent_color', '#2c2d33' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 
@@ -274,7 +274,7 @@ class Storefront_Customizer {
 		 * Footer link color
 		 */
 		$wp_customize->add_setting( 'storefront_footer_link_color', array(
-			'default'           => apply_filters( 'storefront_default_footer_link_color', '#FFA107' ),
+			'default'           => apply_filters( 'storefront_default_footer_link_color', '#2c2d33' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -330,7 +330,7 @@ class Storefront_Customizer {
 		 * Button alt background color
 		 */
 		$wp_customize->add_setting( 'storefront_button_alt_background_color', array(
-			'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#FFA107' ),
+			'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#2c2d33' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 		) );
 
