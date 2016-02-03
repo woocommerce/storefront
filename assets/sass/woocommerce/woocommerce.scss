@@ -262,8 +262,8 @@ ul.products {
 			@include clearfix;
 			margin-bottom: 1.618em;
 			padding: 1.618em 0;
-			border-top: 3px solid rgba(0,0,0,0.025);
-			border-bottom: 3px solid rgba(0,0,0,0.025);
+			border-top: 1px solid $color_border;
+			border-bottom: 1px solid $color_border;
 
 			.quantity {
 				float: left;
