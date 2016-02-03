@@ -87,21 +87,21 @@ module.exports = function( grunt ) {
 				},
 				files: [{
 					'style.css': 'style.scss',
-					'assets/css/admin/welcome-screen/welcome.css': 'assets/css/admin/welcome-screen/welcome.scss',
-					'assets/css/woocommerce/bookings.css': 'assets/css/woocommerce/bookings.scss',
-					'assets/css/woocommerce/brands.css': 'assets/css/woocommerce/brands.scss',
-					'assets/css/woocommerce/wishlists.css': 'assets/css/woocommerce/wishlists.scss',
-					'assets/css/woocommerce/ajax-layered-nav.css': 'assets/css/woocommerce/ajax-layered-nav.scss',
-					'assets/css/woocommerce/variation-swatches.css': 'assets/css/woocommerce/variation-swatches.scss',
-					'assets/css/woocommerce/composite-products.css': 'assets/css/woocommerce/composite-products.scss',
-					'assets/css/woocommerce/photography.css': 'assets/css/woocommerce/photography.scss',
-					'assets/css/woocommerce/product-reviews-pro.css': 'assets/css/woocommerce/product-reviews-pro.scss',
-					'assets/css/woocommerce/smart-coupons.css': 'assets/css/woocommerce/smart-coupons.scss',
-					'assets/css/woocommerce/deposits.css': 'assets/css/woocommerce/deposits.scss',
-					'assets/css/woocommerce/bundles.css': 'assets/css/woocommerce/bundles.scss',
-					'assets/css/woocommerce/ship-multiple-addresses.css': 'assets/css/woocommerce/ship-multiple-addresses.scss',
-					'assets/css/woocommerce/woocommerce.css': 'assets/css/woocommerce/woocommerce.scss',
-					'assets/css/jetpack/jetpack.css': 'assets/css/jetpack/jetpack.scss'
+					'assets/sass/admin/welcome-screen/welcome.css': 'assets/sass/admin/welcome-screen/welcome.scss',
+					'assets/sass/woocommerce/bookings.css': 'assets/sass/woocommerce/bookings.scss',
+					'assets/sass/woocommerce/brands.css': 'assets/sass/woocommerce/brands.scss',
+					'assets/sass/woocommerce/wishlists.css': 'assets/sass/woocommerce/wishlists.scss',
+					'assets/sass/woocommerce/ajax-layered-nav.css': 'assets/sass/woocommerce/ajax-layered-nav.scss',
+					'assets/sass/woocommerce/variation-swatches.css': 'assets/sass/woocommerce/variation-swatches.scss',
+					'assets/sass/woocommerce/composite-products.css': 'assets/sass/woocommerce/composite-products.scss',
+					'assets/sass/woocommerce/photography.css': 'assets/sass/woocommerce/photography.scss',
+					'assets/sass/woocommerce/product-reviews-pro.css': 'assets/sass/woocommerce/product-reviews-pro.scss',
+					'assets/sass/woocommerce/smart-coupons.css': 'assets/sass/woocommerce/smart-coupons.scss',
+					'assets/sass/woocommerce/deposits.css': 'assets/sass/woocommerce/deposits.scss',
+					'assets/sass/woocommerce/bundles.css': 'assets/sass/woocommerce/bundles.scss',
+					'assets/sass/woocommerce/ship-multiple-addresses.css': 'assets/sass/woocommerce/ship-multiple-addresses.scss',
+					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
+					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss'
 				}]
 			}
 		},
@@ -110,9 +110,9 @@ module.exports = function( grunt ) {
 		cssmin: {
 			minify: {
 				expand: true,
-				cwd: 'assets/css/woocommerce/',
+				cwd: 'assets/sass/woocommerce/',
 				src: ['*.css'],
-				dest: 'assets/css/woocommerce/',
+				dest: 'assets/sass/woocommerce/',
 				ext: '.css'
 			}
 		},
@@ -122,9 +122,9 @@ module.exports = function( grunt ) {
 			css: {
 				files: [
 					'style.scss',
-					'assets/css/admin/welcome-screen/*.scss',
-					'assets/css/woocommerce/*.scss',
-					'assets/css/jetpack/*.scss',
+					'assets/sass/admin/welcome-screen/*.scss',
+					'assets/sass/woocommerce/*.scss',
+					'assets/sass/jetpack/*.scss',
 					'assets/sass/base/*.scss',
 					'assets/sass/components/*.scss',
 					'assets/sass/layout/*.scss',
@@ -259,21 +259,21 @@ module.exports = function( grunt ) {
 				ext: '-rtl.css',
 				src: [
 					'style.css',
-					'assets/css/woocommerce/bookings.css',
-					'assets/css/woocommerce/brands.css',
-					'assets/css/woocommerce/wishlists.css',
-					'assets/css/woocommerce/ajax-layered-nav.css',
-					'assets/css/woocommerce/variation-swatches.css',
-					'assets/css/woocommerce/composite-products.css',
-					'assets/css/woocommerce/photography.css',
-					'assets/css/woocommerce/product-reviews-pro.css',
-					'assets/css/woocommerce/smart-coupons.css',
-					'assets/css/woocommerce/deposits.css',
-					'assets/css/woocommerce/bundles.css',
-					'assets/css/woocommerce/ship-multiple-addresses.css',
-					'assets/css/woocommerce/woocommerce.css',
-					'assets/css/admin/welcome-screen/welcome.css',
-					'assets/css/jetpack/jetpack.css'
+					'assets/sass/woocommerce/bookings.css',
+					'assets/sass/woocommerce/brands.css',
+					'assets/sass/woocommerce/wishlists.css',
+					'assets/sass/woocommerce/ajax-layered-nav.css',
+					'assets/sass/woocommerce/variation-swatches.css',
+					'assets/sass/woocommerce/composite-products.css',
+					'assets/sass/woocommerce/photography.css',
+					'assets/sass/woocommerce/product-reviews-pro.css',
+					'assets/sass/woocommerce/smart-coupons.css',
+					'assets/sass/woocommerce/deposits.css',
+					'assets/sass/woocommerce/bundles.css',
+					'assets/sass/woocommerce/ship-multiple-addresses.css',
+					'assets/sass/woocommerce/woocommerce.css',
+					'assets/sass/admin/welcome-screen/welcome.css',
+					'assets/sass/jetpack/jetpack.css'
 				]
 			}
 		}
