@@ -463,6 +463,7 @@ a.reset_variations {
 
 		img {
 			max-width: 2.618em;
+			margin-left: 1em;
 			float: right;
 		}
 
@@ -1312,6 +1313,7 @@ p.no-comments {
 	margin-bottom: 2.618em;
 	background-color: $success;
 	margin-left: 0;
+	border-radius: 2px;
 	color: #fff;
 	clear: both;
 	border-left: .618em solid rgba(0,0,0,0.15);
