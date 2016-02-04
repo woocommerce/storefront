@@ -78,6 +78,10 @@
 		.product_list_widget {
 			max-height: 15em;
 			overflow-y: auto;
+
+			img {
+				margin-left: 1em;
+			}
 		}
 	}
 }
@@ -464,7 +468,6 @@ a.reset_variations {
 
 		img {
 			max-width: 2.618em;
-			margin-left: 1em;
 			float: right;
 		}
 
