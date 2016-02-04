@@ -201,7 +201,7 @@ class Storefront_Customizer {
 		 * Header link color
 		 */
 		$wp_customize->add_setting( 'storefront_header_link_color', array(
-			'default'           => apply_filters( 'storefront_default_header_link_color', '#ffffff' ),
+			'default'           => apply_filters( 'storefront_default_header_link_color', '#dddddd' ),
 			'sanitize_callback' => 'sanitize_hex_color',
 			'transport'			=> 'postMessage',
 		) );
@@ -411,7 +411,7 @@ class Storefront_Customizer {
 	public function add_customizer_css() {
 		$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#FFA107' ) );
 		$header_background_color 		= get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) );
-		$header_link_color 				= get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#ffffff' ) );
+		$header_link_color 				= get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#dddddd' ) );
 		$header_text_color 				= get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) );
 
 		$footer_background_color 		= get_theme_mod( 'storefront_footer_background_color', apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ) );
@@ -443,7 +443,7 @@ class Storefront_Customizer {
 		a.cart-contents:hover,
 		.site-header-cart .widget_shopping_cart a:hover,
 		.site-header-cart:hover > li > a {
-			color: ' . storefront_adjust_color_brightness( $header_link_color, -100 ) . ';
+			color: ' . storefront_adjust_color_brightness( $header_link_color, 30 ) . ';
 		}
 
 		.site-header,
