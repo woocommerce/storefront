@@ -20,8 +20,8 @@ class Storefront_Jetpack {
 	 * @since 1.0
 	 */
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'jetpack_setup' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'jetpack_scripts' ), 10 );
+		add_action( 'after_setup_theme', 	array( $this, 'jetpack_setup' ) );
+		add_action( 'wp_enqueue_scripts', 	array( $this, 'jetpack_scripts' ), 	10 );
 	}
 
 	/**

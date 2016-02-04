@@ -5,6 +5,12 @@
  * @package storefront
  */
 
+ /**
+  * Assign the Storefront version to a var
+  */
+ $theme 				= wp_get_theme( 'storefront' );
+ $storefront_version 	= $theme['Version'];
+
 /**
  * Initialize all the things.
  */

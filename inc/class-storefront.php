@@ -20,12 +20,12 @@ class Storefront {
 	 * @since 1.0
 	 */
 	public function __construct() {
-		add_action( 'after_setup_theme', array( $this, 'setup' ) );
-		add_action( 'widgets_init',	array( $this, 'widgets_init' ) );
-		add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce
-		add_filter( 'body_class', array( $this, 'body_classes' ) );
-		add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
+		add_action( 'after_setup_theme',		array( $this, 'setup' ) );
+		add_action( 'widgets_init',				array( $this, 'widgets_init' ) );
+		add_action( 'wp_enqueue_scripts', 		array( $this, 'scripts' ), 			10 );
+		add_action( 'wp_enqueue_scripts', 		array( $this, 'child_scripts' ), 	30 ); // After WooCommerce
+		add_filter( 'body_class', 				array( $this, 'body_classes' ) );
+		add_filter( 'wp_page_menu_args', 		array( $this, 'page_menu_args' ) );
 	}
 
 	/**
@@ -43,12 +43,6 @@ class Storefront {
 		if ( ! isset( $content_width ) ) {
 			$content_width = 980; /* pixels */
 		}
-
-		/**
-		 * Assign the Storefront version to a var
-		 */
-		$theme 					= wp_get_theme( 'storefront' );
-		$storefront_version 	= $theme['Version'];
 
 		/*
 		 * Load Localisation files.

@@ -4,10 +4,10 @@
  */
 ?>
 <?php
-$storefront = wp_get_theme( 'storefront' );
-
+global $storefront_version;
 ?>
-<h1 class="sf-title"><?php echo '<strong>Storefront</strong> <sup class="version">' . esc_attr( $storefront['Version'] ) . '</sup>'; ?></h1>
+
+<h1 class="sf-title"><?php echo '<strong>Storefront</strong> <sup class="version">' . esc_attr( $storefront_version ) . '</sup>'; ?></h1>
 
 <section class="sf-review">
 	<p><?php echo sprintf( esc_html__( '%sEnjoying %s?%s Why not %sleave a review%s on WordPress.org? We\'d really appreciate it!', 'storefront' ), '<strong>', 'Storefront', '</strong>', '<a href="https://wordpress.org/themes/storefront">', '</a>' ); ?></p>

@@ -20,13 +20,13 @@ class Storefront_Admin {
 	 * @since 1.0
 	 */
 	public function __construct() {
-		add_action( 'admin_menu', array( $this, 'welcome_register_menu' ) );
-		add_action( 'load-themes.php', array( $this, 'activation_admin_notice' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'welcome_style' ) );
+		add_action( 'admin_menu', 				array( $this, 'welcome_register_menu' ) );
+		add_action( 'load-themes.php',			array( $this, 'activation_admin_notice' ) );
+		add_action( 'admin_enqueue_scripts', 	array( $this, 'welcome_style' ) );
 
-		add_action( 'storefront_welcome', array( $this, 'welcome_intro' ), 				10 );
-		add_action( 'storefront_welcome', array( $this, 'welcome_enhance' ), 			20 );
-		add_action( 'storefront_welcome', array( $this, 'welcome_contribute' ), 			30 );
+		add_action( 'storefront_welcome', 		array( $this, 'welcome_intro' ), 			10 );
+		add_action( 'storefront_welcome', 		array( $this, 'welcome_enhance' ), 			20 );
+		add_action( 'storefront_welcome', 		array( $this, 'welcome_contribute' ), 		30 );
 	}
 
 	/**

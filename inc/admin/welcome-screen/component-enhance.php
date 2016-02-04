@@ -43,7 +43,6 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 				<?php printf( esc_html__( 'View all %s extensions &rarr;', 'storefront' ), 'Storefront' ); ?>
 			</a>
 		</div>
-
 	</div>
 
 	<div class="boxed free-plugins">

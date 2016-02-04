@@ -509,7 +509,6 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 		);
 
 		echo apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>', $posted_on, $byline );
-
 	}
 }
 
@@ -551,7 +550,6 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 				do_action( 'storefront_homepage_after_product_categories' );
 
 			echo '</section>';
-
 		}
 	}
 }
@@ -632,7 +630,6 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				do_action( 'storefront_homepage_after_featured_products' );
 
 			echo '</section>';
-
 		}
 	}
 }
@@ -671,7 +668,6 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				do_action( 'storefront_homepage_after_popular_products' );
 
 			echo '</section>';
-
 		}
 	}
 }
@@ -710,7 +706,6 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				do_action( 'storefront_homepage_after_on_sale_products' );
 
 			echo '</section>';
-
 		}
 	}
 }
@@ -723,11 +718,12 @@ if ( ! function_exists( 'storefront_homepage_content' ) ) {
 	 * @return  void
 	 */
 	function storefront_homepage_content() {
-		while ( have_posts() ) : the_post();
+		while ( have_posts() ) {
+			the_post();
 
 			get_template_part( 'content', 'page' );
 
-		endwhile; // end of the loop.
+		} // end of the loop.
 	}
 }
 
