@@ -226,7 +226,7 @@ class Storefront_Customizer {
 		 * Footer Background
 		 */
 		$wp_customize->add_setting( 'storefront_footer_background_color', array(
-			'default'           	=> apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ),
+			'default'           	=> apply_filters( 'storefront_default_footer_background_color', '#f0f0f0' ),
 			'sanitize_callback' 	=> 'sanitize_hex_color',
 			'transport'				=> 'postMessage',
 		) );
