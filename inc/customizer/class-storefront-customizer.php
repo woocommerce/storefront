@@ -409,22 +409,22 @@ class Storefront_Customizer {
 	 * @since 1.0.0
 	 */
 	public function add_customizer_css() {
-		$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#FFA107' ) );
-		$header_background_color 		= get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) );
-		$header_link_color 				= get_theme_mod( 'storefront_header_link_color', apply_filters( 'storefront_default_header_link_color', '#dddddd' ) );
-		$header_text_color 				= get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) );
+		$accent_color 					= get_theme_mod( 'storefront_accent_color' );
+		$header_background_color 		= get_theme_mod( 'storefront_header_background_color' );
+		$header_link_color 				= get_theme_mod( 'storefront_header_link_color' );
+		$header_text_color 				= get_theme_mod( 'storefront_header_text_color' );
 
-		$footer_background_color 		= get_theme_mod( 'storefront_footer_background_color', apply_filters( 'storefront_default_footer_background_color', '#f3f3f3' ) );
-		$footer_link_color 				= get_theme_mod( 'storefront_footer_link_color', apply_filters( 'storefront_default_footer_link_color', '#FFA107' ) );
-		$footer_heading_color 			= get_theme_mod( 'storefront_footer_heading_color', apply_filters( 'storefront_default_footer_heading_color', '#494c50' ) );
-		$footer_text_color 				= get_theme_mod( 'storefront_footer_text_color', apply_filters( 'storefront_default_footer_text_color', '#61656b' ) );
+		$footer_background_color 		= get_theme_mod( 'storefront_footer_background_color' );
+		$footer_link_color 				= get_theme_mod( 'storefront_footer_link_color' );
+		$footer_heading_color 			= get_theme_mod( 'storefront_footer_heading_color' );
+		$footer_text_color 				= get_theme_mod( 'storefront_footer_text_color' );
 
-		$text_color 					= get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#60646c' ) );
-		$heading_color 					= get_theme_mod( 'storefront_heading_color', apply_filters( 'storefront_default_heading_color', '#484c51' ) );
-		$button_background_color 		= get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#60646c' ) );
-		$button_text_color 				= get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) );
-		$button_alt_background_color 	= get_theme_mod( 'storefront_button_alt_background_color', apply_filters( 'storefront_default_button_alt_background_color', '#FFA107' ) );
-		$button_alt_text_color 			= get_theme_mod( 'storefront_button_alt_text_color', apply_filters( 'storefront_default_button_alt_text_color', '#ffffff' ) );
+		$text_color 					= get_theme_mod( 'storefront_text_color' );
+		$heading_color 					= get_theme_mod( 'storefront_heading_color' );
+		$button_background_color 		= get_theme_mod( 'storefront_button_background_color' );
+		$button_text_color 				= get_theme_mod( 'storefront_button_text_color' );
+		$button_alt_background_color 	= get_theme_mod( 'storefront_button_alt_background_color' );
+		$button_alt_text_color 			= get_theme_mod( 'storefront_button_alt_text_color' );
 
 		$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );
 		$darken_factor 					= apply_filters( 'storefront_darken_factor', -25 );
@@ -621,7 +621,7 @@ class Storefront_Customizer {
 	 * @since  1.0.0
 	 */
 	public function layout_class( $classes ) {
-		$left_or_right = get_theme_mod( 'storefront_layout', apply_filters( 'storefront_default_layout', $layout = is_rtl() ? 'left' : 'right' ) );
+		$left_or_right = get_theme_mod( 'storefront_layout' );
 
 		$classes[] = $left_or_right . '-sidebar';
 
