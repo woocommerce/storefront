@@ -38,7 +38,7 @@ function storefront_do_shortcode( $tag, array $atts = array(), $content = null )
  * Get the content background color
  * Accounts for the Storefront Designer's content background option.
  * @since  1.6.0
- * @return string the backgrounc color
+ * @return string the background color
  */
 function storefront_get_content_background_color() {
     // Set the bg color var based on whether the Storefront designer has set a content bg color or not.
