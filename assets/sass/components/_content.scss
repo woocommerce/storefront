@@ -31,16 +31,6 @@
 			font-size: .857em;
 		}
 	}
-
-	.entry-meta {
-		a {
-			border-bottom: 1px solid $color_border;
-
-			&:hover {
-				border-bottom-color: rgba(0,0,0,0.2);
-			}
-		}
-	}
 }
 .byline,
 .updated:not(.published) {
@@ -59,34 +49,16 @@
 .cat-links,
 .tags-links,
 .comments-link,
-.edit-link {
+.author {
 	display: block;
-	margin-bottom: 1em;
-
-	&:before {
-		content: "\f114";
-		font-family: "FontAwesome";
-		margin-right: .53em;
-		display: inline-block;
-		width: 1em;
-	}
+	margin-bottom: 1.618em;
 }
 
-.tags-links {
-	&:before {
-		content: "\f02b";
-	}
-}
-
-.comments-link {
-	&:before {
-		content: "\f0e5";
-	}
-}
-
-.edit-link {
-	&:before {
-		content: "\f040";
+.author {
+	.avatar {
+		width: 64px;
+		margin-bottom: 1em;
+		border-radius: 3px;
 	}
 }
 

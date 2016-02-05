@@ -413,19 +413,27 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	function storefront_post_meta() {
 		?>
 		<aside class="entry-meta">
-			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search
 
+			?>
+			<div class="author">
+				<?php
+					echo get_avatar( get_the_author_meta( 'ID' ), 128 );
+					echo '<div class="label">' . esc_attr( __( 'Written by', 'storefront' ) ) . '</div>';
+					the_author_posts_link();
+				?>
+			</div>
 			<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
 			if ( $categories_list ) : ?>
-				<span class="cat-links">
+				<div class="cat-links">
 					<?php
-					echo '<span class="screen-reader-text">' . esc_attr( __( 'Categories: ', 'storefront' ) ) . '</span>';
+					echo '<div class="label">' . esc_attr( __( 'Posted in', 'storefront' ) ) . '</div>';
 					echo wp_kses_post( $categories_list );
 					?>
-				</span>
+				</div>
 			<?php endif; // End if categories ?>
 
 			<?php
@@ -433,17 +441,18 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
 
 			if ( $tags_list ) : ?>
-				<span class="tags-links">
+				<div class="tags-links">
 					<?php
-					echo '<span class="screen-reader-text">' . esc_attr( __( 'Tags: ', 'storefront' ) ) . '</span>';
+					echo '<div class="label">' . esc_attr( __( 'Tagged', 'storefront' ) ) . '</div>';
 					echo wp_kses_post( $tags_list );
 					?>
-				</span>
+				</div>
 			<?php endif; // End if $tags_list ?>
 
 			<?php endif; // End if 'post' == get_post_type() ?>
 
 			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+				<?php echo '<div class="label">' . esc_attr( __( 'Comments', 'storefront' ) ) . '</div>'; ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) ); ?></span>
 			<?php endif; ?>
 		</aside>
@@ -503,12 +512,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		$byline = sprintf(
-			_x( 'by %s', 'post author', 'storefront' ),
-			'<span class="vcard author"><span class="fn" itemprop="author"><a class="url fn n" rel="author" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span></span>'
-		);
-
-		echo apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>', $posted_on, $byline );
+		echo apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on );
 	}
 }
 
