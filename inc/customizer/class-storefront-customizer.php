@@ -409,6 +409,7 @@ class Storefront_Customizer {
 	 * @since 1.0.0
 	 */
 	public function add_customizer_css() {
+		$background_color				= storefront_get_content_background_color();
 		$accent_color 					= get_theme_mod( 'storefront_accent_color' );
 		$header_background_color 		= get_theme_mod( 'storefront_header_background_color' );
 		$header_link_color 				= get_theme_mod( 'storefront_header_link_color' );
@@ -591,6 +592,10 @@ class Storefront_Customizer {
 
 		#order_review_heading, #order_review {
 			border-color: ' . $accent_color . ';
+		}
+
+		.woocommerce-breadcrumb {
+			background-color: ' . storefront_adjust_color_brightness( $background_color, 7 ) . ';
 		}
 
 		@media screen and ( min-width: 768px ) {
