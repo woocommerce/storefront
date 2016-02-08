@@ -5,20 +5,14 @@
 /**
  * General Menu Styles
  */
-.main-navigation {
-	clear: both;
-}
-
 .secondary-navigation {
 	display: none;
 }
 
 .menu-toggle {
 	cursor: pointer;
-	margin: 2.244em auto;
-	display: block;
-	width: 100%;
 	text-align: left;
+	float: right;
 
 	&:before {
 		font-family: "FontAwesome";
@@ -30,6 +24,12 @@
 
 .primary-navigation {
 	display: none;
+}
+
+.main-navigation {
+	.menu {
+		clear: both;
+	}
 }
 
 .handheld-navigation,
@@ -64,7 +64,7 @@
 
 	li {
 		a {
-			padding: .857em 1.387em;
+			padding: .857em 0;
 			display: block;
 
 			&:before {

@@ -30,12 +30,12 @@ module.exports = function( grunt ) {
 			main: {
 				files: [{
 					expand: true,
-					cwd: 'js/',
+					cwd: 'assets/js/',
 					src: [
 						'*.js',
 						'!*.min.js'
 					],
-					dest: 'js/',
+					dest: 'assets/js/',
 					ext: '.min.js'
 				}]
 			},

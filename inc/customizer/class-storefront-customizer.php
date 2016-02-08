@@ -434,7 +434,8 @@ class Storefront_Customizer {
 		.main-navigation ul li a,
 		.site-title a,
 		ul.menu li a,
-		.site-branding h1 a {
+		.site-branding h1 a,
+		.site-footer .storefront-handheld-footer-bar a:not(.button) {
 			color: ' . $header_link_color . ';
 		}
 
@@ -454,13 +455,29 @@ class Storefront_Customizer {
 		.main-navigation ul.menu > li.menu-item-has-children:after,
 		.secondary-navigation ul.menu ul,
 		.main-navigation ul.menu ul,
-		.main-navigation ul.nav-menu ul {
+		.main-navigation ul.nav-menu ul,
+		.storefront-handheld-footer-bar,
+		.storefront-handheld-footer-bar ul li > a,
+		.storefront-handheld-footer-bar ul li.search .site-search {
 			background-color: ' . $header_background_color . ';
 		}
 
 		p.site-description,
-		.site-header {
+		.site-header,
+		.storefront-handheld-footer-bar {
 			color: ' . $header_text_color . ';
+		}
+
+		.storefront-handheld-footer-bar ul li.cart .count {
+			background-color: ' . $header_link_color . ';
+		}
+
+		.storefront-handheld-footer-bar ul li.cart .count {
+			color: ' . $header_background_color . ';
+		}
+
+		.storefront-handheld-footer-bar ul li.cart .count {
+			border-color: ' . $header_background_color . ';
 		}
 
 		h1, h2, h3, h4, h5, h6 {
