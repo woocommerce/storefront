@@ -439,9 +439,13 @@ a.reset_variations {
  * Breadcrumbs
  */
 .woocommerce-breadcrumb {
+	margin-left: -999em;
+	margin-right: -999em;
+	padding-left: 999em;
+	padding-right: 999em;
 	margin-bottom: 4.236em;
 	font-size: .857em;
-	padding: 1.618em 0;
+	padding: 1em 999em;
 
 	a.home {
 		&:before {
@@ -1419,6 +1423,10 @@ dl.variation {
 }
 
 @include susy-media($desktop) {
+	.woocommerce-breadcrumb {
+		padding: 1.618em 999em;
+	}
+	
 	/**
 	 * Responsive tables
 	 */
@@ -1512,16 +1520,6 @@ dl.variation {
 				left: 0;
 			}
 		}
-	}
-
-	/**
-	 * Breadcrumbs
-	 */
-	.woocommerce-breadcrumb {
-		margin-left: -999em;
-		margin-right: -999em;
-		padding-left: 999em;
-		padding-right: 999em;
 	}
 
 	/**
