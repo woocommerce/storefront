@@ -55,9 +55,10 @@
 		text-indent: -9999px;
 
 		&:after {
-			content: "\f07a";
+			content: "\f291";
 			font-family: "FontAwesome";
 			position: absolute;
+			font-weight: 400;
 			top: 0;
 			right: 0;
 			line-height: 2.244;
@@ -1426,7 +1427,7 @@ dl.variation {
 	.woocommerce-breadcrumb {
 		padding: 1.618em 999em;
 	}
-	
+
 	/**
 	 * Responsive tables
 	 */
