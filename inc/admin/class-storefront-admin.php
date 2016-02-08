@@ -139,8 +139,8 @@ class Storefront_Admin {
 		$raw_products 	= wp_safe_remote_get( $url );
 		$products 		= json_decode( wp_remote_retrieve_body( $raw_products ) );
 
-		if ( ! empty( $extensions_json->products ) ) {
-			set_transient( $transient, $raw_products, WEEK_IN_SECONDS );
+		if ( ! empty( $products ) ) {
+			set_transient( $transient, $products, DAY_IN_SECONDS );
 		}
 
 		return $products;

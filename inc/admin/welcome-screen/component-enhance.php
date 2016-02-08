@@ -45,32 +45,6 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 		</div>
 	</div>
 
-	<div class="boxed free-plugins">
-		<h2><?php esc_html_e( 'Install free plugins', 'storefront' ); ?></h2>
-		<p>
-			<?php echo sprintf( esc_html__( 'There are a number of free plugins available for %s on the WordPress.org %splugin repository%s. Here\'s a few we made earlier:', 'storefront' ), 'Storefront', '<a href="https://wordpress.org/plugins/search.php?q=storefront">', '</a>' ); ?>
-		</p>
-		<ul class="extensions">
-			<?php
-			if ( $extensions ) {
-				foreach ( $extensions as $extension ) {
-					foreach ( $extension as $product ) {
-						$price 				= $product->price;
-						$lower_case_title 	= strtolower( str_replace( ' ', '-', $product->title ) );
-						$title 				= str_replace( 'Storefront', '', $product->title );
-
-						if ( $price == '&#36;0.00' ) {
-							echo '<li><a class="thickbox" href="' . esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . esc_attr( $lower_case_title ) . '&TB_iframe=true&width=744&height=800' ), 'install-plugin_' . esc_attr( $lower_case_title ) ) ) . '">' . esc_attr( $title ) . ' - <span class="price">' . __( 'Free!', 'storefront' ) . '</span></a><p>' . wp_kses_post( $product->excerpt ) . '</p></li>';
-						}
-					}
-				}
-			} else {
-				echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
-			}
-			?>
-		</ul>
-	</div>
-
 	<div class="boxed child-themes">
 		<h2><?php esc_html_e( 'Child themes', 'storefront' ); ?></h2>
 		<p><?php printf( esc_html__( 'Take a look at our range of child themes for %s that allow you to easily change the look of your store to suit a specific industry.', 'storefront' ), 'Storefront' ); ?></p>
@@ -109,4 +83,30 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 				<?php printf( esc_html__( 'View all %s child themes &rarr;', 'storefront' ), 'Storefront' ); ?>
 			</a>
 		</div>
+	</div>
+
+	<div class="boxed free-plugins">
+		<h2><?php esc_html_e( 'Install free plugins', 'storefront' ); ?></h2>
+		<p>
+			<?php echo sprintf( esc_html__( 'There are a number of free plugins available for %s on the WordPress.org %splugin repository%s. Here\'s a few we made earlier:', 'storefront' ), 'Storefront', '<a href="https://wordpress.org/plugins/search.php?q=storefront">', '</a>' ); ?>
+		</p>
+		<ul class="extensions">
+			<?php
+			if ( $extensions ) {
+				foreach ( $extensions as $extension ) {
+					foreach ( $extension as $product ) {
+						$price 				= $product->price;
+						$lower_case_title 	= strtolower( str_replace( ' ', '-', $product->title ) );
+						$title 				= str_replace( 'Storefront', '', $product->title );
+
+						if ( $price == '&#36;0.00' ) {
+							echo '<li><a class="thickbox" href="' . esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . esc_attr( $lower_case_title ) . '&TB_iframe=true&width=744&height=800' ), 'install-plugin_' . esc_attr( $lower_case_title ) ) ) . '">' . esc_attr( $title ) . ' - <span class="price">' . __( 'Free!', 'storefront' ) . '</span></a><p>' . wp_kses_post( $product->excerpt ) . '</p></li>';
+						}
+					}
+				}
+			} else {
+				echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
+			}
+			?>
+		</ul>
 	</div>
