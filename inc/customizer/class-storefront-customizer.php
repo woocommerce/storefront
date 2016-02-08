@@ -443,7 +443,8 @@ class Storefront_Customizer {
 		.site-title a:hover,
 		a.cart-contents:hover,
 		.site-header-cart .widget_shopping_cart a:hover,
-		.site-header-cart:hover > li > a {
+		.site-header-cart:hover > li > a,
+		ul.menu li.current-menu-item > a {
 			color: ' . storefront_adjust_color_brightness( $header_link_color, 50 ) . ';
 		}
 
@@ -458,7 +459,6 @@ class Storefront_Customizer {
 		}
 
 		p.site-description,
-		ul.menu li.current-menu-item > a,
 		.site-header {
 			color: ' . $header_text_color . ';
 		}
