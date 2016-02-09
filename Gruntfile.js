@@ -108,7 +108,21 @@ module.exports = function( grunt ) {
 
 		// Minify all .css files.
 		cssmin: {
-			minify: {
+			admin: {
+				expand: true,
+				cwd: 'assets/sass/admin/welcome-screen/',
+				src: ['*.css'],
+				dest: 'assets/sass/admin/welcome-screen/',
+				ext: '.css'
+			},
+			jetpack: {
+				expand: true,
+				cwd: 'assets/sass/jetpack/',
+				src: ['*.css'],
+				dest: 'assets/sass/jetpack/',
+				ext: '.css'
+			},
+			woocommerce: {
 				expand: true,
 				cwd: 'assets/sass/woocommerce/',
 				src: ['*.css'],
