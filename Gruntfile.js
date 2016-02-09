@@ -108,6 +108,11 @@ module.exports = function( grunt ) {
 
 		// Minify all .css files.
 		cssmin: {
+			main: {
+				files: {
+					'style.css': ['style.css']
+				}
+			},
 			admin: {
 				expand: true,
 				cwd: 'assets/sass/admin/welcome-screen/',
