@@ -584,7 +584,9 @@ class Storefront_Customizer {
 
 		.woocommerce-tabs ul.tabs li.active a,
 		ul.products li.product .price,
-		.onsale {
+		.onsale,
+		.widget_search form:before,
+		.widget_product_search form:before {
 			color: ' . $text_color . ';
 		}
 
