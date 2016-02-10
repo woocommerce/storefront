@@ -58,4 +58,10 @@ global $storefront_version;
 				</ul>
 			</div>
 		</div>
+
+		<hr />
+
+		<p>
+			<span class="dashicons dashicons-hammer"></span> <?php printf( esc_html__( 'Stay up to date with Storefront developments on the %sdev blog%s.', 'storefront' ), '<a href="https://storefront.wordpress.com/">', '</a>' ); ?>
+		</p>
 	</div>
