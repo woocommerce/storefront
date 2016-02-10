@@ -22,6 +22,10 @@ $green: #45B964;
 	.sf-title {
 		float: left;
 		margin-bottom: .53em;
+
+		img {
+			margin-right: 12px;
+		}
 	}
 
 	.version {
@@ -30,6 +34,7 @@ $green: #45B964;
 		border-radius: 3px;
 		background-color: #fff;
 		font-weight: 700;
+		color: #FFA107;
 	}
 
 	.sf-review {
@@ -152,11 +157,12 @@ $green: #45B964;
 
 		&.enhance {
 			border-width: 2px;
-			border-color: #0073aa;
+			border-color: #FFA107;
+			box-shadow: 0 1px 1px #FFA107;
 
 			&:before {
 				content: "\f502";
-				color: #0073aa;
+				color: #FFA107;
 			}
 		}
 

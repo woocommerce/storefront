@@ -7,7 +7,7 @@
 global $storefront_version;
 ?>
 
-<h1 class="sf-title"><?php echo '<strong>Storefront</strong> <sup class="version">' . esc_attr( $storefront_version ) . '</sup>'; ?></h1>
+<h1 class="sf-title"><?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/welcome-screen/storefront.png' . '" alt="Storefront" width="250" /> <sup class="version">' . esc_attr( $storefront_version ) . '</sup>'; ?></h1>
 
 <section class="sf-review">
 	<p><?php echo sprintf( esc_html__( '%sEnjoying %s?%s Why not %sleave a review%s on WordPress.org? We\'d really appreciate it!', 'storefront' ), '<strong>', 'Storefront', '</strong>', '<a href="https://wordpress.org/themes/storefront">', '</a>' ); ?></p>
