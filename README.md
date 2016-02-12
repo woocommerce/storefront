@@ -17,6 +17,9 @@ Looking to take your storefront powered store to the next level? Be sure to chec
 ## Storefront Documentation
 You can view detailed Storefront documentation on the [WooThemes documentation web site](http://docs.woothemes.com/documentation/themes/storefront/).
 
+## Storefront in your languages
+Storefront translations can be downloaded from [WordPress.org](https://translate.wordpress.org/projects/wp-themes/storefront). To use one of these translations it is recommended that you upload it to `wp-content/languages/themes/storefront-br_BR.mo`. Adding it to this location means the file will not be lost when you update Storefront. It is however possible to add a translation to the `languages` dir in your child theme if you'd prefer.
+
 ## Storefront help & support
 WooThemes customers can get support at the [WooThemes support portal](https://support.woothemes.com/). Otherwise you can try posting on the [WordPress support forums](https://wordpress.org/support/theme/storefront/). Please remember, github is for bug reports and contributions, _not_ support.
 
