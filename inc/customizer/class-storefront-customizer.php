@@ -26,6 +26,45 @@ class Storefront_Customizer {
 		add_action( 'wp_enqueue_scripts', 				array( $this, 'add_customizer_css' ), 130 );
 		add_action( 'after_setup_theme', 				array( $this, 'custom_header_setup' ) );
 		add_action( 'customize_controls_print_styles', 	array( $this, 'customizer_custom_control_css' ) );
+		add_action( 'init',								array( $this, 'default_theme_mod_values' ) );
+	}
+
+	/**
+	 * Returns an array of the desired default Storefront options
+	 * @return array
+	 */
+	public function get_storefront_default_setting_values() {
+		return apply_filters( 'storefront_setting_default_values', $args = array(
+			'storefront_heading_color'					=> '#484c51',
+			'storefront_text_color'						=> '#60646c',
+			'storefront_accent_color'					=> '#2c2d33',
+			'storefront_header_background_color'		=> '#2c2d33',
+			'storefront_header_text_color'				=> '#9aa0a7',
+			'storefront_header_link_color'				=> '#cccccc',
+			'storefront_footer_background_color'		=> '#f0f0f0',
+			'storefront_footer_heading_color'			=> '#494c50',
+			'storefront_footer_text_color'				=> '#61656b',
+			'storefront_footer_link_color'				=> '#2c2d33',
+			'storefront_button_background_color'		=> '#60646c',
+			'storefront_button_text_color'				=> '#ffffff',
+			'storefront_button_alt_background_color'	=> '#2c2d33',
+			'storefront_button_alt_text_color'			=> '#ffffff',
+			'storefront_layout'							=> 'right',
+			'background_color'							=> '#f5f5f5',
+		) );
+	}
+
+	/**
+	 * Adds a value to each Storefront setting if one isn't already present.
+	 * @uses get_storefront_default_setting_values()
+	 * @return void
+	 */
+	public function default_theme_mod_values() {
+		foreach ( Storefront_Customizer::get_storefront_default_setting_values() as $mod => $val ) {
+			add_filter( 'theme_mod_' . $mod, function( $setting ) use ( $val ) {
+				return $setting ? $setting : $val;
+			});
+		}
 	}
 
 	/**
