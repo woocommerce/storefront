@@ -1404,32 +1404,33 @@ p.stars {
 	border: 1px solid $color_border;
 	border-width: 1px 0;
 	padding: 1em 0;
+	margin-bottom: 2.618em;
 
 	ul.tabs {
 		list-style: none;
 		margin-left: 0;
-		text-align: center;
+		text-align: left;
 
 		li {
-			display: inline-block;
-			margin-right: 1em;
+			display: block;
+			margin: 0;
+			border-bottom: 1px dotted $color_border;
 			position: relative;
 
-			&.active {
-				a {
-					color: $color_body;
-				}
+			a {
+				padding: 1em 0;
+				display: block;
+			}
 
+			&.active {
 				&:after {
-					content: "\f107";
 					font-family: "FontAwesome";
+					content: "\f107";
+					display: block;
 					position: absolute;
-					top: 100%;
-					left: 50%;
-					height: 1em;
-					width: 1em;
-					line-height: 1;
-					margin-left: -.5em;
+					top: 50%;
+					right: 0;
+					transform: translateY(-50%);
 				}
 			}
 		}
@@ -2300,34 +2301,19 @@ dl.variation {
 
 		ul.tabs {
 			@include span(3 of 9);
-		  	text-align: left;
 
-		  	li {
-		  		display: block;
-		  		margin: 0;
-		  		border-bottom: 1px dotted $color_border;
-
-		  		a {
-		  			padding: 1em 0;
-		  			display: block;
-		  		}
-
-		  		&.active {
-		  			&:after {
-		  				margin: 0;
-		  				right: 0;
-		  				left: auto;
-		  				top: 50%;
-		  				content: "\f105";
-		  				margin-top: -.5em;
-		  			}
-		  		}
-		  	}
+			li {
+				&.active {
+					&:after {
+						content: "\f105";
+					}
+				}
+			}
 		}
 
 		.panel {
 			@include span(last 6 of 9);
-		  	margin-top: 0;
+			margin-top: 0;
 		}
 	}
 }
