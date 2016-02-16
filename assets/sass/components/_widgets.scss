@@ -195,6 +195,14 @@
 	}
 }
 
+.widget_rating_filter {
+	.wc-layered-nav-rating  {
+		.star-rating {
+			display: inline-block;
+		}
+	}
+}
+
 .widget-area {
 	.widget {
 		font-size: .857em;
