@@ -20,13 +20,13 @@ class Storefront_Customizer {
 	 * @since 1.0
 	 */
 	public function __construct() {
-		add_action( 'customize_preview_init', 			array( $this, 'customize_preview_js' ) );
-		add_action( 'customize_register', 				array( $this, 'customize_register' ) );
+		add_action( 'customize_preview_init', 			array( $this, 'customize_preview_js' ), 10 );
+		add_action( 'customize_register', 				array( $this, 'customize_register' ), 10 );
 		add_filter( 'body_class', 						array( $this, 'layout_class' ) );
 		add_action( 'wp_enqueue_scripts', 				array( $this, 'add_customizer_css' ), 130 );
 		add_action( 'after_setup_theme', 				array( $this, 'custom_header_setup' ) );
 		add_action( 'customize_controls_print_styles', 	array( $this, 'customizer_custom_control_css' ) );
-		add_action( 'init',								array( $this, 'default_theme_mod_values' ) );
+		add_action( 'init',								array( $this, 'default_theme_mod_values' ), 10 );
 	}
 
 	/**
@@ -63,7 +63,7 @@ class Storefront_Customizer {
 		foreach ( Storefront_Customizer::get_storefront_default_setting_values() as $mod => $val ) {
 			add_filter( 'theme_mod_' . $mod, function( $setting ) use ( $val ) {
 				return $setting ? $setting : $val;
-			});
+			}, 10 );
 		}
 	}
 
