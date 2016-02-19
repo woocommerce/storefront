@@ -1,7 +1,10 @@
 <?php
 /**
  * Welcome screen contribute template
+ *
+ * @package storefront
  */
+
 ?>
 	<div class="boxed contribute">
 		<h2><?php esc_html_e( 'Contribute to Storefront', 'storefront' ); ?></h2>
@@ -16,6 +19,6 @@
 
 <div class="automattic">
 	<p>
-	<?php printf( esc_html__( 'An %s project', 'storefront' ), '<a href="https://automattic.com/"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/welcome-screen/automattic.png' . '" alt="Automattic" /></a>' ); ?>
+	<?php printf( esc_html__( 'An %s project', 'storefront' ), '<a href="https://automattic.com/"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/welcome-screen/automattic.png" alt="Automattic" /></a>' ); ?>
 	</p>
 </div>

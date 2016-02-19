@@ -19,11 +19,13 @@ get_header(); ?>
 				get_template_part( 'content', 'page' );
 
 				/**
+				 * Functions hooked in to storefront_page_after action
+				 *
 				 * @hooked storefront_display_comments - 10
 				 */
 				do_action( 'storefront_page_after' );
 
-			endwhile; // end of the loop. ?>
+			endwhile; // End of the loop. ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

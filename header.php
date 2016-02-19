@@ -6,6 +6,7 @@
  *
  * @package storefront
  */
+
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> <?php storefront_html_tag_schema(); ?>>
 <head>
@@ -27,13 +28,15 @@
 
 			<?php
 			/**
-			 * @hooked storefront_skip_links - 0
-			 * @hooked storefront_social_icons - 10
-			 * @hooked storefront_site_branding - 20
+			 * Functions hooked into storefront_header action
+			 *
+			 * @hooked storefront_skip_links           - 0
+			 * @hooked storefront_social_icons         - 10
+			 * @hooked storefront_site_branding        - 20
 			 * @hooked storefront_secondary_navigation - 30
-			 * @hooked storefront_product_search - 40
-			 * @hooked storefront_primary_navigation - 50
-			 * @hooked storefront_header_cart - 60
+			 * @hooked storefront_product_search       - 40
+			 * @hooked storefront_primary_navigation   - 50
+			 * @hooked storefront_header_cart          - 60
 			 */
 			do_action( 'storefront_header' ); ?>
 
@@ -42,6 +45,8 @@
 
 	<?php
 	/**
+	 * Functions hooked in to storefront_before_content
+	 *
 	 * @hooked storefront_header_widget_region - 10
 	 */
 	do_action( 'storefront_before_content' ); ?>
@@ -51,6 +56,8 @@
 
 		<?php
 		/**
+		 * Functions hooked in to storefront_content_top
+		 *
 		 * @hooked woocommerce_breadcrumb - 10
 		 */
-		do_action( 'storefront_content_top' ); ?>
+		do_action( 'storefront_content_top' );

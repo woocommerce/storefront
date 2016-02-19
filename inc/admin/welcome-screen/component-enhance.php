@@ -1,7 +1,10 @@
 <?php
 /**
  * Welcome screen enhance template
+ *
+ * @package storefront
  */
+
 ?>
 <?php
 
@@ -27,8 +30,8 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 						$price 	= $product->price;
 						$title 	= str_replace( 'Storefront', '', $product->title );
 
-						if ( $price != '&#36;0.00' ) {
-							echo '<li><a href="' . esc_url( $product->link ) . '">' . $title . ' - <span class="price">' . esc_attr( $product->price ) . '</span></a><p>' . wp_kses_post( $product->excerpt ) . '</p></li>';
+						if ( '&#36;0.00' != $price ) {
+							echo '<li><a href="' . esc_url( $product->link ) . '">' . esc_attr( $title ) . ' - <span class="price">' . esc_attr( $product->price ) . '</span></a><p>' . wp_kses_post( $product->excerpt ) . '</p></li>';
 						}
 					}
 				}
@@ -95,17 +98,17 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 			if ( $extensions ) {
 				foreach ( $extensions as $extension ) {
 					foreach ( $extension as $product ) {
-						$price 				= $product->price;
-						$lower_case_title 	= strtolower( str_replace( ' ', '-', $product->title ) );
-						$title 				= str_replace( 'Storefront', '', $product->title );
+						$price            = $product->price;
+						$lower_case_title = strtolower( str_replace( ' ', '-', $product->title ) );
+						$title            = str_replace( 'Storefront', '', $product->title );
 
-						if ( $price == '&#36;0.00' ) {
-							echo '<li><a class="thickbox" href="' . esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . esc_attr( $lower_case_title ) . '&TB_iframe=true&width=744&height=800' ), 'install-plugin_' . esc_attr( $lower_case_title ) ) ) . '">' . esc_attr( $title ) . ' - <span class="price">' . __( 'Free!', 'storefront' ) . '</span></a><p>' . wp_kses_post( $product->excerpt ) . '</p></li>';
+						if ( '&#36;0.00' == $price ) {
+							echo '<li><a class="thickbox" href="' . esc_url( wp_nonce_url( self_admin_url( 'plugin-install.php?tab=plugin-information&plugin=' . esc_attr( $lower_case_title ) . '&TB_iframe=true&width=744&height=800' ), 'install-plugin_' . esc_attr( $lower_case_title ) ) ) . '">' . esc_attr( $title ) . ' - <span class="price">' . esc_attr__( 'Free!', 'storefront' ) . '</span></a><p>' . wp_kses_post( $product->excerpt ) . '</p></li>';
 						}
 					}
 				}
 			} else {
-				echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
+				echo '<div class="storefront-notice">' . esc_attr__( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
 			}
 			?>
 		</ul>

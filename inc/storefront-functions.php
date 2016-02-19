@@ -36,6 +36,7 @@ function storefront_do_shortcode( $tag, array $atts = array(), $content = null )
 /**
  * Get the content background color
  * Accounts for the Storefront Designer's content background option.
+ *
  * @since  1.6.0
  * @return string the background color
  */
@@ -44,10 +45,10 @@ function storefront_get_content_background_color() {
 	$content_bg_color   = get_theme_mod( 'sd_content_background_color' );
 	$content_frame      = get_theme_mod( 'sd_fixed_width' );
 
-	// Set the bg color based on the default theme option
+	// Set the bg color based on the default theme option.
 	$bg_color   = str_replace( '#', '', get_theme_mod( 'background_color' ) );
 
-	// But if the Storefront Designer extension is active, and the content frame option is enabled we need that bg color instead
+	// But if the Storefront Designer extension is active, and the content frame option is enabled we need that bg color instead.
 	if ( $content_bg_color && 'true' == $content_frame && class_exists( 'Storefront_Designer' ) ) {
 		$bg_color   = str_replace( '#', '', $content_bg_color );
 	}
@@ -57,6 +58,7 @@ function storefront_get_content_background_color() {
 
 /**
  * Apply inline style to the Storefront header.
+ *
  * @uses  get_header_image()
  * @since  2.0.0
  */
@@ -65,7 +67,7 @@ function storefront_header_styles() {
 		'background-image' => 'url(' . esc_url( get_header_image() ) . ')',
 	) );
 
-	foreach( $styles as $style => $value ) {
+	foreach ( $styles as $style => $value ) {
 		echo $style . ': ' . $value . '; ';
 	}
 }
@@ -73,28 +75,29 @@ function storefront_header_styles() {
 /**
  * Adjust a hex color brightness
  * Allows us to create hover styles for custom link colors
- * @param  strong $hex   hex color e.g. #111111
- * @param  integer $steps factor by which to brighten/darken ranging from -255 (darken) to 255 (brighten)
+ *
+ * @param  strong  $hex   hex color e.g. #111111.
+ * @param  integer $steps factor by which to brighten/darken ranging from -255 (darken) to 255 (brighten).
  * @return string        brightened/darkened hex color
  * @since  1.0.0
  */
 function storefront_adjust_color_brightness( $hex, $steps ) {
-	// Steps should be between -255 and 255. Negative = darker, positive = lighter
+	// Steps should be between -255 and 255. Negative = darker, positive = lighter.
 	$steps  = max( -255, min( 255, $steps ) );
 
-	// Format the hex color string
+	// Format the hex color string.
 	$hex    = str_replace( '#', '', $hex );
 
 	if ( 3 == strlen( $hex ) ) {
 		$hex    = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
 	}
 
-	// Get decimal values
+	// Get decimal values.
 	$r  = hexdec( substr( $hex, 0, 2 ) );
 	$g  = hexdec( substr( $hex, 2, 2 ) );
 	$b  = hexdec( substr( $hex, 4, 2 ) );
 
-	// Adjust number of steps and keep it inside 0 to 255
+	// Adjust number of steps and keep it inside 0 to 255.
 	$r  = max( 0, min( 255, $r + $steps ) );
 	$g  = max( 0, min( 255, $g + $steps ) );
 	$b  = max( 0, min( 255, $b + $steps ) );
@@ -110,6 +113,7 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
  * Sanitizes choices (selects / radios)
  * Checks that the input matches one of the available choices
  *
+ * @param array $input the available choices.
  * @since  1.3.0
  */
 function storefront_sanitize_choices( $input, $setting ) {
@@ -134,7 +138,7 @@ function storefront_sanitize_choices( $input, $setting ) {
  * @since  1.5.0
  */
 function storefront_sanitize_checkbox( $checked ) {
-    return (bool) $checked;
+	return (bool) $checked;
 }
 
 /**
@@ -142,6 +146,7 @@ function storefront_sanitize_checkbox( $checked ) {
  *
  * Ensures only array keys matching the original settings specified in add_control() are valid
  *
+ * @param array $input the layout options.
  * @since 1.0.3
  */
 function storefront_sanitize_layout( $input ) {
@@ -162,6 +167,7 @@ function storefront_sanitize_layout( $input ) {
 /**
  * Storefront Sanitize Hex Color
  *
+ * @param string $color The color as a hex.
  * @todo remove in 2.1.
  */
 function storefront_sanitize_hex_color( $color ) {

@@ -7,7 +7,8 @@ class More_Storefront_Control extends WP_Customize_Control {
 	/**
 	* Render the content on the theme customizer page
 	*/
-	public function render_content() { ?>
+	public function render_content() {
+		?>
 		<label style="overflow: hidden; zoom: 1;">
 
 			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
@@ -21,7 +22,7 @@ class More_Storefront_Control extends WP_Customize_Control {
 			<p>
 				<?php printf( esc_html__( 'Why not leave us a review on %sWordPress.org%s?  We\'d really appreciate it!', 'storefront' ), '<a href="https://wordpress.org/themes/storefront">', '</a>' ); ?>
 			</p>
-			
+
 		</label>
 		<?php
 	}

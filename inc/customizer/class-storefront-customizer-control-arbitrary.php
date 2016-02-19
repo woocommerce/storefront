@@ -6,6 +6,11 @@ class Arbitrary_Storefront_Control extends WP_Customize_Control {
 	public $settings 	= 'blogname';
 	public $description = '';
 
+	/**
+	 * Renter the control
+	 *
+	 * @return void
+	 */
 	public function render_content() {
 		switch ( $this->type ) {
 			default:
