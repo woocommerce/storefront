@@ -512,7 +512,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 	function storefront_posted_on() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -527,7 +527,19 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo esc_attr( apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ) );
+		echo wp_kses( apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
+			'span' => array(),
+			'a'    => array(
+				'href'  => array(),
+				'title' => array(),
+				'rel'   => array(),
+			),
+			'time' => array(
+				'datetime' => array(),
+				'itemprop' => array(),
+				'class'    => array(),
+			),
+		 ) );
 	}
 }
 
