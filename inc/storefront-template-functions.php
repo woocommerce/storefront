@@ -528,7 +528,9 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 		);
 
 		echo wp_kses( apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
-			'span' => array(),
+			'span' => array(
+				'class'  => array(),
+			),
 			'a'    => array(
 				'href'  => array(),
 				'title' => array(),
