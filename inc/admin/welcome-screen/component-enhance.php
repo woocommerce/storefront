@@ -36,7 +36,7 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 					}
 				}
 			} else {
-				echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
+				echo '<div class="storefront-notice">' . esc_attr__( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
 			}
 			?>
 		</ul>
@@ -58,7 +58,7 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 				foreach ( $child_theme as $product ) {
 					$price 				= $product->price;
 
-					if ( $price == '&#36;0.00' ) {
+					if ( '&#36;0.00' == $price ) {
 						$price = __( 'Free!', 'storefront' );
 					}
 
@@ -71,14 +71,14 @@ $child_themes 		= $storefront_admin::get_storefront_product_data( 'http://d3t0oe
 						<a href="<?php echo esc_url( $link ); ?>">
 							<img src="<?php echo esc_url( $image ); ?>" alt="<?php echo esc_attr( $title ); ?>" />
 							<span class="child-theme-title"><?php echo esc_attr( $title ); ?></span>
-							<span class="price"><?php echo $price; ?></span>
+							<span class="price"><?php echo esc_attr( $price ); ?></span>
 						</a>
 					</div>
 				<?php
 				}
 			}
 		} else {
-			echo '<div class="storefront-notice">' . __( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
+			echo '<div class="storefront-notice">' . esc_attr__( 'We\'re currently unable to retrieve these products. Please double check your internet connection or try back later.', 'storefront' ) . '</div>';
 		}
 		?>
 		<div class="more-button">

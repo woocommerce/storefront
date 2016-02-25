@@ -10,6 +10,15 @@
  *
  * @link https://github.com/reduxframework/kirki/
  * @link http://ottopress.com/2012/making-a-custom-control-for-the-theme-customizer/
+ * @package  storefront
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * The radio image class.
  */
 class Storefront_Custom_Radio_Image_Control extends WP_Customize_Control {
 

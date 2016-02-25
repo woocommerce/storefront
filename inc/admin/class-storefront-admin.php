@@ -3,6 +3,7 @@
  * Storefront Admin Class
  *
  * @author   WooThemes
+ * @package  storefront
  * @since    2.0.0
  */
 
@@ -11,7 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! class_exists( 'Storefront_Admin' ) ) :
-
+	/**
+	 * The Storefront admin class
+	 */
 	class Storefront_Admin {
 
 		/**
@@ -37,7 +40,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		public function activation_admin_notice() {
 			global $pagenow;
 
-			if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) { // input var okay.
+			if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) { // Input var okay.
 				add_action( 'admin_notices', array( $this, 'storefront_welcome_admin_notice' ), 99 );
 			}
 		}
@@ -143,7 +146,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		/**
 		 * Get product data from json
 		 *
-		 * @param  string $url       URL to the json file
+		 * @param  string $url       URL to the json file.
 		 * @param  string $transient Name the transient.
 		 * @return [type]            [description]
 		 */

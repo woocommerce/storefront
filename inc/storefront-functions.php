@@ -114,6 +114,7 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
  * Checks that the input matches one of the available choices
  *
  * @param array $input the available choices.
+ * @param array $setting the setting object.
  * @since  1.3.0
  */
 function storefront_sanitize_choices( $input, $setting ) {

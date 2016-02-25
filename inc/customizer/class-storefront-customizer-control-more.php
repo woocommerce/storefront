@@ -1,12 +1,23 @@
 <?php
 /**
  * Class to create a Customizer control for displaying information
+ *
+ * @author   WooThemes
+ * @package  storefront
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/**
+ * The 'more' Storefront control class
  */
 class More_Storefront_Control extends WP_Customize_Control {
 
 	/**
-	* Render the content on the theme customizer page
-	*/
+	 * Render the content on the theme customizer page
+	 */
 	public function render_content() {
 		?>
 		<label style="overflow: hidden; zoom: 1;">
