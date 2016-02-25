@@ -42,15 +42,15 @@ function storefront_do_shortcode( $tag, array $atts = array(), $content = null )
  */
 function storefront_get_content_background_color() {
 	// Set the bg color var based on whether the Storefront designer has set a content bg color or not.
-	$content_bg_color   = get_theme_mod( 'sd_content_background_color' );
-	$content_frame      = get_theme_mod( 'sd_fixed_width' );
+	$content_bg_color = get_theme_mod( 'sd_content_background_color' );
+	$content_frame    = get_theme_mod( 'sd_fixed_width' );
 
 	// Set the bg color based on the default theme option.
-	$bg_color   = str_replace( '#', '', get_theme_mod( 'background_color' ) );
+	$bg_color = str_replace( '#', '', get_theme_mod( 'background_color' ) );
 
 	// But if the Storefront Designer extension is active, and the content frame option is enabled we need that bg color instead.
 	if ( $content_bg_color && 'true' == $content_frame && class_exists( 'Storefront_Designer' ) ) {
-		$bg_color   = str_replace( '#', '', $content_bg_color );
+		$bg_color = str_replace( '#', '', $content_bg_color );
 	}
 
 	return '#' . $bg_color;
@@ -68,7 +68,7 @@ function storefront_header_styles() {
 	) );
 
 	foreach ( $styles as $style => $value ) {
-		echo $style . ': ' . $value . '; ';
+		echo esc_attr( $style . ': ' . $value . '; ' );
 	}
 }
 
