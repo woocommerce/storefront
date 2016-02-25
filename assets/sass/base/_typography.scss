@@ -2,19 +2,6 @@
  * Typography
  */
 
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('assets/fonts/fontawesome/fontawesome-webfont.eot?v=#4.1.0');
-  src: url('assets/fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=#4.1.0') format('embedded-opentype'),
-    url('assets/fonts/fontawesome/fontawesome-webfont.woff2?v=#4.1.0') format('woff2'),
-    url('assets/fonts/fontawesome/fontawesome-webfont.woff?v=#4.1.0') format('woff'),
-    url('assets/fonts/fontawesome/fontawesome-webfont.ttf?v=#4.1.0') format('truetype'),
-    url('assets/fonts/fontawesome/fontawesome-webfont.svg?v=#4.1.0#fontawesomeregular') format('svg');
-  //src: url('fonts/fontawesome/FontAwesome.otf') format('opentype'); // used when developing fonts
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;

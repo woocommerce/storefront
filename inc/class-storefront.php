@@ -169,6 +169,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
+			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 'storefront-style', '4.5.0' );
+
 			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20120206', true );
 
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
