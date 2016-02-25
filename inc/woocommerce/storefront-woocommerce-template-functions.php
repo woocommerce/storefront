@@ -17,7 +17,7 @@ if ( ! function_exists( 'storefront_before_content' ) ) {
 		?>
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
-	    	<?php
+		<?php
 	}
 }
 
@@ -139,35 +139,41 @@ if ( ! function_exists( 'storefront_upsell_display' ) ) {
 	}
 }
 
-/**
- * Sorting wrapper
- *
- * @since   1.4.3
- * @return  void
- */
-function storefront_sorting_wrapper() {
-	echo '<div class="storefront-sorting">';
+if ( ! function_exists( 'storefront_sorting_wrapper' ) ) {
+	/**
+	 * Sorting wrapper
+	 *
+	 * @since   1.4.3
+	 * @return  void
+	 */
+	function storefront_sorting_wrapper() {
+		echo '<div class="storefront-sorting">';
+	}
 }
 
-/**
- * Sorting wrapper close
- *
- * @since   1.4.3
- * @return  void
- */
-function storefront_sorting_wrapper_close() {
-	echo '</div>';
+if ( ! function_exists( 'storefront_sorting_wrapper_close' ) ) {
+	/**
+	 * Sorting wrapper close
+	 *
+	 * @since   1.4.3
+	 * @return  void
+	 */
+	function storefront_sorting_wrapper_close() {
+		echo '</div>';
+	}
 }
 
-/**
- * Storefront shop messages
- *
- * @since   1.4.4
- * @uses    do_shortcode
- */
-function storefront_shop_messages() {
-	if ( ! is_checkout() ) {
-		echo wp_kses_post( storefront_do_shortcode( 'woocommerce_messages' ) );
+if ( ! function_exists( 'storefront_shop_messages' ) ) {
+	/**
+	 * Storefront shop messages
+	 *
+	 * @since   1.4.4
+	 * @uses    storefront_do_shortcode
+	 */
+	function storefront_shop_messages() {
+		if ( ! is_checkout() ) {
+			echo wp_kses_post( storefront_do_shortcode( 'woocommerce_messages' ) );
+		}
 	}
 }
 
@@ -235,71 +241,79 @@ if ( ! function_exists( 'storefront_promoted_products' ) ) {
 	}
 }
 
-/**
- * Display a menu intended for use on handheld devices
- *
- * @since 2.0.0
- */
-function storefront_handheld_footer_bar() {
-	$links = apply_filters( 'storefront_handheld_footer_bar_links', array(
-		'my-account' => array(
-			'priority' => 10,
-			'callback' => 'storefront_handheld_footer_bar_account_link',
-		),
-		'search'     => array(
-			'priority' => 20,
-			'callback' => 'storefront_handheld_footer_bar_search',
-		),
-		'cart'       => array(
-			'priority' => 30,
-			'callback' => 'storefront_handheld_footer_bar_cart_link',
-		),
-	) );
-	?>
-	<section class="storefront-handheld-footer-bar">
-		<ul class="columns-<?php echo count( $links ); ?>">
-			<?php foreach ( $links as $key => $link ) : ?>
-				<li class="<?php echo esc_attr( $key ); ?>">
-					<?php
-					if ( $link['callback'] ) {
-						call_user_func( $link['callback'], $key, $link );
-					}
-					?>
-				</li>
-			<?php endforeach; ?>
-		</ul>
-	</section>
-	<?php
+if ( ! function_exists( 'storefront_handheld_footer_bar' ) ) {
+	/**
+	 * Display a menu intended for use on handheld devices
+	 *
+	 * @since 2.0.0
+	 */
+	function storefront_handheld_footer_bar() {
+		$links = apply_filters( 'storefront_handheld_footer_bar_links', array(
+			'my-account' => array(
+				'priority' => 10,
+				'callback' => 'storefront_handheld_footer_bar_account_link',
+			),
+			'search'     => array(
+				'priority' => 20,
+				'callback' => 'storefront_handheld_footer_bar_search',
+			),
+			'cart'       => array(
+				'priority' => 30,
+				'callback' => 'storefront_handheld_footer_bar_cart_link',
+			),
+		) );
+		?>
+		<section class="storefront-handheld-footer-bar">
+			<ul class="columns-<?php echo count( $links ); ?>">
+				<?php foreach ( $links as $key => $link ) : ?>
+					<li class="<?php echo esc_attr( $key ); ?>">
+						<?php
+						if ( $link['callback'] ) {
+							call_user_func( $link['callback'], $key, $link );
+						}
+						?>
+					</li>
+				<?php endforeach; ?>
+			</ul>
+		</section>
+		<?php
+	}
 }
 
-/**
- * The search callback function for the handheld footer bar
- *
- * @since 2.0.0
- */
-function storefront_handheld_footer_bar_search() {
-	echo '<a href="#">' . esc_attr__( 'Search', 'storefront' ) . '</a>';
-	storefront_product_search();
+if ( ! function_exists( 'storefront_handheld_footer_bar_search' ) ) {
+	/**
+	 * The search callback function for the handheld footer bar
+	 *
+	 * @since 2.0.0
+	 */
+	function storefront_handheld_footer_bar_search() {
+		echo '<a href="#">' . esc_attr__( 'Search', 'storefront' ) . '</a>';
+		storefront_product_search();
+	}
 }
 
-/**
- * The cart callback function for the handheld footer bar
- *
- * @since 2.0.0
- */
-function storefront_handheld_footer_bar_cart_link() {
-	?>
-		<a class="footer-cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
-			<span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() );?></span>
-		</a>
-	<?php
+if ( ! function_exists( 'storefront_handheld_footer_bar_cart_link' ) ) {
+	/**
+	 * The cart callback function for the handheld footer bar
+	 *
+	 * @since 2.0.0
+	 */
+	function storefront_handheld_footer_bar_cart_link() {
+		?>
+			<a class="footer-cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
+				<span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() );?></span>
+			</a>
+		<?php
+	}
 }
 
-/**
- * The account callback function for the handheld footer bar
- *
- * @since 2.0.0
- */
-function storefront_handheld_footer_bar_account_link() {
-	echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'storefront' ) . '</a>';
+if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
+	/**
+	 * The account callback function for the handheld footer bar
+	 *
+	 * @since 2.0.0
+	 */
+	function storefront_handheld_footer_bar_account_link() {
+		echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'storefront' ) . '</a>';
+	}
 }
