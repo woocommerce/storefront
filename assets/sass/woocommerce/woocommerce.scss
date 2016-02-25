@@ -1272,6 +1272,7 @@ ul.digital-downloads {
 	padding: 1em 1.387em;
 	background-color: $info;
 	color: #fff;
+	z-index: 999;
 
 	&:before {
 		font-family: "FontAwesome";
