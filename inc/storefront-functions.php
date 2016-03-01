@@ -139,7 +139,7 @@ function storefront_sanitize_choices( $input, $setting ) {
  * @since  1.5.0
  */
 function storefront_sanitize_checkbox( $checked ) {
-	return (bool) $checked;
+	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
 /**
