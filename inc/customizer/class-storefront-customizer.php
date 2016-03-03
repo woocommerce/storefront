@@ -24,14 +24,14 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'customize_preview_init', 			array( $this, 'customize_preview_js' ), 10 );
-			add_action( 'customize_register', 				array( $this, 'customize_register' ), 10 );
-			add_filter( 'body_class', 						array( $this, 'layout_class' ) );
-			add_action( 'wp_enqueue_scripts', 				array( $this, 'add_customizer_css' ), 130 );
-			add_action( 'after_setup_theme', 				array( $this, 'custom_header_setup' ) );
-			add_action( 'customize_controls_print_styles', 	array( $this, 'customizer_custom_control_css' ) );
-			add_action( 'init',								array( $this, 'default_theme_mod_values' ), 10 );
-			add_action( 'customize_register',               array( $this, 'edit_default_customizer_settings' ), 99 );
+			add_action( 'customize_preview_init',          array( $this, 'customize_preview_js' ), 10 );
+			add_action( 'customize_register',              array( $this, 'customize_register' ), 10 );
+			add_filter( 'body_class',                      array( $this, 'layout_class' ) );
+			add_action( 'wp_enqueue_scripts',              array( $this, 'add_customizer_css' ), 130 );
+			add_action( 'after_setup_theme',               array( $this, 'custom_header_setup' ) );
+			add_action( 'customize_controls_print_styles', array( $this, 'customizer_custom_control_css' ) );
+			add_action( 'init',                            array( $this, 'default_theme_mod_values' ), 10 );
+			add_action( 'customize_register',              array( $this, 'edit_default_customizer_settings' ), 99 );
 		}
 
 		/**
@@ -55,7 +55,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'storefront_button_text_color'           => '#ffffff',
 				'storefront_button_alt_background_color' => '#2c2d33',
 				'storefront_button_alt_text_color'       => '#ffffff',
-				'storefront_layout'	                     => 'right',
+				'storefront_layout'                      => 'right',
 				'background_color'                       => '#f5f5f5',
 			) );
 		}
