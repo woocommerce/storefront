@@ -31,7 +31,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'after_setup_theme',               array( $this, 'custom_header_setup' ) );
 			add_action( 'customize_controls_print_styles', array( $this, 'customizer_custom_control_css' ) );
 			add_action( 'init',                            array( $this, 'default_theme_mod_values' ), 10 );
-			add_action( 'customize_register',              array( $this, 'edit_default_customizer_settings' ), 99 );
 		}
 
 		/**
@@ -39,7 +38,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 *
 		 * @return array
 		 */
-		public function get_storefront_default_setting_values() {
+		public static function get_storefront_default_setting_values() {
 			return apply_filters( 'storefront_setting_default_values', $args = array(
 				'storefront_heading_color'               => '#484c51',
 				'storefront_text_color'                  => '#60646c',
@@ -71,19 +70,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				add_filter( 'theme_mod_' . $mod, function( $setting ) use ( $val ) {
 					return $setting ? $setting : $val;
 				}, 10 );
-			}
-		}
-
-		/**
-		 * Set default Customizer settings.
-		 *
-		 * @param  array $wp_customize the Customizer object.
-		 * @uses   get_storefront_default_setting_values()
-		 * @return void
-		 */
-		public function edit_default_customizer_settings( $wp_customize ) {
-			foreach ( Storefront_Customizer::get_storefront_default_setting_values() as $mod => $val ) {
-				$wp_customize->get_setting( $mod )->default = $val;
 			}
 		}
 
