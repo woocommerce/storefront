@@ -26,4 +26,6 @@ WooThemes customers can get support at the [WooThemes support portal](https://su
 ## Contributing to Storefront
 If you have a patch, or stumbled you've upon an issue with Storefront core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/woothemes/storefront/blob/master/CONTRIBUTING.md) for more information about how you can do this.
 
-If you have an idea or feature request please take a look at the [Storefront Ideasboard](http://ideas.woothemes.com/forums/275029-storefront) to see if it's already been suggested, planned, or is under development. If not, please add it there. Ideas with the most votes will be consdiered and planned / discussed on the public [Storefront Roadmap](https://trello.com/b/i2Yxx45p/storefront-roadmap).
+If you have an idea or feature request please take a look at the [Storefront Ideasboard](http://ideas.woothemes.com/forums/275029-storefront) to see if it's already been suggested, planned, or is under development. If not, please add it there.
+
+You can keep up with the latest Storefront developments on the [dev blog](https://storefront.wordpress.com/).
