@@ -750,6 +750,36 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 	}
 }
 
+if ( ! function_exists( 'storefront_best_selling_products' ) ) {
+	/**
+	 * Display Best Selling Products
+	 * Hooked into the `homepage` action in the homepage template
+	 *
+	 * @since  1.0.0
+	 * @param array $args the product section args.
+	 * @return void
+	 */
+	function storefront_best_selling_products( $args ) {
+		if ( is_woocommerce_activated() ) {
+			$args = apply_filters( 'storefront_best_selling_products_args', array(
+				'limit' 			=> 4,
+				'columns' 			=> 4,
+				'title'				=> __( 'Best Selling In', 'storefront' ),
+			) );
+			echo '<section class="storefront-product-section storefront-best-selling-products">';
+			do_action( 'storefront_homepage_before_best_selling_products' );
+			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+			do_action( 'storefront_homepage_after_best_selling_products_title' );
+			echo storefront_do_shortcode( 'best_selling_products', array(
+				'per_page' => intval( $args['limit'] ),
+				'columns'  => intval( $args['columns'] ),
+			) );
+			do_action( 'storefront_homepage_after_best_selling_products_products' );
+			echo '</section>';
+		}
+	}
+}
+
 if ( ! function_exists( 'storefront_homepage_content' ) ) {
 	/**
 	 * Display homepage content
