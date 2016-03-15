@@ -9,16 +9,32 @@
 	display: none;
 }
 
-.menu-toggle {
+button.menu-toggle {
 	cursor: pointer;
 	text-align: left;
 	float: right;
+	border: 2px solid transparent;
+	box-shadow: none;
+	border-radius: 2px;
+	background-image: none;
+
+	&:hover {
+		background-image: none;
+	}
 
 	&:before {
 		font-family: "FontAwesome";
 		font-weight: 400;
 		content: "\f0c9";
 		margin-right: .53em;
+	}
+}
+
+.toggled {
+	button.menu-toggle {
+		&:before {
+			content: "\f00d";
+		}
 	}
 }
 
