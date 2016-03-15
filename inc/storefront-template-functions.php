@@ -755,16 +755,16 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 	 * Display Best Selling Products
 	 * Hooked into the `homepage` action in the homepage template
 	 *
-	 * @since  1.0.0
+	 * @since 2.0.0
 	 * @param array $args the product section args.
 	 * @return void
 	 */
 	function storefront_best_selling_products( $args ) {
 		if ( is_woocommerce_activated() ) {
 			$args = apply_filters( 'storefront_best_selling_products_args', array(
-				'limit' 			=> 4,
-				'columns' 			=> 4,
-				'title'				=> __( 'Best Selling In', 'storefront' ),
+				'limit'   => 4,
+				'columns' => 4,
+				'title'	  => esc_attr__( 'Best Sellers', 'storefront' ),
 			) );
 			echo '<section class="storefront-product-section storefront-best-selling-products">';
 			do_action( 'storefront_homepage_before_best_selling_products' );
