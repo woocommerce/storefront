@@ -29,3 +29,6 @@ If you have a patch, or stumbled you've upon an issue with Storefront core, you 
 If you have an idea or feature request please take a look at the [Storefront Ideasboard](http://ideas.woothemes.com/forums/275029-storefront) to see if it's already been suggested, planned, or is under development. If not, please add it there.
 
 You can keep up with the latest Storefront developments on the [dev blog](https://storefront.wordpress.com/).
+
+## Testing Storefront
+Want to help test upcoming Storefront releases? Check out the [Storefront Beta Tester](https://github.com/seb86/Storefront-Beta-Tester) plugin.
