@@ -84,11 +84,13 @@ button.menu-toggle {
 .handheld-navigation,
 .nav-menu,
 .main-navigation div.menu > ul:not(.nav-menu) {
-	display: none;
+	overflow: hidden;
+	max-height: 0; /* We have to use max-height because `height` isn't animatable */
+	@include transition(all,ease,.4s);
 }
 
 .handheld-navigation {
-	margin-bottom: 2.244em;
+	clear: both;
 
 	ul {
 		margin: 0;
@@ -98,13 +100,14 @@ button.menu-toggle {
 .main-navigation.toggled {
 	.handheld-navigation,
 	.menu > ul:not(.nav-menu) {
-		display: block;
+		max-height: 1750px;
 	}
 }
 
 .main-navigation ul {
 	margin-left: 0;
 	list-style: none;
+	margin-bottom: 0;
 
 	ul {
 		display: block;
@@ -231,6 +234,8 @@ button.menu-toggle {
 
 		ul.menu,
 		ul.nav-menu {
+			max-height: none;
+			
 			> li {
 				// The first level menu item
 				> a {
