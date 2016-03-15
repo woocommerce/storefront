@@ -311,6 +311,10 @@ ul.products {
 			margin: 0 auto 1em;
 		}
 
+		.woocommerce-Product-link {
+			display: block;
+		}
+
 		.price {
 			display: block;
 			color: $color_body;
