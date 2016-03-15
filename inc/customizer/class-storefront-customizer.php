@@ -520,7 +520,10 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $header_text_color . ';
 			}
 
-			.storefront-handheld-footer-bar ul li.cart .count {
+			.storefront-handheld-footer-bar ul li.cart .count,
+			button.menu-toggle:after,
+			button.menu-toggle:before,
+			button.menu-toggle span:before {
 				background-color: ' . $header_link_color . ';
 			}
 

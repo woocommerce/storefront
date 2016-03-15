@@ -17,23 +17,54 @@ button.menu-toggle {
 	box-shadow: none;
 	border-radius: 2px;
 	background-image: none;
+	position: relative;
+	padding-left: 2.618em;
 
 	&:hover {
 		background-image: none;
 	}
 
+	span:before {
+		@include transition(all,ease,.2s);
+	}
+
+	&:before,
+	&:after,
+	span:before {
+		content: "";
+		display: block;
+		height: 2px;
+		width: 14px;
+		position: absolute;
+		top: 50%;
+		left: 1em;
+		margin-top: -1px;
+		@include transition(all,ease,.2s);
+	}
+
 	&:before {
-		font-family: "FontAwesome";
-		font-weight: 400;
-		content: "\f0c9";
-		margin-right: .53em;
+		@include transform(translateY(-4px));
+	}
+
+	&:after {
+		@include transform(translateY(4px));
 	}
 }
 
 .toggled {
 	button.menu-toggle {
-		&:before {
-			content: "\f00d";
+		&:before,
+		&:after {
+			@include transform(translateY(0));
+			@include transform(rotate(45deg));
+		}
+
+		&:after {
+			@include transform(rotate(-45deg));
+		}
+
+		span:before {
+			opacity: 0;
 		}
 	}
 }
