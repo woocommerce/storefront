@@ -13,11 +13,11 @@ button.menu-toggle {
 	cursor: pointer;
 	text-align: left;
 	float: right;
+	position: relative;
 	border: 2px solid transparent;
 	box-shadow: none;
 	border-radius: 2px;
 	background-image: none;
-	position: relative;
 	padding-left: 2.618em;
 
 	&:hover {
@@ -74,6 +74,8 @@ button.menu-toggle {
 }
 
 .main-navigation {
+	@include clearfix;
+
 	.menu {
 		clear: both;
 	}
