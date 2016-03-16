@@ -99,7 +99,7 @@
 	left: 0;
 	right: 0;
 	border-top: 1px solid rgba(#fff,.2);
-	box-shadow: 0 0 2em rgba(#000,.7);
+	box-shadow: 0 0 6px rgba(#000,.7);
 	z-index: 9999;
 
 	ul {
@@ -2060,7 +2060,7 @@ dl.variation {
 	table.cart {
 		th,
 		td {
-			padding: .857em 1.387em;
+			padding: 1.618em;
 		}
 
 		.qty {
@@ -2070,7 +2070,7 @@ dl.variation {
 
 		td.product-remove {
 			display: table-cell;
-			padding: .857em 1em;
+			padding: 1.618em;
 			border: 0;
 
 			a.remove {

@@ -31,7 +31,15 @@
 			font-size: .857em;
 		}
 	}
+
+	&.type-page {
+		.entry-header {
+			border-bottom: 0;
+			margin-bottom: 0;
+		}
+	}
 }
+
 .byline,
 .updated:not(.published) {
 	display: none;
