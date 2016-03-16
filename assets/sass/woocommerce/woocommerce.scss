@@ -847,17 +847,39 @@ table.cart {
 		display: none;
 	}
 
-	td,
-	th {
-		padding: .53em;
+	td.product-remove {
+		@include clearfix;
+		padding: .236em;
+		border-top: 1em solid;
+		padding-bottom: 0;
+
+		a.remove {
+			float: right;
+			font-size: 1.387em;
+		}
 	}
 
-	.qty {
-		padding: .236em;
-		max-width: 1.618em;
+	td.product-quantity {
+		.qty {
+			padding: .326em;
+			width: 2.618em;
+		}
+	}
+
+	td,
+	th {
+		padding: .857em .857em 0;
+	}
+
+	td.product-subtotal {
+		padding-bottom: .857em;
 	}
 
 	td.actions {
+		border-top: 1em solid;
+		background-color: transparent;
+		padding: 0;
+
 		label {
 			display: none;
 		}
@@ -871,7 +893,7 @@ table.cart {
 		input {
 			display: block;
 			width: 100%;
-			margin: .236em 0;
+			margin: .53em 0;
 		}
 	}
 }
@@ -1981,8 +2003,14 @@ dl.variation {
 			max-width: 3.632em;
 		}
 
-		.product-remove {
+		td.product-remove {
 			display: table-cell;
+			padding: .857em 1em;
+			border: 0;
+
+			a.remove {
+				float: none;
+			}
 		}
 
 		.product-quantity .plus,

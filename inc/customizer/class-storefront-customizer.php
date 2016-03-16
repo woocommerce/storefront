@@ -634,6 +634,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $header_link_color . ';
 			}
 
+			table.cart td.product-remove,
+			table.cart td.actions {
+				border-top-color: ' . $background_color . ';
+			}
+
 			.site-header-cart .widget_shopping_cart {
 				background-color: ' . $header_background_color . ';
 			}

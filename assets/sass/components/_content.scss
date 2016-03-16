@@ -23,7 +23,7 @@
 	}
 
 	.entry-header {
-		margin-bottom: 2.618em;
+		margin-bottom: 1em;
 		border-bottom: 1px solid $color_border;
 
 		.posted-on,
@@ -63,6 +63,12 @@
 }
 
 @include susy-media($desktop) {
+	.hentry {
+		.entry-header {
+			margin-bottom: 2.618em;
+		}
+	}
+
 	.hentry.type-post {
 		@include clearfix;
 
