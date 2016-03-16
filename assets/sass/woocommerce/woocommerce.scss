@@ -1181,7 +1181,72 @@ form.checkout {
 /**
  * My Account
  */
+.my-account-navigation {
+	ul {
+		margin-left: 0;
 
+		li {
+			list-style: none;
+			border-bottom: 1px dotted $color_border;
+			position: relative;
+
+			&.current-item {
+				a:before {
+					opacity: 1;
+				}
+			}
+
+			a {
+				padding: .53em 0;
+				display: block;
+
+				&:before {
+					font-family: "FontAwesome";
+					content: "\f0f6";
+					display: inline-block;
+					margin-right: .53em;
+					width: 1em;
+					opacity: .25;
+					font-weight: 400;
+				}
+
+				&:hover {
+					&:before {
+						opacity: 1;
+					}
+				}
+			}
+
+			&.my-account-menu-item-dashboard a:before {
+				content: "\f0e4";
+			}
+
+			&.my-account-menu-item-orders a:before {
+				content: "\f291";
+			}
+
+			&.my-account-menu-item-downloads a:before {
+				content: "\f1c6";
+			}
+
+			&.my-account-menu-item-edit-address a:before {
+				content: "\f015";
+			}
+
+			&.my-account-menu-item-payment-methods a:before {
+				content: "\f09d";
+			}
+
+			&.my-account-menu-item-edit-account a:before {
+				content: "\f007";
+			}
+
+			&.my-account-menu-item-customer-logout a:before {
+				content: "\f08b";
+			}
+		}
+	}
+}
 ul.order_details {
 	@include clearfix;
 	list-style: none;
@@ -1219,7 +1284,7 @@ ul.digital-downloads {
 
 		&:before {
 			font-family: "FontAwesome";
-			content: "\f019";
+			content: "\f1c6";
 			margin-right: .53em;
 		}
 	}
@@ -2245,6 +2310,26 @@ dl.variation {
 		}
 	}
 
+	.my-account-navigation {
+		@include span( 3 of 9 );
+	}
+
+	.my-account-content {
+		@include span( last 6 of 9 );
+
+		.form-row-first {
+			@include span( 3 of 6 );
+		}
+
+		.form-row-last {
+			@include span( last 3 of 6 );
+		}
+	}
+
+	table.my_account_orders {
+		font-size: .857em;
+	}
+
 	.page-template-template-fullwidth-php {
 		.col2-set#customer_login {
 			.col-1 {
@@ -2253,6 +2338,34 @@ dl.variation {
 
 			.col-2 {
 				@include span( 6 of 12 last );
+			}
+		}
+
+		.my-account-navigation {
+			@include span( 4 of 12 );
+		}
+
+		.my-account-content {
+			@include span( last 8 of 12 );
+
+			.form-row-first {
+				@include span( 4 of 8 );
+			}
+
+			.form-row-last {
+				@include span( last 4 of 8 );
+			}
+
+			.col2-set {
+				width: 100%;
+
+				.col-1 {
+					@include span( 4 of 8 );
+				}
+
+				.col-2 {
+					@include span( last 4 of 8 );
+				}
 			}
 		}
 	}
