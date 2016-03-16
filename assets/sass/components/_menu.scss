@@ -235,6 +235,7 @@ button.menu-toggle {
 		ul.menu,
 		ul.nav-menu {
 			max-height: none;
+			overflow: visible;
 
 			> li {
 				// The first level menu item
