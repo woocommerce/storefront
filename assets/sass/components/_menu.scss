@@ -86,7 +86,7 @@ button.menu-toggle {
 .main-navigation div.menu > ul:not(.nav-menu) {
 	overflow: hidden;
 	max-height: 0; /* We have to use max-height because `height` isn't animatable */
-	@include transition(all,ease,.4s);
+	@include transition(all,ease,.8s);
 }
 
 .handheld-navigation {
@@ -235,7 +235,7 @@ button.menu-toggle {
 		ul.menu,
 		ul.nav-menu {
 			max-height: none;
-			
+
 			> li {
 				// The first level menu item
 				> a {
