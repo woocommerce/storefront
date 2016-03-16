@@ -1184,6 +1184,7 @@ form.checkout {
 .my-account-navigation {
 	ul {
 		margin-left: 0;
+		border-top: 1px dotted $color_border;
 
 		li {
 			list-style: none;
@@ -1197,15 +1198,17 @@ form.checkout {
 			}
 
 			a {
-				padding: .53em 0;
+				padding: .857em 0;
 				display: block;
 
 				&:before {
 					font-family: "FontAwesome";
 					content: "\f0f6";
 					display: inline-block;
-					margin-right: .53em;
-					width: 1em;
+					margin-left: .53em;
+					width: 1.387em;
+					text-align: right;
+					float: right;
 					opacity: .25;
 					font-weight: 400;
 				}
@@ -1247,6 +1250,7 @@ form.checkout {
 		}
 	}
 }
+
 ul.order_details {
 	@include clearfix;
 	list-style: none;
@@ -2049,17 +2053,14 @@ dl.variation {
 			thead {
 				font-size: 1em;
 				text-indent: 0;
-
-				th {
-					padding: .857em 1.387em;
-				}
 			}
 		}
 	}
 
 	table.cart {
 		th,
-		td {
+		td,
+		thead th {
 			padding: 1.618em;
 		}
 

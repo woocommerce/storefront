@@ -29,7 +29,7 @@ input[type="submit"],
 	color: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
 	line-height: 1;
-	padding: .618em 1em;
+	padding: .857em 1.387em;
 	text-decoration: none;
 	font-weight: 700;
 	text-shadow: none;
@@ -39,8 +39,7 @@ input[type="submit"],
 	-webkit-font-smoothing: antialiased;
 	border-radius: 0;
 	box-shadow:
-		inset 0 -1px 0 rgba(#000,.2),
-		0 1px 1px rgba(#000,.1);
+		inset 0 -1px 0 rgba(#000,.3);
 
 	&.cta,
 	&.alt {
@@ -113,7 +112,7 @@ input[type="password"],
 input[type="search"],
 textarea,
 .input-text {
-	padding: .618em;
+	padding: .857em;
 	background-color: darken($body-background,5%);
 	color: $color_body;
 	line-height: 1;

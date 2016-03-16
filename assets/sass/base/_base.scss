@@ -218,7 +218,6 @@ table {
 
 	thead {
 		th {
-			border-bottom: 2px solid $color_border;
 			text-transform: uppercase;
 			padding: 1.387em;
 			vertical-align: middle;
@@ -226,20 +225,6 @@ table {
 	}
 
 	tbody {
-		tr:nth-child(2n) {
-			td {
-				background: rgba(0,0,0,0.015);
-
-				&:last-child {
-					border-right: 0;
-				}
-			}
-		}
-
-		td {
-			background: rgba(0,0,0,0.025);
-		}
-
 		h2 {
 			font-size: 1em;
 			letter-spacing: normal;
@@ -247,16 +232,6 @@ table {
 
 			a {
 				font-weight: normal;
-			}
-		}
-
-		tr:last-child {
-			td {
-				border-bottom: 0;
-			}
-
-			th:first-child {
-				border-bottom: 0;
 			}
 		}
 	}
