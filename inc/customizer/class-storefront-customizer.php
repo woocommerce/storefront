@@ -31,6 +31,9 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'after_setup_theme',               array( $this, 'custom_header_setup' ) );
 			add_action( 'customize_controls_print_styles', array( $this, 'customizer_custom_control_css' ) );
 			add_action( 'init',                            array( $this, 'default_theme_mod_values' ), 10 );
+
+			add_action( 'after_switch_theme',              array( $this, 'set_storefront_style_theme_mods' ) );
+			add_action( 'customize_save_after',            array( $this, 'set_storefront_style_theme_mods' ) );
 		}
 
 		/**
@@ -448,33 +451,47 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		}
 
 		/**
-		 * Add CSS in <head> for styles handled by the theme customizer
+		 * Get all of the Storefront theme mods.
 		 *
-		 * @since 1.0.0
+		 * @return array $storefront_theme_mods The Storefront Theme Mods.
 		 */
-		public function add_customizer_css() {
-			$background_color				= storefront_get_content_background_color();
-			$accent_color 					= get_theme_mod( 'storefront_accent_color' );
-			$header_background_color 		= get_theme_mod( 'storefront_header_background_color' );
-			$header_link_color 				= get_theme_mod( 'storefront_header_link_color' );
-			$header_text_color 				= get_theme_mod( 'storefront_header_text_color' );
+		public function get_storefront_theme_mods() {
+			static $storefront_theme_mods;
+			if ( ! isset( $storefront_theme_mods ) ) {
+				$storefront_theme_mods = array(
+					'background_color'            => storefront_get_content_background_color(),
+					'accent_color'                => get_theme_mod( 'storefront_accent_color' ),
+					'header_background_color'     => get_theme_mod( 'storefront_header_background_color' ),
+					'header_link_color'           => get_theme_mod( 'storefront_header_link_color' ),
+					'header_text_color'           => get_theme_mod( 'storefront_header_text_color' ),
+					'footer_background_color'     => get_theme_mod( 'storefront_footer_background_color' ),
+					'footer_link_color'           => get_theme_mod( 'storefront_footer_link_color' ),
+					'footer_heading_color'        => get_theme_mod( 'storefront_footer_heading_color' ),
+					'footer_text_color'           => get_theme_mod( 'storefront_footer_text_color' ),
+					'text_color'                  => get_theme_mod( 'storefront_text_color' ),
+					'heading_color'               => get_theme_mod( 'storefront_heading_color' ),
+					'button_background_color'     => get_theme_mod( 'storefront_button_background_color' ),
+					'button_text_color'           => get_theme_mod( 'storefront_button_text_color' ),
+					'button_alt_background_color' => get_theme_mod( 'storefront_button_alt_background_color' ),
+					'button_alt_text_color'       => get_theme_mod( 'storefront_button_alt_text_color' ),
+				);
+			}
 
-			$footer_background_color 		= get_theme_mod( 'storefront_footer_background_color' );
-			$footer_link_color 				= get_theme_mod( 'storefront_footer_link_color' );
-			$footer_heading_color 			= get_theme_mod( 'storefront_footer_heading_color' );
-			$footer_text_color 				= get_theme_mod( 'storefront_footer_text_color' );
+			return apply_filters( 'storefront_theme_mods', $storefront_theme_mods );
+		}
 
-			$text_color 					= get_theme_mod( 'storefront_text_color' );
-			$heading_color 					= get_theme_mod( 'storefront_heading_color' );
-			$button_background_color 		= get_theme_mod( 'storefront_button_background_color' );
-			$button_text_color 				= get_theme_mod( 'storefront_button_text_color' );
-			$button_alt_background_color 	= get_theme_mod( 'storefront_button_alt_background_color' );
-			$button_alt_text_color 			= get_theme_mod( 'storefront_button_alt_text_color' );
+		/**
+		 * Get Customizer css.
+		 *
+		 * @see get_storefront_theme_mods()
+		 * @return array $styles the css
+		 */
+		public function get_css() {
+			$storefront_theme_mods = $this->get_storefront_theme_mods();
+			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
+			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
 
-			$brighten_factor 				= apply_filters( 'storefront_brighten_factor', 25 );
-			$darken_factor 					= apply_filters( 'storefront_darken_factor', -25 );
-
-			$style 							= '
+			$styles                = '
 			.main-navigation ul li a,
 			.site-title a,
 			ul.menu li a,
@@ -482,12 +499,12 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.site-footer .storefront-handheld-footer-bar a:not(.button),
 			button.menu-toggle,
 			button.menu-toggle:hover {
-				color: ' . $header_link_color . ';
+				color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
 			button.menu-toggle,
 			button.menu-toggle:hover {
-				border-color: ' . $header_link_color . ';
+				border-color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
 			.main-navigation ul li a:hover,
@@ -497,7 +514,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.site-header-cart .widget_shopping_cart a:hover,
 			.site-header-cart:hover > li > a,
 			ul.menu li.current-menu-item > a {
-				color: ' . storefront_adjust_color_brightness( $header_link_color, 50 ) . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
 			}
 
 			.site-header,
@@ -511,36 +528,36 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.storefront-handheld-footer-bar ul li.search .site-search,
 			button.menu-toggle,
 			button.menu-toggle:hover {
-				background-color: ' . $header_background_color . ';
+				background-color: ' . $storefront_theme_mods['header_background_color'] . ';
 			}
 
 			p.site-description,
 			.site-header,
 			.storefront-handheld-footer-bar {
-				color: ' . $header_text_color . ';
+				color: ' . $storefront_theme_mods['header_text_color'] . ';
 			}
 
 			.storefront-handheld-footer-bar ul li.cart .count,
 			button.menu-toggle:after,
 			button.menu-toggle:before,
 			button.menu-toggle span:before {
-				background-color: ' . $header_link_color . ';
+				background-color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
 			.storefront-handheld-footer-bar ul li.cart .count {
-				color: ' . $header_background_color . ';
+				color: ' . $storefront_theme_mods['header_background_color'] . ';
 			}
 
 			.storefront-handheld-footer-bar ul li.cart .count {
-				border-color: ' . $header_background_color . ';
+				border-color: ' . $storefront_theme_mods['header_background_color'] . ';
 			}
 
 			h1, h2, h3, h4, h5, h6 {
-				color: ' . $heading_color . ';
+				color: ' . $storefront_theme_mods['heading_color'] . ';
 			}
 
 			.widget h1 {
-				border-bottom-color: ' . $heading_color . ';
+				border-bottom-color: ' . $storefront_theme_mods['header_color'] . ';
 			}
 
 			body,
@@ -549,11 +566,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.onsale,
 			#comments .comment-list .reply a,
 			.pagination .page-numbers li .page-numbers:not(.current), .woocommerce-pagination .page-numbers li .page-numbers:not(.current) {
-				color: ' . $text_color . ';
+				color: ' . $storefront_theme_mods['text_color'] . ';
 			}
 
 			a  {
-				color: ' . $accent_color . ';
+				color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
 			a:focus,
@@ -565,44 +582,44 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			input[type="button"]:focus,
 			input[type="reset"]:focus,
 			input[type="submit"]:focus {
-				outline-color: ' . $accent_color . ';
+				outline-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
 			button, input[type="button"], input[type="reset"], input[type="submit"], .button, .added_to_cart, .widget-area .widget a.button, .site-header-cart .widget_shopping_cart a.button {
-				background-color: ' . $button_background_color . ';
-				border-color: ' . $button_background_color . ';
-				color: ' . $button_text_color . ';
+				background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+				border-color: ' . $storefront_theme_mods['button_background_color'] . ';
+				color: ' . $storefront_theme_mods['button_text_color'] . ';
 			}
 
 			button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover, .button:hover, .added_to_cart:hover, .widget-area .widget a.button:hover, .site-header-cart .widget_shopping_cart a.button:hover {
-				background-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
-				border-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ';
-				color: ' . $button_text_color . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				color: ' . $storefront_theme_mods['button_text_color'] . ';
 			}
 
 			button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
-				background-color: ' . $button_alt_background_color . ';
-				border-color: ' . $button_alt_background_color . ';
-				color: ' . $button_alt_text_color . ';
+				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+				border-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
 			}
 
 			button.alt:hover, input[type="button"].alt:hover, input[type="reset"].alt:hover, input[type="submit"].alt:hover, .button.alt:hover, .added_to_cart.alt:hover, .widget-area .widget a.button.alt:hover, .added_to_cart:hover {
-				background-color: ' . storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ) . ';
-				border-color: ' . storefront_adjust_color_brightness( $button_alt_background_color, $darken_factor ) . ';
-				color: ' . $button_alt_text_color . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
+				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
+				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
 			}
 
 			.site-footer {
-				background-color: ' . $footer_background_color . ';
-				color: ' . $footer_text_color . ';
+				background-color: ' . $storefront_theme_mods['footer_background_color'] . ';
+				color: ' . $storefront_theme_mods['footer_text_color'] . ';
 			}
 
 			.site-footer a:not(.button) {
-				color: ' . $footer_link_color . ';
+				color: ' . $storefront_theme_mods['footer_link_color'] . ';
 			}
 
 			.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
-				color: ' . $footer_heading_color . ';
+				color: ' . $storefront_theme_mods['footer_heading_color'] . ';
 			}
 
 			#order_review {
@@ -611,36 +628,50 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			@media screen and ( min-width: 768px ) {
 				.main-navigation ul.menu > li > ul {
-					border-top-color: ' . $header_background_color . ';
+					border-top-color: ' . $storefront_theme_mods['header_background_color'] . ';
 				}
 
 				.secondary-navigation ul.menu a:hover {
-					color: ' . storefront_adjust_color_brightness( $header_text_color, $brighten_factor ) . ';
+					color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_text_color'], $brighten_factor ) . ';
 				}
 
 				.main-navigation ul.menu ul,
 				.main-navigation ul ul {
-					background-color: ' . $header_background_color . ';
+					background-color: ' . $storefront_theme_mods['header_background_color'] . ';
 				}
 
 				.secondary-navigation ul.menu a {
-					color: ' . $header_text_color . ';
+					color: ' . $storefront_theme_mods['text_text_color'] . ';
 				}
 			}';
 
-			$woocommerce_style 							= '
+			return apply_filters( 'storefront_customizer_css', $styles );
+		}
+
+		/**
+		 * Get Customizer css associated with WooCommerce.
+		 *
+		 * @see get_storefront_theme_mods()
+		 * @return array $woocommerce_styles the WooCommerce css
+		 */
+		public function get_woocommerce_css() {
+			$storefront_theme_mods = $this->get_storefront_theme_mods();
+			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
+			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
+
+			$woocommerce_styles    = '
 			a.cart-contents,
 			.site-header-cart .widget_shopping_cart a {
-				color: ' . $header_link_color . ';
+				color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
 			table.cart td.product-remove,
 			table.cart td.actions {
-				border-top-color: ' . $background_color . ';
+				border-top-color: ' . $storefront_theme_mods['background_color'] . ';
 			}
 
 			.site-header-cart .widget_shopping_cart {
-				background-color: ' . $header_background_color . ';
+				background-color: ' . $storefront_theme_mods['header_background_color'] . ';
 			}
 
 			.woocommerce-tabs ul.tabs li.active a,
@@ -648,11 +679,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.onsale,
 			.widget_search form:before,
 			.widget_product_search form:before {
-				color: ' . $text_color . ';
+				color: ' . $storefront_theme_mods['text_color'] . ';
 			}
 
 			.onsale {
-				border-color: ' . $text_color . ';
+				border-color: ' . $storefront_theme_mods['text_color'] . ';
 			}
 
 			.star-rating span:before,
@@ -662,31 +693,57 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			p.stars a:hover:after,
 			p.stars a:after,
 			.star-rating span:before {
-				color: ' . $accent_color . ';
+				color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
 			.widget_price_filter .ui-slider .ui-slider-range,
 			.widget_price_filter .ui-slider .ui-slider-handle {
-				background-color: ' . $accent_color . ';
+				background-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
 			#order_review_heading, #order_review {
-				border-color: ' . $accent_color . ';
+				border-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
 			.woocommerce-breadcrumb {
-				background-color: ' . storefront_adjust_color_brightness( $background_color, 7 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ';
 			}
 
 			@media screen and ( min-width: 768px ) {
 				.site-header-cart .widget_shopping_cart,
 				.site-header .product_list_widget li .quantity {
-					color: ' . $header_text_color . ';
+					color: ' . $storefront_theme_mods['header_text_color'] . ';
 				}
 			}';
 
-			wp_add_inline_style( 'storefront-style', $style );
-			wp_add_inline_style( 'storefront-woocommerce-style', $woocommerce_style );
+			return apply_filters( 'storefront_customizer_woocommerce_css', $woocommerce_styles );
+		}
+
+		/**
+		 * Assign Storefront styles to individual theme mods.
+		 *
+		 * @return void
+		 */
+		public function set_storefront_style_theme_mods() {
+			set_theme_mod( 'storefront_styles', $this->get_css() );
+			set_theme_mod( 'storefront_woocommerce_styles', $this->get_woocommerce_css() );
+		}
+
+		/**
+		 * Add CSS in <head> for styles handled by the theme customizer
+		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods.
+		 *
+		 * @since 1.0.0
+		 * @return void
+		 */
+		public function add_customizer_css() {
+			if ( is_customize_preview() ) {
+				wp_add_inline_style( 'storefront-style', $this->get_css() );
+				wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_css() );
+			} else {
+				wp_add_inline_style( 'storefront-style', get_theme_mod( 'storefront_styles' ) );
+				wp_add_inline_style( 'storefront-woocommerce-style', get_theme_mod( 'storefront_woocommerce_styles' ) );
+			}
 		}
 
 		/**
