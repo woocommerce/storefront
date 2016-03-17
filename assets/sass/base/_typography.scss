@@ -15,8 +15,10 @@ textarea {
 	color: $color_body;
 	font-family: $base-font;
 	line-height: 1.618;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-	font-weight: 300;
+	font-weight: 400;
 }
 
 select {
