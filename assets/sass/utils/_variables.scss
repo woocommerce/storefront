@@ -3,7 +3,7 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
-$base-font: 		"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$base-font: 		"Roboto", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $header-font: 		$base-font;
 
 // base color scheme
@@ -19,7 +19,7 @@ $info: 				#3D9CD2;
 $vspacing: 			1.618em;
 $desktop:			768px;
 $handheld:			568px;
-$container-width:	68.141em;
+$container-width:	67.141em;
 
 $susy: (
 	columns: 12,

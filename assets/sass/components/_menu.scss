@@ -18,7 +18,8 @@ button.menu-toggle {
 	box-shadow: none;
 	border-radius: 2px;
 	background-image: none;
-	padding-left: 2.618em;
+	padding: .618em .857em .618em 2.618em;
+	font-size: .857em;
 
 	&:hover {
 		background-image: none;
@@ -375,7 +376,7 @@ button.menu-toggle {
 
 			a {
 				padding: 1.387em .857em;
-				font-weight: 400;
+				font-weight: 300;
 				color: lighten( $color_body, 20% );
 
 				&:hover {

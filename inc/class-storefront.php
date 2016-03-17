@@ -165,14 +165,33 @@ if ( ! class_exists( 'Storefront' ) ) :
 		public function scripts() {
 			global $storefront_version;
 
+			/**
+			 * Styles
+			 */
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
-
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
+			/**
+			 * Fonts
+			 */
+			$google_fonts = apply_filters( 'storefront_google_font_families', array(
+				'roboto' => 'Roboto:400,300,300italic,400italic,700,700italic,900,900italic',
+			) );
+
+			$query_args = array(
+				'family' => urlencode( implode( '|', $google_fonts ) ),
+				'subset' => urlencode( 'latin,latin-ext' ),
+			);
+
+			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+			wp_enqueue_style( 'storefront-fonts', $fonts_url, array(), null );
 			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 'storefront-style', '4.5.0' );
 
+			/**
+			 * Scripts
+			 */
 			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20120206', true );
-
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

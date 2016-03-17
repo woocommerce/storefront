@@ -5,7 +5,7 @@
 body {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: .938em;
+	font-size: 1em;
 }
 
 body,
@@ -17,7 +17,8 @@ textarea {
 	line-height: 1.618;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	font-weight: 400;
 }
 
 select {
@@ -32,32 +33,39 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 700;
-	margin: 0 0 .618em;
+	font-weight: 900;
+	margin: 0 0 .53em;
 	color: darken( $color_body, 20% );
+
+	a {
+		font-weight: 900;
+	}
 }
 
 h1,
 .alpha {
+	font-size: 2.618em;
+	line-height: 1.214;
+	letter-spacing: -1px;
+}
+
+h2,
+.beta {
 	font-size: 2.244em;
 	letter-spacing: -1px;
 	line-height: 1.214;
 }
 
-h2,
-.beta {
-	font-size: 1.618em;
-	letter-spacing: -1px;
-}
-
 h3,
 .gamma {
-	font-size: 1.387em;
+	font-size: 1.618em;
+	font-weight: 700;
 }
 
 h4,
 .delta {
-	font-size: 1em;
+	font-size: 1.387em;
+	font-weight: 700;
 }
 
 hr {
@@ -199,7 +207,7 @@ img {
 a {
 	color: $color_links;
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: 600;
 
 	&:focus {
 		outline: 1px solid $color_links;

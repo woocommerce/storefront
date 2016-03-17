@@ -35,6 +35,8 @@
 
 .widget-area {
 	.widget {
+		font-weight: 300;
+		
 		a.button {
 			font-weight: 700 !important;
 			color: #fff;
@@ -213,7 +215,6 @@
 
 		a {
 			color: $color_body;
-			font-weight: 400;
 
 			&:hover {
 				color: $color_links;
