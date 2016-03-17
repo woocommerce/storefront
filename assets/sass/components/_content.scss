@@ -32,6 +32,10 @@
 		}
 	}
 
+	.entry-meta {
+		font-weight: 300;
+	}
+
 	&.type-page {
 		.entry-header {
 			border-bottom: 0;
@@ -74,10 +78,6 @@
 	.hentry {
 		.entry-header {
 			margin-bottom: 2.618em;
-		}
-
-		.entry-meta {
-			font-weight: 300;
 		}
 	}
 
