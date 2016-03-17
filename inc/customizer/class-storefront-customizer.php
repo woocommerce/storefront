@@ -456,26 +456,23 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @return array $storefront_theme_mods The Storefront Theme Mods.
 		 */
 		public function get_storefront_theme_mods() {
-			static $storefront_theme_mods;
-			if ( ! isset( $storefront_theme_mods ) ) {
-				$storefront_theme_mods = array(
-					'background_color'            => storefront_get_content_background_color(),
-					'accent_color'                => get_theme_mod( 'storefront_accent_color' ),
-					'header_background_color'     => get_theme_mod( 'storefront_header_background_color' ),
-					'header_link_color'           => get_theme_mod( 'storefront_header_link_color' ),
-					'header_text_color'           => get_theme_mod( 'storefront_header_text_color' ),
-					'footer_background_color'     => get_theme_mod( 'storefront_footer_background_color' ),
-					'footer_link_color'           => get_theme_mod( 'storefront_footer_link_color' ),
-					'footer_heading_color'        => get_theme_mod( 'storefront_footer_heading_color' ),
-					'footer_text_color'           => get_theme_mod( 'storefront_footer_text_color' ),
-					'text_color'                  => get_theme_mod( 'storefront_text_color' ),
-					'heading_color'               => get_theme_mod( 'storefront_heading_color' ),
-					'button_background_color'     => get_theme_mod( 'storefront_button_background_color' ),
-					'button_text_color'           => get_theme_mod( 'storefront_button_text_color' ),
-					'button_alt_background_color' => get_theme_mod( 'storefront_button_alt_background_color' ),
-					'button_alt_text_color'       => get_theme_mod( 'storefront_button_alt_text_color' ),
-				);
-			}
+			$storefront_theme_mods = array(
+				'background_color'            => storefront_get_content_background_color(),
+				'accent_color'                => get_theme_mod( 'storefront_accent_color' ),
+				'header_background_color'     => get_theme_mod( 'storefront_header_background_color' ),
+				'header_link_color'           => get_theme_mod( 'storefront_header_link_color' ),
+				'header_text_color'           => get_theme_mod( 'storefront_header_text_color' ),
+				'footer_background_color'     => get_theme_mod( 'storefront_footer_background_color' ),
+				'footer_link_color'           => get_theme_mod( 'storefront_footer_link_color' ),
+				'footer_heading_color'        => get_theme_mod( 'storefront_footer_heading_color' ),
+				'footer_text_color'           => get_theme_mod( 'storefront_footer_text_color' ),
+				'text_color'                  => get_theme_mod( 'storefront_text_color' ),
+				'heading_color'               => get_theme_mod( 'storefront_heading_color' ),
+				'button_background_color'     => get_theme_mod( 'storefront_button_background_color' ),
+				'button_text_color'           => get_theme_mod( 'storefront_button_text_color' ),
+				'button_alt_background_color' => get_theme_mod( 'storefront_button_alt_background_color' ),
+				'button_alt_text_color'       => get_theme_mod( 'storefront_button_alt_text_color' ),
+			);
 
 			return apply_filters( 'storefront_theme_mods', $storefront_theme_mods );
 		}
