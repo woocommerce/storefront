@@ -243,7 +243,9 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @return void
 	 */
 	function storefront_site_branding() {
-		if ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+		if ( function_exists( 'the_custom_logo' ) ) {
+			the_custom_logo();
+		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 			jetpack_the_site_logo();
 		} else { ?>
 			<div class="site-branding">

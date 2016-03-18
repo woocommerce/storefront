@@ -19,7 +19,8 @@
 
 		.site-branding,
 		.site-logo-anchor,
-		.site-logo-link {
+		.site-logo-link,
+		.custom-logo-link {
 			display: block;
 			@include span(3 of 12);
 			clear: both;
@@ -67,8 +68,9 @@
 	.site-search,
 	.site-header-cart,
 	.site-logo-anchor,
-	.site-logo-link {
-		margin-bottom: 1em;
+	.site-logo-link,
+	.custom-logo-link {
+		margin-bottom: 2.244em;
 	}
 
 	.site-header {

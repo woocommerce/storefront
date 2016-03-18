@@ -564,7 +564,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			.widget h1 {
-				border-bottom-color: ' . $storefront_theme_mods['header_color'] . ';
+				border-bottom-color: ' . $storefront_theme_mods['heading_color'] . ';
 			}
 
 			body,

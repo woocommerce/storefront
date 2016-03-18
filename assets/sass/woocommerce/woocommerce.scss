@@ -34,7 +34,8 @@
 
 	.site-branding,
 	.site-logo-anchor,
-	.site-logo-link {
+	.site-logo-link,
+	.custom-logo-link {
 		float: left;
 	}
 }
@@ -830,14 +831,6 @@ a.reset_variations {
  */
 table.cart {
 	margin-bottom: 3.631em;
-
-	thead {
-		text-indent: -999em;
-
-		th {
-			padding: 0;
-		}
-	}
 
 	.product-thumbnail,
 	.product-quantity .plus,
@@ -2053,8 +2046,7 @@ dl.variation {
 
 	table.cart {
 		th,
-		td,
-		thead th {
+		td {
 			padding: 1.618em;
 		}
 
