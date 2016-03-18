@@ -97,6 +97,8 @@
 	.col-full {
 		@include clearfix;
 		@include container($container-width);
+		padding: 0 2.618em;
+		box-sizing: content-box;
 	}
 
 	.site-content {
@@ -196,6 +198,7 @@
 	.col-full {
 		margin-left: 2.618em;
 		margin-right: 2.618em;
+		padding: 0;
 	}
 }
 
@@ -203,5 +206,6 @@
 	.col-full {
 		margin-left: 1.387em;
 		margin-right: 1.387em;
+		padding: 0;
 	}
 }
