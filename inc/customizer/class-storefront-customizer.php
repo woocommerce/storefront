@@ -654,7 +654,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				.site-header-cart .widget_shopping_cart,
 				.main-navigation ul.menu ul.sub-menu,
 				.main-navigation ul.nav-menu ul.children {
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -12 ) . ';
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -8 ) . ';
 				}
 			}';
 
