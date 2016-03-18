@@ -530,6 +530,11 @@ a.reset_variations {
 			list-style: none;
 			clear: both;
 
+			&:last-child {
+				border-bottom: 0;
+				margin-bottom: 0;
+			}
+
 			time {
 				opacity: 0.8;
 			}
@@ -1371,6 +1376,7 @@ ul.digital-downloads {
 	font-size: 1em;
 	width: 5.5em;
 	font-family: 'star';
+	font-weight: 400;
 
 	&:before {
 		content: "\73\73\73\73\73";
@@ -1411,6 +1417,7 @@ p.stars {
 		display: inline-block;
 		text-decoration: none;
 		margin-right: 1px;
+		font-weight: 400;
 
 		&:before {
 			display: block;
