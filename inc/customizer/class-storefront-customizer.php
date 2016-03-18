@@ -514,6 +514,18 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
 			}
 
+			table th {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ';
+			}
+
+			table tbody td {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 2 ) . ';
+			}
+
+			table tbody tr:nth-child(2n) td {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 4 ) . ';
+			}
+
 			.site-header,
 			.secondary-navigation ul ul,
 			.main-navigation ul.menu > li.menu-item-has-children:after,
@@ -617,8 +629,17 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['footer_heading_color'] . ';
 			}
 
-			#order_review {
-				background-color: ' . storefront_get_content_background_color() . ';
+			#order_review,
+			#payment .payment_methods li .payment_box {
+				background-color: ' . $storefront_theme_mods['background_color'] . ';
+			}
+
+			#payment .payment_methods li {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 5 ) . ';
+			}
+
+			#payment .payment_methods li:hover {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 10 ) . ';
 			}
 
 			@media screen and ( min-width: 768px ) {
@@ -725,7 +746,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @return void
 		 */
 		public function add_customizer_css() {
-			if ( is_customize_preview() ) {
+			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ) {
 				wp_add_inline_style( 'storefront-style', $this->get_css() );
 				wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_css() );
 			} else {

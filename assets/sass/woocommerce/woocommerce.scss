@@ -954,7 +954,6 @@ form.checkout {
 
 #payment {
 	@include clearfix;
-	border-top: 3px solid $color_border;
 
 	.create-account {
 		clear: both;
@@ -962,14 +961,13 @@ form.checkout {
 
 	.payment_methods {
 		margin: 0 !important;
-		border-bottom: 1px dotted $color_border;
 		padding: 0 !important;
 
 		li {
 			list-style: none !important;
 			padding: 1.387em !important;
-			border-bottom: 1px dotted $color_border;
 			margin-left: 0;
+			margin-bottom: 1px;
 
 			img {
 				float: right;
@@ -997,8 +995,6 @@ form.checkout {
 			.payment_box {
 				padding: 1.387em;
 				margin: 1.387em -1.387em -1.387em -1.387em;
-				background: rgba(0,0,0,0.035);
-				border-top: 1px dotted $color_border;
 
 				fieldset {
 					border: 0;
