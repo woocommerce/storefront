@@ -24,12 +24,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',  array( $this, 'setup' ) );
-			add_action( 'widgets_init',       array( $this, 'widgets_init' ) );
-			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ),       10 );
-			add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
-			add_filter( 'body_class',         array( $this, 'body_classes' ) );
-			add_filter( 'wp_page_menu_args',  array( $this, 'page_menu_args' ) );
+			add_action( 'after_setup_theme',     array( $this, 'setup' ) );
+			add_action( 'widgets_init',          array( $this, 'widgets_init' ) );
+			add_action( 'wp_enqueue_scripts',    array( $this, 'scripts' ),       10 );
+			add_action( 'wp_enqueue_scripts',    array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_filter( 'body_class',            array( $this, 'body_classes' ) );
+			add_filter( 'wp_page_menu_args',     array( $this, 'page_menu_args' ) );
+			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
 		}
 
 		/**
@@ -261,6 +262,48 @@ if ( ! class_exists( 'Storefront' ) ) :
 			}
 
 			return $classes;
+		}
+
+		/**
+		 * Add styles for embeds
+		 */
+		public function print_embed_styles() {
+			wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' );
+
+			?>
+			<style type="text/css">
+				.wp-embed {
+					padding: 2.618em !important;
+					border: 0 !important;
+					border-radius: 2px;
+					font-family: "Roboto", "Open Sans", sans-serif !important;
+					-webkit-font-smoothing: antialiased;
+				}
+
+				.wp-embed .wp-embed-featured-image {
+					margin-bottom: 2.618em;
+				}
+
+				.wp-embed .wp-embed-featured-image img {
+					border-radius: 2px 2px 0 0;
+					margin: -2.618em;
+					margin-bottom: 0;
+					width: calc( 100% + 5.236em );
+				}
+
+				a.wc-embed-button {
+					padding: .857em 1.387em !important;
+					font-weight: 600;
+					background-color: #60646c;
+					color: #fff !important;
+					border: 0 !important;
+					line-height: 1;
+					border-radius: 0 !important;
+					box-shadow:
+						inset 0 -1px 0 rgba(#000,.3);
+				}
+			</style>
+			<?php
 		}
 	}
 
