@@ -204,7 +204,6 @@ button.menu-toggle {
 				position: absolute;
 				top: 100%;
 				z-index: 99999;
-				background-color: #2c2d33;
 				display: none; // display: none; is required to make dropdowns work on touch devices
 
 				li {
@@ -230,8 +229,18 @@ button.menu-toggle {
 	/**
 	 * Primary Navigation
 	 */
+	.storefront-primary-navigation {
+		clear: both;
+		@include clearfix;
+		background: rgba(#000,.06);
+		margin-left: -999em;
+		margin-right: -999em;
+		padding-left: 999em;
+		padding-right: 999em;
+	}
+
 	.main-navigation {
-		padding-top: 1.618em;
+		padding-top: 2.244em;
 
 		ul.menu,
 		ul.nav-menu {
@@ -271,12 +280,9 @@ button.menu-toggle {
 
 			ul {
 				// Dropdowns
-				background-color: #2c2d33;
 				margin-left: 0;
 
 				li {
-					background-color: rgba(0,0,0,0.1);
-
 					a {
 						padding: .857em 1em;
 					}
@@ -300,7 +306,6 @@ button.menu-toggle {
 
 				ul {
 					margin-left: 0;
-					border-top-color: $color_border;
 					box-shadow: none;
 				}
 
@@ -354,8 +359,6 @@ button.menu-toggle {
 			}
 
 			ul {
-				background-color: #2c2d33;
-
 				a {
 					padding: .326em .857em;
 					background: rgba(#000,0.05);
