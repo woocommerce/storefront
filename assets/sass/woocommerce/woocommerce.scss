@@ -1294,6 +1294,20 @@ ul.digital-downloads {
 	}
 }
 
+.my-account-content {
+	#payment {
+		.payment_methods {
+			margin-bottom: 1.618em !important;
+
+			li {
+				.payment_box {
+					background-color: rgba(#000,.05);
+				}
+			}
+		}
+	}
+}
+
 /**
  * General WooCommerce components
  */
