@@ -1388,13 +1388,13 @@ ul.digital-downloads {
 	height: 1em;
 	line-height: 1;
 	font-size: 1em;
-	width: 5.5em;
+	width: 5.3em;
 	font-family: 'star';
 	font-weight: 400;
 
 	&:before {
-		content: "\73\73\73\73\73";
-		color: rgba(0,0,0,0.2);
+		content: "\53\53\53\53\53";
+		opacity: .25;
 		float: left;
 		top: 0;
 		left: 0;
