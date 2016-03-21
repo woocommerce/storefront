@@ -2356,11 +2356,11 @@ dl.variation {
 		}
 
 		.my-account-navigation {
-			@include span( 4 of 12 );
+			@include span( 3 of 12 );
 		}
 
 		.my-account-content {
-			@include span( last 8 of 12 );
+			@include span( last 9 of 12 );
 
 			.form-row-first {
 				@include span( 4 of 8 );
