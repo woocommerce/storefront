@@ -181,31 +181,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'priority' 				=> 40,
 			) ) );
 
-			/**
-			 * Logo
-			 */
-			if ( ! class_exists( 'Jetpack' ) ) {
-				$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_logo_heading', array(
-					'section'  			=> 'header_image',
-					'type' 				=> 'heading',
-					'label'				=> __( 'Logo', 'storefront' ),
-					'priority' 			=> 2,
-				) ) );
-
-				$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_logo_info', array(
-					'section'  			=> 'header_image',
-					'type' 				=> 'text',
-					'description'		=> sprintf( __( 'Looking to add a logo? Install the %sJetpack%s plugin! %sRead more%s.', 'storefront' ), '<a href="https://wordpress.org/plugins/jetpack/">', '</a>', '<a href="http://docs.woothemes.com/document/storefront-faq/#section-1">', '</a>' ),
-					'priority' 			=> 3,
-				) ) );
-
-				$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_logo_divider_after', array(
-					'section'  			=> 'header_image',
-					'type' 				=> 'divider',
-					'priority' 			=> 4,
-				) ) );
-			}
-
 			$wp_customize->add_control( new Arbitrary_Storefront_Control( $wp_customize, 'storefront_header_image_heading', array(
 				'section'  				=> 'header_image',
 				'type' 					=> 'heading',
