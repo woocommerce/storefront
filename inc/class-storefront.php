@@ -269,7 +269,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function print_embed_styles() {
 			wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' );
-
+			$accent_color = get_theme_mod( 'storefront_accent_color' );
 			?>
 			<style type="text/css">
 				.wp-embed {
@@ -294,13 +294,17 @@ if ( ! class_exists( 'Storefront' ) ) :
 				a.wc-embed-button {
 					padding: .857em 1.387em !important;
 					font-weight: 600;
-					background-color: #60646c;
+					background-color: <?php echo esc_attr( $accent_color ); ?>;
 					color: #fff !important;
 					border: 0 !important;
 					line-height: 1;
 					border-radius: 0 !important;
 					box-shadow:
 						inset 0 -1px 0 rgba(#000,.3);
+				}
+
+				a.wc-embed-button + a.wc-embed-button {
+					background-color: #60646c;
 				}
 			</style>
 			<?php
