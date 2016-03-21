@@ -353,6 +353,16 @@ ul.products {
 	}
 }
 
+.price {
+	del {
+		opacity: .5;
+
+		& + ins {
+			margin-left: .327em;
+		}
+	}
+}
+
 /**
  * Single Product
  */
@@ -807,7 +817,7 @@ a.reset_variations {
 		@include border-bottom-radius(1em);
 	}
 
-    .price_slider_wrapper .ui-widget-content {
+	.price_slider_wrapper .ui-widget-content {
 		@include border-top-radius(1em);
 		@include border-bottom-radius(1em);
 		background: rgba(0,0,0,0.1);
