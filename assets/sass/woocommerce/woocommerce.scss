@@ -782,7 +782,7 @@ a.reset_variations {
 		text-align: left;
 	}
 
-    .ui-slider .ui-slider-handle {
+	.ui-slider .ui-slider-handle {
 		position: absolute;
 		z-index: 2;
 		width: 1em;
@@ -823,20 +823,20 @@ a.reset_variations {
 		background: rgba(0,0,0,0.1);
 	}
 
-    .ui-slider-horizontal {
+	.ui-slider-horizontal {
 		height: .5em;
 	}
 
-    .ui-slider-horizontal .ui-slider-range {
+	.ui-slider-horizontal .ui-slider-range {
 		top: 0;
 		height: 100%;
 	}
 
-    .ui-slider-horizontal .ui-slider-range-min {
+	.ui-slider-horizontal .ui-slider-range-min {
 		left: -1px;
 	}
 
-   .ui-slider-horizontal .ui-slider-range-max {
+	.ui-slider-horizontal .ui-slider-range-max {
 		right: -1px;
 	}
 }
@@ -1712,7 +1712,7 @@ dl.variation {
 		position: relative;
 
 		.cart-contents {
-			padding: 0 0 2.244em 0;
+			padding: 2.244em 0;
 			display: block;
 			position: relative;
 			background-color: transparent;
@@ -1722,7 +1722,6 @@ dl.variation {
 
 			&:after {
 				height: 1em;
-				width: 1em;
 				float: right;
 				content: "\f291";
 				font-family: "FontAwesome";

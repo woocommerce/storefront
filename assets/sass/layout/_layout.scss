@@ -52,12 +52,11 @@
 			.site-header-cart {
 				@include span(last 3 of 12);
 				margin-bottom: 0;
-				padding-top: 2.244em;
 			}
 		}
 	}
 
-	.site-branding{
+	.site-branding {
 		.site-description {
 			margin-bottom: 0;
 			display: block;
