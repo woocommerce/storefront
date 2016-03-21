@@ -2206,6 +2206,15 @@ dl.variation {
 		}
 	}
 
+	#wc_checkout_add_ons {
+		input[type=radio] {
+			float: left;
+			margin-right: .53em;
+			clear: left;
+			margin-top: .35em;
+		}
+	}
+
 	#order_review_heading,
 	#order_review {
 		@include span(last 4 of 9);
@@ -2256,10 +2265,6 @@ dl.variation {
 		}
 	}
 
-	#wc_checkout_add_ons {
-		@include span(4 of 9);
-	}
-
 	.page-template-template-fullwidth-php {
 		.col2-set {
 			@include span(6 of 12);
@@ -2285,10 +2290,6 @@ dl.variation {
 
 		#order_review_heading,
 		#order_review {
-			@include span(last 6 of 12);
-		}
-
-		#wc_checkout_add_ons {
 			@include span(last 6 of 12);
 		}
 
