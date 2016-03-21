@@ -1126,6 +1126,7 @@ form.checkout {
 		position: fixed;
 		top: 0;
 		z-index: 9;
+		box-shadow: 0 6px 2em rgba(#000,.2);
 	}
 }
 
@@ -2227,27 +2228,22 @@ dl.variation {
 	#order_review_heading,
 	#order_review {
 		@include span(last 4 of 9);
-		border: 3px solid $color_links;
 		clear: right;
+	}
+
+	#order_review {
+		transition: box-shadow ease .4s;
 	}
 
 	#order_review_heading {
 		margin-bottom: 0;
 		padding-bottom: .618em;
-		padding-top: .618em;
-		border-width: 3px 3px 0 3px;
-		@include gutters(inside);
-	}
-
-	#order_review {
-		border-width: 0 3px 3px 3px;
 	}
 
 	// Payment forms in account
 	.woocommerce-order-pay,
 	.page-template-template-fullwidth-php.woocommerce-order-pay {
 		#order_review {
-			border-width: 3px;
 			width: 100%;
 			float: none;
 

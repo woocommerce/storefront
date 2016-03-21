@@ -693,10 +693,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
-			#order_review_heading, #order_review {
-				border-color: ' . $storefront_theme_mods['accent_color'] . ';
-			}
-
 			.woocommerce-breadcrumb {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ';
 			}
