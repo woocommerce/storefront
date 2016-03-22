@@ -847,21 +847,38 @@ a.reset_variations {
 table.cart {
 	margin-bottom: 3.631em;
 
-	.product-thumbnail,
 	.product-quantity .plus,
 	.product-quantity .minus {
 		display: none;
 	}
 
+	.product-thumbnail {
+		img {
+			margin: 0 auto;
+		}
+
+		&:before {
+			display: none;
+		}
+	}
+
+	tr:first-child {
+		td.product-remove {
+			border-top-width: 0;
+		}
+	}
+
 	td.product-remove {
 		@include clearfix;
-		padding: .236em;
-		border-top: 1em solid;
-		padding-bottom: 0;
+		padding: 0;
+		border-top: 1.618em solid;
+		position: relative;
 
 		a.remove {
-			float: right;
+			position: absolute;
 			font-size: 1.387em;
+			top: -.618em;
+			right: -.618em;
 		}
 	}
 
@@ -2093,6 +2110,9 @@ dl.variation {
 
 			a.remove {
 				float: none;
+				position: relative;
+				top: auto;
+				right: auto;
 			}
 		}
 
