@@ -12,7 +12,7 @@ jQuery( window ).load( function() {
 		var	addressWidth		= jQuery( '#customer_details' ).outerWidth();
 		var	gutter				= checkoutWidth - addressWidth - paymentWidth;
 		var	paymentOffset		= addressWidth + gutter;
-		var checkoutPosition 	= jQuery( 'form.woocommerce-checkout' ).offset();
+		var checkoutPosition 	= jQuery( '#order_review_heading' ).offset();
 
 		// If we're in desktop orientation...
 		if ( jQuery( window ).width() > 768 ) {

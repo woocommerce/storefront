@@ -2236,6 +2236,10 @@ dl.variation {
 		}
 	}
 
+	#customer_details + #wc_checkout_add_ons {
+		@include span( last 4 of 9 );
+	}
+
 	#wc_checkout_add_ons {
 		input[type=radio] {
 			float: left;
@@ -2316,6 +2320,10 @@ dl.variation {
 		#order_review_heading,
 		#order_review {
 			@include span(last 6 of 12);
+		}
+
+		#customer_details + #wc_checkout_add_ons {
+			@include span( last 6 of 12 );
 		}
 
 		#order_review {
