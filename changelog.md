@@ -19,6 +19,7 @@
 * **Fix** - Inadequate left/right content margin at certain screen sizes.
 * **Fix** - z-index on demo store notice.
 * **Fix** - Checkout add-ons integration.
+* **Fix** - Display of portrait logos on handheld devices.
 * **Dev** - Deprecated `storefront_categorized_blog()`.
 * **Dev** - Deprecated `storefront_sanitize_hex_color()`.
 * **Dev** - Deprecated `storefront_sanitize_layout()`.
