@@ -2,10 +2,8 @@
 /*
  * Use Child Theme
  * A drop-in to make it easy to use WordPress child themes
- * @version 0.3
+ * @version 0.4
  */
-
-defined( 'ABSPATH' ) or exit;
 
 if ( ! class_exists( 'Use_Child_Theme' ) ) {
 
@@ -52,9 +50,7 @@ if ( ! class_exists( 'Use_Child_Theme' ) ) {
         (function($) {
             $(function() {
                 $(document).on('click', '.uct-activate', function() {
-                    $.post(ajaxurl, {
-                        action: 'uct_activate'
-                    }, function(response) {
+                    $.post(ajaxurl, { action: 'uct_activate' }, function(response) {
                         $('.uct-notice p').html(response);
                     });
                 });
@@ -74,7 +70,7 @@ if ( ! class_exists( 'Use_Child_Theme' ) ) {
 
 
         function dismiss_notice() {
-            set_transient( 'uct_dismiss_notice', 'yes', 86400 );
+            set_transient( 'uct_dismiss_notice', 'yes', apply_filters( 'uct_dismiss_timeout', 86400 ) );
             exit;
         }
 
@@ -135,9 +131,6 @@ if ( ! class_exists( 'Use_Child_Theme' ) ) {
         }
 
 
-        /**
-         * Generate the style.css contents
-         */
         function style_css() {
             ob_start();
 ?>
@@ -152,9 +145,6 @@ Version:        1.0
         }
 
 
-        /**
-         * Generate the functions.php contents
-         */
         function functions_php() {
             ob_start();
 ?>
