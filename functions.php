@@ -17,6 +17,7 @@ $storefront_version = $theme['Version'];
 require 'inc/class-storefront.php';
 require 'inc/jetpack/class-storefront-jetpack.php';
 require 'inc/customizer/class-storefront-customizer.php';
+require 'inc/use-child-theme.php';
 
 require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
