@@ -2153,6 +2153,10 @@ dl.variation {
 	.cart-collaterals {
 		@include clearfix;
 
+		h2 {
+			font-size: 1.618em;
+		}
+
 		.cross-sells {
 			@include span(4 of 9);
 
