@@ -48,7 +48,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 			global $storefront_version;
 
 			if ( class_exists( 'Jetpack' ) ) {
-				wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/inc/jetpack/css/jetpack.css', '', $storefront_version );
+				wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/assets/sass/jetpack/jetpack.css', '', $storefront_version );
 				wp_style_add_data( 'storefront-jetpack-style', 'rtl', 'replace' );
 			}
 		}
