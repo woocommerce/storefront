@@ -255,6 +255,7 @@ table.shop_table_responsive {
 		td {
 			display: block;
 			text-align: right;
+			clear: both;
 
 			&:before {
 				content: attr(data-title) ': ';
