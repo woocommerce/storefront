@@ -407,9 +407,7 @@ ul.products {
 		form.cart {
 			@include clearfix;
 			margin-bottom: 1.618em;
-			padding: 1.618em 0;
-			border-top: 1px solid $color_border;
-			border-bottom: 1px solid $color_border;
+			padding: 1em 0;
 
 			.quantity {
 				float: left;
@@ -457,13 +455,7 @@ ul.products {
 			margin-bottom: 1.618em;
 			@include clearfix;
 			line-height: 1;
-			border-bottom: 1px solid $color_border;
-			padding: 0 0 1.618em;
-			margin-top: -.618em;
-
-			a {
-				font-size: .857em;
-			}
+			margin-top: -.857em;
 
 			.star-rating {
 				float: right;
@@ -476,9 +468,7 @@ ul.products {
 			.sku_wrapper,
 			.posted_in,
 			.tagged_as {
-				border-bottom: 1px dotted $color_border;
 				display: block;
-				padding: .53em 0;
 
 				&:last-child {
 					border-bottom: 0;
@@ -531,12 +521,19 @@ a.reset_variations {
 		padding-top: 0;
 	}
 
+	.woocommerce-Reviews-title {
+		font-weight: 300;
+
+		span {
+			font-weight: 800;
+		}
+	}
+
 	.commentlist {
 		list-style: none;
 		margin-left: 0;
 
 		li {
-			border-bottom: 1px solid $color_border;
 			margin-bottom: 3.631em;
 			list-style: none;
 			clear: both;
@@ -547,27 +544,24 @@ a.reset_variations {
 			}
 
 			time {
-				opacity: 0.8;
+				opacity: 0.5;
 			}
 
 			.avatar {
 				float: right;
 				width: 2.618em;
 				height: auto;
+				border-radius: 3px;
 			}
 
 			p.meta {
 				margin-bottom: 1em;
 			}
 
-			.description {
-				padding-bottom: 1.618em;
-			}
-
 			ul.children {
-				border-top: 1px solid $color_border;
 				@include span(last 5 of 6);
-				padding-top: 2.618em;
+				margin-bottom: 2.618em;
+				padding-top: 1.618em;
 			}
 		}
 	}
@@ -1534,15 +1528,13 @@ p.stars {
 }
 
 .woocommerce-tabs {
-	border: 1px solid $color_border;
-	border-width: 1px 0;
 	padding: 1em 0;
-	margin-bottom: 2.618em;
 
 	ul.tabs {
 		list-style: none;
 		margin-left: 0;
 		text-align: left;
+		border-top: 1px dotted $color_border;
 
 		li {
 			display: block;
@@ -1970,7 +1962,6 @@ dl.variation {
 
 			.summary {
 				@include span(last 5 of 9);
-				margin-bottom: 3.631em;
 			}
 
 			.woocommerce-tabs {
@@ -2488,7 +2479,6 @@ dl.variation {
 
 	.woocommerce-tabs {
 		@include clearfix;
-		margin-bottom: 2.618em;
 		padding-top: 2.618em;
 		padding-bottom: 2.618em;
 
