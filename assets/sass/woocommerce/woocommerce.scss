@@ -448,7 +448,6 @@ ul.products {
 		.variations_button {
 			@include clearfix;
 			padding-top: 1em;
-			border-top: 1px solid $color_border;
 		}
 
 		.woocommerce-product-rating {
@@ -457,13 +456,20 @@ ul.products {
 			line-height: 1;
 			margin-top: -.857em;
 
+			a {
+				@include underlinedLink();
+			}
+
 			.star-rating {
-				float: right;
+				float: left;
+				margin-right: .618em;
 			}
 		}
 
 		.product_meta {
 			font-size: .857em;
+			padding-top: 1em;
+			border-top: 1px solid $color_border;
 
 			.sku_wrapper,
 			.posted_in,
@@ -473,6 +479,10 @@ ul.products {
 				&:last-child {
 					border-bottom: 0;
 				}
+			}
+
+			a {
+				@include underlinedLink();
 			}
 		}
 	}
@@ -525,7 +535,7 @@ a.reset_variations {
 		font-weight: 300;
 
 		span {
-			font-weight: 800;
+			font-weight: 700;
 		}
 	}
 
@@ -587,12 +597,16 @@ a.reset_variations {
 	font-size: .857em;
 	padding: 1em 999em;
 
-	a.home {
-		&:before {
-			content: "\f015";
-			font-family: "FontAwesome";
-			font-weight: 400;
-			margin-right: .53em;
+	a {
+		@include underlinedLink();
+
+		&:first-of-type {
+			&:before {
+				content: "\f015";
+				font-family: "FontAwesome";
+				font-weight: 400;
+				margin-right: .53em;
+			}
 		}
 	}
 }
@@ -606,7 +620,7 @@ a.reset_variations {
 
 	li {
 		padding: 1em 0;
-		border-bottom: 1px dotted $color_border;
+		border-bottom: 1px solid $color_border;
 		@include clearfix;
 
 		img {
@@ -905,7 +919,7 @@ table.cart {
 		.coupon {
 			padding-bottom: 1em;
 			margin-bottom: 1em;
-			border-bottom: 1px dotted $color_border;
+			border-bottom: 1px solid $color_border;
 		}
 
 		input {
@@ -1199,11 +1213,11 @@ form.checkout {
 .my-account-navigation {
 	ul {
 		margin-left: 0;
-		border-top: 1px dotted $color_border;
+		border-top: 1px solid $color_border;
 
 		li {
 			list-style: none;
-			border-bottom: 1px dotted $color_border;
+			border-bottom: 1px solid $color_border;
 			position: relative;
 
 			&.current-item {
@@ -1269,19 +1283,40 @@ form.checkout {
 ul.order_details {
 	@include clearfix;
 	list-style: none;
-	border: 1px solid $color_border;
 	position: relative;
-	margin-left: 0;
+	margin: 3.631em 0;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		position: absolute;
+		top: -16px;
+		left: 0;
+		width: 100%;
+		height: 16px;
+		background-size: 0px 100%, 16px 16px, 16px 16px;
+
+	}
+
+	&:after {
+		top: auto;
+		bottom: -16px;
+		@include transform(rotate(180deg));
+	}
 
 	li {
-		float: left;
 		padding: 1em 1.618em;
-		border-right: 1px solid $color_border;
 		font-size: .8em;
 		text-transform: uppercase;
 
+		&:first-child {
+			padding-top: 1.618em;
+		}
+
 		&:last-child {
-			border-right: 0;
+			border: 0;
+			padding-bottom: 1.618em;
 		}
 
 		strong {
@@ -1292,32 +1327,43 @@ ul.order_details {
 	}
 }
 
-ul.digital-downloads {
-	list-style: none;
-	margin-left: 0;
-
-	li {
-		padding-bottom: 1em;
-		margin-bottom: 1em;
-		border-bottom: 1px dotted $color_border;
-
-		&:before {
-			font-family: "FontAwesome";
-			content: "\f1c6";
-			margin-right: .53em;
-		}
-	}
-}
-
-.my_account_orders {
+.my_account_orders,
+.account-downloads-table {
 	.button {
-		padding: .53em 1em;
+		padding: .53em .857em;
 		font-size: .857em;
 		margin-right: .236em;
 	}
 }
 
+.my_account_orders {
+	.button.view {
+		&:after {
+			font-family: "FontAwesome";
+			content: "\f06e";
+			margin-left: .53em;
+			font-weight: 400;
+		}
+	}
+}
+
+.account-downloads-table {
+	.button {
+		&:after {
+			font-family: "FontAwesome";
+			content: "\f0ed";
+			margin-left: .53em;
+			font-weight: 400;
+		}
+	}
+}
+
 .my-account-content {
+	h2 {
+		font-size: 2em;
+		font-weight: 600;
+	}
+
 	#payment {
 		.payment_methods {
 			margin-bottom: 1.618em !important;
@@ -1534,12 +1580,12 @@ p.stars {
 		list-style: none;
 		margin-left: 0;
 		text-align: left;
-		border-top: 1px dotted $color_border;
+		border-top: 1px solid $color_border;
 
 		li {
 			display: block;
 			margin: 0;
-			border-bottom: 1px dotted $color_border;
+			border-bottom: 1px solid $color_border;
 			position: relative;
 
 			a {
@@ -1559,6 +1605,21 @@ p.stars {
 				}
 			}
 		}
+	}
+
+	.panel {
+		h2:first-of-type {
+			font-size: 1.618em;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+.related,
+.upsells {
+	> h2:first-child {
+		font-size: 1.618em;
+		margin-bottom: 1em;
 	}
 }
 
@@ -2336,7 +2397,12 @@ dl.variation {
 	/**
 	 * My Account
 	 */
-	.col2-set#customer_login {
+	table + .addresses {
+		margin-top: 1.618em;
+	}
+
+	.col2-set#customer_login,
+	.col2-set.addresses {
 		@include span( full );
 
 		.col-1 {
@@ -2350,6 +2416,7 @@ dl.variation {
 
 	.my-account-navigation {
 		@include span( 3 of 9 );
+		float: right;
 	}
 
 	.my-account-content {
@@ -2369,7 +2436,8 @@ dl.variation {
 	}
 
 	.page-template-template-fullwidth-php {
-		.col2-set#customer_login {
+		.col2-set#customer_login,
+		.col2-set.addresses {
 			.col-1 {
 				@include span( 6 of 12 );
 			}

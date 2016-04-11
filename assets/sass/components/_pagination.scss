@@ -9,12 +9,26 @@
 	.nav-previous {
 		float: left;
 		width: 50%;
+
+		a:before {
+			font-family: "FontAwesome";
+			font-weight: 400;
+			content: "\f177";
+			margin-right: .53em;
+		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
+
+		a:after {
+			font-family: "FontAwesome";
+			font-weight: 400;
+			content: "\f178";
+			margin-left: .53em;
+		}
 	}
 
 }

@@ -79,6 +79,7 @@ input[type="submit"],
 	&.disabled,
 	&:disabled {
 		opacity: 0.5 !important;
+		cursor: not-allowed;
 
 		&:hover {
 			opacity: 0.5 !important;

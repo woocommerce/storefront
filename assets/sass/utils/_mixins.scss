@@ -20,6 +20,15 @@
     position: absolute !important;
 }
 
+@mixin underlinedLink() {
+	font-weight: 400;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
 @mixin message($glyph: "\f05a", $color: $info)
 {
     padding: 1em 1.618em 1em 3.631em;

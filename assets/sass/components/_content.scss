@@ -29,6 +29,10 @@
 		.posted-on,
 		.byline {
 			font-size: .857em;
+
+			a {
+				@include underlinedLink();
+			}
 		}
 	}
 

@@ -6,7 +6,7 @@
 	padding-top: 2.618em;
 
 	.comments-title {
-		border-bottom: 1px dotted $color_border;
+		border-bottom: 1px solid $color_border;
 		padding-bottom: .53em;
 		margin-bottom: 1.618em;
 	}
@@ -27,17 +27,13 @@
 		.comment-meta {
 			.avatar {
 				margin-bottom: 1em;
-				max-width: 32px;
+				max-width: 64px;
+				border-radius: 3px;
 				height: auto;
 			}
 
 			a.comment-date {
-				opacity: 0.8;
 				font-size: .857em;
-
-				&:hover {
-					color: $color_body;
-				}
 			}
 
 			cite {
@@ -53,28 +49,30 @@
 					font-family: "FontAwesome";
 					font-weight: 400;
 					margin-left: .53em;
-					content: "\f097";
+					content: "\f0f6";
 				}
 			}
 		}
 
 		.reply {
 			@include clearfix;
-			font-size: .857em;
 			margin-bottom: 1.618em;
 
-			.comment-edit-link {
-				border-left: 1px solid $color_border;
-			}
-
 			a {
-				color: $color_body;
-				background-color: rgba(0,0,0,0.025);
-				padding: .53em 1em;
-				float: left;
+				display: inline-block;
+				margin-right: 1em;
 
-				&:hover {
-					background-color: rgba(0,0,0,0.05);
+				&:before {
+					font-family: "FontAwesome";
+					font-weight: 400;
+					content: "\f112";
+					margin-right: .53em;
+				}
+
+				&.comment-edit-link {
+					&:before {
+						content: "\f040";
+					}
 				}
 			}
 		}
@@ -89,13 +87,11 @@
 	word-wrap: break-word;
 }
 
-.bypostauthor {}
-
 #respond {
 	clear: both;
 	padding: 1.618em;
 	background-color: rgba(0,0,0,0.0125);
-	border-top: .236em solid rgba(0,0,0,0.025);
+	position: relative;
 
 	.comment-form-author,
 	.comment-form-email,
@@ -108,6 +104,26 @@
 	.form-submit,
 	form {
 		margin-bottom: 0;
+	}
+
+	#cancel-comment-reply-link {
+		position: absolute;
+		top: -.53em;
+		right: -.53em;
+		display: block;
+		height: 1em;
+		width: 1em;
+		overflow: hidden;
+		line-height: 1;
+		font-size: 1.387em;
+		text-align: center;
+
+		&:before {
+			font-family: "FontAwesome";
+			font-weight: 400;
+			content: "\f057";
+			display: block;
+		}
 	}
 }
 
@@ -150,6 +166,7 @@
 
 		.reply {
 			clear: both;
+			text-align: right;
 		}
 
 		ol.children {
@@ -207,6 +224,8 @@
 	}
 
 	#respond {
+		padding: 2.618em;
+		
 		.comment-form-author,
 		.comment-form-email,
 		.comment-form-url {

@@ -36,7 +36,7 @@
 .widget-area {
 	.widget {
 		font-weight: 300;
-		
+
 		a.button {
 			font-weight: 700 !important;
 			color: #fff;
@@ -199,6 +199,12 @@
 
 .widget_rating_filter {
 	.wc-layered-nav-rating  {
+		margin-bottom: .618em;
+
+		a {
+			text-decoration: none !important;
+		}
+
 		.star-rating {
 			display: inline-block;
 		}
@@ -213,12 +219,8 @@
 			font-size: 1.387em;
 		}
 
-		a {
-			color: $color_body;
-
-			&:hover {
-				color: $color_links;
-			}
+		a:not(.button) {
+			@include underlinedLink();
 		}
 	}
 }

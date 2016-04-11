@@ -33,12 +33,12 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 900;
+	font-weight: 700;
 	margin: 0 0 .53em;
 	color: darken( $color_body, 20% );
 
 	a {
-		font-weight: 900;
+		font-weight: 700;
 	}
 }
 
@@ -51,21 +51,39 @@ h1,
 
 h2,
 .beta {
-	font-size: 2.244em;
-	letter-spacing: -1px;
+	font-size: 2em;
 	line-height: 1.214;
+
+	& + h3 {
+		border-top: 1px solid $color_border;
+		padding-top: .53em;
+	}
 }
 
 h3,
 .gamma {
 	font-size: 1.618em;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 h4,
 .delta {
 	font-size: 1.387em;
 	font-weight: 700;
+}
+
+p,
+ul,
+ol,
+table,
+blockquote,
+form {
+	& + h2,
+	& + header h2,
+	& + h3,
+	& + h4 {
+		margin-top: 2.244em;
+	}
 }
 
 hr {
