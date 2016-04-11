@@ -62,15 +62,15 @@
 				display: inline-block;
 				margin-right: 1em;
 
-				&:before {
+				&:after {
 					font-family: "FontAwesome";
 					font-weight: 400;
 					content: "\f112";
-					margin-right: .53em;
+					margin-left: .53em;
 				}
 
 				&.comment-edit-link {
-					&:before {
+					&:after {
 						content: "\f040";
 					}
 				}
@@ -225,7 +225,7 @@
 
 	#respond {
 		padding: 2.618em;
-		
+
 		.comment-form-author,
 		.comment-form-email,
 		.comment-form-url {
