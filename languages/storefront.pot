@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2016-03-23 12:04:38+00:00\n"
+"POT-Creation-Date: 2016-04-15 10:27:43+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -338,95 +338,94 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/storefront-template-functions.php:151
-#: inc/storefront-template-functions.php:212
+#: inc/storefront-template-functions.php:150
 msgid "%1$s designed by %2$s."
 msgstr ""
 
-#: inc/storefront-template-functions.php:270
+#: inc/storefront-template-functions.php:208
 msgid "Primary Navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:271
+#: inc/storefront-template-functions.php:209
 msgid "Menu"
 msgstr ""
 
-#: inc/storefront-template-functions.php:301
+#: inc/storefront-template-functions.php:239
 msgid "Secondary Navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:324
+#: inc/storefront-template-functions.php:262
 msgid "Skip to navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:325
+#: inc/storefront-template-functions.php:263
 msgid "Skip to content"
 msgstr ""
 
-#: inc/storefront-template-functions.php:360
-#: inc/storefront-template-functions.php:415
+#: inc/storefront-template-functions.php:298
+#: inc/storefront-template-functions.php:353
 msgid "Pages:"
 msgstr ""
 
-#: inc/storefront-template-functions.php:409
+#: inc/storefront-template-functions.php:347
 msgid "Continue reading %s"
 msgstr ""
 
-#: inc/storefront-template-functions.php:439
+#: inc/storefront-template-functions.php:377
 msgid "Written by"
 msgstr ""
 
-#: inc/storefront-template-functions.php:445
-#: inc/storefront-template-functions.php:458
+#: inc/storefront-template-functions.php:383
+#: inc/storefront-template-functions.php:396
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/storefront-template-functions.php:450
+#: inc/storefront-template-functions.php:388
 msgid "Posted in"
 msgstr ""
 
-#: inc/storefront-template-functions.php:463
+#: inc/storefront-template-functions.php:401
 msgid "Tagged"
 msgstr ""
 
-#: inc/storefront-template-functions.php:473
+#: inc/storefront-template-functions.php:411
 msgid "Comments"
 msgstr ""
 
-#: inc/storefront-template-functions.php:474
+#: inc/storefront-template-functions.php:412
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:474
+#: inc/storefront-template-functions.php:412
 msgid "1 Comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:474
+#: inc/storefront-template-functions.php:412
 msgid "% Comments"
 msgstr ""
 
-#: inc/storefront-template-functions.php:570
+#: inc/storefront-template-functions.php:508
 msgid "Shop by Category"
 msgstr ""
 
-#: inc/storefront-template-functions.php:611
+#: inc/storefront-template-functions.php:549
 msgid "New In"
 msgstr ""
 
-#: inc/storefront-template-functions.php:652
+#: inc/storefront-template-functions.php:590
 msgid "We Recommend"
 msgstr ""
 
-#: inc/storefront-template-functions.php:693
+#: inc/storefront-template-functions.php:631
 msgid "Fan Favorites"
 msgstr ""
 
-#: inc/storefront-template-functions.php:732
+#: inc/storefront-template-functions.php:670
 msgid "On Sale"
 msgstr ""
 
-#: inc/storefront-template-functions.php:769
+#: inc/storefront-template-functions.php:707
 msgid "Best Sellers"
 msgstr ""
 
@@ -470,7 +469,7 @@ msgid "Storefront"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://www.woothemes.com/storefront"
+msgid "https://www.woothemes.com/storefront"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -488,7 +487,7 @@ msgid "WooThemes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://www.woothemes.com"
+msgid "https://www.woothemes.com"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -506,17 +505,17 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:491
+#: inc/storefront-template-functions.php:429
 msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/storefront-template-functions.php:492
+#: inc/storefront-template-functions.php:430
 msgctxt "Previous post"
 msgid "Previous"
 msgstr ""
 
-#: inc/storefront-template-functions.php:530
+#: inc/storefront-template-functions.php:468
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
