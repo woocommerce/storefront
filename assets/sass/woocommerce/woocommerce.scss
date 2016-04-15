@@ -1257,19 +1257,19 @@ form.checkout {
 				content: "\f1c6";
 			}
 
-			&.woocommerce-MyAccount-navigation-link--address a:before {
+			&.woocommerce-MyAccount-navigation-link--edit-address a:before {
 				content: "\f015";
 			}
 
-			&.woocommerce-MyAccount-navigation-link--methods a:before {
+			&.woocommerce-MyAccount-navigation-link--payment-methods a:before {
 				content: "\f09d";
 			}
 
-			&.woocommerce-MyAccount-navigation-link--account a:before {
+			&.woocommerce-MyAccount-navigation-link--edit-account a:before {
 				content: "\f007";
 			}
 
-			&.woocommerce-MyAccount-navigation-link--logout a:before {
+			&.woocommerce-MyAccount-navigation-link--customer-logout a:before {
 				content: "\f08b";
 			}
 		}
