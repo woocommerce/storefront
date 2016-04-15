@@ -103,7 +103,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// Setup the WordPress core custom background feature.
 			add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
-				'default-color' => apply_filters( 'storefront_default_background_color', 'f5f5f5' ),
+				'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
 				'default-image' => '',
 			) ) );
 
@@ -181,11 +181,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Fonts
 			 */
 			$google_fonts = apply_filters( 'storefront_google_font_families', array(
-				'roboto' => 'Source+Sans+Pro:400,300,300italic,400italic,700,700italic,900,900italic',
+				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,700,900',
 			) );
 
 			$query_args = array(
-				'family' => urlencode( implode( '|', $google_fonts ) ),
+				'family' => implode( '|', $google_fonts ),
 				'subset' => urlencode( 'latin,latin-ext' ),
 			);
 
@@ -268,27 +268,28 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * Add styles for embeds
 		 */
 		public function print_embed_styles() {
-			wp_enqueue_style( 'roboto', '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,700,700italic,900,900italic' );
-			$accent_color = get_theme_mod( 'storefront_accent_color' );
+			wp_enqueue_style( 'source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,900' );
+			$accent_color     = get_theme_mod( 'storefront_accent_color' );
+			$background_color = storefront_get_content_background_color();
 			?>
 			<style type="text/css">
 				.wp-embed {
 					padding: 2.618em !important;
 					border: 0 !important;
-					border-radius: 2px;
-					font-family: "Roboto", "Open Sans", sans-serif !important;
+					border-radius: 3px !important;
+					font-family: "Source Sans Pro", "Open Sans", sans-serif !important;
 					-webkit-font-smoothing: antialiased;
+					background-color: <?php echo storefront_adjust_color_brightness( $background_color, -7 ); ?> !important;
 				}
 
 				.wp-embed .wp-embed-featured-image {
 					margin-bottom: 2.618em;
 				}
 
-				.wp-embed .wp-embed-featured-image img {
-					border-radius: 2px 2px 0 0;
-					margin: -2.618em;
-					margin-bottom: 0;
-					width: calc( 100% + 5.236em );
+				.wp-embed .wp-embed-featured-image img,
+				.wp-embed .wp-embed-featured-image.square {
+					min-width: 100%;
+					margin-bottom: .618em;
 				}
 
 				a.wc-embed-button {

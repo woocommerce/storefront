@@ -44,7 +44,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		public static function get_storefront_default_setting_values() {
 			return apply_filters( 'storefront_setting_default_values', $args = array(
 				'storefront_heading_color'               => '#484c51',
-				'storefront_text_color'                  => '#60646c',
+				'storefront_text_color'                  => '#43454b',
 				'storefront_accent_color'                => '#96588a',
 				'storefront_header_background_color'     => '#2c2d33',
 				'storefront_header_text_color'           => '#9aa0a7',
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'storefront_button_alt_background_color' => '#60646c',
 				'storefront_button_alt_text_color'       => '#ffffff',
 				'storefront_layout'                      => 'right',
-				'background_color'                       => '#f5f5f5',
+				'background_color'                       => '#ffffff',
 			) );
 		}
 
@@ -154,7 +154,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Text Color
 			 */
 			$wp_customize->add_setting( 'storefront_text_color', array(
-				'default'           	=> apply_filters( 'storefront_default_text_color', '#60646c' ),
+				'default'           	=> apply_filters( 'storefront_default_text_color', '#43454b' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 				'transport'				=> 'postMessage',
 			) );
@@ -490,15 +490,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			table th {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
 			table tbody td {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 2 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 			}
 
 			table tbody tr:nth-child(2n) td {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 4 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
 			}
 
 			.site-header,
@@ -614,11 +614,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			#payment .payment_methods li {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 5 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -5 ) . ';
 			}
 
 			#payment .payment_methods li:hover {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 10 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -10 ) . ';
 			}
 
 			@media screen and ( min-width: 768px ) {
@@ -694,7 +694,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			.woocommerce-breadcrumb {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
 			.order_details {

@@ -2,6 +2,10 @@
  * Media
  */
 
+img {
+	border-radius: 3px;
+}
+
 .page-content,
 .entry-content,
 .comment-content {
@@ -11,6 +15,7 @@
 		margin-top: 0;
 		padding: 0;
 		display: inline-block;
+		border-radius: 0;
 	}
 }
 
