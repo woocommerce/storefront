@@ -1206,7 +1206,7 @@ form.checkout {
 /**
  * My Account
  */
-.my-account-navigation {
+.woocommerce-MyAccount-navigation {
 	ul {
 		margin-left: 0;
 		border-top: 1px solid $color_border;
@@ -1245,31 +1245,31 @@ form.checkout {
 				}
 			}
 
-			&.my-account-menu-item-dashboard a:before {
+			&.woocommerce-MyAccount-navigation-link--dashboard a:before {
 				content: "\f0e4";
 			}
 
-			&.my-account-menu-item-orders a:before {
+			&.woocommerce-MyAccount-navigation-link--orders a:before {
 				content: "\f291";
 			}
 
-			&.my-account-menu-item-downloads a:before {
+			&.woocommerce-MyAccount-navigation-link--downloads a:before {
 				content: "\f1c6";
 			}
 
-			&.my-account-menu-item-edit-address a:before {
+			&.woocommerce-MyAccount-navigation-link--address a:before {
 				content: "\f015";
 			}
 
-			&.my-account-menu-item-payment-methods a:before {
+			&.woocommerce-MyAccount-navigation-link--methods a:before {
 				content: "\f09d";
 			}
 
-			&.my-account-menu-item-edit-account a:before {
+			&.woocommerce-MyAccount-navigation-link--account a:before {
 				content: "\f007";
 			}
 
-			&.my-account-menu-item-customer-logout a:before {
+			&.woocommerce-MyAccount-navigation-link--logout a:before {
 				content: "\f08b";
 			}
 		}
@@ -1354,7 +1354,7 @@ ul.order_details {
 	}
 }
 
-.my-account-content {
+.woocommerce-MyAccount-content {
 	h2 {
 		font-size: 2em;
 		font-weight: 600;
@@ -2412,12 +2412,11 @@ dl.variation {
 		}
 	}
 
-	.my-account-navigation {
+	.woocommerce-MyAccount-navigation {
 		@include span( 3 of 9 );
-		float: right;
 	}
 
-	.my-account-content {
+	.woocommerce-MyAccount-content {
 		@include span( last 6 of 9 );
 
 		.form-row-first {
@@ -2445,11 +2444,11 @@ dl.variation {
 			}
 		}
 
-		.my-account-navigation {
+		.woocommerce-MyAccount-navigation {
 			@include span( 3 of 12 );
 		}
 
-		.my-account-content {
+		.woocommerce-MyAccount-content {
 			@include span( last 9 of 12 );
 
 			.form-row-first {
