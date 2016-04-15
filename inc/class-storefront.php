@@ -181,7 +181,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Fonts
 			 */
 			$google_fonts = apply_filters( 'storefront_google_font_families', array(
-				'roboto' => 'Roboto:400,300,300italic,400italic,700,700italic,900,900italic',
+				'roboto' => 'Source+Sans+Pro:400,300,300italic,400italic,700,700italic,900,900italic',
 			) );
 
 			$query_args = array(
