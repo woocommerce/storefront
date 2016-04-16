@@ -41,6 +41,7 @@ button.menu-toggle {
 		left: 1em;
 		margin-top: -1px;
 		@include transition(all,ease,.2s);
+		border-radius: 3px;
 	}
 
 	&:before {
