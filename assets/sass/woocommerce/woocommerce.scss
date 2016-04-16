@@ -273,9 +273,17 @@ table.shop_table_responsive {
 				}
 			}
 
-			&.actions {
+			&.actions,
+			&.download-actions {
 				&:before {
 					display: none;
+				}
+			}
+
+			&.download-actions {
+				.button {
+					display: block;
+					text-align: center;
 				}
 			}
 		}
@@ -283,7 +291,7 @@ table.shop_table_responsive {
 
 	&.my_account_orders {
 		.order-actions {
-			text-align: left;
+			text-align: right;
 
 			&:before {
 				display: none;
@@ -356,6 +364,7 @@ ul.products {
 .price {
 	del {
 		opacity: .5;
+		font-weight: 400;
 
 		& + ins {
 			margin-left: .327em;
@@ -1324,9 +1333,9 @@ ul.order_details {
 }
 
 .my_account_orders,
-.account-downloads-table {
+.woocommerce-MyAccount-downloads {
 	.button {
-		padding: .53em .857em;
+		padding: .618em .857em;
 		font-size: .857em;
 		margin-right: .236em;
 	}
@@ -1343,7 +1352,7 @@ ul.order_details {
 	}
 }
 
-.account-downloads-table {
+.woocommerce-MyAccount-downloads {
 	.button {
 		&:after {
 			font-family: "FontAwesome";
@@ -1555,6 +1564,7 @@ p.stars {
 	font-weight: 700;
 	display: inline-block;
 	margin-bottom: 1em;
+	border-radius: 3px;
 }
 
 .quantity {
@@ -1687,11 +1697,21 @@ p.no-comments {
 	}
 }
 
-.wc-forward {
+.wc-forward,
+.woocommerce-Button--next {
 	&:after {
 		content: "\f178";
 		font-family: "FontAwesome";
 		margin-left: .53em;
+		font-weight: 400;
+	}
+}
+
+.woocommerce-Button--previous {
+	&:before {
+		content: "\f177";
+		font-family: "FontAwesome";
+		margin-right: .53em;
 		font-weight: 400;
 	}
 }
@@ -1717,6 +1737,15 @@ dl.variation {
 		margin: 0 0 1em;
 	}
 }
+
+/**
+ * My Account
+ */
+ .woocommerce-MyAccount-content {
+ 	.woocommerce-Pagination {
+ 		text-align: center;
+ 	}
+ }
 
 /**
  * Homepage
