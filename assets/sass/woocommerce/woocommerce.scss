@@ -2416,10 +2416,6 @@ dl.variation {
 		#customer_details + #wc_checkout_add_ons {
 			@include span( last 6 of 12 );
 		}
-
-		#order_review {
-			font-size: .857em;
-		}
 	}
 
 	#order_review {
