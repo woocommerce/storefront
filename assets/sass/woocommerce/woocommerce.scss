@@ -1599,15 +1599,22 @@ p.stars {
 				display: block;
 			}
 
+			&:after {
+				font-family: "FontAwesome";
+				content: "\f107";
+				display: block;
+				position: absolute;
+				top: 50%;
+				right: -1em;
+				transform: translateY(-50%);
+				opacity: 0;
+				@include transition(all,ease,.3s);
+			}
+
 			&.active {
 				&:after {
-					font-family: "FontAwesome";
-					content: "\f107";
-					display: block;
-					position: absolute;
-					top: 50%;
+					opacity: 1;
 					right: 0;
-					transform: translateY(-50%);
 				}
 			}
 		}
@@ -2580,10 +2587,12 @@ dl.variation {
 			@include span(3 of 9);
 
 			li {
-				&.active {
-					&:after {
-						content: "\f105";
-					}
+				&:after {
+					content: "\f105";
+				}
+
+				&.active:after {
+					right: 1em;
 				}
 			}
 		}
