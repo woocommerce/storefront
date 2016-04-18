@@ -107,8 +107,8 @@
 
 	#cancel-comment-reply-link {
 		position: absolute;
-		top: -.53em;
-		right: -.53em;
+		top: .53em;
+		right: .53em;
 		display: block;
 		height: 1em;
 		width: 1em;
@@ -116,6 +116,11 @@
 		line-height: 1;
 		font-size: 1.387em;
 		text-align: center;
+		@include transition(transform,ease,.3s);
+
+		&:hover {
+			@include transform(scale(1.3));
+		}
 
 		&:before {
 			font-family: "FontAwesome";
@@ -160,6 +165,14 @@
 			.comment-form-url {
 				width: 100%;
 				margin-right: 0;
+			}
+		}
+
+		.comment-body {
+			#respond {
+				box-shadow: 0 6px 2em rgba(#000,.2);
+				margin-bottom: 2.618em;
+				margin-top: -1.618em;
 			}
 		}
 
