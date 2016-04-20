@@ -287,7 +287,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_search' ) ) {
 	 * @since 2.0.0
 	 */
 	function storefront_handheld_footer_bar_search() {
-		echo '<a href="#">' . esc_attr__( 'Search', 'storefront' ) . '</a>';
+		echo '<a href="">' . esc_attr__( 'Search', 'storefront' ) . '</a>';
 		storefront_product_search();
 	}
 }
