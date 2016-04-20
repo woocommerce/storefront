@@ -61,9 +61,8 @@ input[type="submit"],
 
 	&.added {
 		&:after {
+			@include fa-icon();
 			content: "\f00c";
-			font-family: "FontAwesome";
-			margin-left: .53em;
 		}
 	}
 

@@ -76,12 +76,11 @@
 		}
 
 		&:before {
+			@include fa-icon();
 			content: "\f002";
-			font-family: "FontAwesome";
 			position: absolute;
-			top: .618em;
+			top: 1em;
 			left: 1em;
-			line-height: 1;
 		}
 	}
 }

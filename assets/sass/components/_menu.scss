@@ -122,10 +122,9 @@ button.menu-toggle {
 			display: block;
 
 			&:before {
-				font-family: "FontAwesome";
+				@include fa-icon();
 				content: "\f0f6";
 				margin-right: .53em;
-				font-weight: 400;
 			}
 
 			&:hover {
@@ -267,11 +266,9 @@ button.menu-toggle {
 					> a {
 						&:after {
 							// The dropdown indicator
+							@include fa-icon();
 							content: "\f107";
-							font-family: "FontAwesome";
 							margin-left: 1em;
-							line-height: 1;
-							font-weight: inherit;
 						}
 					}
 				}
@@ -297,8 +294,8 @@ button.menu-toggle {
 						> a {
 							&:after {
 								// The dropdown indicator
+								@include fa-icon();
 								content: "\f105";
-								font-family: "FontAwesome";
 								float: right;
 							}
 						}

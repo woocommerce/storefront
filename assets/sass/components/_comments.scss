@@ -45,8 +45,7 @@
 		.bypostauthor {
 			> .comment-body cite {
 				&:after {
-					font-family: "FontAwesome";
-					font-weight: 400;
+					@include fa-icon();
 					margin-left: .53em;
 					content: "\f0f6";
 				}
@@ -62,8 +61,7 @@
 				margin-right: 1em;
 
 				&:after {
-					font-family: "FontAwesome";
-					font-weight: 400;
+					@include fa-icon();
 					content: "\f112";
 					margin-left: .53em;
 				}
@@ -123,8 +121,7 @@
 		}
 
 		&:before {
-			font-family: "FontAwesome";
-			font-weight: 400;
+			@include fa-icon();
 			content: "\f057";
 			display: block;
 		}

@@ -9,6 +9,8 @@
 @import '../../../assets/sass/utils/variables';
 @import '../../../assets/sass/utils/mixins';
 @import '../../../node_modules/susy/sass/susy';
+@import '../../../assets/sass/vendors/font-awesome/variables';
+@import '../../../assets/sass/vendors/font-awesome/mixins';
 
 // Star font, FontAwesome doesn't work :(
 @font-face {
@@ -130,7 +132,7 @@
 				}
 
 				&:before {
-					font-family: "FontAwesome";
+					@include fa-icon();
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -498,7 +500,7 @@ ul.products {
 
 .stock {
 	&:before {
-		font-family: "FontAwesome";
+		@include fa-icon();
 		margin-right: .53em;
 	}
 
@@ -524,9 +526,8 @@ a.reset_variations {
 	margin-left: 1em;
 
 	&:before {
-		font-family: "FontAwesome";
+		@include fa-icon();
 		content: "\f021";
-		font-weight: 400;
 		margin-right: .53em;
 	}
 }
@@ -607,9 +608,8 @@ a.reset_variations {
 
 		&:first-of-type {
 			&:before {
+				@include fa-icon();
 				content: "\f015";
-				font-family: "FontAwesome";
-				font-weight: 400;
 				margin-right: .53em;
 			}
 		}
@@ -699,9 +699,8 @@ a.reset_variations {
 			margin-bottom: .618em;
 
 			&:before {
-				font-family: "FontAwesome";
+				@include fa-icon();
 				margin-right: .53em;
-				display: inline-block;
 				opacity: 0.25;
 				content: "\f114";
 			}
@@ -736,9 +735,8 @@ a.reset_variations {
 		margin-bottom: .618em;
 
 		&:before {
-			font-family: "FontAwesome";
+			@include fa-icon();
 			margin-right: .53em;
-			display: inline-block;
 			opacity: 0.35;
 			content: "\f0c8";
 		}
@@ -757,7 +755,7 @@ a.reset_variations {
 			&.chosen {
 				a {
 					&:before {
-						font-family: "FontAwesome";
+						@include fa-icon();
 						content: "\f00d";
 						margin-right: .53em;
 						color: $error;
@@ -966,7 +964,7 @@ a.remove {
 
 	&:before {
 		content: "\f057";
-		font-family: 'FontAwesome';
+		@include fa-icon();
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -976,7 +974,6 @@ a.remove {
 		line-height: 1.618;
 		text-indent: 0;
 		text-align: center;
-		font-weight: 400;
 	}
 }
 
@@ -1180,10 +1177,8 @@ form.checkout {
 	font-size: .857em;
 
 	&:after {
+		@include fa-icon();
 		content: "\f119";
-		font-family: 'FontAwesome';
-		display: inline-block;
-		font-weight: 400;
 		margin-left: .53em;
 	}
 
@@ -1236,15 +1231,14 @@ form.checkout {
 				display: block;
 
 				&:before {
-					font-family: "FontAwesome";
+					@include fa-icon();
 					content: "\f0f6";
-					display: inline-block;
+					line-height: 1.618;
 					margin-left: .53em;
 					width: 1.387em;
 					text-align: right;
 					float: right;
 					opacity: .25;
-					font-weight: 400;
 				}
 
 				&:hover {
@@ -1344,10 +1338,19 @@ ul.order_details {
 .my_account_orders {
 	.button.view {
 		&:after {
-			font-family: "FontAwesome";
+			@include fa-icon();
 			content: "\f06e";
 			margin-left: .53em;
-			font-weight: 400;
+		}
+	}
+}
+
+p.order-again {
+	.button {
+		&:after {
+			@include fa-icon();
+			content: "\f021";
+			margin-left: .53em;
 		}
 	}
 }
@@ -1355,10 +1358,9 @@ ul.order_details {
 .woocommerce-MyAccount-downloads {
 	.button {
 		&:after {
-			font-family: "FontAwesome";
+			@include fa-icon();
 			content: "\f0ed";
 			margin-left: .53em;
-			font-weight: 400;
 		}
 	}
 }
@@ -1450,7 +1452,7 @@ ul.order_details {
 	z-index: 999;
 
 	&:before {
-		font-family: "FontAwesome";
+		@include fa-icon();
 		margin-right: .53em;
 		content: "\f05a";
 	}
@@ -1600,7 +1602,7 @@ p.stars {
 			}
 
 			&:after {
-				font-family: "FontAwesome";
+				@include fa-icon();
 				content: "\f107";
 				display: block;
 				position: absolute;
@@ -1707,19 +1709,17 @@ p.no-comments {
 .wc-forward,
 .woocommerce-Button--next {
 	&:after {
+		@include fa-icon();
 		content: "\f178";
-		font-family: "FontAwesome";
 		margin-left: .53em;
-		font-weight: 400;
 	}
 }
 
 .woocommerce-Button--previous {
 	&:before {
+		@include fa-icon();
 		content: "\f177";
-		font-family: "FontAwesome";
 		margin-right: .53em;
-		font-weight: 400;
 	}
 }
 
@@ -1827,11 +1827,10 @@ dl.variation {
 			text-indent: 0;
 
 			&:after {
+				@include fa-icon();
 				height: 1em;
 				float: right;
 				content: "\f291";
-				font-family: "FontAwesome";
-				font-weight: 400;
 			}
 
 			.amount {
@@ -2521,11 +2520,12 @@ dl.variation {
 				text-indent: -9999px;
 				position: relative;
 				padding: .857em;
-				margin-top: .4em;
+				margin-top: .618em;
 
 				&:before {
-					font-family: "FontAwesome";
+					@include fa-icon();
 					content: "\f044";
+					line-height: 1.618;
 					position: absolute;
 					top :0;
 					left: 0;
@@ -2533,7 +2533,6 @@ dl.variation {
 					width: 100%;
 					text-align: center;
 					text-indent: 0;
-					font-weight: 400;
 				}
 			}
 		}

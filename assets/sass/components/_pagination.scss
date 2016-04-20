@@ -22,8 +22,7 @@
 
 		a {
 			&:before {
-				font-family: "FontAwesome";
-				font-weight: 400;
+				@include fa-icon();
 				content: "\f177";
 				margin-right: .53em;
 			}
@@ -42,8 +41,7 @@
 
 		a {
 			&:after {
-				font-family: "FontAwesome";
-				font-weight: 400;
+				@include fa-icon();
 				content: "\f178";
 				margin-left: .53em;
 			}

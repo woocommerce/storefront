@@ -5,8 +5,7 @@
 .sticky {
 	.entry-title {
 		&:before {
-			font-family: "FontAwesome";
-			font-weight: 400;
+			@include fa-icon();
 			margin-right: .53em;
 			content: "\f08d";
 		}

@@ -8,6 +8,8 @@
 @import 'bourbon';
 @import '../../../assets/sass/utils/variables';
 @import '../../../assets/sass/utils/mixins';
+@import '../../../assets/sass/vendors/font-awesome/variables';
+@import '../../../assets/sass/vendors/font-awesome/mixins';
 
 .variations-table {
 	margin: 0;
@@ -64,9 +66,8 @@ a#variations_clear {
 	margin: 1em 0 1.618em;
 
 	&:before {
-		font-family: "FontAwesome";
+		@include fa-icon();
 		content: "\f021";
-		font-weight: 400;
 		margin-right: .53em;
 	}
 }
