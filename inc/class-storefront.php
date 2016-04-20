@@ -192,7 +192,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 
 			wp_enqueue_style( 'storefront-fonts', $fonts_url, array(), null );
-			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', 'storefront-style', '4.5.0' );
 
 			/**
 			 * Scripts
