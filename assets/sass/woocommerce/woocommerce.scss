@@ -1001,9 +1001,9 @@ form.checkout {
 
 		li {
 			list-style: none !important;
-			padding: 1.387em !important;
 			margin-left: 0;
 			margin-bottom: 1px;
+			position: relative;
 
 			img {
 				float: right;
@@ -1018,10 +1018,24 @@ form.checkout {
 			}
 
 			label {
-				width: 92%;
-				padding-top: 0 !important;
-				margin-left: .618em;
-				font-weight: bold;
+				display: block;
+				padding: 1.387em;
+				cursor: pointer;
+
+				&:before {
+					@include fa-icon();
+					content: "\f10c";
+					margin-right: .53em;
+					@include transition(color, ease, .2s);
+				}
+			}
+
+			input[type=radio]:first-child {
+				@include screen-reader-text();
+
+				&:checked + label:before {
+					content: "\f192";
+				}
 			}
 
 			p {
@@ -1030,7 +1044,6 @@ form.checkout {
 
 			.payment_box {
 				padding: 1.387em;
-				margin: 1.387em -1.387em -1.387em -1.387em;
 
 				fieldset {
 					border: 0;
@@ -1123,15 +1136,24 @@ form.checkout {
 		margin-bottom: 1em;
 
 		label {
-			display: inline-block;
-			margin-left: .618em;
+			display: block;
+			cursor: pointer;
+
+			&:before {
+				@include fa-icon();
+				content: "\f0c8";
+				margin-right: .53em;
+				opacity: .25;
+			}
 		}
 
-		input {
-			display: inline-block;
-			width: auto;
-			float: left;
-			margin: .327em .53em 0 0;
+		input[type=checkbox] {
+			@include screen-reader-text();
+
+			&:checked + label:before {
+				content: "\f14a";
+				opacity: 1;
+			}
 		}
 	}
 

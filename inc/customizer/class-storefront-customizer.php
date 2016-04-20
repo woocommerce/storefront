@@ -684,7 +684,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.quantity .plus, .quantity .minus,
 			p.stars a:hover:after,
 			p.stars a:after,
-			.star-rating span:before {
+			.star-rating span:before,
+			#payment .payment_methods li input[type=radio]:first-child:checked+label:before {
 				color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
