@@ -597,11 +597,11 @@ a.reset_variations {
  * Breadcrumbs
  */
 .woocommerce-breadcrumb {
-	margin-left: -2.618rem;
-	margin-right: -2.618rem;
+	margin-left: -1.387rem;
+	margin-right: -1.387rem;
 	margin-bottom: 1.618em;
 	font-size: .857em;
-	padding: 1em 2.618rem;
+	padding: 1em 1.387rem;
 
 	a {
 		@include underlinedLink();
@@ -2618,5 +2618,14 @@ dl.variation {
 			@include span(last 6 of 9);
 			margin-top: 0;
 		}
+	}
+}
+
+@media (min-width: $handheld) and (max-width: $container-width) {
+	.woocommerce-breadcrumb {
+		margin-left: -2.618rem;
+		margin-right: -2.618rem;
+		padding-left: 2.618rem;
+		padding-right: 2.618rem;
 	}
 }

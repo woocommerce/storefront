@@ -63,6 +63,7 @@ input[type="submit"],
 		&:after {
 			@include fa-icon();
 			content: "\f00c";
+			margin-left: .53em;
 		}
 	}
 
