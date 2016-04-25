@@ -554,9 +554,21 @@ a.reset_variations {
 		margin-left: 0;
 
 		li {
-			margin-bottom: 3.631em;
+			margin-bottom: 2.618em;
 			list-style: none;
 			clear: both;
+			@include clearfix;
+
+			.comment_container {
+				padding: 1.618em;
+				border-radius: 3px;
+
+				.comment-text {
+					p:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+			}
 
 			&:last-child {
 				border-bottom: 0;
@@ -568,9 +580,10 @@ a.reset_variations {
 			}
 
 			.avatar {
-				float: right;
-				width: 2.618em;
+				float: left;
+				width: 2.244em;
 				height: auto;
+				margin-right: 1em;
 			}
 
 			p.meta {
@@ -579,8 +592,16 @@ a.reset_variations {
 
 			ul.children {
 				@include span(last 5 of 6);
-				margin-bottom: 2.618em;
+				margin-bottom: 0;
 				padding-top: 1.618em;
+
+				li {
+					margin-bottom: 1.618em;
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
 	}

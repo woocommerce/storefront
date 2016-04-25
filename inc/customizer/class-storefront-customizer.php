@@ -698,7 +698,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
-			.woocommerce-breadcrumb {
+			.woocommerce-breadcrumb,
+			#reviews .commentlist li .comment_container {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
