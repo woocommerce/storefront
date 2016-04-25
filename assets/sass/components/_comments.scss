@@ -22,6 +22,15 @@
 		.comment-content {
 			padding-bottom: 1.618em;
 			margin-bottom: 1.618em;
+
+			.comment-text {
+				padding: 1.618em;
+				border-radius: 3px;
+
+				p:last-child {
+					margin-bottom: 0;
+				}
+			}
 		}
 
 		.comment-meta {
@@ -55,6 +64,7 @@
 		.reply {
 			@include clearfix;
 			margin-bottom: 1.618em;
+			padding-top: .618em;
 
 			a {
 				display: inline-block;
@@ -70,6 +80,10 @@
 					&:after {
 						content: "\f040";
 					}
+				}
+
+				&:last-child {
+					margin-right: 0;
 				}
 			}
 		}
@@ -139,9 +153,10 @@
 
 		.comment-meta {
 			@include span(2 of 9);
+			text-align: right;
 
 			.avatar {
-				@include span(1 of 1);
+				float: right;
 			}
 		}
 

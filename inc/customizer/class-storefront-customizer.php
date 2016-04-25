@@ -224,7 +224,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Header link color
 			 */
 			$wp_customize->add_setting( 'storefront_header_link_color', array(
-				'default'           	=> apply_filters( 'storefront_default_header_link_color', '#cccccc' ),
+				'default'           	=> apply_filters( 'storefront_default_header_link_color', '#d5d9db' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
 				'transport'				=> 'postMessage',
 			) );
@@ -593,6 +593,10 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
 				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
 				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
+			}
+
+			#comments .comment-list .comment-content .comment-text {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
 			.site-footer {

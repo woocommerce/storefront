@@ -78,9 +78,9 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 		<?php if ( 'div' != $args['style'] ) : ?>
 		<div id="div-comment-<?php comment_ID() ?>" class="comment-content">
 		<?php endif; ?>
-
+		<div class="comment-text">
 		<?php comment_text(); ?>
-
+		</div>
 		<div class="reply">
 		<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 		<?php edit_comment_link( __( 'Edit', 'storefront' ), '  ', '' ); ?>
