@@ -248,7 +248,7 @@ button.menu-toggle {
 			> li {
 				// The first level menu item
 				> a {
-					padding: 2.244em 1em;
+					padding: 1.618em 1em;
 				}
 
 				&:first-child {
@@ -297,6 +297,7 @@ button.menu-toggle {
 								@include fa-icon();
 								content: "\f105";
 								float: right;
+								line-height: 1.618;
 							}
 						}
 					}

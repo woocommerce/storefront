@@ -1824,7 +1824,7 @@ dl.variation {
 	 * Breadcrumbs
 	 */
 	.woocommerce-breadcrumb {
-		padding: 1.618em 999em;
+		padding: 1.387em 999em;
 		margin-left: -999em;
 		margin-right: -999em;
 		margin-bottom: 4.236em;
@@ -1862,7 +1862,7 @@ dl.variation {
 		position: relative;
 
 		.cart-contents {
-			padding: 2.244em 0;
+			padding: 1.618em 0;
 			display: block;
 			position: relative;
 			background-color: transparent;
@@ -1926,6 +1926,10 @@ dl.variation {
 
 	.site-search {
 		display: block;
+
+		form {
+			margin: 0;
+		}
 	}
 
 	/**
