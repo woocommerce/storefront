@@ -2492,18 +2492,28 @@ dl.variation {
 	}
 
 	.woocommerce-MyAccount-navigation {
-		@include span( 3 of 9 );
+		@include span( 2 of 9 );
 	}
 
 	.woocommerce-MyAccount-content {
-		@include span( last 6 of 9 );
+		@include span( last 7 of 9 );
 
 		.form-row-first {
-			@include span( 3 of 6 );
+			@include span( 3 of 7 );
 		}
 
 		.form-row-last {
-			@include span( last 3 of 6 );
+			@include span( last 4 of 7 );
+		}
+	}
+
+	.left-sidebar:not(.page-template-template-fullwidth-php) {
+		.woocommerce-MyAccount-navigation {
+			@include span( last 2 of 9 );
+		}
+
+		.woocommerce-MyAccount-content {
+			@include span( 7 of 9 );
 		}
 	}
 
