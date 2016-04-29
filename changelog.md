@@ -1,21 +1,22 @@
 # Storefront Changelog
 
-### * 2016.xx.xx - 2.0.0
+### * 2016.04.29 - 2.0.0
 * **New** - Extensive improvements to the responsive design.
 * **New** - Design refresh including full typography revamp.
-* **New** - Refactored all underlying code and reorganised / minified assets.
+* **New** - Refactored all underlying code and re-organised / minified assets.
 * **New** - Added 'Best Sellers' product section to the Homepage.
 * **New** - oEmbed styling to match Storefront aesthetic.
 * **New** - The welcome screen now dynamically pulls in new products.
 * **New** - Added `storefront_header_styles()` for the header image/styles along with the `storefront_header_styles` filter to customise the treatment of header styles.
 * **New** - Support for the Custom Logo theme feature (requires WordPress 4.5).
 * **New** - Styled 'Average Rating' widget.
+* **New** - Styled WooCommerce 2.6 tabbed account section.
 * **Tweak** - All template functions are now pluggable.
 * **Tweak** - The 'menu' button is now styled automatically based on header settings in the Customizer.
 * **Tweak** - Customizer settings are now all assigned to a single theme mod on theme switch and Customizer save to improve performance.
-* **Tweak** - FontAwesome is now loaded via CDN.
 * **Tweak** - Humanised homepage product section titles.
 * **Tweak** - Redesigned blog post meta section.
+* **Tweak** - Comments / Reviews design.
 * **Fix** - Inadequate left/right content margin at certain screen sizes.
 * **Fix** - z-index on demo store notice.
 * **Fix** - Checkout add-ons integration.
