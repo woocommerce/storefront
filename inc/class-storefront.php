@@ -79,7 +79,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Enable support for site logo
 			 */
-			add_theme_support( 'custom-logo' );
+			add_theme_support( 'custom-logo', array(
+				'height'      => 110,
+				'width'       => 470,
+				'flex-width'  => true,
+			) );
 
 			// This theme uses wp_nav_menu() in two locations.
 			register_nav_menus( array(
