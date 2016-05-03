@@ -704,16 +704,16 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			.order_details {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
 			.order_details li {
-				border-bottom: 2px dotted ' . $storefront_theme_mods['background_color'] . ';
+				border-bottom: 1px dotted ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -28 ) . ';
 			}
 
 			.order_details:before,
 			.order_details:after {
-				background: -webkit-linear-gradient(transparent 0,transparent 0),-webkit-linear-gradient(135deg,' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ' 33.33%,transparent 33.33%),-webkit-linear-gradient(45deg,' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], 7 ) . ' 33.33%,transparent 33.33%)
+				background: -webkit-linear-gradient(transparent 0,transparent 0),-webkit-linear-gradient(135deg,' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ' 33.33%,transparent 33.33%),-webkit-linear-gradient(45deg,' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ' 33.33%,transparent 33.33%)
 			}
 
 			@media screen and ( min-width: 768px ) {
