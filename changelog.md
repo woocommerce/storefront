@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### * 2016.04.29 - 2.0.0
+### * 2016.05.06 - 2.0.0
 * **New** - Extensive improvements to the responsive design.
 * **New** - Design refresh including full typography revamp.
 * **New** - Refactored all underlying code and re-organised / minified assets.
