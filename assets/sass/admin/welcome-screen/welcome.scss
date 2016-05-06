@@ -186,6 +186,12 @@ $green: #45B964;
 			}
 		}
 
+		&.support {
+			&:before {
+				content: "\f338";
+			}
+		}
+
 		&.child-themes {
 			.storefront-notice {
 				font-size: .857em;
