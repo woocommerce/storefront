@@ -951,6 +951,12 @@ table.cart {
 			display: block;
 			width: 100%;
 			margin: .53em 0;
+
+			&[name="update_cart"] {
+				&:focus {
+					outline: none;
+				}
+			}
 		}
 	}
 }
