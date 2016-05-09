@@ -43,7 +43,7 @@
 	} );
 	wp.customize( 'storefront_header_background_color', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-header, .main-navigation ul ul, .secondary-navigation ul ul, .main-navigation ul.menu > li.menu-item-has-children:after, .site-header-cart .widget_shopping_cart, .secondary-navigation ul.menu ul' ).css( 'background-color', to );
+			$( '.site-header, .main-navigation ul ul, .secondary-navigation ul ul, .main-navigation ul.menu > li.menu-item-has-children:after, .site-header-cart .widget_shopping_cart, .secondary-navigation ul.menu ul, button.menu-toggle' ).css( 'background-color', to );
 		} );
 	} );
 	wp.customize( 'storefront_footer_heading_color', function( value ) {

@@ -2,6 +2,7 @@
 
 ### *2016.05.06* - 2.0.1
 * **Fix** - Horizontal scroll bar on Safari.
+* **Fix** - Ensure the menu toggle background color updates correctly in the preview.
 
 ### *2016.05.06* - 2.0.0
 * **New** - Extensive improvements to the responsive design.
