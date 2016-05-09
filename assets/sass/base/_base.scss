@@ -8,11 +8,10 @@
 
 body {
 	background-color: $body-background;
-	overflow-x: hidden;
 }
 
-.clearfix {
-	@include clearfix;
+.site {
+	overflow-x: hidden;
 }
 
 /**

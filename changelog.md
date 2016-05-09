@@ -1,6 +1,9 @@
 # Storefront Changelog
 
-### * 2016.05.06 - 2.0.0
+### *2016.05.06* - 2.0.1
+* **Fix** - Horizontal scroll bar on Safari.
+
+### *2016.05.06* - 2.0.0
 * **New** - Extensive improvements to the responsive design.
 * **New** - Design refresh including full typography revamp.
 * **New** - Refactored all underlying code and re-organised / minified assets.
@@ -25,7 +28,7 @@
 * **Dev** - Deprecated `storefront_sanitize_hex_color()`.
 * **Dev** - Deprecated `storefront_sanitize_layout()`.
 
-### * 2016.01.18 - 1.6.1
+### *2016.01.18* - 1.6.1
 * **Tweak** - Jetpack integration updates.
 * **Tweak** - Styling for WooCommerce 2.5's terms positioning on the checkout.
 * **Tweak** - Styling for WooCommerce 2.5's totals inc tax on the cart.
