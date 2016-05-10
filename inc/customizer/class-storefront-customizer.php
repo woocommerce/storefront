@@ -753,13 +753,16 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 		/**
 		 * Add CSS in <head> for styles handled by the theme customizer
-		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods.
+		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods if they exist.
 		 *
 		 * @since 1.0.0
 		 * @return void
 		 */
 		public function add_customizer_css() {
-			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ) {
+			$storefront_styles             = get_theme_mod( 'storefront_styles' );
+			$storefront_woocommerce_styles = get_theme_mod( 'storefront_woocommerce_styles' );
+
+			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || ( false === $storefront_styles && false === $storefront_woocommerce_styles ) ) {
 				wp_add_inline_style( 'storefront-style', $this->get_css() );
 				wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_css() );
 			} else {
