@@ -5,6 +5,7 @@
 * **Fix** - Ensure the menu toggle background color updates correctly in the preview.
 * **Tweak** - Blog pagination hover effect.
 * **Dev** - Apply Customizer setting defaults on `customize_register` to account for child themes filtering `storefront_setting_default_values`.
+* **Dev** - Fix typo in the `storefront_homepage_after_best_selling_products` action name.
 
 ### *2016.05.06* - 2.0.0
 * **New** - Extensive improvements to the responsive design.

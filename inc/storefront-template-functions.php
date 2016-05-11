@@ -714,7 +714,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 				'per_page' => intval( $args['limit'] ),
 				'columns'  => intval( $args['columns'] ),
 			) );
-			do_action( 'storefront_homepage_after_best_selling_products_products' );
+			do_action( 'storefront_homepage_after_best_selling_products' );
 			echo '</section>';
 		}
 	}
