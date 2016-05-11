@@ -3,6 +3,7 @@
 ### *2016.05.06* - 2.0.1
 * **Fix** - Horizontal scroll bar on Safari.
 * **Fix** - Ensure the menu toggle background color updates correctly in the preview.
+* **Tweak** - Blog pagination hover effect.
 * **Dev** - Apply Customizer setting defaults on `customize_register` to account for child themes filtering `storefront_setting_default_values`.
 
 ### *2016.05.06* - 2.0.0
