@@ -4,6 +4,7 @@
 * **Fix** - Horizontal scroll bar on Safari.
 * **Fix** - Ensure the menu toggle background color updates correctly in the preview.
 * **Tweak** - Blog pagination hover effect.
+* **Tweak** - Apply the 'alt' button style to the checkout button in the cart widget.
 * **Dev** - Apply Customizer setting defaults on `customize_register` to account for child themes filtering `storefront_setting_default_values`.
 * **Dev** - Fix typo in the `storefront_homepage_after_best_selling_products` action name.
 
