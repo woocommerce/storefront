@@ -1,9 +1,10 @@
 # Storefront Changelog
 
-### *2016.05.xx* - 2.0.1
+### *2016.05.12* - 2.0.1
 * **Fix** - Horizontal scroll bar on Safari.
 * **Fix** - Ensure the menu toggle background color updates correctly in the preview.
 * **Fix** - Positioning of cart icon in header cart link.
+* **Fix** - Missing Customizer settings after updating to 2.0.0.
 * **Tweak** - Blog pagination hover effect.
 * **Tweak** - Apply the 'alt' button style to the checkout button in the cart widget.
 * **Dev** - Apply Customizer setting defaults on `customize_register` to account for child themes filtering `storefront_setting_default_values`.
