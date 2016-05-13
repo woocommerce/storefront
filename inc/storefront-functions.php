@@ -66,7 +66,7 @@ function storefront_header_styles() {
 	$is_header_image = get_header_image();
 
 	if ( $is_header_image ) {
-		$header_bg_image = 'url(' . esc_url( get_header_image() ) . ')';
+		$header_bg_image = 'url(' . esc_url( $is_header_image ) . ')';
 	} else {
 		$header_bg_image = 'none';
 	}
