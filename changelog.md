@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.0.2
+* **Fix** - Correct CSS property applied to the header if no background image is present.
+
 ### *2016.05.12* - 2.0.1
 * **Fix** - Horizontal scroll bar on Safari.
 * **Fix** - Ensure the menu toggle background color updates correctly in the preview.

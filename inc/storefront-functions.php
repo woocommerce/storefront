@@ -63,8 +63,16 @@ function storefront_get_content_background_color() {
  * @since  2.0.0
  */
 function storefront_header_styles() {
+	$is_header_image = get_header_image();
+
+	if ( $is_header_image ) {
+		$header_bg_image = 'url(' . esc_url( get_header_image() ) . ')';
+	} else {
+		$header_bg_image = 'none';
+	}
+
 	$styles = apply_filters( 'storefront_header_styles', array(
-		'background-image' => 'url(' . esc_url( get_header_image() ) . ')',
+		'background-image' => $header_bg_image,
 	) );
 
 	foreach ( $styles as $style => $value ) {
