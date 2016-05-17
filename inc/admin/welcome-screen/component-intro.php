@@ -29,7 +29,7 @@ global $storefront_version;
 		<p><?php printf( esc_html__( 'As INCREDIBLE as %s is, you might want to customize your Storefront to fit your own needs. We highly encourage you to make %s all yours.  Please make all php changes, css tweaks, and custom js modifications with our Theme Customisations Plugin. Simply Click the button below, install as normal, and start Customizing today!', 'storefront' ), 'Storefront', 'WooCommerce' ); ?></p>
 		
 		<div class="more-button">
-			<a href="https://github.com/woothemes/theme-customisations/archive/master.zip?utm_source=koster&utm_medium=likes&utm_campaign=bowties" class="button button-primary">
+			<a href="https://github.com/woothemes/theme-customisations/archive/master.zip" class="button button-primary">
 				<?php printf( esc_html__( 'Download Theme Customisations', 'storefront' ), 'Storefront' ); ?>
 			</a>
 		</div>
