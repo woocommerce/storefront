@@ -1270,7 +1270,7 @@ form.checkout {
 			border-bottom: 1px solid $color_border;
 			position: relative;
 
-			&.current-item {
+			&.is-active {
 				a:before {
 					opacity: 1;
 				}
