@@ -180,6 +180,12 @@ $green: #45B964;
 			}
 		}
 
+		&.customise {
+			&:before {
+				content: "\f540";
+			}
+		}
+
 		&.suggest {
 			&:before {
 				content: "\f488";

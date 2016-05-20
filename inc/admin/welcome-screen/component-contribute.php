@@ -6,6 +6,17 @@
  */
 
 ?>
+	<div class="boxed customise">
+		<h2><?php esc_html_e( 'Customise Storefront', 'storefront' ); ?></h2>
+		<p><?php printf( esc_html__( 'We highly encourage you to make %s all yours. If you need to make a CSS tweak or add some custom JS or PHP, please use our Theme Customisations Plugin. Simply Click the button below, install as normal, and start Customizing today!', 'storefront' ), 'Storefront', 'WooCommerce' ); ?></p>
+
+		<div class="more-button">
+			<a href="https://github.com/woothemes/theme-customisations/archive/master.zip" class="button button-primary">
+				<?php printf( esc_html__( 'Download Theme Customisations', 'storefront' ), 'Storefront' ); ?>
+			</a>
+		</div>
+	</div>
+
 	<div class="boxed contribute">
 		<h2><?php esc_html_e( 'Contribute to Storefront', 'storefront' ); ?></h2>
 		<p><?php printf( esc_html__( 'Found a bug? Want to contribute a patch or create a new feature? %sGitHub is the place to go!%s Or would you like to translate %s into your language? %sGet involved on WordPress.org%s.', 'storefront' ), '<a href="https://github.com/woothemes/storefront">', '</a>', 'Storefront', '<a href="https://translate.wordpress.org/projects/wp-themes/storefront">', '</a>' ); ?></p>

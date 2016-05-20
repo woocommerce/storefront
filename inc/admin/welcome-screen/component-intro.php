@@ -25,14 +25,6 @@ global $storefront_version;
 		<?php } else { ?>
 			<p><a href="<?php echo esc_url( wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=woocommerce' ), 'install-plugin_woocommerce' ) ); ?>" class="button button-primary"><?php printf( esc_html__( 'Install %s', 'storefront' ), 'WooCommerce' ); ?></a></p>
 		<?php } ?>
-		
-		<p><?php printf( esc_html__( 'We highly encourage you to make %s all yours.  Please make all php changes, css tweaks, and custom js modifications with our Theme Customisations Plugin. Simply Click the button below, install as normal, and start Customizing today!', 'storefront' ), 'Storefront', 'WooCommerce' ); ?></p>
-		
-		<div class="more-button">
-			<a href="https://github.com/woothemes/theme-customisations/archive/master.zip" class="button button-primary">
-				<?php printf( esc_html__( 'Download Theme Customisations', 'storefront' ), 'Storefront' ); ?>
-			</a>
-		</div>
 	</div>
 
 	<div class="boxed news">
