@@ -2,6 +2,8 @@
 
 ### *2016.xx.xx* - 2.0.2
 * **Fix** - Correct CSS property applied to the header if no background image is present.
+* **Fix** - Sticky order review + Checkout Add-ons compatibility.
+* **Dev** - Added `storefront_sticky_order_review` filter.
 
 ### *2016.05.12* - 2.0.1
 * **Fix** - Horizontal scroll bar on Safari.

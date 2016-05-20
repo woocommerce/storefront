@@ -78,7 +78,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			wp_register_script( 'storefront-sticky-payment', get_template_directory_uri() . '/assets/js/woocommerce/checkout.min.js', 'jquery', $storefront_version, true );
 
-			if ( is_checkout() ) {
+			if ( is_checkout() && apply_filters( 'storefront_sticky_order_review', true ) ) {
 				wp_enqueue_script( 'storefront-sticky-payment' );
 			}
 		}
@@ -249,6 +249,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( $this->is_woocommerce_extension_activated( 'WC_Ship_Multiple' ) ) {
 				wp_enqueue_style( 'storefront-woocommerce-sma-style', get_template_directory_uri() . '/assets/sass/woocommerce/ship-multiple-addresses.css', 'storefront-woocommerce-style' );
 				wp_style_add_data( 'storefront-woocommerce-sma-style', 'rtl', 'replace' );
+			}
+
+			/**
+			 * Checkout Add Ons
+			 */
+			if ( $this->is_woocommerce_extension_activated( 'WC_Checkout_Add_Ons' ) ) {
+				add_filter( 'storefront_sticky_order_review', '__return_false' );
 			}
 		}
 
