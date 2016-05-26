@@ -19,28 +19,6 @@ if ( ! function_exists( 'storefront_display_comments' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_html_tag_schema' ) ) {
-	/**
-	 * Schema type
-	 *
-	 * @return void
-	 */
-	function storefront_html_tag_schema() {
-		$schema = 'http://schema.org/';
-		$type   = 'WebPage';
-
-		if ( is_singular( 'post' ) ) {
-			$type = 'Article';
-		} elseif ( is_author() ) {
-			$type = 'ProfilePage';
-		} elseif ( is_search() ) {
-			$type 	= 'SearchResultsPage';
-		}
-
-		echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
-	}
-}
-
 if ( ! function_exists( 'storefront_comment' ) ) {
 	/**
 	 * Storefront comment template
@@ -276,7 +254,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 		<header class="entry-header">
 			<?php
 			storefront_post_thumbnail( 'full' );
-			the_title( '<h1 class="entry-title" itemprop="name">', '</h1>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 			?>
 		</header><!-- .entry-header -->
 		<?php
@@ -291,7 +269,7 @@ if ( ! function_exists( 'storefront_page_content' ) ) {
 	 */
 	function storefront_page_content() {
 		?>
-		<div class="entry-content" itemprop="mainContentOfPage">
+		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php
 				wp_link_pages( array(
@@ -316,13 +294,13 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		<?php
 		if ( is_single() ) {
 			storefront_posted_on();
-			the_title( '<h1 class="entry-title" itemprop="name headline">', '</h1>' );
+			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
 			if ( 'post' == get_post_type() ) {
 				storefront_posted_on();
 			}
 
-			the_title( sprintf( '<h1 class="entry-title" itemprop="name headline"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+			the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
 		}
 		?>
 		</header><!-- .entry-header -->
@@ -338,7 +316,7 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 	 */
 	function storefront_post_content() {
 		?>
-		<div class="entry-content" itemprop="articleBody">
+		<div class="entry-content">
 		<?php
 		storefront_post_thumbnail( 'full' );
 
@@ -452,9 +430,9 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 	 * Prints HTML with meta information for the current post-date/time and author.
 	 */
 	function storefront_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s" itemprop="datePublished">%2$s</time>';
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s" itemprop="datePublished">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
 		$time_string = sprintf( $time_string,
@@ -480,7 +458,6 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			),
 			'time' => array(
 				'datetime' => array(),
-				'itemprop' => array(),
 				'class'    => array(),
 			),
 		) );
@@ -779,7 +756,7 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 */
 	function storefront_post_thumbnail( $size ) {
 		if ( has_post_thumbnail() ) {
-			the_post_thumbnail( $size, array( 'itemprop' => 'image' ) );
+			the_post_thumbnail( $size );
 		}
 	}
 }
@@ -796,4 +773,63 @@ function storefront_primary_navigation_wrapper() {
  */
 function storefront_primary_navigation_wrapper_close() {
 	echo '</section>';
+}
+
+if ( ! function_exists( 'storefront_init_structured_data' ) ) {
+  /**
+   * Generate the structured data...
+   * Initialize Storefront::$structured_data via Storefront::set_structured_data()...
+   * Hooked into:
+   * `storefront_loop_post`
+   * `storefront_single_post`
+   * `storefront_page`
+   * Apply `storefront_structured_data` filter hook for structured data customization :)
+   */
+  function storefront_init_structured_data() {
+    if ( is_home() || is_category() || is_date() || is_search() || is_single() && ! is_woocommerce() ) {
+
+      $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
+      $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+
+      $json['@type']            = 'BlogPosting';
+      $json['mainEntityOfPage'] = array(
+        '@type'                 => 'webpage',
+        '@id'                   => get_the_permalink()
+      );
+      $json['image']            = array(
+        '@type'                 => 'ImageObject',
+        'url'                   => $image[0],
+        'width'                 => $image[1],
+        'height'                => $image[2]
+      );
+      $json['publisher']        = array(
+        '@type'                 => 'organization',
+        'name'                  => get_bloginfo( 'name' ),
+        'logo'                  => array(
+          '@type'               => 'ImageObject',
+          'url'                 => $logo[0],
+          'width'               => $logo[1],
+          'height'              => $logo[2]
+        )
+      );
+      $json['author']           = array(
+        '@type'                 => 'person',
+        'name'                  => get_the_author()
+      );
+      $json['datePublished']    = get_post_time( 'c' );
+      $json['dateModified']     = get_the_modified_date( 'c' );
+      $json['name']             = get_the_title();
+      $json['headline']         = get_the_title();
+      $json['description']      = get_the_excerpt();
+    }
+    elseif ( is_page() ) {
+      $json['@type']            = 'WebPage';
+      $json['url']              = get_the_permalink();
+      $json['name']             = get_the_title();
+      $json['description']      = get_the_excerpt();
+    }
+    if ( isset( $json ) ) {
+      Storefront::set_structured_data( apply_filters( 'storefront_structured_data', $json ) );
+    }
+  }  
 }
