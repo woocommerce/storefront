@@ -324,7 +324,7 @@ if ( ! function_exists( 'storefront_woocommerce_init_structured_data' ) ) {
    * Hooked into the `woocommerce_before_shop_loop_item` action...
    * Apply the `storefront_woocommerce_structured_data` filter hook for structured data customization...
    */
-  function storefornt_woocommerce_init_structured_data() {
+  function storefront_woocommerce_init_structured_data() {
     if ( ! is_product_category() ) return;
     global $product;
 
