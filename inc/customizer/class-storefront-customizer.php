@@ -500,7 +500,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			a.cart-contents:hover,
 			.site-header-cart .widget_shopping_cart a:hover,
 			.site-header-cart:hover > li > a,
-			ul.menu li.current-menu-item > a {
+			.site-header ul.menu li.current-menu-item > a {
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
 			}
 
