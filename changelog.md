@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.0.2
+### *2016.06.01* - 2.0.2
 * **Fix** - Correct CSS property applied to the header if no background image is present.
 * **Fix** - Sticky order review + Checkout Add-ons compatibility.
 * **Fix** - Active link color when using the Custom Menu widget in the sidebar.
