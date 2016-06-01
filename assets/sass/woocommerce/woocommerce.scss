@@ -1497,7 +1497,7 @@ p.order-again {
 .demo_store {
 	position: fixed;
 	left: 0;
-	bottom: 0;
+	bottom: 69px;
 	right: 0;
 	margin: 0;
 	padding: 1em 1.387em;
@@ -1802,11 +1802,11 @@ dl.variation {
 /**
  * My Account
  */
- .woocommerce-MyAccount-content {
- 	.woocommerce-Pagination {
- 		text-align: center;
- 	}
- }
+.woocommerce-MyAccount-content {
+	.woocommerce-Pagination {
+		text-align: center;
+	}
+}
 
 /**
  * Homepage
@@ -1823,6 +1823,10 @@ dl.variation {
 }
 
 @include susy-media($desktop) {
+	.demo_store {
+		bottom: 0;
+	}
+	
 	/**
 	 * Handheld footer bar
 	 */

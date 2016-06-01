@@ -4,6 +4,7 @@
 * **Fix** - Correct CSS property applied to the header if no background image is present.
 * **Fix** - Sticky order review + Checkout Add-ons compatibility.
 * **Fix** - Active link color when using the Custom Menu widget in the sidebar.
+* **Fix** - Store notice no longer hidden by the handheld nav bar.
 * **Dev** - Added `storefront_sticky_order_review` filter.
 
 ### *2016.05.12* - 2.0.1
