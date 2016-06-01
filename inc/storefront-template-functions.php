@@ -776,60 +776,64 @@ function storefront_primary_navigation_wrapper_close() {
 }
 
 if ( ! function_exists( 'storefront_init_structured_data' ) ) {
-  /**
-   * Generate the structured data...
-   * Initialize Storefront::$structured_data via Storefront::set_structured_data()...
-   * Hooked into:
-   * `storefront_loop_post`
-   * `storefront_single_post`
-   * `storefront_page`
-   * Apply `storefront_structured_data` filter hook for structured data customization :)
-   */
-  function storefront_init_structured_data() {
-    if ( is_home() || is_category() || is_date() || is_search() || is_single() && ! is_woocommerce() ) {
+	/**
+	 * Generate the structured data...
+	 * Initialize Storefront::$structured_data via Storefront::set_structured_data()...
+	 * Hooked into:
+	 * `storefront_loop_post`
+	 * `storefront_single_post`
+	 * `storefront_page`
+	 * Apply `storefront_structured_data` filter hook for structured data customization :)
+	 */
+	function storefront_init_structured_data() {
+		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ! is_woocommerce() ) {
+			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
+			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
-      $image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
-      $logo = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+			$json['@type']            = 'BlogPosting';
 
-      $json['@type']            = 'BlogPosting';
-      $json['mainEntityOfPage'] = array(
-        '@type'                 => 'webpage',
-        '@id'                   => get_the_permalink()
-      );
-      $json['image']            = array(
-        '@type'                 => 'ImageObject',
-        'url'                   => $image[0],
-        'width'                 => $image[1],
-        'height'                => $image[2]
-      );
-      $json['publisher']        = array(
-        '@type'                 => 'organization',
-        'name'                  => get_bloginfo( 'name' ),
-        'logo'                  => array(
-          '@type'               => 'ImageObject',
-          'url'                 => $logo[0],
-          'width'               => $logo[1],
-          'height'              => $logo[2]
-        )
-      );
-      $json['author']           = array(
-        '@type'                 => 'person',
-        'name'                  => get_the_author()
-      );
-      $json['datePublished']    = get_post_time( 'c' );
-      $json['dateModified']     = get_the_modified_date( 'c' );
-      $json['name']             = get_the_title();
-      $json['headline']         = get_the_title();
-      $json['description']      = get_the_excerpt();
-    }
-    elseif ( is_page() ) {
-      $json['@type']            = 'WebPage';
-      $json['url']              = get_the_permalink();
-      $json['name']             = get_the_title();
-      $json['description']      = get_the_excerpt();
-    }
-    if ( isset( $json ) ) {
-      Storefront::set_structured_data( apply_filters( 'storefront_structured_data', $json ) );
-    }
-  }  
+			$json['mainEntityOfPage'] = array(
+				'@type'                 => 'webpage',
+				'@id'                   => get_the_permalink(),
+			);
+
+			$json['image']            = array(
+				'@type'                 => 'ImageObject',
+				'url'                   => $image[0],
+				'width'                 => $image[1],
+				'height'                => $image[2],
+			);
+
+			$json['publisher']        = array(
+				'@type'                 => 'organization',
+				'name'                  => get_bloginfo( 'name' ),
+				'logo'                  => array(
+					'@type'               => 'ImageObject',
+					'url'                 => $logo[0],
+					'width'               => $logo[1],
+					'height'              => $logo[2],
+				),
+			);
+
+			$json['author']           = array(
+				'@type'                 => 'person',
+				'name'                  => get_the_author(),
+			);
+
+			$json['datePublished']    = get_post_time( 'c' );
+			$json['dateModified']     = get_the_modified_date( 'c' );
+			$json['name']             = get_the_title();
+			$json['headline']         = get_the_title();
+			$json['description']      = get_the_excerpt();
+		} elseif ( is_page() ) {
+			$json['@type']            = 'WebPage';
+			$json['url']              = get_the_permalink();
+			$json['name']             = get_the_title();
+			$json['description']      = get_the_excerpt();
+		}
+
+		if ( isset( $json ) ) {
+			Storefront::set_structured_data( apply_filters( 'storefront_structured_data', $json ) );
+		}
+	}
 }

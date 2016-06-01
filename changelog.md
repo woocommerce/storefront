@@ -5,7 +5,9 @@
 * **Fix** - Sticky order review + Checkout Add-ons compatibility.
 * **Fix** - Active link color when using the Custom Menu widget in the sidebar.
 * **Fix** - Store notice no longer hidden by the handheld nav bar.
+* **Fix** - Some errors in structured data. Kudos [@opportus](https://github.com/opportus).
 * **Dev** - Added `storefront_sticky_order_review` filter.
+* **Dev** - Added `storefront_structured_data` filter for structured data customisation.
 
 ### *2016.05.12* - 2.0.1
 * **Fix** - Horizontal scroll bar on Safari.
