@@ -315,5 +315,47 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 	 */
 	function storefront_handheld_footer_bar_account_link() {
 		echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'storefront' ) . '</a>';
-	}
+  }
+}
+
+if ( ! function_exists( 'storefront_woocommerce_init_structured_data' ) ) {
+  /**
+   * Generate product category structured data...
+   * Hooked into the `woocommerce_before_shop_loop_item` action...
+   * Apply the `storefront_woocommerce_structured_data` filter hook for structured data customization...
+   */
+  function storefront_woocommerce_init_structured_data() {
+    if ( ! is_product_category() ) return;
+    global $product;
+
+    $json['@type']             = 'Product';
+    $json['name']              = get_the_title();
+    $json['image']             = wp_get_attachment_url( $product->get_image_id() );
+    $json['description']       = get_the_excerpt();
+    $json['sku']               = $product->get_sku();
+    $json['brand']             = array(
+      '@type'                  => 'Thing',
+      'name'                   => $product->get_attribute( __( 'brand', 'storefront' ) )
+    );
+    if ( $product->get_rating_count() ) {
+      $json['aggregateRating'] = array(
+        '@type'                => 'AggregateRating',
+        'ratingValue'          => $product->get_average_rating(),
+        'reviewCount'          => $product->get_rating_count()
+      );
+    }
+    $json['offers']            = array(
+      '@type'                  => 'Offer',
+      'priceCurrency'          => get_woocommerce_currency(),
+      'price'                  => $product->get_price(),
+      'itemCondition'          => 'http://schema.org/NewCondition',
+      'availability'           => 'http://schema.org/' . $stock = ( $product->is_in_stock ? 'InStock' : 'OutOfStock' ),
+      'seller'                 => array(
+        '@type'                => 'Organization',
+        'name'                 => get_bloginfo( 'name' )
+      )
+    );
+    if ( ! isset( $json ) ) return;
+    Storefront::set_structured_data( apply_filters( 'storefront_woocommerce_structured_data', $json ) );
+  }
 }
