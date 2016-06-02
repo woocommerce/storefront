@@ -786,7 +786,7 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 	 * Apply `storefront_structured_data` filter hook for structured data customization :)
 	 */
 	function storefront_init_structured_data() {
-		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ! is_woocommerce() ) {
+		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ( is_woocommerce_activated() && ! is_woocommerce() ) ) {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
 			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
