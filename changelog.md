@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.06.02* - 2.0.3
+* **Fix** - Fatal error when using Storefront without WooCommerce.
+
 ### *2016.06.01* - 2.0.2
 * **Fix** - Correct CSS property applied to the header if no background image is present.
 * **Fix** - Sticky order review + Checkout Add-ons compatibility.
