@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.0.4
+* **Fix** - Credit card input label styling.
+
 ### *2016.06.02* - 2.0.3
 * **Fix** - Fatal error when using Storefront without WooCommerce.
 
