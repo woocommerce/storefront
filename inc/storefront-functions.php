@@ -151,6 +151,28 @@ function storefront_sanitize_checkbox( $checked ) {
 }
 
 /**
+ * Schema type
+ *
+ * @return void
+ */
+function storefront_html_tag_schema() {
+	_deprecated_function( 'storefront_html_tag_schema', '2.0.2' );
+
+	$schema = 'http://schema.org/';
+	$type   = 'WebPage';
+
+	if ( is_singular( 'post' ) ) {
+		$type = 'Article';
+	} elseif ( is_author() ) {
+		$type = 'ProfilePage';
+	} elseif ( is_search() ) {
+		$type 	= 'SearchResultsPage';
+	}
+
+	echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
+}
+
+/**
  * Sanitizes the layout setting
  *
  * Ensures only array keys matching the original settings specified in add_control() are valid
