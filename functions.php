@@ -12,6 +12,13 @@ $theme              = wp_get_theme( 'storefront' );
 $storefront_version = $theme['Version'];
 
 /**
+ * Set the content width based on the theme's design and stylesheet.
+ */
+if ( ! isset( $content_width ) ) {
+	$content_width = 980; /* pixels */
+}
+
+/**
  * Initialize all the things.
  */
 require 'inc/class-storefront.php';
