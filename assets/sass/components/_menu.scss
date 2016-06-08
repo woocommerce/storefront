@@ -101,7 +101,8 @@ button.menu-toggle {
 
 .main-navigation.toggled {
 	.handheld-navigation,
-	.menu > ul:not(.nav-menu) {
+	.menu > ul:not(.nav-menu),
+	ul[aria-expanded=true] {
 		max-height: 1750px;
 	}
 }
