@@ -184,6 +184,23 @@
 			float: none;
 		}
 	}
+
+	.woocommerce-MyAccount-navigation {
+		li.woocommerce-MyAccount-navigation-link--contributions {
+			a:before {
+				content: "\f005";
+			}
+		}
+	}
+
+	#wc-product-reviews-pro-modal {
+		#customer_login {
+			.col-1,
+			.col-2 {
+				width: 100%;
+			}
+		}
+	}
 }
 
 #tiptip_content,

@@ -26,3 +26,6 @@ config.codekit
 .transifexrc
 /languages/*.po
 /languages/*.mo
+
+# PhpStorm
+.idea

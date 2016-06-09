@@ -1088,6 +1088,10 @@ form.checkout {
 
 					.form-row {
 						margin-bottom: 1em;
+
+						input[type="checkbox"] {
+							margin-right: 5px;
+						}
 					}
 
 					.form-row-first {
@@ -1219,6 +1223,10 @@ form.checkout {
 		.payment-fixed {
 			top: 32px;
 		}
+
+		#wc_checkout_add_ons label + br {
+			display: none;
+		}
 	}
 }
 
@@ -1330,6 +1338,10 @@ form.checkout {
 
 			&.woocommerce-MyAccount-navigation-link--customer-logout a:before {
 				content: "\f08b";
+			}
+
+			&.woocommerce-MyAccount-navigation-link--subscriptions a:before {
+				content: "\f021";
 			}
 		}
 	}
