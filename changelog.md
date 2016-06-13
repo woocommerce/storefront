@@ -5,6 +5,7 @@
 * **Fix** - `$content_width` declaration.
 * **Fix** - Mobile menu when using an empty menu in the primary menu location.
 * **Tweak** - Minor style fixes / improvements for various WooCommerce extensions.
+* **Tweak** - Account / Cart links in the handheld nav bar will only appear if the pages are set in WooCommerce.
 * **Dev** - Deprecate `storefront_html_tag_schema()`.
 
 ### *2016.06.02* - 2.0.3
