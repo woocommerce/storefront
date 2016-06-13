@@ -248,7 +248,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar' ) ) {
 	 * @since 2.0.0
 	 */
 	function storefront_handheld_footer_bar() {
-		$links = apply_filters( 'storefront_handheld_footer_bar_links', array(
+		$links = array(
 			'my-account' => array(
 				'priority' => 10,
 				'callback' => 'storefront_handheld_footer_bar_account_link',
@@ -261,7 +261,17 @@ if ( ! function_exists( 'storefront_handheld_footer_bar' ) ) {
 				'priority' => 30,
 				'callback' => 'storefront_handheld_footer_bar_cart_link',
 			),
-		) );
+		);
+
+		if ( wc_get_page_id( 'myaccount' ) === -1 ) {
+			unset( $links['my-account'] );
+		}
+
+		if ( wc_get_page_id( 'cart' ) === -1 ) {
+			unset( $links['cart'] );
+		}
+
+		$links = apply_filters( 'storefront_handheld_footer_bar_links', $links );
 		?>
 		<section class="storefront-handheld-footer-bar">
 			<ul class="columns-<?php echo count( $links ); ?>">
