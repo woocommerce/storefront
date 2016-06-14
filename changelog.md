@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.0.4
+### *2016.06.14* - 2.0.4
 * **Fix** - Credit card input label styling.
 * **Fix** - `$content_width` declaration.
 * **Fix** - Mobile menu when using an empty menu in the primary menu location.
