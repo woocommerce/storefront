@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.0.5
+* **Fix** - Saved payment method styling.
+
 ### *2016.06.14* - 2.0.4
 * **Fix** - Credit card input label styling.
 * **Fix** - `$content_width` declaration.

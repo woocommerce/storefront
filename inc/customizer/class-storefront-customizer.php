@@ -628,15 +628,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			#order_review,
-			#payment .payment_methods li .payment_box {
+			#payment .payment_methods > li .payment_box {
 				background-color: ' . $storefront_theme_mods['background_color'] . ';
 			}
 
-			#payment .payment_methods li {
+			#payment .payment_methods > li {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -5 ) . ';
 			}
 
-			#payment .payment_methods li:hover {
+			#payment .payment_methods > li:hover {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -10 ) . ';
 			}
 

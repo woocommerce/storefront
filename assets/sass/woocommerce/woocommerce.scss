@@ -1060,7 +1060,7 @@ form.checkout {
 				border-bottom: 0;
 			}
 
-			input[type=radio]:first-child {
+			&.wc_payment_method > input[type=radio]:first-child {
 				@include screen-reader-text();
 
 				&:checked + label:before {
@@ -1111,6 +1111,19 @@ form.checkout {
 					.help {
 						width: 75%;
 						float: right;
+					}
+				}
+
+				.woocommerce-SavedPaymentMethods {
+					padding-top: 1em;
+					margin: 0;
+
+					li {
+						margin-top: .618em;
+
+						input[type=radio] {
+							margin-right: .236em;
+						}
 					}
 				}
 
