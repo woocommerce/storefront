@@ -213,18 +213,20 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	 * @return void
 	 */
 	function storefront_secondary_navigation() {
-		?>
-		<nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
-			<?php
-				wp_nav_menu(
-					array(
-						'theme_location'	=> 'secondary',
-						'fallback_cb'		=> '',
-					)
-				);
-			?>
-		</nav><!-- #site-navigation -->
-		<?php
+	    if ( has_nav_menu( 'secondary' ) ) {
+		    ?>
+		    <nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
+			    <?php
+				    wp_nav_menu(
+					    array(
+						    'theme_location'	=> 'secondary',
+						    'fallback_cb'		=> '',
+					    )
+				    );
+			    ?>
+		    </nav><!-- #site-navigation -->
+		    <?php
+		}
 	}
 }
 
