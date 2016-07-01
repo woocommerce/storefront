@@ -2,6 +2,7 @@
 
 ### *2016.xx.xx* - 2.0.5
 * **Fix** - Saved payment method styling.
+* **Fix** - Card expiry date layout in checkout.
 * **Tweak** - Secondary nav wrapper no longer present is no menu is assigned. Kudos [@titanic-fanatic](https://github.com/titanic-fanatic).
 
 ### *2016.06.14* - 2.0.4

@@ -1094,16 +1094,6 @@ form.checkout {
 						}
 					}
 
-					.form-row-first {
-						select {
-							width: 48%;
-
-							&:nth-child(2n) {
-								float: right;
-							}
-						}
-					}
-
 					#cvv {
 						width: 22% !important;
 					}
