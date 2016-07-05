@@ -29,7 +29,7 @@
 
 	<div class="boxed support">
 		<h2><?php esc_html_e( 'Get support', 'storefront' ); ?></h2>
-		<p><?php printf( esc_html__( 'You can find a wide range of information on how to use and customise %s in our %sdocumentation%s. If you\'re a customer you can get support in our %sHelpdesk%3$s. Otherwise you can try posting on the WordPress.org %ssupport forums%3$s.', 'storefront' ), 'Storefront', '<a href="https://docs.woothemes.com/documentation/themes/storefront/">', '</a>', '<a href="https://support.woothemes.com/hc/en-us">', '<a href="https://wordpress.org/support/theme/storefront">' ); ?></p>
+		<p><?php printf( esc_html__( 'You can find a wide range of information on how to use and customise %s in our %sdocumentation%s. If you\'re a customer you can get support in our %sHelpdesk%3$s. Otherwise you can try posting on the WordPress.org %ssupport forums%3$s.', 'storefront' ), 'Storefront', '<a href="https://docs.woothemes.com/documentation/themes/storefront/">', '</a>', '<a href="https://support.woothemes.com/">', '<a href="https://wordpress.org/support/theme/storefront">' ); ?></p>
 	</div>
 </div><!--/boxes-->
 

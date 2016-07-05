@@ -33,7 +33,7 @@ global $storefront_version;
 			<div class="col-1 news">
 				<h4><?php esc_html_e( 'Recent News', 'storefront' ); ?></h4>
 				<?php
-				$rss		= fetch_feed( 'http://www.woothemes.com/blog/product-news/storefront/feed/' );
+				$rss		= fetch_feed( 'https://woocommerce.com/blog/product-news/storefront/feed/' );
 				$rss_items	= array();
 
 				if ( ! is_wp_error( $rss ) ) {

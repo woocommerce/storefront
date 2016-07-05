@@ -73,8 +73,8 @@
 * **Fix** - Sticky order review feature now accounts for any size of payment box to avoid cutting off the Place Order button.
 
 ### *2016.01.05* - 1.6.0
-* **New** - [Storefront Mega Menus](http://www.woothemes.com/products/storefront-mega-menus/) integration.
-* **New** - Integration with [Ship to Multiple Addresses](http://www.woothemes.com/products/shipping-multiple-addresses/) extension.
+* **New** - [Storefront Mega Menus](https://woocommerce.com/products/storefront-mega-menus/) integration.
+* **New** - Integration with [Ship to Multiple Addresses](https://woocommerce.com/products/shipping-multiple-addresses/) extension.
 * **New** - Sticky order review on checkout.
 * **New** - Automatic credit card type detection in compatible payment gateways.
 * **Tweak** - Styled the in stock/out of stock message. Props @nishitlangaliya.
