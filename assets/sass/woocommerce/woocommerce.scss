@@ -667,6 +667,16 @@ a.reset_variations {
 	}
 }
 
+.widget {
+	ul.products {
+		li.product {
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 .widget_products {
 	a {
 		display: block;
