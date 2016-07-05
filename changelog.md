@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.0.5
+### *2016.07.05* - 2.0.5
 * **Fix** - Saved payment method styling.
 * **Fix** - Card expiry date layout in checkout.
 * **Fix** - Product loop links in widgets are no longer underlined.

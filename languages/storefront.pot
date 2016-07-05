@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.0.4\n"
+"Project-Id-Version: Storefront 2.0.5\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2016-06-14 11:06:23+00:00\n"
+"POT-Creation-Date: 2016-07-05 11:31:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -378,82 +378,82 @@ msgstr ""
 msgid "Menu"
 msgstr ""
 
-#: inc/storefront-template-functions.php:217
+#: inc/storefront-template-functions.php:218
 msgid "Secondary Navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:240
+#: inc/storefront-template-functions.php:242
 msgid "Skip to navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:241
+#: inc/storefront-template-functions.php:243
 msgid "Skip to content"
 msgstr ""
 
-#: inc/storefront-template-functions.php:276
-#: inc/storefront-template-functions.php:331
+#: inc/storefront-template-functions.php:278
+#: inc/storefront-template-functions.php:333
 msgid "Pages:"
 msgstr ""
 
-#: inc/storefront-template-functions.php:325
+#: inc/storefront-template-functions.php:327
 msgid "Continue reading %s"
 msgstr ""
 
-#: inc/storefront-template-functions.php:355
+#: inc/storefront-template-functions.php:357
 msgid "Written by"
 msgstr ""
 
-#: inc/storefront-template-functions.php:361
-#: inc/storefront-template-functions.php:374
+#: inc/storefront-template-functions.php:363
+#: inc/storefront-template-functions.php:376
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/storefront-template-functions.php:366
+#: inc/storefront-template-functions.php:368
 msgid "Posted in"
 msgstr ""
 
-#: inc/storefront-template-functions.php:379
+#: inc/storefront-template-functions.php:381
 msgid "Tagged"
 msgstr ""
 
-#: inc/storefront-template-functions.php:389
+#: inc/storefront-template-functions.php:391
 msgid "Comments"
 msgstr ""
 
-#: inc/storefront-template-functions.php:390
+#: inc/storefront-template-functions.php:392
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:390
+#: inc/storefront-template-functions.php:392
 msgid "1 Comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:390
+#: inc/storefront-template-functions.php:392
 msgid "% Comments"
 msgstr ""
 
-#: inc/storefront-template-functions.php:485
+#: inc/storefront-template-functions.php:487
 msgid "Shop by Category"
 msgstr ""
 
-#: inc/storefront-template-functions.php:526
+#: inc/storefront-template-functions.php:528
 msgid "New In"
 msgstr ""
 
-#: inc/storefront-template-functions.php:567
+#: inc/storefront-template-functions.php:569
 msgid "We Recommend"
 msgstr ""
 
-#: inc/storefront-template-functions.php:608
+#: inc/storefront-template-functions.php:610
 msgid "Fan Favorites"
 msgstr ""
 
-#: inc/storefront-template-functions.php:647
+#: inc/storefront-template-functions.php:649
 msgid "On Sale"
 msgstr ""
 
-#: inc/storefront-template-functions.php:684
+#: inc/storefront-template-functions.php:686
 msgid "Best Sellers"
 msgstr ""
 
@@ -501,7 +501,7 @@ msgid "Storefront"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://www.woothemes.com/storefront"
+msgid "https://woocommerce.com/storefront"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -521,7 +521,7 @@ msgid "WooThemes"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://www.woothemes.com"
+msgid "https://woocommerce.com/"
 msgstr ""
 
 #. Template Name of the plugin/theme
@@ -539,17 +539,17 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:407
+#: inc/storefront-template-functions.php:409
 msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/storefront-template-functions.php:408
+#: inc/storefront-template-functions.php:410
 msgctxt "Previous post"
 msgid "Previous"
 msgstr ""
 
-#: inc/storefront-template-functions.php:446
+#: inc/storefront-template-functions.php:448
 msgctxt "post date"
 msgid "Posted on %s"
 msgstr ""
