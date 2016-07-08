@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.0.6
+* **Fix** - Added missing laser card icon.
+
 ### *2016.07.05* - 2.0.5
 * **Fix** - Saved payment method styling.
 * **Fix** - Card expiry date layout in checkout.
