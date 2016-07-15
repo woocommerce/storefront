@@ -78,6 +78,14 @@ button.menu-toggle {
 .main-navigation {
 	@include clearfix;
 
+	div.menu {
+		display: none; // Hide the default menu to stop both it and the handheld menu displaying, when no primary menu has been set...
+	}
+
+	div.menu:last-child {
+		display: block; // ... but display it if a handheld menu hasn't been set either.
+	}
+
 	.menu {
 		clear: both;
 	}
@@ -241,6 +249,10 @@ button.menu-toggle {
 	}
 
 	.main-navigation {
+		div.menu {
+			display: block;
+		}
+
 		ul.menu,
 		ul.nav-menu {
 			max-height: none;

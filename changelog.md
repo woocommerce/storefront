@@ -2,6 +2,7 @@
 
 ### *2016.xx.xx* - 2.0.6
 * **Fix** - Added missing laser card icon.
+* **Fix** - Additional menu displayed on handheld when a menu isn't assigned to the 'primary' location.
 
 ### *2016.07.05* - 2.0.5
 * **Fix** - Saved payment method styling.
