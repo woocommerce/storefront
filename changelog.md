@@ -3,6 +3,7 @@
 ### *2016.xx.xx* - 2.0.6
 * **Fix** - Added missing laser card icon.
 * **Fix** - Additional menu displayed on handheld when a menu isn't assigned to the 'primary' location.
+* **Dev** - Made `storefront_primary_navigation_wrapper()` and `storefront_primary_navigation_wrapper_close()` pluggable.
 
 ### *2016.07.05* - 2.0.5
 * **Fix** - Saved payment method styling.
