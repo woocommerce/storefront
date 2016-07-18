@@ -763,18 +763,22 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	}
 }
 
-/**
- * The primary navigation wrapper
- */
-function storefront_primary_navigation_wrapper() {
-	echo '<section class="storefront-primary-navigation">';
+if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
+	/**
+	 * The primary navigation wrapper
+	 */
+	function storefront_primary_navigation_wrapper() {
+		echo '<section class="storefront-primary-navigation">';
+	}
 }
 
-/**
- * The primary navigation wrapper close
- */
-function storefront_primary_navigation_wrapper_close() {
-	echo '</section>';
+if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
+	/**
+	 * The primary navigation wrapper close
+	 */
+	function storefront_primary_navigation_wrapper_close() {
+		echo '</section>';
+	}
 }
 
 if ( ! function_exists( 'storefront_init_structured_data' ) ) {
