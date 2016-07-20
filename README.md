@@ -15,7 +15,7 @@ For developers, Storefront is the perfect starting point for your project. It's 
 Looking to take your storefront powered store to the next level? Be sure to checkout the premium [Storefront extensions](https://woocommerce.com/product-category/plugins/storefront/).
 
 ## Storefront Documentation
-You can view detailed Storefront documentation on the [WooThemes documentation web site](http://docs.woothemes.com/documentation/themes/storefront/).
+You can view detailed Storefront documentation on the [WooThemes documentation web site](http://docs.woocommerce.com/documentation/themes/storefront/).
 
 ## Storefront in your language
 Storefront translations can be downloaded from [WordPress.org](https://translate.wordpress.org/projects/wp-themes/storefront). To use one of these translations it is recommended that you upload it to `wp-content/languages/themes/storefront-br_BR.mo`. Adding it to this location means the file will not be lost when you update Storefront. It is however possible to add a translation to the `languages` folder in your child theme if you'd prefer.

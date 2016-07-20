@@ -4,4 +4,4 @@ Storefront will look in this directory for translations as a fallback. It is how
 
 Alternatively you can put translations in your child theme: `/wp-content/themes/your-child-theme/languages/it_IT.mo`.
 
-You can read more about installing Storefront in your language [here](http://docs.woothemes.com/document/installing-storefront-in-your-language/).
+You can read more about installing Storefront in your language [here](http://docs.woocommerce.com/document/installing-storefront-in-your-language/).

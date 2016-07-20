@@ -5,6 +5,7 @@
 * **Fix** - Additional menu displayed on handheld when a menu isn't assigned to the 'primary' location.
 * **Fix** - Structured data sanitization.
 * **Tweak** - Product Bundles integration tweaks.
+* **Tweak** - Updated all docs links to point to docs.woocommerce.com.
 * **Dev** - Made `storefront_primary_navigation_wrapper()` and `storefront_primary_navigation_wrapper_close()` pluggable.
 
 ### *2016.07.05* - 2.0.5

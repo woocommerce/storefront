@@ -53,9 +53,9 @@ global $storefront_version;
 			<div class="col-2 docs">
 				<h4><?php esc_html_e( 'Featured Docs', 'storefront' ); ?></h4>
 				<ul>
-					<li><a href="http://docs.woothemes.com/document/installation-configuration/"><?php esc_html_e( 'Installation &amp; configuration', 'storefront' ); ?></a></li>
-					<li><a href="http://docs.woothemes.com/document/storefront-faq/"><?php esc_html_e( 'FAQ', 'storefront' ); ?></a></li>
-					<li><a href="http://docs.woothemes.com/document/customizer-settings/"><?php esc_html_e( 'Customizer settings', 'storefront' ); ?></a></li>
+					<li><a href="http://docs.woocommerce.com/document/installation-configuration/"><?php esc_html_e( 'Installation &amp; configuration', 'storefront' ); ?></a></li>
+					<li><a href="http://docs.woocommerce.com/document/storefront-faq/"><?php esc_html_e( 'FAQ', 'storefront' ); ?></a></li>
+					<li><a href="http://docs.woocommerce.com/document/customizer-settings/"><?php esc_html_e( 'Customizer settings', 'storefront' ); ?></a></li>
 				</ul>
 			</div>
 		</div>
