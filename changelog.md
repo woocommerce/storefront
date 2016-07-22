@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.0.6
+### *2016.07.22* - 2.0.6
 * **Fix** - Added missing laser card icon.
 * **Fix** - Additional menu displayed on handheld when a menu isn't assigned to the 'primary' location.
 * **Fix** - Structured data sanitization.
