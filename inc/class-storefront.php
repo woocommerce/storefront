@@ -140,10 +140,10 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'name'          => __( 'Below Header', 'storefront' ),
 				'id'            => 'header-1',
 				'description'   => 'Widgets added to this region will appear beneath the header and above the main content.',
-				'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h3 class="widget-title">',
-				'after_title'   => '</h3>',
+				'before_widget' => '<div id="%1$s" class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<div class="widget-title">',
+				'after_title'   => '</div>',
 			) );
 
 			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
@@ -153,10 +153,10 @@ if ( ! class_exists( 'Storefront' ) ) :
 					'name' 				=> sprintf( __( 'Footer %d', 'storefront' ), $i ),
 					'id' 				=> sprintf( 'footer-%d', $i ),
 					'description' 		=> sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i ),
-					'before_widget' 	=> '<aside id="%1$s" class="widget %2$s">',
-					'after_widget' 		=> '</aside>',
-					'before_title' 		=> '<h3>',
-					'after_title' 		=> '</h3>',
+					'before_widget' 	=> '<div id="%1$s" class="widget %2$s">',
+					'after_widget' 		=> '</div>',
+					'before_title' 		=> '<div class="widget-title">',
+					'after_title' 		=> '</div>',
 					)
 				);
 			}

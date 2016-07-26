@@ -14,7 +14,7 @@
 
 	<?php do_action( 'storefront_before_footer' ); ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer">
 		<div class="col-full">
 
 			<?php

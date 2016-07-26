@@ -93,21 +93,21 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 		if ( $widget_columns > 0 ) : ?>
 
-			<section class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
+			<div class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
 
 				<?php
 				$i = 0;
 				while ( $i < $widget_columns ) : $i++;
 					if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
 
-						<section class="block footer-widget-<?php echo intval( $i ); ?>">
+						<div class="block footer-widget-<?php echo intval( $i ); ?>">
 							<?php dynamic_sidebar( 'footer-' . intval( $i ) ); ?>
-						</section>
+						</div>
 
 					<?php endif;
 				endwhile; ?>
 
-			</section><!-- /.footer-widgets  -->
+			</div><!-- /.footer-widgets  -->
 
 		<?php endif;
 	}
@@ -125,7 +125,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 		<div class="site-info">
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
-			<br /> <?php printf( esc_attr__( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://www.woothemes.com" alt="Premium WordPress Themes & Plugins by WooThemes" title="Premium WordPress Themes & Plugins by WooThemes" rel="designer">WooThemes</a>' ); ?>
+			<br /> <?php printf( esc_attr__( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://www.woothemes.com" title="Premium WordPress Themes & Plugins by WooThemes" rel="author">WooThemes</a>' ); ?>
 			<?php } ?>
 		</div><!-- .site-info -->
 		<?php
@@ -183,8 +183,8 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	 */
 	function storefront_primary_navigation() {
 		?>
-		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
-		<button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
+		<div id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
+		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -200,7 +200,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 					)
 			);
 			?>
-		</nav><!-- #site-navigation -->
+		</div><!-- #site-navigation -->
 		<?php
 	}
 }
@@ -215,7 +215,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	function storefront_secondary_navigation() {
 	    if ( has_nav_menu( 'secondary' ) ) {
 		    ?>
-		    <nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
+		    <div class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
 			    <?php
 				    wp_nav_menu(
 					    array(
@@ -224,7 +224,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 					    )
 				    );
 			    ?>
-		    </nav><!-- #site-navigation -->
+		    </div><!-- #site-navigation -->
 		    <?php
 		}
 	}
@@ -768,7 +768,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<section class="storefront-primary-navigation">';
+		echo '<div class="storefront-primary-navigation">';
 	}
 }
 
@@ -777,7 +777,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
 	 * The primary navigation wrapper close
 	 */
 	function storefront_primary_navigation_wrapper_close() {
-		echo '</section>';
+		echo '</div>';
 	}
 }
 
