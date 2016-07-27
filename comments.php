@@ -62,7 +62,7 @@ if ( post_password_required() ) {
 	<?php endif;
 
   $args = apply_filters( 'storefront_comment_form_args', array(
-    'title_reply_before' => '<span id="reply-title" class="h3 comment-reply-title">',
+    'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
     'title_reply_after'  => '</span>'
   ) );
 
