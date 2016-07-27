@@ -155,7 +155,7 @@ if ( ! class_exists( 'Storefront' ) ) :
         $widget_tags = array(
           'before_widget' => '<div id="%1$s" class="widget %2$s">',
           'after_widget'  => '</div>',
-          'before_title'  => '<span class="h3 widget-title">',
+          'before_title'  => '<span class="gamma widget-title">',
           'after_title'   => '</span>'
         );
 
