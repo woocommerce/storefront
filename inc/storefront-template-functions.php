@@ -183,7 +183,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	 */
 	function storefront_primary_navigation() {
 		?>
-		<div id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
+		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
 		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
@@ -200,7 +200,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 					)
 			);
 			?>
-		</div><!-- #site-navigation -->
+		</nav><!-- #site-navigation -->
 		<?php
 	}
 }
@@ -215,7 +215,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	function storefront_secondary_navigation() {
 	    if ( has_nav_menu( 'secondary' ) ) {
 		    ?>
-		    <div class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
+		    <nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
 			    <?php
 				    wp_nav_menu(
 					    array(
@@ -224,7 +224,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 					    )
 				    );
 			    ?>
-		    </div><!-- #site-navigation -->
+		    </nav><!-- #site-navigation -->
 		    <?php
 		}
 	}
