@@ -165,7 +165,7 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 			jetpack_the_site_logo();
 		} else { ?>
 			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<div class="beta site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
 				<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
 					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
 				<?php } ?>
