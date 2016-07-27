@@ -126,38 +126,38 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
 		 */
     public function widgets_init() {
-			$sidebar_args['header'] = array(
-				'name'          => __( 'Below Header', 'storefront' ),
-				'id'            => 'header-1',
-				'description'   => 'Widgets added to this region will appear beneath the header and above the main content.'
-			);
-      
+      $sidebar_args['header'] = array(
+        'name'          => __( 'Below Header', 'storefront' ),
+        'id'            => 'header-1',
+        'description'   => 'Widgets added to this region will appear beneath the header and above the main content.'
+      );
+
       $sidebar_args['sidebar'] = array(
-				'name'          => __( 'Sidebar', 'storefront' ),
-				'id'            => 'sidebar-1',
-				'description'   => ''
+        'name'          => __( 'Sidebar', 'storefront' ),
+        'id'            => 'sidebar-1',
+        'description'   => ''
       );
 
       $footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
-      
+
       for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
         $footer = sprintf( 'footer_%d', $i );
-        
+
         $sidebar_args[ $footer ] = array(
-			    'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
-				  'id'          => sprintf( 'footer-%d', $i ),
-				  'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
+          'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
+          'id'          => sprintf( 'footer-%d', $i ),
+          'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
         );
       }
 
       foreach ( $sidebar_args as $sidebar => $args ) {
         $widget_tags = array(
-				  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-				  'after_widget'  => '</div>',
-				  'before_title'  => '<span class="widget-title">',
-				  'after_title'   => '</span>'
+          'before_widget' => '<div id="%1$s" class="widget %2$s">',
+          'after_widget'  => '</div>',
+          'before_title'  => '<span class="widget-title">',
+          'after_title'   => '</span>'
         );
-        
+
         // Dynamically generated filter hooks. Allow changing widget wrapper and title tags. See the list below.
         // 
         // 'storefront_header_widget_tags'
@@ -175,7 +175,7 @@ if ( ! class_exists( 'Storefront' ) ) :
           register_sidebar( $args + $widget_tags );
         }
       }
-		}
+    }
 
 		/**
 		 * Enqueue scripts and styles.
