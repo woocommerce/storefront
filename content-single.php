@@ -19,6 +19,14 @@
 	 * @hooked storefront_init_structured_data - 40
 	 */
 	do_action( 'storefront_single_post' );
-	?>
+
+  /**
+    * Functions hooked in to storefront_single_post_after action
+    *
+    * @hooked storefront_post_nav         - 10
+    * @hooked storefront_display_comments - 20
+    */
+  do_action( 'storefront_single_post_after' );
+  ?>
 
 </article><!-- #post-## -->

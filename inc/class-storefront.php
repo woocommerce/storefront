@@ -26,14 +26,15 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',     array( $this, 'setup' ) );
-			add_action( 'widgets_init',          array( $this, 'widgets_init' ) );
-			add_action( 'wp_enqueue_scripts',    array( $this, 'scripts' ),       10 );
-			add_action( 'wp_enqueue_scripts',    array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
-			add_filter( 'body_class',            array( $this, 'body_classes' ) );
-			add_filter( 'wp_page_menu_args',     array( $this, 'page_menu_args' ) );
-			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
-			add_action( 'wp_footer',             array( $this, 'get_structured_data' ) );
+			add_action( 'after_setup_theme',          array( $this, 'setup' ) );
+			add_action( 'widgets_init',               array( $this, 'widgets_init' ) );
+			add_action( 'wp_enqueue_scripts',         array( $this, 'scripts' ),       10 );
+			add_action( 'wp_enqueue_scripts',         array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_filter( 'body_class',                 array( $this, 'body_classes' ) );
+			add_filter( 'wp_page_menu_args',          array( $this, 'page_menu_args' ) );
+      add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
+			add_action( 'enqueue_embed_scripts',      array( $this, 'print_embed_styles' ) );
+			add_action( 'wp_footer',                  array( $this, 'get_structured_data' ) );
 		}
 
 		/**
@@ -276,6 +277,18 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			return $classes;
 		}
+
+    /**
+     * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
+     */
+    public function navigation_markup_template () {
+      $template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="Post Navigation">';
+      $template .= '<span class="screen-reader-text">%2$s</span>';
+      $template .= '<div class="nav-links">%3$s</div>';
+      $template .= '</nav>';
+
+      return $template;
+    }
 
 		/**
 		 * Add styles for embeds
