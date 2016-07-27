@@ -9,7 +9,9 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php
+  <?php
+  do_action( 'storefront_single_post_before' );
+
 	/**
 	 * Functions hooked into storefront_single_post add_action
 	 *
