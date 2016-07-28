@@ -159,14 +159,20 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @return void
 	 */
 	function storefront_site_branding() {
-		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-			the_custom_logo();
+    if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+      $logo = get_custom_logo();
+
+      echo $logo = is_home() ? '<h1>' . $logo . '</h1>' : $logo;
 		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 			jetpack_the_site_logo();
 		} else { ?>
 			<div class="site-branding">
-				<div class="beta site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-				<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
+        <?php
+        $tag = is_home() ? 'h1' : 'div';
+    
+        echo '<' . $tag . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $tag .'>';
+        
+        if ( '' != get_bloginfo( 'description' ) ) { ?>
 					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
 				<?php } ?>
 			</div>
