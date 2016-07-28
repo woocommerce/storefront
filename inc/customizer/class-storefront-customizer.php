@@ -24,7 +24,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'customize_preview_init',          array( $this, 'customize_preview_js' ), 10 );
 			add_action( 'customize_register',              array( $this, 'customize_register' ), 10 );
 			add_filter( 'body_class',                      array( $this, 'layout_class' ) );
 			add_action( 'wp_enqueue_scripts',              array( $this, 'add_customizer_css' ), 130 );
@@ -130,7 +129,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public function customize_register( $wp_customize ) {
 			$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-			$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+			$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 
 			// Move background color setting alongside background image.
 			$wp_customize->get_control( 'background_color' )->section   = 'background_image';
@@ -144,6 +143,21 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->get_section( 'header_image' )->title         = __( 'Header', 'storefront' );
 			$wp_customize->get_section( 'header_image' )->priority      = 25;
 
+			// Selective refresh.
+			$wp_customize->selective_refresh->add_partial( 'blogname', array(
+				'selector'        => '.site-title a',
+				'render_callback' => function() {
+					bloginfo( 'name' );
+				},
+			) );
+
+			$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
+				'selector'        => '.site-description',
+				'render_callback' => function() {
+					bloginfo( 'description' );
+				},
+			) );
+
 			/**
 			 * Custom controls
 			 */
@@ -156,7 +170,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			/**
 			 * Add the typography section
-		     */
+			 */
 			$wp_customize->add_section( 'storefront_typography' , array(
 				'title'      			=> __( 'Typography', 'storefront' ),
 				'priority'   			=> 45,
@@ -782,15 +796,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				wp_add_inline_style( 'storefront-style', get_theme_mod( 'storefront_styles' ) );
 				wp_add_inline_style( 'storefront-woocommerce-style', get_theme_mod( 'storefront_woocommerce_styles' ) );
 			}
-		}
-
-		/**
-		 * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
-		 *
-		 * @since  1.0.0
-		 */
-		public function customize_preview_js() {
-			wp_enqueue_script( 'storefront-customizer', get_template_directory_uri() . '/assets/js/customizer/customizer.min.js', array( 'customize-preview' ), '1.16', true );
 		}
 
 		/**
