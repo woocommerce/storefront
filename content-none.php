@@ -8,7 +8,7 @@
  */
 ?>
 
-<section class="no-results not-found">
+<div class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php _e( 'Nothing Found', 'storefront' ); ?></h1>
 	</header><!-- .page-header -->
@@ -30,4 +30,4 @@
 
 		<?php endif; ?>
 	</div><!-- .page-content -->
-</section><!-- .no-results -->
+</div><!-- .no-results -->
