@@ -496,7 +496,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 				'title'				=> __( 'Shop by Category', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-product-categories">';
+			echo '<section class="storefront-product-section storefront-product-categories" aria-label="Product Categories">';
 
 			do_action( 'storefront_homepage_before_product_categories' );
 
@@ -537,7 +537,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 				'title'				=> __( 'New In', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-recent-products">';
+			echo '<section class="storefront-product-section storefront-recent-products" aria-label="Recent Products">';
 
 			do_action( 'storefront_homepage_before_recent_products' );
 
@@ -578,7 +578,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'title'   => __( 'We Recommend', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-featured-products">';
+			echo '<section class="storefront-product-section storefront-featured-products" aria-label="Featured Products">';
 
 			do_action( 'storefront_homepage_before_featured_products' );
 
@@ -619,7 +619,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				'title'   => __( 'Fan Favorites', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-popular-products">';
+			echo '<section class="storefront-product-section storefront-popular-products" aria-label="Popular Products">';
 
 			do_action( 'storefront_homepage_before_popular_products' );
 
@@ -658,7 +658,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				'title'   => __( 'On Sale', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-on-sale-products">';
+			echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="On Sale Products">';
 
 			do_action( 'storefront_homepage_before_on_sale_products' );
 
@@ -694,7 +694,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 				'columns' => 4,
 				'title'	  => esc_attr__( 'Best Sellers', 'storefront' ),
 			) );
-			echo '<section class="storefront-product-section storefront-best-selling-products">';
+			echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="Best Selling Products">';
 			do_action( 'storefront_homepage_before_best_selling_products' );
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 			do_action( 'storefront_homepage_after_best_selling_products_title' );
