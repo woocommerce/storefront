@@ -1,5 +1,10 @@
 # Storefront Changelog
 
+### *2016.07.26* - 2.0.7
+* **Fix** - Compatibility with PHP 5.2.
+* **Fix** - Further structured data sanitization.
+* **Dev** - Added .editorconfig.
+
 ### *2016.07.22* - 2.0.6
 * **Fix** - Added missing laser card icon.
 * **Fix** - Additional menu displayed on handheld when a menu isn't assigned to the 'primary' location.

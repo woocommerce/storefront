@@ -6,20 +6,15 @@
  * @since    2.0.0
  * @package  storefront
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 if ( ! class_exists( 'Storefront' ) ) :
-
 	/**
 	 * The main Storefront class
 	 */
 	class Storefront {
-
 		private static $structured_data;
-
 		/**
 		 * Setup class.
 		 *
@@ -35,7 +30,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
 			add_action( 'wp_footer',             array( $this, 'get_structured_data' ) );
 		}
-
 		/**
 		 * Sets up theme defaults and registers support for various WordPress features.
 		 *
@@ -49,28 +43,22 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 *
 			 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
 			 */
-
 			// Loads wp-content/languages/themes/storefront-it_IT.mo.
 			load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes/' );
-
 			// Loads wp-content/themes/child-theme-name/languages/it_IT.mo.
 			load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
-
 			// Loads wp-content/themes/storefront/languages/it_IT.mo.
 			load_theme_textdomain( 'storefront', get_template_directory() . '/languages' );
-
 			/**
 			 * Add default posts and comments RSS feed links to head.
 			 */
 			add_theme_support( 'automatic-feed-links' );
-
 			/*
 			 * Enable support for Post Thumbnails on posts and pages.
 			 *
 			 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 			 */
 			add_theme_support( 'post-thumbnails' );
-
 			/**
 			 * Enable support for site logo
 			 */
@@ -79,14 +67,12 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'width'       => 470,
 				'flex-width'  => true,
 			) );
-
 			// This theme uses wp_nav_menu() in two locations.
 			register_nav_menus( array(
 				'primary'		=> __( 'Primary Menu', 'storefront' ),
 				'secondary'		=> __( 'Secondary Menu', 'storefront' ),
 				'handheld'		=> __( 'Handheld Menu', 'storefront' ),
 			) );
-
 			/*
 			 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
 			 * to output valid HTML5.
@@ -99,27 +85,22 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'caption',
 				'widgets',
 			) );
-
 			// Setup the WordPress core custom background feature.
 			add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
 				'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
 				'default-image' => '',
 			) ) );
-
 			/**
 			 *  Add support for the Site Logo plugin and the site logo functionality in JetPack
 			 *  https://github.com/automattic/site-logo
 			 *  http://jetpack.me/
 			 */
 			add_theme_support( 'site-logo', array( 'size' => 'full' ) );
-
 			// Declare WooCommerce support.
 			add_theme_support( 'woocommerce' );
-
 			// Declare support for title theme feature.
 			add_theme_support( 'title-tag' );
 		}
-
 		/**
 		 * Register widget area.
 		 *
@@ -135,7 +116,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
 			) );
-
 			register_sidebar( array(
 				'name'          => __( 'Below Header', 'storefront' ),
 				'id'            => 'header-1',
@@ -145,9 +125,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'before_title'  => '<h3 class="widget-title">',
 				'after_title'   => '</h3>',
 			) );
-
 			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
-
 			for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
 				register_sidebar( array(
 					'name' 				=> sprintf( __( 'Footer %d', 'storefront' ), $i ),
@@ -161,7 +139,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 				);
 			}
 		}
-
 		/**
 		 * Enqueue scripts and styles.
 		 *
@@ -169,40 +146,32 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function scripts() {
 			global $storefront_version;
-
 			/**
 			 * Styles
 			 */
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
-
 			/**
 			 * Fonts
 			 */
 			$google_fonts = apply_filters( 'storefront_google_font_families', array(
 				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,700,900',
 			) );
-
 			$query_args = array(
 				'family' => implode( '|', $google_fonts ),
 				'subset' => urlencode( 'latin,latin-ext' ),
 			);
-
 			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-
 			wp_enqueue_style( 'storefront-fonts', $fonts_url, array(), null );
-
 			/**
 			 * Scripts
 			 */
 			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20120206', true );
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
-
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
 			}
 		}
-
 		/**
 		 * Enqueue child theme stylesheet.
 		 * A separate function is required as the child theme css needs to be enqueued _after_ the parent theme
@@ -215,7 +184,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 				wp_enqueue_style( 'storefront-child-style', get_stylesheet_uri(), '' );
 			}
 		}
-
 		/**
 		 * Get our wp_nav_menu() fallback, wp_page_menu(), to show a home link.
 		 *
@@ -226,7 +194,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			$args['show_home'] = true;
 			return $args;
 		}
-
 		/**
 		 * Adds custom classes to the array of body classes.
 		 *
@@ -238,30 +205,24 @@ if ( ! class_exists( 'Storefront' ) ) :
 			if ( is_multi_author() ) {
 				$classes[] = 'group-blog';
 			}
-
 			if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 				$classes[]	= 'no-wc-breadcrumb';
 			}
-
 			/**
 			 * What is this?!
 			 * Take the blue pill, close this file and forget you saw the following code.
 			 * Or take the red pill, filter storefront_make_me_cute and see how deep the rabbit hole goes...
 			 */
 			$cute = apply_filters( 'storefront_make_me_cute', false );
-
 			if ( true === $cute ) {
 				$classes[] = 'storefront-cute';
 			}
-
 			// If our main sidebar doesn't contain widgets, adjust the layout to be full-width.
 			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				$classes[] = 'storefront-full-width-content';
 			}
-
 			return $classes;
 		}
-
 		/**
 		 * Add styles for embeds
 		 */
@@ -279,17 +240,14 @@ if ( ! class_exists( 'Storefront' ) ) :
 					-webkit-font-smoothing: antialiased;
 					background-color: <?php echo storefront_adjust_color_brightness( $background_color, -7 ); ?> !important;
 				}
-
 				.wp-embed .wp-embed-featured-image {
 					margin-bottom: 2.618em;
 				}
-
 				.wp-embed .wp-embed-featured-image img,
 				.wp-embed .wp-embed-featured-image.square {
 					min-width: 100%;
 					margin-bottom: .618em;
 				}
-
 				a.wc-embed-button {
 					padding: .857em 1.387em !important;
 					font-weight: 600;
@@ -301,14 +259,12 @@ if ( ! class_exists( 'Storefront' ) ) :
 					box-shadow:
 						inset 0 -1px 0 rgba(#000,.3);
 				}
-
 				a.wc-embed-button + a.wc-embed-button {
 					background-color: #60646c;
 				}
 			</style>
 			<?php
 		}
-
 		/**
 		 * Check if the passed $json variable is an array and store it into the property...
 		 */
@@ -316,10 +272,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			if ( ! is_array( $json ) ) {
 				return;
 			}
-
 			self::$structured_data[] = $json;
 		}
-
 		/**
 		 * If self::$structured_data is set, wrap and echo it...
 		 * Hooked into the `wp_footer` action.
@@ -328,21 +282,33 @@ if ( ! class_exists( 'Storefront' ) ) :
 			if ( ! self::$structured_data ) {
 				return;
 			}
-
 			$structured_data['@context'] = 'http://schema.org/';
-
 			if ( count( self::$structured_data ) > 1 ) {
 				$structured_data['@graph'] = self::$structured_data;
 			} else {
 				$structured_data = $structured_data + self::$structured_data[0];
 			}
-      array_walk_recursive( $structured_data, function ( &$value ) {
-        $value = sanitize_text_field( $value );
-      } );
-
+			$structured_data = $this->sanitize_structured_data( $structured_data );
 			echo '<script type="application/ld+json">' . wp_json_encode( $structured_data ) . '</script>';
+		}
+		/**
+		 * Sanitize structured data.
+		 *
+		 * @param  array $data
+		 * @return array
+		 */
+		public function sanitize_structured_data( $data ) {
+			$sanitized = array();
+			foreach ( $data as $key => $value ) {
+				if ( is_array( $value ) ) {
+					$sanitized_value = $this->sanitize_structured_data( $value );
+				} else {
+					$sanitized_value = sanitize_text_field( $value );
+				}
+				$sanitized[ sanitize_text_field( $key ) ] = $sanitized_value;
+			}
+			return $sanitized;
 		}
 	}
 endif;
-
 return new Storefront();

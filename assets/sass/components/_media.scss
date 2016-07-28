@@ -42,7 +42,7 @@ img {
  * Galleries
  */
 .gallery {
-	@extend %clearfix;
+	@include clearfix;
 	margin-bottom: $vspacing;
 
 	.gallery-item {
