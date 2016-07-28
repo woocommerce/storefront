@@ -69,17 +69,17 @@ add_action( 'homepage', 'storefront_best_selling_products', 70 );
  * @see  storefront_post_nav()
  * @see  storefront_display_comments()
  */
-add_action( 'storefront_loop_post',         'storefront_post_header',          10 );
-add_action( 'storefront_loop_post',         'storefront_post_meta',            20 );
-add_action( 'storefront_loop_post',         'storefront_post_content',         30 );
-add_action( 'storefront_loop_post',         'storefront_init_structured_data', 40 );
-add_action( 'storefront_loop_after',        'storefront_paging_nav',           10 );
-add_action( 'storefront_single_post',       'storefront_post_header',          10 );
-add_action( 'storefront_single_post',       'storefront_post_meta',            20 );
-add_action( 'storefront_single_post',       'storefront_post_content',         30 );
-add_action( 'storefront_single_post',       'storefront_init_structured_data', 40 );
-add_action( 'storefront_single_post_after', 'storefront_post_nav',             10 );
-add_action( 'storefront_single_post_after', 'storefront_display_comments',     20 );
+add_action( 'storefront_loop_post',          'storefront_post_header',          10 );
+add_action( 'storefront_loop_post',          'storefront_post_meta',            20 );
+add_action( 'storefront_loop_post',          'storefront_post_content',         30 );
+add_action( 'storefront_loop_post',          'storefront_init_structured_data', 40 );
+add_action( 'storefront_loop_after',         'storefront_paging_nav',           10 );
+add_action( 'storefront_single_post',        'storefront_post_header',          10 );
+add_action( 'storefront_single_post',        'storefront_post_meta',            20 );
+add_action( 'storefront_single_post',        'storefront_post_content',         30 );
+add_action( 'storefront_single_post',        'storefront_init_structured_data', 40 );
+add_action( 'storefront_single_post_bottom', 'storefront_post_nav',             10 );
+add_action( 'storefront_single_post_bottom', 'storefront_display_comments',     20 );
 
 /**
  * Pages
