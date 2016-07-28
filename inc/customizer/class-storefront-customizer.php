@@ -67,14 +67,28 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * Adds a value to each Storefront setting if one isn't already present.
 		 *
 		 * @uses get_storefront_default_setting_values()
-		 * @return void
 		 */
 		public function default_theme_mod_values() {
-			foreach ( Storefront_Customizer::get_storefront_default_setting_values() as $mod => $val ) {
-				add_filter( 'theme_mod_' . $mod, function( $setting ) use ( $val ) {
-					return $setting ? $setting : $val;
-				}, 10 );
+			foreach ( self::get_storefront_default_setting_values() as $mod => $val ) {
+				add_filter( 'theme_mod_' . $mod, array( $this, 'get_theme_mod_value' ), 10 );
 			}
+		}
+
+		/**
+		 * Get theme mod value.
+		 *
+		 * @param string $value
+		 * @return string
+		 */
+		public function get_theme_mod_value( $value ) {
+			if ( $value ) {
+				return $value;
+			}
+
+			$key    = substr( current_filter(), 10 );
+			$values = self::get_storefront_default_setting_values();
+
+			return isset( $values[ $key ] ) ? $values[ $key ] : $value;
 		}
 
 		/**
@@ -83,10 +97,9 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 *
 		 * @param  array $wp_customize the Customizer object.
 		 * @uses   get_storefront_default_setting_values()
-		 * @return void
 		 */
 		public function edit_default_customizer_settings( $wp_customize ) {
-			foreach ( Storefront_Customizer::get_storefront_default_setting_values() as $mod => $val ) {
+			foreach ( self::get_storefront_default_setting_values() as $mod => $val ) {
 				$wp_customize->get_setting( $mod )->default = $val;
 			}
 		}
