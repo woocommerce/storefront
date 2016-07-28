@@ -336,11 +336,32 @@ if ( ! class_exists( 'Storefront' ) ) :
 			} else {
 				$structured_data = $structured_data + self::$structured_data[0];
 			}
-      array_walk_recursive( $structured_data, function ( &$value ) {
-        $value = sanitize_text_field( $value );
-      } );
+
+			$structured_data = $this->sanitize_structured_data( $structured_data );
 
 			echo '<script type="application/ld+json">' . wp_json_encode( $structured_data ) . '</script>';
+		}
+
+		/**
+		 * Sanitize structured data.
+		 *
+		 * @param  array $data
+		 * @return array
+		 */
+		public function sanitize_structured_data( $data ) {
+			$sanitized = array();
+
+			foreach ( $data as $key => $value ) {
+				if ( is_array( $value ) ) {
+					$sanitized_value = $this->sanitize_structured_data( $value );
+				} else {
+					$sanitized_value = sanitize_text_field( $value );
+				}
+
+				$sanitized[ sanitize_text_field( $key ) ] = $sanitized_value;
+			}
+
+			return $sanitized;
 		}
 	}
 endif;
