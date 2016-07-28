@@ -158,15 +158,16 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_site_branding() {
-    if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-      $logo = get_custom_logo();
+	function storefront_site_branding() { ?>
+    <div class="site-branding">
+      <?php
+      if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+        $logo = get_custom_logo();
 
-      echo $logo = is_home() ? '<h1>' . $logo . '</h1>' : $logo;
-		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
-			jetpack_the_site_logo();
-		} else { ?>
-			<div class="site-branding">
+        echo $logo = is_home() ? '<h1>' . $logo . '</h1>' : $logo;
+		  } elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+			  jetpack_the_site_logo();
+		  } else { ?>
         <?php
         $tag = is_home() ? 'h1' : 'div';
     
@@ -174,9 +175,11 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
         
         if ( '' != get_bloginfo( 'description' ) ) { ?>
 					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-				<?php } ?>
-			</div>
-		<?php }
+          <?php
+        }
+      } ?>
+    </div>
+    <?php
 	}
 }
 
