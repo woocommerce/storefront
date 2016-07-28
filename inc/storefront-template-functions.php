@@ -308,7 +308,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 				storefront_posted_on();
 			}
 
-			the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
 		?>
 		</header><!-- .entry-header -->
