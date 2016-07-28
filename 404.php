@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<main id="main" class="site-main" role="main">
 
-			<section class="error-404 not-found">
+			<div class="error-404 not-found">
 
 				<div class="page-content">
 
@@ -22,44 +22,52 @@ get_header(); ?>
 					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'storefront' ); ?></p>
 
 					<?php
-					if ( is_woocommerce_activated() ) {
-						the_widget( 'WC_Widget_Product_Search' );
-					} else {
-						get_search_form();
-					}
+          echo '<section aria-label="Search">';
+
+					  if ( is_woocommerce_activated() ) {
+						  the_widget( 'WC_Widget_Product_Search' );
+					  } else {
+						  get_search_form();
+					  }
+
+          echo '</section>';
 
 					if ( is_woocommerce_activated() ) {
 
 						echo '<div class="fourohfour-columns-2">';
 
-							echo '<div class="col-1">';
+							echo '<section class="col-1" aria-label="Promoted Products">';
 
 								storefront_promoted_products();
 
-							echo '</div>';
+							echo '</section>';
 
-							echo '<div class="col-2">';
+							echo '<nav class="col-2" aria-label="Product Categories">';
 
 							echo '<h2>' . esc_html__( 'Product Categories', 'storefront' ) . '</h2>';
 
 							the_widget( 'WC_Widget_Product_Categories', array(
 																			'count'		=> 1,
 							) );
-							echo '</div>';
+							echo '</nav>';
 
-						echo '</div>';
+            echo '</div>';
 
-						echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
+            echo '<section aria-label="Popular Products" >';
 
-						echo storefront_do_shortcode( 'best_selling_products', array(
-																			'per_page' 	=> 4,
-																			'columns'	=> 4,
-						) );
+              echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
+
+						  echo storefront_do_shortcode( 'best_selling_products', array(
+							  'per_page' 	=> 4,
+								'columns'	=> 4,
+              ) );
+
+            echo '</section>';
 					}
 					?>
 
 				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+			</div><!-- .error-404 -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
