@@ -9,8 +9,8 @@
 
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-  <?php
-  do_action( 'storefront_single_post_top' );
+	<?php
+	do_action( 'storefront_single_post_top' );
 
 	/**
 	 * Functions hooked into storefront_single_post add_action
@@ -22,13 +22,13 @@
 	 */
 	do_action( 'storefront_single_post' );
 
-  /**
-    * Functions hooked in to storefront_single_post_after action
-    *
-    * @hooked storefront_post_nav         - 10
-    * @hooked storefront_display_comments - 20
-    */
-  do_action( 'storefront_single_post_bottom' );
-  ?>
+	/**
+	 * Functions hooked in to storefront_single_post_after action
+	 *
+	 * @hooked storefront_post_nav         - 10
+	 * @hooked storefront_display_comments - 20
+	 */
+	do_action( 'storefront_single_post_bottom' );
+	?>
 
 </div><!-- #post-## -->

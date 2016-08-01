@@ -32,7 +32,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_action( 'wp_enqueue_scripts',         array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
 			add_filter( 'body_class',                 array( $this, 'body_classes' ) );
 			add_filter( 'wp_page_menu_args',          array( $this, 'page_menu_args' ) );
-      add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
+			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 			add_action( 'enqueue_embed_scripts',      array( $this, 'print_embed_styles' ) );
 			add_action( 'wp_footer',                  array( $this, 'get_structured_data' ) );
 		}
@@ -83,9 +83,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// This theme uses wp_nav_menu() in two locations.
 			register_nav_menus( array(
-				'primary'		=> __( 'Primary Menu', 'storefront' ),
-				'secondary'		=> __( 'Secondary Menu', 'storefront' ),
-				'handheld'		=> __( 'Handheld Menu', 'storefront' ),
+				'primary'   => __( 'Primary Menu', 'storefront' ),
+				'secondary' => __( 'Secondary Menu', 'storefront' ),
+				'handheld'  => __( 'Handheld Menu', 'storefront' ),
 			) );
 
 			/*
@@ -126,57 +126,58 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 *
 		 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
 		 */
-    public function widgets_init() {
-      $sidebar_args['header'] = array(
-        'name'          => __( 'Below Header', 'storefront' ),
-        'id'            => 'header-1',
-        'description'   => 'Widgets added to this region will appear beneath the header and above the main content.'
-      );
+		public function widgets_init() {
+			$sidebar_args['header'] = array(
+				'name'        => __( 'Below Header', 'storefront' ),
+				'id'          => 'header-1',
+				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
+			);
 
-      $sidebar_args['sidebar'] = array(
-        'name'          => __( 'Sidebar', 'storefront' ),
-        'id'            => 'sidebar-1',
-        'description'   => ''
-      );
+			$sidebar_args['sidebar'] = array(
+				'name'          => __( 'Sidebar', 'storefront' ),
+				'id'            => 'sidebar-1',
+				'description'   => ''
+			);
 
-      $footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
+			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
 
-      for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
-        $footer = sprintf( 'footer_%d', $i );
+			for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
+				$footer = sprintf( 'footer_%d', $i );
 
-        $sidebar_args[ $footer ] = array(
-          'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
-          'id'          => sprintf( 'footer-%d', $i ),
-          'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
-        );
-      }
+				$sidebar_args[ $footer ] = array(
+					'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
+					'id'          => sprintf( 'footer-%d', $i ),
+					'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
+				);
+			}
 
-      foreach ( $sidebar_args as $sidebar => $args ) {
-        $widget_tags = array(
-          'before_widget' => '<div id="%1$s" class="widget %2$s">',
-          'after_widget'  => '</div>',
-          'before_title'  => '<span class="gamma widget-title">',
-          'after_title'   => '</span>'
-        );
+			foreach ( $sidebar_args as $sidebar => $args ) {
+				$widget_tags = array(
+					'before_widget' => '<div id="%1$s" class="widget %2$s">',
+					'after_widget'  => '</div>',
+					'before_title'  => '<span class="gamma widget-title">',
+					'after_title'   => '</span>'
+				);
 
-        // Dynamically generated filter hooks. Allow changing widget wrapper and title tags. See the list below.
-        // 
-        // 'storefront_header_widget_tags'
-        // 'storefront_sidebar_widget_tags'
-        //
-        // 'storefront_footer_1_widget_tags'
-        // 'storefront_footer_2_widget_tags'
-        // 'storefront_footer_3_widget_tags'
-        // 'storefront_footer_4_widget_tags'
-        // ...and so on if you did add more footer widget regions via `storefront_footer_widget_regions` filter hook.
-        $filter_hook = sprintf( 'storefront_%s_widget_tags', $sidebar );
-        $widget_tags = apply_filters( $filter_hook, $widget_tags );
+				/**
+				 * Dynamically generated filter hooks. Allow changing widget wrapper and title tags. See the list below.
+				 *
+				 * 'storefront_header_widget_tags'
+				 * 'storefront_sidebar_widget_tags'
+				 *
+				 * storefront_footer_1_widget_tags
+				 * storefront_footer_2_widget_tags
+				 * storefront_footer_3_widget_tags
+				 * storefront_footer_4_widget_tags
+				 */
+				$filter_hook = sprintf( 'storefront_%s_widget_tags', $sidebar );
+				$widget_tags = apply_filters( $filter_hook, $widget_tags );
 
-        if ( is_array( $widget_tags ) ) {
-          register_sidebar( $args + $widget_tags );
-        }
-      }
-    }
+				if ( is_array( $widget_tags ) ) {
+					register_sidebar( $args + $widget_tags );
+				}
+			}
+		}
 
 		/**
 		 * Enqueue scripts and styles.
@@ -278,17 +279,17 @@ if ( ! class_exists( 'Storefront' ) ) :
 			return $classes;
 		}
 
-    /**
-     * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
-     */
-    public function navigation_markup_template() {
-      $template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="Post Navigation">';
-      $template .= '<span class="screen-reader-text">%2$s</span>';
-      $template .= '<div class="nav-links">%3$s</div>';
-      $template .= '</nav>';
+		/**
+		 * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
+		 */
+		public function navigation_markup_template() {
+			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="Post Navigation">';
+			$template .= '<span class="screen-reader-text">%2$s</span>';
+			$template .= '<div class="nav-links">%3$s</div>';
+			$template .= '</nav>';
 
-      return apply_filters( 'storefront_navigation_markup_template', $template );
-    }
+			return apply_filters( 'storefront_navigation_markup_template', $template );
+		}
 
 		/**
 		 * Add styles for embeds

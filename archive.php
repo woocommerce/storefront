@@ -5,7 +5,6 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package storefront
- *
  */
 
 get_header(); ?>

@@ -22,15 +22,15 @@ get_header(); ?>
 					<p><?php esc_html_e( 'Nothing was found at this location. Try searching, or check out the links below.', 'storefront' ); ?></p>
 
 					<?php
-          echo '<section aria-label="Search">';
+					echo '<section aria-label="Search">';
 
-					  if ( is_woocommerce_activated() ) {
-						  the_widget( 'WC_Widget_Product_Search' );
-					  } else {
-						  get_search_form();
-					  }
+					if ( is_woocommerce_activated() ) {
+						the_widget( 'WC_Widget_Product_Search' );
+					} else {
+						get_search_form();
+					}
 
-          echo '</section>';
+					echo '</section>';
 
 					if ( is_woocommerce_activated() ) {
 
@@ -51,18 +51,18 @@ get_header(); ?>
 							) );
 							echo '</nav>';
 
-            echo '</div>';
+							echo '</div>';
 
-            echo '<section aria-label="Popular Products" >';
+							echo '<section aria-label="Popular Products" >';
 
-              echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
+							echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
 
-						  echo storefront_do_shortcode( 'best_selling_products', array(
-							  'per_page' 	=> 4,
-								'columns'	=> 4,
-              ) );
+							echo storefront_do_shortcode( 'best_selling_products', array(
+								'per_page'  => 4,
+								'columns'   => 4,
+							) );
 
-            echo '</section>';
+							echo '</section>';
 					}
 					?>
 

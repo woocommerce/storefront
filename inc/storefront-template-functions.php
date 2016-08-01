@@ -158,28 +158,28 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_site_branding() { ?>
-    <div class="site-branding">
-      <?php
-      if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-        $logo = get_custom_logo();
+	function storefront_site_branding() {
+		?>
+		<div class="site-branding">
+			<?php
+			if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+				$logo = get_custom_logo();
 
-        echo $logo = is_home() ? '<h1>' . $logo . '</h1>' : $logo;
-		  } elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
-			  jetpack_the_site_logo();
-		  } else { ?>
-        <?php
-        $tag = is_home() ? 'h1' : 'div';
-    
-        echo '<' . $tag . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $tag .'>';
-        
-        if ( '' != get_bloginfo( 'description' ) ) { ?>
+				echo $logo = is_front_page() ? '<h1>' . $logo . '</h1>' : $logo;
+			} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+				jetpack_the_site_logo();
+			} else {
+				$tag = is_front_page() ? 'h1' : 'div';
+
+				echo '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
+
+				if ( '' != get_bloginfo( 'description' ) ) { ?>
 					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-          <?php
-        }
-      } ?>
-    </div>
-    <?php
+					<?php
+				}
+			} ?>
+		</div>
+		<?php
 	}
 }
 

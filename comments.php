@@ -24,18 +24,21 @@ if ( post_password_required() ) {
 	if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'storefront' ),
-				number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				printf( // WPCS: XSS OK.
+					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'storefront' ) ),
+					number_format_i18n( get_comments_number() ),
+					'<span>' . get_the_title() . '</span>'
+				);
 			?>
 		</h2>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
 		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="Comment Navigation Above">
-			<span class="screen-reader-text"><?php _e( 'Comment navigation', 'storefront' ); ?></span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'storefront' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
+		<?php endif; // Check for comment navigation. ?>
 
 		<ol class="comment-list">
 			<?php
@@ -47,24 +50,24 @@ if ( post_password_required() ) {
 			?>
 		</ol><!-- .comment-list -->
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
 		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="Comment Navigation Below">
-			<span class="screen-reader-text"><?php _e( 'Comment navigation', 'storefront' ); ?></span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'storefront' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation
+		<?php endif; // Check for comment navigation.
 
-	endif; // have_comments()
+	endif;
 
 	if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'storefront' ); ?></p>
+		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'storefront' ); ?></p>
 	<?php endif;
 
-  $args = apply_filters( 'storefront_comment_form_args', array(
-    'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
-    'title_reply_after'  => '</span>'
-  ) );
+	$args = apply_filters( 'storefront_comment_form_args', array(
+		'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
+		'title_reply_after'  => '</span>',
+	) );
 
 	comment_form( $args ); ?>
 
