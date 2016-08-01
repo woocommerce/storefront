@@ -896,6 +896,8 @@ table.cart {
 	.product-thumbnail {
 		img {
 			margin: 0 auto;
+			max-width: 3.631em;
+			height: auto;
 		}
 
 		&:before {
@@ -2250,12 +2252,6 @@ dl.variation {
 		table.cart {
 			.product-thumbnail {
 				display: table-cell;
-
-				img {
-					max-width: 3.631em;
-					height: auto;
-					border: .327em solid #fff;
-				}
 			}
 
 			thead {
