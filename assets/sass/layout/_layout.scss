@@ -18,10 +18,7 @@
 		padding-top: 2.618em;
 		padding-bottom: 0;
 
-		.site-branding,
-		.site-logo-anchor,
-		.site-logo-link,
-		.custom-logo-link {
+		.site-branding {
 			display: block;
 			@include span(3 of 12);
 			clear: both;
