@@ -1,5 +1,9 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.1.0
+* **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
+* **New** - Selective refresh on site title / tag line.
+
 ### *2016.07.26* - 2.0.7
 * **Fix** - Compatibility with PHP 5.2.
 * **Fix** - Further structured data sanitization.
