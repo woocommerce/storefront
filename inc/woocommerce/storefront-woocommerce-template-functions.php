@@ -273,7 +273,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar' ) ) {
 
 		$links = apply_filters( 'storefront_handheld_footer_bar_links', $links );
 		?>
-		<section class="storefront-handheld-footer-bar">
+		<div class="storefront-handheld-footer-bar">
 			<ul class="columns-<?php echo count( $links ); ?>">
 				<?php foreach ( $links as $key => $link ) : ?>
 					<li class="<?php echo esc_attr( $key ); ?>">
@@ -285,7 +285,7 @@ if ( ! function_exists( 'storefront_handheld_footer_bar' ) ) {
 					</li>
 				<?php endforeach; ?>
 			</ul>
-		</section>
+		</div>
 		<?php
 	}
 }

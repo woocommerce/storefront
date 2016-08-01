@@ -16,12 +16,6 @@ get_header(); ?>
 
 			get_template_part( 'content', 'single' );
 
-			/**
-			 * Functions hooked in to storefront_single_post_after action
-			 *
-			 * @hooked storefront_post_nav         - 10
-			 * @hooked storefront_display_comments - 20
-			 */
 			do_action( 'storefront_single_post_after' );
 
 		endwhile; // End of the loop. ?>

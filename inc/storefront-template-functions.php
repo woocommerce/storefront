@@ -50,7 +50,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			<?php endif; ?>
 
 			<a href="<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>" class="comment-date">
-				<?php echo '<time>' . get_comment_date() . '</time>'; ?>
+				<?php echo '<time datetime="' . get_comment_date( 'c' ) . '">' . get_comment_date() . '</time>'; ?>
 			</a>
 		</div>
 		<?php if ( 'div' != $args['style'] ) : ?>
@@ -93,21 +93,21 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 		if ( $widget_columns > 0 ) : ?>
 
-			<section class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
+			<div class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
 
 				<?php
 				$i = 0;
 				while ( $i < $widget_columns ) : $i++;
 					if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
 
-						<section class="block footer-widget-<?php echo intval( $i ); ?>">
+						<div class="block footer-widget-<?php echo intval( $i ); ?>">
 							<?php dynamic_sidebar( 'footer-' . intval( $i ) ); ?>
-						</section>
+						</div>
 
 					<?php endif;
 				endwhile; ?>
 
-			</section><!-- /.footer-widgets  -->
+			</div><!-- /.footer-widgets  -->
 
 		<?php endif;
 	}
@@ -125,7 +125,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 		<div class="site-info">
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
-			<br /> <?php printf( esc_attr__( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://www.woothemes.com" alt="Premium WordPress Themes & Plugins by WooThemes" title="Premium WordPress Themes & Plugins by WooThemes" rel="designer">WooThemes</a>' ); ?>
+			<br /> <?php printf( esc_attr__( '%1$s designed by %2$s.', 'storefront' ), 'Storefront', '<a href="http://www.woothemes.com" title="Premium WordPress Themes & Plugins by WooThemes" rel="author">WooThemes</a>' ); ?>
 			<?php } ?>
 		</div><!-- .site-info -->
 		<?php
@@ -158,19 +158,28 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_site_branding() {
-		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-			the_custom_logo();
-		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
-			jetpack_the_site_logo();
-		} else { ?>
-			<div class="site-branding">
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
+	function storefront_site_branding() { ?>
+    <div class="site-branding">
+      <?php
+      if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+        $logo = get_custom_logo();
+
+        echo $logo = is_home() ? '<h1>' . $logo . '</h1>' : $logo;
+		  } elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+			  jetpack_the_site_logo();
+		  } else { ?>
+        <?php
+        $tag = is_home() ? 'h1' : 'div';
+    
+        echo '<' . $tag . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . get_bloginfo( 'name' ) . '</a></' . $tag .'>';
+        
+        if ( '' != get_bloginfo( 'description' ) ) { ?>
 					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-				<?php } ?>
-			</div>
-		<?php }
+          <?php
+        }
+      } ?>
+    </div>
+    <?php
 	}
 }
 
@@ -184,7 +193,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	function storefront_primary_navigation() {
 		?>
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
-		<button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
+		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
 			<?php
 			wp_nav_menu(
 				array(
@@ -302,7 +311,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 				storefront_posted_on();
 			}
 
-			the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' );
+			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
 		?>
 		</header><!-- .entry-header -->
@@ -487,7 +496,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 				'title'				=> __( 'Shop by Category', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-product-categories">';
+			echo '<section class="storefront-product-section storefront-product-categories" aria-label="Product Categories">';
 
 			do_action( 'storefront_homepage_before_product_categories' );
 
@@ -528,7 +537,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 				'title'				=> __( 'New In', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-recent-products">';
+			echo '<section class="storefront-product-section storefront-recent-products" aria-label="Recent Products">';
 
 			do_action( 'storefront_homepage_before_recent_products' );
 
@@ -569,7 +578,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'title'   => __( 'We Recommend', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-featured-products">';
+			echo '<section class="storefront-product-section storefront-featured-products" aria-label="Featured Products">';
 
 			do_action( 'storefront_homepage_before_featured_products' );
 
@@ -610,7 +619,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				'title'   => __( 'Fan Favorites', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-popular-products">';
+			echo '<section class="storefront-product-section storefront-popular-products" aria-label="Popular Products">';
 
 			do_action( 'storefront_homepage_before_popular_products' );
 
@@ -649,7 +658,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				'title'   => __( 'On Sale', 'storefront' ),
 			) );
 
-			echo '<section class="storefront-product-section storefront-on-sale-products">';
+			echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="On Sale Products">';
 
 			do_action( 'storefront_homepage_before_on_sale_products' );
 
@@ -685,7 +694,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 				'columns' => 4,
 				'title'	  => esc_attr__( 'Best Sellers', 'storefront' ),
 			) );
-			echo '<section class="storefront-product-section storefront-best-selling-products">';
+			echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="Best Selling Products">';
 			do_action( 'storefront_homepage_before_best_selling_products' );
 			echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
 			do_action( 'storefront_homepage_after_best_selling_products_title' );
@@ -768,7 +777,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<section class="storefront-primary-navigation">';
+		echo '<div class="storefront-primary-navigation">';
 	}
 }
 
@@ -777,7 +786,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
 	 * The primary navigation wrapper close
 	 */
 	function storefront_primary_navigation_wrapper_close() {
-		echo '</section>';
+		echo '</div>';
 	}
 }
 

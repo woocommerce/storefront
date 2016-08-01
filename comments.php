@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<section id="comments" class="comments-area" aria-label="Post Comments">
 
 	<?php
 	if ( have_comments() ) : ?>
@@ -30,8 +30,8 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'storefront' ); ?></h1>
+		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="Comment Navigation Above">
+			<span class="screen-reader-text"><?php _e( 'Comment navigation', 'storefront' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
 		</nav><!-- #comment-nav-above -->
@@ -48,8 +48,8 @@ if ( post_password_required() ) {
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'storefront' ); ?></h1>
+		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="Comment Navigation Below">
+			<span class="screen-reader-text"><?php _e( 'Comment navigation', 'storefront' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
 		</nav><!-- #comment-nav-below -->
@@ -61,6 +61,11 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'storefront' ); ?></p>
 	<?php endif;
 
-	comment_form(); ?>
+  $args = apply_filters( 'storefront_comment_form_args', array(
+    'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
+    'title_reply_after'  => '</span>'
+  ) );
 
-</div><!-- #comments -->
+	comment_form( $args ); ?>
+
+</section><!-- #comments -->
