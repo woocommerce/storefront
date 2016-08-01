@@ -4,6 +4,7 @@
 * **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
 * **New** - Selective refresh on site title / tag line.
 * **Fix** - Product thumbnail size on cart page.
+* **Dev** - Restructured scss; removed components/typography and added main styles to `sass/base/_base.scss`. Layout styles then added to `sass/base/_layout.scss`.
 
 ### *2016.07.26* - 2.0.7
 * **Fix** - Compatibility with PHP 5.2.

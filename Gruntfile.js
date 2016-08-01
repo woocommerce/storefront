@@ -146,7 +146,6 @@ module.exports = function( grunt ) {
 					'assets/sass/jetpack/*.scss',
 					'assets/sass/base/*.scss',
 					'assets/sass/components/*.scss',
-					'assets/sass/layout/*.scss',
 					'assets/sass/utils/*.scss',
 					'assets/sass/vendors/*.scss'
 				],
