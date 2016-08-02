@@ -165,7 +165,7 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 			if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 				$logo = get_custom_logo();
 
-				echo $logo = is_front_page() ? '<h1>' . $logo . '</h1>' : $logo;
+				echo $logo = is_front_page() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
 			} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 				jetpack_the_site_logo();
 			} else {
