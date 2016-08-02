@@ -11,9 +11,10 @@
 @import '../../../node_modules/susy/sass/susy';
 @import '../../../assets/sass/vendors/font-awesome/variables';
 @import '../../../assets/sass/vendors/font-awesome/mixins';
+@import '../../../assets/sass/vendors/modular-scale';
 
 #wl-wrapper.wl-button-wrap {
-	padding: 1.618em 0 0 0;
+	padding: ms(3) 0 0 0;
 }
 
 .wl-add-link {
@@ -23,7 +24,7 @@
 	&:before {
 		@include fa-icon();
 		content: "\f004";
-		margin-right: .53em;
+		margin-right: ms(-3);
 	}
 }
 
@@ -35,7 +36,7 @@
 			float: none !important;
 
 			> a {
-				padding: 1em 1.387em;
+				padding: 1em ms(2);
 				border: 0 !important;
 				margin: 0 !important;
 				@include border-top-radius(0);
@@ -52,16 +53,16 @@
 
 	.wl-table {
 		td {
-			padding: .857em 1.387em !important;
+			padding: ms(-1) ms(2) !important;
 
 			&:first-child {
-				padding-left: 1.387em !important;
+				padding-left: ms(2) !important;
 			}
 		}
 
 		&.manage {
 			td {
-				padding: .53em !important;
+				padding: ms(-3) !important;
 			}
 		}
 	}
@@ -92,7 +93,7 @@
 	&:before {
 		@include fa-icon();
 		content: "\f067";
-		margin-right: .53em;
+		margin-right: ms(-3);
 	}
 }
 

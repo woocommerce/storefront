@@ -6,12 +6,13 @@
 @import 'bourbon';
 @import '../../sass/utils/variables';
 @import '../../sass/utils/mixins';
+@import '../../../assets/sass/vendors/modular-scale';
 
 // Subscription widget
 .jetpack_subscription_widget {
 	#subscribe-email {
 		input {
-			padding: .618em !important;
+			padding: ms(-2) !important;
 			width: 100% !important;
 		}
 	}

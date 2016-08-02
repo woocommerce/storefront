@@ -15,14 +15,14 @@
 	}
 
 	.site-header {
-		padding-top: 2.618em;
+		padding-top: ms(5);
 		padding-bottom: 0;
 
 		.site-branding {
 			display: block;
 			@include span(3 of 12);
 			clear: both;
-			margin-bottom: 2.618em;
+			margin-bottom: ms(5);
 
 			img {
 				height: auto;
@@ -68,7 +68,7 @@
 	.site-logo-anchor,
 	.site-logo-link,
 	.custom-logo-link {
-		margin-bottom: 2.244em;
+		margin-bottom: ms(4);
 	}
 
 	.site-header {
@@ -85,7 +85,7 @@
 				}
 
 				li {
-					margin: 0 0 0 .53em !important;
+					margin: 0 0 0 ms(-3) !important;
 					display: inline-block;
 				}
 			}
@@ -95,7 +95,7 @@
 	.col-full {
 		@include clearfix;
 		@include container($container-width);
-		padding: 0 2.618em;
+		padding: 0 ms(5);
 		box-sizing: content-box;
 	}
 
@@ -139,7 +139,7 @@
 
 	.content-area,
 	.widget-area {
-		margin-bottom: 2.618em;
+		margin-bottom: ms(5);
 	}
 
 	/**
@@ -157,7 +157,7 @@
 	 */
 	.footer-widgets {
 		@include clearfix;
-		padding-top: 4.236em;
+		padding-top: ms(7);
 		border-bottom: 3px solid rgba(0,0,0,0.05);
 
 		&.col-2 {
@@ -213,8 +213,8 @@
 		}
 
 		.comment-content {
-			padding-bottom: 3.631em;
-			margin-bottom: 3.631em;
+			padding-bottom: ms(6);
+			margin-bottom: ms(6);
 		}
 
 		.comment-content,
@@ -235,8 +235,8 @@
 		.comment-body {
 			#respond {
 				box-shadow: 0 6px 2em rgba(#000,.2);
-				margin-bottom: 2.618em;
-				margin-top: -1.618em;
+				margin-bottom: ms(5);
+				margin-top: -ms(3);
 			}
 		}
 
@@ -300,7 +300,7 @@
 	}
 
 	#respond {
-		padding: 2.618em;
+		padding: ms(5);
 
 		.comment-form-author,
 		.comment-form-email,
@@ -322,7 +322,7 @@
 	 */
 	.hentry {
 		.entry-header {
-			margin-bottom: 2.618em;
+			margin-bottom: ms(5);
 		}
 	}
 
@@ -331,7 +331,7 @@
 
 		.entry-meta {
 			@include span(2 of 9);
-			font-size: .857em;
+			font-size: ms(-1);
 		}
 
 		.entry-content {
@@ -459,7 +459,7 @@
 			> li {
 				// The first level menu item
 				> a {
-					padding: 1.618em 1em;
+					padding: ms(3) 1em;
 				}
 
 				&:first-child {
@@ -491,9 +491,9 @@
 
 				li {
 					a {
-						padding: .857em 1.387em;
+						padding: ms(-1) ms(2);
 						font-weight: 400;
-						font-size: .857em;
+						font-size: ms(-1);
 					}
 
 					&:last-child {
@@ -527,7 +527,7 @@
 		}
 
 		a {
-			padding: 0 1em 2.244em;
+			padding: 0 1em ms(4);
 		}
 	}
 
@@ -535,13 +535,13 @@
 	 * Secondary Navigation
 	 */
 	.secondary-navigation {
-		margin: 0 0 1.618em;
+		margin: 0 0 ms(3);
 		width: auto;
 		clear: none;
 		line-height: 1;
 
 		.menu {
-			font-size: .857em;
+			font-size: ms(-1);
 			width: auto;
 			float: right;
 
@@ -570,7 +570,7 @@
 
 			ul {
 				a {
-					padding: .326em .857em;
+					padding: .326em ms(-1);
 					background: rgba(#000,0.05);
 				}
 
@@ -583,12 +583,12 @@
 				}
 
 				ul {
-					margin-top: -.618em;
+					margin-top: -ms(-2);
 				}
 			}
 
 			a {
-				padding: 1.387em .857em;
+				padding: ms(2) ms(-1);
 				font-weight: 300;
 				color: lighten( $color_body, 20% );
 
@@ -602,16 +602,16 @@
 
 @include susy-media (max-width $container-width) {
 	.col-full {
-		margin-left: 2.618em;
-		margin-right: 2.618em;
+		margin-left: ms(5);
+		margin-right: ms(5);
 		padding: 0;
 	}
 }
 
 @include susy-media (max-width $handheld) {
 	.col-full {
-		margin-left: 1.387em;
-		margin-right: 1.387em;
+		margin-left: ms(2);
+		margin-right: ms(2);
 		padding: 0;
 	}
 }

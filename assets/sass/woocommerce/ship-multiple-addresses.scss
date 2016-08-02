@@ -11,6 +11,7 @@
 @import '../../../node_modules/susy/sass/susy';
 @import '../../../assets/sass/vendors/font-awesome/variables';
 @import '../../../assets/sass/vendors/font-awesome/mixins';
+@import '../../../assets/sass/vendors/modular-scale';
 
 .woocommerce-page {
 	.woocommerce-checkout-review-order-table {
@@ -20,20 +21,20 @@
 	}
 
 	#shipping_addresses {
-		padding-top: 1.618em;
+		padding-top: ms(3);
 	}
 
 	.ship_address,
 	.no_shipping_address {
 		float: none;
 		width: auto;
-		margin: 0 0 1.618em;
+		margin: 0 0 ms(3);
 		background-color: rgba(#000,.025);
 		border: 0;
 		padding: 1em;
 		line-height: inherit;
 		border-radius: 0;
-		font-size: .857em;
+		font-size: ms(-1);
 
 		dl {
 			margin-top: 0;
@@ -48,7 +49,7 @@
 		}
 
 		.note-form {
-			margin-bottom: 1.618em;
+			margin-bottom: ms(3);
 			padding-top: 1em;
 		}
 
@@ -57,7 +58,7 @@
 				&:after {
 					@include fa-icon();
 					content: "\f06b";
-					margin-left: .53em;
+					margin-left: ms(-3);
 				}
 			}
 		}
@@ -69,7 +70,7 @@
 			&:before {
 				@include fa-icon();
 				content: "\f044";
-				margin-right: .53em;
+				margin-right: ms(-3);
 			}
 		}
 	}
@@ -79,7 +80,7 @@
 		@include clearfix;
 
 		.address-block {
-			margin: 0 0 1.618em;
+			margin: 0 0 ms(3);
 			@include span(4.5 of 9);
 
 			&:nth-child(3),

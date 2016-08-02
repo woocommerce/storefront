@@ -7,6 +7,7 @@
  */
 @import '../../../assets/sass/utils/variables';
 @import '../../../node_modules/susy/sass/susy';
+@import '../../../assets/sass/vendors/modular-scale';
 
 .woocommerce,
 .woocommerce-page {
@@ -16,7 +17,7 @@
 
 		&.medium {
 			line-height: inherit;
-			padding: .618em;
+			padding: ms(-2);
 		}
 	}
 
@@ -26,7 +27,7 @@
 
 	.coupon-content {
 		&.small {
-			padding: .618em 1.387em;
+			padding: ms(-2) ms(2);
 		}
 
 		.coupon-expire,
@@ -36,7 +37,7 @@
 	}
 
 	#coupons_list {
-		margin-bottom: 1.618em;
+		margin-bottom: ms(3);
 	}
 }
 

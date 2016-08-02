@@ -10,6 +10,7 @@
 @import '../../../assets/sass/utils/mixins';
 @import '../../../assets/sass/vendors/font-awesome/variables';
 @import '../../../assets/sass/vendors/font-awesome/mixins';
+@import '../../../assets/sass/vendors/modular-scale';
 
 .variations-table {
 	margin: 0;
@@ -26,7 +27,7 @@
 	}
 
 	.swatch-wrapper {
-		padding: .618em;
+		padding: ms(-2);
 		border: 0;
 		background-color: transparent;
 		border: 1px solid rgba(#000,.1);
@@ -46,7 +47,7 @@
 
 		&.selected,
 		&:hover {
-			padding: .618em;
+			padding: ms(-2);
 			background-color: #fff;
 
 			img {
@@ -63,11 +64,11 @@
 
 a#variations_clear {
 	display: block;
-	margin: 1em 0 1.618em;
+	margin: 1em 0 ms(3);
 
 	&:before {
 		@include fa-icon();
 		content: "\f021";
-		margin-right: .53em;
+		margin-right: ms(-3);
 	}
 }

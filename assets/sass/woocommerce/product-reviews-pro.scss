@@ -9,6 +9,7 @@
 @import '../../../assets/sass/utils/variables';
 @import '../../../assets/sass/utils/mixins';
 @import '../../../node_modules/susy/sass/susy';
+@import '../../../assets/sass/vendors/modular-scale';
 
 .woocommerce,
 .woocommerce-page {
@@ -27,7 +28,7 @@
 			.product-rating-details {
 				table {
 					td {
-						padding: .202em .53em;
+						padding: .202em ms(-3);
 
 						&.rating-graph {
 							.bar {
@@ -58,13 +59,13 @@
 						float: right;
 
 						&.checkbox:before {
-							font-size: .857em;
+							font-size: ms(-1);
 						}
 					}
 
 					.star-label {
 						float: none;
-						margin-left: .618em;
+						margin-left: ms(-2);
 					}
 				}
 			}
@@ -84,7 +85,7 @@
 					padding-top: 0;
 
 					img.avatar {
-						width: 2.618em;
+						width: ms(5);
 						height: auto;
 						margin: 0;
 						float: right;
@@ -99,7 +100,7 @@
 
 						img,
 						iframe {
-							margin-bottom: 1.618em;
+							margin-bottom: ms(3);
 						}
 					}
 
@@ -121,7 +122,7 @@
 
 					ul.children {
 						li {
-							margin-bottom: 1.618em;
+							margin-bottom: ms(3);
 						}
 					}
 				}
@@ -129,8 +130,8 @@
 
 			.form-contribution_comment {
 				@include span(last 5 of 6);
-				margin-bottom: 3.631em;
-				padding-top: 1.618em;
+				margin-bottom: ms(6);
+				padding-top: ms(3);
 			}
 
 			ul.children + .form-contribution_comment {
@@ -141,8 +142,8 @@
 
 		.contribution-flag-form {
 			background-color: rgba(0,0,0,0.1);
-			padding: 1.618em;
-			margin-bottom: 1.618em;
+			padding: ms(3);
+			margin-bottom: ms(3);
 		}
 	}
 
@@ -159,7 +160,7 @@
 		> a {
 			display: inline-block;
 			margin-right: 1em;
-			padding: .53em 0;
+			padding: ms(-3) 0;
 			border-bottom: .202em solid rgba(0,0,0,0.05);
 
 			&.active {
@@ -205,8 +206,8 @@
 
 #tiptip_content,
 .chart-tooltip {
-	font-size: .857em;
-	padding: .618em 1em;
+	font-size: ms(-1);
+	padding: ms(-2) 1em;
 	background-color: rgba(0,0,0,0.8);
 }
 

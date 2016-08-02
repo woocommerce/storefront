@@ -8,6 +8,7 @@
 @import 'bourbon';
 @import '../../../assets/sass/utils/variables';
 @import '../../../assets/sass/utils/mixins';
+@import '../../../assets/sass/vendors/modular-scale';
 
 .widget_layered_nav {
 	ul.colors {
@@ -21,8 +22,8 @@
 				display: inline-block;
 				box-sizing: border-box;
 				border-radius: .202em;
-				height: 1.618em;
-				width: 1.618em;
+				height: ms(3);
+				width: ms(3);
 			}
 
 			&.chosen {
@@ -40,7 +41,7 @@
 	ul.checkboxes {
 		li {
 			input {
-				margin-right: .618em;
+				margin-right: ms(-2);
 			}
 		}
 	}
@@ -53,8 +54,8 @@
 
 			.size-filter {
 				font-size: 1em;
-				height: 1.618em;
-				min-width: 1.618em;
+				height: ms(3);
+				min-width: ms(3);
 				text-align: center;
 				line-height: 1.618;
 				background-color: #fff;

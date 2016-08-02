@@ -24,7 +24,6 @@
 body {
 	-ms-word-wrap: break-word;
 	word-wrap: break-word;
-	font-size: 1em;
 }
 
 body,
@@ -53,7 +52,7 @@ h5,
 h6 {
 	clear: both;
 	font-weight: 700;
-	margin: 0 0 .53em;
+	margin: 0 0 ms(-3);
 	color: darken( $color_body, 20% );
 
 	a {
@@ -63,7 +62,7 @@ h6 {
 
 h1,
 .alpha {
-	font-size: 2.618em;
+	font-size: ms(5);
 	line-height: 1.214;
 	letter-spacing: -1px;
 }
@@ -75,20 +74,27 @@ h2,
 
 	& + h3 {
 		border-top: 1px solid $color_border;
-		padding-top: .53em;
+		padding-top: ms(-3);
 	}
 }
 
 h3,
 .gamma {
-	font-size: 1.618em;
+	font-size: ms(3);
 	font-weight: 600;
 }
 
 h4,
 .delta {
-	font-size: 1.387em;
+	font-size: ms(2);
 	font-weight: 700;
+}
+
+.alpha,
+.beta,
+.gamma,
+.delta {
+	display: block;
 }
 
 p,
@@ -101,7 +107,7 @@ form {
 	& + header h2,
 	& + h3,
 	& + h4 {
-		margin-top: 2.244em;
+		margin-top: ms(4);
 	}
 }
 
@@ -109,16 +115,16 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin: 0 0 $vspacing;
+	margin: 0 0 ms(1);
 }
 
 p {
-	margin: 0 0 $vspacing;
+	margin: 0 0 ms(1);
 }
 
 ul,
 ol {
-	margin: 0 0 $vspacing 3em;
+	margin: 0 0 ms(1) 3em;
 	padding: 0;
 }
 
@@ -133,7 +139,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: $vspacing;
+	margin-left: ms(1);
 }
 
 dt {
@@ -141,7 +147,7 @@ dt {
 }
 
 dd {
-	margin: 0 0 1.618em;
+	margin: 0 0 ms(3);
 }
 
 b,
@@ -157,20 +163,20 @@ i {
 }
 
 blockquote {
-	padding: 0 $vspacing;
+	padding: 0 ms(1);
 	border-left: 3px solid rgba(0,0,0,0.05);
 	font-style: italic;
 }
 
 address {
-	margin: 0 0 $vspacing;
+	margin: 0 0 ms(1);
 }
 
 pre {
 	background: rgba(#000,.1);
 	font-family: "Courier 10 Pitch", Courier, monospace;
-	margin-bottom: 1.618em;
-	padding: 1.618em;
+	margin-bottom: ms(3);
+	padding: ms(3);
 	overflow: auto;
 	max-width: 100%;
 }
@@ -181,7 +187,7 @@ tt,
 var {
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	background-color: rgba(0,0,0,0.05);
-	padding: .202em .53em;
+	padding: .202em ms(-3);
 }
 
 abbr,
@@ -227,7 +233,7 @@ figure {
 }
 
 table {
-	margin: 0 0 $vspacing;
+	margin: 0 0 ms(1);
 	width: 100%;
 }
 
@@ -277,8 +283,8 @@ body {
  */
 .site-header {
 	background-color: #2c2d33;
-	padding-top: 1.618em;
-	padding-bottom: 1.618em;
+	padding-top: ms(3);
+	padding-bottom: ms(3);
 	color: #9aa0a7;
 	background-position: center center;
 	position: relative;
@@ -311,13 +317,13 @@ body {
 .home.page:not(.page-template-template-homepage),
 .home.post-type-archive-product {
 	.site-header {
-		margin-bottom: 4.236em;
+		margin-bottom: ms(7);
 	}
 }
 
 .no-wc-breadcrumb {
 	.site-header {
-		margin-bottom: 4.236em;
+		margin-bottom: ms(7);
 	}
 
 	&.page-template-template-homepage {
@@ -344,7 +350,7 @@ body {
 	}
 
 	.site-description {
-		font-size: .857em;
+		font-size: ms(-1);
 		display: none;
 	}
 }
@@ -353,7 +359,7 @@ body {
  * Main content area
  */
 .site-main {
-	margin-bottom: 2.618em;
+	margin-bottom: ms(5);
 }
 
 .site-content {
@@ -362,7 +368,7 @@ body {
 
 .page-template-template-homepage {
 	.site-main {
-		padding-top: 4.236em;
+		padding-top: ms(7);
 	}
 }
 
@@ -372,7 +378,7 @@ body {
 .site-footer {
 	background-color: #f3f3f3;
 	color: $color_body + #333;
-	padding: 1.618em 0 3.631em;
+	padding: ms(3) 0 ms(6);
 
 	h1,
 	h2,
@@ -389,7 +395,7 @@ body {
 }
 
 .site-info {
-	padding: 2.618em 0;
+	padding: ms(5) 0;
 }
 
 /**
@@ -398,12 +404,12 @@ body {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: $vspacing;
+	margin-right: ms(1);
 }
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: $vspacing;
+	margin-left: ms(1);
 }
 .aligncenter {
 	clear: both;
@@ -432,7 +438,7 @@ body {
 	height: auto;
 	left: 0;
 	line-height: normal;
-	padding: 1em 1.618em;
+	padding: 1em ms(3);
 	text-decoration: none;
 	top: 0;
 	width: auto;
@@ -467,7 +473,7 @@ table {
 
 	td,
 	th {
-		padding: 1em 1.387em;
+		padding: 1em ms(2);
 		text-align: left;
 		vertical-align: top;
 
@@ -479,7 +485,7 @@ table {
 	thead {
 		th {
 			text-transform: uppercase;
-			padding: 1.387em;
+			padding: ms(2);
 			vertical-align: middle;
 			font-weight: 900;
 		}
@@ -503,7 +509,7 @@ table {
  */
 .error404 {
 	.site-content .widget_product_search {
-		padding: 1.618em;
+		padding: ms(3);
 		background-color: rgba(#000,.025);
 
 		form {
@@ -517,10 +523,10 @@ table {
 
 	.fourohfour-columns-2 {
 		@include clearfix;
-		padding: 2.618em 0;
+		padding: ms(5) 0;
 		border: 1px solid $color_border;
 		border-width: 1px 0;
-		margin-bottom: 2.618em;
+		margin-bottom: ms(5);
 
 		ul.products,
 		ul.products li.product,
@@ -540,7 +546,7 @@ table {
 
 		.col-2 {
 			@include span( last 6 of 12 );
-			padding: 1.618em;
+			padding: ms(3);
 			background-color: rgba(#000,.025);
 		}
 	}
@@ -550,12 +556,12 @@ table {
  * Comments
  */
 #comments {
-	padding-top: 2.618em;
+	padding-top: ms(5);
 
 	.comments-title {
 		border-bottom: 1px solid $color_border;
-		padding-bottom: .53em;
-		margin-bottom: 1.618em;
+		padding-bottom: ms(-3);
+		margin-bottom: ms(3);
 	}
 
 	.comment-list {
@@ -567,11 +573,11 @@ table {
 		}
 
 		.comment-content {
-			padding-bottom: 1.618em;
-			margin-bottom: 1.618em;
+			padding-bottom: ms(3);
+			margin-bottom: ms(3);
 
 			.comment-text {
-				padding: 1.618em;
+				padding: ms(3);
 				border-radius: 3px;
 
 				p:last-child {
@@ -590,7 +596,7 @@ table {
 			}
 
 			a.comment-date {
-				font-size: .857em;
+				font-size: ms(-1);
 			}
 
 			cite {
@@ -604,7 +610,7 @@ table {
 			> .comment-body cite {
 				&:after {
 					@include fa-icon();
-					margin-left: .53em;
+					margin-left: ms(-3);
 					content: "\f0f6";
 				}
 			}
@@ -612,8 +618,8 @@ table {
 
 		.reply {
 			@include clearfix;
-			margin-bottom: 1.618em;
-			padding-top: .618em;
+			margin-bottom: ms(3);
+			padding-top: ms(-2);
 
 			a {
 				display: inline-block;
@@ -622,7 +628,7 @@ table {
 				&:after {
 					@include fa-icon();
 					content: "\f112";
-					margin-left: .53em;
+					margin-left: ms(-3);
 				}
 
 				&.comment-edit-link {
@@ -649,7 +655,7 @@ table {
 
 #respond {
 	clear: both;
-	padding: 1.618em;
+	padding: ms(3);
 	background-color: rgba(0,0,0,0.0125);
 	position: relative;
 
@@ -668,14 +674,14 @@ table {
 
 	#cancel-comment-reply-link {
 		position: absolute;
-		top: .53em;
-		right: .53em;
+		top: ms(-3);
+		right: ms(-3);
 		display: block;
 		height: 1em;
 		width: 1em;
 		overflow: hidden;
 		line-height: 1;
-		font-size: 1.387em;
+		font-size: ms(2);
 		text-align: center;
 		@include transition(transform,ease,.3s);
 
@@ -698,17 +704,17 @@ table {
 	.entry-title {
 		&:before {
 			@include fa-icon();
-			margin-right: .53em;
+			margin-right: ms(-3);
 			content: "\f08d";
 		}
 	}
 }
 
 .hentry {
-	margin: 0 0 4.236em;
+	margin: 0 0 ms(7);
 
 	.wp-post-image {
-		margin-bottom: 1.618em;
+		margin-bottom: ms(3);
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -719,7 +725,7 @@ table {
 
 		.posted-on,
 		.byline {
-			font-size: .857em;
+			font-size: ms(-1);
 
 			a {
 				@include underlinedLink();
@@ -750,7 +756,7 @@ table {
 }
 .page-links {
 	clear: both;
-	margin: 0 0 $vspacing;
+	margin: 0 0 ms(1);
 }
 
 .cat-links,
@@ -758,7 +764,7 @@ table {
 .comments-link,
 .author {
 	display: block;
-	margin-bottom: 1.618em;
+	margin-bottom: ms(3);
 }
 
 .author {
@@ -772,7 +778,7 @@ table {
  * Forms
  */
 form {
-	margin-bottom: 1.618em;
+	margin-bottom: ms(3);
 }
 
 button,
@@ -797,7 +803,7 @@ input[type="submit"],
 	border-color: $color_body;
 	color: #fff;
 	cursor: pointer; /* Improves usability and consistency of cursor style between image-type 'input' and others */
-	padding: .618em 1.387em;
+	padding: ms(-2) ms(2);
 	text-decoration: none;
 	font-weight: 600;
 	text-shadow: none;
@@ -831,7 +837,7 @@ input[type="submit"],
 		&:after {
 			@include fa-icon();
 			content: "\f00c";
-			margin-left: .53em;
+			margin-left: ms(-3);
 		}
 	}
 
@@ -840,8 +846,8 @@ input[type="submit"],
 	}
 
 	&.small {
-		padding: .53em .857em;
-		font-size: .857em;
+		padding: ms(-3) ms(-1);
+		font-size: ms(-1);
 	}
 
 	&.disabled,
@@ -881,7 +887,7 @@ input[type="password"],
 input[type="search"],
 textarea,
 .input-text {
-	padding: .618em;
+	padding: ms(-2);
 	background-color: darken($body-background,5%);
 	color: $color_body;
 	outline: none;
@@ -901,7 +907,7 @@ textarea,
 
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
-	padding-left: .857em;
+	padding-left: ms(-1);
 	vertical-align: top; /* Improves readability and alignment in all browsers */
 	width: 100%;
 }
@@ -919,7 +925,7 @@ label.inline {
 fieldset {
 	padding: 0;
 	border: 0;
-	margin-bottom: 1.618em;
+	margin-bottom: ms(3);
 
 	legend {
 		font-weight: 700;
@@ -957,7 +963,7 @@ img {
  * Captions
  */
 .wp-caption {
-	margin-bottom: $vspacing;
+	margin-bottom: ms(1);
 	max-width: 100%;
 
 	img[class*="wp-image-"] {
@@ -977,7 +983,7 @@ img {
  */
 .gallery {
 	@include clearfix;
-	margin-bottom: $vspacing;
+	margin-bottom: ms(1);
 
 	.gallery-item {
 		float: left;
@@ -1085,8 +1091,8 @@ button.menu-toggle {
 	box-shadow: none;
 	border-radius: 2px;
 	background-image: none;
-	padding: .618em .857em .618em 2.618em;
-	font-size: .857em;
+	padding: ms(-2) ms(-1) ms(-2) ms(5);
+	font-size: ms(-1);
 
 	&:hover {
 		background-image: none;
@@ -1189,18 +1195,18 @@ button.menu-toggle {
 
 	ul {
 		display: block;
-		margin-left: 1.387em;
+		margin-left: ms(2);
 	}
 
 	li {
 		a {
-			padding: .857em 0;
+			padding: ms(-1) 0;
 			display: block;
 
 			&:before {
 				@include fa-icon();
 				content: "\f0f6";
-				margin-right: .53em;
+				margin-right: ms(-3);
 			}
 
 			&:hover {
@@ -1215,7 +1221,7 @@ button.menu-toggle {
  */
 
 .site-main nav.navigation {
-	margin: 0 0 $vspacing;
+	margin: 0 0 ms(1);
 	@include clearfix;
 
 	.nav-previous,
@@ -1223,7 +1229,7 @@ button.menu-toggle {
 		a {
 			display: inline-block;
 			@include transition(all,ease,.3s);
-			padding: .618em 1em;
+			padding: ms(-2) 1em;
 			border-radius: 3px;
 		}
 	}
@@ -1236,7 +1242,7 @@ button.menu-toggle {
 			&:before {
 				@include fa-icon();
 				content: "\f177";
-				margin-right: .53em;
+				margin-right: ms(-3);
 			}
 
 			&:hover {
@@ -1254,7 +1260,7 @@ button.menu-toggle {
 			&:after {
 				@include fa-icon();
 				content: "\f178";
-				margin-left: .53em;
+				margin-left: ms(-3);
 			}
 
 			&:hover {
@@ -1287,7 +1293,7 @@ button.menu-toggle {
 			.page-numbers {
 				border-left-width: 0;
 				display: inline-block;
-				padding: .327em .857em;
+				padding: ms(-5) ms(-1);
 				background-color: rgba(#000,.025);
 				color: $color_body;
 
@@ -1333,7 +1339,7 @@ button.menu-toggle {
  */
 
 .widget {
-	margin: 0 0 3.631em;
+	margin: 0 0 ms(6);
 
 	select {
 		max-width: 100%;
@@ -1343,9 +1349,9 @@ button.menu-toggle {
 		@include screen-reader-text();
 	}
 
-	h3.widget-title,
-	h2.widgettitle {
-		font-size: 1.387em;
+	.widget-title,
+	.widgettitle {
+		font-size: ms(2);
 		letter-spacing: 0;
 		border-bottom: 1px solid $color_border;
 		padding: 0 0 1em;
@@ -1358,7 +1364,7 @@ button.menu-toggle {
 		list-style: none;
 
 		ul {
-			margin-left: 1.618em;
+			margin-left: ms(3);
 		}
 	}
 }
@@ -1384,7 +1390,7 @@ button.menu-toggle {
 	.widget {
 		margin: 0;
 		padding: 1em 0;
-		font-size: .857em;
+		font-size: ms(-1);
 	}
 }
 
@@ -1396,7 +1402,7 @@ button.menu-toggle {
 		input[type=text],
 		input[type=search] {
 			width: 100%;
-			padding-left: 2.618em;
+			padding-left: ms(5);
 		}
 
 		input[type=submit] {
@@ -1427,19 +1433,19 @@ button.menu-toggle {
 
 		li {
 			list-style: none;
-			margin-bottom: .618em;
+			margin-bottom: ms(-2);
 
 			&:before {
 				font-family: "FontAwesome";
-				margin-right: .53em;
+				margin-right: ms(-3);
 				display: inline-block;
 				opacity: 0.35;
 			}
 		}
 
 		.sub-menu {
-			margin-top: .618em;
-			margin-left: 1.618em;
+			margin-top: ms(-2);
+			margin-left: ms(3);
 		}
 	}
 }
@@ -1465,7 +1471,7 @@ button.menu-toggle {
 		}
 
 		ul.children {
-			margin: .618em 0 0 1.387em;
+			margin: ms(-2) 0 0 ms(2);
 		}
 	}
 }
@@ -1528,7 +1534,7 @@ button.menu-toggle {
 
 .widget_rating_filter {
 	.wc-layered-nav-rating  {
-		margin-bottom: .618em;
+		margin-bottom: ms(-2);
 
 		a {
 			text-decoration: none !important;
@@ -1542,10 +1548,10 @@ button.menu-toggle {
 
 .widget-area {
 	.widget {
-		font-size: .857em;
+		font-size: ms(-1);
 
 		h1.widget-title {
-			font-size: 1.387em;
+			font-size: ms(2);
 		}
 
 		a:not(.button) {

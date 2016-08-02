@@ -11,6 +11,7 @@
 @import '../../../node_modules/susy/sass/susy';
 @import '../../../assets/sass/vendors/font-awesome/variables';
 @import '../../../assets/sass/vendors/font-awesome/mixins';
+@import '../../../assets/sass/vendors/modular-scale';
 
 // Star font, FontAwesome doesn't work :(
 @font-face {
@@ -64,22 +65,22 @@
 }
 
 .site-search {
-	font-size: .857em;
+	font-size: ms(-1);
 	clear: both;
 	display: none;
 
 	.widget_product_search {
 		input[type=text],
 		input[type=search] {
-			padding: 1.387em 1.618em;
+			padding: ms(2) ms(3);
 			line-height: 1;
-			padding-left: 3.631em;
+			padding-left: ms(6);
 		}
 
 		form {
 			&:before {
-				top: 1.387em;
-				left: 1.618em;
+				top: ms(2);
+				left: ms(3);
 			}
 		}
 
@@ -117,7 +118,7 @@
 			}
 
 			> a {
-				height: 4.236em;
+				height: ms(7);
 				display: block;
 				position: relative;
 				text-indent: -9999px;
@@ -139,7 +140,7 @@
 					text-align: center;
 					line-height: 2.618046972; // 4.236/1.618
 					font-weight: 400;
-					font-size: 1.618em;
+					font-size: ms(3);
 					text-indent: 0;
 					display: block;
 					cursor: pointer;
@@ -195,7 +196,7 @@
 					box-sizing: content-box;
 					font-size: .75em;
 					position: absolute;
-					top: .857em;
+					top: ms(-1);
 					left: 50%;
 					border-radius: 100%;
 					border: 1px solid;
@@ -311,7 +312,7 @@ ul.products {
 	li.product {
 		list-style: none;
 		margin-left: 0;
-		margin-bottom: 4.236em;
+		margin-bottom: ms(7);
 		text-align: center;
 		position: relative;
 
@@ -331,7 +332,7 @@ ul.products {
 
 			ins {
 				font-weight: 700;
-				margin-left: .618em;
+				margin-left: ms(-2);
 				background-color: transparent;
 			}
 		}
@@ -341,17 +342,17 @@ ul.products {
 		}
 
 		.star-rating {
-			font-size: .857em;
+			font-size: ms(-1);
 		}
 
 		img {
 			display: block;
-			margin: 0 auto 1.618em;
+			margin: 0 auto ms(3);
 		}
 
 		&.product-category {
 			img {
-				margin-bottom: 1.618em;
+				margin-bottom: ms(3);
 			}
 		}
 
@@ -383,13 +384,13 @@ ul.products {
 
 		.images,
 		.summary {
-			margin-bottom: 2.618em;
+			margin-bottom: ms(5);
 			margin-top: 0;
 		}
 
 		.images {
 			.woocommerce-main-image {
-				margin-bottom: 1.618em;
+				margin-bottom: ms(3);
 				display: block;
 			}
 
@@ -414,7 +415,7 @@ ul.products {
 
 		form.cart {
 			@include clearfix;
-			margin-bottom: 1.618em;
+			margin-bottom: ms(3);
 			padding: 1em 0;
 
 			.quantity {
@@ -459,10 +460,10 @@ ul.products {
 		}
 
 		.woocommerce-product-rating {
-			margin-bottom: 1.618em;
+			margin-bottom: ms(3);
 			@include clearfix;
 			line-height: 1;
-			margin-top: -.857em;
+			margin-top: -ms(-1);
 
 			a {
 				@include underlinedLink();
@@ -470,12 +471,12 @@ ul.products {
 
 			.star-rating {
 				float: left;
-				margin-right: .618em;
+				margin-right: ms(-2);
 			}
 		}
 
 		.product_meta {
-			font-size: .857em;
+			font-size: ms(-1);
 			padding-top: 1em;
 			border-top: 1px solid $color_border;
 
@@ -499,7 +500,7 @@ ul.products {
 .stock {
 	&:before {
 		@include fa-icon();
-		margin-right: .53em;
+		margin-right: ms(-3);
 	}
 
 	&.in-stock {
@@ -526,7 +527,7 @@ a.reset_variations {
 	&:before {
 		@include fa-icon();
 		content: "\f021";
-		margin-right: .53em;
+		margin-right: ms(-3);
 	}
 }
 
@@ -551,13 +552,13 @@ a.reset_variations {
 		margin-left: 0;
 
 		li {
-			margin-bottom: 2.618em;
+			margin-bottom: ms(5);
 			list-style: none;
 			clear: both;
 			@include clearfix;
 
 			.comment_container {
-				padding: 1.618em;
+				padding: ms(3);
 				border-radius: 3px;
 
 				.comment-text {
@@ -578,7 +579,7 @@ a.reset_variations {
 
 			.avatar {
 				float: left;
-				width: 2.244em;
+				width: ms(4);
 				height: auto;
 				margin-right: 1em;
 			}
@@ -590,10 +591,10 @@ a.reset_variations {
 			ul.children {
 				@include span(last 5 of 6);
 				margin-bottom: 0;
-				padding-top: 1.618em;
+				padding-top: ms(3);
 
 				li {
-					margin-bottom: 1.618em;
+					margin-bottom: ms(3);
 
 					&:last-child {
 						margin-bottom: 0;
@@ -618,8 +619,8 @@ a.reset_variations {
 .woocommerce-breadcrumb {
 	margin-left: -1.387rem;
 	margin-right: -1.387rem;
-	margin-bottom: 1.618em;
-	font-size: .857em;
+	margin-bottom: ms(3);
+	font-size: ms(-1);
 	padding: 1em 1.387rem;
 
 	a {
@@ -629,7 +630,7 @@ a.reset_variations {
 			&:before {
 				@include fa-icon();
 				content: "\f015";
-				margin-right: .53em;
+				margin-right: ms(-3);
 			}
 		}
 	}
@@ -648,7 +649,7 @@ a.reset_variations {
 		@include clearfix;
 
 		img {
-			max-width: 2.618em;
+			max-width: ms(5);
 			float: right;
 		}
 
@@ -713,7 +714,7 @@ a.reset_variations {
 			display: block;
 
 			&:nth-child(odd) {
-				margin-bottom: .618em;
+				margin-bottom: ms(-2);
 			}
 		}
 	}
@@ -725,11 +726,11 @@ a.reset_variations {
 
 		li {
 			list-style: none;
-			margin-bottom: .618em;
+			margin-bottom: ms(-2);
 
 			&:before {
 				@include fa-icon();
-				margin-right: .53em;
+				margin-right: ms(-3);
 				opacity: 0.25;
 				content: "\f114";
 			}
@@ -743,8 +744,8 @@ a.reset_variations {
 	}
 
 	.children {
-		margin-top: .618em;
-		margin-left: 1.618em;
+		margin-top: ms(-2);
+		margin-left: ms(3);
 	}
 }
 
@@ -753,19 +754,19 @@ a.reset_variations {
 		p.total,
 		p.buttons,
 		li {
-			padding-left: 1.387em;
-			padding-right: 1.387em;
+			padding-left: ms(2);
+			padding-right: ms(2);
 		}
 	}
 }
 
 .widget_layered_nav {
 	li {
-		margin-bottom: .618em;
+		margin-bottom: ms(-2);
 
 		&:before {
 			@include fa-icon();
-			margin-right: .53em;
+			margin-right: ms(-3);
 			opacity: 0.35;
 			content: "\f0c8";
 		}
@@ -786,7 +787,7 @@ a.reset_variations {
 					&:before {
 						@include fa-icon();
 						content: "\f00d";
-						margin-right: .53em;
+						margin-right: ms(-3);
 						color: $error;
 					}
 				}
@@ -886,7 +887,7 @@ a.reset_variations {
  * Cart
  */
 table.cart {
-	margin-bottom: 3.631em;
+	margin-bottom: ms(6);
 
 	.product-quantity .plus,
 	.product-quantity .minus {
@@ -896,7 +897,7 @@ table.cart {
 	.product-thumbnail {
 		img {
 			margin: 0 auto;
-			max-width: 3.631em;
+			max-width: ms(6);
 			height: auto;
 		}
 
@@ -914,31 +915,31 @@ table.cart {
 	td.product-remove {
 		@include clearfix;
 		padding: 0;
-		border-top: 1.618em solid;
+		border-top: ms(3) solid;
 		position: relative;
 
 		a.remove {
 			position: absolute;
-			font-size: 1.387em;
-			top: -.618em;
-			right: -.618em;
+			font-size: ms(2);
+			top: -ms(-2);
+			right: -ms(-2);
 		}
 	}
 
 	td.product-quantity {
 		.qty {
 			padding: .326em;
-			width: 2.618em;
+			width: ms(5);
 		}
 	}
 
 	td,
 	th {
-		padding: .857em .857em 0;
+		padding: ms(-1) ms(-1) 0;
 	}
 
 	td.product-subtotal {
-		padding-bottom: .857em;
+		padding-bottom: ms(-1);
 	}
 
 	td.actions {
@@ -959,7 +960,7 @@ table.cart {
 		input {
 			display: block;
 			width: 100%;
-			margin: .53em 0;
+			margin: ms(-3) 0;
 
 			&[name="update_cart"] {
 				&:focus {
@@ -972,7 +973,7 @@ table.cart {
 
 .wc-proceed-to-checkout {
 	@include clearfix;
-	margin-bottom: 1.618em;
+	margin-bottom: ms(3);
 
 	.button {
 		display: block;
@@ -980,7 +981,7 @@ table.cart {
 		margin-bottom: 1em;
 
 		&.checkout-button {
-			font-size: 1.387em;
+			font-size: ms(2);
 		}
 	}
 }
@@ -992,8 +993,8 @@ ul#shipping_method {
 
 a.remove {
 	display: block;
-	width: 1.618em;
-	height: 1.618em;
+	width: ms(3);
+	height: ms(3);
 	line-height: 1.618;
 	font-weight: 400;
 	text-indent: -9999px;
@@ -1018,7 +1019,7 @@ a.remove {
  * Checkout
  */
 .checkout_coupon {
-	margin-bottom: 2.618em;
+	margin-bottom: ms(5);
 }
 
 form.checkout {
@@ -1039,13 +1040,13 @@ form.checkout {
 		> .wc_payment_method {
 			> label {
 				display: block;
-				padding: 1.387em;
+				padding: ms(2);
 				cursor: pointer;
 
 				&:before {
 					@include fa-icon();
 					content: "\f10c";
-					margin-right: .53em;
+					margin-right: ms(-3);
 					@include transition(color, ease, .2s);
 				}
 			}
@@ -1061,7 +1062,7 @@ form.checkout {
 				float: right;
 				border: 0;
 				padding: 0;
-				max-height: 1.618em;
+				max-height: ms(3);
 			}
 
 			&:last-child {
@@ -1082,13 +1083,13 @@ form.checkout {
 			}
 
 			.payment_box {
-				padding: 1.387em;
+				padding: ms(2);
 
 				fieldset {
 					border: 0;
 					margin: 0;
 					padding: 1em 0 0 0;
-					font-size: .857em;
+					font-size: ms(-1);
 
 					label {
 						width: auto;
@@ -1118,7 +1119,7 @@ form.checkout {
 					margin: 0;
 
 					li {
-						margin-top: .618em;
+						margin-top: ms(-2);
 
 						input[type=radio] {
 							margin-right: .236em;
@@ -1133,12 +1134,12 @@ form.checkout {
 				.wc-credit-card-form-card-number,
 				.wc-credit-card-form-card-expiry,
 				.wc-credit-card-form-card-cvc {
-					font-size: 1.387em;
+					font-size: ms(2);
 				}
 
 				.wc-credit-card-form-card-number {
 					background-repeat: no-repeat;
-					background-position: right .618em center;
+					background-position: right ms(-2) center;
 					background-size: 31px 20px;
 					background-image: url(../../../assets/images/credit-cards/unknown.svg);
 
@@ -1192,7 +1193,7 @@ form.checkout {
 			&:before {
 				@include fa-icon();
 				content: "\f0c8";
-				margin-right: .53em;
+				margin-right: ms(-3);
 				opacity: .25;
 			}
 		}
@@ -1208,13 +1209,13 @@ form.checkout {
 	}
 
 	.place-order {
-		padding: 1.387em;
+		padding: ms(2);
 		margin-bottom: 0;
 		float: none;
 		width: 100%;
 
 		.button {
-			font-size: 1.387em;
+			font-size: ms(2);
 			width: 100%;
 			white-space: pre-wrap;
 		}
@@ -1248,14 +1249,14 @@ form.checkout {
 .woocommerce-password-strength {
 	text-align: left;
 	font-weight: 600;
-	padding: .53em 0;
+	padding: ms(-3) 0;
 	text-align: right;
-	font-size: .857em;
+	font-size: ms(-1);
 
 	&:after {
 		@include fa-icon();
 		content: "\f119";
-		margin-left: .53em;
+		margin-left: ms(-3);
 	}
 
 	&.strong {
@@ -1303,15 +1304,15 @@ form.checkout {
 			}
 
 			a {
-				padding: .857em 0;
+				padding: ms(-1) 0;
 				display: block;
 
 				&:before {
 					@include fa-icon();
 					content: "\f0f6";
 					line-height: 1.618;
-					margin-left: .53em;
-					width: 1.387em;
+					margin-left: ms(-3);
+					width: ms(2);
 					text-align: right;
 					float: right;
 					opacity: .25;
@@ -1363,7 +1364,7 @@ ul.order_details {
 	@include clearfix;
 	list-style: none;
 	position: relative;
-	margin: 3.631em 0;
+	margin: ms(6) 0;
 
 	&:before,
 	&:after {
@@ -1385,22 +1386,22 @@ ul.order_details {
 	}
 
 	li {
-		padding: 1em 1.618em;
+		padding: 1em ms(3);
 		font-size: .8em;
 		text-transform: uppercase;
 
 		&:first-child {
-			padding-top: 1.618em;
+			padding-top: ms(3);
 		}
 
 		&:last-child {
 			border: 0;
-			padding-bottom: 1.618em;
+			padding-bottom: ms(3);
 		}
 
 		strong {
 			display: block;
-			font-size: 1.387em;
+			font-size: ms(2);
 			text-transform: none;
 		}
 	}
@@ -1409,8 +1410,8 @@ ul.order_details {
 .my_account_orders,
 .woocommerce-MyAccount-downloads {
 	.button {
-		padding: .618em .857em;
-		font-size: .857em;
+		padding: ms(-2) ms(-1);
+		font-size: ms(-1);
 		margin-right: .236em;
 	}
 }
@@ -1420,7 +1421,7 @@ ul.order_details {
 		&:after {
 			@include fa-icon();
 			content: "\f06e";
-			margin-left: .53em;
+			margin-left: ms(-3);
 		}
 	}
 }
@@ -1430,7 +1431,7 @@ p.order-again {
 		&:after {
 			@include fa-icon();
 			content: "\f021";
-			margin-left: .53em;
+			margin-left: ms(-3);
 		}
 	}
 }
@@ -1440,7 +1441,7 @@ p.order-again {
 		&:after {
 			@include fa-icon();
 			content: "\f0ed";
-			margin-left: .53em;
+			margin-left: ms(-3);
 		}
 	}
 }
@@ -1453,7 +1454,7 @@ p.order-again {
 
 	#payment {
 		.payment_methods {
-			margin-bottom: 1.618em !important;
+			margin-bottom: ms(3) !important;
 
 			li {
 				.payment_box {
@@ -1526,14 +1527,14 @@ p.order-again {
 	bottom: 69px;
 	right: 0;
 	margin: 0;
-	padding: 1em 1.387em;
+	padding: 1em ms(2);
 	background-color: $info;
 	color: #fff;
 	z-index: 999;
 
 	&:before {
 		@include fa-icon();
-		margin-right: .53em;
+		margin-right: ms(-3);
 		content: "\f05a";
 	}
 }
@@ -1640,8 +1641,8 @@ p.stars {
 	border: 2px solid;
 	border-color: $color_body;
 	color: $color_body;
-	padding: .202em .618em;
-	font-size: .857em;
+	padding: .202em ms(-2);
+	font-size: ms(-1);
 	text-transform: uppercase;
 	font-weight: 700;
 	display: inline-block;
@@ -1651,14 +1652,14 @@ p.stars {
 
 .quantity {
 	.qty {
-		max-width: 3.631em;
+		max-width: ms(6);
 		text-align: center;
 	}
 }
 
 .storefront-sorting {
-	font-size: .857em;
-	margin-bottom: 2.618em;
+	font-size: ms(-1);
+	margin-bottom: ms(5);
 }
 
 .woocommerce-tabs {
@@ -1704,7 +1705,7 @@ p.stars {
 
 	.panel {
 		h2:first-of-type {
-			font-size: 1.618em;
+			font-size: ms(3);
 			margin-bottom: 1em;
 		}
 	}
@@ -1713,7 +1714,7 @@ p.stars {
 .related,
 .upsells {
 	> h2:first-child {
-		font-size: 1.618em;
+		font-size: ms(3);
 		margin-bottom: 1em;
 	}
 }
@@ -1723,15 +1724,15 @@ p.stars {
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
-	padding: 1em 1.618em;
+	padding: 1em ms(3);
 	@include clearfix;
-	margin-bottom: 2.618em;
+	margin-bottom: ms(5);
 	background-color: $success;
 	margin-left: 0;
 	border-radius: 2px;
 	color: #fff;
 	clear: both;
-	border-left: .618em solid rgba(0,0,0,0.15);
+	border-left: ms(-2) solid rgba(0,0,0,0.15);
 
 	a {
 		color: #fff;
@@ -1779,7 +1780,7 @@ p.no-comments {
 			> .woocommerce-info,
 			> .woocommerce-error {
 				&:first-child {
-					margin-top: 2.618em;
+					margin-top: ms(5);
 				}
 			}
 		}
@@ -1791,7 +1792,7 @@ p.no-comments {
 	&:after {
 		@include fa-icon();
 		content: "\f178";
-		margin-left: .53em;
+		margin-left: ms(-3);
 	}
 }
 
@@ -1799,7 +1800,7 @@ p.no-comments {
 	&:before {
 		@include fa-icon();
 		content: "\f177";
-		margin-right: .53em;
+		margin-right: ms(-3);
 	}
 }
 
@@ -1818,7 +1819,7 @@ p.no-comments {
 }
 
 dl.variation {
-	font-size: .857em;
+	font-size: ms(-1);
 
 	dd {
 		margin: 0 0 1em;
@@ -1840,7 +1841,7 @@ dl.variation {
 .storefront-product-section {
 	.section-title {
 		text-align: center;
-		margin-bottom: 1.618em;
+		margin-bottom: ms(3);
 	}
 
 	&:last-child {
@@ -1864,10 +1865,10 @@ dl.variation {
 	 * Breadcrumbs
 	 */
 	.woocommerce-breadcrumb {
-		padding: 1.387em 99em;
+		padding: ms(2) 99em;
 		margin-left: -99em;
 		margin-right: -99em;
-		margin-bottom: 4.236em;
+		margin-bottom: ms(7);
 	}
 
 	/**
@@ -1902,7 +1903,7 @@ dl.variation {
 		position: relative;
 
 		.cart-contents {
-			padding: 1.618em 0;
+			padding: ms(3) 0;
 			display: block;
 			position: relative;
 			background-color: transparent;
@@ -1925,7 +1926,7 @@ dl.variation {
 			.count {
 				font-weight: 300;
 				opacity: 0.5;
-				font-size: .857em;
+				font-size: ms(-1);
 			}
 
 			span {
@@ -1938,7 +1939,7 @@ dl.variation {
 			top: 100%;
 			width: 100%;
 			z-index: 999999;
-			font-size: .857em;
+			font-size: ms(-1);
 			left: -999em;
 			display: block;
 
@@ -1981,7 +1982,7 @@ dl.variation {
 			clear: none;
 			width: 100%;
 			float: left;
-			font-size: .857em;
+			font-size: ms(-1);
 
 			&.first {
 				clear: both !important;
@@ -2128,7 +2129,7 @@ dl.variation {
 		div.product {
 			.images {
 				@include span(4 of 9);
-				margin-bottom: 3.631em;
+				margin-bottom: ms(6);
 
 				.thumbnails {
 					@include clearfix;
@@ -2169,7 +2170,7 @@ dl.variation {
 		div.product {
 			.images {
 				@include span(4 of 12);
-				margin-bottom: 3.631em;
+				margin-bottom: ms(6);
 
 				.thumbnails {
 					a.zoom {
@@ -2184,7 +2185,7 @@ dl.variation {
 
 			.summary {
 				@include span(last 8 of 12);
-				margin-bottom: 3.631em;
+				margin-bottom: ms(6);
 			}
 
 			.woocommerce-tabs {
@@ -2203,12 +2204,12 @@ dl.variation {
 	}
 
 	.woocommerce .page-description {
-		margin-bottom: 1.618em;
+		margin-bottom: ms(3);
 	}
 
 	.storefront-sorting {
 		@include clearfix;
-		margin-bottom: 2.618em;
+		margin-bottom: ms(5);
 
 		select {
 			width: auto;
@@ -2264,17 +2265,17 @@ dl.variation {
 	table.cart {
 		th,
 		td {
-			padding: 1.618em;
+			padding: ms(3);
 		}
 
 		.qty {
-			padding: .857em;
+			padding: ms(-1);
 			max-width: 3.632em;
 		}
 
 		td.product-remove {
 			display: table-cell;
-			padding: 1.618em;
+			padding: ms(3);
 			border: 0;
 
 			a.remove {
@@ -2292,7 +2293,7 @@ dl.variation {
 
 		.quantity {
 			.qty {
-				padding: .618em;
+				padding: ms(-2);
 			}
 		}
 
@@ -2323,7 +2324,7 @@ dl.variation {
 		@include clearfix;
 
 		h2 {
-			font-size: 1.618em;
+			font-size: ms(3);
 		}
 
 		.cross-sells {
@@ -2389,7 +2390,7 @@ dl.variation {
 
 		.col-1,
 		.col-2 {
-			margin-bottom: 1.618em;
+			margin-bottom: ms(3);
 		}
 
 		& + #customer_details {
@@ -2416,7 +2417,7 @@ dl.variation {
 	#wc_checkout_add_ons {
 		input[type=radio] {
 			float: left;
-			margin-right: .53em;
+			margin-right: ms(-3);
 			clear: left;
 			margin-top: .35em;
 		}
@@ -2434,7 +2435,7 @@ dl.variation {
 
 	#order_review_heading {
 		margin-bottom: 0;
-		padding-bottom: .618em;
+		padding-bottom: ms(-2);
 	}
 
 	// Payment forms in account
@@ -2462,7 +2463,7 @@ dl.variation {
 			.button#place_order {
 				display: block;
 				width: 100%;
-				font-size: 1.387em;
+				font-size: ms(2);
 			}
 		}
 	}
@@ -2502,7 +2503,7 @@ dl.variation {
 
 	#order_review {
 		.shop_table {
-			margin-bottom: 2.618em;
+			margin-bottom: ms(5);
 		}
 	}
 
@@ -2510,7 +2511,7 @@ dl.variation {
 	 * My Account
 	 */
 	table + .addresses {
-		margin-top: 1.618em;
+		margin-top: ms(3);
 	}
 
 	.col2-set#customer_login,
@@ -2553,7 +2554,7 @@ dl.variation {
 	}
 
 	table.my_account_orders {
-		font-size: .857em;
+		font-size: ms(-1);
 	}
 
 	.page-template-template-fullwidth-php {
@@ -2612,8 +2613,8 @@ dl.variation {
 				height: 1em;
 				text-indent: -9999px;
 				position: relative;
-				padding: .857em;
-				margin-top: .618em;
+				padding: ms(-1);
+				margin-top: ms(-2);
 
 				&:before {
 					@include fa-icon();
@@ -2661,15 +2662,15 @@ dl.variation {
 
 			.panel {
 				@include span(last 8 of 12);
-				margin-bottom: 3.631em;
+				margin-bottom: ms(6);
 			}
 		}
 	}
 
 	.woocommerce-tabs {
 		@include clearfix;
-		padding-top: 2.618em;
-		padding-bottom: 2.618em;
+		padding-top: ms(5);
+		padding-bottom: ms(5);
 
 		ul.tabs {
 			@include span(3 of 9);

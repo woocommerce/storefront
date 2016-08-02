@@ -4,7 +4,7 @@ $green: #45B964;
 
 .appearance_page_storefront-welcome {
 	.storefront-notice {
-		padding: 1em 1.387em;
+		padding: 1em ms(2);
 		border: 1px solid #ddd;
 		color: #999;
 		border-radius: 2px;
@@ -21,7 +21,7 @@ $green: #45B964;
 
 	.sf-title {
 		float: left;
-		margin-bottom: .53em;
+		margin-bottom: ms(-3);
 
 		img {
 			margin-right: 12px;
@@ -30,7 +30,7 @@ $green: #45B964;
 
 	.version {
 		font-size: 30%;
-		padding: .387em .857em;
+		padding: .387em ms(-1);
 		border-radius: 3px;
 		background-color: #fff;
 		font-weight: 700;
@@ -40,10 +40,10 @@ $green: #45B964;
 	.sf-review {
 		max-width: 360px;
 		float: right;
-		margin-bottom: .53em;
+		margin-bottom: ms(-3);
 
 		p {
-			font-size: .857em;
+			font-size: ms(-1);
 		}
 
 		& + .boxed {
@@ -52,13 +52,13 @@ $green: #45B964;
 	}
 
 	.boxed {
-		padding: 1.387em 2.244em 2.244em 2.244em;
+		padding: ms(2) ms(4) ms(4) ms(4);
 		background: #fff;
 		box-sizing: border-box;
 		border: 1px solid #ddd;
 		border-radius: 4px;
 		position: relative;
-		margin-bottom: 2.618em;
+		margin-bottom: ms(5);
 		width: 46.5%;
 		margin-right: 3.5%;
 
@@ -84,7 +84,7 @@ $green: #45B964;
 
 		p,
 		ul {
-			font-size: .857em;
+			font-size: ms(-1);
 		}
 
 		ul {
@@ -145,9 +145,9 @@ $green: #45B964;
 			content: "\f127";
 			display: block;
 			position: absolute;
-			top: 1.387em;
-			right: 1.387em;
-			font-size: 1.618em;
+			top: ms(2);
+			right: ms(2);
+			font-size: ms(3);
 			font-family: 'Dashicons';
 			font-weight: 400;
 			-webkit-font-smoothing: antialiased;
@@ -200,7 +200,7 @@ $green: #45B964;
 
 		&.child-themes {
 			.storefront-notice {
-				font-size: .857em;
+				font-size: ms(-1);
 				margin-bottom: 1em;
 			}
 
@@ -209,7 +209,7 @@ $green: #45B964;
 			}
 
 			.child-theme-title {
-				font-size: .857em;
+				font-size: ms(-1);
 			}
 
 			a {
@@ -219,14 +219,14 @@ $green: #45B964;
 			.price {
 				float: right;
 				color: $green;
-				font-size: .857em;
+				font-size: ms(-1);
 			}
 
 			.child-theme {
 				width: 47%;
 				float: left;
 				clear: both;
-				margin-bottom: 1.618em;
+				margin-bottom: ms(3);
 
 				img {
 					margin-bottom: 1em;
@@ -259,7 +259,7 @@ $green: #45B964;
 				}
 
 				h4 {
-					font-size: .857em;
+					font-size: ms(-1);
 					text-transform: uppercase;
 					margin-top: 10px;
 					margin-bottom: 5px;
@@ -328,7 +328,7 @@ $green: #45B964;
 
 		img {
 			max-height: 9px;
-			margin: 0 .53em;
+			margin: 0 ms(-3);
 			margin-top: -3px;
 			opacity: 0.5;
 		}

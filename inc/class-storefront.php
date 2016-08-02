@@ -301,7 +301,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			?>
 			<style type="text/css">
 				.wp-embed {
-					padding: 2.618em !important;
+					padding: ms(5) !important;
 					border: 0 !important;
 					border-radius: 3px !important;
 					font-family: "Source Sans Pro", "Open Sans", sans-serif !important;
@@ -310,17 +310,17 @@ if ( ! class_exists( 'Storefront' ) ) :
 				}
 
 				.wp-embed .wp-embed-featured-image {
-					margin-bottom: 2.618em;
+					margin-bottom: ms(5);
 				}
 
 				.wp-embed .wp-embed-featured-image img,
 				.wp-embed .wp-embed-featured-image.square {
 					min-width: 100%;
-					margin-bottom: .618em;
+					margin-bottom: ms(-2);
 				}
 
 				a.wc-embed-button {
-					padding: .857em 1.387em !important;
+					padding: ms(-1) ms(2) !important;
 					font-weight: 600;
 					background-color: <?php echo esc_attr( $accent_color ); ?>;
 					color: #fff !important;

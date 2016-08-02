@@ -31,9 +31,9 @@
 
 @mixin message($glyph: "\f05a", $color: $info)
 {
-    padding: 1em 1.618em 1em 3.631em;
+    padding: 1em ms(3) 1em ms(6);
     background: rgba( $color, .7 );
-    margin-bottom: 2.618em;
+    margin-bottom: ms(5);
     font-weight: normal;
     position: relative;
     color: #fff;
@@ -47,10 +47,10 @@
         top: 0;
         left: 0;
         bottom: 0;
-        width: 2.618em;
+        width: ms(5);
         background: rgba( darken( $color, 3% ), .7 );
         text-align: center;
-        padding: 1em .618em;
+        padding: 1em ms(-2);
         font-weight: normal !important;
         text-shadow: none;
     }
@@ -68,8 +68,8 @@
     a.button {
         background: #fff;
         color: $color;
-        font-size: .857em;
-        padding: .202em .618em;
+        font-size: ms(-1);
+        padding: .202em ms(-2);
 
         &:hover,
         &:active {
