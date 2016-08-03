@@ -2,7 +2,7 @@
 
 ### *2016.xx.xx* - 2.1.0
 * **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
-* **New** - Selective refresh on site title, tag line and logo.
+* **New** - Selective refresh on site title, tag line, logo and widgets.
 * **Fix** - Product thumbnail size on cart page.
 * **Dev** - Restructured scss; removed components/typography and added main styles to `sass/base/_base.scss`. Layout styles then added to `sass/base/_layout.scss`.
 

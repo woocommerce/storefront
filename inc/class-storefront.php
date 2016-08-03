@@ -119,6 +119,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// Declare support for title theme feature.
 			add_theme_support( 'title-tag' );
+
+			// Declare support for selective refreshing of widgets.
+			add_theme_support( 'customize-selective-refresh-widgets' );
 		}
 
 		/**
