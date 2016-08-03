@@ -1,0 +1,64 @@
+/**
+ * WooCommerce Mix and Match
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../../assets/sass/utils/variables';
+@import '../../../../assets/sass/vendors/modular-scale';
+@import '../../../../assets/sass/vendors/font-awesome/variables';
+@import '../../../../assets/sass/vendors/font-awesome/mixins';
+
+.mnm_table {
+	.product-thumbnail,
+	.product-name,
+	.product-quantity,
+	.container-quantity {
+		padding: ms(-2) ms(-1) !important;
+	}
+
+	.mnm_item {
+		img {
+			max-width: 100%;
+		}
+	}
+
+	.product-name {
+		vertical-align: middle;
+	}
+}
+
+.cart,
+.shop_table {
+	.mnm_table_item {
+		.product-thumbnail {
+			img {
+				max-width: ms(5) !important;
+			}
+		}
+
+		.mnm_table_item_indent {
+			padding-left: 0;
+
+			&:before {
+				@include fa-icon();
+				@include fa-icon-rotate(90deg,1);
+				content: "\f148";
+				margin-right: ms(-4);
+				opacity: .25;
+			}
+		}
+
+		.product-name,
+		.product-price,
+		.product-quantity {
+			font-size: 1em;
+		}
+	}
+}
+
+.mnm_image {
+	max-width: ms(6);
+}

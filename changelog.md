@@ -4,6 +4,7 @@
 * **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
 * **New** - Selective refresh on site title, tag line, logo and widgets.
 * **New** - Integration with [Advanced Product Labels](https://woocommerce.com/products/woocommerce-advanced-product-labels/) extension.
+* **New** - Integration with [WooCommerce Mix and Match](https://woocommerce.com/products/woocommerce-mix-and-match-products/) extension.
 * **Fix** - Product thumbnail size on cart page.
 * **Dev** - Restructured scss; removed components/typography and added main styles to `assets/sass/base/_base.scss`. Layout styles then added to `assets/sass/base/_layout.scss`. Moved WooCommerce extension integration styles to `assets/sass/woocommerce/extensions/`.
 
