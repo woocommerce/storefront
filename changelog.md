@@ -4,7 +4,7 @@
 * **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
 * **New** - Selective refresh on site title, tag line, logo and widgets.
 * **Fix** - Product thumbnail size on cart page.
-* **Dev** - Restructured scss; removed components/typography and added main styles to `sass/base/_base.scss`. Layout styles then added to `sass/base/_layout.scss`.
+* **Dev** - Restructured scss; removed components/typography and added main styles to `assets/sass/base/_base.scss`. Layout styles then added to `assets/sass/base/_layout.scss`. Moved WooCommerce extension integration styles to `assets/sass/woocommerce/extensions/`.
 
 ### *2016.07.26* - 2.0.7
 * **Fix** - Compatibility with PHP 5.2.

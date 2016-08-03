@@ -1,5 +1,6 @@
 # Compiled CSS
 /assets/sass/woocommerce/*.css
+/assets/sass/woocommerce/extensions/*.css
 /assets/sass/admin/welcome-screen/*.css
 /assets/sass/jetpack/*.css
 style.css
