@@ -1,0 +1,31 @@
+/**
+ * WooCommerce Mix and Match
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../../assets/sass/utils/variables';
+@import '../../../../assets/sass/utils/mixins';
+@import '../../../../assets/sass/vendors/modular-scale';
+@import '../../../../assets/sass/vendors/font-awesome/variables';
+@import '../../../../assets/sass/vendors/font-awesome/mixins';
+
+.quick-view-button {
+	span {
+		display: none;
+	}
+
+	&:before {
+		@include fa-icon();
+		content: "\f06e";
+		margin-right: ms(-2);
+	}
+}
+
+div.quick-view div.quick-view-image a.button {
+	@include button();
+	line-height: inherit;
+	display: block;
+}

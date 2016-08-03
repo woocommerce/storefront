@@ -37,8 +37,8 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			// Integrations.
-			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_integrations_scripts' ) );
-			add_action( 'wp_enqueue_scripts', 						array( $this, 'add_integrations_customizer_css' ) );
+			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_integrations_scripts' ), 99 );
+			add_action( 'wp_enqueue_scripts', 						array( $this, 'add_integrations_customizer_css' ), 99 );
 		}
 
 		/**
@@ -268,6 +268,14 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			/**
+			 * WooCommerce Quick View
+			 */
+			if ( $this->is_woocommerce_extension_activated( 'WC_Quick_View' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-quick-view-style', get_template_directory_uri() . '/assets/sass/woocommerce/extensions/quick-view.css', 'storefront-woocommerce-style' );
+				wp_style_add_data( 'storefront-woocommerce-quick-view-style', 'rtl', 'replace' );
+			}
+
+			/**
 			 * Checkout Add Ons
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Checkout_Add_Ons' ) ) {
@@ -281,17 +289,34 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0
 		 */
 		public function add_integrations_customizer_css() {
-			$accent_color 					= get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#FFA107' ) );
-			$header_text_color 				= get_theme_mod( 'storefront_header_text_color', apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ) );
-			$header_background_color 		= get_theme_mod( 'storefront_header_background_color', apply_filters( 'storefront_default_header_background_color', '#2c2d33' ) );
-			$text_color 					= get_theme_mod( 'storefront_text_color', apply_filters( 'storefront_default_text_color', '#60646c' ) );
-			$button_background_color 		= get_theme_mod( 'storefront_button_background_color', apply_filters( 'storefront_default_button_background_color', '#60646c' ) );
-			$button_text_color 				= get_theme_mod( 'storefront_button_text_color', apply_filters( 'storefront_default_button_text_color', '#ffffff' ) );
+			$accent_color 					= get_theme_mod( 'storefront_accent_color' );
+			$header_text_color 				= get_theme_mod( 'storefront_header_text_color' );
+			$header_background_color 		= get_theme_mod( 'storefront_header_background_color' );
+			$text_color 					= get_theme_mod( 'storefront_text_color' );
+			$button_background_color 		= get_theme_mod( 'storefront_button_background_color' );
+			$button_text_color 				= get_theme_mod( 'storefront_button_text_color' );
+			$brighten_factor                = apply_filters( 'storefront_brighten_factor', 25 );
+			$darken_factor                  = apply_filters( 'storefront_darken_factor', -25 );
 
-			$woocommerce_style 				= '';
+			$woocommerce_extension_style 				= '';
+
+			if ( $this->is_woocommerce_extension_activated( 'WC_Quick_View' ) ) {
+				$woocommerce_extension_style 					.= '
+				div.quick-view div.quick-view-image a.button {
+					background-color: ' . $button_background_color . ' !important;
+					border-color: ' . $button_background_color . ' !important;
+					color: ' . $button_text_color . ' !important;
+				}
+
+				div.quick-view div.quick-view-image a.button:hover {
+					background-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ' !important;
+					border-color: ' . storefront_adjust_color_brightness( $button_background_color, $darken_factor ) . ' !important;
+					color: ' . $button_text_color . ' !important;
+				}';
+			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-				$woocommerce_style 					.= '
+				$woocommerce_extension_style 					.= '
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
 				#wc-bookings-booking-form .block-picker li a:hover,
@@ -311,7 +336,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-				$woocommerce_style 					.= '
+				$woocommerce_extension_style 					.= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
 					background-color: ' . $text_color . ' !important;
@@ -337,7 +362,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-				$woocommerce_style 					.= '
+				$woocommerce_extension_style 					.= '
 				.coupon-container {
 					background-color: ' . $button_background_color . ' !important;
 				}
@@ -353,7 +378,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 				}';
 			}
 
-			wp_add_inline_style( 'storefront-style', $woocommerce_style );
+			wp_add_inline_style( 'storefront-woocommerce-style', $woocommerce_extension_style );
 		}
 	}
 
