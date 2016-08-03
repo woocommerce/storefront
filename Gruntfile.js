@@ -100,6 +100,7 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/deposits.css': 'assets/sass/woocommerce/extensions/deposits.scss',
 					'assets/sass/woocommerce/extensions/bundles.css': 'assets/sass/woocommerce/extensions/bundles.scss',
 					'assets/sass/woocommerce/extensions/ship-multiple-addresses.css': 'assets/sass/woocommerce/extensions/ship-multiple-addresses.scss',
+					'assets/sass/woocommerce/extensions/advanced-product-labels.css': 'assets/sass/woocommerce/extensions/advanced-product-labels.scss',
 					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
 					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss'
 				}]
@@ -289,6 +290,7 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/deposits.css',
 					'assets/sass/woocommerce/extensions/bundles.css',
 					'assets/sass/woocommerce/extensions/ship-multiple-addresses.css',
+					'assets/sass/woocommerce/extensions/advanced-product-labels.css',
 					'assets/sass/woocommerce/woocommerce.css',
 					'assets/sass/admin/welcome-screen/welcome.css',
 					'assets/sass/jetpack/jetpack.css'

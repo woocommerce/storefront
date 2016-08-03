@@ -252,6 +252,14 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			/**
+			 * WooCommerce Advanced Product Labels
+			 */
+			if ( $this->is_woocommerce_extension_activated( 'Woocommerce_Advanced_Product_Labels' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-apl-style', get_template_directory_uri() . '/assets/sass/woocommerce/extensions/advanced-product-labels.css', 'storefront-woocommerce-style' );
+				wp_style_add_data( 'storefront-woocommerce-apl-style', 'rtl', 'replace' );
+			}
+
+			/**
 			 * Checkout Add Ons
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Checkout_Add_Ons' ) ) {
