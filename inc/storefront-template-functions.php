@@ -153,7 +153,7 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 
 if ( ! function_exists( 'storefront_site_branding' ) ) {
 	/**
-	 * Display Site Branding
+	 * Site branding wrapper and display
 	 *
 	 * @since  1.0.0
 	 * @return void
@@ -161,25 +161,36 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	function storefront_site_branding() {
 		?>
 		<div class="site-branding">
-			<?php
-			if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
-				$logo = get_custom_logo();
-
-				echo $logo = is_front_page() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
-			} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
-				jetpack_the_site_logo();
-			} else {
-				$tag = is_front_page() ? 'h1' : 'div';
-
-				echo '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
-
-				if ( '' != get_bloginfo( 'description' ) ) { ?>
-					<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
-					<?php
-				}
-			} ?>
+			<?php storefront_site_title_or_logo(); ?>
 		</div>
 		<?php
+	}
+}
+
+if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
+	/**
+	 * Display the site title or logo
+	 *
+	 * @since  2.1.0
+	 * @return void
+	 */
+	function storefront_site_title_or_logo() {
+		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+			$logo = get_custom_logo();
+
+			echo $logo = is_front_page() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+			jetpack_the_site_logo();
+		} else {
+			$tag = is_front_page() ? 'h1' : 'div';
+
+			echo '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
+
+			if ( '' != get_bloginfo( 'description' ) ) { ?>
+				<p class="site-description"><?php echo bloginfo( 'description' ); ?></p>
+				<?php
+			}
+		}
 	}
 }
 

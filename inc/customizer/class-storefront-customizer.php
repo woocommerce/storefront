@@ -144,8 +144,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->get_section( 'header_image' )->priority      = 25;
 
 			// Selective refresh.
+			$wp_customize->selective_refresh->add_partial( 'custom_logo', array(
+				'selector'        => '.site-branding',
+				'render_callback' => function() {
+					storefront_site_title_or_logo();
+				},
+			) );
+
 			$wp_customize->selective_refresh->add_partial( 'blogname', array(
-				'selector'        => '.site-title a',
+				'selector'        => '.site-title.beta a',
 				'render_callback' => function() {
 					bloginfo( 'name' );
 				},
