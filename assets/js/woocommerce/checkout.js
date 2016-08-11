@@ -20,10 +20,17 @@ jQuery( window ).load( function() {
 			// When we reach the order review element during scroll...
 		   	if ( topDistance > checkoutPosition.top ) {
 				jQuery( '#order_review' ).addClass( 'payment-fixed' );
-				jQuery( '#order_review' ).css({
-					'margin-left':		paymentOffset,
-					'width':			paymentWidth
-				});
+				if ( jQuery( '#order_review' ).css( 'direction' ) === 'rtl' ) {
+					jQuery( '#order_review' ).css({
+						'margin-right':		paymentOffset,
+						'width':			paymentWidth
+					});
+				} else {
+					jQuery( '#order_review' ).css({
+						'margin-left':		paymentOffset,
+						'width':			paymentWidth
+					});
+				}
 		   	} else {
 				jQuery( '#order_review' ).removeAttr( 'style' ).removeClass( 'payment-fixed' );
 		   	}
