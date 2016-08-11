@@ -7,6 +7,7 @@
 * **New** - Integration with [WooCommerce Mix and Match](https://woocommerce.com/products/woocommerce-mix-and-match-products/) extension.
 * **New** - Integration with [WooCommerce Quick View](https://woocommerce.com/products/woocommerce-quick-view/) extension.
 * **Fix** - Product thumbnail size on cart page.
+* **Fix** - Sticky order review position on RTL stores. Kudos [@farookibrahim](https://github.com/farookibrahim)
 * **Dev** - Restructured scss; removed components/typography and added main styles to `assets/sass/base/_base.scss`. Layout styles then added to `assets/sass/base/_layout.scss`. Moved WooCommerce extension integration styles to `assets/sass/woocommerce/extensions/`.
 
 ### *2016.07.26* - 2.0.7
