@@ -178,11 +178,11 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			$logo = get_custom_logo();
 
-			echo $logo = is_front_page() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+			echo $logo = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
 		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 			jetpack_the_site_logo();
 		} else {
-			$tag = is_front_page() ? 'h1' : 'div';
+			$tag = is_home() ? 'h1' : 'div';
 
 			echo '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_attr( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
 
