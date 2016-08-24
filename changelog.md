@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.1.0
+### *2016.08.24* - 2.1.0
 * **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
 * **New** - Selective refresh on site title, tag line, logo and widgets.
 * **New** - Integration with [Advanced Product Labels](https://woocommerce.com/products/woocommerce-advanced-product-labels/) extension.
