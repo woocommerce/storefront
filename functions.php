@@ -19,7 +19,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 $storefront = (object) array(
-	'version' => $storefront_version,
+	'version'     => $storefront_version,
 
 	/**
 	 * Initialize all the things.
@@ -27,8 +27,8 @@ $storefront = (object) array(
 	'main'        => require 'inc/class-storefront.php',
 	'jetpack'     => require 'inc/jetpack/class-storefront-jetpack.php',
 	'customizer'  => require 'inc/customizer/class-storefront-customizer.php',
-	'woocommerce' => null,
-	'admin'       => null,
+	'woocommerce' => is_woocommerce_activated() ? require 'inc/woocommerce/class-storefront-woocommerce.php' : null,
+	'admin'       => is_admin() ? require 'inc/admin/class-storefront-admin.php' : null,
 );
 
 require 'inc/storefront-functions.php';
@@ -36,13 +36,8 @@ require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
 
 if ( is_woocommerce_activated() ) {
-	$storefront->woocommerce = require 'inc/woocommerce/class-storefront-woocommerce.php';
 	require 'inc/woocommerce/storefront-woocommerce-template-hooks.php';
 	require 'inc/woocommerce/storefront-woocommerce-template-functions.php';
-}
-
-if ( is_admin() ) {
-	$storefront->admin = require 'inc/admin/class-storefront-admin.php';
 }
 
 /**
