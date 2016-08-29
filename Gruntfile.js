@@ -51,18 +51,6 @@ module.exports = function( grunt ) {
 					ext: '.min.js'
 				}]
 			},
-			customizer: {
-				files: [{
-					expand: true,
-					cwd: 'assets/js/customizer/',
-					src: [
-						'*.js',
-						'!*.min.js'
-					],
-					dest: 'assets/js/customizer/',
-					ext: '.min.js'
-				}]
-			},
 			woocommerce: {
 				files: [{
 					expand: true,
@@ -333,7 +321,6 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'deploy', [
-		'dev',
 		'copy'
 	]);
 };
