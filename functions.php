@@ -29,7 +29,7 @@ $storefront = (object) array(
 );
 
 if ( class_exists( 'Jetpack' ) ) {
-	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php',
+	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php';
 }
 
 require 'inc/storefront-functions.php';
