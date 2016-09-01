@@ -189,7 +189,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_heading_color', array(
 				'default'           	=> apply_filters( 'storefront_default_heading_color', '#484c51' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_heading_color', array(
@@ -205,7 +204,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_text_color', array(
 				'default'           	=> apply_filters( 'storefront_default_text_color', '#43454b' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_text_color', array(
@@ -243,7 +241,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_header_background_color', array(
 				'default'           	=> apply_filters( 'storefront_default_header_background_color', '#2c2d33' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_header_background_color', array(
@@ -259,7 +256,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_header_text_color', array(
 				'default'           	=> apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_header_text_color', array(
@@ -275,7 +271,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_header_link_color', array(
 				'default'           	=> apply_filters( 'storefront_default_header_link_color', '#d5d9db' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_header_link_color', array(
@@ -300,7 +295,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_footer_background_color', array(
 				'default'           	=> apply_filters( 'storefront_default_footer_background_color', '#f0f0f0' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_background_color', array(
@@ -316,7 +310,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_footer_heading_color', array(
 				'default'           	=> apply_filters( 'storefront_default_footer_heading_color', '#494c50' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport' 			=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_heading_color', array(
@@ -332,7 +325,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_footer_text_color', array(
 				'default'           	=> apply_filters( 'storefront_default_footer_text_color', '#61656b' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_text_color', array(
@@ -348,7 +340,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting( 'storefront_footer_link_color', array(
 				'default'           	=> apply_filters( 'storefront_default_footer_link_color', '#2c2d33' ),
 				'sanitize_callback' 	=> 'sanitize_hex_color',
-				'transport'				=> 'postMessage',
 			) );
 
 			$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'storefront_footer_link_color', array(
