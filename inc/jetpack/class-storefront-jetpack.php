@@ -47,10 +47,8 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		public function jetpack_scripts() {
 			global $storefront_version;
 
-			if ( class_exists( 'Jetpack' ) ) {
-				wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/assets/sass/jetpack/jetpack.css', '', $storefront_version );
-				wp_style_add_data( 'storefront-jetpack-style', 'rtl', 'replace' );
-			}
+			wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/assets/sass/jetpack/jetpack.css', '', $storefront_version );
+			wp_style_add_data( 'storefront-jetpack-style', 'rtl', 'replace' );
 		}
 	}
 
