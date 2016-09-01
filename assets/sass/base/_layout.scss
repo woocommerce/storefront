@@ -414,6 +414,8 @@
 				display: none; // display: none; is required to make dropdowns work on touch devices
 
 				li {
+					display: block;
+
 					a {
 						width: 200px;
 					}
