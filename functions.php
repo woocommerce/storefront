@@ -18,25 +18,33 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 980; /* pixels */
 }
 
-/**
- * Initialize all the things.
- */
-require 'inc/class-storefront.php';
-require 'inc/jetpack/class-storefront-jetpack.php';
-require 'inc/customizer/class-storefront-customizer.php';
+$storefront = (object) array(
+	'version' => $storefront_version,
+
+	/**
+	 * Initialize all the things.
+	 */
+	'main'       => require 'inc/class-storefront.php',
+	'customizer' => require 'inc/customizer/class-storefront-customizer.php',
+);
+
+if ( class_exists( 'Jetpack' ) ) {
+	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php',
+}
 
 require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
 
 if ( is_woocommerce_activated() ) {
-	require 'inc/woocommerce/class-storefront-woocommerce.php';
+	$storefront->woocommerce = require 'inc/woocommerce/class-storefront-woocommerce.php';
+
 	require 'inc/woocommerce/storefront-woocommerce-template-hooks.php';
 	require 'inc/woocommerce/storefront-woocommerce-template-functions.php';
 }
 
 if ( is_admin() ) {
-	require 'inc/admin/class-storefront-admin.php';
+	$storefront->admin = require 'inc/admin/class-storefront-admin.php';
 }
 
 /**
