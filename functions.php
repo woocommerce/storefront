@@ -28,6 +28,10 @@ $storefront = (object) array(
 	'customizer' => require 'inc/customizer/class-storefront-customizer.php',
 );
 
+if ( class_exists( 'Jetpack' ) ) {
+	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php',
+}
+
 require 'inc/storefront-functions.php';
 require 'inc/storefront-template-hooks.php';
 require 'inc/storefront-template-functions.php';
@@ -41,10 +45,6 @@ if ( is_woocommerce_activated() ) {
 
 if ( is_admin() ) {
 	$storefront->admin = require 'inc/admin/class-storefront-admin.php';
-}
-
-if ( class_exists( 'Jetpack' ) ) {
-	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php',
 }
 
 /**
