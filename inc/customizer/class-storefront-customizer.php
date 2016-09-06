@@ -80,12 +80,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @return string
 		 */
 		public function get_theme_mod_value( $value ) {
-			if ( $value ) {
+			$key = substr( current_filter(), 10 );
+
+			$set_theme_mods = get_theme_mods();
+
+			if ( isset( $set_theme_mods[ $key ] ) ) {
 				return $value;
 			}
 
-			$key    = substr( current_filter(), 10 );
-			$values = self::get_storefront_default_setting_values();
+			$values = $this->setting_defaults();
 
 			return isset( $values[ $key ] ) ? $values[ $key ] : $value;
 		}

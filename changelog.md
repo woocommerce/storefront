@@ -1,5 +1,13 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.1.2
+* **Dev** - Tweaked how Customizer defaults are set so that checkboxes will work.
+
+### *2016.09.02* - 2.1.1
+* **Fix** - Changed some customizer settings transport from postMessage to refresh for live preview of changes.
+* **Fix** - Secondary navigation dropdown styling.
+* **Dev** - Restructured the way objects are initiated. Objects are now initiated into an accessible global $storefront for access to hooks. Kudos [@jtsternberg](https://github.com/jtsternberg).
+
 ### *2016.08.24* - 2.1.0
 * **New** - Lots of SEO enhancements. Kudos [@opportus](https://github.com/opportus).
 * **New** - Selective refresh on site title, tag line, logo and widgets.
