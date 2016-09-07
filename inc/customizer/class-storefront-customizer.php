@@ -88,7 +88,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				return $value;
 			}
 
-			$values = $this->setting_defaults();
+			$values = $this->get_storefront_default_setting_values();
 
 			return isset( $values[ $key ] ) ? $values[ $key ] : $value;
 		}
