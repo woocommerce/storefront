@@ -2,6 +2,7 @@
 
 ### *2016.xx.xx* - 2.1.2
 * **Fix** - Fatal errors in the Customizer when using older versions of WordPress.
+* **Tweak** - blockUI styling on checkout.
 * **Dev** - Tweaked how Customizer defaults are set so that checkboxes will work.
 
 ### *2016.09.02* - 2.1.1

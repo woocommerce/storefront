@@ -1025,14 +1025,30 @@ a.remove {
 	margin-bottom: ms(5);
 }
 
-body.woocommerce-checkout {
-	min-height: 100%; /* 1 */
-	position: relative; /* 1 */
-}
-
 form.checkout {
 	@include clearfix;
 	position: static !important; /* 1 */
+
+	> .blockUI {
+		position: fixed !important; /* 1 */
+	}
+}
+
+.blockUI {
+	&:before {
+		@include fa-icon();
+		content: "\f110";
+		@include animation(fa-spin .75s linear infinite);
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		font-size: 30px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -15px;
+		margin-top: -15px;
+	}
 }
 
 #payment {
