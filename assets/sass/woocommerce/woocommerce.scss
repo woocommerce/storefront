@@ -1017,13 +1017,22 @@ a.remove {
 
 /**
  * Checkout
+ *
+ * 1 - Required to make the blockUI overlay cover the entire page rather than just the checkout form. We do this because
+ *     otherwise our sticky order review can break out of the checkout form (and the blockUI element).
  */
 .checkout_coupon {
 	margin-bottom: ms(5);
 }
 
+body.woocommerce-checkout {
+	min-height: 100%; /* 1 */
+	position: relative; /* 1 */
+}
+
 form.checkout {
 	@include clearfix;
+	position: static !important; /* 1 */
 }
 
 #payment {
