@@ -2,6 +2,7 @@
 
 ### *2016.xx.xx* - 2.1.3
 * **Fix** - Dropdowns in the main navigation when tabbing through links.
+* **Fix** - Hide empty labels when using the Advanced Product Labels extension.
 
 ### *2016.09.08* - 2.1.2
 * **Fix** - Fatal errors in the Customizer when using older versions of WordPress.

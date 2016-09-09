@@ -27,6 +27,10 @@
 	display: inline-block;
 	margin: 0 auto;
 	font-size: ms(0);
+
+	&:empty {
+		display: none;
+	}
 }
 
 .wapl-label {
