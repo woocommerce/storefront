@@ -63,4 +63,16 @@
 			jQuery( this ).parents().toggleClass( 'focus' );
 		});
 	});
+
+	if ( is_touch_device() && jQuery( window ).width() > 767 ) {
+		jQuery( '.main-navigation ul ul, .secondary-navigation ul ul' ).addClass( 'sub-menu--is-touch-device' );
+	}
+
+	/**
+	 * Check if the device is touch enabled
+	 * @return Boolean
+	 */
+	function is_touch_device() {
+		return 'ontouchstart' in window || navigator.maxTouchPoints;
+	};
 } )();
