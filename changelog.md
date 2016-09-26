@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.1.3
+### *2016.09.26* - 2.1.3
 * **Fix** - Dropdowns in the main navigation when tabbing through links.
 * **Fix** - Hide empty labels when using the Advanced Product Labels extension.
 * **Tweak** - Updated MasterCard logo. Kudos [@nishitlangaliya](https://github.com/nishitlangaliya).
