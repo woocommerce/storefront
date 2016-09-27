@@ -342,7 +342,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * Check if the passed $json variable is an array and store it into the property...
+		 * Sets `self::structured_data`.
+		 *
+		 * @param array $json
 		 */
 		public static function set_structured_data( $json ) {
 			if ( ! is_array( $json ) ) {
@@ -353,8 +355,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * If self::$structured_data is set, wrap and echo it...
-		 * Hooked into the `wp_footer` action.
+		 * Outputs structured data.
+		 *
+		 * Hooked into `wp_footer` action hook.
 		 */
 		public function get_structured_data() {
 			if ( ! self::$structured_data ) {
@@ -369,13 +372,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$structured_data = $structured_data + self::$structured_data[0];
 			}
 
-			$structured_data = $this->sanitize_structured_data( $structured_data );
-
-			echo '<script type="application/ld+json">' . wp_json_encode( $structured_data ) . '</script>';
+			echo '<script type="application/ld+json">' . wp_json_encode( $this->sanitize_structured_data( $structured_data ) ) . '</script>';
 		}
 
 		/**
-		 * Sanitize structured data.
+		 * Sanitizes structured data.
 		 *
 		 * @param  array $data
 		 * @return array

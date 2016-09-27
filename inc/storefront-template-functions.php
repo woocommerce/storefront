@@ -803,15 +803,19 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
 
 if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 	/**
-	 * Generate the structured data...
-	 * Initialize Storefront::$structured_data via Storefront::set_structured_data()...
-	 * Hooked into:
-	 * `storefront_loop_post`
-	 * `storefront_single_post`
-	 * `storefront_page`
-	 * Apply `storefront_structured_data` filter hook for structured data customization :)
+	 * Generates structured data.
+	 *
+	 * Hooked into the following action hooks:
+	 *
+	 * - `storefront_loop_post`
+	 * - `storefront_single_post`
+	 * - `storefront_page`
+	 *
+	 * Applies `storefront_structured_data` filter hook for structured data customization :)
 	 */
 	function storefront_init_structured_data() {
+
+		// Post's structured data.
 		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ( is_woocommerce_activated() && ! is_woocommerce() ) ) {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
 			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
@@ -821,13 +825,6 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 			$json['mainEntityOfPage'] = array(
 				'@type'                 => 'webpage',
 				'@id'                   => get_the_permalink(),
-			);
-
-			$json['image']            = array(
-				'@type'                 => 'ImageObject',
-				'url'                   => $image[0],
-				'width'                 => $image[1],
-				'height'                => $image[2],
 			);
 
 			$json['publisher']        = array(
@@ -846,11 +843,22 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 				'name'                  => get_the_author(),
 			);
 
+			if ( $image ) {
+				$json['image']            = array(
+					'@type'                 => 'ImageObject',
+					'url'                   => $image[0],
+					'width'                 => $image[1],
+					'height'                => $image[2],
+				);
+			}
+
 			$json['datePublished']    = get_post_time( 'c' );
 			$json['dateModified']     = get_the_modified_date( 'c' );
 			$json['name']             = get_the_title();
-			$json['headline']         = get_the_title();
+			$json['headline']         = $json['name'];
 			$json['description']      = get_the_excerpt();
+
+		// Page's structured data.
 		} elseif ( is_page() ) {
 			$json['@type']            = 'WebPage';
 			$json['url']              = get_the_permalink();
