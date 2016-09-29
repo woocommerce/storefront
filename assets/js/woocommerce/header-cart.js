@@ -7,27 +7,22 @@
 	}
 
 	window.addEventListener( 'load', function() {
-		var cart         = document.querySelector( '.site-header-cart' ),
-			cartList     = document.querySelector( '.site-header-cart .widget_shopping_cart_content .cart_list' ),
-			isScrollable = false;
+		var cart = document.querySelector( '.site-header-cart' );
 
 		cart.addEventListener( 'mouseover', function() {
 			var windowHeight  = window.outerHeight,
-				cartBottomPos = document.querySelector( '.site-header-cart .widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight;
+				cartBottomPos = document.querySelector( '.site-header-cart .widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight,
+				cartList      = document.querySelector( '.site-header-cart .widget_shopping_cart_content .cart_list' );
 
 			if ( cartBottomPos > windowHeight ) {
 				cartList.style.maxHeight = '15em';
 				cartList.style.overflowY = 'auto';
-
-				isScrollable = true;
-			}
-		} );
-
-		cart.addEventListener( 'mouseleave', function() {
-			if ( isScrollable ) {				
-				cartList.style.maxHeight = '';
-				cartList.style.overflowY = '';
-			}
+			
+				cart.addEventListener( 'mouseleave', function() {
+					cartList.style.maxHeight = '';
+					cartList.style.overflowY = '';
+				} );
+			}	
 		} );
 	} );
 } )();
