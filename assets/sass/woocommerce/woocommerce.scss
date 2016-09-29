@@ -337,7 +337,9 @@ ul.products {
 			}
 		}
 
-		h3 {
+		h2, // @todo Remove when WooCommerce 2.8 is live
+		h3, // @todo Remove when WooCommerce 2.8 is live
+		.woocommerce-loop-product__title {
 			font-size: 1.1em;
 		}
 

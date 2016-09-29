@@ -1,5 +1,9 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.1.4
+* **Fix** - Product title size in loops (WooCommerce 2.7 compatibility).
+* **Tweak** - Structured data sanitization and other minor adjustments.
+
 ### *2016.09.26* - 2.1.3
 * **Fix** - Dropdowns in the main navigation when tabbing through links.
 * **Fix** - Hide empty labels when using the Advanced Product Labels extension.
