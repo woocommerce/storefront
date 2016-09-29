@@ -11,18 +11,18 @@
 
 		cart.addEventListener( 'mouseover', function() {
 			var windowHeight  = window.outerHeight,
-				cartBottomPos = document.querySelector( '.site-header-cart .widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight,
-				cartList      = document.querySelector( '.site-header-cart .widget_shopping_cart_content .cart_list' );
+				cartBottomPos = cart.querySelector( '.widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight,
+				cartList      = cart.querySelector( '.cart_list' );
 
 			if ( cartBottomPos > windowHeight ) {
 				cartList.style.maxHeight = '15em';
 				cartList.style.overflowY = 'auto';
-			
+
 				cart.addEventListener( 'mouseleave', function() {
 					cartList.style.maxHeight = '';
 					cartList.style.overflowY = '';
 				} );
-			}	
+			}
 		} );
 	} );
 } )();
