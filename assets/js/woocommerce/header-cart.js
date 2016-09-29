@@ -1,0 +1,33 @@
+/**
+ * Makes the header cart content scrollable if the height of the dropdown exceeds the window height.
+ */
+( function() {
+	if ( document.body.classList.contains( 'woocommerce-cart' ) || document.body.classList.contains( 'woocommerce-checkout' ) || window.innerWidth < 768 ) {
+		return;
+	}
+
+	window.addEventListener( 'load', function() {
+		var cart         = document.querySelector( '.site-header-cart' ),
+			cartList     = document.querySelector( '.site-header-cart .widget_shopping_cart_content .cart_list' ),
+			isScrollable = false;
+
+		cart.addEventListener( 'mouseover', function() {
+			var windowHeight  = window.outerHeight,
+				cartBottomPos = document.querySelector( '.site-header-cart .widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight;
+
+			if ( cartBottomPos > windowHeight ) {
+				cartList.style.maxHeight = '15em';
+				cartList.style.overflowY = 'auto';
+
+				isScrollable = true;
+			}
+		} );
+
+		cart.addEventListener( 'mouseleave', function() {
+			if ( isScrollable ) {				
+				cartList.style.maxHeight = '';
+				cartList.style.overflowY = '';
+			}
+		} );
+	} );
+} )();
