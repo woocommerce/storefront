@@ -3,6 +3,7 @@
 ### *2016.xx.xx* - 2.1.4
 * **Fix** - Product title size in loops (WooCommerce 2.7 compatibility).
 * **Tweak** - Structured data sanitization and other minor adjustments.
+* **Tweak** - Header cart dropdown now only scrolls if it renders beyond the current window height.
 
 ### *2016.09.26* - 2.1.3
 * **Fix** - Dropdowns in the main navigation when tabbing through links.
