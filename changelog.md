@@ -1,7 +1,7 @@
 # Storefront Changelog
 
 ### *2016.xx.xx* - 2.1.4
-* **Fix** - Product title size in loops (WooCommerce 2.7 compatibility).
+* **Fix** - Product/category title size in loops (WooCommerce 2.7 compatibility).
 * **Fix** - Star rating selector when WooCommerce lightbox is disabled.
 * **Tweak** - Structured data sanitization and other minor adjustments.
 * **Tweak** - Header cart dropdown now only scrolls if it renders beyond the current window height.
