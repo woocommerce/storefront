@@ -7,6 +7,7 @@
 * **Dev** - `storefront_post_thumbnail()` is now hooked in to `storefront_post_content_before`.
 * **Dev** - Added `storefront_post_content_before` and `storefront_post_content_after` actions.
 * **Dev** - `storefront_post_thumbnail()` now provides a default size.
+* **Dev** - Updated FontAwesome to 4.6.3.
 
 ### *2016.09.26* - 2.1.3
 * **Fix** - Dropdowns in the main navigation when tabbing through links.
