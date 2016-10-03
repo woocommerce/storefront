@@ -762,6 +762,17 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background: -webkit-linear-gradient(transparent 0,transparent 0),-webkit-linear-gradient(135deg,' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ' 33.33%,transparent 33.33%),-webkit-linear-gradient(45deg,' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ' 33.33%,transparent 33.33%)
 			}
 
+			p.stars a:before, p.stars a:hover~a:before,
+			p.stars.selected a.active~a:before {
+				color: ' . $storefront_theme_mods['text_color'] . ';
+			}
+
+			p.stars.selected a.active:before, p.stars:hover a:before,
+			p.stars.selected a:not(.active):before,
+			p.stars.selected a.active:before, p.stars:hover a:before {
+				color: ' . $storefront_theme_mods['accent_color'] . ';
+			}
+
 			@media screen and ( min-width: 768px ) {
 				.site-header-cart .widget_shopping_cart,
 				.site-header .product_list_widget li .quantity {

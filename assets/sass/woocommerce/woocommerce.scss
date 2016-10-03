@@ -1622,14 +1622,18 @@ p.stars {
 			width: 1em;
 			height: 1em;
 			line-height: 1;
-			font-family: "WooCommerce";
-			content: "\e021";
+			font-family: "star";
+			content: "\53";
+			color: $color_body;
 			text-indent: 0;
+			opacity: .25;
 		}
 
 		&:hover {
 			~ a:before {
-				content: "\e021";
+				content: "\53";
+				color: $color_body;
+				opacity: .25;
 			}
 		}
 	}
@@ -1637,7 +1641,9 @@ p.stars {
 	&:hover {
 		a {
 			&:before {
-				content: "\e020";
+				content: "\53";
+				color: $color_woocommerce;
+				opacity: 1;
 			}
 		}
 	}
@@ -1645,17 +1651,23 @@ p.stars {
 	&.selected {
 		a.active {
 			&:before {
-				content: "\e020";
+				content: "\53";
+				color: $color_woocommerce;
+				opacity: 1;
 			}
 
 			~ a:before {
-				content: "\e021";
+				content: "\53";
+				color: $color_body;
+				opacity: .25;
 			}
 		}
 
 		a:not(.active) {
 			&:before {
-				content: "\e020";
+				content: "\53";
+				color: $color_woocommerce;
+				opacity: 1;
 			}
 		}
 	}
