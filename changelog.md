@@ -4,6 +4,9 @@
 * **Fix** - Product title size in loops (WooCommerce 2.7 compatibility).
 * **Tweak** - Structured data sanitization and other minor adjustments.
 * **Tweak** - Header cart dropdown now only scrolls if it renders beyond the current window height.
+* **Dev** - `storefront_post_thumbnail()` is now hooked in to `storefront_post_content_before`.
+* **Dev** - Added `storefront_post_content_before` and `storefront_post_content_after` actions.
+* **Dev** - `storefront_post_thumbnail()` now provides a default size.
 
 ### *2016.09.26* - 2.1.3
 * **Fix** - Dropdowns in the main navigation when tabbing through links.

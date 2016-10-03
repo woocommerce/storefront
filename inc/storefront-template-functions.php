@@ -340,7 +340,13 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		?>
 		<div class="entry-content">
 		<?php
-		storefront_post_thumbnail( 'full' );
+
+		/**
+		 * Functions hooked in to storefront_post_content_before action.
+		 *
+		 * @hooked storefront_post_thumbnail - 10
+		 */
+		do_action( 'storefront_post_content_before' );
 
 		the_content(
 			sprintf(
@@ -348,6 +354,8 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 				'<span class="screen-reader-text">' . get_the_title() . '</span>'
 			)
 		);
+
+		do_action( 'storefront_post_content_after' );
 
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
@@ -776,7 +784,7 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 * @param string $size the post thumbnail size.
 	 * @since 1.5.0
 	 */
-	function storefront_post_thumbnail( $size ) {
+	function storefront_post_thumbnail( $size = 'full' ) {
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( $size );
 		}
