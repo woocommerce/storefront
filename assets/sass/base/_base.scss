@@ -278,6 +278,11 @@ body {
 	overflow-x: hidden;
 }
 
+.site-content,
+.header-widget-region {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
 /**
  * Header
  */
