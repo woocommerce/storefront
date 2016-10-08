@@ -75,39 +75,64 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 	/**
 	 * Display the footer widget regions
 	 *
-	 * @since  1.0.0
-	 * @return  void
+	 * @since 1.0.0
+	 * @use   storefront_sidebar_widgets()
 	 */
 	function storefront_footer_widgets() {
-		if ( is_active_sidebar( 'footer-4' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 4 );
-		} elseif ( is_active_sidebar( 'footer-3' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 3 );
-		} elseif ( is_active_sidebar( 'footer-2' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 2 );
-		} elseif ( is_active_sidebar( 'footer-1' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 1 );
+		storefront_sidebar_widgets( 'footer' );
+	}
+}
+
+if ( ! function_exists( 'storefront_top_footer_widgets' ) ) {
+	/**
+	 * Display the top footer widget regions
+	 *
+	 * @since 2.2.0
+	 * @use   storefront_sidebar_widgets()
+	 */
+	function storefront_top_footer_widgets() {
+		storefront_sidebar_widgets( 'top-footer' );
+	}
+}
+
+if ( ! function_exists( 'storefront_sidebar_widgets' ) ) {
+	/**
+	 * Display sidebar widget regions
+	 *
+	 * @since  2.2.0
+	 * @param  string $sidebar
+	 * @return void
+	 */
+	function storefront_sidebar_widgets( $sidebar ) {
+		if ( is_active_sidebar( $sidebar . '-4' ) ) {
+			$widget_columns = 4;
+		} elseif ( is_active_sidebar( $sidebar . '-3' ) ) {
+			$widget_columns = 3;
+		} elseif ( is_active_sidebar( $sidebar . '-2' ) ) {
+			$widget_columns = 2;
+		} elseif ( is_active_sidebar( $sidebar . '-1' ) ) {
+			$widget_columns = 1;
 		} else {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 0 );
+			$widget_columns = 0;
 		}
 
 		if ( $widget_columns > 0 ) : ?>
 
-			<div class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
+			<div class="<?php esc_attr_e( $sidebar ); ?>-widgets col-<?php echo intval( $widget_columns ); ?> fix">
 
 				<?php
 				$i = 0;
 				while ( $i < $widget_columns ) : $i++;
-					if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
+					if ( is_active_sidebar( $sidebar . '-' . $i ) ) : ?>
 
-						<div class="block footer-widget-<?php echo intval( $i ); ?>">
-							<?php dynamic_sidebar( 'footer-' . intval( $i ) ); ?>
+						<div class="block <?php esc_attr_e( $sidebar ); ?>-widget-<?php echo intval( $i ); ?>">
+							<?php dynamic_sidebar( $sidebar . '-' . intval( $i ) ); ?>
 						</div>
 
 					<?php endif;
 				endwhile; ?>
 
-			</div><!-- /.footer-widgets  -->
+				</div><!-- /.<?php esc_html_e( $sidebar ); ?>-widgets  -->
 
 		<?php endif;
 	}

@@ -142,6 +142,18 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'description'   => ''
 			);
 
+			$top_footer_widget_regions = apply_filters( 'top_storefront_footer_widget_regions', 3 );
+
+			for ( $i = 1; $i <= intval( $top_footer_widget_regions ); $i++ ) {
+				$top_footer = sprintf( 'top_footer_%d', $i );
+
+				$sidebar_args[ $top_footer ] = array(
+					'name'        => sprintf( __( 'Top Footer %d', 'storefront' ), $i ),
+					'id'          => sprintf( 'top-footer-%d', $i ),
+					'description' => sprintf( __( 'Widgetized Top Footer Region %d.', 'storefront' ), $i )
+				);
+			}
+
 			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
 
 			for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
