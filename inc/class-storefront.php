@@ -130,16 +130,16 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
 		 */
 		public function widgets_init() {
-			$sidebar_args['header'] = array(
-				'name'        => __( 'Below Header', 'storefront' ),
-				'id'          => 'header-1',
-				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
-			);
-
 			$sidebar_args['sidebar'] = array(
 				'name'          => __( 'Sidebar', 'storefront' ),
 				'id'            => 'sidebar-1',
 				'description'   => ''
+			);
+
+			$sidebar_args['header'] = array(
+				'name'        => __( 'Below Header', 'storefront' ),
+				'id'          => 'header-1',
+				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
 			);
 
 			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
