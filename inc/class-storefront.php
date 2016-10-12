@@ -130,40 +130,32 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
 		 */
 		public function widgets_init() {
+			$sidebar_args['sidebar'] = array(
+				'name'          => __( 'Sidebar', 'storefront' ),
+				'id'            => 'sidebar-1',
+				'description'   => ''
+			);
+			
 			$sidebar_args['header'] = array(
 				'name'        => __( 'Below Header', 'storefront' ),
 				'id'          => 'header-1',
 				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
 			);
 
-			$sidebar_args['sidebar'] = array(
-				'name'          => __( 'Sidebar', 'storefront' ),
-				'id'            => 'sidebar-1',
-				'description'   => ''
-			);
 
-			$top_footer_widget_regions = apply_filters( 'top_storefront_footer_widget_regions', 3 );
+			$footer_widget_rows    = intval( apply_filters( 'storefront_footer_widget_rows', 2 ) );
+			$footer_widget_regions = intval( apply_filters( 'storefront_footer_widget_regions', 4 ) );
 
-			for ( $i = 1; $i <= intval( $top_footer_widget_regions ); $i++ ) {
-				$top_footer = sprintf( 'top_footer_%d', $i );
+			for ( $row = 1; $row <= $footer_widget_rows; $row++ ) {
+				for ( $region = 1; $region <= $footer_widget_regions; $region++ ) {
+					$footer = sprintf( 'footer_%1$d_%2$d', $row, $region );
 
-				$sidebar_args[ $top_footer ] = array(
-					'name'        => sprintf( __( 'Top Footer %d', 'storefront' ), $i ),
-					'id'          => sprintf( 'top-footer-%d', $i ),
-					'description' => sprintf( __( 'Widgetized Top Footer Region %d.', 'storefront' ), $i )
-				);
-			}
-
-			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
-
-			for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
-				$footer = sprintf( 'footer_%d', $i );
-
-				$sidebar_args[ $footer ] = array(
-					'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
-					'id'          => sprintf( 'footer-%d', $i ),
-					'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
-				);
+					$sidebar_args[ $footer ] = array(
+						'name'        => sprintf( __( 'Footer Row%1$d Region%2$d', 'storefront' ), $row, $region ),
+						'id'          => sprintf( 'footer-%1$d-%2$d', $row, $region ),
+						'description' => sprintf( __( 'Widgetized Footer Row %1$d - Region %2$d.', 'storefront' ), $row, $region )
+					);
+				}
 			}
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
@@ -180,10 +172,17 @@ if ( ! class_exists( 'Storefront' ) ) :
 				 * 'storefront_header_widget_tags'
 				 * 'storefront_sidebar_widget_tags'
 				 *
-				 * storefront_footer_1_widget_tags
-				 * storefront_footer_2_widget_tags
-				 * storefront_footer_3_widget_tags
-				 * storefront_footer_4_widget_tags
+				 * 'storefront_footer_1_1_widget_tags'
+				 * 'storefront_footer_1_2_widget_tags'
+				 * 'storefront_footer_1_3_widget_tags'
+				 * 'storefront_footer_1_4_widget_tags'
+				 * 
+				 * 'storefront_footer_2_1_widget_tags'
+				 * 'storefront_footer_2_2_widget_tags'
+				 * 'storefront_footer_2_3_widget_tags'
+				 * 'storefront_footer_2_4_widget_tags'
+				 *
+				 * And so on...
 				 */
 				$filter_hook = sprintf( 'storefront_%s_widget_tags', $sidebar );
 				$widget_tags = apply_filters( $filter_hook, $widget_tags );

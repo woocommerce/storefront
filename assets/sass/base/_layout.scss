@@ -155,8 +155,7 @@
 	/**
 	 * Footer widgets
 	 */
-	.footer-widgets,
-	.top-footer-widgets {
+	.footer-widgets {
 		@include clearfix;
 		padding-top: ms(7);
 		border-bottom: 3px solid rgba(0,0,0,0.05);
@@ -165,8 +164,7 @@
 			.block {
 				@include span(6 of 12);
 
-				&.footer-widget-2,
-			    &.top-footer-widget-2{
+				&.footer-widget-2 {
 					@include last;
 				}
 			}
@@ -176,8 +174,7 @@
 			.block {
 				@include span(4 of 12);
 
-				&.footer-widget-3,
-			    &.top-footer-widget-3{
+				&.footer-widget-3 {
 					@include last;
 				}
 			}
@@ -187,8 +184,7 @@
 			.block {
 				@include span(3 of 12);
 
-				&.footer-widget-4,
-			    &.top-footer-widget-4{
+				&.footer-widget-4 {
 					@include last;
 				}
 			}
