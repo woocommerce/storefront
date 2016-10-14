@@ -90,10 +90,10 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 				}
 			}
 
-			if ( isset( $widget_columns ) ) : ?>
+			if ( isset( $widget_columns ) && 0 < $widget_columns ) : ?>
 				<div class="footer-widgets row-<?php echo strval( $row ); ?> col-<?php echo strval( $widget_columns ); ?> fix">
 
-					<?php for ( $i = 1; $i < $widget_columns; $i++ ) :
+					<?php for ( $i = 1; $i <= $widget_columns; $i++ ) :
 						if ( is_active_sidebar( 'footer-' . strval( $row ) . '-' . strval( $i ) ) ) : ?>
 
 							<div class="block footer-widget-<?php echo strval( $i ); ?>">
