@@ -1,12 +1,14 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.1.4
+### *2016.10.11* - 2.1.4
 * **Fix** - Product/category title size in loops (WooCommerce 2.7 compatibility).
 * **Fix** - Star rating selector when WooCommerce lightbox is disabled.
 * **Fix** - Dropdowns can now be closed on iOS.
+* **Fix** - PHP 5.2 compatibility.
 * **Tweak** - Structured data sanitization and other minor adjustments.
 * **Tweak** - Header cart dropdown now only scrolls if it renders beyond the current window height.
 * **Tweak** - Star rating selector styling.
+* **Tweak** - Widget region order. Addresses the issue of widgets being added to an unexpected region on default installs.
 * **Dev** - `storefront_post_thumbnail()` is now hooked in to `storefront_post_content_before`.
 * **Dev** - Added `storefront_post_content_before` and `storefront_post_content_after` actions.
 * **Dev** - `storefront_post_thumbnail()` now provides a default size.
