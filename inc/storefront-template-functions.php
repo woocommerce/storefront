@@ -884,7 +884,7 @@ if ( ! function_exists( 'storefront_generate_post_structured_data' ) ) {
 		$markup['headline']         = $markup['name'];
 		$markup['description']      = get_the_excerpt();
 
-		Storefront::set_structured_data( apply_filters( 'storefront_post_structured_data', $markup ) );
+		Storefront::set_structured_data( apply_filters( 'storefront_structured_data_post', $markup ) );
 	}
 }
 
@@ -904,6 +904,6 @@ if ( ! function_exists( 'storefront_generate_page_structured_data' ) ) {
 		$markup['name']        = get_the_title();
 		$markup['description'] = get_the_excerpt();
 
-		Storefront::set_structured_data( apply_filters( 'storefront_page_structured_data', $markup ) );
+		Storefront::set_structured_data( apply_filters( 'storefront_structured_data_page', $markup ) );
 	}
 }
