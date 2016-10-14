@@ -84,26 +84,28 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 		for ( $row = 1; $row <= $rows; $row++ ) {
 			for ( $region = $regions; 0 < $region; $region-- ) {
-				if ( is_active_sidebar( 'footer-' . $row . '-' . $region ) ) {
-					$widget_columns = $region;
+				if ( is_active_sidebar( 'footer-' . strval( $region + $regions * ( $row - 1 ) ) ) ) {
+					$columns = $region;
 					break;
 				}
 			}
 
-			if ( isset( $widget_columns ) ) : ?>
-				<div class="footer-widgets row-<?php echo strval( $row ); ?> col-<?php echo strval( $widget_columns ); ?> fix">
+			if ( isset( $columns ) && 0 < $columns ) : ?>
+				<div class=<?php echo '"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix"'; ?>>
 
-					<?php for ( $i = 1; $i < $widget_columns; $i++ ) :
-						if ( is_active_sidebar( 'footer-' . strval( $row ) . '-' . strval( $i ) ) ) : ?>
+					<?php for ( $column = 1; $column <= $columns; $column++ ) :
+						$footer_n = $column + $regions * ( $row - 1 );
 
-							<div class="block footer-widget-<?php echo strval( $i ); ?>">
-								<?php dynamic_sidebar( 'footer-' . strval( $row ) . '-' . strval( $i ) ); ?>
+						if ( is_active_sidebar( 'footer-' . strval( $footer_n ) ) ) : ?>
+
+							<div class="block footer-widget-<?php echo strval( $column ); ?>">
+								<?php dynamic_sidebar( 'footer-' . strval( $footer_n ) ); ?>
 							</div>
 
 						<?php endif;
 					endfor; ?>
 
-				</div><!-- /.footer-widgets .row-<?php echo strval( $row ); ?> -->
+				</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> -->
 
 			<?php endif;
 		}
