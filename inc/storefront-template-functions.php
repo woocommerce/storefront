@@ -833,73 +833,77 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_init_structured_data' ) ) {
+if ( ! function_exists( 'storefront_generate_post_structured_data' ) ) {
 	/**
-	 * Generates structured data.
+	 * Generates post structured data.
 	 *
-	 * Hooked into the following action hooks:
+	 * Hooked into `storefront_loop_post` and `storefront_single_post` action hooks.
 	 *
-	 * - `storefront_loop_post`
-	 * - `storefront_single_post`
-	 * - `storefront_page`
-	 *
-	 * Applies `storefront_structured_data` filter hook for structured data customization :)
+	 * Applies `storefront_post_structured_data` filter hook for structured data customization.
 	 */
-	function storefront_init_structured_data() {
+	function storefront_generate_post_structured_data() {
+		$markup = array();
+		$image  = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
+		$logo   = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
-		// Post's structured data.
-		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ( is_woocommerce_activated() && ! is_woocommerce() ) ) {
-			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
-			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
+		$markup['@type']            = 'BlogPosting';
 
-			$json['@type']            = 'BlogPosting';
+		$markup['mainEntityOfPage'] = array(
+			'@type' => 'webpage',
+			'@id'   => get_the_permalink(),
+		);
 
-			$json['mainEntityOfPage'] = array(
-				'@type'                 => 'webpage',
-				'@id'                   => get_the_permalink(),
+		$markup['publisher']        = array(
+			'@type' => 'organization',
+			'name'  => get_bloginfo( 'name' ),
+			'logo'  => array(
+				'@type'  => 'ImageObject',
+				'url'    => $logo[0],
+				'width'  => $logo[1],
+				'height' => $logo[2],
+			),
+		);
+
+		$markup['author']           = array(
+			'@type' => 'person',
+			'name'  => get_the_author(),
+		);
+
+		if ( $image ) {
+			$markup['image'] = array(
+				'@type'  => 'ImageObject',
+				'url'    => $image[0],
+				'width'  => $image[1],
+				'height' => $image[2],
 			);
-
-			$json['publisher']        = array(
-				'@type'                 => 'organization',
-				'name'                  => get_bloginfo( 'name' ),
-				'logo'                  => array(
-					'@type'               => 'ImageObject',
-					'url'                 => $logo[0],
-					'width'               => $logo[1],
-					'height'              => $logo[2],
-				),
-			);
-
-			$json['author']           = array(
-				'@type'                 => 'person',
-				'name'                  => get_the_author(),
-			);
-
-			if ( $image ) {
-				$json['image']            = array(
-					'@type'                 => 'ImageObject',
-					'url'                   => $image[0],
-					'width'                 => $image[1],
-					'height'                => $image[2],
-				);
-			}
-
-			$json['datePublished']    = get_post_time( 'c' );
-			$json['dateModified']     = get_the_modified_date( 'c' );
-			$json['name']             = get_the_title();
-			$json['headline']         = $json['name'];
-			$json['description']      = get_the_excerpt();
-
-		// Page's structured data.
-		} elseif ( is_page() ) {
-			$json['@type']            = 'WebPage';
-			$json['url']              = get_the_permalink();
-			$json['name']             = get_the_title();
-			$json['description']      = get_the_excerpt();
 		}
 
-		if ( isset( $json ) ) {
-			Storefront::set_structured_data( apply_filters( 'storefront_structured_data', $json ) );
-		}
+		$markup['datePublished']    = get_post_time( 'c' );
+		$markup['dateModified']     = get_the_modified_date( 'c' );
+		$markup['name']             = get_the_title();
+		$markup['headline']         = $markup['name'];
+		$markup['description']      = get_the_excerpt();
+
+		Storefront::set_structured_data( apply_filters( 'storefront_post_structured_data', $markup ) );
+	}
+}
+
+if ( ! function_exists( 'storefront_generate_page_structured_data' ) ) {
+	/**
+	 * Generates page structured data.
+	 *
+	 * Hooked into `storefront_page` action hook.
+	 *
+	 * Applies `storefront_page_structured_data` filter hook for structured data customization.
+	 */
+	function storefront_generate_page_structured_data() {
+		$markup = array();
+
+		$markup['@type']       = 'WebPage';
+		$markup['url']         = get_the_permalink();
+		$markup['name']        = get_the_title();
+		$markup['description'] = get_the_excerpt();
+
+		Storefront::set_structured_data( apply_filters( 'storefront_page_structured_data', $markup ) );
 	}
 }
