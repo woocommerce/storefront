@@ -147,7 +147,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			for ( $row = 1; $row <= $rows; $row++ ) {
 				for ( $region = 1; $region <= $regions; $region++ ) {
-					$footer_n = $region + $regions * ( $row - 1 );
+					$footer_n = $region + $regions * ( $row - 1 ); // Defines footer sidebar ID.
 					$footer   = sprintf( 'footer_%d', $footer_n );
 
 					$sidebar_args[ $footer ] = array(

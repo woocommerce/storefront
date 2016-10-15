@@ -73,7 +73,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 
 if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 	/**
-	 * Display the footer widget regions
+	 * Display the footer widget regions.
 	 *
 	 * @since  1.0.0
 	 * @return void
@@ -82,7 +82,9 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 		$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 2 ) );
 		$regions = intval( apply_filters( 'storefront_footer_widget_regions', 4 ) );
 
-		for ( $row = 1; $row <= $rows; $row++ ) {
+		for ( $row = 1; $row <= $rows; $row++ ) :
+
+			// Defines the number of active columns in this footer row.
 			for ( $region = $regions; 0 < $region; $region-- ) {
 				if ( is_active_sidebar( 'footer-' . strval( $region + $regions * ( $row - 1 ) ) ) ) {
 					$columns = $region;
@@ -90,25 +92,26 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 				}
 			}
 
-			if ( isset( $columns ) && 0 < $columns ) : ?>
-				<div class=<?php echo '"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix"'; ?>>
+			if ( isset( $columns ) ) : ?>
+				<div class=<?php echo '"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix"'; ?>><?php
 
-					<?php for ( $column = 1; $column <= $columns; $column++ ) :
+					for ( $column = 1; $column <= $columns; $column++ ) :
 						$footer_n = $column + $regions * ( $row - 1 );
 
 						if ( is_active_sidebar( 'footer-' . strval( $footer_n ) ) ) : ?>
 
 							<div class="block footer-widget-<?php echo strval( $column ); ?>">
 								<?php dynamic_sidebar( 'footer-' . strval( $footer_n ) ); ?>
-							</div>
+							</div><?php
 
-						<?php endif;
+						endif;
 					endfor; ?>
 
-				</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> -->
+				</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> --><?php
 
-			<?php endif;
-		}
+				unset( $columns );
+			endif;
+		endfor;
 	}
 }
 
