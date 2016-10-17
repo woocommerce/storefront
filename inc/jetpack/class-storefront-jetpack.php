@@ -33,10 +33,41 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 * See: http://jetpack.me/support/infinite-scroll/
 		 */
 		public function jetpack_setup() {
-			add_theme_support( 'infinite-scroll', array(
-				'container' => 'main',
-				'footer'    => 'page',
-			) );
+			add_theme_support( 'infinite-scroll', apply_filters( 'storefront_jetpack_infinite_scroll_args', array(
+				'container'      => 'main',
+				'footer'         => 'page',
+				'type'           => 'click',
+				'posts_per_page' => '12',
+				'render'         => array( $this, 'jetpack_infinite_scroll_loop' ),
+				'footer_widgets' => array(
+										'footer-1',
+										'footer-2',
+										'footer-3',
+										'footer-4',
+									),
+			) ) );
+		}
+
+		/**
+		 * A loop used to display content appended using Jetpack inifinte scroll
+		 * @return void
+		 */
+		public function jetpack_infinite_scroll_loop() {
+			if ( storefront_is_product_archive() ) {
+				woocommerce_product_loop_start();
+			}
+
+			while ( have_posts() ) : the_post();
+				if ( storefront_is_product_archive() ) {
+					wc_get_template_part( 'content', 'product' );
+				} else {
+					get_template_part( 'content', get_post_format() );
+				}
+			endwhile; // end of the loop.
+
+			if ( storefront_is_product_archive() ) {
+				woocommerce_product_loop_end();
+			}
 		}
 
 		/**

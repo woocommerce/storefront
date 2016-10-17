@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.10.17* - 2.1.5
+* **Tweak** - Jetpack infinite scroll now works on product archives as well as posts.
+
 ### *2016.10.11* - 2.1.4
 * **Fix** - Product/category title size in loops (WooCommerce 2.7 compatibility).
 * **Fix** - Star rating selector when WooCommerce lightbox is disabled.

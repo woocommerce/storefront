@@ -24,6 +24,10 @@
 
 /* Globally hidden elements when Infinite Scroll is supported and in use. */
 .infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll .pagination,
+.infinite-scroll .woocommerce-pagination,
+.infinite-scroll ul.products + .storefront-sorting,
+.infinite-scroll .woocommerce-result-count,
 .infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
 	display: none;
 }

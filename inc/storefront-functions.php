@@ -13,6 +13,22 @@ function is_woocommerce_activated() {
 }
 
 /**
+ * Checks if the current page is a product archive
+ * @return boolean
+ */
+function storefront_is_product_archive() {
+	if ( is_woocommerce_activated() ) {
+		if ( is_shop() || is_product_taxonomy() || is_product_category() || is_product_tag() ) {
+			return true;
+		} else {
+			return false;
+		}
+	} else {
+		return false;
+	}
+}
+
+/**
  * Call a shortcode function by tag name.
  *
  * @since  1.4.6
