@@ -383,15 +383,117 @@ ul.products {
  * Single Product
  */
 .single-product {
+	.pswp__button {
+		background-color: transparent;
+	}
+
 	div.product {
 		@include clearfix;
 		position: relative;
 		overflow: hidden;
 
 		.images,
-		.summary {
+		.summary,
+		.woocommerce-product-gallery {
 			margin-bottom: ms(5);
 			margin-top: 0;
+		}
+
+		.woocommerce-product-gallery {
+			position: relative;
+
+			.woocommerce-product-gallery__trigger {
+				position: absolute;
+				top: ms(-1);
+				right: ms(-1);
+				display: block;
+				height: 2em;
+				width: 2em;
+				border-radius: 3px;
+				z-index: 99;
+				text-align: center;
+
+				&:before {
+					@include fa-icon();
+					content: "\f00e";
+					line-height: 1.8;
+				}
+
+				img {
+					display: none !important;
+				}
+			}
+
+			img {
+				margin: 0;
+			}
+
+			.flex-viewport {
+				margin-bottom: ms(3);
+			}
+
+			.flex-control-thumbs {
+				@include clearfix;
+				margin: 0;
+				padding: 0;
+
+				li {
+					list-style: none;
+					margin-bottom: ms(3);
+					cursor: pointer;
+
+					img {
+						opacity: .5;
+						@include transition( all, ease, .2s );
+
+						&.flex-active {
+							opacity: 1;
+						}
+					}
+
+					&:hover {
+						img {
+							opacity: 1;
+						}
+					}
+				}
+			}
+
+			&.woocommerce-product-gallery--columns-2 {
+				.flex-control-thumbs {
+					li {
+						@include span( 2 of 4 );
+
+						&:nth-child(2n) {
+								margin-right: 0;
+						}
+					}
+				}
+			}
+
+			&.woocommerce-product-gallery--columns-3 {
+				.flex-control-thumbs {
+					li {
+						@include span( 1.333333333 of 4 );
+
+						&:nth-child(3n) {
+								margin-right: 0;
+						}
+					}
+				}
+			}
+
+			&.woocommerce-product-gallery--columns-4 {
+				.flex-control-thumbs {
+					li {
+						@include span( 1 of 4 );
+
+						&:nth-child(4n) {
+								margin-right: 0;
+						}
+					}
+				}
+			}
 		}
 
 		.images {
@@ -2187,6 +2289,11 @@ dl.variation {
 				}
 			}
 
+			.woocommerce-product-gallery {
+				@include span(4 of 9);
+				margin-bottom: ms(6);
+			}
+
 			.summary {
 				@include span(last 5 of 9);
 			}
@@ -2222,6 +2329,17 @@ dl.variation {
 						&.last {
 							margin-right: 0;
 						}
+					}
+				}
+			}
+
+			.woocommerce-product-gallery {
+				@include span(4 of 12);
+				margin-bottom: ms(6);
+
+				.flex-control-thumbs {
+					li {
+						@include span(1 of 4);
 					}
 				}
 			}

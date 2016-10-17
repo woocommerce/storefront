@@ -769,6 +769,17 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
+			.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+				background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+				color: ' . $storefront_theme_mods['button_text_color'] . ';
+			}
+
+			.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:hover {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				color: ' . $storefront_theme_mods['button_text_color'] . ';
+			}
+
 			@media screen and ( min-width: 768px ) {
 				.site-header-cart .widget_shopping_cart,
 				.site-header .product_list_widget li .quantity {
