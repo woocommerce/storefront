@@ -1665,6 +1665,17 @@ p.order-again {
 	color: #fff;
 	z-index: 999;
 
+	a {
+		color: #fff;
+		font-weight: 400;
+		text-decoration: underline;
+		display: block;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	&:before {
 		@include fa-icon();
 		margin-right: ms(-3);
@@ -1997,6 +2008,20 @@ dl.variation {
 @include susy-media($desktop) {
 	.demo_store {
 		bottom: 0;
+
+		a {
+			background: rgba(#000,.1);
+			float: right;
+			display: inline-block;
+			margin: -1em -1.41575em -1em 0;
+			padding: 1em ms(2);
+
+			&:before {
+				@include fa-icon();
+				content: "\f057";
+				margin-right: ms(-5);
+			}
+		}
 	}
 
 	/**

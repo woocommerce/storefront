@@ -3,6 +3,7 @@
 ### *2016.10.17* - 2.1.5
 * **Tweak** - Jetpack infinite scroll now works on product archives as well as posts.
 * **Tweak** - Add styles for WooCommerce 2.7's new gallery.
+* **Tweak** - Style the 'dismiss' link in WooCommerce 2.7's 'demo notice' feature.
 
 ### *2016.10.11* - 2.1.4
 * **Fix** - Product/category title size in loops (WooCommerce 2.7 compatibility).
