@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.10.17* - 2.1.5
+### *2016.10.24* - 2.1.5
 * **Tweak** - Jetpack infinite scroll now works on product archives as well as posts.
 * **Tweak** - Add styles for WooCommerce 2.7's new gallery.
 * **Tweak** - Style the 'dismiss' link in WooCommerce 2.7's 'demo notice' feature.
