@@ -2113,6 +2113,11 @@ dl.variation {
 			left: -999em;
 			display: block;
 
+			&.sub-menu--is-touch-device {
+				display: none;
+				left: 0;
+			}
+
 			h2.widgettitle {
 				display: none;
 			}
@@ -2132,6 +2137,7 @@ dl.variation {
 		&.focus {
 			.widget_shopping_cart {
 				left: 0;
+				display: block;
 			}
 		}
 	}

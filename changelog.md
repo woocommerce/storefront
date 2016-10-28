@@ -1,5 +1,9 @@
 # Storefront Changelog
 
+### *2016.10.xx* - 2.1.6
+* **Fix** - Close dropdowns in the nav when you tap away on touch devices.
+* **Fix** - Ensure the header cart dropdown works properly on touch devices.
+
 ### *2016.10.24* - 2.1.5
 * **Tweak** - Jetpack infinite scroll now works on product archives as well as posts.
 * **Tweak** - Add styles for WooCommerce 2.7's new gallery.

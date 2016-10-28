@@ -65,11 +65,13 @@
 	});
 
 	if ( is_touch_device() && jQuery( window ).width() > 767 ) {
-		jQuery( '.main-navigation ul ul, .secondary-navigation ul ul' ).addClass( 'sub-menu--is-touch-device' );
+		// Add an identifying class to dropdowns when on a touch device
+		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
+		jQuery( '.main-navigation ul ul, .secondary-navigation ul ul, .site-header-cart .widget_shopping_cart' ).addClass( 'sub-menu--is-touch-device' );
 
 		// Ensure the dropdowns close when user taps outside the site header
-		jQuery( '.site-content, .header-widget-region, .site-footer' ).on( 'click', function() {
-			jQuery( '.main-navigation li, .secondary-navigation li, .site-header-cart li' ).removeClass( 'focus' );
+		jQuery( '.site-content, .header-widget-region, .site-footer, .site-header:not(a)' ).on( 'click', function() {
+			return;
 		});
 	}
 
