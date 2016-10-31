@@ -18,7 +18,10 @@ if ( ! class_exists( 'Storefront' ) ) :
 	 */
 	class Storefront {
 
-		private static $structured_data;
+		/**
+		 * @var array $_structured_data
+		 */
+		private static $_structured_data;
 
 		/**
 		 * Setup class.
@@ -342,16 +345,16 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * Sets `self::structured_data`.
+		 * Sets `self::$_structured_data`.
 		 *
-		 * @param array $json
+		 * @param array $markup
 		 */
-		public static function set_structured_data( $json ) {
-			if ( ! is_array( $json ) ) {
+		public static function set_structured_data( $markup ) {
+			if ( ! isset( $markup ) || ! is_array( $markup ) ) {
 				return;
 			}
 
-			self::$structured_data[] = $json;
+			self::$_structured_data[] = $markup;
 		}
 
 		/**
@@ -360,16 +363,16 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * Hooked into `wp_footer` action hook.
 		 */
 		public function get_structured_data() {
-			if ( ! self::$structured_data ) {
+			if ( ! self::$_structured_data ) {
 				return;
 			}
 
-			$structured_data['@context'] = 'http://schema.org/';
+			$structured_data = array( '@context' => 'http://schema.org/' );
 
-			if ( count( self::$structured_data ) > 1 ) {
-				$structured_data['@graph'] = self::$structured_data;
+			if ( count( self::$_structured_data ) > 1 ) {
+				$structured_data['@graph'] = self::$_structured_data;
 			} else {
-				$structured_data = $structured_data + self::$structured_data[0];
+				$structured_data = $structured_data + self::$_structured_data[0];
 			}
 
 			echo '<script type="application/ld+json">' . wp_json_encode( $this->sanitize_structured_data( $structured_data ) ) . '</script>';

@@ -63,34 +63,34 @@ add_action( 'homepage', 'storefront_best_selling_products', 70 );
  * @see  storefront_post_header()
  * @see  storefront_post_meta()
  * @see  storefront_post_content()
- * @see  storefront_init_structured_data()
+ * @see  storefront_generate_post_structured_data()
  * @see  storefront_paging_nav()
  * @see  storefront_single_post_header()
  * @see  storefront_post_nav()
  * @see  storefront_display_comments()
  */
-add_action( 'storefront_loop_post',           'storefront_post_header',          10 );
-add_action( 'storefront_loop_post',           'storefront_post_meta',            20 );
-add_action( 'storefront_loop_post',           'storefront_post_content',         30 );
-add_action( 'storefront_loop_post',           'storefront_init_structured_data', 40 );
-add_action( 'storefront_loop_after',          'storefront_paging_nav',           10 );
-add_action( 'storefront_single_post',         'storefront_post_header',          10 );
-add_action( 'storefront_single_post',         'storefront_post_meta',            20 );
-add_action( 'storefront_single_post',         'storefront_post_content',         30 );
-add_action( 'storefront_single_post',         'storefront_init_structured_data', 40 );
-add_action( 'storefront_single_post_bottom',  'storefront_post_nav',             10 );
-add_action( 'storefront_single_post_bottom',  'storefront_display_comments',     20 );
-add_action( 'storefront_post_content_before', 'storefront_post_thumbnail',       10 );
+add_action( 'storefront_loop_post',           'storefront_post_header',                   10 );
+add_action( 'storefront_loop_post',           'storefront_post_meta',                     20 );
+add_action( 'storefront_loop_post',           'storefront_post_content',                  30 );
+add_action( 'storefront_loop_post',           'storefront_generate_post_structured_data', 40 );
+add_action( 'storefront_loop_after',          'storefront_paging_nav',                    10 );
+add_action( 'storefront_single_post',         'storefront_post_header',                   10 );
+add_action( 'storefront_single_post',         'storefront_post_meta',                     20 );
+add_action( 'storefront_single_post',         'storefront_post_content',                  30 );
+add_action( 'storefront_single_post',         'storefront_generate_post_structured_data', 40 );
+add_action( 'storefront_single_post_bottom',  'storefront_post_nav',                      10 );
+add_action( 'storefront_single_post_bottom',  'storefront_display_comments',              20 );
+add_action( 'storefront_post_content_before', 'storefront_post_thumbnail',                10 );
 
 /**
  * Pages
  *
  * @see  storefront_page_header()
  * @see  storefront_page_content()
- * @see  storefront_init_structured_data()
+ * @see  storefront_generate_page_structured_data()
  * @see  storefront_display_comments()
  */
-add_action( 'storefront_page',       'storefront_page_header',          10 );
-add_action( 'storefront_page',       'storefront_page_content',         20 );
-add_action( 'storefront_page',       'storefront_init_structured_data', 30 );
-add_action( 'storefront_page_after', 'storefront_display_comments',     10 );
+add_action( 'storefront_page',       'storefront_page_header',                   10 );
+add_action( 'storefront_page',       'storefront_page_content',                  20 );
+add_action( 'storefront_page',       'storefront_generate_page_structured_data', 30 );
+add_action( 'storefront_page_after', 'storefront_display_comments',              10 );

@@ -263,3 +263,18 @@ function storefront_categorized_blog() {
 		return false;
 	}
 }
+
+/**
+ * @deprecated 2.2
+ */
+function storefront_init_structured_data() {
+	_deprecated_function( __FUNCTION__, '2.2' );
+}
+
+/**
+ * @deprecated 2.2
+ * @see WC_Structured_Data class
+ */
+function storefront_woocommerce_init_structured_data() {
+	_deprecated_function( __FUNCTION__, '2.2' );
+}
