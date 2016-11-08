@@ -51,22 +51,28 @@ function storefront_do_shortcode( $tag, array $atts = array(), $content = null )
 
 /**
  * Get the content background color
- * Accounts for the Storefront Designer's content background option.
+ * Accounts for the Storefront Designer and Storefront Powerpack content background option.
  *
  * @since  1.6.0
  * @return string the background color
  */
 function storefront_get_content_background_color() {
-	// Set the bg color var based on whether the Storefront designer has set a content bg color or not.
-	$content_bg_color = get_theme_mod( 'sd_content_background_color' );
-	$content_frame    = get_theme_mod( 'sd_fixed_width' );
+	if ( class_exists( 'Storefront_Designer' ) ) {
+		$content_bg_color = get_theme_mod( 'sd_content_background_color' );
+		$content_frame    = get_theme_mod( 'sd_fixed_width' );
+	}
 
-	// Set the bg color based on the default theme option.
+	if ( class_exists( 'Storefront_Powerpack' ) ) {
+		$content_bg_color = get_theme_mod( 'sp_content_frame_background' );
+		$content_frame    = get_theme_mod( 'sp_content_frame' );
+	}
+
 	$bg_color = str_replace( '#', '', get_theme_mod( 'background_color' ) );
 
-	// But if the Storefront Designer extension is active, and the content frame option is enabled we need that bg color instead.
-	if ( $content_bg_color && 'true' == $content_frame && class_exists( 'Storefront_Designer' ) ) {
-		$bg_color = str_replace( '#', '', $content_bg_color );
+	if ( class_exists( 'Storefront_Powerpack' ) || class_exists( 'Storefront_Designer' ) ) {
+		if ( $content_bg_color && ( 'true' == $content_frame || 'frame' == $content_frame ) ) {
+			$bg_color = str_replace( '#', '', $content_bg_color );
+		}
 	}
 
 	return '#' . $bg_color;

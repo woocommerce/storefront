@@ -1,8 +1,9 @@
 # Storefront Changelog
 
-### *2016.10.xx* - 2.1.6
+### *2016.xx.xx* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
 * **Fix** - Ensure the header cart dropdown works properly on touch devices.
+* **Dev** - Refactored `storefront_get_content_background_color()` to account for and give priority (over Storefront Designer) to Storefront Powerpack.
 
 ### *2016.10.24* - 2.1.5
 * **Tweak** - Jetpack infinite scroll now works on product archives as well as posts.
