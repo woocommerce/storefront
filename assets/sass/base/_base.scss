@@ -522,7 +522,8 @@ table {
 		}
 	}
 
-	.content-area {
+	&.right-sidebar .content-area,
+	&.left-sidebar .content-area {
 		width: 100%;
 	}
 

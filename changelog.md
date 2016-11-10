@@ -3,6 +3,7 @@
 ### *2016.xx.xx* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
 * **Fix** - Ensure the header cart dropdown works properly on touch devices.
+* **Fix** - 404 layout.
 * **Dev** - Refactored `storefront_get_content_background_color()` to account for and give priority (over Storefront Designer) to Storefront Powerpack.
 * **Dev** - Deprecated `is_woocommerce_activated()` and made it pluggable.
 * **Dev** - Added `storefront_is_woocommerce_activated()`.
