@@ -88,7 +88,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return array $classes modified to include 'woocommerce-active' class
 		 */
 		public function woocommerce_body_class( $classes ) {
-			if ( is_woocommerce_activated() ) {
+			if ( storefront_is_woocommerce_activated() ) {
 				$classes[] = 'woocommerce-active';
 			}
 

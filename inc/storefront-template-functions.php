@@ -529,7 +529,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 	 */
 	function storefront_product_categories( $args ) {
 
-		if ( is_woocommerce_activated() ) {
+		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_product_categories_args', array(
 				'limit' 			=> 3,
@@ -572,7 +572,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 	 */
 	function storefront_recent_products( $args ) {
 
-		if ( is_woocommerce_activated() ) {
+		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_recent_products_args', array(
 				'limit' 			=> 4,
@@ -611,7 +611,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 	 */
 	function storefront_featured_products( $args ) {
 
-		if ( is_woocommerce_activated() ) {
+		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_featured_products_args', array(
 				'limit'   => 4,
@@ -654,7 +654,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 	 */
 	function storefront_popular_products( $args ) {
 
-		if ( is_woocommerce_activated() ) {
+		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_popular_products_args', array(
 				'limit'   => 4,
@@ -693,7 +693,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 	 */
 	function storefront_on_sale_products( $args ) {
 
-		if ( is_woocommerce_activated() ) {
+		if ( storefront_is_woocommerce_activated() ) {
 
 			$args = apply_filters( 'storefront_on_sale_products_args', array(
 				'limit'   => 4,
@@ -731,7 +731,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 	 * @return void
 	 */
 	function storefront_best_selling_products( $args ) {
-		if ( is_woocommerce_activated() ) {
+		if ( storefront_is_woocommerce_activated() ) {
 			$args = apply_filters( 'storefront_best_selling_products_args', array(
 				'limit'   => 4,
 				'columns' => 4,
@@ -848,7 +848,7 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 	function storefront_init_structured_data() {
 
 		// Post's structured data.
-		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ( is_woocommerce_activated() && ! is_woocommerce() ) ) {
+		if ( is_home() || is_category() || is_date() || is_search() || is_single() && ( storefront_is_woocommerce_activated() && ! is_woocommerce() ) ) {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
 			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 

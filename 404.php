@@ -24,7 +24,7 @@ get_header(); ?>
 					<?php
 					echo '<section aria-label="Search">';
 
-					if ( is_woocommerce_activated() ) {
+					if ( storefront_is_woocommerce_activated() ) {
 						the_widget( 'WC_Widget_Product_Search' );
 					} else {
 						get_search_form();
@@ -32,7 +32,7 @@ get_header(); ?>
 
 					echo '</section>';
 
-					if ( is_woocommerce_activated() ) {
+					if ( storefront_is_woocommerce_activated() ) {
 
 						echo '<div class="fourohfour-columns-2">';
 

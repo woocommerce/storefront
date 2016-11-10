@@ -36,7 +36,7 @@ if ( class_exists( 'Jetpack' ) ) {
 	$storefront->jetpack = require 'inc/jetpack/class-storefront-jetpack.php';
 }
 
-if ( is_woocommerce_activated() ) {
+if ( storefront_is_woocommerce_activated() ) {
 	$storefront->woocommerce = require 'inc/woocommerce/class-storefront-woocommerce.php';
 
 	require 'inc/woocommerce/storefront-woocommerce-template-hooks.php';

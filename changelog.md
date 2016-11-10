@@ -4,6 +4,8 @@
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
 * **Fix** - Ensure the header cart dropdown works properly on touch devices.
 * **Dev** - Refactored `storefront_get_content_background_color()` to account for and give priority (over Storefront Designer) to Storefront Powerpack.
+* **Dev** - Deprecated `is_woocommerce_activated()` and made it pluggable.
+* **Dev** - Added `storefront_is_woocommerce_activated()`.
 
 ### *2016.10.24* - 2.1.5
 * **Tweak** - Jetpack infinite scroll now works on product archives as well as posts.

@@ -5,11 +5,13 @@
  * @package storefront
  */
 
-/**
- * Query WooCommerce activation
- */
-function is_woocommerce_activated() {
-	return class_exists( 'woocommerce' ) ? true : false;
+if ( ! function_exists( 'storefront_is_woocommerce_activated' ) ) {
+	/**
+	 * Query WooCommerce activation
+	 */
+	function storefront_is_woocommerce_activated() {
+		return class_exists( 'woocommerce' ) ? true : false;
+	}
 }
 
 /**
@@ -17,7 +19,7 @@ function is_woocommerce_activated() {
  * @return boolean
  */
 function storefront_is_product_archive() {
-	if ( is_woocommerce_activated() ) {
+	if ( storefront_is_woocommerce_activated() ) {
 		if ( is_shop() || is_product_taxonomy() || is_product_category() || is_product_tag() ) {
 			return true;
 		} else {
@@ -170,6 +172,17 @@ function storefront_sanitize_choices( $input, $setting ) {
  */
 function storefront_sanitize_checkbox( $checked ) {
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
+}
+
+if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+	/**
+	 * Query WooCommerce activation
+	 */
+	function is_woocommerce_activated() {
+		_deprecated_function( 'is_woocommerce_activated', '2.1.6', 'storefront_is_woocommerce_activated' );
+
+		return class_exists( 'woocommerce' ) ? true : false;
+	}
 }
 
 /**
