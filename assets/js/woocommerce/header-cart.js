@@ -2,7 +2,7 @@
  * Makes the header cart content scrollable if the height of the dropdown exceeds the window height.
  */
 ( function() {
-	if ( document.body.classList.contains( 'woocommerce-cart' ) || document.body.classList.contains( 'woocommerce-checkout' ) || window.innerWidth < 768 ) {
+	if ( document.body.classList.contains( 'woocommerce-cart' ) || document.body.classList.contains( 'woocommerce-checkout' ) || window.innerWidth < 768 || ! document.getElementById( 'site-header-cart' ) ) {
 		return;
 	}
 
