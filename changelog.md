@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.1.6
+### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
 * **Fix** - Ensure the header cart dropdown works properly on touch devices.
 * **Fix** - 404 layout.
