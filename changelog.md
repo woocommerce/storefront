@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2016.xx.xx* - 2.1.7
+* **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
+
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
 * **Fix** - Ensure the header cart dropdown works properly on touch devices.

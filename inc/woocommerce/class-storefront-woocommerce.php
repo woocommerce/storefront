@@ -328,21 +328,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			$woocommerce_extension_style 				= '';
 
-			if ( $this->is_woocommerce_extension_activated( 'WC_Quick_View' ) ) {
-				$woocommerce_extension_style 					.= '
-				div.quick-view div.quick-view-image a.button {
-					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
-					border-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
-					color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
-				}
-
-				div.quick-view div.quick-view-image a.button:hover {
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ' !important;
-					border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ' !important;
-					color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
-				}';
-			}
-
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
 				$woocommerce_extension_style 					.= '
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
