@@ -30,6 +30,10 @@
 		}
 	}
 
+	.ui-widget {
+		font-family: inherit;
+	}
+
 	.wc-bookings-date-picker {
 		.ui-datepicker-header {
 			border: 0;
@@ -45,6 +49,10 @@
 		}
 
 		.ui-datepicker {
+			table {
+				font-size: 1em;
+			}
+
 			.ui-datepicker-prev,
 			.ui-datepicker-next {
 				background-color: rgba(0,0,0,0.1) !important;
@@ -71,25 +79,21 @@
 				&.bookable {
 					a {
 						text-shadow: none;
-						background-color: $color_links !important;
-
-						&:hover {
-							background-color: $color_links !important;
-						}
-
-						&.ui-state-active {
-							box-shadow:
-								inset 0 0 0 ms(3) rgba(0,0,0,0.1);
-						}
 					}
 				}
 
-				&.ui-datepicker-current-day,
 				&.ui-datepicker-today {
-					background-color: rgba(0,0,0,0.1) !important;
+					a,
+					span {
+						box-shadow: inset 0 0 0 ms(3) rgba(#000,.2);
+					}
+				}
 
-					a {
-						background-color: rgba(0,0,0,0.1) !important;
+				&.fully_booked {
+					a,
+					span {
+						text-decoration: line-through;
+						cursor: not-allowed;
 					}
 				}
 			}

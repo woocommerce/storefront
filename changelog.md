@@ -1,7 +1,8 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.1.7
+### *2017.xx.xx* - 2.2.0
 * **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
+* **Tweak** - Improved the Bookings calendar styles.
 
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
