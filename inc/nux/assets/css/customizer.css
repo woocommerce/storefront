@@ -1,0 +1,148 @@
+.sf-guided-tour {
+	display: block;
+	background-color: #23282d;
+	border-radius: 5px;
+	box-shadow: 3px 1px 5px -2px rgba(0,0,0,0.145);
+	color: #A4A4A4;
+	font-size: 1.1em;
+	z-index: 999999998;
+	text-align: left;
+	box-sizing: border-box;
+
+	position: fixed;
+	left: 5px;
+	width: 360px;
+
+	transition-duration: 250ms;
+	transition-property: opacity;
+	transition-timing-function: ease-in-out;
+
+	opacity: 0;
+}
+
+.sf-guided-tour:before {
+	content: '';
+	position: absolute;
+	top: 30px;
+	left: -14px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 14px 14px 14px 0;
+	border-color: transparent #23282d transparent transparent;
+}
+
+.sf-loaded {
+	opacity: 0.95;
+}
+
+.sf-moving {
+	transition-duration: 250ms;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(.84,.45,.68,1.44);
+}
+
+.sf-guided-tour .sf-guided-tour-step {
+	padding: 30px;
+}
+
+.sf-guided-tour .sf-guided-tour-step p {
+	font-size: 1em;
+	line-height: 1.7;
+}
+
+.sf-guided-tour .sf-guided-tour-step h2 {
+	margin-top: 0;
+	font-size: 1.1em;
+	font-weight: 500;
+	color: #fff;
+}
+
+.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-dismiss {
+	margin-left: 10px;
+	color: #00AADC;
+}
+
+.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-dismiss:hover {
+	opacity: .75;
+}
+
+.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-button {
+	display: inline-block;
+	background: #00AADC;
+	color: #fff;
+	border: 1px solid #0087BE;
+	box-shadow: inset 0 -1px 0 1px #0087BE;
+	border-radius: 4px;
+	text-decoration: none;
+	padding: .7em 1.5em;
+	margin-top: .3em;
+	outline: 0;
+	-webkit-appearance: none;
+	appearance: none;
+	vertical-align: baseline;
+}
+
+.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-button:hover,
+.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-button:focus {
+	color: #2e4453;
+}
+
+.sf-guided-tour .sf-guided-tour-step .sf-guided-tour-button:focus {
+	border-color: #00aadc;
+	box-shadow: 0 0 0 2px #78dcfa;
+}
+
+.sf-entering .sf-guided-tour,
+.sf-exiting .sf-guided-tour {
+	animation-duration: .30s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-duration: .30s;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+.sf-entering .sf-guided-tour {
+	animation-name: bounceInLeft;
+	-webkit-animation-name: bounceInLeft;
+}
+
+.sf-exiting .sf-guided-tour {
+	animation-name: bounceOutRight;
+	-webkit-animation-name: bounceOutRight;
+}
+
+@-webkit-keyframes bounceInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes bounceInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes bounceOutRight {
+	to {
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+	}
+}
+
+@keyframes bounceOutRight {
+	to {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}

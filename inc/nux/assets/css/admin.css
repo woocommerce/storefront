@@ -1,0 +1,78 @@
+.sf-notice-nux {
+
+}
+
+.sf-notice-nux h2 {
+	font-weight: normal;
+}
+
+.sf-notice-nux p {
+	margin: 0 0 1em 0;
+	line-height: 1.6;
+}
+
+.sf-notice-nux p:last-of-type {
+	margin-bottom: 1.3em;
+}
+
+.sf-notice-nux .sf-setup-tasks {
+	padding: 0;
+	background: none;
+	border: 0;
+	text-decoration: underline;
+
+	color: #0073aa;
+	-webkit-transition-property: border, background, color;
+	transition-property: border, background, color;
+	-webkit-transition-duration: .05s;
+	transition-duration: .05s;
+	-webkit-transition-timing-function: ease-in-out;
+	transition-timing-function: ease-in-out;
+	outline: 0;
+	cursor: pointer;
+}
+
+.sf-notice-nux .sf-setup-tasks:hover,
+.sf-notice-nux .sf-setup-tasks:active {
+	color: #00a0d2;
+}
+
+.sf-notice-nux .sf-setup-tasks:focus {
+	color: #124964;
+	-webkit-box-shadow:
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, .8);
+	box-shadow:
+		0 0 0 1px #5b9dd9,
+		0 0 2px 1px rgba(30, 140, 190, .8);
+}
+
+.sf-notice-nux .sf-setup-tasks:after {
+	right: 0;
+	content: "\f140";
+	font: normal 15px/1 dashicons;
+	speak: none;
+	display: inline-block;
+	position: relative;
+	vertical-align: bottom;
+	text-decoration: none;
+}
+
+.sf-notice-nux .sf-setup-tasks.sf-setup-tasks-visible:after {
+	content: "\f142";
+}
+
+.sf-notice-nux .sf-setup-tasks-options {
+	display: none;
+	margin-bottom: 1em;
+}
+
+.sf-notice-nux .sf-setup-tasks-options p {
+	padding: 0;
+	margin-bottom: .6em;
+}
+
+.sf-notice-nux .sf-setup-tasks-options input[type="checkbox"] {
+	vertical-align: sub;
+	margin: 0 5px 0 0;
+}
