@@ -31,8 +31,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 
 			add_action( 'after_setup_theme',                       array( $this, 'starter_content' ) );
 
-			add_filter( 'storefront_starter_content',              array( $this, 'filter_start_content' ) );
-
+			add_filter( 'get_theme_starter_content',               array( $this, 'filter_start_content' ), 10, 2 );
 		}
 
 		/**
@@ -199,22 +198,23 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 					'home',
 					'blog',
 					'post1' => array(
-						'post_type'  => 'product',
-						'post_title' => 'Custom Post',
-						'thumbnail'  => '{{image-espresso}}',
-						'post_content' => 'My awesome content11111 .',
+						'post_type'    => 'post',
+						'post_title'   => 'Custom Post',
+						'post_content' => 'My awesome content.',
 					),
 				),
 				'options' => array(
-					'show_on_front' => 'page',
-					'page_on_front' => '{{home}}',
+					'show_on_front'  => 'page',
+					'page_on_front'  => '{{home}}',
 					'page_for_posts' => '{{blog}}',
 				),
 				'widgets' => array(
-					'sidebar-1' => array(
-						'woocommerce_product_search'
-					)
-				)
+				    'sidebar-1' => array(
+				        'woocommerce_product_search' => array( 'woocommerce_product_search', array(
+				            'title' => 'Products!',
+				        ) ),
+				    ),
+				),
 			) ) );
 		}
 
@@ -223,7 +223,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		 *
 		 * @since 2.2
 		 */
-		public function filter_start_content( $content ) {
+		public function filter_start_content( $content, $config ) {
 			if ( ! isset( $_GET['sf_guided_tour'] ) || 1 !== absint( $_GET['sf_guided_tour'] ) ) {
 				return $content;
 			}
@@ -250,11 +250,11 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 
 							if ( isset( $content['posts'] ) ) {
 								foreach ( $content['posts'] as $post_id => $post ) {
-									if ( ! is_array( $post ) && 'home' === $post ) {
+									if ( 'home' === $post_id ) {
 										unset( $content['posts'][ $post_id ] );
 									}
 
-									if ( ! is_array( $post ) && 'blog' === $post ) {
+									if ( 'blog' === $post_id ) {
 										unset( $content['posts'][ $post_id ] );
 									}
 								}
@@ -275,7 +275,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 						case 'products':
 							if ( isset( $content['posts'] ) ) {
 								foreach ( $content['posts'] as $post_id => $post ) {
-									if ( isset( $post ) && is_array( $post ) && isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
+									if ( isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
 										unset( $content['posts'][ $post_id ] );
 									}
 								}
@@ -327,12 +327,6 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 				'button_text' => __( 'Let\'s go!', 'storefront' ),
 				'section'     => '#customize-info'
 			);
-
-			// $steps[] = array(
-			// 	'title'   => __( 'Configure your homepage', 'storefront' ),
-			// 	'message' => __( 'Select a layout that suits your store inside the Homepage panel.', 'storefront' ),
-			// 	'section' => 'storefront_homepage'
-			// );
 
 			$steps[] = array(
 				'title'   => __( 'Add your logo', 'storefront' ),
