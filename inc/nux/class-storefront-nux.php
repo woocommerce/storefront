@@ -102,7 +102,9 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 				<div class="sf-setup-tasks-options">
 					<p><input type="checkbox" name="homepage" checked><?php esc_attr_e( 'Homepage Template', 'storefront' ); ?></p>
 					<p><input type="checkbox" name="widgets" checked><?php esc_attr_e( 'WooCommerce widgets', 'storefront' ); ?></p>
-					<p><input type="checkbox" name="menu" checked><?php esc_attr_e( 'Add shop and user account links to menus', 'storefront' ); ?></p>
+					<?php if ( get_option( 'woocommerce_shop_page_id' ) && get_option( 'woocommerce_myaccount_page_id' ) ) : ?>
+						<p><input type="checkbox" name="menu" checked><?php esc_attr_e( 'Add shop and user account links to menus', 'storefront' ); ?></p>
+					<?php endif; ?>
 					<p><input type="checkbox" name="products" checked><?php esc_attr_e( 'Add example products', 'storefront' ); ?></p>
 				</div>
 
