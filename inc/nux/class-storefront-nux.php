@@ -99,15 +99,26 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 
 			<?php if ( storefront_is_woocommerce_activated() ) : ?>
 				<h2><?php printf( esc_html__( 'Getting started with  %sStorefront%s', 'storefront' ), '<strong>', '</strong>' ); ?></h2>
-				<p><?php printf( esc_html__( 'Before you begin customizing Storefront we\'ll set it up to look more like a store by adding things like example products, WooCommerce widgets and links to shop pages in your navigation. We\'ll also set up the Storefront homepage template. %sChange setup tasks%s', 'storefront' ), '<button class="sf-setup-tasks">', '</button>' ); ?></p>
 
-				<div class="sf-setup-tasks-options">
+				<?php
+					$button_classes = array( 'sf-setup-tasks' );
+
+					if ( ! $this->_is_woocommerce_empty() ) {
+						$button_classes[] = 'sf-setup-tasks-visible';
+					}
+
+					$button_classes = implode( ' ', $button_classes );
+				?>
+
+				<p><?php printf( esc_html__( 'Before you begin customizing Storefront we\'ll set it up to look more like a store by adding things like example products, WooCommerce widgets and links to shop pages in your navigation. We\'ll also set up the Storefront homepage template. %sChange setup tasks%s', 'storefront' ), '<button class="' . $button_classes . '">', '</button>' ); ?></p>
+
+				<div class="sf-setup-tasks-options"<?php if ( ! $this->_is_woocommerce_empty() ) : ?> style="display: block;"<?php endif; ?>>
 					<p><input type="checkbox" name="homepage" checked><?php esc_attr_e( 'Homepage Template', 'storefront' ); ?></p>
 					<p><input type="checkbox" name="widgets" checked><?php esc_attr_e( 'WooCommerce widgets', 'storefront' ); ?></p>
 					<?php if ( get_option( 'woocommerce_shop_page_id' ) && get_option( 'woocommerce_myaccount_page_id' ) ) : ?>
 						<p><input type="checkbox" name="menu" checked><?php esc_attr_e( 'Add shop and user account links to menus', 'storefront' ); ?></p>
 					<?php endif; ?>
-					<p><input type="checkbox" name="products" checked><?php esc_attr_e( 'Add example products', 'storefront' ); ?></p>
+					<p><input type="checkbox" name="products"<?php if ( $this->_is_woocommerce_empty() ) : ?> checked<?php endif; ?>><?php esc_attr_e( 'Add example products', 'storefront' ); ?></p>
 				</div>
 
 				<?php $url = wp_nonce_url( add_query_arg( 'action', 'storefront_guided_tour', admin_url( 'admin-post.php' ) ), 'storefront-nux' ); ?>
@@ -158,7 +169,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 
 			wp_enqueue_script( 'sf-guided-tour', get_template_directory_uri() . '/inc/nux/assets/js/customizer.js', array( 'jquery', 'wp-backbone' ), $storefront_version, true );
 
-			wp_localize_script( 'sf-guided-tour', '_wpCustomizeSFGuidedTourSteps', $this->_guided_tour_steps() );
+			wp_localize_script( 'sf-guided-tour', '_wpCustomizeSFGuidedTourSteps', $this->guided_tour_steps() );
 		}
 
 		/**
@@ -199,9 +210,13 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		public function redirect_customizer() {
 			check_admin_referer( 'storefront-nux' );
 
-			update_option( 'fresh_site', true );
+			if ( current_user_can( 'manage_options' ) ) {
+				// Make sure the fresh_site flag is set to true.
+				update_option( 'fresh_site', true );
 
-			update_option( 'storefront_nux_dismissed', true );
+				// Dismiss notice.
+				update_option( 'storefront_nux_dismissed', true );
+			}
 
 			$args = array( 'sf_guided_tour' => '1' );
 
@@ -256,7 +271,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 			}
 
 			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( $_GET['sf_tasks'] ) ) {
-				$tasks = $this->validate_tasks( sanitize_text_field( $_GET['sf_tasks'] ) );
+				$tasks = $this->_validate_tasks( sanitize_text_field( $_GET['sf_tasks'] ) );
 
 				if ( ! empty( $tasks ) ) {
 					foreach ( $tasks as $task ) {
@@ -307,11 +322,48 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		}
 
 		/**
+		 * Guided tour steps.
+		 *
+		 * @since 2.2
+		 */
+		public function guided_tour_steps() {
+			$steps = array();
+
+			$steps[] = array(
+				'title'       => __( 'Welcome to the Customizer', 'storefront' ),
+				'message'     => sprintf( __( 'Here you can control the overall look and feel of Storefront.%sThere are a few options we recommend you configure to make Storefront your own. We\'ll guide you through changing your homepage layout, adding your logo and customising the header colors. It won\'t take a minute :)', 'storefront' ), PHP_EOL . PHP_EOL ),
+				'button_text' => __( 'Let\'s go!', 'storefront' ),
+				'section'     => '#customize-info'
+			);
+
+			$steps[] = array(
+				'title'   => __( 'Add your logo', 'storefront' ),
+				'message' => __( 'Open the Site Identity Panel, then click the \'Select Logo\' button to upload your logo.', 'storefront' ),
+				'section' => 'title_tagline'
+			);
+
+			$steps[] = array(
+				'title'   => __( 'Choose the header background', 'storefront' ),
+				'message' => __( 'Open the Header Panel, then click the \'Background color\' swatch to update the background color of your site header.', 'storefront' ),
+				'section' => 'header_image'
+			);
+
+			$steps[] = array(
+				'title'       => '',
+				'message'     => sprintf( __( 'That\'s as far as we go in our tour, but there\'s lots more to discover in the Customizer so be sure to explore. When you\'re done, remember to %ssave & publish%s your changes.', 'storefront' ), '<strong>', '</strong>' ),
+				'section'     => '#customize-header-actions .save',
+				'button_text' => __( 'Done', 'storefront' ),
+			);
+
+			return $steps;
+		}
+
+		/**
 		 * Validates and sanitizes a given tasks list.
 		 *
 		 * @since 2.2
 		 */
-		public function _validate_tasks( $tasks ) {
+		private function _validate_tasks( $tasks ) {
 			$valid_tasks = apply_filters( 'storefront_valid_tour_tasks', array( 'homepage', 'widgets', 'menu', 'products' ) );
 
 			$tasks = explode( ',', sanitize_text_field( $tasks ) );
@@ -340,7 +392,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		 *
 		 * @since 2.2
 		 */
-		public function _is_woocommerce_installed() {
+		private function _is_woocommerce_installed() {
 			if ( file_exists( WP_PLUGIN_DIR . '/woocommerce' ) ) {
 				$plugins = get_plugins( '/woocommerce' );
 
@@ -360,41 +412,18 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		}
 
 		/**
-		 * Guided tour steps.
+		 * Check if products have been published.
 		 *
 		 * @since 2.2
 		 */
-		public function _guided_tour_steps() {
-			$steps = array();
+		private function _is_woocommerce_empty() {
+			$products = wp_count_posts( 'product' );
 
-			$steps[] = array(
-				'title'       => __( 'Welcome to the Customizer', 'storefront' ),
-				'message'     => sprintf( __( 'Here you can control the overall look and feel of Storefront.%sThere are a few options we recommend you configure to make Storefront your own. We\'ll guide you through changing your homepage layout, adding your logo and customising the header colors. It won\'t take a minute :)', 'storefront' ), PHP_EOL . PHP_EOL ),
-				'button_text' => __( 'Let\'s go!', 'storefront' ),
-				'section'     => '#customize-info'
-			);
+			if ( property_exists( $products, 'publish' ) && 0 < $products->publish ) {
+				return false;
+			}
 
-			$steps[] = array(
-				'title'   => __( 'Add your logo', 'storefront' ),
-				'message' => __( 'Open the Site Identity Panel, then click the \'Select Logo\' button to upload your logo.', 'storefront' ),
-				'section' => 'title_tagline'
-			);
-
-			$steps[] = array(
-				'title'   => __( 'Choose the header background', 'storefront' ),
-				'message' => __( 'Open the Header Panel, then click the \'Background color\' swatch to update the background color of your site header.', 'storefront' ),
-				'section' => 'header_image'
-			);
-
-
-			$steps[] = array(
-				'title'       => '',
-				'message'     => sprintf( __( 'That\'s as far as we go in our tour, but there\'s lots more to discover in the Customizer so be sure to explore. When you\'re done, remember to %ssave & publish%s your changes.', 'storefront' ), '<strong>', '</strong>' ),
-				'section'     => '#customize-header-actions .save',
-				'button_text' => __( 'Done', 'storefront' ),
-			);
-
-			return $steps;
+			return true;
 		}
 	}
 
