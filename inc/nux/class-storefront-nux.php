@@ -32,6 +32,8 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 			add_action( 'after_setup_theme',                       array( $this, 'starter_content' ) );
 
 			add_filter( 'get_theme_starter_content',               array( $this, 'filter_start_content' ), 10, 2 );
+
+			add_action( 'admin_post_storefront_guided_tour',       array( $this, 'redirect_customizer' ) );
 		}
 
 		/**
@@ -108,7 +110,9 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 					<p><input type="checkbox" name="products" checked><?php esc_attr_e( 'Add example products', 'storefront' ); ?></p>
 				</div>
 
-				<p><a href="<?php echo esc_url( add_query_arg( 'sf_guided_tour', '1', admin_url( 'customize.php' ) ) ); ?>" data-tour-url="<?php echo esc_url( add_query_arg( 'sf_guided_tour', '1', admin_url( 'customize.php' ) ) ); ?>" class="button button-primary"><?php esc_attr_e( 'Customize Storefront', 'storefront' ); ?></a></p>
+				<?php $url = wp_nonce_url( add_query_arg( 'action', 'storefront_guided_tour', admin_url( 'admin-post.php' ) ), 'storefront-nux' ); ?>
+
+				<p><a href="<?php echo esc_url( $url ); ?>" data-tour-url="<?php echo esc_url( $url ); ?>" class="button button-primary"><?php esc_attr_e( 'Customize Storefront', 'storefront' ); ?></a></p>
 			<?php endif; ?>
 			</div>
 		<?php }
@@ -122,7 +126,7 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 			$nonce = ! empty( $_POST['nonce'] ) ? $_POST['nonce'] : false;
 
 			if ( ! $nonce || ! wp_verify_nonce( $nonce, 'storefront_notice_dismiss' ) || ! current_user_can( 'manage_options' ) ) {
-				exit;
+				die();
 			}
 
 			update_option( 'storefront_nux_dismissed', true );
@@ -137,8 +141,6 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 			global $pagenow;
 
 			if ( 'customize.php' === $pagenow && isset( $_GET['sf_guided_tour'] ) && 1 === absint( $_GET['sf_guided_tour'] ) ) {
-				update_option( 'storefront_nux_dismissed', true );
-
 				add_action( 'customize_controls_enqueue_scripts',      array( $this, 'customize_scripts' ) );
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
 			}
@@ -190,6 +192,29 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		}
 
 		/**
+		 * Redirects to the customizer with the correct variables.
+		 *
+		 * @since 2.2
+		 */
+		public function redirect_customizer() {
+			check_admin_referer( 'storefront-nux' );
+
+			update_option( 'fresh_site', true );
+
+			update_option( 'storefront_nux_dismissed', true );
+
+			$args = array( 'sf_guided_tour' => '1' );
+
+			if ( ! empty( $_REQUEST['tasks'] ) && '' !== $_REQUEST['tasks'] ) {
+				$args['sf_tasks'] = sanitize_text_field( $_REQUEST['tasks'] );
+			}
+
+			wp_safe_redirect( add_query_arg( $args, admin_url( 'customize.php' ) ) );
+
+			die();
+		}
+
+		/**
 		 * Starter content.
 		 *
 		 * @since 2.2
@@ -231,64 +256,83 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 			}
 
 			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( $_GET['sf_tasks'] ) ) {
-				$tasks           = explode( ',', sanitize_text_field( $_GET['sf_tasks'] ) );
-				$valid_tasks     = apply_filters( 'storefront_valid_tour_tasks', array( 'homepage', 'widgets', 'menu', 'products' ) );
-				$validated_tasks = array();
+				$tasks = $this->validate_tasks( sanitize_text_field( $_GET['sf_tasks'] ) );
 
-				foreach ( $tasks as $task ) {
-					$task = sanitize_key( $task );
+				if ( ! empty( $tasks ) ) {
+					foreach ( $tasks as $task ) {
+						switch ( $task ) {
+							case 'homepage':
+								unset( $content['options'] );
 
-					if ( in_array( $task, $valid_tasks ) ) {
-						$validated_tasks[] = $task;
-					}
-				}
+								if ( isset( $content['posts'] ) ) {
+									foreach ( $content['posts'] as $post_id => $post ) {
+										if ( 'home' === $post_id ) {
+											unset( $content['posts'][ $post_id ] );
+										}
 
-				$tasks_remove = array_diff( $valid_tasks, $validated_tasks );
-
-				foreach ( $tasks_remove as $task ) {
-					switch ( $task ) {
-						case 'homepage':
-							unset( $content['options'] );
-
-							if ( isset( $content['posts'] ) ) {
-								foreach ( $content['posts'] as $post_id => $post ) {
-									if ( 'home' === $post_id ) {
-										unset( $content['posts'][ $post_id ] );
-									}
-
-									if ( 'blog' === $post_id ) {
-										unset( $content['posts'][ $post_id ] );
+										if ( 'blog' === $post_id ) {
+											unset( $content['posts'][ $post_id ] );
+										}
 									}
 								}
-							}
 
-							break;
+								break;
 
-						case 'widgets':
-							unset( $content['widgets'] );
+							case 'widgets':
+								unset( $content['widgets'] );
 
-							break;
+								break;
 
-						case 'menu':
-							unset( $content['nav_menus'] );
+							case 'menu':
+								unset( $content['nav_menus'] );
 
-							break;
+								break;
 
-						case 'products':
-							if ( isset( $content['posts'] ) ) {
-								foreach ( $content['posts'] as $post_id => $post ) {
-									if ( isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
-										unset( $content['posts'][ $post_id ] );
+							case 'products':
+								if ( isset( $content['posts'] ) ) {
+									foreach ( $content['posts'] as $post_id => $post ) {
+										if ( isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
+											unset( $content['posts'][ $post_id ] );
+										}
 									}
 								}
-							}
 
-							break;
+								break;
+						}
 					}
 				}
 			}
 
 			return $content;
+		}
+
+		/**
+		 * Validates and sanitizes a given tasks list.
+		 *
+		 * @since 2.2
+		 */
+		public function _validate_tasks( $tasks ) {
+			$valid_tasks = apply_filters( 'storefront_valid_tour_tasks', array( 'homepage', 'widgets', 'menu', 'products' ) );
+
+			$tasks = explode( ',', sanitize_text_field( $tasks ) );
+
+			$validated_tasks = array();
+
+			foreach ( $tasks as $task ) {
+				$task = sanitize_key( $task );
+
+				if ( in_array( $task, $valid_tasks ) ) {
+					$validated_tasks[] = $task;
+				}
+			}
+
+			$validated_tasks = array_diff( $valid_tasks, $validated_tasks );
+
+			if ( ! empty( $validated_tasks ) ) {
+				return $validated_tasks;
+			}
+
+			return false;
 		}
 
 		/**

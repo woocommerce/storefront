@@ -146,7 +146,7 @@
 			});
 
 			if ( 0 < selected.length ) {
-				$customizerButton.attr( 'href', $customizerButton.data( 'tour-url' ) + '&sf_tasks=' + selected.join( ',' ) );
+				$customizerButton.attr( 'href', $customizerButton.data( 'tour-url' ) + '&tasks=' + selected.join( ',' ) );
 			} else {
 				$customizerButton.attr( 'href', $customizerButton.data( 'tour-url' ) );
 			}
