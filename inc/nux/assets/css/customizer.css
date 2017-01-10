@@ -1,6 +1,7 @@
 .sf-guided-tour {
 	display: block;
 	background-color: #23282d;
+	background-color: rgba( 35, 40, 45, .95 );
 	border-radius: 5px;
 	box-shadow: 3px 1px 5px -2px rgba(0,0,0,0.145);
 	color: #A4A4A4;
@@ -33,7 +34,7 @@
 }
 
 .sf-loaded {
-	opacity: 0.95;
+	opacity: 1;
 }
 
 .sf-moving {
