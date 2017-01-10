@@ -6,6 +6,17 @@
 	font-weight: normal;
 }
 
+.sf-notice-nux h2 strong:after {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	background: url(../images/storefront-icon.png) no-repeat top left;
+	background-size: contain;
+	width: 20px;
+	height: 15px;
+	margin: 0 0 0 5px;
+}
+
 .sf-notice-nux p {
 	margin: 0 0 1em 0;
 	line-height: 1.6;
