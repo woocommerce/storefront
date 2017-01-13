@@ -3,6 +3,7 @@
 ### *2017.xx.xx* - 2.2.0
 * **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
 * **Tweak** - Improved the Bookings calendar styles.
+* **Dev** - Added actions; `storefront_jetpack_infinite_scroll_before`, `storefront_jetpack_infinite_scroll_after`, `storefront_jetpack_product_infinite_scroll_before` and `storefront_jetpack_product_infinite_scroll_after`.
 
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
