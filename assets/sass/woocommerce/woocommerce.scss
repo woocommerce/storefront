@@ -1322,22 +1322,6 @@ form.checkout {
 		label {
 			display: block;
 			cursor: pointer;
-
-			&:before {
-				@include fa-icon();
-				content: "\f0c8";
-				margin-right: ms(-3);
-				opacity: .25;
-			}
-		}
-
-		input[type=checkbox] {
-			@include screen-reader-text();
-
-			&:checked + label:before {
-				content: "\f14a";
-				opacity: 1;
-			}
 		}
 	}
 
@@ -1601,6 +1585,16 @@ p.order-again {
 /**
  * General WooCommerce components
  */
+
+.woocommerce-form__label-for-checkbox {
+	cursor: pointer;
+	display: block;
+
+	.woocommerce-form__input-checkbox {
+		margin-right: ms(-5);
+	}
+}
+
 .form-row {
 	label {
 		display: block;
@@ -2569,6 +2563,18 @@ dl.variation {
 	/**
 	 * Checkout
 	 */
+	#ship-to-different-address {
+		position: relative;
+
+		.woocommerce-form__input-checkbox {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			@include transform(translateY(-50%));
+			margin-right: 0;
+		}
+	}
+
 	.col2-set {
 		@include span(5 of 9);
 
@@ -2587,6 +2593,10 @@ dl.variation {
 
 		& + #customer_details {
 			display: none;
+		}
+
+		.woocommerce-billing-fields {
+			@include clearfix;
 		}
 
 		&.addresses {
