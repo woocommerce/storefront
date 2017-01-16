@@ -93,6 +93,11 @@
 		_hideTour: function( remove ) {
 			var self = this;
 
+			// Already hidden?
+			if ( this._isTourHidden() ) {
+				return;
+			}
+
 			this.$container.css({
 				transform: '',
 				top: this.$container.offset().top,

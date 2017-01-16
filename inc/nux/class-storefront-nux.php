@@ -235,15 +235,13 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 		 * @since 2.2
 		 */
 		public function starter_content() {
-			add_theme_support( 'starter-content', apply_filters( 'storefront_starter_content', array(
+			$starter_content = array(
 				'posts' => array(
-					'home',
-					'blog',
-					'post1' => array(
-						'post_type'    => 'post',
-						'post_title'   => 'Custom Post',
-						'post_content' => 'My awesome content.',
+					'home' => array(
+						'post_title' => sprintf( __( 'Welcome to %s', 'storefront' ), get_bloginfo() ),
+						'template'   => 'template-homepage.php',
 					),
+					'blog',
 				),
 				'options' => array(
 					'show_on_front'  => 'page',
@@ -251,13 +249,71 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 					'page_for_posts' => '{{blog}}',
 				),
 				'widgets' => array(
-				    'sidebar-1' => array(
-				        'woocommerce_product_search' => array( 'woocommerce_product_search', array(
-				            'title' => 'Products!',
-				        ) ),
-				    ),
+					'sidebar-1' => array(
+						'woocommerce_widget_cart' => array( 'woocommerce_widget_cart', array(
+							'title' => __( 'Cart', 'storefront' ),
+						) ),
+						'woocommerce_price_filter' => array( 'woocommerce_price_filter', array(
+							'title' => __( 'Filter by price', 'storefront' ),
+						) ),
+						'woocommerce_product_categories' => array( 'woocommerce_product_categories', array(
+							'title' => __( 'Product categories', 'storefront' ),
+						) ),
+						'woocommerce_product_search' => array( 'woocommerce_product_search', array(
+							'title' => __( 'Search', 'storefront' ),
+						) ),
+					),
+					'footer-1' => array(
+						'text_about'
+					),
+					'footer-2' => array(
+						'woocommerce_products' => array( 'woocommerce_products', array(
+							'title'  => 'Featured products',
+							'show'   => 'featured',
+							'number' => 5
+						) ),
+					),
+					'footer-3' => array(
+						'text_business_info'
+					),
 				),
-			) ) );
+				'nav_menus' => array(
+					'primary' => array(
+						'name' => __( 'Primary Menu', 'storefront' ),
+						'items' => array(
+							'shop' => array(
+								'type'      => 'post_type',
+								'object'    => 'page',
+								'object_id' => '{{sf_shop}}'
+							)
+						),
+					),
+					'secondary' => array(
+						'name' => __( 'Secondary Menu', 'storefront' ),
+						'items' => array(
+							'my_account' => array(
+								'type'      => 'post_type',
+								'object'    => 'page',
+								'object_id' => '{{sf_my-account}}'
+							)
+						),
+					),
+					'handheld' => array(
+						'name' => __( 'Handheld Menu', 'storefront' ),
+						'items' => array(
+							'shop' => array(
+								'type'      => 'post_type',
+								'object'    => 'page',
+								'object_id' => '{{sf_shop}}'
+							)
+						),
+					),
+				),
+			);
+
+			$starter_content['posts'] = array_merge( $starter_content['posts'], $this->_get_woocommerce_pages() );
+
+			add_theme_support( 'starter-content', apply_filters( 'storefront_starter_content', $starter_content ) );
 		}
 
 		/**
@@ -356,6 +412,41 @@ if ( ! class_exists( 'Storefront_NUX' ) ) :
 			);
 
 			return $steps;
+		}
+
+		/**
+		 * Get the list of WooCommerce pages in the format required by starter content.
+		 *
+		 * @since 2.2
+		 */
+		private function _get_woocommerce_pages() {
+			$woocommerce_pages = array();
+
+			$wc_pages_options = array(
+				'woocommerce_cart_page_id',
+				'woocommerce_checkout_page_id',
+				'woocommerce_myaccount_page_id',
+				'woocommerce_shop_page_id',
+				'woocommerce_terms_page_id'
+			);
+
+			foreach ( $wc_pages_options as $option ) {
+				$page_id = get_option( $option );
+
+				if ( ! empty( $page_id ) ) {
+					$page_id = intval( $page_id );
+
+					if ( $post_obj = get_post( $page_id ) ) {
+						$woocommerce_pages[ 'sf_' . $post_obj->post_name ] = array(
+							'post_title' => $post_obj->post_title,
+							'post_name'  => $post_obj->post_name,
+							'post_type'  => 'page'
+						);
+					}
+				}
+			}
+
+			return $woocommerce_pages;
 		}
 
 		/**
