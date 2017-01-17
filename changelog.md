@@ -1,7 +1,10 @@
 # Storefront Changelog
 
-### *2017.xx.xx* - 2.1.7
-* **Tweak** - Various updates to ensure compatibility with WooCommerce 2.7.
+### *2017.01.17* - 2.1.7
+* **Tweak** - [WooCommerce 2.7] - Ensure all checkboxes function correctly with new markup.
+* **Tweak** - [WooCommerce 2.7] - Order item meta styling.
+* **Tweak** - [WooCommerce 2.7] - Don't display the stock icon when `.stock` is empty.
+* **Fix** - Cross-sells layout
 
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
