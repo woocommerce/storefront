@@ -1,7 +1,7 @@
 # Storefront Changelog
 
 ### *2017.xx.xx* - 2.1.7
-* **Tweak** - Ensure all checkboxes work with WooCommerce 2.7's new markup.
+* **Tweak** - Various updates to ensure compatibility with WooCommerce 2.7.
 
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
