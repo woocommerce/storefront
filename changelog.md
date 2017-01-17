@@ -5,6 +5,12 @@
 * **Tweak** - Improved the Bookings calendar styles.
 * **Dev** - Added actions; `storefront_jetpack_infinite_scroll_before`, `storefront_jetpack_infinite_scroll_after`, `storefront_jetpack_product_infinite_scroll_before` and `storefront_jetpack_product_infinite_scroll_after`.
 
+### *2017.01.17* - 2.1.7
+* **Tweak** - [WooCommerce 2.7] - Ensure all checkboxes function correctly with new markup.
+* **Tweak** - [WooCommerce 2.7] - Order item meta styling.
+* **Tweak** - [WooCommerce 2.7] - Don't display the stock icon when `.stock` is empty.
+* **Fix** - Cross-sells layout
+
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.
 * **Fix** - Ensure the header cart dropdown works properly on touch devices.
