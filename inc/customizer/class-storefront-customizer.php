@@ -747,7 +747,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
-			.order_details li {
+			.order_details > li {
 				border-bottom: 1px dotted ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -28 ) . ';
 			}
 

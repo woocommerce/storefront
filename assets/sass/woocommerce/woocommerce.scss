@@ -611,6 +611,10 @@ ul.products {
 		margin-right: ms(-3);
 	}
 
+	&:empty:before {
+		display: none;
+	}
+
 	&.in-stock {
 		color: $success;
 
@@ -1976,6 +1980,21 @@ dl.variation {
 	}
 }
 
+.wc-item-meta {
+	font-size: ms(-1);
+	margin-left: 0;
+	list-style: none;
+
+	li {
+		@include clearfix;
+
+		strong,
+		p {
+			display: inline-block;
+		}
+	}
+}
+
 /**
  * My Account
  */
@@ -2519,6 +2538,10 @@ dl.variation {
 			ul.products {
 				li.product {
 					@include span(2 of 4);
+
+					&:nth-child(2n) {
+						margin-right: 0 !important;
+					}
 				}
 			}
 		}
@@ -2547,10 +2570,10 @@ dl.variation {
 				@include span(6 of 12);
 
 				ul.products {
-			  		li.product {
-			  			@include span(3 of 6);
-			  		}
-			  	}
+					li.product {
+						@include span(3 of 6);
+					}
+				}
 			}
 
 			.cart_totals,
