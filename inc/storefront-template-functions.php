@@ -73,43 +73,45 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 
 if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 	/**
-	 * Display the footer widget regions
+	 * Display the footer widget regions.
 	 *
 	 * @since  1.0.0
-	 * @return  void
+	 * @return void
 	 */
 	function storefront_footer_widgets() {
-		if ( is_active_sidebar( 'footer-4' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 4 );
-		} elseif ( is_active_sidebar( 'footer-3' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 3 );
-		} elseif ( is_active_sidebar( 'footer-2' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 2 );
-		} elseif ( is_active_sidebar( 'footer-1' ) ) {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 1 );
-		} else {
-			$widget_columns = apply_filters( 'storefront_footer_widget_regions', 0 );
-		}
+		$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 2 ) );
+		$regions = intval( apply_filters( 'storefront_footer_widget_regions', 4 ) );
 
-		if ( $widget_columns > 0 ) : ?>
+		for ( $row = 1; $row <= $rows; $row++ ) :
 
-			<div class="footer-widgets col-<?php echo intval( $widget_columns ); ?> fix">
+			// Defines the number of active columns in this footer row.
+			for ( $region = $regions; 0 < $region; $region-- ) {
+				if ( is_active_sidebar( 'footer-' . strval( $region + $regions * ( $row - 1 ) ) ) ) {
+					$columns = $region;
+					break;
+				}
+			}
 
-				<?php
-				$i = 0;
-				while ( $i < $widget_columns ) : $i++;
-					if ( is_active_sidebar( 'footer-' . $i ) ) : ?>
+			if ( isset( $columns ) ) : ?>
+				<div class=<?php echo '"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix"'; ?>><?php
 
-						<div class="block footer-widget-<?php echo intval( $i ); ?>">
-							<?php dynamic_sidebar( 'footer-' . intval( $i ) ); ?>
-						</div>
+					for ( $column = 1; $column <= $columns; $column++ ) :
+						$footer_n = $column + $regions * ( $row - 1 );
 
-					<?php endif;
-				endwhile; ?>
+						if ( is_active_sidebar( 'footer-' . strval( $footer_n ) ) ) : ?>
 
-			</div><!-- /.footer-widgets  -->
+							<div class="block footer-widget-<?php echo strval( $column ); ?>">
+								<?php dynamic_sidebar( 'footer-' . strval( $footer_n ) ); ?>
+							</div><?php
 
-		<?php endif;
+						endif;
+					endfor; ?>
+
+				</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> --><?php
+
+				unset( $columns );
+			endif;
+		endfor;
 	}
 }
 

@@ -142,16 +142,20 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
 			);
 
-			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
+			$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 2 ) );
+			$regions = intval( apply_filters( 'storefront_footer_widget_regions', 4 ) );
 
-			for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
-				$footer = sprintf( 'footer_%d', $i );
+			for ( $row = 1; $row <= $rows; $row++ ) {
+				for ( $region = 1; $region <= $regions; $region++ ) {
+					$footer_n = $region + $regions * ( $row - 1 ); // Defines footer sidebar ID.
+					$footer   = sprintf( 'footer_%d', $footer_n );
 
-				$sidebar_args[ $footer ] = array(
-					'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
-					'id'          => sprintf( 'footer-%d', $i ),
-					'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
-				);
+					$sidebar_args[ $footer ] = array(
+						'name'        => sprintf( __( 'Footer Row%1$d Column%2$d', 'storefront' ), $row, $region ),
+						'id'          => sprintf( 'footer-%d', $footer_n ),
+						'description' => sprintf( __( 'Widgetized Footer Row%1$d  Column%2$d.', 'storefront' ), $row, $region )
+					);
+				}
 			}
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
@@ -159,7 +163,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</div>',
 					'before_title'  => '<span class="gamma widget-title">',
-					'after_title'   => '</span>'
+					'after_title'   => '</span>',
 				);
 
 				/**
@@ -168,10 +172,10 @@ if ( ! class_exists( 'Storefront' ) ) :
 				 * 'storefront_header_widget_tags'
 				 * 'storefront_sidebar_widget_tags'
 				 *
-				 * storefront_footer_1_widget_tags
-				 * storefront_footer_2_widget_tags
-				 * storefront_footer_3_widget_tags
-				 * storefront_footer_4_widget_tags
+				 * 'storefront_footer_1_widget_tags'
+				 * 'storefront_footer_2_widget_tags'
+				 * 'storefront_footer_3_widget_tags'
+				 * 'storefront_footer_4_widget_tags'
 				 */
 				$filter_hook = sprintf( 'storefront_%s_widget_tags', $sidebar );
 				$widget_tags = apply_filters( $filter_hook, $widget_tags );
