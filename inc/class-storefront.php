@@ -142,18 +142,26 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
 			);
 
-			$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 2 ) );
-			$regions = intval( apply_filters( 'storefront_footer_widget_regions', 4 ) );
+			$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );
+			$regions = intval( apply_filters( 'storefront_footer_widget_columns', 4 ) );
 
 			for ( $row = 1; $row <= $rows; $row++ ) {
 				for ( $region = 1; $region <= $regions; $region++ ) {
 					$footer_n = $region + $regions * ( $row - 1 ); // Defines footer sidebar ID.
 					$footer   = sprintf( 'footer_%d', $footer_n );
 
+					if ( 1 == $rows ) {
+						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront' ), $region );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'storefront' ), $region );
+					} else {
+						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'storefront' ), $row, $region );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'storefront' ), $region, $row );
+					}
+
 					$sidebar_args[ $footer ] = array(
-						'name'        => sprintf( __( 'Footer Row%1$d Column%2$d', 'storefront' ), $row, $region ),
+						'name'        => $footer_region_name,
 						'id'          => sprintf( 'footer-%d', $footer_n ),
-						'description' => sprintf( __( 'Widgetized Footer Row%1$d  Column%2$d.', 'storefront' ), $row, $region )
+						'description' => $footer_region_description,
 					);
 				}
 			}

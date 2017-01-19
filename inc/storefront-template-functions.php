@@ -79,8 +79,8 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 	 * @return void
 	 */
 	function storefront_footer_widgets() {
-		$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 2 ) );
-		$regions = intval( apply_filters( 'storefront_footer_widget_regions', 4 ) );
+		$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );
+		$regions = intval( apply_filters( 'storefront_footer_widget_columns', 4 ) );
 
 		for ( $row = 1; $row <= $rows; $row++ ) :
 
