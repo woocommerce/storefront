@@ -8,8 +8,6 @@
 @import 'bourbon';
 @import '../../../../assets/sass/utils/variables';
 @import '../../../../assets/sass/utils/mixins';
-@import '../../../../assets/sass/vendors/font-awesome/variables';
-@import '../../../../assets/sass/vendors/font-awesome/mixins';
 @import '../../../../assets/sass/vendors/modular-scale';
 
 .variations-table {
@@ -65,10 +63,4 @@
 a#variations_clear {
 	display: block;
 	margin: 1em 0 ms(3);
-
-	&:before {
-		@include fa-icon();
-		content: "\f021";
-		margin-right: ms(-3);
-	}
 }
