@@ -2,6 +2,7 @@
 
 ### *2017.xx.xx* - 2.2.0
 * **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
+* **Fix** - Only make the order review on checkout sticky of the address column is tall enough to make it worthwhile.
 * **Tweak** - Improved the Bookings calendar styles.
 * **Dev** - Added actions; `storefront_jetpack_infinite_scroll_before`, `storefront_jetpack_infinite_scroll_after`, `storefront_jetpack_product_infinite_scroll_before` and `storefront_jetpack_product_infinite_scroll_after`.
 
