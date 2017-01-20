@@ -253,7 +253,7 @@ a {
 	font-weight: 600;
 
 	&:focus {
-		outline: 1px solid $color_links;
+		outline: 1px dotted $color_woocommerce;
 	}
 }
 
@@ -797,7 +797,7 @@ input[type="submit"],
 	}
 
 	&:focus {
-		outline: 2px solid $color_links;
+		outline: 1px dotted $color_woocommerce;
 	}
 
 	&.loading {

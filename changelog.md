@@ -4,6 +4,7 @@
 * **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
 * **Fix** - Only make the order review on checkout sticky of the address column is tall enough to make it worthwhile.
 * **Tweak** - Improved the Bookings calendar styles.
+* **Tweak** - :focus borders now dotted.
 * **Dev** - Added actions; `storefront_jetpack_infinite_scroll_before`, `storefront_jetpack_infinite_scroll_after`, `storefront_jetpack_product_infinite_scroll_before` and `storefront_jetpack_product_infinite_scroll_after`.
 * **Dev** - Added filters; `storefront_footer_widget_rows` and `storefront_footer_widget_columns` to easily control the number of widget rows / columns in the footer.
 * **Dev** - FontAwesome and icon styles are now enqueued separately to make removing FontAwesome trivial.
