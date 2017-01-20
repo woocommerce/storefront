@@ -612,15 +612,6 @@ table {
 			}
 		}
 
-		.bypostauthor {
-			> .comment-body cite {
-				&:after {
-					@include fa-icon();
-					margin-left: ms(-3);
-					content: "\f0f6";
-				}
-			}
-		}
 
 		.reply {
 			@include clearfix;
@@ -630,18 +621,6 @@ table {
 			a {
 				display: inline-block;
 				margin-right: 1em;
-
-				&:after {
-					@include fa-icon();
-					content: "\f112";
-					margin-left: ms(-3);
-				}
-
-				&.comment-edit-link {
-					&:after {
-						content: "\f040";
-					}
-				}
 
 				&:last-child {
 					margin-right: 0;
@@ -694,28 +673,12 @@ table {
 		&:hover {
 			@include transform(scale(1.3));
 		}
-
-		&:before {
-			@include fa-icon();
-			content: "\f057";
-			display: block;
-		}
 	}
 }
 
 /**
  * Content
  */
-.sticky {
-	.entry-title {
-		&:before {
-			@include fa-icon();
-			margin-right: ms(-3);
-			content: "\f08d";
-		}
-	}
-}
-
 .hentry {
 	margin: 0 0 ms(7);
 
@@ -837,14 +800,6 @@ input[type="submit"],
 
 	&:focus {
 		outline: 2px solid $color_links;
-	}
-
-	&.added {
-		&:after {
-			@include fa-icon();
-			content: "\f00c";
-			margin-left: ms(-3);
-		}
 	}
 
 	&.loading {
@@ -1209,12 +1164,6 @@ button.menu-toggle {
 			padding: ms(-1) 0;
 			display: block;
 
-			&:before {
-				@include fa-icon();
-				content: "\f0f6";
-				margin-right: ms(-3);
-			}
-
 			&:hover {
 				color: #e6e6e6;
 			}
@@ -1245,12 +1194,6 @@ button.menu-toggle {
 		width: 50%;
 
 		a {
-			&:before {
-				@include fa-icon();
-				content: "\f177";
-				margin-right: ms(-3);
-			}
-
 			&:hover {
 				@include transform(translate(-1em));
 			}
@@ -1263,12 +1206,6 @@ button.menu-toggle {
 		width: 50%;
 
 		a {
-			&:after {
-				@include fa-icon();
-				content: "\f178";
-				margin-left: ms(-3);
-			}
-
 			&:hover {
 				@include transform(translate(1em));
 			}
@@ -1408,21 +1345,12 @@ button.menu-toggle {
 		input[type=text],
 		input[type=search] {
 			width: 100%;
-			padding-left: ms(5);
 		}
 
 		input[type=submit] {
 			@include screen-reader-text();
 			top: 0;
 			left: 0;
-		}
-
-		&:before {
-			@include fa-icon();
-			content: "\f002";
-			position: absolute;
-			top: 1em;
-			left: 1em;
 		}
 	}
 }
@@ -1470,70 +1398,8 @@ button.menu-toggle {
 .widget_recent_entries,
 .widget_pages {
 	ul {
-		li {
-			&:before {
-				content: "\f0f6";
-			}
-		}
-
 		ul.children {
 			margin: ms(-2) 0 0 ms(2);
-		}
-	}
-}
-
-.widget_categories {
-	ul {
-		li {
-			&:before {
-				content: "\f114";
-			}
-
-			&.current-cat {
-				&:before {
-					content: "\f115";
-				}
-			}
-		}
-	}
-}
-
-.widget_archive {
-	ul {
-		li {
-			&:before {
-				content: "\f115";
-			}
-		}
-	}
-}
-
-.widget_recent_comments {
-	ul {
-		li {
-			&:before {
-				content: "\f0e5";
-			}
-		}
-	}
-}
-
-.widget_nav_menu {
-	ul {
-		li {
-			&:before {
-				content: "\f0f6";
-			}
-		}
-	}
-}
-
-.widget_links {
-	ul {
-		li {
-			&:before {
-				content: "\f08e";
-			}
 		}
 	}
 }

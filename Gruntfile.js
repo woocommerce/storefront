@@ -92,7 +92,8 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/mix-and-match.css': 'assets/sass/woocommerce/extensions/mix-and-match.scss',
 					'assets/sass/woocommerce/extensions/quick-view.css': 'assets/sass/woocommerce/extensions/quick-view.scss',
 					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
-					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss'
+					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss',
+					'assets/sass/base/icons.css': 'assets/sass/base/icons.scss'
 				}]
 			}
 		},

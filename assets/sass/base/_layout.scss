@@ -487,15 +487,6 @@
 							display: block;
 						}
 					}
-
-					> a {
-						&:after {
-							// The dropdown indicator
-							@include fa-icon();
-							content: "\f107";
-							margin-left: 1em;
-						}
-					}
 				}
 			}
 
@@ -512,19 +503,6 @@
 
 					&:last-child {
 						border-bottom: 0;
-					}
-
-					&.menu-item-has-children,
-					&.page_item_has_children {
-						> a {
-							&:after {
-								// The dropdown indicator
-								@include fa-icon();
-								content: "\f105";
-								float: right;
-								line-height: 1.618;
-							}
-						}
 					}
 				}
 

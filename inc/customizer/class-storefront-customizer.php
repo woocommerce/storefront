@@ -780,6 +780,18 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['button_text_color'] . ';
 			}
 
+			.button.loading {
+				color: ' . $storefront_theme_mods['button_background_color'] . ';
+			}
+
+			.button.loading:hover {
+				background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+			}
+
+			.button.loading:after {
+				color: ' . $storefront_theme_mods['button_text_color'] . ';
+			}
+
 			@media screen and ( min-width: 768px ) {
 				.site-header-cart .widget_shopping_cart,
 				.site-header .product_list_widget li .quantity {
