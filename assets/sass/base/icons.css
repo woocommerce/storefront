@@ -2237,20 +2237,38 @@
   margin-right: 0.5407911001em;
   content: "\f08d"; }
 
-button.added:after,
-input[type="button"].added:after,
-input[type="reset"].added:after,
-input[type="submit"].added:after,
-.button.added:after,
-.added_to_cart.added:after {
-  display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f00c";
-  margin-left: 0.5407911001em; }
+button.loading,
+input[type="button"].loading,
+input[type="reset"].loading,
+input[type="submit"].loading,
+.button.loading,
+.added_to_cart.loading {
+  position: relative; }
+  button.loading:after,
+  input[type="button"].loading:after,
+  input[type="reset"].loading:after,
+  input[type="submit"].loading:after,
+  .button.loading:after,
+  .added_to_cart.loading:after {
+    display: inline-block;
+    font: normal normal normal 1em / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f110";
+    -webkit-animation: fa-spin 0.75s linear infinite;
+    -moz-animation: fa-spin 0.75s linear infinite;
+    animation: fa-spin 0.75s linear infinite;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px; }
 
 .main-navigtion ul li a:before {
   display: inline-block;

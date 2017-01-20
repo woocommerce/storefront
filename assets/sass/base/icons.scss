@@ -78,11 +78,22 @@ input[type="reset"],
 input[type="submit"],
 .button,
 .added_to_cart {
-	&.added {
+	&.loading {
+		position: relative;
+
 		&:after {
 			@include fa-icon();
-			content: "\f00c";
-			margin-left: ms(-3);
+			content: "\f110";
+			@include animation(fa-spin .75s linear infinite);
+			height: 20px;
+			width: 20px;
+			line-height: 20px;
+			font-size: 20px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -10px;
+			margin-top: -10px;
 		}
 	}
 }
