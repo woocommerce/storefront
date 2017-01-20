@@ -7,6 +7,7 @@
 * **Dev** - Added actions; `storefront_jetpack_infinite_scroll_before`, `storefront_jetpack_infinite_scroll_after`, `storefront_jetpack_product_infinite_scroll_before` and `storefront_jetpack_product_infinite_scroll_after`.
 * **Dev** - Added filters; `storefront_footer_widget_rows` and `storefront_footer_widget_columns` to easily control the number of widget rows / columns in the footer.
 * **Dev** - FontAwesome and icon styles are now enqueued separately to make removing FontAwesome trivial.
+* **Dev** - Updated FontAwesome to 4.7.0
 
 ### *2017.01.17* - 2.1.7
 * **Tweak** - [WooCommerce 2.7] - Ensure all checkboxes function correctly with new markup.
