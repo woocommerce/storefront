@@ -27,8 +27,8 @@ jQuery( window ).load( function() {
 		var paymentExpandedHeight = paymentHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
 		var customerDetailsHeight = jQuery( '#customer_details' ).outerHeight();
 
-		// If we're in desktop orientation and the order review column is taller than the customer details column
-		if ( ( jQuery( window ).width() > 768 ) && ( customerDetailsHeight > paymentExpandedHeight ) ) {
+		// If we're in desktop orientation and the order review column is taller than the customer details column and smaller than the window height
+		if ( ( jQuery( window ).width() > 768 ) && ( customerDetailsHeight > paymentExpandedHeight ) && ( windowHeight > paymentExpandedHeight ) ) {
 
 				if ( topDistance > checkoutPosition.top ) {
 					jQuery( '#order_review' ).addClass( 'payment-fixed' );
