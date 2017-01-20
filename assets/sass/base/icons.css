@@ -1,20 +1,20 @@
 @charset "UTF-8";
 /*!
- *  Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url("assets/fonts/fontawesome-webfont.eot?v=4.6.3");
-  src: url("assets/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("assets/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("assets/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("assets/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("assets/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  src: url("../../../assets/fonts/fontawesome-webfont.eot?v=4.7.0");
+  src: url("../../../assets/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../../../assets/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../../../assets/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../../../assets/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../../../assets/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
   font-weight: normal;
   font-style: normal; }
 
 .fa {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -1826,6 +1826,7 @@
   content: ""; }
 
 .fa-battery-4:before,
+.fa-battery:before,
 .fa-battery-full:before {
   content: ""; }
 
@@ -2172,6 +2173,143 @@
 .fa-font-awesome:before {
   content: ""; }
 
+.fa-handshake-o:before {
+  content: ""; }
+
+.fa-envelope-open:before {
+  content: ""; }
+
+.fa-envelope-open-o:before {
+  content: ""; }
+
+.fa-linode:before {
+  content: ""; }
+
+.fa-address-book:before {
+  content: ""; }
+
+.fa-address-book-o:before {
+  content: ""; }
+
+.fa-vcard:before,
+.fa-address-card:before {
+  content: ""; }
+
+.fa-vcard-o:before,
+.fa-address-card-o:before {
+  content: ""; }
+
+.fa-user-circle:before {
+  content: ""; }
+
+.fa-user-circle-o:before {
+  content: ""; }
+
+.fa-user-o:before {
+  content: ""; }
+
+.fa-id-badge:before {
+  content: ""; }
+
+.fa-drivers-license:before,
+.fa-id-card:before {
+  content: ""; }
+
+.fa-drivers-license-o:before,
+.fa-id-card-o:before {
+  content: ""; }
+
+.fa-quora:before {
+  content: ""; }
+
+.fa-free-code-camp:before {
+  content: ""; }
+
+.fa-telegram:before {
+  content: ""; }
+
+.fa-thermometer-4:before,
+.fa-thermometer:before,
+.fa-thermometer-full:before {
+  content: ""; }
+
+.fa-thermometer-3:before,
+.fa-thermometer-three-quarters:before {
+  content: ""; }
+
+.fa-thermometer-2:before,
+.fa-thermometer-half:before {
+  content: ""; }
+
+.fa-thermometer-1:before,
+.fa-thermometer-quarter:before {
+  content: ""; }
+
+.fa-thermometer-0:before,
+.fa-thermometer-empty:before {
+  content: ""; }
+
+.fa-shower:before {
+  content: ""; }
+
+.fa-bathtub:before,
+.fa-s15:before,
+.fa-bath:before {
+  content: ""; }
+
+.fa-podcast:before {
+  content: ""; }
+
+.fa-window-maximize:before {
+  content: ""; }
+
+.fa-window-minimize:before {
+  content: ""; }
+
+.fa-window-restore:before {
+  content: ""; }
+
+.fa-times-rectangle:before,
+.fa-window-close:before {
+  content: ""; }
+
+.fa-times-rectangle-o:before,
+.fa-window-close-o:before {
+  content: ""; }
+
+.fa-bandcamp:before {
+  content: ""; }
+
+.fa-grav:before {
+  content: ""; }
+
+.fa-etsy:before {
+  content: ""; }
+
+.fa-imdb:before {
+  content: ""; }
+
+.fa-ravelry:before {
+  content: ""; }
+
+.fa-eercast:before {
+  content: ""; }
+
+.fa-microchip:before {
+  content: ""; }
+
+.fa-snowflake-o:before {
+  content: ""; }
+
+.fa-superpowers:before {
+  content: ""; }
+
+.fa-wpexplorer:before {
+  content: ""; }
+
+.fa-meetup:before {
+  content: ""; }
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -2196,7 +2334,7 @@
 
 #comments .commentlist .bypostauthor > .comment-body cite:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2206,7 +2344,7 @@
 
 #comments .commentlist .reply a:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2219,7 +2357,7 @@
 
 #respond #cancel-comment-reply-link:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2229,7 +2367,7 @@
 
 .sticky .entry-title:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2251,7 +2389,7 @@ input[type="submit"].loading,
   .button.loading:after,
   .added_to_cart.loading:after {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2272,7 +2410,7 @@ input[type="submit"].loading,
 
 .main-navigtion ul li a:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2282,7 +2420,7 @@ input[type="submit"].loading,
 
 .site-main nav.navigation .nav-previous a:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2292,7 +2430,7 @@ input[type="submit"].loading,
 
 .site-main nav.navigation .nav-next a:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2303,7 +2441,7 @@ input[type="submit"].loading,
 .widget_search form:before,
 .widget_product_search form:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2321,7 +2459,7 @@ input[type="submit"].loading,
 
 .storefront-handheld-footer-bar ul li > a:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2356,7 +2494,7 @@ input[type="submit"].loading,
   overflow: hidden; }
   .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:before {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2370,7 +2508,7 @@ input[type="submit"].loading,
 
 .stock:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2385,7 +2523,7 @@ input[type="submit"].loading,
 
 a.reset_variations:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2395,7 +2533,7 @@ a.reset_variations:before {
 
 .woocommerce-breadcrumb a:first-of-type:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2405,7 +2543,7 @@ a.reset_variations:before {
 
 .widget_product_categories ul li:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2419,7 +2557,7 @@ a.reset_variations:before {
 
 .widget_layered_nav li:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2433,7 +2571,7 @@ a.reset_variations:before {
 
 .widget_layered_nav_filters ul li.chosen a:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2475,7 +2613,7 @@ a.remove {
   a.remove:before {
     content: "\f057";
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2492,7 +2630,7 @@ a.remove {
 
 .blockUI:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2513,7 +2651,7 @@ a.remove {
 
 #payment .payment_methods > .wc_payment_method > label:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2534,7 +2672,7 @@ a.remove {
 
 .woocommerce-password-strength:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2553,7 +2691,7 @@ a.remove {
 
 .woocommerce-MyAccount-navigation ul li a:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2595,7 +2733,7 @@ a.remove {
 
 .my_account_orders .button.view:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2605,7 +2743,7 @@ a.remove {
 
 p.order-again .button:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2615,7 +2753,7 @@ p.order-again .button:after {
 
 .woocommerce-MyAccount-downloads .button:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2625,7 +2763,7 @@ p.order-again .button:after {
 
 .demo_store:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2635,7 +2773,7 @@ p.order-again .button:after {
 
 .woocommerce-tabs ul.tabs li:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2658,7 +2796,7 @@ p.order-again .button:after {
 .wc-forward:after,
 .woocommerce-Button--next:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2668,7 +2806,7 @@ p.order-again .button:after {
 
 .woocommerce-Button--previous:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2681,7 +2819,7 @@ p.order-again .button:after {
  */
 .single-product div.product .component_selections .clear_component_options:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2695,7 +2833,7 @@ p.order-again .button:after {
 .cart .mnm_table_item .mnm_table_item_indent:before,
 .shop_table .mnm_table_item .mnm_table_item_indent:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2713,7 +2851,7 @@ p.order-again .button:after {
  */
 .quick-view-button:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2727,7 +2865,7 @@ p.order-again .button:after {
 .woocommerce-page .ship_address .gift-form label:after,
 .woocommerce-page .no_shipping_address .gift-form label:after {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2738,7 +2876,7 @@ p.order-again .button:after {
 .woocommerce-page .ship_address .modify-address-button:before,
 .woocommerce-page .no_shipping_address .modify-address-button:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2761,7 +2899,7 @@ p.order-again .button:after {
  */
 a#variations_clear:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2774,7 +2912,7 @@ a#variations_clear:before {
  */
 .wl-add-link:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2784,7 +2922,7 @@ a#variations_clear:before {
 
 .button.wl-create-new:before {
   display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
+  font: normal normal normal 14px / 1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2797,7 +2935,7 @@ a#variations_clear:before {
   .main-navigation ul.nav-menu > li.menu-item-has-children > a:after,
   .main-navigation ul.nav-menu > li.page_item_has_children > a:after {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2808,7 +2946,7 @@ a#variations_clear:before {
   .main-navigation ul.nav-menu ul li.menu-item-has-children > a:after,
   .main-navigation ul.nav-menu ul li.page_item_has_children > a:after {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2818,16 +2956,16 @@ a#variations_clear:before {
     line-height: 1.618; }
   .demo_store a:before {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     content: "\f057";
     margin-right: 0.3342343017em; }
-  .site-header-cart .site-header-cart .cart-contents:after {
+  .site-header-cart .cart-contents:after {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2846,7 +2984,7 @@ a#variations_clear:before {
     margin-top: 0.6180469716em; }
     .addresses header.title a:before {
       display: inline-block;
-      font: normal normal normal 1em / 1 FontAwesome;
+      font: normal normal normal 14px / 1 FontAwesome;
       font-size: inherit;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
@@ -2867,7 +3005,7 @@ a#variations_clear:before {
 	 */
   #wl-wrapper .wl-tabs > li.active:after {
     display: inline-block;
-    font: normal normal normal 1em / 1 FontAwesome;
+    font: normal normal normal 14px / 1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;

@@ -786,15 +786,13 @@ a#variations_clear {
 	}
 
 	.site-header-cart {
-		.site-header-cart {
-			.cart-contents {
-				&:after {
-					@include fa-icon();
-					height: 1em;
-					float: right;
-					content: "\f291";
-					line-height: 1.618;
-				}
+		.cart-contents {
+			&:after {
+				@include fa-icon();
+				height: 1em;
+				float: right;
+				content: "\f291";
+				line-height: 1.618;
 			}
 		}
 	}
