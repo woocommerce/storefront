@@ -2333,15 +2333,22 @@ input[type="submit"].added:after,
 .single-product .pswp__button {
   background-color: transparent; }
 
-.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:before {
-  display: inline-block;
-  font: normal normal normal 1em / 1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\f00e";
-  line-height: 1.8; }
+.single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger {
+  text-indent: -999px;
+  overflow: hidden; }
+  .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:before {
+    display: inline-block;
+    font: normal normal normal 1em / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: block;
+    content: "\f00e";
+    line-height: 2;
+    text-indent: 0; }
+  .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger img {
+    display: none !important; }
 
 .stock:before {
   display: inline-block;

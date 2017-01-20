@@ -193,10 +193,19 @@ input[type="submit"],
 	div.product {
 		.woocommerce-product-gallery {
 			.woocommerce-product-gallery__trigger {
+				text-indent: -999px;
+				overflow: hidden;
+
 				&:before {
 					@include fa-icon();
+					display: block;
 					content: "\f00e";
-					line-height: 1.8;
+					line-height: 2;
+					text-indent: 0;
+				}
+
+				img {
+					display: none !important;
 				}
 			}
 		}
