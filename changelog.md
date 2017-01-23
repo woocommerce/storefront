@@ -1,6 +1,7 @@
 # Storefront Changelog
 
 ### *2017.xx.xx* - 2.2.0
+* **New** - Adding a featured image to the homepage template will now create a 'hero' component.
 * **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
 * **Fix** - Only make the order review on checkout sticky of the address column is tall enough to make it worthwhile.
 * **Tweak** - Improved the Bookings calendar styles.
