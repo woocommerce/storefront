@@ -7,6 +7,9 @@
 
 	var homepageContent = '.page-template-template-homepage .type-page.has-post-thumbnail';
 
+	/**
+	 * Set the hero component dimensions and positioning
+	 */
 	function homepageContentDimensions() {
 		var windowWidth	    = jQuery( window ).width();
 		var offset          = jQuery( '.site-main' ).offset();
@@ -15,10 +18,17 @@
 		jQuery( homepageContent ).css( 'width', windowWidth ).css( 'margin-left', -offset.left );
 	}
 
+	/**
+	 * On document ready
+	 * Set hero content dimensions / layout
+	 * Run adaptive backgrounds and set colors
+	 */
 	jQuery( document ).ready( function() {
 		homepageContentDimensions();
 
+		// Run the adaptive backgrounds plugin
 		jQuery.adaptiveBackground.run({
+			// On success set the color text elements based on the image dominant color
 			success: function( $img, data ) {
 				var rgb        = data.color;
 				var colors     = rgb.match( /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/ );
@@ -47,6 +57,10 @@
 		});
 	});
 
+	/**
+	 * On window resize
+	 * Set hero content dimensions / layout
+	 */
 	jQuery( window ).resize( function() {
 		homepageContentDimensions();
 	});
