@@ -7,7 +7,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="<?php storefront_homepage_content_styles(); ?>">
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?> style="<?php storefront_homepage_content_styles(); ?>" data-adaptive-background data-ab-css-background>
 	<div class="col-full">
 		<?php
 		/**

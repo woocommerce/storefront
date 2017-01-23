@@ -384,6 +384,16 @@ body {
 		padding-top: ms(6);
 		padding-bottom: ms(6);
 		text-align: center;
+
+		.entry-content,
+		.entry-title {
+			opacity: 0;
+			@include transition(all,ease,.5s);
+
+			&.loaded {
+				opacity: 1;
+			}
+		}
 	}
 }
 
