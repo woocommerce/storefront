@@ -371,9 +371,19 @@ body {
 	outline: none;
 }
 
-.page-template-template-homepage {
+.page-template-template-homepage:not(.has-post-thumbnail) {
 	.site-main {
 		padding-top: ms(7);
+	}
+}
+
+.page-template-template-homepage.has-post-thumbnail {
+	.type-page.has-post-thumbnail {
+		background-size: cover;
+		background-position: center center;
+		padding-top: ms(6);
+		padding-bottom: ms(6);
+		text-align: center;
 	}
 }
 

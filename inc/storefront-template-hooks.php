@@ -94,3 +94,7 @@ add_action( 'storefront_page',       'storefront_page_header',          10 );
 add_action( 'storefront_page',       'storefront_page_content',         20 );
 add_action( 'storefront_page',       'storefront_init_structured_data', 30 );
 add_action( 'storefront_page_after', 'storefront_display_comments',     10 );
+
+add_action( 'storefront_homepage',       'storefront_homepage_header',      10 );
+add_action( 'storefront_homepage',       'storefront_page_content',         20 );
+add_action( 'storefront_homepage',       'storefront_init_structured_data', 30 );

@@ -291,9 +291,26 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 	}
 }
 
+if ( ! function_exists( 'storefront_homepage_header' ) ) {
+	/**
+	 * Display the page header without the featured image
+	 *
+	 * @since 1.0.0
+	 */
+	function storefront_homepage_header() {
+		?>
+		<header class="entry-header">
+			<?php
+			the_title( '<h1 class="entry-title">', '</h1>' );
+			?>
+		</header><!-- .entry-header -->
+		<?php
+	}
+}
+
 if ( ! function_exists( 'storefront_page_header' ) ) {
 	/**
-	 * Display the post header with a link to the single post
+	 * Display the page header
 	 *
 	 * @since 1.0.0
 	 */
@@ -311,7 +328,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 
 if ( ! function_exists( 'storefront_page_content' ) ) {
 	/**
-	 * Display the post content with a link to the single post
+	 * Display the post content
 	 *
 	 * @since 1.0.0
 	 */
@@ -765,7 +782,7 @@ if ( ! function_exists( 'storefront_homepage_content' ) ) {
 		while ( have_posts() ) {
 			the_post();
 
-			get_template_part( 'content', 'page' );
+			get_template_part( 'content', 'homepage' );
 
 		} // end of the loop.
 	}
