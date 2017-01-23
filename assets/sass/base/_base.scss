@@ -377,12 +377,32 @@ body {
 	}
 }
 
+.page-template-template-homepage {
+	.entry-content {
+		font-size: 1.1em;
+	}
+
+	.entry-header {
+		h1 {
+			font-size: ms(6);
+			margin-bottom: ms(-6);
+		}
+	}
+
+	.entry-content,
+	.entry-title {
+		max-width: ms(16);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 .page-template-template-homepage.has-post-thumbnail {
 	.type-page.has-post-thumbnail {
 		background-size: cover;
 		background-position: center center;
-		padding-top: ms(6);
-		padding-bottom: ms(6);
+		padding-top: ms(9);
+		padding-bottom: ms(9);
 		text-align: center;
 
 		.entry-content,
