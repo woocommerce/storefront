@@ -15,12 +15,12 @@
     exclude:              [ 'rgb(0,0,0)', 'rgb(255,255,255)' ],
     normalizeTextColor:   false,
     normalizedTextColors:  {
-      light:      "#fff",
-      dark:       "#000"
+      light:      '#fff',
+      dark:       '#000'
     },
     lumaClasses:  {
-      light:      "ab-light",
-      dark:       "ab-dark"
+      light:      'ab-light',
+      dark:       'ab-dark'
     }
   };
 
@@ -41,7 +41,7 @@
          then finding its color, and triggering the
          color found event when color has been found.
       */
-      $( opts.selector ).each(function(index, el){
+      $( opts.selector ).each(function(){
         var $this = $(this);
 
         /*  Small helper functions which applies
@@ -69,7 +69,7 @@
         var getCSSBackground = function(){
           var str = $this.css('background-image');
           var regex = /\(([^)]+)\)/;
-          var match = regex.exec(str)[1].replace(/"/g, '')
+          var match = regex.exec(str)[1].replace(/"/g, '');
           return match;
         };
 
@@ -111,8 +111,9 @@
           };
 
           // Normalize the text color based on luminance.
-          if ( opts.normalizeTextColor )
+          if ( opts.normalizeTextColor ) {
             $parent.css({ color: getNormalizedTextColor(data.color) });
+          }
 
           // Add a class based on luminance.
           $parent.addClass( getLumaClass(data.color) )

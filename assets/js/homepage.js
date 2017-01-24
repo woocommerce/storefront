@@ -32,15 +32,16 @@
 			success: function( $img, data ) {
 				var rgb        = data.color;
 				var colors     = rgb.match( /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/ );
-				var overall    = Math.round( ( ( parseInt( colors[1]) * 299 ) + ( parseInt( colors[2] ) * 587 ) + ( parseInt( colors[3] ) * 114 ) ) /1000 );
+				var overall    = Math.round( ( ( parseInt( colors[1], 10 ) * 299 ) + ( parseInt( colors[2], 10 ) * 587 ) + ( parseInt( colors[3], 10 ) * 114 ) ) /1000 );
 				var r          = colors[1];
 				var g          = colors[2];
 				var b          = colors[3];
+				var brightness = 1;
 
 				if ( overall > 125 ) {
-					var brightness = .5;
+					brightness = 0.5;
 				} else {
-					var brightness = 2;
+					brightness = 2;
 				}
 
 				var newr = Math.floor( ( 255 - r ) * brightness );
