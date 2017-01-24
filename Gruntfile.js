@@ -51,6 +51,18 @@ module.exports = function( grunt ) {
 					ext: '.min.js'
 				}]
 			},
+			vendor: {
+				files: [{
+					expand: true,
+					cwd: 'assets/js/vendor/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: 'assets/js/vendor/',
+					ext: '.min.js'
+				}]
+			},
 			woocommerce: {
 				files: [{
 					expand: true,

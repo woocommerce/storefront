@@ -233,7 +233,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
-				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/rgbaster.min.js', array( 'jquery' ), '1.1.0', true );
+				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array( 'jquery' ), '1.1.0', true );
 				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage.min.js', array( 'jquery' ), '20120206', true );
 			}
 

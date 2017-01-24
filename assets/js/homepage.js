@@ -27,7 +27,7 @@
 		homepageContentDimensions();
 
 		var img = jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail' ).css( 'background-image' );
-		var img = img.replace( 'url(', '' ).replace( ')', '' ).replace( /\"/gi, '' );
+			img = img.replace( 'url(', '' ).replace( ')', '' ).replace( /\"/gi, '' );
 
 		var RGBaster = window.RGBaster;
 
