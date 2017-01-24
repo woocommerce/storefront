@@ -26,11 +26,15 @@
 	jQuery( document ).ready( function() {
 		homepageContentDimensions();
 
-		// Run the adaptive backgrounds plugin
-		jQuery.adaptiveBackground.run({
-			// On success set the color text elements based on the image dominant color
-			success: function( $img, data ) {
-				var rgb        = data.color;
+		var img = jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail' ).css( 'background-image' );
+		var img = img.replace( 'url(', '' ).replace( ')', '' ).replace( /\"/gi, '' );
+
+		var RGBaster = window.RGBaster;
+
+		RGBaster.colors( img, {
+			paletteSize: 1,
+			success: function( payload ) {
+				var rgb        = payload.dominant;
 				var colors     = rgb.match( /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/ );
 				var overall    = Math.round( ( ( parseInt( colors[1], 10 ) * 299 ) + ( parseInt( colors[2], 10 ) * 587 ) + ( parseInt( colors[3], 10 ) * 114 ) ) /1000 );
 				var r          = colors[1];
