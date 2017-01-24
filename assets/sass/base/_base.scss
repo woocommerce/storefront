@@ -378,6 +378,11 @@ body {
 }
 
 .page-template-template-homepage {
+	.type-page {
+		padding-top: ms(5);
+		padding-bottom: ms(5);
+	}
+	
 	.entry-content {
 		font-size: 1.1em;
 	}
@@ -390,10 +395,11 @@ body {
 	}
 
 	.entry-content,
-	.entry-title {
+	.entry-header {
 		max-width: ms(16);
 		margin-left: auto;
 		margin-right: auto;
+		text-align: center;
 	}
 }
 
@@ -403,7 +409,6 @@ body {
 		background-position: center center;
 		padding-top: ms(9);
 		padding-bottom: ms(9);
-		text-align: center;
 
 		.entry-content,
 		.entry-title {
