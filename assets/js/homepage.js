@@ -26,7 +26,7 @@
 	jQuery( document ).ready( function() {
 		homepageContentDimensions();
 
-		var img = jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail' ).css( 'background-image' );
+		var img = jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail' ).data( 'featured-image' );
 			img = img.replace( 'url(', '' ).replace( ')', '' ).replace( /\"/gi, '' );
 
 		var RGBaster = window.RGBaster;
@@ -42,10 +42,10 @@
 				var b          = colors[3];
 				var brightness = 1;
 
-				if ( overall > 125 ) {
-					brightness = 0.5;
+				if ( overall > 140 ) {
+					brightness = 0;
 				} else {
-					brightness = 2;
+					brightness = 4;
 				}
 
 				var newr = Math.floor( ( 255 - r ) * brightness );
@@ -55,7 +55,7 @@
 				jQuery( homepageContent + ', .page-template-template-homepage .type-page.has-post-thumbnail h1' ).css( 'color', 'rgb(' + newr + ', ' + newg + ', ' + newb + ')' );
 				jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).addClass( 'loaded' );
 
-				if ( brightness >= 2 ) {
+				if ( brightness >= 4 ) {
 					jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).css( 'text-shadow', '0 4px 16px rgba(0,0,0,.3)' );
 				}
 			}
