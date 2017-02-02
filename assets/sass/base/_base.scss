@@ -371,9 +371,54 @@ body {
 	outline: none;
 }
 
-.page-template-template-homepage {
+.page-template-template-homepage:not(.has-post-thumbnail) {
 	.site-main {
 		padding-top: ms(7);
+	}
+}
+
+.page-template-template-homepage {
+	.type-page {
+		padding-top: ms(5);
+		padding-bottom: ms(5);
+	}
+	
+	.entry-content {
+		font-size: 1.1em;
+	}
+
+	.entry-header {
+		h1 {
+			font-size: ms(6);
+			margin-bottom: ms(-6);
+		}
+	}
+
+	.entry-content,
+	.entry-header {
+		max-width: ms(16);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+.page-template-template-homepage.has-post-thumbnail {
+	.type-page.has-post-thumbnail {
+		background-size: cover;
+		background-position: center center;
+		padding-top: ms(9);
+		padding-bottom: ms(9);
+
+		.entry-content,
+		.entry-title {
+			opacity: 0;
+			@include transition(all,ease,.5s);
+
+			&.loaded {
+				opacity: 1;
+			}
+		}
 	}
 }
 
