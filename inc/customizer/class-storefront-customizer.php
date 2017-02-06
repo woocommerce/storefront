@@ -46,9 +46,9 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'storefront_heading_color'               => '#484c51',
 				'storefront_text_color'                  => '#43454b',
 				'storefront_accent_color'                => '#96588a',
-				'storefront_header_background_color'     => '#2c2d33',
-				'storefront_header_text_color'           => '#9aa0a7',
-				'storefront_header_link_color'           => '#d5d9db',
+				'storefront_header_background_color'     => '#ffffff',
+				'storefront_header_text_color'           => '#73797f',
+				'storefront_header_link_color'           => '#343a3f',
 				'storefront_footer_background_color'     => '#f0f0f0',
 				'storefront_footer_heading_color'        => '#494c50',
 				'storefront_footer_text_color'           => '#61656b',
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'storefront_button_alt_background_color' => '#2c2d33',
 				'storefront_button_alt_text_color'       => '#ffffff',
 				'storefront_layout'                      => 'right',
-				'background_color'                       => '#ffffff',
+				'background_color'                       => 'f6f6f6',
 			) );
 		}
 
@@ -738,7 +738,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
-			.woocommerce-breadcrumb,
 			#reviews .commentlist li .comment_container {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}

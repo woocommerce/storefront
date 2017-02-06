@@ -67,14 +67,14 @@
 	.widget_product_search {
 		input[type=text],
 		input[type=search] {
-			padding: ms(2) ms(3);
+			padding: ms(1) ms(2);
 			line-height: 1;
 		}
 
 		form {
 			&:before {
-				top: ms(2);
-				left: ms(3);
+				top: 1.15em;
+				left: 1.15em;
 			}
 		}
 
@@ -305,7 +305,9 @@ ul.products {
 		h2, // @todo Remove when WooCommerce 2.8 is live
 		h3, // @todo Remove when WooCommerce 2.8 is live
 		.woocommerce-loop-product__title {
-			font-size: 1.1em;
+			font-size: 1rem;
+			font-weight: 400;
+			margin-bottom: 1em;
 		}
 
 		.star-rating {
@@ -587,14 +589,6 @@ a.reset_variations {
 #reviews {
 	#comments {
 		padding-top: 0;
-	}
-
-	.woocommerce-Reviews-title {
-		font-weight: 300;
-
-		span {
-			font-weight: 700;
-		}
 	}
 
 	.commentlist {
@@ -1518,13 +1512,13 @@ p.stars {
 }
 
 .onsale {
-	border: 2px solid;
+	border: 1px solid;
 	border-color: $color_body;
 	color: $color_body;
 	padding: .202em ms(-2);
 	font-size: ms(-1);
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 600;
 	display: inline-block;
 	margin-bottom: 1em;
 	border-radius: 3px;
@@ -1732,10 +1726,10 @@ dl.variation {
 	 * Breadcrumbs
 	 */
 	.woocommerce-breadcrumb {
-		padding: ms(2) 99em;
+		padding: ms(4) 99em ms(2);
 		margin-left: -99em;
 		margin-right: -99em;
-		margin-bottom: ms(7);
+		margin-bottom: ms(-1);
 	}
 
 	/**
@@ -2039,12 +2033,12 @@ dl.variation {
 	.storefront-full-width-content.single-product {
 		div.product {
 			.images {
-				@include span(4 of 12);
+				@include span(5 of 12);
 				margin-bottom: ms(6);
 
 				.thumbnails {
 					a.zoom {
-						@include span(1 of 4);
+						@include span(1.25 of 5);
 
 						&.last {
 							margin-right: 0;
@@ -2054,18 +2048,18 @@ dl.variation {
 			}
 
 			.woocommerce-product-gallery {
-				@include span(4 of 12);
+				@include span(5 of 12);
 				margin-bottom: ms(6);
 
 				.flex-control-thumbs {
 					li {
-						@include span(1 of 4);
+						@include span(1.25 of 5);
 					}
 				}
 			}
 
 			.summary {
-				@include span(last 8 of 12);
+				@include span(last 7 of 12);
 				margin-bottom: ms(6);
 			}
 
@@ -2083,6 +2077,24 @@ dl.variation {
 			}
 		}
 	}
+
+	/**
+	 * General full-width styles
+	 */
+	.storefront-full-width-content {
+		.woocommerce-products-header {
+			text-align: center;
+			padding: ms(2) 0 ms(4);
+		}
+
+		.up-sells,
+		.related.products {
+			> h2:first-child {
+				text-align: center;
+			}
+		}
+	}
+
 
 	.woocommerce .page-description {
 		margin-bottom: ms(3);

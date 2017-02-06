@@ -51,12 +51,12 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 700;
+	font-weight: 300;
 	margin: 0 0 ms(-3);
 	color: darken( $color_body, 20% );
 
 	a {
-		font-weight: 700;
+		font-weight: 300;
 	}
 }
 
@@ -250,7 +250,7 @@ img {
 a {
 	color: $color_links;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 400;
 
 	&:focus {
 		outline: 1px dotted $color_woocommerce;
@@ -382,7 +382,7 @@ body {
 		padding-top: ms(5);
 		padding-bottom: ms(5);
 	}
-	
+
 	.entry-content {
 		font-size: 1.1em;
 	}
@@ -897,7 +897,6 @@ textarea,
 	outline: none;
 	border: 0;
 	-webkit-appearance: none;
-	border-radius: 2px;
 	box-sizing: border-box;
 	font-weight: normal;
 	box-shadow:
@@ -1342,7 +1341,7 @@ button.menu-toggle {
 		border-bottom: 1px solid $color_border;
 		padding: 0 0 1em;
 		margin-bottom: 1em;
-		font-weight: 700;
+		font-weight: 300;
 	}
 
 	ul {
