@@ -43,22 +43,22 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public static function get_storefront_default_setting_values() {
 			return apply_filters( 'storefront_setting_default_values', $args = array(
-				'storefront_heading_color'               => '#484c51',
-				'storefront_text_color'                  => '#43454b',
+				'storefront_heading_color'               => '#333333',
+				'storefront_text_color'                  => '#6d6d6d',
 				'storefront_accent_color'                => '#96588a',
 				'storefront_header_background_color'     => '#ffffff',
-				'storefront_header_text_color'           => '#73797f',
-				'storefront_header_link_color'           => '#343a3f',
+				'storefront_header_text_color'           => '#6d6d6d',
+				'storefront_header_link_color'           => '#333333',
 				'storefront_footer_background_color'     => '#f0f0f0',
-				'storefront_footer_heading_color'        => '#494c50',
-				'storefront_footer_text_color'           => '#61656b',
-				'storefront_footer_link_color'           => '#2c2d33',
-				'storefront_button_background_color'     => '#96588a',
-				'storefront_button_text_color'           => '#ffffff',
-				'storefront_button_alt_background_color' => '#2c2d33',
+				'storefront_footer_heading_color'        => '#333333',
+				'storefront_footer_text_color'           => '#6d6d6d',
+				'storefront_footer_link_color'           => '#333333',
+				'storefront_button_background_color'     => '#eeeeee',
+				'storefront_button_text_color'           => '#333333',
+				'storefront_button_alt_background_color' => '#333333',
 				'storefront_button_alt_text_color'       => '#ffffff',
 				'storefront_layout'                      => 'right',
-				'background_color'                       => 'f6f6f6',
+				'background_color'                       => 'ffffff',
 			) );
 		}
 
@@ -526,14 +526,16 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.site-header-cart .widget_shopping_cart a:hover,
 			.site-header-cart:hover > li > a,
 			.site-header ul.menu li.current-menu-item > a {
-				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 50 ) . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 80 ) . ';
 			}
 
 			table th {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
-			table tbody td {
+			table tbody td,
+			fieldset,
+			fieldset legend {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 			}
 
@@ -623,7 +625,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['button_text_color'] . ';
 			}
 
-			button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current, .widget a.button.checkout {
+			button.alt, input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .added_to_cart.alt, .widget-area .widget a.button.alt, .added_to_cart, .widget a.button.checkout {
 				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
 				border-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
 				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
@@ -633,6 +635,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
 				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
 				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
+			}
+
+			.pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], $darken_factor ) . ';
+				color: ' . $storefront_theme_mods['text_color'] . ';
 			}
 
 			#comments .comment-list .comment-content .comment-text {
@@ -652,17 +659,21 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['footer_heading_color'] . ';
 			}
 
-			#order_review,
-			#payment .payment_methods > li .payment_box {
+			#order_review {
 				background-color: ' . $storefront_theme_mods['background_color'] . ';
 			}
 
-			#payment .payment_methods > li {
+			#payment .payment_methods > li .payment_box,
+			#payment .place-order {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -5 ) . ';
 			}
 
-			#payment .payment_methods > li:hover {
+			#payment .payment_methods > li {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -10 ) . ';
+			}
+
+			#payment .payment_methods > li:hover {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -15 ) . ';
 			}
 
 			@media screen and ( min-width: 768px ) {
@@ -677,7 +688,16 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				.site-header-cart .widget_shopping_cart,
 				.main-navigation ul.menu ul.sub-menu,
 				.main-navigation ul.nav-menu ul.children {
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -8 ) . ';
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -15 ) . ';
+				}
+
+				.site-header-cart .widget_shopping_cart .buttons,
+				.site-header-cart .widget_shopping_cart .total {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -10 ) . ';
+				}
+
+				.site-header {
+					border-bottom-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -15 ) . ';
 				}
 			}';
 

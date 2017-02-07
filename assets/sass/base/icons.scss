@@ -423,6 +423,59 @@ a.remove {
 	}
 }
 
+.woocommerce-pagination {
+	.next,
+	.prev {
+		text-indent: -9999px;
+		display: inline-block;
+		position: relative;
+
+		&:after {
+			@include fa-icon;
+			content: "\f0d9";
+			text-indent: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1em;
+			height: 1em;
+			@include transform(translateX(-50%) translateY(-50%));
+			line-height: 1;
+		}
+	}
+
+	.next {
+		&:after {
+			content: "\f0da";
+		}
+	}
+}
+
+.woocommerce-breadcrumb {
+	.breadcrumb-separator {
+		text-indent: -9999px;
+		position: relative;
+		display: inline-block;
+		padding: 0 ms(9);
+
+		&:after {
+			display: block;
+			@include fa-icon;
+			content: "\f105";
+			font-size: ms(-1);
+			text-indent: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1em;
+			height: 1em;
+			@include transform(translateX(-50%) translateY(-50%));
+			text-align: center;
+			opacity: .25;
+		}
+	}
+}
+
 #payment {
 	.payment_methods {
 		> .wc_payment_method {
