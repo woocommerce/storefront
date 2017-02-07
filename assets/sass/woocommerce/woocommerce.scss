@@ -23,6 +23,12 @@
 	font-style: normal;
 }
 
+.price {
+	ins {
+		font-weight: 400;
+	}
+}
+
 /**
  * Header Elements
  */
@@ -296,7 +302,6 @@ ul.products {
 			margin-bottom: 1rem;
 
 			ins {
-				font-weight: 600;
 				margin-left: ms(-2);
 				background-color: transparent;
 			}
@@ -2082,6 +2087,9 @@ dl.variation {
 	 * General full-width styles
 	 */
 	.storefront-full-width-content {
+		&.woocommerce-cart .entry-header,
+		&.woocommerce-checkout .entry-header,
+		&.woocommerce-account .entry-header,
 		.woocommerce-products-header {
 			text-align: center;
 			padding: 0 0 ms(8);
