@@ -376,6 +376,14 @@ body {
 	.type-page {
 		padding-top: ms(5);
 		padding-bottom: ms(5);
+		position: relative;
+
+		.storefront-hero__button-edit {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			font-size: ms(-1);
+		}
 	}
 
 	.entry-content {

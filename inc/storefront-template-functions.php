@@ -298,6 +298,7 @@ if ( ! function_exists( 'storefront_homepage_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_homepage_header() {
+		edit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
 		<header class="entry-header">
 			<?php
