@@ -36,16 +36,18 @@
 			success: function( payload ) {
 				var rgb        = payload.dominant;
 				var colors     = rgb.match( /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/ );
+
+				// Get the average rgb value.
 				var overall    = Math.round( ( ( parseInt( colors[1], 10 ) * 299 ) + ( parseInt( colors[2], 10 ) * 587 ) + ( parseInt( colors[3], 10 ) * 114 ) ) /1000 );
 				var r          = colors[1];
 				var g          = colors[2];
 				var b          = colors[3];
 				var brightness = 1;
 
-				if ( overall > 140 ) {
-					brightness = 0;
+				if ( overall > 230 ) {
+					brightness = 0; // Black.
 				} else {
-					brightness = 4;
+					brightness = 30; // White.
 				}
 
 				var newr = Math.floor( ( 255 - r ) * brightness );
@@ -55,7 +57,7 @@
 				jQuery( homepageContent + ', .page-template-template-homepage .type-page.has-post-thumbnail h1' ).css( 'color', 'rgb(' + newr + ', ' + newg + ', ' + newb + ')' );
 				jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).addClass( 'loaded' );
 
-				if ( brightness >= 4 ) {
+				if ( brightness >= 30 ) {
 					jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).css( 'text-shadow', '0 4px 16px rgba(0,0,0,.3)' );
 				}
 			}
