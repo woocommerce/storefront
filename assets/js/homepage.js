@@ -58,7 +58,7 @@
 				jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).addClass( 'loaded' );
 
 				if ( brightness >= 30 ) {
-					jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).css( 'text-shadow', '0 4px 16px rgba(0,0,0,.3)' );
+					jQuery( '.page-template-template-homepage .type-page.has-post-thumbnail .entry-title, .page-template-template-homepage .type-page.has-post-thumbnail .entry-content' ).css( 'text-shadow', '0 4px 30px rgba(0,0,0,.9)' );
 				}
 			}
 		});
