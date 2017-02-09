@@ -24,7 +24,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_filter( 'loop_shop_columns', 						array( $this, 'loop_columns' ) );
 			add_filter( 'body_class', 								array( $this, 'woocommerce_body_class' ) );
 			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_scripts' ),	20 );
 			add_filter( 'woocommerce_enqueue_styles', 				'__return_empty_array' );
@@ -70,16 +69,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function set_storefront_style_theme_mods() {
 			set_theme_mod( 'storefront_woocommerce_extension_styles', $this->get_woocommerce_extension_css() );
-		}
-
-		/**
-		 * Default loop columns on product archives
-		 *
-		 * @return integer products per row
-		 * @since  1.0.0
-		 */
-		public function loop_columns() {
-			return apply_filters( 'storefront_loop_columns', 3 ); // 3 products per row
 		}
 
 		/**
@@ -165,7 +154,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				$columns = 5;
 			}
-			
+
 			return intval( apply_filters( 'storefront_product_thumbnail_columns', $columns ) );
 		}
 
