@@ -135,7 +135,8 @@ if ( ! function_exists( 'storefront_upsell_display' ) ) {
 	 * @uses    woocommerce_upsell_display()
 	 */
 	function storefront_upsell_display() {
-		woocommerce_upsell_display( -1, 3 );
+		$columns = apply_filters( 'storefront_upsells_columns', 3 );
+		woocommerce_upsell_display( -1, $columns );
 	}
 }
 
