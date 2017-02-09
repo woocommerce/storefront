@@ -589,8 +589,14 @@ a.reset_variations {
  * Reviews
  */
 #reviews {
+	outline: none;
+
 	#comments {
 		padding-top: 0;
+	}
+
+	.comment-reply-title {
+		display: none;
 	}
 
 	.commentlist {
@@ -604,12 +610,17 @@ a.reset_variations {
 			@include clearfix;
 
 			.comment_container {
-				padding: ms(3);
 				border-radius: 3px;
+				@include clearfix;
 
 				.comment-text {
-					p:last-of-type {
-						margin-bottom: 0;
+					@include span(last 5 of 6);
+
+					.star-rating {
+						float: right;
+						font-size: ms(-1);
+						line-height: 1;
+						height: 1em;
 					}
 				}
 			}
@@ -621,23 +632,47 @@ a.reset_variations {
 
 			time {
 				opacity: 0.5;
+				font-size: ms(-1);
 			}
 
 			.avatar {
-				float: left;
-				width: ms(4);
+				@include span(1 of 6);
 				height: auto;
-				margin-right: 1em;
 			}
 
 			p.meta {
 				margin-bottom: 1em;
+
+				strong {
+					line-height: 1;
+				}
+
+				time {
+					display: block;
+				}
+
+				.verified {
+					font-style: normal;
+					font-size: ms(-1);
+				}
+
+				.woocommerce-review__dash {
+					display: none;
+				}
 			}
 
 			ul.children {
+				margin: 0;
 				@include span(last 5 of 6);
-				margin-bottom: 0;
 				padding-top: ms(3);
+
+				.avatar {
+					@include span(1 of 5);
+				}
+
+				.comment-text {
+					@include span(last 4 of 5);
+				}
 
 				li {
 					margin-bottom: ms(3);
@@ -2070,6 +2105,34 @@ dl.variation {
 
 			.woocommerce-tabs {
 				clear: both;
+			}
+		}
+
+		#reviews {
+			.commentlist {
+				li {
+					.avatar {
+						@include span(1 of 8);
+					}
+
+					.comment_container {
+						.comment-text {
+							@include span(last 7 of 8);
+						}
+					}
+				}
+
+				ul.children {
+					@include span(last 7 of 8);
+
+					.avatar {
+						@include span(1 of 7);
+					}
+
+					.comment-text {
+						@include span(last 6 of 7);
+					}
+				}
 			}
 		}
 

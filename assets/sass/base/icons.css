@@ -2873,6 +2873,30 @@ p.order-again .button:after {
   content: "\f177";
   margin-right: 0.5407911001em; }
 
+#reviews .commentlist li p.meta .verified {
+  display: inline-block;
+  height: 1.41575em;
+  width: 1.41575em;
+  position: relative;
+  text-indent: -9999px; }
+  #reviews .commentlist li p.meta .verified:before {
+    display: inline-block;
+    font: normal normal normal 14px / 1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f058";
+    color: #0f834d;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.41575em;
+    height: 1.41575em;
+    text-indent: 0;
+    text-align: center;
+    line-height: 1.618em; }
+
 /**
  * Composite Products
  */

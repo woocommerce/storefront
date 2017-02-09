@@ -664,6 +664,36 @@ p.order-again {
 	}
 }
 
+#reviews {
+	.commentlist {
+		li {
+			p.meta {
+				.verified {
+					display: inline-block;
+					height: ms(2);
+					width: ms(2);
+					position: relative;
+					text-indent: -9999px;
+
+					&:before {
+						@include fa-icon();
+						content: "\f058";
+						color: $success;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: ms(2);
+						height: ms(2);
+						text-indent: 0;
+						text-align: center;
+						line-height: ms(3);
+					}
+				}
+			}
+		}
+	}
+}
+
 /**
  * Composite Products
  */
