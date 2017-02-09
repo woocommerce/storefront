@@ -16,7 +16,7 @@
 		form {
 			input[type=search],
 			input[type=text] {
-				padding-left: ms(6);
+				padding-left: ms(5);
 			}
 		}
 	}
@@ -423,6 +423,59 @@ a.remove {
 	}
 }
 
+.woocommerce-pagination {
+	.next,
+	.prev {
+		text-indent: -9999px;
+		display: inline-block;
+		position: relative;
+
+		&:after {
+			@include fa-icon;
+			content: "\f0d9";
+			text-indent: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1em;
+			height: 1em;
+			@include transform(translateX(-50%) translateY(-50%));
+			line-height: 1;
+		}
+	}
+
+	.next {
+		&:after {
+			content: "\f0da";
+		}
+	}
+}
+
+.woocommerce-breadcrumb {
+	.breadcrumb-separator {
+		text-indent: -9999px;
+		position: relative;
+		display: inline-block;
+		padding: 0 ms(9);
+
+		&:after {
+			display: block;
+			@include fa-icon;
+			content: "\f105";
+			font-size: ms(-1);
+			text-indent: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 1em;
+			height: 1em;
+			@include transform(translateX(-50%) translateY(-50%));
+			text-align: center;
+			opacity: .25;
+		}
+	}
+}
+
 #payment {
 	.payment_methods {
 		> .wc_payment_method {
@@ -608,6 +661,36 @@ p.order-again {
 		@include fa-icon();
 		content: "\f177";
 		margin-right: ms(-3);
+	}
+}
+
+#reviews {
+	.commentlist {
+		li {
+			p.meta {
+				.verified {
+					display: inline-block;
+					height: ms(2);
+					width: ms(2);
+					position: relative;
+					text-indent: -9999px;
+
+					&:before {
+						@include fa-icon();
+						content: "\f058";
+						color: $success;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: ms(2);
+						height: ms(2);
+						text-indent: 0;
+						text-align: center;
+						line-height: ms(3);
+					}
+				}
+			}
+		}
 	}
 }
 

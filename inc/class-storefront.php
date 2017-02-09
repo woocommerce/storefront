@@ -214,7 +214,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Fonts
 			 */
 			$google_fonts = apply_filters( 'storefront_google_font_families', array(
-				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,700,900',
+				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
 			) );
 
 			$query_args = array(

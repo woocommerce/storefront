@@ -51,12 +51,12 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 700;
+	font-weight: 300;
 	margin: 0 0 ms(-3);
 	color: darken( $color_body, 20% );
 
 	a {
-		font-weight: 700;
+		font-weight: 300;
 	}
 }
 
@@ -81,13 +81,11 @@ h2,
 h3,
 .gamma {
 	font-size: ms(3);
-	font-weight: 600;
 }
 
 h4,
 .delta {
 	font-size: ms(2);
-	font-weight: 700;
 }
 
 .alpha,
@@ -115,16 +113,16 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 }
 
 p {
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 }
 
 ul,
 ol {
-	margin: 0 0 ms(1) 3em;
+	margin: 0 0 ms(2) 3em;
 	padding: 0;
 }
 
@@ -143,7 +141,7 @@ li > ol {
 }
 
 dt {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 dd {
@@ -152,7 +150,7 @@ dd {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 dfn,
@@ -169,7 +167,7 @@ blockquote {
 }
 
 address {
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 }
 
 pre {
@@ -199,7 +197,7 @@ acronym {
 mark,
 ins {
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: 600;
 	background: transparent;
 }
 
@@ -233,12 +231,8 @@ figure {
 }
 
 table {
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 	width: 100%;
-}
-
-th {
-	font-weight: bold;
 }
 
 img {
@@ -250,7 +244,7 @@ img {
 a {
 	color: $color_links;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 400;
 
 	&:focus {
 		outline: 1px dotted $color_woocommerce;
@@ -294,6 +288,7 @@ body {
 	background-position: center center;
 	position: relative;
 	z-index: 999;
+	border-bottom: 1px solid transparent;
 
 	.site-logo-anchor,
 	.site-logo-link,
@@ -381,8 +376,16 @@ body {
 	.type-page {
 		padding-top: ms(5);
 		padding-bottom: ms(5);
+		position: relative;
+
+		.storefront-hero__button-edit {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			font-size: ms(-1);
+		}
 	}
-	
+
 	.entry-content {
 		font-size: 1.1em;
 	}
@@ -518,7 +521,7 @@ table {
 
 	caption {
 		padding: 1em 0;
-		font-weight: 700;
+		font-weight: 600;
 	}
 
 	td,
@@ -532,12 +535,14 @@ table {
 		}
 	}
 
+	th {
+		font-weight: 600;
+	}
+
 	thead {
 		th {
-			text-transform: uppercase;
 			padding: ms(2);
 			vertical-align: middle;
-			font-weight: 900;
 		}
 	}
 
@@ -897,7 +902,6 @@ textarea,
 	outline: none;
 	border: 0;
 	-webkit-appearance: none;
-	border-radius: 2px;
 	box-sizing: border-box;
 	font-weight: normal;
 	box-shadow:
@@ -917,7 +921,7 @@ textarea {
 }
 
 label {
-	font-weight: 600;
+	font-weight: 400;
 }
 
 label.inline {
@@ -927,12 +931,17 @@ label.inline {
 }
 
 fieldset {
-	padding: 0;
+	padding: ms(3);
+	padding-top: ms(1);
 	border: 0;
+	margin: 0;
 	margin-bottom: ms(3);
+	margin-top: ms(3);
 
 	legend {
-		font-weight: 700;
+		font-weight: 600;
+		padding: ms(-2) ms(1);
+		margin-left: - ms(1);
 	}
 }
 
@@ -1219,8 +1228,9 @@ button.menu-toggle {
  */
 
 .site-main nav.navigation {
-	margin: 0 0 ms(1);
 	@include clearfix;
+	clear: both;
+	padding: ms(5) 0;
 
 	.nav-previous,
 	.nav-next {
@@ -1268,13 +1278,17 @@ button.menu-toggle {
 	text-align: center;
 	clear: both;
 
+	ul.page-numbers {
+		@include clearfix;
+	}
+
 	.page-numbers {
 		list-style: none;
 		margin: 0;
-		@include clearfix;
 
 		li {
 			display: inline-block;
+			float: left;
 
 			.page-numbers {
 				border-left-width: 0;
@@ -1284,10 +1298,8 @@ button.menu-toggle {
 				color: $color_body;
 
 				&.current {
-					font-weight: 700;
 					background-color: $color_links;
 					border-color: $color_links;
-					color: #fff;
 				}
 
 				&.dots {
@@ -1342,7 +1354,7 @@ button.menu-toggle {
 		border-bottom: 1px solid $color_border;
 		padding: 0 0 1em;
 		margin-bottom: 1em;
-		font-weight: 700;
+		font-weight: 300;
 	}
 
 	ul {
@@ -1360,12 +1372,7 @@ button.menu-toggle {
 		font-weight: 300;
 
 		a.button {
-			font-weight: 700 !important;
-			color: #fff;
-
-			&:hover {
-				color: #fff;
-			}
+			font-weight: 600 !important;
 		}
 	}
 }

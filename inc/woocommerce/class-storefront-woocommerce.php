@@ -31,6 +31,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) );
 			add_filter( 'woocommerce_product_thumbnails_columns', 	array( $this, 'thumbnail_columns' ) );
 			add_filter( 'loop_shop_per_page', 						array( $this, 'products_per_page' ) );
+			add_filter( 'woocommerce_breadcrumb_defaults',          array( $this,'change_breadcrumb_delimiter' ) );
 
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {
 				add_action( 'wp_footer', 							array( $this, 'star_rating_script' ) );
@@ -159,7 +160,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since  1.0.0
 		 */
 		public function thumbnail_columns() {
-			return intval( apply_filters( 'storefront_product_thumbnail_columns', 4 ) );
+			$columns = 4;
+
+			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+				$columns = 5;
+			}
+			
+			return intval( apply_filters( 'storefront_product_thumbnail_columns', $columns ) );
 		}
 
 		/**
@@ -180,6 +187,17 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function is_woocommerce_extension_activated( $extension = 'WC_Bookings' ) {
 			return class_exists( $extension ) ? true : false;
+		}
+
+		/**
+		 * Remove the breadcrumb delimiter
+		 * @param  array $defaults thre breadcrumb defaults
+		 * @return array           thre breadcrumb defaults
+		 * @since 2.2.0
+		 */
+		public function change_breadcrumb_delimiter( $defaults ) {
+			$defaults['delimiter'] = '<span class="breadcrumb-separator"> / </span>';
+			return $defaults;
 		}
 
 		/**
