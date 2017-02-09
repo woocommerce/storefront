@@ -47,7 +47,10 @@ if ( is_admin() ) {
 	$storefront->admin = require 'inc/admin/class-storefront-admin.php';
 }
 
-$storefront->nux = require 'inc/nux/class-storefront-nux.php';
+// NUX
+require 'inc/nux/class-storefront-nux-admin.php';
+require 'inc/nux/class-storefront-nux-starter-content.php';
+require 'inc/nux/class-storefront-nux-guided-tour.php';
 
 /**
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.

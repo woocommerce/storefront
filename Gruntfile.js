@@ -18,7 +18,9 @@ module.exports = function( grunt ) {
 				'assets/js/customizer/*.js',
 				'!assets/js/customizer/*.min.js',
 				'assets/js/woocommerce/*.js',
-				'!assets/js/woocommerce/*.min.js'
+				'!assets/js/woocommerce/*.min.js',
+				'inc/nux/assets/js/*.js',
+				'!inc/nux/assets/js/*.min.js'
 			]
 		},
 
@@ -62,6 +64,18 @@ module.exports = function( grunt ) {
 					dest: 'assets/js/woocommerce/',
 					ext: '.min.js'
 				}]
+			},
+			nux: {
+				files: [{
+					expand: true,
+					cwd: 'inc/nux/assets/js/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: 'inc/nux/assets/js/',
+					ext: '.min.js'
+				}]
 			}
 		},
 
@@ -92,7 +106,9 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/mix-and-match.css': 'assets/sass/woocommerce/extensions/mix-and-match.scss',
 					'assets/sass/woocommerce/extensions/quick-view.css': 'assets/sass/woocommerce/extensions/quick-view.scss',
 					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
-					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss'
+					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss',
+					'inc/nux/assets/css/admin.css': 'inc/nux/assets/css/admin.scss',
+					'inc/nux/assets/css/customizer.css': 'inc/nux/assets/css/customizer.scss'
 				}]
 			}
 		},
@@ -123,6 +139,13 @@ module.exports = function( grunt ) {
 				cwd: 'assets/sass/woocommerce/',
 				src: ['*.css'],
 				dest: 'assets/sass/woocommerce/',
+				ext: '.css'
+			},
+			nux: {
+				expand: true,
+				cwd: 'inc/nux/assets/css/',
+				src: ['*.css'],
+				dest: 'inc/nux/assets/css/',
 				ext: '.css'
 			}
 		},

@@ -6,6 +6,9 @@
 style.css
 style-rtl.css
 
+/inc/nux/assets/css/*.css
+/inc/nux/assets/js/*.min.js
+
 # Minified js
 /assets/js/*.min.js
 /assets/js/customizer/*.min.js

@@ -1,3 +1,4 @@
+/* global _wpCustomizeSFGuidedTourSteps */
 ( function( wp, $ ) {
 	'use strict';
 
@@ -44,13 +45,18 @@
 			// Show first step
 			this._showNextStep();
 
-			$( document ).on( 'click', '.sf-guided-tour-step .sf-guided-tour-button', function() {
+			$( document ).on( 'click', '.sf-guided-tour-step .sf-nux-button', function() {
 				self._showNextStep();
 				return false;
 			});
 
-			$( document ).on( 'click', '.sf-guided-tour-step .sf-guided-tour-dismiss', function() {
-				self._hideTour( true );
+			$( document ).on( 'click', '.sf-guided-tour-step .sf-guided-tour-skip', function() {
+				if ( 0 === self.currentStep ) {
+					self._hideTour( true );
+				} else {
+					self._showNextStep();
+				}
+
 				return false;
 			});
 		},
@@ -67,7 +73,7 @@
 			});
 		},
 
-		_adjustPosition: function( container ) {
+		_adjustPosition: function() {
 			var step            = this._getCurrentStep(),
 				expandedSection = api.state( 'expandedSection' ).get(),
 				expandedPanel   = api.state( 'expandedPanel' ).get();
@@ -76,8 +82,11 @@
 				return;
 			}
 
+			this.$container.removeClass( 'sf-inside-section' );
+
 			if ( expandedSection && step.section === expandedSection.id ) {
 				this._moveContainer( $( expandedSection.container[1] ).find( '.customize-section-title' ) );
+				this.$container.addClass( 'sf-inside-section' );
 			} else if ( false === expandedSection && false === expandedPanel ) {
 				if ( this._isTourHidden() ) {
 					this._revealTour();
@@ -100,7 +109,7 @@
 
 			this.$container.css({
 				transform: '',
-				top: this.$container.offset().top,
+				top: this.$container.offset().top
 			});
 
 			$( 'body' ).addClass( 'sf-exiting' ).on( 'animationend.storefront webkitAnimationEnd.storefront', function() {
@@ -125,7 +134,7 @@
 
 				self.$container.css({
 					top: 'auto',
-					transform: 'translateY(' + parseInt( self.$container.offset().top ) + 'px)',
+					transform: 'translateY(' + parseInt( self.$container.offset().top, 10 ) + 'px)'
 				});
 			});
 		},
@@ -163,8 +172,16 @@
 			// Load template
 			template = wp.template( 'sf-guided-tour-step' );
 
+			this.$container.removeClass( 'sf-first-step' );
+
 			if ( 0 === this.currentStep ) {
 				step.first_step = true;
+				this.$container.addClass( 'sf-first-step' );
+			}
+
+			if ( this._isLastStep() ) {
+				step.last_step = true;
+				this.$container.addClass( 'sf-last-step' );
 			}
 
 			this._moveContainer( this._getSelector( step.section ) );
@@ -179,9 +196,9 @@
 				return;
 			}
 
-			position = parseInt( $selector.offset().top ) + ( $selector.height() / 2 ) - 44;
+			position = parseInt( $selector.offset().top, 10 ) + ( $selector.height() / 2 ) - 44;
 
-			this.$container.addClass( 'sf-moving' ).css({ 'transform': 'translateY(' + parseInt( position ) + 'px)' }).on( 'transitionend.storefront', function() {
+			this.$container.addClass( 'sf-moving' ).css({ 'transform': 'translateY(' + parseInt( position, 10 ) + 'px)' }).on( 'transitionend.storefront', function() {
 				self.$container.removeClass( 'sf-moving' );
 				self.$container.off( 'transitionend.storefront' );
 			} );

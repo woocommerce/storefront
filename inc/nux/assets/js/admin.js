@@ -1,3 +1,4 @@
+/* global ajaxurl, storefrontNUX */
 ( function( wp, $ ) {
 	'use strict';
 
@@ -116,40 +117,6 @@
 			event.preventDefault();
 
 			wp.storefront.installWooCommerce();
-		});
-
-		// Setup tasks toggle
-		$document.on( 'click', '.sf-notice-nux .sf-setup-tasks', function( event ) {
-			var $toggleButton = $( this );
-
-			event.preventDefault();
-
-			$( '.sf-setup-tasks-options' ).slideToggle( function() {
-				if ( $( this ).is( ':visible' ) ) {
-					$toggleButton.addClass( 'sf-setup-tasks-visible' );
-				} else {
-					$toggleButton.removeClass( 'sf-setup-tasks-visible' );
-				}
-			});
-		});
-
-		// Setup tasks options
-		$document.on( 'click', '.sf-notice-nux .sf-setup-tasks-options input[type="checkbox"]', function() {
-			var $checkboxes = $( '.sf-notice-nux .sf-setup-tasks-options input[type="checkbox"]' ),
-			    $customizerButton = $( '.sf-notice-nux .button-primary' ),
-			    selected = [];
-
-			$checkboxes.each( function() {
-				if ( $( this ).is( ':checked' ) ) {
-					selected.push( $( this ).attr( 'name' ) );
-				}
-			});
-
-			if ( 0 < selected.length ) {
-				$customizerButton.attr( 'href', $customizerButton.data( 'tour-url' ) + '&tasks=' + selected.join( ',' ) );
-			} else {
-				$customizerButton.attr( 'href', $customizerButton.data( 'tour-url' ) );
-			}
 		});
 	});
 })( window.wp, jQuery );

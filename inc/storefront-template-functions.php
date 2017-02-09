@@ -547,12 +547,12 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 
 			do_action( 'storefront_homepage_after_product_categories_title' );
 
-			echo storefront_do_shortcode( 'product_categories', array(
+			echo storefront_do_shortcode( 'product_categories', apply_filters( 'storefront_product_categories_shortcode_args', array(
 				'number'  => intval( $args['limit'] ),
 				'columns' => intval( $args['columns'] ),
 				'orderby' => esc_attr( $args['orderby'] ),
 				'parent'  => esc_attr( $args['child_categories'] ),
-			) );
+			) ) );
 
 			do_action( 'storefront_homepage_after_product_categories' );
 
