@@ -13,8 +13,6 @@ module.exports = function( grunt ) {
 				'Gruntfile.js',
 				'assets/js/*.js',
 				'!assets/js/*.min.js',
-				'assets/js/admin/welcome-screen/*.js',
-				'!assets/js/admin/welcome-screen/*.min.js',
 				'assets/js/customizer/*.js',
 				'!assets/js/customizer/*.min.js',
 				'assets/js/woocommerce/*.js',
@@ -36,18 +34,6 @@ module.exports = function( grunt ) {
 						'!*.min.js'
 					],
 					dest: 'assets/js/',
-					ext: '.min.js'
-				}]
-			},
-			admin: {
-				files: [{
-					expand: true,
-					cwd: 'assets/js/admin/welcome-screen/',
-					src: [
-						'*.js',
-						'!*.min.js'
-					],
-					dest: 'assets/js/admin/welcome-screen/',
 					ext: '.min.js'
 				}]
 			},
@@ -163,10 +149,6 @@ module.exports = function( grunt ) {
 					// main js
 					'assets/js/*js',
 					'!assets/js/*.min.js',
-
-					// admin js
-					'assets/js/admin/welcome-screen/*js',
-					'!assets/js/admin/welcome-screen/*.min.js',
 
 					// customizer js
 					'assets/js/customizer/*js',

@@ -26,10 +26,6 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			add_action( 'admin_menu', 				array( $this, 'welcome_register_menu' ) );
 			add_action( 'load-themes.php',			array( $this, 'activation_admin_notice' ) );
 			add_action( 'admin_enqueue_scripts', 	array( $this, 'welcome_style' ) );
-
-			add_action( 'storefront_welcome', 		array( $this, 'welcome_intro' ), 			10 );
-			add_action( 'storefront_welcome', 		array( $this, 'welcome_enhance' ), 			20 );
-			add_action( 'storefront_welcome', 		array( $this, 'welcome_contribute' ), 		30 );
 		}
 
 		/**
@@ -72,10 +68,6 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
 				wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/assets/sass/admin/welcome-screen/welcome.css', $storefront_version );
 				wp_style_add_data( 'storefront-welcome-screen', 'rtl', 'replace' );
-				wp_enqueue_style( 'thickbox' );
-				wp_enqueue_script( 'thickbox' );
-				wp_enqueue_script( 'masonry' );
-				wp_enqueue_script( 'storefront-welcome-screen-script', get_template_directory_uri() . '/assets/js/admin/welcome-screen/welcome.min.js', array( 'masonry' ), $storefront_version );
 			}
 		}
 
@@ -98,19 +90,34 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			require_once( ABSPATH . 'wp-load.php' );
 			require_once( ABSPATH . 'wp-admin/admin.php' );
 			require_once( ABSPATH . 'wp-admin/admin-header.php' );
+
+			global $storefront_version;
 			?>
-			<div class="wrap about-wrap">
 
-				<?php
-				/**
-				 * Functions hooked into storefront_welcome action
-				 *
-				 * @hooked welcome_intro      - 10
-				 * @hooked welcome_enhance    - 20
-				 * @hooked welcome_contribute - 30
-				 */
-				do_action( 'storefront_welcome' ); ?>
+			<div class="storefront-wrap">
+				<section class="storefront-welcome-nav">
+					<span class="storefront-welcome-nav__version">Storefront <?php echo $storefront_version; ?></span>
+					<ul>
+						<li><a href="https://support.woocommerce.com/"><?php _e( 'Support', 'storefront' ); ?></a></li>
+						<li><a href="https://docs.woocommerce.com/documentation/themes/storefront/"><?php _e( 'Documentation', 'storefront' ); ?></a></li>
+						<li><a href="https://storefront.wordpress.com"><?php _e( 'Development blog', 'storefront' ); ?></a></li>
+					</ul>
+				</section>
 
+				<div class="storefront-logo">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront.png" alt="Storefront" />
+				</div>
+
+				<div class="storefront-intro">
+					<h1><?php echo sprintf( esc_attr__( 'Setup complete %sYour Storefront adventure begins now 🚀%s ', 'storefront' ), '<span>', '</span>' ); ?></h1>
+					<p><?php esc_attr_e( 'One more thing... You might be interested in the following Storefront extensions and designs', 'storefront' ); ?></p>
+				</div>
+
+				<div class="automattic">
+					<p>
+					<?php printf( esc_html__( 'An %s project', 'storefront' ), '<a href="https://automattic.com/"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/welcome-screen/automattic.png" alt="Automattic" /></a>' ); ?>
+					</p>
+				</div>
 			</div>
 			<?php
 		}
