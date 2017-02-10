@@ -11,9 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-#### Move meta input
-#### tiago testing
-
 if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 	/**
