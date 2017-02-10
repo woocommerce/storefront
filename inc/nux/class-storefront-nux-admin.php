@@ -191,6 +191,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				$args['sf_tasks'] = implode( ',', $tasks );
 			}
 
+			// Redirect to the Storefront Welcome screen when exiting the Customizer.
+			$args['return'] = urlencode( admin_url( 'themes.php?page=storefront-welcome' ) );
+
 			wp_safe_redirect( add_query_arg( $args, admin_url( 'customize.php' ) ) );
 
 			die();
