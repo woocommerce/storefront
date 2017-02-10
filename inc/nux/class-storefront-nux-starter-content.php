@@ -330,7 +330,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		public function add_product_tax() {
 			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
-				return $query_args;
+				return;
 			}
 
 			global $wp_customize;
