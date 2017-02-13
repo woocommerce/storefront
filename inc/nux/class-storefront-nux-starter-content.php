@@ -45,58 +45,59 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'blog'
 				),
 				'attachments' => array(
-					'happy-ninja-image' => array(
-						'post_title' => 'Happy Ninja',
-						'file'       => 'inc/nux/assets/images/products/happy-ninja.jpg',
+					'beanie-image' => array(
+						'post_title' => 'Beanie',
+						'file'       => 'inc/nux/assets/images/products/beanie.jpg',
 					),
-					'happy-ninja-2-image' => array(
-						'post_title' => 'Happy Ninja 2',
-						'file'       => 'inc/nux/assets/images/products/happy-ninja-2.jpg',
+					'belt-image' => array(
+						'post_title' => 'Belt',
+						'file'       => 'inc/nux/assets/images/products/belt.jpg',
 					),
-					'ninja-silhouette-image' => array(
-						'post_title' => 'Ninja Silhouette',
-						'file'       => 'inc/nux/assets/images/products/ninja-silhouette.jpg',
+					'cap-image' => array(
+						'post_title' => 'Cap',
+						'file'       => 'inc/nux/assets/images/products/cap.jpg',
 					),
-					'ninja-silhouette-2-image' => array(
-						'post_title' => 'Ninja Silhouette 2',
-						'file'       => 'inc/nux/assets/images/products/ninja-silhouette-2.jpg',
+					'hoodie-with-logo-image' => array(
+						'post_title' => 'Hoodie with Logo',
+						'file'       => 'inc/nux/assets/images/products/hoodie-with-logo.jpg',
 					),
-					'patient-ninja-image' => array(
-						'post_title' => 'Patient Ninja',
-						'file'       => 'inc/nux/assets/images/products/patient-ninja.jpg',
+					'hoodie-with-pocket-image' => array(
+						'post_title' => 'Hoodie with Pocket',
+						'file'       => 'inc/nux/assets/images/products/hoodie-with-pocket.jpg',
 					),
-					'premium-quality-image' => array(
-						'post_title' => 'Premium Quality',
-						'file'       => 'inc/nux/assets/images/products/premium-quality.jpg',
+					'hoodie-with-zipper-image' => array(
+						'post_title' => 'Hoodie with Zipper',
+						'file'       => 'inc/nux/assets/images/products/hoodie-with-zipper.jpg',
 					),
-					'ship-your-idea-image' => array(
-						'post_title' => 'Ship your idea',
-						'file'       => 'inc/nux/assets/images/products/ship-your-idea.jpg',
+					'hoodie-image' => array(
+						'post_title' => 'Hoodie',
+						'file'       => 'inc/nux/assets/images/products/hoodie.jpg',
 					),
-					'ship-your-idea-2-image' => array(
-						'post_title' => 'Ship your idea',
-						'file'       => 'inc/nux/assets/images/products/ship-your-idea-2.jpg',
+					'long-sleeve-tee-image' => array(
+						'post_title' => 'Long Sleeve Tee',
+						'file'       => 'inc/nux/assets/images/products/long-sleeve-tee.jpg',
 					),
-					'woo-ninja-image' => array(
-						'post_title' => 'Woo Ninja',
-						'file'       => 'inc/nux/assets/images/products/woo-ninja.jpg',
+					'polo-image' => array(
+						'post_title' => 'Polo',
+						'file'       => 'inc/nux/assets/images/products/polo.jpg',
 					),
-					'woo-ninja-2-image' => array(
-						'post_title' => 'Woo Ninja',
-						'file'       => 'inc/nux/assets/images/products/woo-ninja-2.jpg',
+					'sunglasses-image' => array(
+						'post_title' => 'Sunglasses',
+						'file'       => 'inc/nux/assets/images/products/sunglasses.jpg',
 					),
-					'tshirts-image' => array(
-						'post_title' => 'T-shirts',
-						'file'       => 'inc/nux/assets/images/categories/tshirts.jpg',
+					'tshirt-image' => array(
+						'post_title' => 'Tshirt',
+						'file'       => 'inc/nux/assets/images/products/tshirt.jpg',
 					),
-					'hoodies-image' => array(
-						'post_title' => 'Hoodies',
-						'file'       => 'inc/nux/assets/images/categories/hoodies.jpg',
+					'vneck-tee-image' => array(
+						'post_title' => 'Vneck Tshirt',
+						'file'       => 'inc/nux/assets/images/products/vneck-tee.jpg',
 					),
 				),
 				'theme_mods' => array(
-					'category_tshirts' => '{{tshirts-image}}',
-					'category_hoodies' => '{{hoodies-image}}',
+					'category_tshirts'     => '{{tshirts-image}}',
+					'category_hoodies'     => '{{hoodies-image}}',
+					'category_accessories' => '{{accessories-image}}',
 				),
 				'options' => array(
 					'show_on_front'  => 'page',
@@ -105,28 +106,43 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				),
 				'widgets' => array(
 					'sidebar-1' => array(
-						'woocommerce_widget_cart' => array( 'woocommerce_widget_cart', array(
-							'title' => __( 'Cart', 'storefront' ),
-						) ),
-						'woocommerce_price_filter' => array( 'woocommerce_price_filter', array(
-							'title' => __( 'Filter by price', 'storefront' ),
-						) ),
-						'woocommerce_product_categories' => array( 'woocommerce_product_categories', array(
-							'title' => __( 'Product categories', 'storefront' ),
-						) ),
-						'woocommerce_product_search' => array( 'woocommerce_product_search', array(
-							'title' => __( 'Search', 'storefront' ),
-						) ),
+						'woocommerce_widget_cart' => array(
+							'woocommerce_widget_cart',
+							array(
+								'title' => __( 'Cart', 'storefront' ),
+							),
+						),
+						'woocommerce_price_filter' => array(
+							'woocommerce_price_filter',
+							array(
+								'title' => __( 'Filter by price', 'storefront' ),
+							),
+						),
+						'woocommerce_product_categories' => array(
+							'woocommerce_product_categories',
+							array(
+								'title' => __( 'Product categories', 'storefront' ),
+							),
+						),
+						'woocommerce_product_search' => array(
+							'woocommerce_product_search',
+							array(
+								'title' => __( 'Search', 'storefront' ),
+							),
+						),
 					),
 					'footer-1' => array(
 						'text_about'
 					),
 					'footer-2' => array(
-						'woocommerce_products' => array( 'woocommerce_products', array(
-							'title'  => __( 'Featured products', 'storefront' ),
-							'show'   => 'featured',
-							'number' => 5
-						) ),
+						'woocommerce_products' => array(
+							'woocommerce_products',
+							array(
+								'title'  => __( 'Featured products', 'storefront' ),
+								'show'   => 'featured',
+								'number' => 5,
+							),
+						),
 					),
 					'footer-3' => array(
 						'text_business_info'
@@ -139,8 +155,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							'shop' => array(
 								'type'      => 'post_type',
 								'object'    => 'page',
-								'object_id' => '{{sf_shop}}'
-							)
+								'object_id' => '{{sf_shop}}',
+							),
 						),
 					),
 					'secondary' => array(
@@ -149,8 +165,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							'my_account' => array(
 								'type'      => 'post_type',
 								'object'    => 'page',
-								'object_id' => '{{sf_my-account}}'
-							)
+								'object_id' => '{{sf_my-account}}',
+							),
 						),
 					),
 					'handheld' => array(
@@ -159,26 +175,26 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							'shop' => array(
 								'type'      => 'post_type',
 								'object'    => 'page',
-								'object_id' => '{{sf_shop}}'
-							)
+								'object_id' => '{{sf_shop}}',
+							),
 						),
 					),
 				),
 			);
 
-			// Add products
+			// Add products.
 			$starter_content_wc_products = $this->_starter_content_products();
 
 			if ( ! empty( $starter_content_wc_products ) ) {
 				$starter_content['posts'] = array_merge( $starter_content['posts'], $starter_content_wc_products );
 			}
 
-			// Use symbols as post name for attachments
+			// Use symbols as post name for attachments.
 			foreach ( $starter_content['attachments'] as $symbol => $attachment ) {
 				$starter_content['attachments'][ $symbol ]['post_name'] = $symbol;
 			}
 
-			// Add WooCommerce pages
+			// Add WooCommerce pages.
 			$starter_content_wc_pages = array();
 			$woocommerce_pages        = Storefront_NUX_Admin::get_woocommerce_pages();
 
@@ -189,7 +205,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					$starter_content_wc_pages[ 'sf_' . $page->post_name ] = array(
 						'post_title' => $page->post_title,
 						'post_name'  => $page->post_name,
-						'post_type'  => 'page'
+						'post_type'  => 'page',
 					);
 				}
 			}
@@ -198,7 +214,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				$starter_content['posts'] = array_merge( $starter_content['posts'], $starter_content_wc_pages );
 			}
 
-			// Register support for starter content
+			// Register support for starter content.
 			add_theme_support( 'starter-content', apply_filters( 'storefront_starter_content', $starter_content ) );
 		}
 
@@ -206,8 +222,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Filters starter content and remove some of the content if necessary.
 		 *
 		 * @since 2.2
-		 * @param array $content
-		 * @param array $config
+		 * @param array $content Starter content.
+		 * @param array $config Config.
 		 * @return array $content
 		 */
 		public function filter_start_content( $content, $config ) {
@@ -255,7 +271,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				}
 			}
 
-			// Add custom fields to products
+			// Add custom fields to products.
 			$starter_products = $this->_starter_content_products();
 
 			foreach ( $content['posts'] as $post_id => $post ) {
@@ -271,7 +287,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Filter WooCommerce main query to include starter content products.
 		 *
 		 * @since 2.2
-		 * @param object $query
+		 * @param object $query The Query.
 		 * @return void
 		 */
 		public function wc_query( $query ) {
@@ -285,10 +301,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			if ( ! empty( $data->value() ) ) {
 
-				// Add created products to query
+				// Add created products to query.
 				$query->set( 'post__in', (array) $data->value() );
 
-				// Allow for multiple status
+				// Allow for multiple status.
 				$query->set( 'post_status', get_post_stati() );
 			}
 		}
@@ -297,9 +313,9 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Filter shortcode products loop in WooCommerce.
 		 *
 		 * @since 2.2
-		 * @param array $query_args
-		 * @param array $atts
-		 * @param string $loop_name
+		 * @param array  $query_args Query args.
+		 * @param array  $atts Shortcode attributes.
+		 * @param string $loop_name Loop name.
 		 * @return array $args
 		 */
 		public function shortcode_loop_products( $query_args, $atts, $loop_name ) {
@@ -313,10 +329,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			if ( ! empty( $data->value() ) ) {
 
-				// Add created products to query
+				// Add created products to query.
 				$query_args['post__in'] = $data->value();
 
-				// Allow for multiple status
+				// Allow for multiple status.
 				$query_args['post_status'] = get_post_stati();
 			}
 
@@ -374,7 +390,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 										$taxonomy,
 										array(
 											'description' => $category['description'],
-											'slug'        => $category['slug']
+											'slug'        => $category['slug'],
 										)
 									);
 
@@ -402,20 +418,20 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Filter Storefront Product Categories shortcode.
 		 *
-		 * @param array $args
+		 * @param array $args Shortcode args.
 		 * @return array $args
 		 * @since 2.2
 		 */
 		public function filter_sf_categories( $args ) {
-			// Get Categories
+			// Get Categories.
 			$product_cats = get_terms( 'product_cat', array( 'fields' => 'ids', 'hide_empty' => false ) );
 
 			if ( ! empty( $product_cats ) ) {
 
-				// Needs to be set for categories to show up
+				// Needs to be set for categories to show up.
 				$args['hide_empty'] = false;
 
-				// List of categories to display
+				// List of categories to display.
 				$args['ids'] = implode( $product_cats, ',' );
 			}
 
@@ -428,200 +444,285 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @since 2.2
 		 */
 		private function _starter_content_products() {
+			$accessories_name        = esc_attr__( 'Accessories', 'storefront' );
+			$accessories_description = esc_attr__( 'A short category description', 'storefront' );
+
+			$hoodies_name            = esc_attr__( 'Hoodies', 'storefront' );
+			$hoodies_description     = esc_attr__( 'A short category description', 'storefront' );
+
+			$tshirts_name            = esc_attr__( 'Tshirts', 'storefront' );
+			$tshirts_description     = esc_attr__( 'A short category description', 'storefront' );
+
 			$products = array(
-				'premium-quality' => array(
-					'post_title'   => 'Premium Quality',
+				// Accessories
+				'beanie' => array(
+					'post_title'   => esc_attr__( 'Beanie', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '20'
+						'_visibility'        => 'visible',
+						'_price'             => '20',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'T-shirts',
-								'slug'        => 'tshirts',
-								'description' => 'A short category description'
-							)
-						)
+								'term'        => $accessories_name,
+								'slug'        => 'accessories',
+								'description' => $accessories_description,
+							),
+						),
 					),
-					'thumbnail' => '{{premium-quality-image}}'
+					'thumbnail' => '{{beanie-image}}',
 				),
-				'ship-your-idea' => array(
-					'post_title'   => 'Ship Your Idea',
+				'belt' => array(
+					'post_title'   => esc_attr__( 'Belt', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '20'
+						'_visibility'        => 'visible',
+						'_price'             => '25',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'T-shirts',
-								'slug'        => 'tshirts',
-								'description' => 'A short category description'
-							)
-						)
+								'term'        => $accessories_name,
+								'slug'        => 'accessories',
+								'description' => $accessories_description,
+							),
+						),
 					),
-					'thumbnail' => '{{ship-your-idea-image}}'
+					'thumbnail' => '{{belt-image}}',
 				),
-				'ninja-silhouette' => array(
-					'post_title'   => 'Ninja Silhouette',
+				'cap' => array(
+					'post_title'   => esc_attr__( 'Cap', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '20'
+						'_visibility'        => 'visible',
+						'_price'             => '18',
+						'_sale_price'        => '16',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'T-shirts',
-								'slug'        => 'tshirts',
-								'description' => 'A short category description'
-							)
-						)
+								'term'        => $accessories_name,
+								'slug'        => 'accessories',
+								'description' => $accessories_description,
+							),
+						),
 					),
-					'thumbnail' => '{{ninja-silhouette-image}}'
+					'thumbnail' => '{{cap-image}}',
 				),
-				'woo-ninja' => array(
-					'post_title'   => 'Woo Ninja',
+				'sunglasses' => array(
+					'post_title'   => esc_attr__( 'Sunglasses', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '20'
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'T-shirts',
-								'slug'        => 'tshirts',
-								'description' => 'A short category description'
-							)
-						)
+								'term'        => $accessories_name,
+								'slug'        => 'accessories',
+								'description' => $accessories_description,
+							),
+						),
 					),
-					'thumbnail' => '{{woo-ninja-image}}'
+					'thumbnail' => '{{sunglasses-image}}',
 				),
-				'happy-ninja' => array(
-					'post_title'   => 'Happy Ninja',
+				'hoodie-with-logo' => array(
+					'post_title'   => esc_attr__( 'Hoodie with Logo', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '18'
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'T-shirts',
-								'slug'        => 'tshirts',
-								'description' => 'A short category description'
-							)
-						)
-					),
-					'thumbnail' => '{{happy-ninja-image}}'
-				),
-				'ship-your-idea-2' => array(
-					'post_title'   => 'Ship Your Idea',
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '35'
-					),
-					'taxonomy' => array(
-						'product_cat' => array(
-							array(
-								'term'        => 'Hoodies',
+								'term'        => $hoodies_name,
 								'slug'        => 'hoodies',
-								'description' => 'A short category description'
-							)
-						)
+								'description' => $hoodies_description,
+							),
+						),
 					),
-					'thumbnail' => '{{ship-your-idea-2-image}}'
+					'thumbnail' => '{{hoodie-with-logo-image}}',
 				),
-				'woo-ninja-2' => array(
-					'post_title'   => 'Woo Ninja',
+				'hoodie-with-pocket' => array(
+					'post_title'   => esc_attr__( 'Hoodie with Pocket', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '35'
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'Hoodies',
+								'term'        => $hoodies_name,
 								'slug'        => 'hoodies',
-								'description' => 'A short category description'
-							)
-						)
+								'description' => $hoodies_description,
+							),
+						),
 					),
-					'thumbnail' => '{{woo-ninja-2-image}}'
+					'thumbnail' => '{{hoodie-with-pocket-image}}',
 				),
-				'patient-ninja' => array(
-					'post_title'   => 'Patient Ninja',
+				'hoodie-with-zipper' => array(
+					'post_title'   => esc_attr__( 'Hoodie with Zipper', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '35'
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'Hoodies',
+								'term'        => $hoodies_name,
 								'slug'        => 'hoodies',
-								'description' => 'A short category description'
-							)
-						)
+								'description' => $hoodies_description,
+							),
+						),
 					),
-					'thumbnail' => '{{patient-ninja-image}}'
+					'thumbnail' => '{{hoodie-with-zipper-image}}',
 				),
-				'happy-ninja-2' => array(
-					'post_title'   => 'Happy Ninja',
+				'hoodie' => array(
+					'post_title'   => esc_attr__( 'Hoodie', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '35'
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'Hoodies',
+								'term'        => $hoodies_name,
 								'slug'        => 'hoodies',
-								'description' => 'A short category description'
-							)
-						)
+								'description' => $hoodies_description,
+							),
+						),
 					),
-					'thumbnail' => '{{happy-ninja-2-image}}'
+					'thumbnail' => '{{hoodie-image}}',
 				),
-				'ninja-silhouette-2' => array(
-					'post_title'   => 'Ninja Silhouette',
+				'long-sleeve-tee' => array(
+					'post_title'   => esc_attr__( 'Long Sleeve Tee', 'storefront' ),
 					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'    => 'product',
 					'meta_input'   => array(
-						'_visibility' => 'visible',
-						'_price'      => '35'
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
 							array(
-								'term'        => 'Hoodies',
-								'slug'        => 'hoodies',
-								'description' => 'A short category description'
-							)
-						)
+								'term'        => $tshirts_name,
+								'slug'        => 'tshirts',
+								'description' => $tshirts_description,
+							),
+						),
 					),
-					'thumbnail' => '{{ninja-silhouette-2-image}}'
+					'thumbnail' => '{{long-sleeve-tee-image}}',
+				),
+				'polo' => array(
+					'post_title'   => esc_attr__( 'Polo', 'storefront' ),
+					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'    => 'product',
+					'meta_input'   => array(
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
+					),
+					'taxonomy' => array(
+						'product_cat' => array(
+							array(
+								'term'        => $tshirts_name,
+								'slug'        => 'tshirts',
+								'description' => $tshirts_description,
+							),
+						),
+					),
+					'thumbnail' => '{{polo-image}}',
+				),
+				'tshirt' => array(
+					'post_title'   => esc_attr__( 'Tshirt', 'storefront' ),
+					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'    => 'product',
+					'meta_input'   => array(
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
+					),
+					'taxonomy' => array(
+						'product_cat' => array(
+							array(
+								'term'        => $tshirts_name,
+								'slug'        => 'tshirts',
+								'description' => $tshirts_description,
+							),
+						),
+					),
+					'thumbnail' => '{{tshirt-image}}',
+				),
+				'vneck-tee' => array(
+					'post_title'   => esc_attr__( 'Vneck Tshirt', 'storefront' ),
+					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'    => 'product',
+					'meta_input'   => array(
+						'_visibility'        => 'visible',
+						'_price'             => '45',
+						'_wc_average_rating' => '4.5',
+						'total_sales'        => '5',
+						'_featured'          => 'yes',
+					),
+					'taxonomy' => array(
+						'product_cat' => array(
+							array(
+								'term'        => $tshirts_name,
+								'slug'        => 'tshirts',
+								'description' => $tshirts_description,
+							),
+						),
+					),
+					'thumbnail' => '{{vneck-tee-image}}',
 				),
 			);
 
-			// Use symbols as post name
+			// Use symbols as post name.
 			foreach ( $products as $symbol => $product ) {
 				$products[ $symbol ]['post_name'] = $symbol;
 			}
@@ -633,7 +734,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Given a category slug, find the related image attachment.
 		 *
 		 * @since 2.2
-		 * @param string $category
+		 * @param string $category Category.
 		 * @return mixed false|int $query first attachment found.
 		 */
 		private function _get_category_image_attachment_id( $category ) {
@@ -648,7 +749,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'value'   => $category . '-image',
 						'compare' => '=',
 					),
-				)
+				),
 			);
 
 			$query = get_posts( $query_args );
@@ -664,7 +765,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Validates and sanitizes a given tasks list.
 		 *
 		 * @since 2.2
-		 * @param string $tasks
+		 * @param string $tasks The tasks.
 		 * @return mixed false|array $validated_tasks if tasks list is not empty.
 		 */
 		private function _validate_tasks( $tasks ) {
@@ -675,7 +776,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			foreach ( $tasks as $task ) {
 				$task = sanitize_key( $task );
 
-				if ( in_array( $task, $valid_tasks ) ) {
+				if ( in_array( $task, $valid_tasks, true ) ) {
 					$validated_tasks[] = $task;
 				}
 			}
