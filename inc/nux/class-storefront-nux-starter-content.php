@@ -41,7 +41,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'home' => array(
 						'post_title' => sprintf( __( 'Welcome to %s', 'storefront' ), get_bloginfo() ),
 						'template'   => 'template-homepage.php',
-						'thumbnail'  => '',
+						'thumbnail'  => '{{hero-image}}',
 					),
 					'blog'
 				),
@@ -93,6 +93,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'vneck-tee-image' => array(
 						'post_title' => 'Vneck Tshirt',
 						'file'       => 'inc/nux/assets/images/products/vneck-tee.jpg',
+					),
+					'hero-image' => array(
+						'post_title' => 'Hero',
+						'file'       => 'inc/nux/assets/images/hero.jpg',
 					),
 					'tshirts-image' => array(
 						'post_title' => 'T-shirts',
