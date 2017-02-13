@@ -119,28 +119,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				),
 				'widgets' => array(
 					'sidebar-1' => array(
-						'woocommerce_widget_cart' => array(
-							'woocommerce_widget_cart',
-							array(
-								'title' => __( 'Cart', 'storefront' ),
-							),
-						),
-						'woocommerce_price_filter' => array(
-							'woocommerce_price_filter',
-							array(
-								'title' => __( 'Filter by price', 'storefront' ),
-							),
-						),
 						'woocommerce_product_categories' => array(
 							'woocommerce_product_categories',
 							array(
 								'title' => __( 'Product categories', 'storefront' ),
-							),
-						),
-						'woocommerce_product_search' => array(
-							'woocommerce_product_search',
-							array(
-								'title' => __( 'Search', 'storefront' ),
 							),
 						),
 					),
@@ -148,16 +130,13 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'text_about'
 					),
 					'footer-2' => array(
-						'woocommerce_products' => array(
-							'woocommerce_products',
-							array(
-								'title'  => __( 'Featured products', 'storefront' ),
-								'show'   => 'featured',
-								'number' => 5,
+						'woocommerce_product_categories' => array(
+							'woocommerce_product_categories', array(
+								'title' => __( 'Product Categories', 'storefront' ),
 							),
 						),
 					),
-					'footer-3' => array(
+					'footer-2' => array(
 						'text_business_info'
 					),
 				),
