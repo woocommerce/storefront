@@ -39,9 +39,20 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$starter_content = array(
 				'posts' => array(
 					'home' => array(
-						'post_title' => sprintf( __( 'Welcome to %s', 'storefront' ), get_bloginfo() ),
-						'template'   => 'template-homepage.php',
-						'thumbnail'  => '{{hero-image}}',
+						'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
+						'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
+						'template'     => 'template-homepage.php',
+						'thumbnail'    => '{{hero-image}}',
+					),
+					'about' => array(
+						'post_type' => 'page',
+						'post_title' => _x( 'About', 'Storefront' ),
+						'post_content' => _x( 'You might be an artist who would like to introduce yourself and your work here or maybe you&rsquo;re a business with a mission to describe.', 'Storefront' ),
+					),
+					'contact' => array(
+						'post_type' => 'page',
+						'post_title' => _x( 'Contact', 'Storefront' ),
+						'post_content' => _x( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'Storefront' ),
 					),
 					'blog'
 				),
@@ -141,6 +152,16 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 								'type'      => 'post_type',
 								'object'    => 'page',
 								'object_id' => '{{sf_shop}}',
+							),
+							'page_about' => array(
+								'type' => 'post_type',
+								'object' => 'page',
+								'object_id' => '{{about}}',
+							),
+							'page_contact' => array(
+								'type' => 'post_type',
+								'object' => 'page',
+								'object_id' => '{{contact}}',
 							),
 						),
 					),
