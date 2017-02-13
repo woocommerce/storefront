@@ -130,13 +130,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'text_about'
 					),
 					'footer-2' => array(
-						'woocommerce_product_categories' => array(
-							'woocommerce_product_categories', array(
-								'title' => __( 'Product Categories', 'storefront' ),
-							),
-						),
-					),
-					'footer-2' => array(
 						'text_business_info'
 					),
 				),
