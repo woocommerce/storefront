@@ -93,6 +93,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'post_title' => 'Vneck Tshirt',
 						'file'       => 'inc/nux/assets/images/products/vneck-tee.jpg',
 					),
+					'tshirts-image' => array(
+						'post_title' => 'T-shirts',
+						'file'       => 'inc/nux/assets/images/categories/tshirts.jpg',
+					),
+					'hoodies-image' => array(
+						'post_title' => 'Hoodies',
+						'file'       => 'inc/nux/assets/images/categories/hoodies.jpg',
+					),
 				),
 				'theme_mods' => array(
 					'category_tshirts'     => '{{tshirts-image}}',
@@ -461,10 +469,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
-						'_price'             => '20',
+						'_regular_price'     => '45',
+						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -483,10 +492,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
-						'_price'             => '25',
+						'_regular_price'     => '45',
+						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -505,11 +515,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
-						'_price'             => '18',
+						'_regular_price'     => '18',
+						'_price'             => '16',
 						'_sale_price'        => '16',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -528,6 +539,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
@@ -550,10 +562,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -572,10 +585,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -594,6 +608,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
@@ -616,6 +631,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
@@ -638,10 +654,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -660,10 +677,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -682,10 +700,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
-						'_featured'          => 'yes',
+						'_featured'          => 'no',
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -704,6 +723,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'    => 'product',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
+						'_regular_price'     => '45',
 						'_price'             => '45',
 						'_wc_average_rating' => '4.5',
 						'total_sales'        => '5',
