@@ -99,50 +99,32 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 
 			$steps[] = array(
 				'title'       => __( 'Welcome to the Customizer', 'storefront' ),
-				'message'     => sprintf( __( 'Here you can control the overall look and feel of Storefront.%sThere are a few options we recommend you configure to make Storefront your own. We\'ll guide you through changing your homepage layout, adding your logo and customising the header colors. It won\'t take a minute :)', 'storefront' ), PHP_EOL . PHP_EOL ),
+				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sWe\'ll guide you through some options to make it feel like home. It won\'t take a minute :)', 'storefront' ), PHP_EOL . PHP_EOL ),
 				'button_text' => __( 'Let\'s go!', 'storefront' ),
-				'section'     => '#customize-info'
+				'section'     => '#customize-info',
 			);
 
 			$steps[] = array(
 				'title'   => __( 'Add your logo', 'storefront' ),
 				'message' => __( 'Open the Site Identity Panel, then click the \'Select Logo\' button to upload your logo.', 'storefront' ),
-				'section' => 'title_tagline'
+				'section' => 'title_tagline',
 			);
 
 			$steps[] = array(
-				'title'   => __( 'Design the site header', 'storefront' ),
-				'message' => __( 'Inside the Header panel you\'ll find options for the header background, plus link and text colors. Choose colors that suit your brand or use a white header background to create a minimalist look.' ),
-				'section' => 'header_image'
-			);
-
-			$steps[] = array(
-				'title'   => __( 'Choose typography colors', 'storefront' ),
-				'message' => __( 'In the typography panel you can specify colors for general text, for headings and an accent color for things like links.' ),
-				'section' => 'storefront_typography'
-			);
-
-			$steps[] = array(
-				'title'   => __( 'Configure the layout', 'storefront' ),
-				'message' => __( 'Choose whether your sidebar should appear on the left or the right of your main content area.' ),
-				'section' => 'storefront_layout'
+				'title'   => __( 'Choose your accent color', 'storefront' ),
+				'message' => __( 'In the typography panel you can specify an accent color which will be applied to things like links and star ratings. We recommend using your brand color for this setting.' ),
+				'section' => 'storefront_typography',
 			);
 
 			$steps[] = array(
 				'title'   => __( 'Color your buttons', 'storefront' ),
-				'message' => __( 'Choose colors for your button backgrounds and text. You can see a secondary button on the cart page.' ),
-				'section' => 'storefront_buttons'
+				'message' => __( 'Choose colors for your button backgrounds and text. Once again, brand colors are good choices here.' ),
+				'section' => 'storefront_buttons',
 			);
 
 			$steps[] = array(
-				'title'   => __( 'Design the site footer', 'storefront' ),
-				'message' => __( 'Like the header you have control of the background color and link / text colors.' ),
-				'section' => 'storefront_footer'
-			);
-
-			$steps[] = array(
-				'title'       => '',
-				'message'     => sprintf( __( 'That\'s as far as we go in our tour, but there\'s lots more to discover in the Customizer so be sure to explore. When you\'re done, remember to %ssave & publish%s your changes.', 'storefront' ), '<strong>', '</strong>' ),
+				'title'       =>  '',
+				'message'     => sprintf( __( 'All set! Remember to %ssave & publish%s your changes when you\'re done.%sYou can return to your dashboard by clicking the X in the top left corner.', 'storefront' ), '<strong>', '</strong>', PHP_EOL . PHP_EOL ),
 				'section'     => '#customize-header-actions .save',
 				'button_text' => __( 'Done', 'storefront' ),
 			);
