@@ -1029,9 +1029,39 @@ table.cart {
 	}
 }
 
-ul#shipping_method {
+.woocommerce-shipping-calculator {
 	margin: 0;
+
+	> p:first-child {
+		margin: 0;
+	}
+
+	.shipping-calculator-form {
+		padding-top: ms(2);
+	}
+}
+
+ul#shipping_method {
 	list-style: none;
+	margin-left: 0;
+
+	li {
+		margin-bottom: ms(-6);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	input {
+		margin-right: ms(-5);
+	}
+}
+
+.woocommerce-checkout {
+	ul#shipping_method {
+		margin-bottom: 0;
+	}
 }
 
 /**
@@ -1215,6 +1245,12 @@ form.checkout {
 			width: 100%;
 			white-space: pre-wrap;
 		}
+	}
+}
+
+table.woocommerce-checkout-review-order-table {
+	.product-name {
+		max-width: 150px;
 	}
 }
 

@@ -2628,6 +2628,16 @@ a.remove {
     text-indent: 0;
     text-align: center; }
 
+.woocommerce-shipping-calculator > p:first-child a:before {
+  display: inline-block;
+  font: normal normal normal 14px / 1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f0d1";
+  margin-right: 0.3342343017em; }
+
 .blockUI:before {
   display: inline-block;
   font: normal normal normal 14px / 1 FontAwesome;

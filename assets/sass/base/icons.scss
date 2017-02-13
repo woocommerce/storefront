@@ -406,6 +406,18 @@ a.remove {
 	}
 }
 
+.woocommerce-shipping-calculator {
+	> p:first-child {
+		a {
+			&:before {
+				@include fa-icon();
+				content: "\f0d1";
+				margin-right: ms(-5);
+			}
+		}
+	}
+}
+
 .blockUI {
 	&:before {
 		@include fa-icon();
