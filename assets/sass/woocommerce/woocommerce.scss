@@ -9,8 +9,6 @@
 @import '../../../assets/sass/utils/variables';
 @import '../../../assets/sass/utils/mixins';
 @import '../../../node_modules/susy/sass/susy';
-@import '../../../assets/sass/vendors/font-awesome/variables';
-@import '../../../assets/sass/vendors/font-awesome/mixins';
 @import '../../../assets/sass/vendors/modular-scale';
 
 // Star font, FontAwesome doesn't work :(
@@ -23,6 +21,12 @@
 		url('../../../../../plugins/woocommerce/assets/fonts/star.svg#star') format('svg');
 	font-weight: normal;
 	font-style: normal;
+}
+
+.price {
+	ins {
+		font-weight: 400;
+	}
 }
 
 /**
@@ -69,15 +73,14 @@
 	.widget_product_search {
 		input[type=text],
 		input[type=search] {
-			padding: ms(2) ms(3);
+			padding: ms(1) ms(2);
 			line-height: 1;
-			padding-left: ms(6);
 		}
 
 		form {
 			&:before {
-				top: ms(2);
-				left: ms(3);
+				top: 1.15em;
+				left: 1.15em;
 			}
 		}
 
@@ -126,29 +129,9 @@
 				&:focus {
 					outline: none;
 				}
-
-				&:before {
-					@include fa-icon();
-					position: absolute;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					text-align: center;
-					line-height: 2.618046972; // 4.236/1.618
-					font-weight: 400;
-					font-size: ms(3);
-					text-indent: 0;
-					display: block;
-					cursor: pointer;
-				}
 			}
 
 			&.search {
-				> a:before {
-					content: "\f002";
-				}
-
 				.site-search {
 					position: absolute;
 					bottom: -2em;
@@ -173,17 +156,7 @@
 				}
 			}
 
-			&.my-account {
-				> a:before {
-					content: "\f007";
-				}
-			}
-
 			&.cart {
-				> a:before {
-					content: "\f291";
-				}
-
 				.count {
 					text-indent: 0;
 					display: block;
@@ -257,7 +230,7 @@ table.shop_table_responsive {
 
 			&:before {
 				content: attr(data-title) ': ';
-				font-weight: 700;
+				font-weight: 600;
 				float: left;
 			}
 
@@ -314,9 +287,8 @@ ul.products {
 		text-align: center;
 		position: relative;
 
-		.star-rating,
-		.price {
-			margin: 0 auto 1em;
+		.star-rating {
+			margin: 0 auto ms(-3);
 		}
 
 		.woocommerce-LoopProduct-link {
@@ -327,9 +299,9 @@ ul.products {
 			display: block;
 			color: $color_body;
 			font-weight: 400;
+			margin-bottom: 1rem;
 
 			ins {
-				font-weight: 700;
 				margin-left: ms(-2);
 				background-color: transparent;
 			}
@@ -338,7 +310,9 @@ ul.products {
 		h2, // @todo Remove when WooCommerce 2.8 is live
 		h3, // @todo Remove when WooCommerce 2.8 is live
 		.woocommerce-loop-product__title {
-			font-size: 1.1em;
+			font-size: 1rem;
+			font-weight: 400;
+			margin-bottom: ms(-3);
 		}
 
 		.star-rating {
@@ -412,16 +386,6 @@ ul.products {
 				border-radius: 3px;
 				z-index: 99;
 				text-align: center;
-
-				&:before {
-					@include fa-icon();
-					content: "\f00e";
-					line-height: 1.8;
-				}
-
-				img {
-					display: none !important;
-				}
 			}
 
 			img {
@@ -465,7 +429,7 @@ ul.products {
 						@include span( 2 of 4 );
 
 						&:nth-child(2n) {
-								margin-right: 0;
+							margin-right: 0;
 						}
 					}
 				}
@@ -477,7 +441,7 @@ ul.products {
 						@include span( 1.333333333 of 4 );
 
 						&:nth-child(3n) {
-								margin-right: 0;
+							margin-right: 0;
 						}
 					}
 				}
@@ -489,7 +453,19 @@ ul.products {
 						@include span( 1 of 4 );
 
 						&:nth-child(4n) {
-								margin-right: 0;
+							margin-right: 0;
+						}
+					}
+				}
+			}
+
+			&.woocommerce-product-gallery--columns-5 {
+				.flex-control-thumbs {
+					li {
+						@include span( .8 of 4 );
+
+						&:nth-child(5n) {
+							margin-right: 0;
 						}
 					}
 				}
@@ -528,15 +504,13 @@ ul.products {
 
 			.quantity {
 				float: left;
-			}
-
-			.button {
-				float: right;
+				margin-right: ms(-1);
 			}
 		}
 
-		.price {
-			font-weight: 700;
+		p.price {
+			font-size: ms(2);
+			margin: ms(2) 0;
 		}
 
 		table.variations {
@@ -570,8 +544,7 @@ ul.products {
 		.woocommerce-product-rating {
 			margin-bottom: ms(3);
 			@include clearfix;
-			line-height: 1;
-			margin-top: -ms(-1);
+			margin-top: - ms(-1);
 
 			a {
 				@include underlinedLink();
@@ -606,53 +579,36 @@ ul.products {
 }
 
 .stock {
-	&:before {
-		@include fa-icon();
-		margin-right: ms(-3);
+	&:empty:before {
+		display: none;
 	}
 
 	&.in-stock {
 		color: $success;
-
-		&:before {
-			content: "\f118";
-		}
 	}
 
 	&.out-of-stock {
 		color: $error;
-
-		&:before {
-			content: "\f119";
-		}
 	}
 }
 
 a.reset_variations {
 	display: inline-block;
 	margin-left: 1em;
-
-	&:before {
-		@include fa-icon();
-		content: "\f021";
-		margin-right: ms(-3);
-	}
 }
 
 /**
  * Reviews
  */
 #reviews {
+	outline: none;
+
 	#comments {
 		padding-top: 0;
 	}
 
-	.woocommerce-Reviews-title {
-		font-weight: 300;
-
-		span {
-			font-weight: 700;
-		}
+	.comment-reply-title {
+		display: none;
 	}
 
 	.commentlist {
@@ -666,12 +622,17 @@ a.reset_variations {
 			@include clearfix;
 
 			.comment_container {
-				padding: ms(3);
 				border-radius: 3px;
+				@include clearfix;
 
 				.comment-text {
-					p:last-of-type {
-						margin-bottom: 0;
+					@include span(last 5 of 6);
+
+					.star-rating {
+						float: right;
+						font-size: ms(-1);
+						line-height: 1;
+						height: 1em;
 					}
 				}
 			}
@@ -683,23 +644,47 @@ a.reset_variations {
 
 			time {
 				opacity: 0.5;
+				font-size: ms(-1);
 			}
 
 			.avatar {
-				float: left;
-				width: ms(4);
+				@include span(1 of 6);
 				height: auto;
-				margin-right: 1em;
 			}
 
 			p.meta {
 				margin-bottom: 1em;
+
+				strong {
+					line-height: 1;
+				}
+
+				time {
+					display: block;
+				}
+
+				.verified {
+					font-style: normal;
+					font-size: ms(-1);
+				}
+
+				.woocommerce-review__dash {
+					display: none;
+				}
 			}
 
 			ul.children {
+				margin: 0;
 				@include span(last 5 of 6);
-				margin-bottom: 0;
 				padding-top: ms(3);
+
+				.avatar {
+					@include span(1 of 5);
+				}
+
+				.comment-text {
+					@include span(last 4 of 5);
+				}
 
 				li {
 					margin-bottom: ms(3);
@@ -731,16 +716,9 @@ a.reset_variations {
 	font-size: ms(-1);
 	padding: 1em 1.387rem;
 
-	a {
-		@include underlinedLink();
-
-		&:first-of-type {
-			&:before {
-				@include fa-icon();
-				content: "\f015";
-				margin-right: ms(-3);
-			}
-		}
+	.breadcrumb-separator {
+		display: inline-block;
+		padding: 0 ms(-3);
 	}
 }
 
@@ -835,19 +813,6 @@ a.reset_variations {
 		li {
 			list-style: none;
 			margin-bottom: ms(-2);
-
-			&:before {
-				@include fa-icon();
-				margin-right: ms(-3);
-				opacity: 0.25;
-				content: "\f114";
-			}
-
-			&.current-cat {
-				&:before {
-					content: "\f115";
-				}
-			}
 		}
 	}
 
@@ -871,36 +836,6 @@ a.reset_variations {
 .widget_layered_nav {
 	li {
 		margin-bottom: ms(-2);
-
-		&:before {
-			@include fa-icon();
-			margin-right: ms(-3);
-			opacity: 0.35;
-			content: "\f0c8";
-		}
-	}
-
-	.chosen {
-		&:before {
-			content: "\f14a";
-		}
-	}
-}
-
-.widget_layered_nav_filters {
-	ul {
-		li {
-			&.chosen {
-				a {
-					&:before {
-						@include fa-icon();
-						content: "\f00d";
-						margin-right: ms(-3);
-						color: $error;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -1099,30 +1034,6 @@ ul#shipping_method {
 	list-style: none;
 }
 
-a.remove {
-	display: block;
-	width: ms(3);
-	height: ms(3);
-	line-height: 1.618;
-	font-weight: 400;
-	text-indent: -9999px;
-	position: relative;
-
-	&:before {
-		content: "\f057";
-		@include fa-icon();
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		color: $error;
-		line-height: 1.618;
-		text-indent: 0;
-		text-align: center;
-	}
-}
-
 /**
  * Checkout
  *
@@ -1142,23 +1053,6 @@ form.checkout {
 	}
 }
 
-.blockUI {
-	&:before {
-		@include fa-icon();
-		content: "\f110";
-		@include animation(fa-spin .75s linear infinite);
-		height: 30px;
-		width: 30px;
-		line-height: 30px;
-		font-size: 30px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -15px;
-		margin-top: -15px;
-	}
-}
-
 #payment {
 	@include clearfix;
 
@@ -1175,20 +1069,12 @@ form.checkout {
 				display: block;
 				padding: ms(2);
 				cursor: pointer;
-
-				&:before {
-					@include fa-icon();
-					content: "\f10c";
-					margin-right: ms(-3);
-					@include transition(color, ease, .2s);
-				}
 			}
 		}
 
 		li {
 			list-style: none !important;
 			margin-left: 0;
-			margin-bottom: 1px;
 			position: relative;
 
 			img {
@@ -1201,14 +1087,6 @@ form.checkout {
 			&:last-child {
 				padding-bottom: 0;
 				border-bottom: 0;
-			}
-
-			&.wc_payment_method > input[type=radio]:first-child {
-				@include screen-reader-text();
-
-				&:checked + label:before {
-					content: "\f192";
-				}
 			}
 
 			p {
@@ -1322,22 +1200,6 @@ form.checkout {
 		label {
 			display: block;
 			cursor: pointer;
-
-			&:before {
-				@include fa-icon();
-				content: "\f0c8";
-				margin-right: ms(-3);
-				opacity: .25;
-			}
-		}
-
-		input[type=checkbox] {
-			@include screen-reader-text();
-
-			&:checked + label:before {
-				content: "\f14a";
-				opacity: 1;
-			}
 		}
 	}
 
@@ -1346,6 +1208,7 @@ form.checkout {
 		margin-bottom: 0;
 		float: none;
 		width: 100%;
+		margin-top: ms(5);
 
 		.button {
 			font-size: ms(2);
@@ -1386,18 +1249,8 @@ form.checkout {
 	text-align: right;
 	font-size: ms(-1);
 
-	&:after {
-		@include fa-icon();
-		content: "\f119";
-		margin-left: ms(-3);
-	}
-
 	&.strong {
 		color: $success;
-
-		&:after {
-			content: "\f118";
-		}
 	}
 
 	&.short {
@@ -1410,10 +1263,6 @@ form.checkout {
 
 	&.good {
 		color: $info;
-
-		&:after {
-			content: "\f11a";
-		}
 	}
 }
 
@@ -1430,64 +1279,9 @@ form.checkout {
 			border-bottom: 1px solid $color_border;
 			position: relative;
 
-			&.is-active {
-				a:before {
-					opacity: 1;
-				}
-			}
-
 			a {
 				padding: ms(-1) 0;
 				display: block;
-
-				&:before {
-					@include fa-icon();
-					content: "\f0f6";
-					line-height: 1.618;
-					margin-left: ms(-3);
-					width: ms(2);
-					text-align: right;
-					float: right;
-					opacity: .25;
-				}
-
-				&:hover {
-					&:before {
-						opacity: 1;
-					}
-				}
-			}
-
-			&.woocommerce-MyAccount-navigation-link--dashboard a:before {
-				content: "\f0e4";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--orders a:before {
-				content: "\f291";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--downloads a:before {
-				content: "\f1c6";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--edit-address a:before {
-				content: "\f015";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--payment-methods a:before {
-				content: "\f09d";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--edit-account a:before {
-				content: "\f007";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--customer-logout a:before {
-				content: "\f08b";
-			}
-
-			&.woocommerce-MyAccount-navigation-link--subscriptions a:before {
-				content: "\f021";
 			}
 		}
 	}
@@ -1549,36 +1343,6 @@ ul.order_details {
 	}
 }
 
-.my_account_orders {
-	.button.view {
-		&:after {
-			@include fa-icon();
-			content: "\f06e";
-			margin-left: ms(-3);
-		}
-	}
-}
-
-p.order-again {
-	.button {
-		&:after {
-			@include fa-icon();
-			content: "\f021";
-			margin-left: ms(-3);
-		}
-	}
-}
-
-.woocommerce-MyAccount-downloads {
-	.button {
-		&:after {
-			@include fa-icon();
-			content: "\f0ed";
-			margin-left: ms(-3);
-		}
-	}
-}
-
 .woocommerce-MyAccount-content {
 	h2 {
 		font-size: 2em;
@@ -1601,6 +1365,16 @@ p.order-again {
 /**
  * General WooCommerce components
  */
+
+.woocommerce-form__label-for-checkbox {
+	cursor: pointer;
+	display: block;
+
+	.woocommerce-form__input-checkbox {
+		margin-right: ms(-5);
+	}
+}
+
 .form-row {
 	label {
 		display: block;
@@ -1675,19 +1449,13 @@ p.order-again {
 			text-decoration: none;
 		}
 	}
-
-	&:before {
-		@include fa-icon();
-		margin-right: ms(-3);
-		content: "\f05a";
-	}
 }
 
 .star-rating {
 	overflow: hidden;
 	position: relative;
-	height: 1em;
-	line-height: 1;
+	height: 1.618em;
+	line-height: 1.618;
 	font-size: 1em;
 	width: 5.3em;
 	font-family: 'star';
@@ -1794,13 +1562,13 @@ p.stars {
 }
 
 .onsale {
-	border: 2px solid;
+	border: 1px solid;
 	border-color: $color_body;
 	color: $color_body;
 	padding: .202em ms(-2);
 	font-size: ms(-1);
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 600;
 	display: inline-block;
 	margin-bottom: 1em;
 	border-radius: 3px;
@@ -1836,25 +1604,6 @@ p.stars {
 			a {
 				padding: 1em 0;
 				display: block;
-			}
-
-			&:after {
-				@include fa-icon();
-				content: "\f107";
-				display: block;
-				position: absolute;
-				top: 50%;
-				right: -1em;
-				transform: translateY(-50%);
-				opacity: 0;
-				@include transition(all,ease,.3s);
-			}
-
-			&.active {
-				&:after {
-					opacity: 1;
-					right: 0;
-				}
 			}
 		}
 	}
@@ -1943,23 +1692,6 @@ p.no-comments {
 	}
 }
 
-.wc-forward,
-.woocommerce-Button--next {
-	&:after {
-		@include fa-icon();
-		content: "\f178";
-		margin-left: ms(-3);
-	}
-}
-
-.woocommerce-Button--previous {
-	&:before {
-		@include fa-icon();
-		content: "\f177";
-		margin-right: ms(-3);
-	}
-}
-
 .woocommerce-error {
 	list-style: none;
 }
@@ -1982,6 +1714,21 @@ dl.variation {
 	}
 }
 
+.wc-item-meta {
+	font-size: ms(-1);
+	margin-left: 0;
+	list-style: none;
+
+	li {
+		@include clearfix;
+
+		strong,
+		p {
+			display: inline-block;
+		}
+	}
+}
+
 /**
  * My Account
  */
@@ -1995,13 +1742,15 @@ dl.variation {
  * Homepage
  */
 .storefront-product-section {
+	margin-bottom: ms(3);
+
 	.section-title {
 		text-align: center;
-		margin-bottom: ms(3);
+		margin-bottom: ms(1);
 	}
 
 	&:last-child {
-		border-bottom: 0;
+		margin-bottom: 0;
 	}
 }
 
@@ -2015,12 +1764,6 @@ dl.variation {
 			display: inline-block;
 			margin: -1em -1.41575em -1em 0;
 			padding: 1em ms(2);
-
-			&:before {
-				@include fa-icon();
-				content: "\f057";
-				margin-right: ms(-5);
-			}
 		}
 	}
 
@@ -2035,7 +1778,7 @@ dl.variation {
 	 * Breadcrumbs
 	 */
 	.woocommerce-breadcrumb {
-		padding: ms(2) 99em;
+		padding: ms(2) 99em ms(2);
 		margin-left: -99em;
 		margin-right: -99em;
 		margin-bottom: ms(7);
@@ -2080,14 +1823,6 @@ dl.variation {
 			height: auto;
 			width: auto;
 			text-indent: 0;
-
-			&:after {
-				@include fa-icon();
-				height: 1em;
-				float: right;
-				content: "\f291";
-				line-height: 1.618;
-			}
 
 			.amount {
 				margin-right: .327em;
@@ -2350,12 +2085,12 @@ dl.variation {
 	.storefront-full-width-content.single-product {
 		div.product {
 			.images {
-				@include span(4 of 12);
+				@include span(5 of 12);
 				margin-bottom: ms(6);
 
 				.thumbnails {
 					a.zoom {
-						@include span(1 of 4);
+						@include span(1 of 5);
 
 						&.last {
 							margin-right: 0;
@@ -2365,23 +2100,93 @@ dl.variation {
 			}
 
 			.woocommerce-product-gallery {
-				@include span(4 of 12);
+				@include span(5 of 12);
 				margin-bottom: ms(6);
 
-				.flex-control-thumbs {
-					li {
-						@include span(1 of 4);
+				&.woocommerce-product-gallery--columns-2 {
+					.flex-control-thumbs {
+						li {
+							@include span( 2.5 of 4 );
+
+							&:nth-child(2n) {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+
+				&.woocommerce-product-gallery--columns-3 {
+					.flex-control-thumbs {
+						li {
+							@include span( 1.666666667 of 4 );
+
+							&:nth-child(3n) {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+
+				&.woocommerce-product-gallery--columns-4 {
+					.flex-control-thumbs {
+						li {
+							@include span( 1.25 of 5 );
+
+							&:nth-child(4n) {
+								margin-right: 0;
+							}
+						}
+					}
+				}
+
+				&.woocommerce-product-gallery--columns-5 {
+					.flex-control-thumbs {
+						li {
+							@include span( 1 of 5 );
+
+							&:nth-child(5n) {
+								margin-right: 0;
+							}
+						}
 					}
 				}
 			}
 
 			.summary {
-				@include span(last 8 of 12);
+				@include span(last 7 of 12);
 				margin-bottom: ms(6);
 			}
 
 			.woocommerce-tabs {
 				clear: both;
+			}
+		}
+
+		#reviews {
+			.commentlist {
+				li {
+					.avatar {
+						@include span(1 of 8);
+					}
+
+					.comment_container {
+						.comment-text {
+							@include span(last 7 of 8);
+						}
+					}
+				}
+
+				ul.children {
+					@include span(last 7 of 8);
+
+					.avatar {
+						@include span(1 of 7);
+					}
+
+					.comment-text {
+						@include span(last 6 of 7);
+					}
+				}
 			}
 		}
 
@@ -2394,6 +2199,31 @@ dl.variation {
 			}
 		}
 	}
+
+	/**
+	 * General full-width styles
+	 */
+	.storefront-full-width-content {
+		&.woocommerce-cart .entry-header,
+		&.woocommerce-checkout .entry-header,
+		&.woocommerce-account .entry-header,
+		.woocommerce-products-header {
+			text-align: center;
+			padding: 0 0 ms(8);
+
+			h1:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.up-sells,
+		.related.products {
+			> h2:first-child {
+				text-align: center;
+			}
+		}
+	}
+
 
 	.woocommerce .page-description {
 		margin-bottom: ms(3);
@@ -2525,6 +2355,10 @@ dl.variation {
 			ul.products {
 				li.product {
 					@include span(2 of 4);
+
+					&:nth-child(2n) {
+						margin-right: 0 !important;
+					}
 				}
 			}
 		}
@@ -2553,10 +2387,10 @@ dl.variation {
 				@include span(6 of 12);
 
 				ul.products {
-			  		li.product {
-			  			@include span(3 of 6);
-			  		}
-			  	}
+					li.product {
+						@include span(3 of 6);
+					}
+				}
 			}
 
 			.cart_totals,
@@ -2569,6 +2403,22 @@ dl.variation {
 	/**
 	 * Checkout
 	 */
+	#ship-to-different-address {
+		position: relative;
+
+		label {
+			font-weight: 300;
+		}
+
+		.woocommerce-form__input-checkbox {
+			position: absolute;
+			top: 50%;
+			right: 0;
+			@include transform(translateY(-50%));
+			margin-right: 0;
+		}
+	}
+
 	.col2-set {
 		@include span(5 of 9);
 
@@ -2587,6 +2437,10 @@ dl.variation {
 
 		& + #customer_details {
 			display: none;
+		}
+
+		.woocommerce-billing-fields {
+			@include clearfix;
 		}
 
 		&.addresses {
@@ -2794,32 +2648,12 @@ dl.variation {
 		header.title {
 			@include clearfix;
 
-			h3 {
-				float: left;
-			}
-
 			a {
 				float: right;
-				display: block;
-				width: 1em;
-				height: 1em;
-				text-indent: -9999px;
-				position: relative;
-				padding: ms(-1);
-				margin-top: ms(-2);
+			}
 
-				&:before {
-					@include fa-icon();
-					content: "\f044";
-					line-height: 1.618;
-					position: absolute;
-					top :0;
-					left: 0;
-					height: 100%;
-					width: 100%;
-					text-align: center;
-					text-indent: 0;
-				}
+			h3 {
+				float: left;
 			}
 		}
 	}
@@ -2868,10 +2702,6 @@ dl.variation {
 			@include span(3 of 9);
 
 			li {
-				&:after {
-					content: "\f105";
-				}
-
 				&.active:after {
 					right: 1em;
 				}

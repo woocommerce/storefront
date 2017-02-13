@@ -53,6 +53,18 @@ module.exports = function( grunt ) {
 					ext: '.min.js'
 				}]
 			},
+			vendor: {
+				files: [{
+					expand: true,
+					cwd: 'assets/js/vendor/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: 'assets/js/vendor/',
+					ext: '.min.js'
+				}]
+			},
 			woocommerce: {
 				files: [{
 					expand: true,
@@ -107,6 +119,7 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/quick-view.css': 'assets/sass/woocommerce/extensions/quick-view.scss',
 					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
 					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss',
+					'assets/sass/base/icons.css': 'assets/sass/base/icons.scss',
 					'inc/nux/assets/css/admin.css': 'inc/nux/assets/css/admin.scss',
 					'inc/nux/assets/css/customizer.css': 'inc/nux/assets/css/customizer.scss'
 				}]

@@ -1,7 +1,23 @@
 # Storefront Changelog
 
-### *2016.xx.xx* - 2.1.7
+### *2017.xx.xx* - 2.2.0
+* **New** - Adding a featured image to the homepage template will now create a 'hero' component.
 * **Fix** - Remove unnecessary button styling in WooCommerce Quick View extension.
+* **Fix** - Only make the order review on checkout sticky of the address column is tall enough to make it worthwhile.
+* **Tweak** - Improved the Bookings calendar styles.
+* **Tweak** - :focus borders now dotted.
+* **Dev** - Added actions; `storefront_jetpack_infinite_scroll_before`, `storefront_jetpack_infinite_scroll_after`, `storefront_jetpack_product_infinite_scroll_before` and `storefront_jetpack_product_infinite_scroll_after`.
+* **Dev** - Added filters; `storefront_footer_widget_rows` and `storefront_footer_widget_columns` to easily control the number of widget rows / columns in the footer.
+* **Dev** - FontAwesome and icon styles are now enqueued separately to make removing FontAwesome trivial.
+* **Dev** - Updated FontAwesome to 4.7.0
+* **Dev** - Upsells columns filterable via `storefront_upsells_columns`.
+* **Dev** - Added a column wrapper to product loops. To adjust the layout you now only need to filter `storefront_loop_columns`.
+
+### *2017.01.17* - 2.1.7
+* **Tweak** - [WooCommerce 2.7] - Ensure all checkboxes function correctly with new markup.
+* **Tweak** - [WooCommerce 2.7] - Order item meta styling.
+* **Tweak** - [WooCommerce 2.7] - Don't display the stock icon when `.stock` is empty.
+* **Fix** - Cross-sells layout
 
 ### *2016.11.15* - 2.1.6
 * **Fix** - Close dropdowns in the nav when you tap away on touch devices.

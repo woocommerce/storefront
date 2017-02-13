@@ -116,6 +116,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// Declare WooCommerce support.
 			add_theme_support( 'woocommerce' );
+			add_theme_support( 'wc-product-gallery-zoom' );
+			add_theme_support( 'wc-product-gallery-lightbox' );
+			add_theme_support( 'wc-product-gallery-slider' );
 
 			// Declare support for title theme feature.
 			add_theme_support( 'title-tag' );
@@ -142,16 +145,28 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'description' => __( 'Widgets added to this region will appear beneath the header and above the main content.', 'storefront' ),
 			);
 
-			$footer_widget_regions = apply_filters( 'storefront_footer_widget_regions', 4 );
+			$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );
+			$regions = intval( apply_filters( 'storefront_footer_widget_columns', 4 ) );
 
-			for ( $i = 1; $i <= intval( $footer_widget_regions ); $i++ ) {
-				$footer = sprintf( 'footer_%d', $i );
+			for ( $row = 1; $row <= $rows; $row++ ) {
+				for ( $region = 1; $region <= $regions; $region++ ) {
+					$footer_n = $region + $regions * ( $row - 1 ); // Defines footer sidebar ID.
+					$footer   = sprintf( 'footer_%d', $footer_n );
 
-				$sidebar_args[ $footer ] = array(
-					'name'        => sprintf( __( 'Footer %d', 'storefront' ), $i ),
-					'id'          => sprintf( 'footer-%d', $i ),
-					'description' => sprintf( __( 'Widgetized Footer Region %d.', 'storefront' ), $i )
-				);
+					if ( 1 == $rows ) {
+						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront' ), $region );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'storefront' ), $region );
+					} else {
+						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'storefront' ), $row, $region );
+						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'storefront' ), $region, $row );
+					}
+
+					$sidebar_args[ $footer ] = array(
+						'name'        => $footer_region_name,
+						'id'          => sprintf( 'footer-%d', $footer_n ),
+						'description' => $footer_region_description,
+					);
+				}
 			}
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
@@ -159,7 +174,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					'before_widget' => '<div id="%1$s" class="widget %2$s">',
 					'after_widget'  => '</div>',
 					'before_title'  => '<span class="gamma widget-title">',
-					'after_title'   => '</span>'
+					'after_title'   => '</span>',
 				);
 
 				/**
@@ -168,10 +183,10 @@ if ( ! class_exists( 'Storefront' ) ) :
 				 * 'storefront_header_widget_tags'
 				 * 'storefront_sidebar_widget_tags'
 				 *
-				 * storefront_footer_1_widget_tags
-				 * storefront_footer_2_widget_tags
-				 * storefront_footer_3_widget_tags
-				 * storefront_footer_4_widget_tags
+				 * 'storefront_footer_1_widget_tags'
+				 * 'storefront_footer_2_widget_tags'
+				 * 'storefront_footer_3_widget_tags'
+				 * 'storefront_footer_4_widget_tags'
 				 */
 				$filter_hook = sprintf( 'storefront_%s_widget_tags', $sidebar );
 				$widget_tags = apply_filters( $filter_hook, $widget_tags );
@@ -196,11 +211,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
+			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/sass/base/icons.css', '', $storefront_version );
+
 			/**
 			 * Fonts
 			 */
 			$google_fonts = apply_filters( 'storefront_google_font_families', array(
-				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,700,900',
+				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
 			) );
 
 			$query_args = array(
@@ -217,6 +234,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20120206', true );
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+
+			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
+				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array( 'jquery' ), '1.1.0', true );
+				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage.min.js', array( 'jquery' ), '20120206', true );
+			}
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 				wp_enqueue_script( 'comment-reply' );
@@ -277,6 +299,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			// If our main sidebar doesn't contain widgets, adjust the layout to be full-width.
 			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				$classes[] = 'storefront-full-width-content';
+			}
+
+			// Add class when using homepage template + featured image
+			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
+				$classes[] = 'has-post-thumbnail';
 			}
 
 			return $classes;

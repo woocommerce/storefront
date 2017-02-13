@@ -9,8 +9,6 @@
 @import '../../../../assets/sass/utils/variables';
 @import '../../../../assets/sass/utils/mixins';
 @import '../../../../node_modules/susy/sass/susy';
-@import '../../../../assets/sass/vendors/font-awesome/variables';
-@import '../../../../assets/sass/vendors/font-awesome/mixins';
 @import '../../../../assets/sass/vendors/modular-scale';
 
 #wl-wrapper.wl-button-wrap {
@@ -20,12 +18,6 @@
 .wl-add-link {
 	padding-left: 0 !important;
 	background: none !important;
-
-	&:before {
-		@include fa-icon();
-		content: "\f004";
-		margin-right: ms(-3);
-	}
 }
 
 #wl-wrapper {
@@ -89,14 +81,6 @@
 	}
 }
 
-.button.wl-create-new {
-	&:before {
-		@include fa-icon();
-		content: "\f067";
-		margin-right: ms(-3);
-	}
-}
-
 @include susy-media($desktop) {
 	#wl-wrapper {
 		.wl-tabs {
@@ -108,17 +92,6 @@
 				&.active {
 					a {
 						box-shadow: none;
-					}
-
-					&:after {
-						@include fa-icon();
-						content: "\f105";
-						display: block !important;
-						position: absolute;
-						top: 50%;
-						height: 1em;
-						width: 1em;
-						margin-top: -.5em;
 					}
 				}
 			}

@@ -22,7 +22,6 @@
 			display: block;
 			@include span(3 of 12);
 			clear: both;
-			margin-bottom: ms(5);
 
 			img {
 				height: auto;
@@ -68,7 +67,7 @@
 	.site-logo-anchor,
 	.site-logo-link,
 	.custom-logo-link {
-		margin-bottom: ms(4);
+		margin-bottom: ms(2);
 	}
 
 	.site-header {
@@ -158,7 +157,7 @@
 	.footer-widgets {
 		@include clearfix;
 		padding-top: ms(7);
-		border-bottom: 3px solid rgba(0,0,0,0.05);
+		border-bottom: 1px solid rgba(0,0,0,0.05);
 
 		&.col-2 {
 			.block {
@@ -453,7 +452,6 @@
 	.storefront-primary-navigation {
 		clear: both;
 		@include clearfix;
-		background: rgba(#000,.06);
 		margin-left: -99em;
 		margin-right: -99em;
 		padding-left: 99em;
@@ -487,15 +485,6 @@
 							display: block;
 						}
 					}
-
-					> a {
-						&:after {
-							// The dropdown indicator
-							@include fa-icon();
-							content: "\f107";
-							margin-left: 1em;
-						}
-					}
 				}
 			}
 
@@ -512,19 +501,6 @@
 
 					&:last-child {
 						border-bottom: 0;
-					}
-
-					&.menu-item-has-children,
-					&.page_item_has_children {
-						> a {
-							&:after {
-								// The dropdown indicator
-								@include fa-icon();
-								content: "\f105";
-								float: right;
-								line-height: 1.618;
-							}
-						}
 					}
 				}
 
@@ -563,25 +539,6 @@
 				text-decoration: none;
 			}
 
-			> li > a {
-				position: relative;
-
-				&:before {
-					content: "";
-					display: block;
-					width: 1px;
-					height: 25%;
-					background-color: rgba(#000,0.05);
-					position: absolute;
-					top: 37.5%;
-					left: -3px;
-				}
-			}
-
-			> li:first-child a:before {
-				display: none;
-			}
-
 			ul {
 				a {
 					padding: .326em ms(-1);
@@ -602,9 +559,9 @@
 			}
 
 			a {
-				padding: ms(2) ms(-1);
-				font-weight: 300;
+				padding: ms(1) ms(-1);
 				color: lighten( $color_body, 20% );
+				font-weight: 400;
 
 				&:hover {
 					text-decoration: none;

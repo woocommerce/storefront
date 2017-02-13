@@ -105,6 +105,30 @@ function storefront_header_styles() {
 }
 
 /**
+ * Apply inline style to the Storefront homepage content.
+ *
+ * @uses  get_the_post_thumbnail_url()
+ * @since  2.2.0
+ */
+function storefront_homepage_content_styles() {
+	$featured_image = get_the_post_thumbnail_url( get_the_ID() );
+
+	if ( $featured_image ) {
+		$background_image = 'url(' . esc_url( $featured_image ) . ')';
+	} else {
+		$background_image = 'none';
+	}
+
+	$styles = apply_filters( 'storefront_homepage_content_styles', array(
+		'background-image' => $background_image,
+	) );
+
+	foreach ( $styles as $style => $value ) {
+		echo esc_attr( $style . ': ' . $value . '; ' );
+	}
+}
+
+/**
  * Adjust a hex color brightness
  * Allows us to create hover styles for custom link colors
  *

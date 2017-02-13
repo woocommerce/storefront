@@ -51,12 +51,12 @@ h4,
 h5,
 h6 {
 	clear: both;
-	font-weight: 700;
+	font-weight: 300;
 	margin: 0 0 ms(-3);
 	color: darken( $color_body, 20% );
 
 	a {
-		font-weight: 700;
+		font-weight: 300;
 	}
 }
 
@@ -81,13 +81,11 @@ h2,
 h3,
 .gamma {
 	font-size: ms(3);
-	font-weight: 600;
 }
 
 h4,
 .delta {
 	font-size: ms(2);
-	font-weight: 700;
 }
 
 .alpha,
@@ -115,16 +113,16 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 }
 
 p {
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 }
 
 ul,
 ol {
-	margin: 0 0 ms(1) 3em;
+	margin: 0 0 ms(2) 3em;
 	padding: 0;
 }
 
@@ -143,7 +141,7 @@ li > ol {
 }
 
 dt {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 dd {
@@ -152,7 +150,7 @@ dd {
 
 b,
 strong {
-	font-weight: 700;
+	font-weight: 600;
 }
 
 dfn,
@@ -169,7 +167,7 @@ blockquote {
 }
 
 address {
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 }
 
 pre {
@@ -199,7 +197,7 @@ acronym {
 mark,
 ins {
 	text-decoration: none;
-	font-weight: 700;
+	font-weight: 600;
 	background: transparent;
 }
 
@@ -233,12 +231,8 @@ figure {
 }
 
 table {
-	margin: 0 0 ms(1);
+	margin: 0 0 ms(2);
 	width: 100%;
-}
-
-th {
-	font-weight: bold;
 }
 
 img {
@@ -250,10 +244,10 @@ img {
 a {
 	color: $color_links;
 	text-decoration: none;
-	font-weight: 600;
+	font-weight: 400;
 
 	&:focus {
-		outline: 1px solid $color_links;
+		outline: 1px dotted $color_woocommerce;
 	}
 }
 
@@ -294,6 +288,7 @@ body {
 	background-position: center center;
 	position: relative;
 	z-index: 999;
+	border-bottom: 1px solid transparent;
 
 	.site-logo-anchor,
 	.site-logo-link,
@@ -371,9 +366,62 @@ body {
 	outline: none;
 }
 
-.page-template-template-homepage {
+.page-template-template-homepage:not(.has-post-thumbnail) {
 	.site-main {
 		padding-top: ms(7);
+	}
+}
+
+.page-template-template-homepage {
+	.type-page {
+		padding-top: ms(5);
+		padding-bottom: ms(5);
+		position: relative;
+
+		.storefront-hero__button-edit {
+			position: absolute;
+			top: 1em;
+			right: 1em;
+			font-size: ms(-1);
+		}
+	}
+
+	.entry-content {
+		font-size: 1.1em;
+	}
+
+	.entry-header {
+		h1 {
+			font-size: ms(6);
+			margin-bottom: ms(-6);
+		}
+	}
+
+	.entry-content,
+	.entry-header {
+		max-width: ms(16);
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+}
+
+.page-template-template-homepage.has-post-thumbnail {
+	.type-page.has-post-thumbnail {
+		background-size: cover;
+		background-position: center center;
+		padding-top: ms(9);
+		padding-bottom: ms(9);
+
+		.entry-content,
+		.entry-title {
+			opacity: 0;
+			@include transition(all,ease,.5s);
+
+			&.loaded {
+				opacity: 1;
+			}
+		}
 	}
 }
 
@@ -473,7 +521,7 @@ table {
 
 	caption {
 		padding: 1em 0;
-		font-weight: 700;
+		font-weight: 600;
 	}
 
 	td,
@@ -487,12 +535,14 @@ table {
 		}
 	}
 
+	th {
+		font-weight: 600;
+	}
+
 	thead {
 		th {
-			text-transform: uppercase;
 			padding: ms(2);
 			vertical-align: middle;
-			font-weight: 900;
 		}
 	}
 
@@ -612,15 +662,6 @@ table {
 			}
 		}
 
-		.bypostauthor {
-			> .comment-body cite {
-				&:after {
-					@include fa-icon();
-					margin-left: ms(-3);
-					content: "\f0f6";
-				}
-			}
-		}
 
 		.reply {
 			@include clearfix;
@@ -630,18 +671,6 @@ table {
 			a {
 				display: inline-block;
 				margin-right: 1em;
-
-				&:after {
-					@include fa-icon();
-					content: "\f112";
-					margin-left: ms(-3);
-				}
-
-				&.comment-edit-link {
-					&:after {
-						content: "\f040";
-					}
-				}
 
 				&:last-child {
 					margin-right: 0;
@@ -694,28 +723,12 @@ table {
 		&:hover {
 			@include transform(scale(1.3));
 		}
-
-		&:before {
-			@include fa-icon();
-			content: "\f057";
-			display: block;
-		}
 	}
 }
 
 /**
  * Content
  */
-.sticky {
-	.entry-title {
-		&:before {
-			@include fa-icon();
-			margin-right: ms(-3);
-			content: "\f08d";
-		}
-	}
-}
-
 .hentry {
 	margin: 0 0 ms(7);
 
@@ -818,8 +831,6 @@ input[type="submit"],
 	-webkit-appearance: none;
 	-webkit-font-smoothing: antialiased;
 	border-radius: 0;
-	box-shadow:
-		inset 0 -1px 0 rgba(#000,.3);
 
 	&.cta,
 	&.alt {
@@ -836,15 +847,7 @@ input[type="submit"],
 	}
 
 	&:focus {
-		outline: 2px solid $color_links;
-	}
-
-	&.added {
-		&:after {
-			@include fa-icon();
-			content: "\f00c";
-			margin-left: ms(-3);
-		}
+		outline: 1px dotted $color_woocommerce;
 	}
 
 	&.loading {
@@ -899,7 +902,6 @@ textarea,
 	outline: none;
 	border: 0;
 	-webkit-appearance: none;
-	border-radius: 2px;
 	box-sizing: border-box;
 	font-weight: normal;
 	box-shadow:
@@ -919,7 +921,7 @@ textarea {
 }
 
 label {
-	font-weight: 600;
+	font-weight: 400;
 }
 
 label.inline {
@@ -929,12 +931,17 @@ label.inline {
 }
 
 fieldset {
-	padding: 0;
+	padding: ms(3);
+	padding-top: ms(1);
 	border: 0;
+	margin: 0;
 	margin-bottom: ms(3);
+	margin-top: ms(3);
 
 	legend {
-		font-weight: 700;
+		font-weight: 600;
+		padding: ms(-2) ms(1);
+		margin-left: - ms(1);
 	}
 }
 
@@ -1209,12 +1216,6 @@ button.menu-toggle {
 			padding: ms(-1) 0;
 			display: block;
 
-			&:before {
-				@include fa-icon();
-				content: "\f0f6";
-				margin-right: ms(-3);
-			}
-
 			&:hover {
 				color: #e6e6e6;
 			}
@@ -1227,8 +1228,9 @@ button.menu-toggle {
  */
 
 .site-main nav.navigation {
-	margin: 0 0 ms(1);
 	@include clearfix;
+	clear: both;
+	padding: ms(5) 0;
 
 	.nav-previous,
 	.nav-next {
@@ -1245,12 +1247,6 @@ button.menu-toggle {
 		width: 50%;
 
 		a {
-			&:before {
-				@include fa-icon();
-				content: "\f177";
-				margin-right: ms(-3);
-			}
-
 			&:hover {
 				@include transform(translate(-1em));
 			}
@@ -1263,12 +1259,6 @@ button.menu-toggle {
 		width: 50%;
 
 		a {
-			&:after {
-				@include fa-icon();
-				content: "\f178";
-				margin-left: ms(-3);
-			}
-
 			&:hover {
 				@include transform(translate(1em));
 			}
@@ -1288,13 +1278,17 @@ button.menu-toggle {
 	text-align: center;
 	clear: both;
 
+	ul.page-numbers {
+		@include clearfix;
+	}
+
 	.page-numbers {
 		list-style: none;
 		margin: 0;
-		@include clearfix;
 
 		li {
 			display: inline-block;
+			float: left;
 
 			.page-numbers {
 				border-left-width: 0;
@@ -1304,10 +1298,8 @@ button.menu-toggle {
 				color: $color_body;
 
 				&.current {
-					font-weight: 700;
 					background-color: $color_links;
 					border-color: $color_links;
-					color: #fff;
 				}
 
 				&.dots {
@@ -1362,7 +1354,7 @@ button.menu-toggle {
 		border-bottom: 1px solid $color_border;
 		padding: 0 0 1em;
 		margin-bottom: 1em;
-		font-weight: 700;
+		font-weight: 300;
 	}
 
 	ul {
@@ -1380,12 +1372,7 @@ button.menu-toggle {
 		font-weight: 300;
 
 		a.button {
-			font-weight: 700 !important;
-			color: #fff;
-
-			&:hover {
-				color: #fff;
-			}
+			font-weight: 600 !important;
 		}
 	}
 }
@@ -1408,21 +1395,12 @@ button.menu-toggle {
 		input[type=text],
 		input[type=search] {
 			width: 100%;
-			padding-left: ms(5);
 		}
 
 		input[type=submit] {
 			@include screen-reader-text();
 			top: 0;
 			left: 0;
-		}
-
-		&:before {
-			@include fa-icon();
-			content: "\f002";
-			position: absolute;
-			top: 1em;
-			left: 1em;
 		}
 	}
 }
@@ -1470,70 +1448,8 @@ button.menu-toggle {
 .widget_recent_entries,
 .widget_pages {
 	ul {
-		li {
-			&:before {
-				content: "\f0f6";
-			}
-		}
-
 		ul.children {
 			margin: ms(-2) 0 0 ms(2);
-		}
-	}
-}
-
-.widget_categories {
-	ul {
-		li {
-			&:before {
-				content: "\f114";
-			}
-
-			&.current-cat {
-				&:before {
-					content: "\f115";
-				}
-			}
-		}
-	}
-}
-
-.widget_archive {
-	ul {
-		li {
-			&:before {
-				content: "\f115";
-			}
-		}
-	}
-}
-
-.widget_recent_comments {
-	ul {
-		li {
-			&:before {
-				content: "\f0e5";
-			}
-		}
-	}
-}
-
-.widget_nav_menu {
-	ul {
-		li {
-			&:before {
-				content: "\f0f6";
-			}
-		}
-	}
-}
-
-.widget_links {
-	ul {
-		li {
-			&:before {
-				content: "\f08e";
-			}
 		}
 	}
 }

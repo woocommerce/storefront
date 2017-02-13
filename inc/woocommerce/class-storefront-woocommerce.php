@@ -24,13 +24,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_filter( 'loop_shop_columns', 						array( $this, 'loop_columns' ) );
 			add_filter( 'body_class', 								array( $this, 'woocommerce_body_class' ) );
 			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_scripts' ),	20 );
 			add_filter( 'woocommerce_enqueue_styles', 				'__return_empty_array' );
 			add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) );
 			add_filter( 'woocommerce_product_thumbnails_columns', 	array( $this, 'thumbnail_columns' ) );
 			add_filter( 'loop_shop_per_page', 						array( $this, 'products_per_page' ) );
+			add_filter( 'woocommerce_breadcrumb_defaults',          array( $this,'change_breadcrumb_delimiter' ) );
 
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {
 				add_action( 'wp_footer', 							array( $this, 'star_rating_script' ) );
@@ -69,16 +69,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function set_storefront_style_theme_mods() {
 			set_theme_mod( 'storefront_woocommerce_extension_styles', $this->get_woocommerce_extension_css() );
-		}
-
-		/**
-		 * Default loop columns on product archives
-		 *
-		 * @return integer products per row
-		 * @since  1.0.0
-		 */
-		public function loop_columns() {
-			return apply_filters( 'storefront_loop_columns', 3 ); // 3 products per row
 		}
 
 		/**
@@ -159,7 +149,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since  1.0.0
 		 */
 		public function thumbnail_columns() {
-			return intval( apply_filters( 'storefront_product_thumbnail_columns', 4 ) );
+			$columns = 4;
+
+			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+				$columns = 5;
+			}
+
+			return intval( apply_filters( 'storefront_product_thumbnail_columns', $columns ) );
 		}
 
 		/**
@@ -180,6 +176,17 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function is_woocommerce_extension_activated( $extension = 'WC_Bookings' ) {
 			return class_exists( $extension ) ? true : false;
+		}
+
+		/**
+		 * Remove the breadcrumb delimiter
+		 * @param  array $defaults thre breadcrumb defaults
+		 * @return array           thre breadcrumb defaults
+		 * @since 2.2.0
+		 */
+		public function change_breadcrumb_delimiter( $defaults ) {
+			$defaults['delimiter'] = '<span class="breadcrumb-separator"> / </span>';
+			return $defaults;
 		}
 
 		/**
@@ -330,22 +337,23 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
 				$woocommerce_extension_style 					.= '
-				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a,
-				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.bookable a:hover,
-				#wc-bookings-booking-form .block-picker li a:hover,
-				#wc-bookings-booking-form .block-picker li a.selected {
-					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
-				}
-
-				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker td.ui-state-disabled .ui-state-default,
-				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker th {
-					color:' . $storefront_theme_mods['text_color'] . ';
-				}
-
 				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker-header {
-					background-color: ' . $storefront_theme_mods['header_background_color'] . ';
-					color: ' . $storefront_theme_mods['header_text_color'] . ';
-				}';
+					background-color: ' . $storefront_theme_mods['header_background_color'] . ' !important;
+					color: ' . $storefront_theme_mods['header_link_color'] . ' !important;
+				}
+
+				.wc-bookings-date-picker .ui-datepicker td.bookable a,
+				.wc-bookings-date-picker .ui-datepicker td.fully_booked a,
+				.wc-bookings-date-picker .ui-datepicker td.fully_booked span {
+					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
+					color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
+				}
+
+				.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], -45 ) . ' !important;
+					color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
+				}
+				';
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {

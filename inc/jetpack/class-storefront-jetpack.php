@@ -53,7 +53,10 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 * @return void
 		 */
 		public function jetpack_infinite_scroll_loop() {
+			do_action( 'storefront_jetpack_infinite_scroll_before' );
+
 			if ( storefront_is_product_archive() ) {
+				do_action( 'storefront_jetpack_product_infinite_scroll_before' );
 				woocommerce_product_loop_start();
 			}
 
@@ -67,7 +70,10 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 
 			if ( storefront_is_product_archive() ) {
 				woocommerce_product_loop_end();
+				do_action( 'storefront_jetpack_product_infinite_scroll_after' );
 			}
+
+			do_action( 'storefront_jetpack_infinite_scroll_after' );
 		}
 
 		/**

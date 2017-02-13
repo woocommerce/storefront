@@ -13,6 +13,7 @@ style-rtl.css
 /assets/js/*.min.js
 /assets/js/customizer/*.min.js
 /assets/js/admin/welcome-screen/*.min.js
+/assets/js/vendor/*.min.js
 /assets/js/woocommerce/*.min.js
 
 # Sass
