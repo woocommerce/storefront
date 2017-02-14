@@ -134,9 +134,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 								<input type="checkbox" name="homepage" checked>
 								<?php
 									if ( 'page' === get_option( 'show_on_front' ) ) {
-										esc_attr_e( 'Apply the Storefront homepage template to your current homepage', 'storefront' );
+										esc_attr_e( 'Apply the Storefront homepage template', 'storefront' );
 									} else {
-										esc_attr_e( 'Create an awesome homepage using the Storefront homepage template', 'storefront' );
+										esc_attr_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
 									}
 								?>
 							</label>
@@ -147,9 +147,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 							</label>
 						<?php endif; ?>
 
-						<label>
-							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
-						</label>
+						<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
 					</form>
 				<?php endif; ?>
 				</div>

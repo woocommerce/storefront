@@ -60,10 +60,10 @@
 	label {
 		display: block;
 		margin-bottom: 8px;
+		text-align: left;
 
 		&:last-of-type {
-			margin-top: 15px;
-			margin-bottom: 0;
+			margin-bottom: 2em;
 		}
 	}
 }
