@@ -29,6 +29,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_action( 'admin_post_storefront_guided_tour',       array( $this, 'redirect_customizer' ) );
 			add_action( 'activated_plugin',                        array( $this, 'activated_plugin' ) );
 			add_action( 'after_theme_setup',                       array( $this, 'log_fresh_site_state' ) );
+			add_action( 'transition_post_status',                  array( $this, 'unset_nux_freshness' ), 10, 3 );
 		}
 
 		/**
@@ -52,6 +53,17 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			);
 
 			wp_localize_script( 'storefront-admin-nux', 'storefrontNUX', $storefront_nux );
+		}
+
+		/**
+		 * Remove the Storefront NUX Freshness flag when a post is published
+		 *
+		 * @since 2.2.0
+		 */
+		public function unset_nux_freshness( $new_status, $old_status ) {
+			if ( 'publish' === $new_status && 'publish' !== $old_status ) {
+				update_option( 'storefront_nux_fresh_site', false );
+			}
 		}
 
 		/**
@@ -110,7 +122,10 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 					</p>
 					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 						<input type="hidden" name="action" value="storefront_guided_tour">
-						<?php wp_nonce_field( 'storefront_guided_tour' ); ?>
+						<?php wp_nonce_field( 'storefront_guided_tour' );
+						var_dump( get_option( 'storefront_nux_fresh_site' ) );
+						var_dump( get_option( 'fresh_site' ) );
+						?>
 
 						<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
 							<input type="hidden" name="homepage" value="on">
