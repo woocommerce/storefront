@@ -28,12 +28,27 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'woocommerce_product_query',            array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
 			add_action( 'customize_preview_init',               array( $this, 'add_product_tax' ), 10 );
+			add_action( 'after_setup_theme',                    array( $this, 'remove_default_widgets' ) );
+		}
+
+		/**
+		 * Remove default widgets on activation
+		 * Set an option so that this is only done the first time the user activates Storefront.
+		 *
+		 * @return void
+		 * @since 2.2.0
+		 */
+		public function remove_default_widgets() {
+			if ( ! get_option( 'storefront_cleared_widgets' ) ) {
+				update_option( 'sidebars_widgets', array( 'wp_inactive_widgets' => array() ) );
+				update_option( 'storefront_cleared_widgets', true );
+			}
 		}
 
 		/**
 		 * Starter content.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function starter_content() {
 			$starter_content = array(
@@ -133,14 +148,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'page_for_posts' => '{{blog}}',
 				),
 				'widgets' => array(
-					'sidebar-1' => array(
-						'woocommerce_product_categories' => array(
-							'woocommerce_product_categories',
-							array(
-								'title' => __( 'Product categories', 'storefront' ),
-							),
-						),
-					),
 					'footer-1' => array(
 						'text_about'
 					),
@@ -231,7 +238,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Filters starter content and remove some of the content if necessary.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 * @param array $content Starter content.
 		 * @param array $config Config.
 		 * @return array $content
@@ -296,7 +303,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Filter WooCommerce main query to include starter content products.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 * @param object $query The Query.
 		 * @return void
 		 */
@@ -322,7 +329,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Filter shortcode products loop in WooCommerce.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 * @param array  $query_args Query args.
 		 * @param array  $atts Shortcode attributes.
 		 * @param string $loop_name Loop name.
@@ -352,7 +359,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Add product taxonomies to starter content.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function add_product_tax() {
 			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
@@ -430,7 +437,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 *
 		 * @param array $args Shortcode args.
 		 * @return array $args
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function filter_sf_categories( $args ) {
 			// Get Categories.
@@ -451,7 +458,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Starter content products.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		private function _starter_content_products() {
 			$accessories_name        = esc_attr__( 'Accessories', 'storefront' );
@@ -758,7 +765,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Given a category slug, find the related image attachment.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 * @param string $category Category.
 		 * @return mixed false|int $query first attachment found.
 		 */
@@ -789,7 +796,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Validates and sanitizes a given tasks list.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 * @param string $tasks The tasks.
 		 * @return mixed false|array $validated_tasks if tasks list is not empty.
 		 */
