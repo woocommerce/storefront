@@ -1,10 +1,12 @@
 @import 'buttons';
 
 .sf-notice-nux {
-	background: #2C2D33;
-	border: 0;
-	color: #9AA0A7;
-	padding: 30px 35px;
+	background: #E9EFF3;
+	border: 10px solid #fff;
+	color: #608299;
+	padding: 60px;
+	text-align: center;
+	box-shadow: none;
 
 	&:before,
 	&:after {
@@ -16,15 +18,19 @@
 		clear: both;
 	}
 
+	.notice-content {
+		max-width: 440px;
+		margin: 0 auto;
+	}
+
 	.sf-icon {
 		position: relative;
-		display: inline-block;
-		float: left;
-		width: 125px;
-		height: 125px;
+		display: block;
+		width: 100px;
+		height: 100px;
 		background: #fff;
 		border-radius: 100%;
-		margin: 0 30px 0 0;
+		margin: 0 auto 30px;
 
 		img {
 			position: absolute;
@@ -33,24 +39,20 @@
 			left: 0;
 			right: 0;
 			margin: auto;
-			padding: 25px;
+			padding: 16px;
 			box-sizing: border-box;
 			max-width: 100%;
 		}
 	}
 
-	.notice-content {
-		float: left;
-	}
-
 	h2 {
 		margin: 0 0 10px;
 		font-weight: normal;
-		color: #D5D9DB;
+		color: #2E4453;
 	}
 
 	p {
-		margin: 0 0 1em 0;
+		margin: 0 0 2em 0;
 		padding: 0;
 		line-height: 1.6;
 	}
@@ -85,24 +87,11 @@
 @media only screen and (max-width: 782px) {
 	.sf-notice-nux {
 		.sf-icon {
-			margin: 0 auto 20px auto;
-			display: block;
 			width: 65px;
 			height: 65px;
 
 			img {
 				padding: 10px;
-			}
-		}
-
-		.sf-icon,
-		.notice-content {
-			float: none;
-		}
-
-		.notice-content {
-			h2, p {
-				text-align: center;
 			}
 		}
 

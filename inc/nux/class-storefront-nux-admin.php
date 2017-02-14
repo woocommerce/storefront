@@ -60,6 +60,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2
 		 */
 		public function admin_notices() {
+			global $pagenow;
 			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
 				return;
 			}
@@ -92,14 +93,21 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 						);
 					}
 				?>
-					<h2><?php esc_attr_e( 'Thanks for installing Storefront <3', 'storefront' ); ?></h2>
-					<p><?php esc_attr_e( 'To add eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
+					<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
+					<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
 					<p><a href="<?php echo $button['url']; ?>" class="sf-nux-button<?php echo $button['classes']; ?>" data-originaltext="<?php echo $button['message']; ?>" aria-label="<?php echo $button['message']; ?>"><?php echo $button['message']; ?></a></p>
 				<?php endif; ?>
 
 				<?php if ( storefront_is_woocommerce_activated() ) : ?>
-					<h2><?php printf( esc_html__( 'Getting started with  %sStorefront%s', 'storefront' ), '<strong>', '</strong>' ); ?></h2>
-					<p><?php esc_attr_e( 'Now it\'s time to make it your own. Allow us to guide you through a tour of the Storefront options.', 'storefront' ); ?></p>
+					<h2><?php esc_html_e( 'Design your store 🎨', 'storefront' ); ?></h2>
+					<p>
+					<?php
+					if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && 'post-new.php' === $pagenow ) {
+						echo esc_attr__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'storefront' );
+					} else {
+						echo esc_attr__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'storefront' );
+					} ?>
+					</p>
 					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 						<input type="hidden" name="action" value="storefront_guided_tour">
 						<?php wp_nonce_field( 'storefront_guided_tour' ); ?>
@@ -114,9 +122,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 								<input type="checkbox" name="homepage" checked>
 								<?php
 									if ( 'page' === get_option( 'show_on_front' ) ) {
-										esc_attr_e( 'Apply Storefront homepage template to your static homepage', 'storefront' );
+										esc_attr_e( 'Apply the Storefront homepage template to your current homepage', 'storefront' );
 									} else {
-										esc_attr_e( 'Create a homepage using the Storefront homepage template', 'storefront' );
+										esc_attr_e( 'Create an awesome homepage using the Storefront homepage template', 'storefront' );
 									}
 								?>
 							</label>

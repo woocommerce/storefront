@@ -99,7 +99,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 
 			$steps[] = array(
 				'title'       => __( 'Welcome to the Customizer', 'storefront' ),
-				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sWe\'ll guide you through some options to make it feel like home. It won\'t take a minute :)', 'storefront' ), PHP_EOL . PHP_EOL ),
+				'message'     => sprintf( __( 'Here you can control the overall look and feel of your store.%sTo get started, let\'s add your logo', 'storefront' ), PHP_EOL . PHP_EOL ),
 				'button_text' => __( 'Let\'s go!', 'storefront' ),
 				'section'     => '#customize-info',
 			);
