@@ -109,6 +109,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'post_title' => 'Hero',
 						'file'       => 'inc/nux/assets/images/hero.jpg',
 					),
+					'accessories-image' => array(
+						'post_title' => 'Accessories',
+						'file'       => 'inc/nux/assets/images/categories/accessories.jpg',
+					),
 					'tshirts-image' => array(
 						'post_title' => 'T-shirts',
 						'file'       => 'inc/nux/assets/images/categories/tshirts.jpg',
