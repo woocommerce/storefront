@@ -122,10 +122,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 					</p>
 					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 						<input type="hidden" name="action" value="storefront_guided_tour">
-						<?php wp_nonce_field( 'storefront_guided_tour' );
-						var_dump( get_option( 'storefront_nux_fresh_site' ) );
-						var_dump( get_option( 'fresh_site' ) );
-						?>
+						<?php wp_nonce_field( 'storefront_guided_tour' ); ?>
 
 						<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
 							<input type="hidden" name="homepage" value="on">
