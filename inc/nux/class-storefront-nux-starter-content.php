@@ -473,10 +473,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$products = array(
 				// Accessories
 				'beanie' => array(
-					'post_title'   => esc_attr__( 'Beanie', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Beanie', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{beanie-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '20',
 						'_price'             => '20',
@@ -493,13 +495,15 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{beanie-image}}',
+
 				),
 				'belt' => array(
-					'post_title'   => esc_attr__( 'Belt', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Belt', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{belt-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '65',
 						'_price'             => '65',
@@ -516,12 +520,13 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{belt-image}}',
 				),
 				'cap' => array(
-					'post_title'   => esc_attr__( 'Cap', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
+					'post_title'     => esc_attr__( 'Cap', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{cap-image}}',
 					'meta_input'   => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '18',
@@ -540,13 +545,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{cap-image}}',
 				),
 				'sunglasses' => array(
-					'post_title'   => esc_attr__( 'Sunglasses', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Sunglasses', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{sunglasses-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '90',
 						'_price'             => '90',
@@ -563,13 +569,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{sunglasses-image}}',
 				),
 				'hoodie-with-logo' => array(
-					'post_title'   => esc_attr__( 'Hoodie with Logo', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Hoodie with Logo', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{hoodie-with-logo-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '45',
 						'_price'             => '45',
@@ -586,13 +593,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{hoodie-with-logo-image}}',
 				),
 				'hoodie-with-pocket' => array(
-					'post_title'   => esc_attr__( 'Hoodie with Pocket', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Hoodie with Pocket', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{hoodie-with-pocket-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '45',
 						'_price'             => '35',
@@ -610,13 +618,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{hoodie-with-pocket-image}}',
 				),
 				'hoodie-with-zipper' => array(
-					'post_title'   => esc_attr__( 'Hoodie with Zipper', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Hoodie with Zipper', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{hoodie-with-zipper-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '45',
 						'_price'             => '35',
@@ -634,13 +643,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{hoodie-with-zipper-image}}',
 				),
 				'hoodie' => array(
 					'post_title'   => esc_attr__( 'Hoodie', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{hoodie-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '45',
 						'_price'             => '45',
@@ -657,13 +667,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{hoodie-image}}',
 				),
 				'long-sleeve-tee' => array(
-					'post_title'   => esc_attr__( 'Long Sleeve Tee', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Long Sleeve Tee', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{long-sleeve-tee-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '25',
 						'_price'             => '25',
@@ -680,13 +691,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{long-sleeve-tee-image}}',
 				),
 				'polo' => array(
-					'post_title'   => esc_attr__( 'Polo', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Polo', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{polo-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '20',
 						'_price'             => '20',
@@ -703,13 +715,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{polo-image}}',
 				),
 				'tshirt' => array(
-					'post_title'   => esc_attr__( 'Tshirt', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Tshirt', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{tshirt-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '18',
 						'_price'             => '18',
@@ -726,13 +739,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{tshirt-image}}',
 				),
 				'vneck-tee' => array(
-					'post_title'   => esc_attr__( 'Vneck Tshirt', 'storefront' ),
-					'post_content' => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
-					'post_type'    => 'product',
-					'meta_input'   => array(
+					'post_title'     => esc_attr__( 'Vneck Tshirt', 'storefront' ),
+					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
+					'post_type'      => 'product',
+					'comment_status' => 'open',
+					'thumbnail'      => '{{vneck-tee-image}}',
+					'meta_input'     => array(
 						'_visibility'        => 'visible',
 						'_regular_price'     => '18',
 						'_price'             => '16',
@@ -750,7 +764,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'thumbnail' => '{{vneck-tee-image}}',
 				),
 			);
 
