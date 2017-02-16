@@ -1269,6 +1269,8 @@ button.menu-toggle {
 
 /**
  * Pagination
+ *
+ * 1 - Removed Float: left; to avoid the Blog menu navigation pulling left and not center.
  */
 .pagination,
 .woocommerce-pagination {
@@ -1288,7 +1290,7 @@ button.menu-toggle {
 
 		li {
 			display: inline-block;
-			float: left;
+			/* 1 */
 
 			.page-numbers {
 				border-left-width: 0;
@@ -1334,6 +1336,9 @@ button.menu-toggle {
 
 /**
  * Widgets
+ *
+ * 1 & 2 - Added these lines to align text that wraps onto a second line with the first line.
+ * 2 Not a thing of real beauty, maybe someone else knows how to write negative values in combination with Modular Scale. It needs the  outcome of the golden ration divided by 2 as the value for the text-indent.
  */
 
 .widget {
@@ -1417,7 +1422,8 @@ button.menu-toggle {
 
 		li {
 			list-style: none;
-			margin-bottom: ms(-2);
+			padding-left: ms(3); /* 1 */
+			text-indent: -.809em; /* 2 */
 
 			&:before {
 				font-family: "FontAwesome";

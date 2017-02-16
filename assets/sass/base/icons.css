@@ -14,7 +14,7 @@
 
 .fa {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2334,7 +2334,7 @@
 
 #comments .commentlist .bypostauthor > .comment-body cite:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2344,7 +2344,7 @@
 
 #comments .commentlist .reply a:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2357,7 +2357,7 @@
 
 #respond #cancel-comment-reply-link:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2367,7 +2367,7 @@
 
 .sticky .entry-title:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2389,7 +2389,7 @@ input[type="submit"].loading,
   .button.loading:after,
   .added_to_cart.loading:after {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2410,7 +2410,7 @@ input[type="submit"].loading,
 
 .main-navigtion ul li a:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2420,7 +2420,7 @@ input[type="submit"].loading,
 
 .site-main nav.navigation .nav-previous a:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2430,7 +2430,7 @@ input[type="submit"].loading,
 
 .site-main nav.navigation .nav-next a:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2441,7 +2441,7 @@ input[type="submit"].loading,
 .widget_search form:before,
 .widget_product_search form:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2459,7 +2459,7 @@ input[type="submit"].loading,
 
 .storefront-handheld-footer-bar ul li > a:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2494,7 +2494,7 @@ input[type="submit"].loading,
   overflow: hidden; }
   .single-product div.product .woocommerce-product-gallery .woocommerce-product-gallery__trigger:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2508,7 +2508,7 @@ input[type="submit"].loading,
 
 .stock:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2523,7 +2523,7 @@ input[type="submit"].loading,
 
 a.reset_variations:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2533,7 +2533,7 @@ a.reset_variations:before {
 
 .woocommerce-breadcrumb a:first-of-type:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2543,7 +2543,7 @@ a.reset_variations:before {
 
 .widget_product_categories ul li:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2557,7 +2557,7 @@ a.reset_variations:before {
 
 .widget_layered_nav li:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2571,7 +2571,7 @@ a.reset_variations:before {
 
 .widget_layered_nav_filters ul li.chosen a:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2613,7 +2613,7 @@ a.remove {
   a.remove:before {
     content: "\f057";
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2630,7 +2630,7 @@ a.remove {
 
 .woocommerce-shipping-calculator > p:first-child a:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2640,7 +2640,7 @@ a.remove {
 
 .blockUI:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2667,7 +2667,7 @@ a.remove {
   .woocommerce-pagination .next:after,
   .woocommerce-pagination .prev:after {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2697,7 +2697,7 @@ a.remove {
   .woocommerce-breadcrumb .breadcrumb-separator:after {
     display: block;
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2720,7 +2720,7 @@ a.remove {
 
 #payment .payment_methods > .wc_payment_method > label:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2741,7 +2741,7 @@ a.remove {
 
 .woocommerce-password-strength:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2760,7 +2760,7 @@ a.remove {
 
 .woocommerce-MyAccount-navigation ul li a:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2802,7 +2802,7 @@ a.remove {
 
 .my_account_orders .button.view:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2812,7 +2812,7 @@ a.remove {
 
 p.order-again .button:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2822,7 +2822,7 @@ p.order-again .button:after {
 
 .woocommerce-MyAccount-downloads .button:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2832,7 +2832,7 @@ p.order-again .button:after {
 
 .demo_store:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2842,7 +2842,7 @@ p.order-again .button:after {
 
 .woocommerce-tabs ul.tabs li:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2865,7 +2865,7 @@ p.order-again .button:after {
 .wc-forward:after,
 .woocommerce-Button--next:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2875,7 +2875,7 @@ p.order-again .button:after {
 
 .woocommerce-Button--previous:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2891,7 +2891,7 @@ p.order-again .button:after {
   text-indent: -9999px; }
   #reviews .commentlist li p.meta .verified:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -2912,7 +2912,7 @@ p.order-again .button:after {
  */
 .single-product div.product .component_selections .clear_component_options:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2926,7 +2926,7 @@ p.order-again .button:after {
 .cart .mnm_table_item .mnm_table_item_indent:before,
 .shop_table .mnm_table_item .mnm_table_item_indent:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2944,7 +2944,7 @@ p.order-again .button:after {
  */
 .quick-view-button:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2958,7 +2958,7 @@ p.order-again .button:after {
 .woocommerce-page .ship_address .gift-form label:after,
 .woocommerce-page .no_shipping_address .gift-form label:after {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2969,7 +2969,7 @@ p.order-again .button:after {
 .woocommerce-page .ship_address .modify-address-button:before,
 .woocommerce-page .no_shipping_address .modify-address-button:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -2992,7 +2992,7 @@ p.order-again .button:after {
  */
 a#variations_clear:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3005,7 +3005,7 @@ a#variations_clear:before {
  */
 .wl-add-link:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3015,7 +3015,7 @@ a#variations_clear:before {
 
 .button.wl-create-new:before {
   display: inline-block;
-  font: normal normal normal 14px / 1 FontAwesome;
+  font: normal normal normal 14px/1 FontAwesome;
   font-size: inherit;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -3028,7 +3028,7 @@ a#variations_clear:before {
   .main-navigation ul.nav-menu > li.menu-item-has-children > a:after,
   .main-navigation ul.nav-menu > li.page_item_has_children > a:after {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -3039,7 +3039,7 @@ a#variations_clear:before {
   .main-navigation ul.nav-menu ul li.menu-item-has-children > a:after,
   .main-navigation ul.nav-menu ul li.page_item_has_children > a:after {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -3049,7 +3049,7 @@ a#variations_clear:before {
     line-height: 1.618; }
   .demo_store a:before {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -3058,7 +3058,7 @@ a#variations_clear:before {
     margin-right: 0.3342343017em; }
   .site-header-cart .cart-contents:after {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -3077,7 +3077,7 @@ a#variations_clear:before {
     margin-top: 0.6180469716em; }
     .addresses header.title a:before {
       display: inline-block;
-      font: normal normal normal 14px / 1 FontAwesome;
+      font: normal normal normal 14px/1 FontAwesome;
       font-size: inherit;
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
@@ -3098,7 +3098,7 @@ a#variations_clear:before {
 	 */
   #wl-wrapper .wl-tabs > li.active:after {
     display: inline-block;
-    font: normal normal normal 14px / 1 FontAwesome;
+    font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;

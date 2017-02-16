@@ -599,6 +599,9 @@ a.reset_variations {
 
 /**
  * Reviews
+ *
+ * 1 - Removed border radius 3px to allow a straight line underneath the .comment_container.
+ * 2 - Added a border bottom to help difirentiate the .comment_container
  */
 #reviews {
 	outline: none;
@@ -622,7 +625,8 @@ a.reset_variations {
 			@include clearfix;
 
 			.comment_container {
-				border-radius: 3px;
+				// border-radius: 3px; 1
+				border-bottom: 1px solid rgba(0, 0, 0, .05); /* 2 */
 				@include clearfix;
 
 				.comment-text {
@@ -660,7 +664,7 @@ a.reset_variations {
 				}
 
 				time {
-					display: block;
+					display: inline;
 				}
 
 				.verified {
@@ -1069,7 +1073,13 @@ ul#shipping_method {
  *
  * 1 - Required to make the blockUI overlay cover the entire page rather than just the checkout form. We do this because
  *     otherwise our sticky order review can break out of the checkout form (and the blockUI element).
+ * 2- Added label.inline to have the Remeber me button float right next to the Login button instead of below.
  */
+
+label.inline { /* 2 */
+	display: inline !important;
+	margin-left: ms(1);
+}
 .checkout_coupon {
 	margin-bottom: ms(5);
 }
@@ -1115,7 +1125,7 @@ form.checkout {
 			}
 
 			&:last-child {
-				padding-bottom: 0;
+				padding: ms(1); /* */
 				border-bottom: 0;
 			}
 
