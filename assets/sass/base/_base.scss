@@ -388,6 +388,10 @@ body {
 
 	.entry-content {
 		font-size: 1.1em;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	.entry-header {
@@ -1464,6 +1468,8 @@ button.menu-toggle {
 
 		.star-rating {
 			display: inline-block;
+			height: 1em;
+			line-height: 1;
 		}
 	}
 }
