@@ -1,5 +1,11 @@
 /**
  * WooCommerce Wishlists
+ *
+ * 1 - Added class to remove the dot in front of the word "Wishlist".
+ * While i'm at it, add a FA eye icon in front to visually help the user.
+ * 2 - Added margin-top: 0 to center-align the > in the list Items
+ * 3  - Upped the fontsize from 12px to 14 for better visibility.
+ * 4  - Added the class to increase the font size for the same reason as 3.
  */
 
 /**
@@ -21,11 +27,25 @@
 }
 
 #wl-wrapper {
+	.wl-already-in > ul { /* 1 */
+		margin-left: 0;
+		list-style-type: none;
+
+			a:before {
+				margin-right: ms(-3);
+				font-family: "FontAwesome";
+				content: "\f06e";
+			}
+	}
 	.wl-tabs {
 		border-bottom: 0 !important;
 
 		> li {
 			float: none !important;
+
+			&:after { /* 2 */
+				margin-top: 0 !important;
+			}
 
 			> a {
 				padding: 1em ms(2);
@@ -59,9 +79,14 @@
 		}
 	}
 
-	.wl-meta-share,
-	.wl-share-url {
+	// .wl-meta-share,
+	.wl-share-url > strong {
+		font-size: 15px; /* 3 */
+		font-weight: 400;
 		border-bottom-color: $color_border;
+	}
+	.wl-small { /* 4 */
+		font-size:14px ;
 	}
 }
 
