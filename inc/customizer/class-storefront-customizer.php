@@ -877,43 +877,30 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		public function customizer_custom_control_css() {
 			?>
 			<style>
-			.customize-control-radio-image .image.ui-buttonset input[type=radio] {
-				height: auto;
+			.customize-control-radio-image input[type=radio] {
+				display: none;
 			}
 
-			.customize-control-radio-image .image.ui-buttonset label {
-				display: inline-block;
+			.customize-control-radio-image label {
+				display: block;
 				width: 48%;
-				padding: 1%;
-				box-sizing: border-box;
+				float: left;
+				margin-right: 4%;
 			}
 
-			.customize-control-radio-image .image.ui-buttonset label.ui-state-active {
-				background: none;
+			.customize-control-radio-image label:nth-of-type(2n) {
+				margin-right: 0;
 			}
 
-			.customize-control-radio-image .customize-control-radio-buttonset label {
-				background: #f7f7f7;
-				line-height: 35px;
+			.customize-control-radio-image img {
+				opacity: .5;
 			}
 
-			.customize-control-radio-image label img {
-				opacity: 0.5;
-			}
-
-			#customize-controls .customize-control-radio-image label img {
-				height: auto;
-			}
-
-			.customize-control-radio-image label.ui-state-active img {
-				background: #dedede;
+			.customize-control-radio-image input[type=radio]:checked + label img,
+			.customize-control-radio-image img:hover {
 				opacity: 1;
 			}
 
-			.customize-control-radio-image label.ui-state-hover img {
-				opacity: 1;
-				box-shadow: 0 0 0 3px #f6f6f6;
-			}
 			</style>
 			<?php
 		}
