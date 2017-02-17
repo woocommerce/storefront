@@ -137,11 +137,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'file'       => 'inc/nux/assets/images/categories/hoodies.jpg',
 					),
 				),
-				'theme_mods' => array(
-					'category_tshirts'     => '{{tshirts-image}}',
-					'category_hoodies'     => '{{hoodies-image}}',
-					'category_accessories' => '{{accessories-image}}',
-				),
 				'options' => array(
 					'show_on_front'  => 'page',
 					'page_on_front'  => '{{home}}',
