@@ -1305,6 +1305,11 @@ table.woocommerce-checkout-review-order-table {
 /**
  * My Account
  */
+label.inline {
+	display: inline !important;
+	margin-left: ms(1);
+}
+
 .woocommerce-MyAccount-navigation {
 	ul {
 		margin-left: 0;
