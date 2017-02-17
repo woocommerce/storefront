@@ -1414,18 +1414,27 @@ button.menu-toggle {
 .widget_archive,
 .widget_recent_comments,
 .widget_nav_menu,
-.widget_links {
+.widget_links,
+.widget_product_categories,
+.widget_layered_nav,
+.widget_layered_nav_filters {
 	ul {
 		margin: 0;
 
 		li {
 			list-style: none;
-			margin-bottom: ms(-2);
+			margin-bottom: ms(1);
+			line-height: ms(2);
 		}
 
-		.sub-menu {
+		.children {
 			margin-top: ms(-2);
 			margin-left: ms(3);
+		}
+
+		.children {
+			margin-left: 0;
+			margin-top: ms(1);
 		}
 	}
 }

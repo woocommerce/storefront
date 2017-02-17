@@ -268,7 +268,10 @@ a.reset_variations {
 .widget_archive,
 .widget_recent_comments,
 .widget_nav_menu,
-.widget_links {
+.widget_links,
+.widget_product_categories,
+.widget_layered_nav,
+.widget_layered_nav_filters {
 	ul {
 		margin: 0;
 
@@ -278,9 +281,11 @@ a.reset_variations {
 			&:before {
 				font-family: "FontAwesome";
 				margin-right: ms(-3);
-				display: inline-block;
+				display: block;
+				float: left;
 				opacity: 0.35;
 				margin-left: - ms(3);
+				width: 1em;
 			}
 		}
 	}
@@ -290,9 +295,6 @@ a.reset_variations {
 	ul {
 		li {
 			&:before {
-				@include fa-icon();
-				margin-right: ms(-3);
-				opacity: 0.25;
 				content: "\f114";
 			}
 
@@ -308,9 +310,6 @@ a.reset_variations {
 .widget_layered_nav {
 	li {
 		&:before {
-			@include fa-icon();
-			margin-right: ms(-3);
-			opacity: 0.35;
 			content: "\f0c8";
 		}
 	}
@@ -326,13 +325,10 @@ a.reset_variations {
 	ul {
 		li {
 			&.chosen {
-				a {
-					&:before {
-						@include fa-icon();
-						content: "\f00d";
-						margin-right: ms(-3);
-						color: $error;
-					}
+				&:before {
+					content: "\f00d";
+					color: $error;
+					opacity: 1;
 				}
 			}
 		}
