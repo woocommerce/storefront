@@ -402,6 +402,16 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 								$category_ids = array();
 
 								foreach ( $categories as $category ) {
+									// Check if the term already exists.
+									$category_exists = term_exists( $category['term'], $taxonomy );
+
+									if ( $category_exists ) {
+										$category_ids[] = (int) $category_exists['term_id'];
+
+										continue;
+									}
+
+									// Create new category.
 									$created_category = wp_insert_term(
 										$category['term'],
 										$taxonomy,
