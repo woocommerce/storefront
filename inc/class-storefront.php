@@ -116,6 +116,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// Declare WooCommerce support.
 			add_theme_support( 'woocommerce' );
+			add_theme_support( 'wc-product-gallery-zoom' );
+			add_theme_support( 'wc-product-gallery-lightbox' );
+			add_theme_support( 'wc-product-gallery-slider' );
 
 			// Declare support for title theme feature.
 			add_theme_support( 'title-tag' );

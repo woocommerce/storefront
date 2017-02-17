@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2017.02.17* - 2.1.8
+* **Tweak** - [WooCommerce 2.7] - Declare support for the new gallery.
+
 ### *2017.01.17* - 2.1.7
 * **Tweak** - [WooCommerce 2.7] - Ensure all checkboxes function correctly with new markup.
 * **Tweak** - [WooCommerce 2.7] - Order item meta styling.
