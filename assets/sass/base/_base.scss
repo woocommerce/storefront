@@ -1421,15 +1421,6 @@ button.menu-toggle {
 		li {
 			list-style: none;
 			margin-bottom: ms(-2);
-			padding-left: ms(3);
-			text-indent: -.809em;
-
-			&:before {
-				font-family: "FontAwesome";
-				margin-right: ms(-3);
-				display: inline-block;
-				opacity: 0.35;
-			}
 		}
 
 		.sub-menu {

@@ -262,6 +262,30 @@ a.reset_variations {
 	}
 }
 
+.widget_recent_entries,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_recent_comments,
+.widget_nav_menu,
+.widget_links {
+	ul {
+		margin: 0;
+
+		li {
+			padding-left: ms(3);
+
+			&:before {
+				font-family: "FontAwesome";
+				margin-right: ms(-3);
+				display: inline-block;
+				opacity: 0.35;
+				margin-left: - ms(3);
+			}
+		}
+	}
+}
+
 .widget_product_categories {
 	ul {
 		li {
