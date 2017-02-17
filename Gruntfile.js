@@ -13,10 +13,10 @@ module.exports = function( grunt ) {
 				'Gruntfile.js',
 				'assets/js/*.js',
 				'!assets/js/*.min.js',
-				'assets/js/admin/welcome-screen/*.js',
-				'!assets/js/admin/welcome-screen/*.min.js',
 				'assets/js/customizer/*.js',
 				'!assets/js/customizer/*.min.js',
+				'assets/js/admin/welcome-screen/*.js',
+				'!assets/js/admin/welcome-screen/*.min.js',
 				'assets/js/woocommerce/*.js',
 				'!assets/js/woocommerce/*.min.js',
 				'inc/nux/assets/js/*.js',
@@ -41,18 +41,6 @@ module.exports = function( grunt ) {
 					ext: '.min.js'
 				}]
 			},
-			admin: {
-				files: [{
-					expand: true,
-					cwd: 'assets/js/admin/welcome-screen/',
-					src: [
-						'*.js',
-						'!*.min.js'
-					],
-					dest: 'assets/js/admin/welcome-screen/',
-					ext: '.min.js'
-				}]
-			},
 			vendor: {
 				files: [{
 					expand: true,
@@ -74,6 +62,18 @@ module.exports = function( grunt ) {
 						'!*.min.js'
 					],
 					dest: 'assets/js/woocommerce/',
+					ext: '.min.js'
+				}]
+			},
+			welcome: {
+				files: [{
+					expand: true,
+					cwd: 'assets/js/admin/welcome-screen/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: 'assets/js/admin/welcome-screen/',
 					ext: '.min.js'
 				}]
 			},
@@ -187,17 +187,17 @@ module.exports = function( grunt ) {
 					'assets/js/*js',
 					'!assets/js/*.min.js',
 
-					// admin js
-					'assets/js/admin/welcome-screen/*js',
-					'!assets/js/admin/welcome-screen/*.min.js',
-
 					// customizer js
 					'assets/js/customizer/*js',
 					'!assets/js/customizer/*.min.js',
 
 					// WooCommerce js
 					'assets/js/woocommerce/*js',
-					'!assets/js/woocommerce/*.min.js'
+					'!assets/js/woocommerce/*.min.js',
+
+					// Welcome screen js
+					'assets/js/admin/welcome-screen/*js',
+					'!assets/js/admin/welcome-screen/*.min.js'
 				],
 				tasks: ['jshint', 'uglify']
 			}
