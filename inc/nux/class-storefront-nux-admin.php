@@ -29,7 +29,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_action( 'admin_post_storefront_guided_tour',       array( $this, 'redirect_customizer' ) );
 			add_action( 'activated_plugin',                        array( $this, 'activated_plugin' ) );
 			add_action( 'after_theme_setup',                       array( $this, 'log_fresh_site_state' ) );
-			add_action( 'transition_post_status',                  array( $this, 'unset_nux_freshness' ), 10, 3 );
 		}
 
 		/**
@@ -53,17 +52,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			);
 
 			wp_localize_script( 'storefront-admin-nux', 'storefrontNUX', $storefront_nux );
-		}
-
-		/**
-		 * Remove the Storefront NUX Freshness flag when a post is published
-		 *
-		 * @since 2.2.0
-		 */
-		public function unset_nux_freshness( $new_status, $old_status ) {
-			if ( 'publish' === $new_status && 'publish' !== $old_status ) {
-				update_option( 'storefront_nux_fresh_site', false );
-			}
 		}
 
 		/**
@@ -126,6 +114,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 						<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
 							<input type="hidden" name="homepage" value="on">
+						<?php endif; ?>
+
+						<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && true === $this->_is_woocommerce_empty() ) : ?>
 							<input type="hidden" name="products" value="on">
 						<?php endif; ?>
 
@@ -141,10 +132,12 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 								?>
 							</label>
 
+							<?php if ( true === $this->_is_woocommerce_empty() ) : ?>
 							<label>
 								<input type="checkbox" name="products" checked>
 								<?php esc_attr_e( 'Add example products', 'storefront' ); ?>
 							</label>
+							<?php endif; ?>
 						<?php endif; ?>
 
 						<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
@@ -323,6 +316,22 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			}
 
 			update_post_meta( $page_id, '_wp_page_template', $template );
+		}
+
+		/**
+		 * Check if WooCommerce is empty.
+		 *
+		 * @since 2.2
+		 * @return bool
+		 */
+		private function _is_woocommerce_empty() {
+			$products = wp_count_posts( 'product' );
+
+			if ( 0 < $products->publish ) {
+				return false;
+			}
+
+			return true;
 		}
 	}
 
