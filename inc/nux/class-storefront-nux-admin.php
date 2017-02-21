@@ -29,6 +29,17 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_action( 'admin_post_storefront_guided_tour',       array( $this, 'redirect_customizer' ) );
 			add_action( 'activated_plugin',                        array( $this, 'activated_plugin' ) );
 			add_action( 'after_theme_setup',                       array( $this, 'log_fresh_site_state' ) );
+			add_filter( 'admin_body_class',                        array( $this, 'admin_body_class' ) );
+		}
+
+		public function admin_body_class( $classes ) {
+			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
+				return $classes;
+			}
+
+			$classes .= ' sf-nux ';
+
+			return $classes;
 		}
 
 		/**
@@ -43,9 +54,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				return;
 			}
 
-			wp_enqueue_style( 'storefront-admin-nux', get_template_directory_uri() . '/inc/nux/assets/css/admin.css', '', $storefront_version );
+			wp_enqueue_style( 'storefront-admin-nux', get_template_directory_uri() . '/assets/sass/admin/admin.css', '', $storefront_version );
 
-			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/inc/nux/assets/js/admin.min.js', array( 'jquery' ), $storefront_version, 'all' );
+			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin.min.js', array( 'jquery' ), $storefront_version, 'all' );
 
 			$storefront_nux = array(
 				'nonce' => wp_create_nonce( 'storefront_notice_dismiss' )
@@ -68,34 +79,14 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 			<div class="notice notice-info sf-notice-nux is-dismissible">
 				<span class="sf-icon">
-					<?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/inc/nux/assets/images/storefront-icon.svg" alt="Storefront" width="250" />'; ?>
+					<?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/customizer/starter-content/storefront-icon.svg" alt="Storefront" width="250" />'; ?>
 				</span>
 
 				<div class="notice-content">
-				<?php
-				if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) :
-					if ( $url = $this->_is_woocommerce_installed() ) {
-						$button = array(
-							'message' => esc_attr__( 'Activate WooCommerce', 'storefront' ),
-							'url'     => esc_url( $url ),
-							'classes' => ' activate-now'
-						);
-					} else {
-						$url = wp_nonce_url( add_query_arg( array(
-							'action' => 'install-plugin',
-							'plugin' => 'woocommerce',
-							), self_admin_url( 'update.php' ) ), 'install-plugin_woocommerce' );
-
-						$button = array(
-							'message' => esc_attr__( 'Install WooCommerce', 'storefront' ),
-							'url'     => esc_url( $url ),
-							'classes' => ' install-now sf-install-woocommerce'
-						);
-					}
-				?>
+				<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
 					<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
 					<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
-					<p><a href="<?php echo $button['url']; ?>" class="sf-nux-button<?php echo $button['classes']; ?>" data-originaltext="<?php echo $button['message']; ?>" aria-label="<?php echo $button['message']; ?>"><?php echo $button['message']; ?></a></p>
+					<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array( 'sf-nux-button' ), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
 				<?php endif; ?>
 
 				<?php if ( storefront_is_woocommerce_activated() ) : ?>

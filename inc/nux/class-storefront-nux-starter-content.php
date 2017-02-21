@@ -74,67 +74,67 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				'attachments' => array(
 					'beanie-image' => array(
 						'post_title' => 'Beanie',
-						'file'       => 'inc/nux/assets/images/products/beanie.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/beanie.jpg',
 					),
 					'belt-image' => array(
 						'post_title' => 'Belt',
-						'file'       => 'inc/nux/assets/images/products/belt.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/belt.jpg',
 					),
 					'cap-image' => array(
 						'post_title' => 'Cap',
-						'file'       => 'inc/nux/assets/images/products/cap.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/cap.jpg',
 					),
 					'hoodie-with-logo-image' => array(
 						'post_title' => 'Hoodie with Logo',
-						'file'       => 'inc/nux/assets/images/products/hoodie-with-logo.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/hoodie-with-logo.jpg',
 					),
 					'hoodie-with-pocket-image' => array(
 						'post_title' => 'Hoodie with Pocket',
-						'file'       => 'inc/nux/assets/images/products/hoodie-with-pocket.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/hoodie-with-pocket.jpg',
 					),
 					'hoodie-with-zipper-image' => array(
 						'post_title' => 'Hoodie with Zipper',
-						'file'       => 'inc/nux/assets/images/products/hoodie-with-zipper.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/hoodie-with-zipper.jpg',
 					),
 					'hoodie-image' => array(
 						'post_title' => 'Hoodie',
-						'file'       => 'inc/nux/assets/images/products/hoodie.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/hoodie.jpg',
 					),
 					'long-sleeve-tee-image' => array(
 						'post_title' => 'Long Sleeve Tee',
-						'file'       => 'inc/nux/assets/images/products/long-sleeve-tee.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/long-sleeve-tee.jpg',
 					),
 					'polo-image' => array(
 						'post_title' => 'Polo',
-						'file'       => 'inc/nux/assets/images/products/polo.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/polo.jpg',
 					),
 					'sunglasses-image' => array(
 						'post_title' => 'Sunglasses',
-						'file'       => 'inc/nux/assets/images/products/sunglasses.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/sunglasses.jpg',
 					),
 					'tshirt-image' => array(
 						'post_title' => 'Tshirt',
-						'file'       => 'inc/nux/assets/images/products/tshirt.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/tshirt.jpg',
 					),
 					'vneck-tee-image' => array(
 						'post_title' => 'Vneck Tshirt',
-						'file'       => 'inc/nux/assets/images/products/vneck-tee.jpg',
+						'file'       => 'assets/images/customizer/starter-content/products/vneck-tee.jpg',
 					),
 					'hero-image' => array(
 						'post_title' => 'Hero',
-						'file'       => 'inc/nux/assets/images/hero.jpg',
+						'file'       => 'assets/images/customizer/starter-content/hero.jpg',
 					),
 					'accessories-image' => array(
 						'post_title' => 'Accessories',
-						'file'       => 'inc/nux/assets/images/categories/accessories.jpg',
+						'file'       => 'assets/images/customizer/starter-content/categories/accessories.jpg',
 					),
 					'tshirts-image' => array(
 						'post_title' => 'T-shirts',
-						'file'       => 'inc/nux/assets/images/categories/tshirts.jpg',
+						'file'       => 'assets/images/customizer/starter-content/categories/tshirts.jpg',
 					),
 					'hoodies-image' => array(
 						'post_title' => 'Hoodies',
-						'file'       => 'inc/nux/assets/images/categories/hoodies.jpg',
+						'file'       => 'assets/images/customizer/starter-content/categories/hoodies.jpg',
 					),
 				),
 				'options' => array(

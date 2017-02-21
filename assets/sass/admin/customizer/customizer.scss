@@ -1,4 +1,4 @@
-@import 'buttons';
+@import '../buttons';
 
 $background: #23282d;
 
@@ -64,7 +64,7 @@ $background: #23282d;
 
 	&:not(.sf-first-step) {
 		.sf-guided-tour-step {
-			.sf-nux-button {
+			a.sf-nux-button {
 				display: none;
 			}
 
@@ -77,7 +77,7 @@ $background: #23282d;
 
 	&.sf-inside-section {
 		.sf-guided-tour-step {
-			.sf-nux-button {
+			a.sf-nux-button {
 				display: inline-block;
 			}
 
@@ -89,14 +89,14 @@ $background: #23282d;
 
 	&.sf-last-step {
 		.sf-guided-tour-step {
-			.sf-nux-button {
+			a.sf-nux-button {
 				display: inline-block;
 			}
 		}
 	}
 }
 
-.sf-nux-button {
+a.sf-nux-button {
 	vertical-align: middle;
 
 	&:active {

@@ -5,11 +5,14 @@
 		return;
 	}
 
-	var $document = $( document );
-
 	$( function() {
-		$document.on( 'click', '.install-now', function( event ) {
+		$( document ).on( 'click', '.sf-install-now', function( event ) {
 			var $button = $( event.target );
+
+			if ( $button.hasClass( 'activate-now' ) ) {
+				return true;
+			}
+
 			event.preventDefault();
 
 			if ( $button.hasClass( 'updating-message' ) || $button.hasClass( 'button-disabled' ) ) {
@@ -19,8 +22,8 @@
 			if ( wp.updates.shouldRequestFilesystemCredentials && ! wp.updates.ajaxLocked ) {
 				wp.updates.requestFilesystemCredentials( event );
 
-				$document.on( 'credential-modal-cancel', function() {
-					var $message = $( '.install-now.updating-message' );
+				$( document ).on( 'credential-modal-cancel', function() {
+					var $message = $( '.sf-install-now.updating-message' );
 
 					$message
 						.removeClass( 'updating-message' )

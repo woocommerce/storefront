@@ -216,6 +216,9 @@ $green: #45B964;
 		box-shadow: 0 1px 0 #C8D7E1;
 		text-decoration: none;
 		background-color: #fff;
+		text-shadow: none;
+		height: auto;
+		line-height: 1.5;
 
 		&:hover {
 			border-color: #a8bece;

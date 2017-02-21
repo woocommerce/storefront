@@ -38,10 +38,6 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			global $storefront_version;
 
 			if ( 'appearance_page_storefront-welcome' === $hook_suffix ) {
-				wp_enqueue_script( 'updates' );
-
-				wp_enqueue_script( 'storefront-admin-welcome', get_template_directory_uri() . '/assets/js/admin/welcome-screen/welcome.min.js', array( 'jquery' ), $storefront_version, 'all' );
-
 				wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/assets/sass/admin/welcome-screen/welcome.css', $storefront_version );
 				wp_style_add_data( 'storefront-welcome-screen', 'rtl', 'replace' );
 			}
@@ -93,7 +89,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 					<div class="storefront-enhance__column storefront-free-plugins">
 						<h3><?php esc_attr_e( 'Install-and-go enhancements', 'storefront' ); ?></h3>
 						<ul class="storefront-free-plugins__wrap">
-							<li class="storefront-plugin plugin-card-woocommerce-cart-tab">
+							<li class="storefront-plugin">
 								<h4><?php esc_attr_e( 'Cart Tab', 'storefront' ); ?></h4>
 								<p>
 									<?php esc_attr_e( 'Provide a more streamlined checkout experience. Cart Tab adds a fixed cart icon that displays the number of products in the cart to all pages of your site.', 'storefront' ); ?>
@@ -105,12 +101,13 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 								<p>
 									<?php
-										$this->install_plugin_button( 'woocommerce-cart-tab', 'cart-tab.php' );
+										Storefront_Plugin_Install::install_plugin_button( 'woocommerce-cart-tab', 'cart-tab.php', 'WooCommerce Cart Tab
+' );
 									?>
 								</p>
 							</li>
 
-							<li class="storefront-plugin plugin-card-storefront-product-sharing">
+							<li class="storefront-plugin">
 								<h4><?php esc_attr_e( 'Product Sharing', 'storefront' ); ?></h4>
 								<p>
 									<?php esc_attr_e( 'Enable your visitors to market your products on your behalf! Add social icons to your product pages allowing guests to share your products on their favorite social networks.', 'storefront' ); ?>
@@ -118,12 +115,12 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 								<p>
 									<?php
-										$this->install_plugin_button( 'storefront-product-sharing', 'storefront-product-sharing.php' );
+										Storefront_Plugin_Install::install_plugin_button( 'storefront-product-sharing', 'storefront-product-sharing.php', 'Storefront Product Sharing' );
 									?>
 								</p>
 							</li>
 
-							<li class="storefront-plugin plugin-card-storefront-sticky-add-to-cart">
+							<li class="storefront-plugin">
 								<h4><?php esc_attr_e( 'Sticky add to cart', 'storefront' ); ?></h4>
 								<p>
 									<?php esc_attr_e( 'Increase conversions by adding a sticky add-to-cart button to all your product pages so that folks can always add to cart, regardless of how far they scroll down the page.', 'storefront' ); ?>
@@ -131,7 +128,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 								<p>
 									<?php
-										$this->install_plugin_button( 'storefront-sticky-add-to-cart', 'storefront-sticky-add-to-cart.php' );
+										Storefront_Plugin_Install::install_plugin_button( 'storefront-sticky-add-to-cart', 'storefront-sticky-add-to-cart.php', 'Storefront Sticky Add to Cart' );
 									?>
 								</p>
 							</li>

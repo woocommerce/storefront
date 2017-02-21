@@ -45,9 +45,10 @@ if ( storefront_is_woocommerce_activated() ) {
 
 if ( is_admin() ) {
 	$storefront->admin = require 'inc/admin/class-storefront-admin.php';
+
+	require 'inc/admin/class-storefront-plugin-install.php';
 }
 
-// NUX
 require 'inc/nux/class-storefront-nux-admin.php';
 require 'inc/nux/class-storefront-nux-starter-content.php';
 require 'inc/nux/class-storefront-nux-guided-tour.php';

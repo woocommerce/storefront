@@ -1,0 +1,15 @@
+.sf-install-now {
+	&.updating-message {
+		&:before {
+			display: inline-block;
+			content: "\f463";
+			font: normal 19px/1 'dashicons';
+			margin: 0 5px 0 -2px;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			vertical-align: bottom;
+			-webkit-animation: rotation 2s infinite linear;
+			animation: rotation 2s infinite linear;
+		}
+	}
+}

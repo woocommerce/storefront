@@ -13,14 +13,10 @@ module.exports = function( grunt ) {
 				'Gruntfile.js',
 				'assets/js/*.js',
 				'!assets/js/*.min.js',
-				'assets/js/customizer/*.js',
-				'!assets/js/customizer/*.min.js',
-				'assets/js/admin/welcome-screen/*.js',
-				'!assets/js/admin/welcome-screen/*.min.js',
+				'assets/js/admin/*.js',
+				'!assets/js/admin/*.min.js',
 				'assets/js/woocommerce/*.js',
-				'!assets/js/woocommerce/*.min.js',
-				'inc/nux/assets/js/*.js',
-				'!inc/nux/assets/js/*.min.js'
+				'!assets/js/woocommerce/*.min.js'
 			]
 		},
 
@@ -65,27 +61,15 @@ module.exports = function( grunt ) {
 					ext: '.min.js'
 				}]
 			},
-			welcome: {
+			admin: {
 				files: [{
 					expand: true,
-					cwd: 'assets/js/admin/welcome-screen/',
+					cwd: 'assets/js/admin/',
 					src: [
 						'*.js',
 						'!*.min.js'
 					],
-					dest: 'assets/js/admin/welcome-screen/',
-					ext: '.min.js'
-				}]
-			},
-			nux: {
-				files: [{
-					expand: true,
-					cwd: 'inc/nux/assets/js/',
-					src: [
-						'*.js',
-						'!*.min.js'
-					],
-					dest: 'inc/nux/assets/js/',
+					dest: 'assets/js/admin/',
 					ext: '.min.js'
 				}]
 			}
@@ -101,7 +85,10 @@ module.exports = function( grunt ) {
 				},
 				files: [{
 					'style.css': 'style.scss',
+					'assets/sass/admin/admin.css': 'assets/sass/admin/admin.scss',
+					'assets/sass/admin/plugin-install.css': 'assets/sass/admin/plugin-install.scss',
 					'assets/sass/admin/welcome-screen/welcome.css': 'assets/sass/admin/welcome-screen/welcome.scss',
+					'assets/sass/admin/customizer/customizer.css': 'assets/sass/admin/customizer/customizer.scss',
 					'assets/sass/woocommerce/extensions/bookings.css': 'assets/sass/woocommerce/extensions/bookings.scss',
 					'assets/sass/woocommerce/extensions/brands.css': 'assets/sass/woocommerce/extensions/brands.scss',
 					'assets/sass/woocommerce/extensions/wishlists.css': 'assets/sass/woocommerce/extensions/wishlists.scss',
@@ -119,9 +106,7 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/quick-view.css': 'assets/sass/woocommerce/extensions/quick-view.scss',
 					'assets/sass/woocommerce/woocommerce.css': 'assets/sass/woocommerce/woocommerce.scss',
 					'assets/sass/jetpack/jetpack.css': 'assets/sass/jetpack/jetpack.scss',
-					'assets/sass/base/icons.css': 'assets/sass/base/icons.scss',
-					'inc/nux/assets/css/admin.css': 'inc/nux/assets/css/admin.scss',
-					'inc/nux/assets/css/customizer.css': 'inc/nux/assets/css/customizer.scss'
+					'assets/sass/base/icons.css': 'assets/sass/base/icons.scss'
 				}]
 			}
 		},
@@ -135,9 +120,23 @@ module.exports = function( grunt ) {
 			},
 			admin: {
 				expand: true,
+				cwd: 'assets/sass/admin/',
+				src: ['*.css'],
+				dest: 'assets/sass/admin/',
+				ext: '.css'
+			},
+			welcome: {
+				expand: true,
 				cwd: 'assets/sass/admin/welcome-screen/',
 				src: ['*.css'],
 				dest: 'assets/sass/admin/welcome-screen/',
+				ext: '.css'
+			},
+			customizer: {
+				expand: true,
+				cwd: 'assets/sass/admin/customizer/',
+				src: ['*.css'],
+				dest: 'assets/sass/admin/customizer/',
 				ext: '.css'
 			},
 			jetpack: {
@@ -152,13 +151,6 @@ module.exports = function( grunt ) {
 				cwd: 'assets/sass/woocommerce/',
 				src: ['*.css'],
 				dest: 'assets/sass/woocommerce/',
-				ext: '.css'
-			},
-			nux: {
-				expand: true,
-				cwd: 'inc/nux/assets/css/',
-				src: ['*.css'],
-				dest: 'inc/nux/assets/css/',
 				ext: '.css'
 			}
 		},
