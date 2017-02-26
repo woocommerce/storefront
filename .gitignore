@@ -22,3 +22,6 @@ config.codekit
 
 # PhpStorm
 .idea
+
+# macOS
+.DS_Store
