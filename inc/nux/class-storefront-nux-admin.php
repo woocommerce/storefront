@@ -79,7 +79,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 			<div class="notice notice-info sf-notice-nux is-dismissible">
 				<span class="sf-icon">
-					<?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/customizer/starter-content/storefront-icon.svg" alt="Storefront" width="250" />'; ?>
+					<?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/storefront-icon.svg" alt="Storefront" width="250" />'; ?>
 				</span>
 
 				<div class="notice-content">

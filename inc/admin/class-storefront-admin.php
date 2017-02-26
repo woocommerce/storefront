@@ -77,7 +77,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 				</section>
 
 				<div class="storefront-logo">
-					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront.png" alt="Storefront" />
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/storefront-icon.svg" alt="Storefront" />
 				</div>
 
 				<div class="storefront-intro">
