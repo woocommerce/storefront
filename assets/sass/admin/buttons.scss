@@ -1,0 +1,55 @@
+.sf-nux .sf-nux-button,
+a.sf-nux-button {
+	background: #00aadc;
+	border-color: #0087be;
+	border-style: solid;
+	border-width: 1px 1px 2px;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	outline: 0;
+	overflow: hidden;
+	font-weight: 500;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	text-transform: none;
+	text-shadow: none;
+	box-sizing: border-box;
+	font-size: 14px;
+	height: auto;
+	line-height: 21px;
+	border-radius: 4px;
+	margin: 0;
+	padding: 7px 14px 9px;
+	-webkit-appearance: none;
+	appearance: none;
+	vertical-align: baseline;
+
+	&:hover,
+	&:focus {
+		border-color: #005082;
+		color: white;
+	}
+
+	&:focus {
+		box-shadow: 0 0 0 2px #78dcfa;
+	}
+
+	&:active {
+		border-width: 2px 1px 1px;
+		box-shadow: none;
+		vertical-align: baseline;
+	}
+
+	&[disabled],
+	&:disabled {
+		color: white;
+		background: tint(#78dcfa, 50%);
+		border-color: tint(#0087be, 55%);
+		cursor: default;
+
+		&:active {
+			border-width: 1px 1px 2px;
+		}
+	}
+}

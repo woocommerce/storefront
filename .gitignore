@@ -1,17 +1,8 @@
 # Compiled CSS
-/assets/sass/woocommerce/*.css
-/assets/sass/woocommerce/extensions/*.css
-/assets/sass/admin/welcome-screen/*.css
-/assets/sass/jetpack/*.css
-style.css
-style-rtl.css
+*.css
 
 # Minified js
-/assets/js/*.min.js
-/assets/js/customizer/*.min.js
-/assets/js/admin/welcome-screen/*.min.js
-/assets/js/vendor/*.min.js
-/assets/js/woocommerce/*.min.js
+*.min.js
 
 # Sass
 .sass-cache
@@ -31,3 +22,6 @@ config.codekit
 
 # PhpStorm
 .idea
+
+# macOS
+.DS_Store

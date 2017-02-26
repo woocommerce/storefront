@@ -24,39 +24,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'admin_menu', 				array( $this, 'welcome_register_menu' ) );
-			add_action( 'load-themes.php',			array( $this, 'activation_admin_notice' ) );
 			add_action( 'admin_enqueue_scripts', 	array( $this, 'welcome_style' ) );
-
-			add_action( 'storefront_welcome', 		array( $this, 'welcome_intro' ), 			10 );
-			add_action( 'storefront_welcome', 		array( $this, 'welcome_enhance' ), 			20 );
-			add_action( 'storefront_welcome', 		array( $this, 'welcome_contribute' ), 		30 );
-		}
-
-		/**
-		 * Adds an admin notice upon successful activation.
-		 *
-		 * @since 1.0.3
-		 */
-		public function activation_admin_notice() {
-			global $pagenow;
-
-			if ( is_admin() && 'themes.php' == $pagenow && isset( $_GET['activated'] ) ) { // Input var okay.
-				add_action( 'admin_notices', array( $this, 'storefront_welcome_admin_notice' ), 99 );
-			}
-		}
-
-		/**
-		 * Display an admin notice linking to the welcome screen
-		 *
-		 * @since 1.0.3
-		 */
-		public function storefront_welcome_admin_notice() {
-			?>
-				<div class="updated notice is-dismissible">
-					<p><?php echo sprintf( esc_html__( 'Thanks for choosing Storefront! You can read hints and tips on how get the most out of your new theme on the %swelcome screen%s.', 'storefront' ), '<a href="' . esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ) . '">', '</a>' ); ?></p>
-					<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=storefront-welcome' ) ); ?>" class="button" style="text-decoration: none;"><?php esc_attr_e( 'Get started with Storefront', 'storefront' ); ?></a></p>
-				</div>
-			<?php
 		}
 
 		/**
@@ -69,13 +37,9 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		public function welcome_style( $hook_suffix ) {
 			global $storefront_version;
 
-			if ( 'appearance_page_storefront-welcome' == $hook_suffix ) {
+			if ( 'appearance_page_storefront-welcome' === $hook_suffix ) {
 				wp_enqueue_style( 'storefront-welcome-screen', get_template_directory_uri() . '/assets/sass/admin/welcome-screen/welcome.css', $storefront_version );
 				wp_style_add_data( 'storefront-welcome-screen', 'rtl', 'replace' );
-				wp_enqueue_style( 'thickbox' );
-				wp_enqueue_script( 'thickbox' );
-				wp_enqueue_script( 'masonry' );
-				wp_enqueue_script( 'storefront-welcome-screen-script', get_template_directory_uri() . '/assets/js/admin/welcome-screen/welcome.min.js', array( 'masonry' ), $storefront_version );
 			}
 		}
 
@@ -98,19 +62,126 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			require_once( ABSPATH . 'wp-load.php' );
 			require_once( ABSPATH . 'wp-admin/admin.php' );
 			require_once( ABSPATH . 'wp-admin/admin-header.php' );
+
+			global $storefront_version;
 			?>
-			<div class="wrap about-wrap">
 
-				<?php
-				/**
-				 * Functions hooked into storefront_welcome action
-				 *
-				 * @hooked welcome_intro      - 10
-				 * @hooked welcome_enhance    - 20
-				 * @hooked welcome_contribute - 30
-				 */
-				do_action( 'storefront_welcome' ); ?>
+			<div class="storefront-wrap">
+				<section class="storefront-welcome-nav">
+					<span class="storefront-welcome-nav__version">Storefront <?php echo esc_attr( $storefront_version ); ?></span>
+					<ul>
+						<li><a href="https://support.woocommerce.com/"><?php esc_attr_e( 'Support', 'storefront' ); ?></a></li>
+						<li><a href="https://docs.woocommerce.com/documentation/themes/storefront/"><?php esc_attr_e( 'Documentation', 'storefront' ); ?></a></li>
+						<li><a href="https://storefront.wordpress.com"><?php esc_attr_e( 'Development blog', 'storefront' ); ?></a></li>
+					</ul>
+				</section>
 
+				<div class="storefront-logo">
+					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront.png" alt="Storefront" />
+				</div>
+
+				<div class="storefront-intro">
+					<h1><?php echo sprintf( esc_attr__( 'Setup complete %sYour Storefront adventure begins now 🚀%s ', 'storefront' ), '<span>', '</span>' ); ?></h1>
+					<p><?php esc_attr_e( 'One more thing... You might be interested in the following Storefront extensions and designs', 'storefront' ); ?></p>
+				</div>
+
+				<div class="storefront-enhance">
+					<div class="storefront-enhance__column storefront-free-plugins">
+						<h3><?php esc_attr_e( 'Install-and-go enhancements', 'storefront' ); ?></h3>
+						<ul class="storefront-free-plugins__wrap">
+							<li class="storefront-plugin">
+								<h4><?php esc_attr_e( 'Cart Tab', 'storefront' ); ?></h4>
+								<p>
+									<?php esc_attr_e( 'Provide a more streamlined checkout experience. Cart Tab adds a fixed cart icon that displays the number of products in the cart to all pages of your site.', 'storefront' ); ?>
+								</p>
+
+								<p>
+									<?php esc_attr_e( 'Clicking the tab will reveal the cart contents in a sidebar that overlays the main site content from which visitors can conveniently edit their cart or checkout.', 'storefront' ); ?>
+								</p>
+
+								<p>
+									<?php
+										Storefront_Plugin_Install::install_plugin_button( 'woocommerce-cart-tab', 'cart-tab.php', 'WooCommerce Cart Tab
+' );
+									?>
+								</p>
+							</li>
+
+							<li class="storefront-plugin">
+								<h4><?php esc_attr_e( 'Product Sharing', 'storefront' ); ?></h4>
+								<p>
+									<?php esc_attr_e( 'Enable your visitors to market your products on your behalf! Add social icons to your product pages allowing guests to share your products on their favorite social networks.', 'storefront' ); ?>
+								</p>
+
+								<p>
+									<?php
+										Storefront_Plugin_Install::install_plugin_button( 'storefront-product-sharing', 'storefront-product-sharing.php', 'Storefront Product Sharing' );
+									?>
+								</p>
+							</li>
+
+							<li class="storefront-plugin">
+								<h4><?php esc_attr_e( 'Sticky add to cart', 'storefront' ); ?></h4>
+								<p>
+									<?php esc_attr_e( 'Increase conversions by adding a sticky add-to-cart button to all your product pages so that folks can always add to cart, regardless of how far they scroll down the page.', 'storefront' ); ?>
+								</p>
+
+								<p>
+									<?php
+										Storefront_Plugin_Install::install_plugin_button( 'storefront-sticky-add-to-cart', 'storefront-sticky-add-to-cart.php', 'Storefront Sticky Add to Cart' );
+									?>
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="storefront-enhance__column storefront-powerpack">
+						<h3>
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront-powerpack.png" alt="Storefront Powerpack" />
+							<?php esc_attr_e( 'Storefront Powerpack', 'storefront' ); ?>
+						</h3>
+						<p>
+							<?php esc_attr_e( 'Powerpack adds a variety of comprehensive customisation features to Storefront.', 'storefront' ); ?>
+						</p>
+
+						<p>
+							<?php esc_attr_e( 'Create your own header layout, precisely control the style of individual components and customise layouts for product &amp; checkout pages.', 'storefront' ); ?>
+						</p>
+
+						<p>
+							<?php esc_attr_e( 'All without touching a line of code.', 'storefront' ); ?>
+						</p>
+
+						<p>
+							<a href="https://woocommerce.com/products/storefront-powerpack/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_attr_e( 'Read more and purchase', 'storefront' ); ?></a>
+						</p>
+					</div>
+					<div class="storefront-enhance__column storefront-child-themes">
+						<h3><?php esc_attr_e( 'Alternate designs', 'storefront' ); ?></h3>
+						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/child-themes.jpg" alt="Storefront Powerpack" />
+
+						<p>
+							<?php esc_attr_e( 'Quickly and easily transform your shops appearance with Storefront child themes.', 'storefront' ); ?>
+						</p>
+
+						<p>
+							<?php esc_attr_e( 'Each has been designed to serve a different industry - from fashion to food.', 'storefront' ); ?>
+						</p>
+
+						<p>
+							<?php esc_attr_e( 'Of course they are all fully compatible with each Storefront extension.', 'storefront' ); ?>
+						</p>
+
+						<p>
+							<a href="https://woocommerce.com/product-category/themes/storefront-child-theme-themes/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_attr_e( 'Check \'em out', 'storefront' ); ?></a>
+						</p>
+					</div>
+				</div>
+
+				<div class="automattic">
+					<p>
+					<?php printf( esc_html__( 'An %s project', 'storefront' ), '<a href="https://automattic.com/"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/welcome-screen/automattic.png" alt="Automattic" /></a>' ); ?>
+					</p>
+				</div>
 			</div>
 			<?php
 		}
@@ -124,7 +195,74 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			require_once( get_template_directory() . '/inc/admin/welcome-screen/component-intro.php' );
 		}
 
+		/**
+		 * Output a button that will install or activate a plugin if it doesn't exist, or display a disabled button if the
+		 * plugin is already activated.
+		 *
+		 * @param string $plugin_slug The plugin slug.
+		 * @param string $plugin_file The plugin file.
+		 */
+		public function install_plugin_button( $plugin_slug, $plugin_file ) {
+			if ( current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) {
+				if ( is_plugin_active( $plugin_slug . '/' . $plugin_file ) ) {
+					/**
+					 * The plugin is already active
+					 */
+					$button = array(
+						'message' => esc_attr__( 'Activated', 'storefront' ),
+						'url'     => '#',
+						'classes' => 'disabled',
+					);
+				} elseif ( $url = $this->_is_plugin_installed( $plugin_slug ) ) {
+					/**
+					 * The plugin exists but isn't activated yet.
+					 */
+					$button = array(
+						'message' => esc_attr__( 'Activate', 'storefront' ),
+						'url'     => $url,
+						'classes' => 'activate-now',
+					);
+				} else {
+					/**
+					 * The plugin doesn't exist.
+					 */
+					$url = wp_nonce_url( add_query_arg( array(
+						'action' => 'install-plugin',
+						'plugin' => $plugin_slug,
+					), self_admin_url( 'update.php' ) ), 'install-plugin_' . $plugin_slug );
+					$button = array(
+						'message' => esc_attr__( 'Install now', 'storefront' ),
+						'url'     => $url,
+						'classes' => ' install-now install-' . $plugin_slug,
+					);
+				}
+				?>
+				<a href="<?php echo esc_url( $button['url'] ); ?>" class="storefront-button <?php echo esc_attr( $button['classes'] ); ?>" data-originaltext="<?php echo esc_attr( $button['message'] ); ?>" data-slug="<?php echo esc_attr( $plugin_slug ); ?>" aria-label="<?php echo esc_attr( $button['message'] ); ?>"><?php echo esc_attr( $button['message'] ); ?></a>
+				<a href="https://wordpress.org/plugins/<?php echo esc_attr( $plugin_slug ); ?>" target="_blank"><?php esc_attr_e( 'Learn more', 'storefront' ); ?></a>
+				<?php
+			}
+		}
 
+		/**
+		 * Check if a plugin is installed and return the url to activate it if so.
+		 *
+		 * @param string $plugin_slug The plugin slug.
+		 */
+		public function _is_plugin_installed( $plugin_slug ) {
+			if ( file_exists( WP_PLUGIN_DIR . '/' . $plugin_slug ) ) {
+				$plugins = get_plugins( '/' . $plugin_slug );
+				if ( ! empty( $plugins ) ) {
+					$keys        = array_keys( $plugins );
+					$plugin_file = $plugin_slug . '/' . $keys[0];
+					$url         = wp_nonce_url( add_query_arg( array(
+						'action' => 'activate',
+						'plugin' => $plugin_file,
+					), admin_url( 'plugins.php' ) ), 'activate-plugin_' . $plugin_file );
+					return $url;
+				}
+			}
+			return false;
+		}
 		/**
 		 * Welcome screen enhance section
 		 *
