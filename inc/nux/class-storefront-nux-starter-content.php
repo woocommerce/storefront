@@ -309,16 +309,29 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			global $wp_customize;
 
+			$post__in = array();
+
+			// Add existing products.
+			$existing_products = $this->_get_existing_wc_products();
+
+			if ( ! empty( $existing_products ) ) {
+				$post__in = array_merge( $post__in, $existing_products );
+			}
+
+			// Add starter content.
 			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
 
 			if ( ! empty( $data->value() ) ) {
 
-				// Add created products to query.
-				$query->set( 'post__in', (array) $data->value() );
+				// Merge starter content products.
+				$post__in = array_merge( $post__in, (array) $data->value() );
 
 				// Allow for multiple status.
 				$query->set( 'post_status', get_post_stati() );
 			}
+
+			// Add products to query.
+			$query->set( 'post__in', $post__in );
 		}
 
 		/**
@@ -337,12 +350,22 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			global $wp_customize;
 
+			$query_args['post__in'] = array();
+
+			// Add existing products to query
+			$existing_products = $this->_get_existing_wc_products();
+
+			if ( ! empty( $existing_products ) ) {
+				$query_args['post__in'] = array_merge( $query_args['post__in'], $existing_products );
+			}
+
+			// Add starter content to query
 			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
 
 			if ( ! empty( $data->value() ) ) {
 
 				// Add created products to query.
-				$query_args['post__in'] = $data->value();
+				$query_args['post__in'] = array_merge( $query_args['post__in'], (array) $data->value() );
 
 				// Allow for multiple status.
 				$query_args['post_status'] = get_post_stati();
@@ -755,6 +778,29 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			return apply_filters( 'storefront_starter_content_products', $products );
+		}
+
+		/**
+		 * Get a list of existing products in the store.
+		 *
+		 * @return array $query Array of product ids.
+		 * @since 2.2.0
+		 */
+		private function _get_existing_wc_products() {
+			$query_args = array(
+				'post_type'      => 'product',
+				'post_status'    => 'publish',
+				'fields'         => 'ids',
+				'posts_per_page' => -1,
+			);
+
+			$products = get_posts( $query_args );
+
+			if ( $products && ! empty( $products ) ) {
+				return $products;
+			}
+
+			return array();
 		}
 
 		/**
