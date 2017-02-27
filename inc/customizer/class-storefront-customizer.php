@@ -533,13 +533,13 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
-			table tbody td,
-			fieldset,
-			fieldset legend {
+			table tbody td {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 			}
 
-			table tbody tr:nth-child(2n) td {
+			table tbody tr:nth-child(2n) td,
+			fieldset,
+			fieldset legend {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
 			}
 
