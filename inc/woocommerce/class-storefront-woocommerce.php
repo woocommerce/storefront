@@ -337,21 +337,12 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
 				$woocommerce_extension_style 					.= '
-				#wc-bookings-booking-form .wc-bookings-date-picker .ui-datepicker-header {
-					background-color: ' . $storefront_theme_mods['header_background_color'] . ' !important;
-					color: ' . $storefront_theme_mods['header_link_color'] . ' !important;
-				}
-
-				.wc-bookings-date-picker .ui-datepicker td.bookable a,
-				.wc-bookings-date-picker .ui-datepicker td.fully_booked a,
-				.wc-bookings-date-picker .ui-datepicker td.fully_booked span {
-					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
-					color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
+				.wc-bookings-date-picker .ui-datepicker td.bookable a {
+					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
 				}
 
 				.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default {
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], -45 ) . ' !important;
-					color: ' . $storefront_theme_mods['button_text_color'] . ' !important;
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['accent_color'], -10 ) . ' !important;
 				}
 				';
 			}
