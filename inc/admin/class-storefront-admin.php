@@ -81,8 +81,19 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 				</div>
 
 				<div class="storefront-intro">
-					<h1><?php echo sprintf( esc_attr__( 'Setup complete %sYour Storefront adventure begins now 🚀%s ', 'storefront' ), '<span>', '</span>' ); ?></h1>
-					<p><?php esc_attr_e( 'One more thing... You might be interested in the following Storefront extensions and designs', 'storefront' ); ?></p>
+					<?php
+					/**
+					 * Display a different message when the user visits this page when returning from the guided tour
+					 */
+					$referrer = wp_get_referer();
+
+					if ( strpos( $referrer, 'sf_guided_tour' ) !== false ) {
+						echo '<h1>' . sprintf( esc_attr__( 'Setup complete %sYour Storefront adventure begins now 🚀%s ', 'storefront' ), '<span>', '</span>' ) . '</h1>';
+						echo '<p>' . esc_attr__( 'One more thing... You might be interested in the following Storefront extensions and designs', 'storefront' ) . '</p>';
+					} else {
+						echo '<p>' . esc_attr__( 'Hello! You might be interested in the following Storefront extensions and designs', 'storefront' ) . '</p>';
+					}
+					?>
 				</div>
 
 				<div class="storefront-enhance">
