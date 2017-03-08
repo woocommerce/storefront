@@ -20,7 +20,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 		/**
 		 * Setup class.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function __construct() {
 			add_action( 'admin_init', array( $this, 'customizer' ) );
@@ -29,7 +29,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 		/**
 		 * Customizer.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function customizer() {
 			global $pagenow;
@@ -43,7 +43,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 		/**
 		 * Customizer enqueues.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function customize_scripts() {
 			global $storefront_version;
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 		/**
 		 * Template for steps.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function print_templates() {
 			?>
@@ -92,7 +92,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 		/**
 		 * Guided tour steps.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function guided_tour_steps() {
 			$steps = array();

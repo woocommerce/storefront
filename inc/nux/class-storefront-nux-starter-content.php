@@ -20,7 +20,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Setup class.
 		 *
-		 * @since 2.2
+		 * @since 2.2.0
 		 */
 		public function __construct() {
 			add_action( 'after_setup_theme',                    array( $this, 'starter_content' ) );
@@ -35,8 +35,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Remove default widgets on activation
 		 * Set an option so that this is only done the first time the user activates Storefront.
 		 *
-		 * @return void
 		 * @since 2.2.0
+		 * @return void
 		 */
 		public function remove_default_widgets() {
 			if ( ! get_option( 'storefront_cleared_widgets' ) ) {
@@ -463,9 +463,9 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Filter Storefront Product Categories shortcode.
 		 *
+		 * @since 2.2.0
 		 * @param array $args Shortcode args.
 		 * @return array $args
-		 * @since 2.2.0
 		 */
 		public function filter_sf_categories( $args ) {
 			// Get Categories.
@@ -783,8 +783,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		/**
 		 * Get a list of existing products in the store.
 		 *
-		 * @return array $query Array of product ids.
 		 * @since 2.2.0
+		 * @return array $query Array of product ids.
 		 */
 		private function _get_existing_wc_products() {
 			$query_args = array(
