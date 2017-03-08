@@ -32,16 +32,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_filter( 'admin_body_class',                        array( $this, 'admin_body_class' ) );
 		}
 
-		public function admin_body_class( $classes ) {
-			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
-				return $classes;
-			}
-
-			$classes .= ' sf-nux ';
-
-			return $classes;
-		}
-
 		/**
 		 * Enqueue scripts.
 		 *
@@ -254,6 +244,22 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			if ( current_user_can( 'manage_options' ) ) {
 				update_option( 'storefront_nux_fresh_site', get_option( 'fresh_site' ) );
 			}
+		}
+
+		/**
+		 * Add custom classes to the list of admin body classes.
+		 *
+		 * @param string $classes Classes for the admin body element.
+		 * @return string
+		 */
+		public function admin_body_class( $classes ) {
+			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
+				return $classes;
+			}
+
+			$classes .= ' sf-nux ';
+
+			return $classes;
 		}
 
 		/**
