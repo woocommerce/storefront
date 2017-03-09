@@ -93,7 +93,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		public function woocommerce_scripts() {
 			global $storefront_version;
 
-			wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/assets/sass/woocommerce/woocommerce.css', $storefront_version );
+			wp_enqueue_style( 'storefront-woocommerce-style', get_template_directory_uri() . '/assets/sass/woocommerce/woocommerce.css', array(), $storefront_version );
 			wp_style_add_data( 'storefront-woocommerce-style', 'rtl', 'replace' );
 
 			wp_register_script( 'storefront-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.min.js', array(), $storefront_version, true );
