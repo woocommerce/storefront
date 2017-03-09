@@ -99,7 +99,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			wp_register_script( 'storefront-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart.min.js', array(), $storefront_version, true );
 			wp_enqueue_script( 'storefront-header-cart' );
 
-			wp_register_script( 'storefront-sticky-payment', get_template_directory_uri() . '/assets/js/woocommerce/checkout.min.js', 'jquery', $storefront_version, true );
+			wp_register_script( 'storefront-sticky-payment', get_template_directory_uri() . '/assets/js/woocommerce/checkout.min.js', array('jquery'), $storefront_version, true );
 
 			if ( is_checkout() && apply_filters( 'storefront_sticky_order_review', true ) ) {
 				wp_enqueue_script( 'storefront-sticky-payment' );
