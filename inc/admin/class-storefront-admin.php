@@ -89,9 +89,9 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 					if ( strpos( $referrer, 'sf_guided_tour' ) !== false ) {
 						echo '<h1>' . sprintf( esc_attr__( 'Setup complete %sYour Storefront adventure begins now 🚀%s ', 'storefront' ), '<span>', '</span>' ) . '</h1>';
-						echo '<p>' . esc_attr__( 'One more thing... You might be interested in the following Storefront extensions and designs', 'storefront' ) . '</p>';
+						echo '<p>' . esc_attr__( 'One more thing... You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
 					} else {
-						echo '<p>' . esc_attr__( 'Hello! You might be interested in the following Storefront extensions and designs', 'storefront' ) . '</p>';
+						echo '<p>' . esc_attr__( 'Hello! You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
 					}
 					?>
 				</div>
