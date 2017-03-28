@@ -28,7 +28,8 @@
 .infinite-scroll .woocommerce-pagination,
 .infinite-scroll ul.products + .storefront-sorting,
 .infinite-scroll .woocommerce-result-count,
-.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+.infinite-scroll.neverending .site-footer,
+.infinite-scroll .storefront-sorting { /* Theme Footer (when set to scrolling) */
 	display: none;
 }
 
