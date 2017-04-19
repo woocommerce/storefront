@@ -336,7 +336,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					border-radius: 3px !important;
 					font-family: "Source Sans Pro", "Open Sans", sans-serif !important;
 					-webkit-font-smoothing: antialiased;
-					background-color: <?php echo storefront_adjust_color_brightness( $background_color, -7 ); ?> !important;
+					background-color: <?php echo esc_html( storefront_adjust_color_brightness( $background_color, -7 ) ); ?> !important;
 				}
 
 				.wp-embed .wp-embed-featured-image {
