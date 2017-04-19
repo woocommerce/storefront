@@ -29,6 +29,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
 			add_action( 'customize_preview_init',               array( $this, 'add_product_tax' ), 10 );
 			add_action( 'after_setup_theme',                    array( $this, 'remove_default_widgets' ) );
+			add_action( 'transition_post_status',               array( $this, 'transition_post_status' ), 10, 3 );
+			add_filter( 'the_title',                            array( $this, 'filter_auto_draft_title' ) , 10, 2 );
 		}
 
 		/**
@@ -481,6 +483,60 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			return $args;
+		}
+
+		/**
+		 * WooCommerce 3.0.0 changes the title of all auto-draft products to "AUTO-DRAFT".
+		 * Here we change the title back when the post status changes.
+		 *
+		 * @since 2.2.0
+		 * @param string $new_status
+		 * @param string $old_status
+		 * @param object $post
+		 */
+		public function transition_post_status( $new_status, $old_status, $post ) {
+			if ( 'publish' === $new_status && 'auto-draft' === $old_status && in_array( $post->post_type, array( 'product' ) ) ) {
+				$post_name = get_post_meta( $post->ID, '_customize_draft_post_name', true );
+
+				$starter_products = $this->_starter_content_products();
+
+				if ( $post_name && array_key_exists( $post_name, $starter_products ) ) {
+					$update_product = array(
+						'ID'         => $post->ID,
+						'post_title' => $starter_products[ $post_name ]['post_title']
+					);
+
+					wp_update_post( $update_product );	
+				}
+			}
+		}
+
+		/**
+		 * WooCommerce 3.0.0 changes the title of all auto-draft products to "AUTO-DRAFT".
+		 * Here we filter the title and display the correct one instead.
+		 *
+		 * @since 2.2.0
+		 * @param string $title
+		 * @param int $post_id
+		 */
+		public function filter_auto_draft_title( $title, $post_id = null ) {
+			if ( ! $post_id ) {
+				return $title;
+			}
+
+			$post = get_post( $post_id );
+
+			if ( $post && 'auto-draft' === $post->post_status && in_array( $post->post_type, array( 'product' ) ) && 'AUTO-DRAFT' === $post->post_title ) {
+				$post_name = get_post_meta( $post->ID, '_customize_draft_post_name', true );
+
+				$starter_products = $this->_starter_content_products();
+
+				if ( $post_name && array_key_exists( $post_name, $starter_products ) ) {
+					return $starter_products[ $post_name ]['post_title'];
+				}	
+			}
+
+			return $title;
 		}
 
 		/**
