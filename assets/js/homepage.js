@@ -7,6 +7,11 @@
 
 	var homepageContent = '.page-template-template-homepage .type-page.has-post-thumbnail';
 
+	if ( ! jQuery( homepageContent ).length ) {
+		// Only apply layout to the homepage content component if it exists on the page
+		return;
+	}
+
 	/**
 	 * Set the hero component dimensions and positioning
 	 */
