@@ -28,6 +28,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'woocommerce_product_query',            array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
 			add_action( 'customize_preview_init',               array( $this, 'add_product_tax' ), 10 );
+			add_action( 'customize_preview_init',               array( $this, 'set_product_data' ), 10 );
 			add_action( 'after_setup_theme',                    array( $this, 'remove_default_widgets' ) );
 			add_action( 'transition_post_status',               array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title',                            array( $this, 'filter_auto_draft_title' ) , 10, 2 );
@@ -285,15 +286,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				}
 			}
 
-			// Add custom fields to products.
-			$starter_products = $this->_starter_content_products();
-
-			foreach ( $content['posts'] as $post_id => $post ) {
-				if ( array_key_exists( $post_id, $starter_products ) && array_key_exists( 'meta_input', $starter_products[ $post_id ] ) ) {
-					$content['posts'][ $post_id ]['meta_input'] = $starter_products[ $post_id ]['meta_input'];
-				}
-			}
-
 			return $content;
 		}
 
@@ -463,6 +455,80 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		}
 
 		/**
+		 * Add product data to starter products.
+		 *
+		 * @since 2.2.0
+		 * @return void
+		 */
+		public function set_product_data() {
+			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
+				return;
+			}
+
+			global $wp_customize;
+
+			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
+
+			$created_products = $data->value();
+
+			if ( empty( $created_products ) ) {
+				return;
+			}
+
+			$starter_products = $this->_starter_content_products();
+
+			if ( is_array( $created_products ) ) {
+				foreach ( $created_products as $product ) {
+					$product = wc_get_product( $product );
+
+					if ( ! $product ) {
+						continue;
+					}
+
+					$post_name = get_post_meta( $product->get_id(), '_customize_draft_post_name', true );
+
+					if ( ! $post_name || ! array_key_exists( $post_name, $starter_products ) ) {
+						continue;
+					}
+
+					if ( ! array_key_exists( 'product_data', $starter_products[ $post_name ] ) ) {
+						continue;
+					}					
+
+					$product_data = $starter_products[ $post_name ]['product_data'];
+
+					// Set visibility
+					$product->set_catalog_visibility( 'visible' );
+
+					// Set regular price
+					if ( ! empty( $product_data['regular_price'] ) ) { 
+						$product->set_regular_price( floatval( $product_data['regular_price'] ) );
+					}
+
+					// Set price
+					if ( ! empty( $product_data['price'] ) ) { 
+						$product->set_price( floatval( $product_data['price'] ) );
+					}
+
+					// Set sale price
+					if ( ! empty( $product_data['sale_price'] ) ) { 
+						$product->set_sale_price( floatval( $product_data['sale_price'] ) );
+					}
+
+					// Set featured
+					if ( ! empty( $product_data['featured'] ) ) {
+						$product->set_featured( true );
+					} else {
+						$product->set_featured( false );						
+					}
+
+					// Save
+					$product->save();
+				}	
+			}
+		}
+
+		/**
 		 * Filter Storefront Product Categories shortcode.
 		 *
 		 * @since 2.2.0
@@ -562,12 +628,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{beanie-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '20',
-						'_price'             => '18',
-						'_sale_price'        => '18',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '20',
+						'price'         => '18',
+						'sale_price'    => '18',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -586,12 +651,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{belt-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '65',
-						'_price'             => '55',
-						'_sale_price'        => '55',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '65',
+						'price'         => '55',
+						'sale_price'    => '55',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -609,12 +673,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{cap-image}}',
-					'meta_input'   => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '18',
-						'_price'             => '16',
-						'_sale_price'        => '16',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '18',
+						'price'         => '16',
+						'sale_price'    => '16',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -632,11 +695,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{sunglasses-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '90',
-						'_price'             => '90',
-						'_featured'          => 'yes',
+					'product_data'   => array(
+						'regular_price' => '90',
+						'price'         => '90',
+						'featured'      => true,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -654,11 +716,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{hoodie-with-logo-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '45',
-						'_price'             => '45',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '45',
+						'price'         => '45',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -676,12 +737,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{hoodie-with-pocket-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '45',
-						'_price'             => '35',
-						'_sale_price'        => '35',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '45',
+						'price'         => '35',
+						'sale_price'    => '35',
+						'featured'      => true,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -699,11 +759,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{hoodie-with-zipper-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '45',
-						'_price'             => '45',
-						'_featured'          => 'yes',
+					'product_data'   => array(
+						'regular_price' => '45',
+						'price'         => '45',
+						'featured'      => true,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -716,17 +775,16 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 				'hoodie' => array(
-					'post_title'   => esc_attr__( 'Hoodie', 'storefront' ),
+					'post_title'     => esc_attr__( 'Hoodie', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{hoodie-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '45',
-						'_price'             => '42',
-						'_sale_price'        => '42',
-						'_featured'          => 'yes',
+					'product_data'   => array(
+						'regular_price' => '45',
+						'price'         => '42',
+						'sale_price'    => '42',
+						'featured'      => true,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -744,11 +802,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{long-sleeve-tee-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '25',
-						'_price'             => '25',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '25',
+						'price'         => '25',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -766,11 +823,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{polo-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '20',
-						'_price'             => '20',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '20',
+						'price'         => '20',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -788,11 +844,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{tshirt-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '18',
-						'_price'             => '18',
-						'_featured'          => 'no',
+					'product_data'   => array(
+						'regular_price' => '18',
+						'price'         => '18',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
@@ -810,11 +865,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_type'      => 'product',
 					'comment_status' => 'open',
 					'thumbnail'      => '{{vneck-tee-image}}',
-					'meta_input'     => array(
-						'_visibility'        => 'visible',
-						'_regular_price'     => '18',
-						'_price'             => '18',
-						'_featured'          => 'yes',
+					'product_data'   => array(
+						'regular_price' => '18',
+						'price'         => '18',
+						'featured'      => false,
 					),
 					'taxonomy' => array(
 						'product_cat' => array(
