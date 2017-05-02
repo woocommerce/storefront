@@ -376,6 +376,10 @@ ul.products {
 		.woocommerce-product-gallery {
 			position: relative;
 
+			.zoomImg {
+				background-color: #fff;
+			}
+
 			.woocommerce-product-gallery__trigger {
 				position: absolute;
 				top: ms(-1);
