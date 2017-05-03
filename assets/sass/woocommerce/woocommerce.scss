@@ -1221,6 +1221,13 @@ form.checkout {
 		}
 	}
 
+	.woocommerce-terms-and-conditions {
+		padding: ms(1);
+		box-shadow: inset 0 1px 3px rgba(#000,.2);
+		margin-bottom: 16px;
+		background-color: rgba(#000,.05);
+	}
+
 	.place-order {
 		padding: ms(2);
 		margin-bottom: 0;
