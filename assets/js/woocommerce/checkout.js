@@ -23,11 +23,15 @@ jQuery( window ).load( function() {
 		var	paymentOffset         = addressWidth + gutter;
 		var checkoutPosition      = jQuery( '#order_review_heading' ).offset();
 		var currentPaymentBox     = jQuery( '.wc_payment_method input:checked' ).siblings( '.payment_box' ).outerHeight();
-		var paymentExpandedHeight = paymentHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
+		var termsHeight           = 0; // If terms aren't being displayed don't include their height in calculations
+		if ( jQuery( '.wc-terms-and-conditions' ).length ) {
+			var termsHeight       = 200; // This is static and set by WooCommerce core
+		}
+		var expandedHeight        = paymentHeight + termsHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
 		var customerDetailsHeight = jQuery( '#customer_details' ).outerHeight();
 
 		// If we're in desktop orientation and the order review column is taller than the customer details column and smaller than the window height
-		if ( ( jQuery( window ).width() > 768 ) && ( customerDetailsHeight > paymentExpandedHeight ) && ( windowHeight > paymentExpandedHeight ) ) {
+		if ( ( jQuery( window ).width() > 768 ) && ( customerDetailsHeight > expandedHeight ) && ( windowHeight > expandedHeight ) ) {
 
 				if ( topDistance > checkoutPosition.top ) {
 					jQuery( '#order_review' ).addClass( 'payment-fixed' );
