@@ -49,7 +49,6 @@ if ( is_admin() ) {
 	require 'inc/admin/class-storefront-plugin-install.php';
 }
 
-
 /**
  * NUX
  * Only load if wp version is 4.7.3 or above because of this issue;
@@ -57,8 +56,11 @@ if ( is_admin() ) {
  */
 if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin() || is_customize_preview() ) ) {
 	require 'inc/nux/class-storefront-nux-admin.php';
-	require 'inc/nux/class-storefront-nux-starter-content.php';
 	require 'inc/nux/class-storefront-nux-guided-tour.php';
+
+	if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.0.0', '>=' ) ) {
+		require 'inc/nux/class-storefront-nux-starter-content.php';
+	}
 }
 
 /**
