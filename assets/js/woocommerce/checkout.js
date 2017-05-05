@@ -25,7 +25,7 @@ jQuery( window ).load( function() {
 		var currentPaymentBox     = jQuery( '.wc_payment_method input:checked' ).siblings( '.payment_box' ).outerHeight();
 		var termsHeight           = 0; // If terms aren't being displayed don't include their height in calculations
 		if ( jQuery( '.wc-terms-and-conditions' ).length ) {
-			var termsHeight       = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
+			termsHeight           = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
 		}
 		var expandedHeight        = paymentHeight + termsHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
 		var customerDetailsHeight = jQuery( '#customer_details' ).outerHeight();
