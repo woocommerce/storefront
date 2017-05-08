@@ -112,13 +112,13 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 
 			$steps[] = array(
 				'title'   => __( 'Choose your accent color', 'storefront' ),
-				'message' => __( 'In the typography panel you can specify an accent color which will be applied to things like links and star ratings. We recommend using your brand color for this setting.' ),
+				'message' => __( 'In the typography panel you can specify an accent color which will be applied to things like links and star ratings. We recommend using your brand color for this setting.', 'storefront' ),
 				'section' => 'storefront_typography',
 			);
 
 			$steps[] = array(
 				'title'   => __( 'Color your buttons', 'storefront' ),
-				'message' => __( 'Choose colors for your button backgrounds and text. Once again, brand colors are good choices here.' ),
+				'message' => __( 'Choose colors for your button backgrounds and text. Once again, brand colors are good choices here.', 'storefront' ),
 				'section' => 'storefront_buttons',
 			);
 

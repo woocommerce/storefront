@@ -64,13 +64,13 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 					'about' => array(
 						'post_type' => 'page',
-						'post_title' => _x( 'About', 'Storefront' ),
-						'post_content' => _x( 'You might be an artist who would like to introduce yourself and your work here or maybe you&rsquo;re a business with a mission to describe.', 'Storefront' ),
+						'post_title' => __( 'About', 'storefront' ),
+						'post_content' => __( 'You might be an artist who would like to introduce yourself and your work here or maybe you&rsquo;re a business with a mission to describe.', 'storefront' ),
 					),
 					'contact' => array(
 						'post_type' => 'page',
-						'post_title' => _x( 'Contact', 'Storefront' ),
-						'post_content' => _x( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'Storefront' ),
+						'post_title' => __( 'Contact', 'storefront' ),
+						'post_content' => __( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'storefront' ),
 					),
 					'blog'
 				),
@@ -493,7 +493,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 					if ( ! array_key_exists( 'product_data', $starter_products[ $post_name ] ) ) {
 						continue;
-					}					
+					}
 
 					$product_data = $starter_products[ $post_name ]['product_data'];
 
@@ -501,17 +501,17 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					$product->set_catalog_visibility( 'visible' );
 
 					// Set regular price
-					if ( ! empty( $product_data['regular_price'] ) ) { 
+					if ( ! empty( $product_data['regular_price'] ) ) {
 						$product->set_regular_price( floatval( $product_data['regular_price'] ) );
 					}
 
 					// Set price
-					if ( ! empty( $product_data['price'] ) ) { 
+					if ( ! empty( $product_data['price'] ) ) {
 						$product->set_price( floatval( $product_data['price'] ) );
 					}
 
 					// Set sale price
-					if ( ! empty( $product_data['sale_price'] ) ) { 
+					if ( ! empty( $product_data['sale_price'] ) ) {
 						$product->set_sale_price( floatval( $product_data['sale_price'] ) );
 					}
 
@@ -519,12 +519,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					if ( ! empty( $product_data['featured'] ) ) {
 						$product->set_featured( true );
 					} else {
-						$product->set_featured( false );						
+						$product->set_featured( false );
 					}
 
 					// Save
 					$product->save();
-				}	
+				}
 			}
 		}
 
@@ -572,7 +572,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'post_title' => $starter_products[ $post_name ]['post_title']
 					);
 
-					wp_update_post( $update_product );	
+					wp_update_post( $update_product );
 				}
 			}
 		}
@@ -599,7 +599,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 				if ( $post_name && array_key_exists( $post_name, $starter_products ) ) {
 					return $starter_products[ $post_name ]['post_title'];
-				}	
+				}
 			}
 
 			return $title;
