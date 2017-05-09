@@ -84,7 +84,7 @@ input[type="submit"],
 		&:after {
 			@include fa-icon();
 			content: "\f110";
-			@include animation(fa-spin .75s linear infinite);
+			animation: fa-spin .75s linear infinite;
 			height: 20px;
 			width: 20px;
 			line-height: 20px;
@@ -442,7 +442,7 @@ a.remove {
 	&:before {
 		@include fa-icon();
 		content: "\f110";
-		@include animation(fa-spin .75s linear infinite);
+		animation: fa-spin .75s linear infinite;
 		height: 30px;
 		width: 30px;
 		line-height: 30px;
@@ -471,7 +471,7 @@ a.remove {
 			left: 50%;
 			width: 1em;
 			height: 1em;
-			@include transform(translateX(-50%) translateY(-50%));
+			transform: translateX(-50%) translateY(-50%);
 			line-height: 1;
 		}
 	}
@@ -501,7 +501,7 @@ a.remove {
 			left: 50%;
 			width: 1em;
 			height: 1em;
-			@include transform(translateX(-50%) translateY(-50%));
+			transform: translateX(-50%) translateY(-50%);
 			text-align: center;
 			opacity: .25;
 		}
@@ -516,7 +516,7 @@ a.remove {
 					@include fa-icon();
 					content: "\f10c";
 					margin-right: ms(-3);
-					@include transition(color, ease, .2s);
+					transition: color, ease, .2s;
 				}
 			}
 		}
@@ -666,7 +666,7 @@ p.order-again {
 				right: -1em;
 				transform: translateY(-50%);
 				opacity: 0;
-				@include transition(all,ease,.3s);
+				transition: all,ease,.3s;
 			}
 
 			&.active {

@@ -137,7 +137,7 @@
 					bottom: -2em;
 					left: 0;
 					right: 0;
-					@include transition(all,ease,.2s);
+					transition: all,ease,.2s;
 					padding: 1em;
 					z-index: 1;
 					display: block;
@@ -412,7 +412,7 @@ ul.products {
 
 					img {
 						opacity: .5;
-						@include transition( all, ease, .2s );
+						transition: all, ease, .2s;
 
 						&.flex-active {
 							opacity: 1;
@@ -1345,7 +1345,7 @@ ul.order_details {
 	&:after {
 		top: auto;
 		bottom: -16px;
-		@include transform(rotate(180deg));
+		transform: rotate(180deg);
 	}
 
 	li {
@@ -2466,7 +2466,7 @@ dl.variation {
 			position: absolute;
 			top: 50%;
 			right: 0;
-			@include transform(translateY(-50%));
+			transform: translateY(-50%);
 			margin-right: 0;
 		}
 	}

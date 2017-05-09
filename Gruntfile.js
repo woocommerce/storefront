@@ -4,6 +4,33 @@ module.exports = function( grunt ) {
 
 	grunt.initConfig({
 
+		// Autoprefixer.
+		postcss: {
+			options: {
+				processors: [
+					require( 'autoprefixer' )({
+						browsers: [
+							'> 0.1%',
+							'ie 8',
+							'ie 9'
+						]
+					})
+				]
+			},
+			dist: {
+				src: [
+					'style.css',
+					'assets/sass/admin/*.css',
+					'assets/sass/admin/welcome-screen/welcome.css',
+					'assets/sass/admin/customizer/customizer.css',
+					'assets/sass/woocommerce/extensions/*.css',
+					'assets/sass/woocommerce/woocommerce.css',
+					'assets/sass/jetpack/jetpack.css',
+					'assets/sass/base/*.css'
+				]
+			}
+		},
+
 		// JavaScript linting with JSHint.
 		jshint: {
 			options: {
@@ -329,6 +356,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-checktextdomain' );
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
+	grunt.loadNpmTasks( 'grunt-postcss' );
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -339,6 +367,7 @@ module.exports = function( grunt ) {
 
 	grunt.registerTask( 'css', [
 		'sass',
+		'postcss',
 		'cssmin',
 		'rtlcss'
 	]);

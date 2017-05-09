@@ -420,7 +420,7 @@ body {
 		.entry-content,
 		.entry-title {
 			opacity: 0;
-			@include transition(all,ease,.5s);
+			transition: all,ease,.5s;
 
 			&.loaded {
 				opacity: 1;
@@ -722,10 +722,10 @@ table {
 		line-height: 1;
 		font-size: ms(2);
 		text-align: center;
-		@include transition(transform,ease,.3s);
+		transition: transform,ease,.3s;
 
 		&:hover {
-			@include transform(scale(1.3));
+			transform: scale(1.3);
 		}
 	}
 }
@@ -1116,7 +1116,7 @@ button.menu-toggle {
 	}
 
 	span:before {
-		@include transition(all,ease,.2s);
+		transition: all,ease,.2s;
 	}
 
 	&:before,
@@ -1130,16 +1130,16 @@ button.menu-toggle {
 		top: 50%;
 		left: 1em;
 		margin-top: -1px;
-		@include transition(all,ease,.2s);
+		transition: all,ease,.2s;
 		border-radius: 3px;
 	}
 
 	&:before {
-		@include transform(translateY(-4px));
+		transform: translateY(-4px);
 	}
 
 	&:after {
-		@include transform(translateY(4px));
+		transform: translateY(4px);
 	}
 }
 
@@ -1147,12 +1147,12 @@ button.menu-toggle {
 	button.menu-toggle {
 		&:before,
 		&:after {
-			@include transform(translateY(0));
-			@include transform(rotate(45deg));
+			transform: translateY(0);
+			transform: rotate(45deg);
 		}
 
 		&:after {
-			@include transform(rotate(-45deg));
+			transform: rotate(-45deg);
 		}
 
 		span:before {
@@ -1186,7 +1186,7 @@ button.menu-toggle {
 .main-navigation div.menu > ul:not(.nav-menu) {
 	overflow: hidden;
 	max-height: 0; /* We have to use max-height because `height` isn't animatable */
-	@include transition(all,ease,.8s);
+	transition: all,ease,.8s;
 }
 
 .handheld-navigation {
@@ -1240,7 +1240,7 @@ button.menu-toggle {
 	.nav-next {
 		a {
 			display: inline-block;
-			@include transition(all,ease,.3s);
+			transition: all,ease,.3s;
 			padding: ms(-2) 1em;
 			border-radius: 3px;
 		}
@@ -1252,7 +1252,7 @@ button.menu-toggle {
 
 		a {
 			&:hover {
-				@include transform(translate(-1em));
+				transform: translate(-1em);
 			}
 		}
 	}
@@ -1264,7 +1264,7 @@ button.menu-toggle {
 
 		a {
 			&:hover {
-				@include transform(translate(1em));
+				transform: translate(1em);
 			}
 		}
 	}
