@@ -2147,6 +2147,10 @@ dl.variation {
 							&:nth-child(2n) {
 								margin-right: 0;
 							}
+
+							&:nth-child(2n+1) {
+								clear: both;
+							}
 						}
 					}
 				}
@@ -2158,6 +2162,10 @@ dl.variation {
 
 							&:nth-child(3n) {
 								margin-right: 0;
+							}
+
+							&:nth-child(3n+1) {
+								clear: both;
 							}
 						}
 					}
@@ -2171,6 +2179,10 @@ dl.variation {
 							&:nth-child(4n) {
 								margin-right: 0;
 							}
+
+							&:nth-child(4n+1) {
+								clear: both;
+							}
 						}
 					}
 				}
@@ -2182,6 +2194,10 @@ dl.variation {
 
 							&:nth-child(5n) {
 								margin-right: 0;
+							}
+
+							&:nth-child(5n+1) {
+								clear: both;
 							}
 						}
 					}
