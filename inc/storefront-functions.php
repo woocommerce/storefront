@@ -88,16 +88,19 @@ function storefront_get_content_background_color() {
  */
 function storefront_header_styles() {
 	$is_header_image = get_header_image();
+	$header_bg_image = '';
 
 	if ( $is_header_image ) {
 		$header_bg_image = 'url(' . esc_url( $is_header_image ) . ')';
-	} else {
-		$header_bg_image = 'none';
 	}
 
-	$styles = apply_filters( 'storefront_header_styles', array(
-		'background-image' => $header_bg_image,
-	) );
+	$styles = array();
+
+	if ( '' !== $header_bg_image ) {
+		$styles['background-image'] = $header_bg_image;
+	}
+
+	$styles = apply_filters( 'storefront_header_styles', $styles );
 
 	foreach ( $styles as $style => $value ) {
 		echo esc_attr( $style . ': ' . $value . '; ' );
@@ -111,17 +114,20 @@ function storefront_header_styles() {
  * @since  2.2.0
  */
 function storefront_homepage_content_styles() {
-	$featured_image = get_the_post_thumbnail_url( get_the_ID() );
+	$featured_image   = get_the_post_thumbnail_url( get_the_ID() );
+	$background_image = '';
 
 	if ( $featured_image ) {
 		$background_image = 'url(' . esc_url( $featured_image ) . ')';
-	} else {
-		$background_image = 'none';
 	}
 
-	$styles = apply_filters( 'storefront_homepage_content_styles', array(
-		'background-image' => $background_image,
-	) );
+	$styles = array();
+
+	if ( '' !== $background_image ) {
+		$styles['background-image'] = $background_image;
+	}	
+
+	$styles = apply_filters( 'storefront_homepage_content_styles', $styles );
 
 	foreach ( $styles as $style => $value ) {
 		echo esc_attr( $style . ': ' . $value . '; ' );
