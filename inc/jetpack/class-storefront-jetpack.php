@@ -27,6 +27,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 			add_action( 'after_setup_theme', 	      array( $this, 'jetpack_setup' ) );
 			add_action( 'wp_enqueue_scripts', 	      array( $this, 'jetpack_scripts' ), 10 );
 			add_filter( 'infinite_scroll_query_args', array( $this, 'fix_duplicate_products' ), 100 );
+			add_action( 'init',                       array( $this, 'jetpack_infinite_scroll_wrapper_columns' ) );
 		}
 
 		/**
@@ -50,7 +51,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		}
 
 		/**
-		 * A loop used to display content appended using Jetpack inifinte scroll
+		 * A loop used to display content appended using Jetpack infinite scroll
 		 * @return void
 		 */
 		public function jetpack_infinite_scroll_loop() {
@@ -75,6 +76,15 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 			}
 
 			do_action( 'storefront_jetpack_infinite_scroll_after' );
+		}
+
+		/**
+		 * Adds columns wrapper to content appended by Jetpack infinite scroll
+		 * @return void
+		 */
+		public function jetpack_infinite_scroll_wrapper_columns() {
+			add_action( 'storefront_jetpack_product_infinite_scroll_before', 'storefront_product_columns_wrapper' );
+			add_action( 'storefront_jetpack_product_infinite_scroll_after', 'storefront_product_columns_wrapper_close' );
 		}
 
 		/**
