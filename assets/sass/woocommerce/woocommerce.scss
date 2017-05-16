@@ -2158,7 +2158,7 @@ dl.variation {
 				&.woocommerce-product-gallery--columns-2 {
 					.flex-control-thumbs {
 						li {
-							@include span( 2.5 of 4 );
+							@include span( 2.5 of 5 );
 
 							&:nth-child(2n) {
 								margin-right: 0;
@@ -2170,7 +2170,7 @@ dl.variation {
 				&.woocommerce-product-gallery--columns-3 {
 					.flex-control-thumbs {
 						li {
-							@include span( 1.666666667 of 4 );
+							@include span( 1.666666667 of 5 );
 
 							&:nth-child(3n) {
 								margin-right: 0;
