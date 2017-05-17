@@ -145,25 +145,23 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 							</li>
 						</ul>
 					</div>
-					<div class="storefront-enhance__column storefront-powerpack">
-						<h3>
-							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront-powerpack.png" alt="Storefront Powerpack" />
-							<?php esc_attr_e( 'Storefront Powerpack', 'storefront' ); ?>
-						</h3>
+					<div class="storefront-enhance__column storefront-bundle">
+						<h3><?php esc_attr_e( 'Storefront Extensions Bundle', 'storefront' ); ?></h3>
+						<span class="bundle-image">
+							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront-bundle-hero.png" alt="Storefront Extensions Hero" />
+						</span>
+
 						<p>
-							<?php esc_attr_e( 'Powerpack adds a variety of comprehensive customisation features to Storefront.', 'storefront' ); ?>
+							<?php esc_attr_e( 'All the tools you\'ll need to define your style and customize Storefront.', 'storefront' ); ?>
 						</p>
 
 						<p>
-							<?php esc_attr_e( 'Create your own header layout, precisely control the style of individual components and customise layouts for product &amp; checkout pages.', 'storefront' ); ?>
+							<?php esc_attr_e( 'Make it yours without touching code with the Storefront Extensions bundle. Express yourself, optimize conversions, delight customers.', 'storefront' ); ?>
 						</p>
 
-						<p>
-							<?php esc_attr_e( 'All without touching a line of code.', 'storefront' ); ?>
-						</p>
 
 						<p>
-							<a href="https://woocommerce.com/products/storefront-powerpack/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_attr_e( 'Read more and purchase', 'storefront' ); ?></a>
+							<a href="https://woocommerce.com/products/storefront-extensions-bundle/?utm_source=product&utm_medium=upsell&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_attr_e( 'Read more and purchase', 'storefront' ); ?></a>
 						</p>
 					</div>
 					<div class="storefront-enhance__column storefront-child-themes">

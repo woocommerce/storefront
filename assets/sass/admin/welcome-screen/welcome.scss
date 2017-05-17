@@ -121,6 +121,12 @@ $green: #45B964;
 				padding: 1em 1.5em;
 				margin: 0;
 			}
+
+			img {
+				width: 100%;
+				height: auto;
+				margin-bottom: 1.5em;
+			}
 		}
 
 		.storefront-free-plugins {
@@ -139,8 +145,8 @@ $green: #45B964;
 			}
 
 			.storefront-free-plugins__wrap {
-				min-height: 405px;
-				max-height: 405px;
+				min-height: 390px;
+				max-height: 390px;
 				overflow: scroll;
 				margin: 0;
 
@@ -165,23 +171,9 @@ $green: #45B964;
 			}
 		}
 
-		.storefront-powerpack {
-			order: 2;
+		.storefront-bundle,
+		.storefront-child-themes {
 			padding-bottom: .5em;
-
-			h3 {
-				background: #F3F5F7;
-				text-align: center;
-				color: #2E4453;
-				font-weight: 700;
-				padding-top: 1.5em;
-				margin-bottom: 1.5em;
-
-				img {
-					display: block;
-					margin: 0 auto 1em;
-				}
-			}
 
 			p {
 				padding: 0 1.5em;
@@ -189,20 +181,24 @@ $green: #45B964;
 			}
 		}
 
+		.storefront-bundle {
+			order: 2;
+
+			.bundle-image {
+				display: block;
+				background: #f7f7f7;
+				margin-bottom: 1.5em;
+
+				img {
+					display: block;
+					max-width: 75%;
+					margin: 0 auto;
+				}
+			}
+		}
+
 		.storefront-child-themes {
 			order: 3;
-			padding-bottom: .5em;
-
-			img {
-				width: 100%;
-				height: auto;
-				margin-bottom: 1em;
-			}
-
-			p {
-				padding: 0 1.5em;
-				margin: 0 0 1em;
-			}
 		}
 	}
 
