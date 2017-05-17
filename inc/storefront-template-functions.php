@@ -571,7 +571,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 			 */
 			if ( false !== strpos( $shortcode_content, 'product-category' ) ) {
 
-				echo '<section class="storefront-product-section storefront-product-categories" aria-label="Product Categories">';
+				echo '<section class="storefront-product-section storefront-product-categories" aria-label="' . esc_attr__( 'Product Categories', 'storefront' ) . '">';
 
 				do_action( 'storefront_homepage_before_product_categories' );
 
@@ -619,7 +619,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 			 */
 			if ( false !== strpos( $shortcode_content, 'product' ) ) {
 
-				echo '<section class="storefront-product-section storefront-recent-products" aria-label="Recent Products">';
+				echo '<section class="storefront-product-section storefront-recent-products" aria-label="' . esc_attr__( 'Recent Products', 'storefront' ) . '">';
 
 				do_action( 'storefront_homepage_before_recent_products' );
 
@@ -671,7 +671,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 			 */
 			if ( false !== strpos( $shortcode_content, 'product' ) ) {
 
-				echo '<section class="storefront-product-section storefront-featured-products" aria-label="Featured Products">';
+				echo '<section class="storefront-product-section storefront-featured-products" aria-label="' . esc_attr__( 'Featured Products', 'storefront' ) . '">';
 
 				do_action( 'storefront_homepage_before_featured_products' );
 
@@ -719,7 +719,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 			 */
 			if ( false !== strpos( $shortcode_content, 'product' ) ) {
 
-				echo '<section class="storefront-product-section storefront-popular-products" aria-label="Popular Products">';
+				echo '<section class="storefront-product-section storefront-popular-products" aria-label="' . esc_attr__( 'Popular Products', 'storefront' ) . '">';
 
 				do_action( 'storefront_homepage_before_popular_products' );
 
@@ -767,7 +767,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 			 */
 			if ( false !== strpos( $shortcode_content, 'product' ) ) {
 
-				echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="On Sale Products">';
+				echo '<section class="storefront-product-section storefront-on-sale-products" aria-label="' . esc_attr__( 'On Sale Products', 'storefront' ) . '">';
 
 				do_action( 'storefront_homepage_before_on_sale_products' );
 
@@ -814,7 +814,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 			 */
 			if ( false !== strpos( $shortcode_content, 'product' ) ) {
 
-				echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="Best Selling Products">';
+				echo '<section class="storefront-product-section storefront-best-selling-products" aria-label="' . esc_attr__( 'Best Selling Products', 'storefront' ) . '">';
 
 				do_action( 'storefront_homepage_before_best_selling_products' );
 
