@@ -1,6 +1,6 @@
 # Storefront Changelog
 
-### *2017.xx.xx* - 2.2.0
+### *2017.05.22* - 2.2.0
 * **New** - Adding a featured image to the homepage template will now create a 'hero' component.
 * **New** - Improved new user experience; WooCommerce installation prompted and added starter content to set up the homepage template, menus, widgets and add some demo products.
 * **New** - Guided tour in the Customizer.
@@ -16,7 +16,13 @@
 * **Dev** - Updated FontAwesome to 4.7.0
 * **Dev** - Upsells columns filterable via `storefront_upsells_columns`.
 * **Dev** - Added a column wrapper to product loops. To adjust the layout you now only need to filter `storefront_loop_columns`.
-* **Dev** homepage product sections only display if products are returned
+* **Dev** - Homepage product sections only display if products are returned.
+* **Tweak** - Escape background content color before output. Kudos [@pdewouters](https://github.com/pdewouters).
+* **Dev** - Updated package versions. You'll need to `npm install` next time you try to build.
+* **Dev** - Adds `grunt-postcss` + `autoprefixer` to the build process to reduce reliance on [Bourbon](http://bourbon.io/).
+* **Tweak** - Doctype in lowercase. Kudos [@B-07](https://github.com/B-07).
+* **Fix** - Only output `background-image` styles for the header and homepage content sections if an image exists.
+* **Fix** - Translatable aria labels in the homepage sections. Kudos [@andreaskian](https://github.com/andreaskian).
 
 ### *2017.02.17* - 2.1.8
 * **Tweak** - [WooCommerce 2.7] - Declare support for the new gallery.
