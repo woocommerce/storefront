@@ -1,17 +1,17 @@
-# Copyright (C) 2017 WooThemes
-# This file is distributed under the GNU General Public License v2 or later.
+# <!=Copyright (C) 2017 WooThemes
+# This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 2.2.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2017-05-08 13:25:07+00:00\n"
+"POT-Creation-Date: 2017-05-18 16:34:55+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"X-Generator: grunt-wp-i18n 0.5.3\n"
+"X-Generator: grunt-wp-i18n1.0.0\n"
 
 #: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
@@ -23,11 +23,11 @@ msgid ""
 "below."
 msgstr ""
 
-#: 404.php:47
+#: 404.php:47 inc/storefront-template-functions.php:574
 msgid "Product Categories"
 msgstr ""
 
-#: 404.php:58
+#: 404.php:58 inc/storefront-template-functions.php:722
 msgid "Popular Products"
 msgstr ""
 
@@ -139,72 +139,66 @@ msgid ""
 "they scroll down the page."
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:151
-msgid "Storefront Powerpack"
+#: inc/admin/class-storefront-admin.php:149
+msgid "Storefront Extensions Bundle"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:154
+#: inc/admin/class-storefront-admin.php:155
+msgid "All the tools you'll need to define your style and customize Storefront."
+msgstr ""
+
+#: inc/admin/class-storefront-admin.php:159
 msgid ""
-"Powerpack adds a variety of comprehensive customisation features to "
-"Storefront."
+"Make it yours without touching code with the Storefront Extensions bundle. "
+"Express yourself, optimize conversions, delight customers."
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:158
-msgid ""
-"Create your own header layout, precisely control the style of individual "
-"components and customise layouts for product &amp; checkout pages."
-msgstr ""
-
-#: inc/admin/class-storefront-admin.php:162
-msgid "All without touching a line of code."
-msgstr ""
-
-#: inc/admin/class-storefront-admin.php:166
+#: inc/admin/class-storefront-admin.php:164
 msgid "Read more and purchase"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:170
+#: inc/admin/class-storefront-admin.php:168
 msgid "Alternate designs"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:174
+#: inc/admin/class-storefront-admin.php:172
 msgid ""
 "Quickly and easily transform your shops appearance with Storefront child "
 "themes."
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:178
+#: inc/admin/class-storefront-admin.php:176
 msgid "Each has been designed to serve a different industry - from fashion to food."
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:182
+#: inc/admin/class-storefront-admin.php:180
 msgid "Of course they are all fully compatible with each Storefront extension."
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:186
+#: inc/admin/class-storefront-admin.php:184
 msgid "Check 'em out"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:193
+#: inc/admin/class-storefront-admin.php:191
 msgid "An %s project"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:223
+#: inc/admin/class-storefront-admin.php:221
 #: inc/admin/class-storefront-plugin-install.php:56
 msgid "Activated"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:232
+#: inc/admin/class-storefront-admin.php:230
 #: inc/admin/class-storefront-plugin-install.php:67
 msgid "Activate"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:245
+#: inc/admin/class-storefront-admin.php:243
 #: inc/admin/class-storefront-plugin-install.php:82
 msgid "Install now"
 msgstr ""
 
-#: inc/admin/class-storefront-admin.php:252
+#: inc/admin/class-storefront-admin.php:250
 #: inc/admin/class-storefront-plugin-install.php:102
 msgid "Learn more"
 msgstr ""
@@ -652,8 +646,17 @@ msgstr ""
 msgid "New In"
 msgstr ""
 
+#: inc/storefront-template-functions.php:622
+msgid "Recent Products"
+msgstr ""
+
 #: inc/storefront-template-functions.php:659
 msgid "We Recommend"
+msgstr ""
+
+#: inc/storefront-template-functions.php:674
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:255
+msgid "Featured Products"
 msgstr ""
 
 #: inc/storefront-template-functions.php:709
@@ -664,8 +667,16 @@ msgstr ""
 msgid "On Sale"
 msgstr ""
 
+#: inc/storefront-template-functions.php:770
+msgid "On Sale Products"
+msgstr ""
+
 #: inc/storefront-template-functions.php:804
 msgid "Best Sellers"
+msgstr ""
+
+#: inc/storefront-template-functions.php:817
+msgid "Best Selling Products"
 msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:74
@@ -678,10 +689,6 @@ msgid "%d item"
 msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
-
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:255
-msgid "Featured Products"
-msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:263
 msgid "On Sale Now"
