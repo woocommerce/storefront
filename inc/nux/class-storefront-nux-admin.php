@@ -181,7 +181,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 					// Make sure the fresh_site flag is set to true.
 					update_option( 'fresh_site', true );
 
-					if ( current_user_can( 'edit_pages' ) ) {
+					if ( current_user_can( 'edit_pages' ) && true === (bool) get_option( 'storefront_nux_fresh_site' ) ) {
 						$this->_set_woocommerce_pages_full_width();
 					}
 				}
