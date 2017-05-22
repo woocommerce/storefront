@@ -152,15 +152,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			check_admin_referer( 'storefront_guided_tour' );
 
 			if ( current_user_can( 'manage_options' ) ) {
-				// Make sure the fresh_site flag is set to true.
-				update_option( 'fresh_site', true );
-
+				
 				// Dismiss notice.
 				update_option( 'storefront_nux_dismissed', true );
-			}
-
-			if ( current_user_can( 'edit_pages' ) ) {
-				$this->_set_woocommerce_pages_full_width();
 			}
 
 			$args = array( 'sf_guided_tour' => '1' );
@@ -181,6 +175,16 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 			if ( ! empty( $tasks ) ) {
 				$args['sf_tasks'] = implode( ',', $tasks );
+
+				if ( current_user_can( 'manage_options' ) ) {
+					
+					// Make sure the fresh_site flag is set to true.
+					update_option( 'fresh_site', true );
+
+					if ( current_user_can( 'edit_pages' ) ) {
+						$this->_set_woocommerce_pages_full_width();
+					}
+				}
 			}
 
 			// Redirect to the Storefront Welcome screen when exiting the Customizer.

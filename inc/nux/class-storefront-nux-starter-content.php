@@ -279,8 +279,16 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 								if ( isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
 									unset( $content['posts'][ $post_id ] );
 								}
+
+								if ( 'about' === $post_id || 'contact' === $post_id ) {
+									unset( $content['posts'][ $post_id ] );
+								}								
 							}
 						}
+
+						unset( $content['attachments'] );
+						unset( $content['nav_menus'] );
+						unset( $content['widgets'] );
 
 						break;
 				}
