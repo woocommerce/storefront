@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.2.1\n"
+"Project-Id-Version: Storefront 2.2.2\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2017-05-22 17:09:28+00:00\n"
+"POT-Creation-Date: 2017-05-22 22:41:08+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -493,69 +493,69 @@ msgid ""
 "phone number. You might also try a plugin to add a contact form."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:602
+#: inc/nux/class-storefront-nux-starter-content.php:610
 msgid "Accessories"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:603
-#: inc/nux/class-storefront-nux-starter-content.php:606
-#: inc/nux/class-storefront-nux-starter-content.php:609
+#: inc/nux/class-storefront-nux-starter-content.php:611
+#: inc/nux/class-storefront-nux-starter-content.php:614
+#: inc/nux/class-storefront-nux-starter-content.php:617
 msgid "A short category description"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:605
+#: inc/nux/class-storefront-nux-starter-content.php:613
 msgid "Hoodies"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:608
+#: inc/nux/class-storefront-nux-starter-content.php:616
 msgid "Tshirts"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:614
+#: inc/nux/class-storefront-nux-starter-content.php:622
 msgid "Beanie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:637
+#: inc/nux/class-storefront-nux-starter-content.php:645
 msgid "Belt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:659
+#: inc/nux/class-storefront-nux-starter-content.php:667
 msgid "Cap"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:681
+#: inc/nux/class-storefront-nux-starter-content.php:689
 msgid "Sunglasses"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:702
+#: inc/nux/class-storefront-nux-starter-content.php:710
 msgid "Hoodie with Logo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:723
+#: inc/nux/class-storefront-nux-starter-content.php:731
 msgid "Hoodie with Pocket"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:745
+#: inc/nux/class-storefront-nux-starter-content.php:753
 msgid "Hoodie with Zipper"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:766
+#: inc/nux/class-storefront-nux-starter-content.php:774
 msgid "Hoodie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:788
+#: inc/nux/class-storefront-nux-starter-content.php:796
 msgid "Long Sleeve Tee"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:809
+#: inc/nux/class-storefront-nux-starter-content.php:817
 msgid "Polo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:830
+#: inc/nux/class-storefront-nux-starter-content.php:838
 msgid "Tshirt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:851
+#: inc/nux/class-storefront-nux-starter-content.php:859
 msgid "Vneck Tshirt"
 msgstr ""
 

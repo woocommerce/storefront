@@ -1,5 +1,9 @@
 # Storefront Changelog
 
+### *2017.05.23* - 2.2.2
+* **Fix** - Prevent starter content widgets and pages from being added to existing sites unwantedly.
+* **Fix** - Only set pages full width if fresh site.
+
 ### *2017.05.22* - 2.2.1
 * **Fix** - Compatibility with PHP versions lower than 5.5.
 
