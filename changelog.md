@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2017.05.22* - 2.2.1
+* **Fix** - Compatibility with PHP versions lower than 5.5.
+
 ### *2017.05.22* - 2.2.0
 * **New** - Adding a featured image to the homepage template will now create a 'hero' component.
 * **New** - Improved new user experience; WooCommerce installation prompted and added starter content to set up the homepage template, menus, widgets and add some demo products.

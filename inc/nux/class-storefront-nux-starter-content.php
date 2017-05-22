@@ -301,8 +301,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return;
 			}
 
-			global $wp_customize;
-
 			$post__in = array();
 
 			// Add existing products.
@@ -313,12 +311,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			// Add starter content.
-			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
+			$created_products = $this->_get_created_starter_content_products();
 
-			if ( ! empty( $data->value() ) ) {
+			if ( false !== $created_products ) {
 
 				// Merge starter content products.
-				$post__in = array_merge( $post__in, (array) $data->value() );
+				$post__in = array_merge( $post__in, $created_products );
 
 				// Allow for multiple status.
 				$query->set( 'post_status', get_post_stati() );
@@ -342,8 +340,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return $query_args;
 			}
 
-			global $wp_customize;
-
 			$query_args['post__in'] = array();
 
 			// Add existing products to query
@@ -354,12 +350,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			// Add starter content to query
-			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
+			$created_products = $this->_get_created_starter_content_products();
 
-			if ( ! empty( $data->value() ) ) {
+			if ( false !== $created_products ) {
 
 				// Add created products to query.
-				$query_args['post__in'] = array_merge( $query_args['post__in'], (array) $data->value() );
+				$query_args['post__in'] = array_merge( $query_args['post__in'], $created_products );
 
 				// Allow for multiple status.
 				$query_args['post_status'] = get_post_stati();
@@ -378,13 +374,9 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return;
 			}
 
-			global $wp_customize;
+			$created_products = $this->_get_created_starter_content_products();
 
-			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
-
-			$created_products = $data->value();
-
-			if ( empty( $created_products ) ) {
+			if ( false === $created_products ) {
 				return;
 			}
 
@@ -465,13 +457,9 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return;
 			}
 
-			global $wp_customize;
+			$created_products = $this->_get_created_starter_content_products();
 
-			$data = $wp_customize->get_setting( 'nav_menus_created_posts' );
-
-			$created_products = $data->value();
-
-			if ( empty( $created_products ) ) {
+			if ( false === $created_products ) {
 				return;
 			}
 
@@ -888,6 +876,25 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			return apply_filters( 'storefront_starter_content_products', $products );
+		}
+
+		/**
+		 * Get a list of posts created by starter content.
+		 *
+		 * @since 2.2.1
+		 * @return  mixed false|rray $query Array of post ids.
+		 */
+		private function _get_created_starter_content_products() {
+			global $wp_customize;
+
+			$data                 = $wp_customize->get_setting( 'nav_menus_created_posts' );			
+			$created_products_ids = $data->value();
+
+			if ( ! empty( $created_products_ids ) ) {
+				return (array) $created_products_ids;
+			}
+
+			return false;
 		}
 
 		/**
