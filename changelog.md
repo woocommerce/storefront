@@ -1,7 +1,7 @@
 # Storefront Changelog
 
 ### *2017.05.23* - 2.2.2
-* **Fix** - Prevent starter content widgets and pages from being added to existing sites unwantedly.
+* **Fix** - Prevent starter content widgets, nav menus and pages from being added to existing sites unwontedly.
 * **Fix** - Only set pages full width if fresh site.
 
 ### *2017.05.22* - 2.2.1
