@@ -1105,6 +1105,11 @@ form.checkout {
 				cursor: pointer;
 			}
 		}
+		
+		> .woocommerce-notice {
+			color: $color_body;
+			padding-bottom: ms(2);
+		}
 
 		li {
 			list-style: none !important;
