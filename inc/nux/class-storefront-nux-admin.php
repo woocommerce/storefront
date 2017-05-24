@@ -27,8 +27,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_action( 'admin_notices',                           array( $this, 'admin_notices' ), 99 );
 			add_action( 'wp_ajax_storefront_dismiss_notice',       array( $this, 'dismiss_nux' ) );
 			add_action( 'admin_post_storefront_guided_tour',       array( $this, 'redirect_customizer' ) );
-			add_action( 'activated_plugin',                        array( $this, 'activated_plugin' ) );
-			add_action( 'after_theme_setup',                       array( $this, 'log_fresh_site_state' ) );
+			add_action( 'init',                                    array( $this, 'log_fresh_site_state' ) );
 			add_filter( 'admin_body_class',                        array( $this, 'admin_body_class' ) );
 		}
 
@@ -227,25 +226,12 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		}
 
 		/**
-		 * Update Storefront fresh site flag after WooCommerce activation.
-		 *
-		 * @since 2.2.0
-		 * @param string $plugin
-		 * @return void
-		 */
-		public function activated_plugin( $plugin ) {
-			if ( 'woocommerce/woocommerce.php' === $plugin ) {
-				$this->log_fresh_site_state();
-			}
-		}
-
-		/**
 		 * Update Storefront fresh site flag.
 		 *
 		 * @since 2.2.0
 		 */
 		public function log_fresh_site_state() {
-			if ( current_user_can( 'manage_options' ) ) {
+			if ( null === get_option( 'storefront_nux_fresh_site', null ) ) {
 				update_option( 'storefront_nux_fresh_site', get_option( 'fresh_site' ) );
 			}
 		}

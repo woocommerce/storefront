@@ -42,7 +42,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return void
 		 */
 		public function remove_default_widgets() {
-			if ( ! get_option( 'storefront_cleared_widgets' ) ) {
+			if ( false === (bool) get_option( 'storefront_cleared_widgets' ) && true === (bool) get_option( 'storefront_nux_fresh_site' ) ) {
 				update_option( 'sidebars_widgets', array( 'wp_inactive_widgets' => array() ) );
 				update_option( 'storefront_cleared_widgets', true );
 			}
@@ -243,6 +243,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		public function filter_start_content( $content, $config ) {
 			if ( ! isset( $_GET['sf_guided_tour'] ) || 1 !== absint( $_GET['sf_guided_tour'] ) ) {
+				
+				// We only allow starter content if the users comes from the NUX wizard.
 				return $content;
 			}
 
@@ -258,18 +260,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				switch ( $task ) {
 					case 'homepage':
 						unset( $content['options'] );
-
-						if ( isset( $content['posts'] ) ) {
-							foreach ( $content['posts'] as $post_id => $post ) {
-								if ( 'home' === $post_id ) {
-									unset( $content['posts'][ $post_id ] );
-								}
-
-								if ( 'blog' === $post_id ) {
-									unset( $content['posts'][ $post_id ] );
-								}
-							}
-						}
+						unset( $content['posts']['home'] );
+						unset( $content['posts']['blog'] );
 
 						break;
 
@@ -278,20 +270,26 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							foreach ( $content['posts'] as $post_id => $post ) {
 								if ( isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
 									unset( $content['posts'][ $post_id ] );
-								}
-
-								if ( 'about' === $post_id || 'contact' === $post_id ) {
-									unset( $content['posts'][ $post_id ] );
-								}								
+								}						
 							}
 						}
 
+						unset( $content['posts']['about'] );
+						unset( $content['posts']['contact'] );
 						unset( $content['attachments'] );
 						unset( $content['nav_menus'] );
 						unset( $content['widgets'] );
 
 						break;
 				}
+			}
+
+			// Existing site: remove custom pages, navigation menus and widgets from starter content.
+			if ( true !== (bool) get_option( 'storefront_nux_fresh_site' ) ) {
+				unset( $content['posts']['about'] );
+				unset( $content['posts']['contact'] );
+				unset( $content['nav_menus'] );
+				unset( $content['widgets'] );
 			}
 
 			return $content;
