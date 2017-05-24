@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2017.05.24* - 2.2.3
+* **Fix** - Further improvements to prevent widgets from clearing after the update from 2.1.x.
+
 ### *2017.05.23* - 2.2.2
 * **Fix** - Prevent starter content widgets, nav menus and pages from being added to existing sites unwontedly.
 * **Fix** - Only set pages full width if fresh site.
