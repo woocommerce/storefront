@@ -70,7 +70,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 				<section class="storefront-welcome-nav">
 					<span class="storefront-welcome-nav__version">Storefront <?php echo esc_attr( $storefront_version ); ?></span>
 					<ul>
-						<li><a href="https://support.woocommerce.com/"><?php esc_attr_e( 'Support', 'storefront' ); ?></a></li>
+						<li><a href="https://wordpress.org/support/theme/storefront"><?php esc_attr_e( 'Support', 'storefront' ); ?></a></li>
 						<li><a href="https://docs.woocommerce.com/documentation/themes/storefront/"><?php esc_attr_e( 'Documentation', 'storefront' ); ?></a></li>
 						<li><a href="https://storefront.wordpress.com"><?php esc_attr_e( 'Development blog', 'storefront' ); ?></a></li>
 					</ul>
