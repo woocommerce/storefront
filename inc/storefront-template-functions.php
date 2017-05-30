@@ -579,7 +579,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 
 				do_action( 'storefront_homepage_after_product_categories_title' );
 
-				echo wp_kses_post( $shortcode_content );
+				echo $shortcode_content;
 
 				do_action( 'storefront_homepage_after_product_categories' );
 
@@ -627,7 +627,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 
 				do_action( 'storefront_homepage_after_recent_products_title' );
 
-				echo wp_kses_post( $shortcode_content );
+				echo $shortcode_content;
 
 				do_action( 'storefront_homepage_after_recent_products' );
 
@@ -679,7 +679,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 
 				do_action( 'storefront_homepage_after_featured_products_title' );
 
-				echo wp_kses_post( $shortcode_content );
+				echo $shortcode_content;
 
 				do_action( 'storefront_homepage_after_featured_products' );
 
@@ -727,7 +727,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 
 				do_action( 'storefront_homepage_after_popular_products_title' );
 
-				echo wp_kses_post( $shortcode_content );
+				echo $shortcode_content;
 
 				do_action( 'storefront_homepage_after_popular_products' );
 
@@ -775,7 +775,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 
 				do_action( 'storefront_homepage_after_on_sale_products_title' );
 
-				echo wp_kses_post( $shortcode_content );
+				echo $shortcode_content;
 
 				do_action( 'storefront_homepage_after_on_sale_products' );
 
@@ -822,7 +822,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 
 				do_action( 'storefront_homepage_after_best_selling_products_title' );
 
-				echo wp_kses_post( $shortcode_content );
+				echo $shortcode_content;
 
 				do_action( 'storefront_homepage_after_best_selling_products' );
 
