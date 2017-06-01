@@ -1,5 +1,8 @@
 # Storefront Changelog
 
+### *2017.xx.xx* - 2.2.4
+* **Fix** - Notice styling in the payment section of the checkout.
+
 ### *2017.05.24* - 2.2.3
 * **Fix** - Further improvements to prevent widgets from clearing after the update from 2.1.x.
 
