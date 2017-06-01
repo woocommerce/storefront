@@ -609,10 +609,10 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 				'title'				=> __( 'New In', 'storefront' ),
 			) );
 
-			$shortcode_content = storefront_do_shortcode( 'recent_products', array(
+			$shortcode_content = storefront_do_shortcode( 'recent_products', apply_filters( 'storefront_recent_products_shortcode_args', array(
 				'per_page' => intval( $args['limit'] ),
 				'columns'  => intval( $args['columns'] ),
-			) );
+			) ) );
 
 			/**
 			 * Only display the section if the shortcode returns products
@@ -659,12 +659,12 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 				'title'   => __( 'We Recommend', 'storefront' ),
 			) );
 
-			$shortcode_content = storefront_do_shortcode( 'featured_products', array(
+			$shortcode_content = storefront_do_shortcode( 'featured_products', apply_filters( 'storefront_featured_products_shortcode_args', array(
 				'per_page' => intval( $args['limit'] ),
 				'columns'  => intval( $args['columns'] ),
 				'orderby'  => esc_attr( $args['orderby'] ),
 				'order'    => esc_attr( $args['order'] ),
-			) );
+			) ) );
 
 			/**
 			 * Only display the section if the shortcode returns products
@@ -709,10 +709,10 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 				'title'   => __( 'Fan Favorites', 'storefront' ),
 			) );
 
-			$shortcode_content = storefront_do_shortcode( 'top_rated_products', array(
+			$shortcode_content = storefront_do_shortcode( 'top_rated_products', apply_filters( 'storefront_popular_products_shortcode_args', array(
 				'per_page' => intval( $args['limit'] ),
 				'columns'  => intval( $args['columns'] ),
-			) );
+			) ) );
 
 			/**
 			 * Only display the section if the shortcode returns products
@@ -757,10 +757,10 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 				'title'   => __( 'On Sale', 'storefront' ),
 			) );
 
-			$shortcode_content = storefront_do_shortcode( 'sale_products', array(
+			$shortcode_content = storefront_do_shortcode( 'sale_products', apply_filters( 'storefront_on_sale_products_shortcode_args', array(
 				'per_page' => intval( $args['limit'] ),
 				'columns'  => intval( $args['columns'] ),
-			) );
+			) ) );
 
 			/**
 			 * Only display the section if the shortcode returns products
@@ -804,10 +804,10 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 				'title'	  => esc_attr__( 'Best Sellers', 'storefront' ),
 			) );
 
-			$shortcode_content = storefront_do_shortcode( 'best_selling_products', array(
+			$shortcode_content = storefront_do_shortcode( 'best_selling_products', apply_filters( 'storefront_best_selling_products_shortcode_args', array(
 				'per_page' => intval( $args['limit'] ),
 				'columns'  => intval( $args['columns'] ),
-			) );
+			) ) );
 
 			/**
 			 * Only display the section if the shortcode returns products
