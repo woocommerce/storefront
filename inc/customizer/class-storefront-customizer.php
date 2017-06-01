@@ -668,11 +668,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -5 ) . ';
 			}
 
-			#payment .payment_methods > li {
+			#payment .payment_methods > li:not(.woocommerce-notice) {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -10 ) . ';
 			}
 
-			#payment .payment_methods > li:hover {
+			#payment .payment_methods > li:not(.woocommerce-notice):hover {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -15 ) . ';
 			}
 
