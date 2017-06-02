@@ -286,7 +286,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_section( 'storefront_footer' , array(
 				'title'      			=> __( 'Footer', 'storefront' ),
 				'priority'   			=> 28,
-				'description' 			=> __( 'Customise the look & feel of your web site footer.', 'storefront' ),
+				'description' 			=> __( 'Customize the look & feel of your web site footer.', 'storefront' ),
 			) );
 
 			/**
@@ -355,7 +355,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_section( 'storefront_buttons' , array(
 				'title'      			=> __( 'Buttons', 'storefront' ),
 				'priority'   			=> 45,
-				'description' 			=> __( 'Customise the look & feel of your web site buttons.', 'storefront' ),
+				'description' 			=> __( 'Customize the look & feel of your website buttons.', 'storefront' ),
 			) );
 
 			/**
