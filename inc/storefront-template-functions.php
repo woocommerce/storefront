@@ -934,50 +934,55 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 			$image = wp_get_attachment_image_src( get_post_thumbnail_id( get_the_ID() ), 'normal' );
 			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
-			$json['@type']            = 'BlogPosting';
+			$json = array();
+			
+			$json['@type'] = 'BlogPosting';
 
 			$json['mainEntityOfPage'] = array(
-				'@type'                 => 'webpage',
-				'@id'                   => get_the_permalink(),
+				'@type' => 'webpage',
+				'@id'   => get_the_permalink(),
 			);
 
-			$json['publisher']        = array(
-				'@type'                 => 'organization',
-				'name'                  => get_bloginfo( 'name' ),
-				'logo'                  => array(
-					'@type'               => 'ImageObject',
-					'url'                 => $logo[0],
-					'width'               => $logo[1],
-					'height'              => $logo[2],
-				),
+			$json['publisher'] = array(
+				'@type' => 'organization',
+				'name'  => get_bloginfo( 'name' ),
 			);
 
-			$json['author']           = array(
-				'@type'                 => 'person',
-				'name'                  => get_the_author(),
-			);
-
-			if ( $image ) {
-				$json['image']            = array(
-					'@type'                 => 'ImageObject',
-					'url'                   => $image[0],
-					'width'                 => $image[1],
-					'height'                => $image[2],
+			if ( $logo ) {
+				$json['publisher']['logo'] = array(
+					'@type'  => 'ImageObject',
+					'url'    => $logo[0],
+					'width'  => $logo[1],
+					'height' => $logo[2],
 				);
 			}
 
-			$json['datePublished']    = get_post_time( 'c' );
-			$json['dateModified']     = get_the_modified_date( 'c' );
-			$json['name']             = get_the_title();
-			$json['headline']         = $json['name'];
-			$json['description']      = get_the_excerpt();
+			$json['author'] = array(
+				'@type' => 'person',
+				'name'  => get_the_author(),
+			);
+
+			if ( $image ) {
+				$json['image'] = array(
+					'@type'  => 'ImageObject',
+					'url'    => $image[0],
+					'width'  => $image[1],
+					'height' => $image[2],
+				);
+			}
+			
+			$json['datePublished'] = get_post_time( 'c' );
+			$json['dateModified']  = get_the_modified_date( 'c' );
+			$json['name']          = get_the_title();
+			$json['headline']      = $json['name'];
+			$json['description']   = get_the_excerpt();
 
 		// Page's structured data.
 		} elseif ( is_page() ) {
-			$json['@type']            = 'WebPage';
-			$json['url']              = get_the_permalink();
-			$json['name']             = get_the_title();
-			$json['description']      = get_the_excerpt();
+			$json['@type']       = 'WebPage';
+			$json['url']         = get_the_permalink();
+			$json['name']        = get_the_title();
+			$json['description'] = get_the_excerpt();
 		}
 
 		if ( isset( $json ) ) {
