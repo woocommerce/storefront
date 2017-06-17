@@ -155,17 +155,24 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 
 if ( ! function_exists( 'storefront_site_branding' ) ) {
 	/**
-	 * Site branding wrapper and display
+	 * Display Site Branding
 	 *
 	 * @since  1.0.0
 	 * @return void
 	 */
 	function storefront_site_branding() {
-		?>
-		<div class="site-branding">
-			<?php storefront_site_title_or_logo(); ?>
-		</div>
-		<?php
+		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
+			the_custom_logo();
+		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
+			jetpack_the_site_logo();
+		} else { ?>
+			<div class="site-branding">
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php if ( '' != get_bloginfo( 'description' ) ) { ?>
+					<a href="http://dade-design.com" target="_blank"><p class="site-description"><?php echo bloginfo( 'description' ); ?></p></a>
+				<?php } ?>
+			</div>
+		<?php }
 	}
 }
 
@@ -935,7 +942,7 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 			$logo  = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' );
 
 			$json = array();
-			
+
 			$json['@type'] = 'BlogPosting';
 
 			$json['mainEntityOfPage'] = array(
@@ -970,7 +977,7 @@ if ( ! function_exists( 'storefront_init_structured_data' ) ) {
 					'height' => $image[2],
 				);
 			}
-			
+
 			$json['datePublished'] = get_post_time( 'c' );
 			$json['dateModified']  = get_the_modified_date( 'c' );
 			$json['name']          = get_the_title();
