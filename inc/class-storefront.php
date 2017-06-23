@@ -313,7 +313,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * Custom navigation markup template hooked into `navigation_markup_template` filter hook.
 		 */
 		public function navigation_markup_template() {
-			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="Post Navigation">';
+			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'storefront' ) . '">';
 			$template .= '<span class="screen-reader-text">%2$s</span>';
 			$template .= '<div class="nav-links">%3$s</div>';
 			$template .= '</nav>';

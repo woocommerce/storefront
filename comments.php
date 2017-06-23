@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<section id="comments" class="comments-area" aria-label="Post Comments">
+<section id="comments" class="comments-area" aria-label="<?php esc_html_e( 'Post Comments', 'storefront' ); ?>">
 
 	<?php
 	if ( have_comments() ) : ?>
@@ -33,7 +33,7 @@ if ( post_password_required() ) {
 		</h2>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="Comment Navigation Above">
+		<nav id="comment-nav-above" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e( 'Comment Navigation Above', 'storefront' ); ?>">
 			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'storefront' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
@@ -43,15 +43,15 @@ if ( post_password_required() ) {
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
-					'style'      	=> 'ol',
-					'short_ping' 	=> true,
-					'callback'		=> 'storefront_comment',
+					'style'      => 'ol',
+					'short_ping' => true,
+					'callback'   => 'storefront_comment',
 				) );
 			?>
 		</ol><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through. ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="Comment Navigation Below">
+		<nav id="comment-nav-below" class="comment-navigation" role="navigation" aria-label="<?php esc_html_e( 'Comment Navigation Below', 'storefront' ); ?>">
 			<span class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'storefront' ); ?></span>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'storefront' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'storefront' ) ); ?></div>
