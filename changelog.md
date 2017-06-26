@@ -1,7 +1,17 @@
 # Storefront Changelog
 
-### *2017.xx.xx* - 2.2.4
+### *2017.06.27* - 2.2.4
 * **Fix** - Notice styling in the payment section of the checkout.
+* **Fix** - Fix several typos in the theme description and customizer controls.
+* **Fix** - Remove `:hover` and `:active` states on `.screen-reader-text`.
+* **Fix** - Hide logo section from structured data if there's no image.
+* **Dev** - New hook after body tag: `storefront_before_site`.
+* **Fix** - Fix modular scale negative values not being compiled correctly.
+* **Tweak** - Open documentation links in a new window.
+* **Fix** - Translatable labels in the 404 template.
+* **Fix** - Localize all aria labels.
+* **Dev** - Remove `wp_kses_post()` from shortcodes output.
+* **Fix** - Amend support link in admin header to link to the WordPress.org support forum.
 
 ### *2017.05.24* - 2.2.3
 * **Fix** - Further improvements to prevent widgets from clearing after the update from 2.1.x.
