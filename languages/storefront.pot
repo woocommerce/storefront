@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.2.3\n"
+"Project-Id-Version: Storefront 2.2.4\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2017-05-24 15:36:26+00:00\n"
+"POT-Creation-Date: 2017-06-27 07:15:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,12 +23,28 @@ msgid ""
 "below."
 msgstr ""
 
-#: 404.php:47 inc/storefront-template-functions.php:574
+#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:338
+msgid "Search"
+msgstr ""
+
+#: 404.php:39
+msgid "Promoted Products"
+msgstr ""
+
+#: 404.php:45 404.php:47 inc/storefront-template-functions.php:574
 msgid "Product Categories"
 msgstr ""
 
-#: 404.php:58 inc/storefront-template-functions.php:722
+#: 404.php:57 404.php:59 inc/storefront-template-functions.php:722
 msgid "Popular Products"
+msgstr ""
+
+#: comments.php:21
+msgid "Post Comments"
+msgstr ""
+
+#: comments.php:36
+msgid "Comment Navigation Above"
 msgstr ""
 
 #: comments.php:37 comments.php:55
@@ -41,6 +57,10 @@ msgstr ""
 
 #: comments.php:39 comments.php:57
 msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:54
+msgid "Comment Navigation Below"
 msgstr ""
 
 #: comments.php:64
@@ -248,6 +268,10 @@ msgstr ""
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
+#: inc/class-storefront.php:316
+msgid "Post Navigation"
+msgstr ""
+
 #: inc/customizer/class-storefront-customizer-control-more.php:28
 msgid ""
 "There's a range of %s extensions available to put additional power in your "
@@ -310,7 +334,7 @@ msgid "Footer"
 msgstr ""
 
 #: inc/customizer/class-storefront-customizer.php:289
-msgid "Customise the look & feel of your web site footer."
+msgid "Customize the look & feel of your website footer."
 msgstr ""
 
 #: inc/customizer/class-storefront-customizer.php:356
@@ -318,7 +342,7 @@ msgid "Buttons"
 msgstr ""
 
 #: inc/customizer/class-storefront-customizer.php:358
-msgid "Customise the look & feel of your web site buttons."
+msgid "Customize the look & feel of your website buttons."
 msgstr ""
 
 #: inc/customizer/class-storefront-customizer.php:400
@@ -698,10 +722,6 @@ msgstr ""
 msgid "New In Store"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:338
-msgid "Search"
-msgstr ""
-
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:365
 msgid "My Account"
 msgstr ""
@@ -726,7 +746,7 @@ msgid ""
 "facing WooCommerce extensions. There are several layout & color options to "
 "personalise your shop, multiple widget regions, a responsive design and "
 "much more. Developers will love it's lean and extensible codebase making it "
-"a joy to customise and extend. Looking for a WooCommerce theme? Look no "
+"a joy to customize and extend. Looking for a WooCommerce theme? Look no "
 "further!"
 msgstr ""
 
