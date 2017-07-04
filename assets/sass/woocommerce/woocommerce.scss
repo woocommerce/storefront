@@ -56,8 +56,10 @@
 
 	.widget_shopping_cart {
 		display: none;
-		padding: 15px 15px 0 15px;
 
+		.woocommerce-mini-cart__empty-message {
+			margin: 1.41575em;
+		}
 		.product_list_widget {
 			img {
 				margin-left: 1em;
