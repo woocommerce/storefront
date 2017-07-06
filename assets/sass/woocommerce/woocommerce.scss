@@ -57,6 +57,9 @@
 	.widget_shopping_cart {
 		display: none;
 
+		.woocommerce-mini-cart__empty-message {
+			margin: ms(2);
+		}
 		.product_list_widget {
 			img {
 				margin-left: 1em;
