@@ -37,7 +37,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			$add_below = 'div-comment';
 		}
 		?>
-		<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+		<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
 		<div class="comment-body">
 		<div class="comment-meta commentmetadata">
 			<div class="comment-author vcard">
