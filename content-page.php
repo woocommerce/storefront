@@ -14,7 +14,6 @@
 	 *
 	 * @hooked storefront_page_header          - 10
 	 * @hooked storefront_page_content         - 20
-	 * @hooked storefront_init_structured_data - 30
 	 */
 	do_action( 'storefront_page' );
 	?>

@@ -18,8 +18,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 	 */
 	class Storefront {
 
-		private static $structured_data;
-
 		/**
 		 * Setup class.
 		 *
@@ -34,7 +32,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_filter( 'wp_page_menu_args',          array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 			add_action( 'enqueue_embed_scripts',      array( $this, 'print_embed_styles' ) );
-			add_action( 'wp_footer',                  array( $this, 'get_structured_data' ) );
 		}
 
 		/**
@@ -366,62 +363,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 				}
 			</style>
 			<?php
-		}
-
-		/**
-		 * Sets `self::structured_data`.
-		 *
-		 * @param array $json
-		 */
-		public static function set_structured_data( $json ) {
-			if ( ! is_array( $json ) ) {
-				return;
-			}
-
-			self::$structured_data[] = $json;
-		}
-
-		/**
-		 * Outputs structured data.
-		 *
-		 * Hooked into `wp_footer` action hook.
-		 */
-		public function get_structured_data() {
-			if ( ! self::$structured_data ) {
-				return;
-			}
-
-			$structured_data['@context'] = 'http://schema.org/';
-
-			if ( count( self::$structured_data ) > 1 ) {
-				$structured_data['@graph'] = self::$structured_data;
-			} else {
-				$structured_data = $structured_data + self::$structured_data[0];
-			}
-
-			echo '<script type="application/ld+json">' . wp_json_encode( $this->sanitize_structured_data( $structured_data ) ) . '</script>';
-		}
-
-		/**
-		 * Sanitizes structured data.
-		 *
-		 * @param  array $data
-		 * @return array
-		 */
-		public function sanitize_structured_data( $data ) {
-			$sanitized = array();
-
-			foreach ( $data as $key => $value ) {
-				if ( is_array( $value ) ) {
-					$sanitized_value = $this->sanitize_structured_data( $value );
-				} else {
-					$sanitized_value = sanitize_text_field( $value );
-				}
-
-				$sanitized[ sanitize_text_field( $key ) ] = $sanitized_value;
-			}
-
-			return $sanitized;
 		}
 	}
 endif;

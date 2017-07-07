@@ -69,14 +69,10 @@ add_action( 'storefront_header', 'storefront_product_search', 40 );
 add_action( 'storefront_header', 'storefront_header_cart',    60 );
 
 /**
- * Structured Data
+ * Cart fragment
  *
- * @see storefront_woocommerce_init_structured_data()
+ * @see storefront_cart_link_fragment()
  */
-if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.7', '<' ) ) {
-	add_action( 'woocommerce_before_shop_loop_item', 'storefront_woocommerce_init_structured_data' );
-}
-
 if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 	add_filter( 'woocommerce_add_to_cart_fragments', 'storefront_cart_link_fragment' );
 } else {
