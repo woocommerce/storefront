@@ -20,6 +20,11 @@
 		}
 
 		cart.addEventListener( 'mouseover', function() {
+            var cart = document.querySelector( '.site-header-cart' );
+
+            var windowHeight  = window.outerHeight,
+                cartBottomPos = cart.querySelector( '.widget_shopping_cart_content' ).getBoundingClientRect().bottom + cart.offsetHeight,
+                cartList      = cart.querySelector( '.cart_list' );
 
 			if ( cartBottomPos > windowHeight ) {
 				cartList.style.maxHeight = '15em';
