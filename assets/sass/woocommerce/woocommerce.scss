@@ -68,6 +68,17 @@
 	}
 }
 
+.site-header-cart {
+	&:hover {
+		.widget_shopping_cart {
+			ul.woocommerce-mini-cart{
+				max-height: 16em;
+				overflow-y: auto;
+			}
+		}
+	}
+}
+
 .site-search {
 	font-size: ms(-1);
 	clear: both;
