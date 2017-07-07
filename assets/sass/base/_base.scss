@@ -312,6 +312,18 @@ body {
 		margin-bottom: 0;
 	}
 }
+.site-header-cart{
+	li{
+		.widget{
+			.widget_shopping_cart_content{
+				.woocommerce-mini-cart{
+					max-height: 16em;
+					overflow-y: auto;
+				}
+			}
+		}
+	}
+}
 
 .home.blog,
 .home.page:not(.page-template-template-homepage),
