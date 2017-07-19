@@ -1264,7 +1264,8 @@ form.checkout {
 
 table.woocommerce-checkout-review-order-table {
 	.product-name {
-		max-width: 150px;
+		width: 300px;
+		word-wrap: break-word;
 	}
 }
 
