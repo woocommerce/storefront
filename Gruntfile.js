@@ -343,6 +343,17 @@ module.exports = function( grunt ) {
 					'assets/sass/jetpack/jetpack.css'
 				]
 			}
+		},
+		compress: {
+			zip: {
+				options: {
+					archive: './storefront.zip',
+					mode: 'zip'
+				},
+				files: [
+					{ src: './storefront/**' }
+				]
+			}
 		}
 	});
 
@@ -357,6 +368,8 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-contrib-copy' );
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
 	grunt.loadNpmTasks( 'grunt-postcss' );
+	grunt.loadNpmTasks( 'grunt-contrib-compress' );
+
 
 	// Register tasks
 	grunt.registerTask( 'default', [
@@ -378,6 +391,7 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'deploy', [
-		'copy'
+		'copy',
+		'compress'
 	]);
 };
