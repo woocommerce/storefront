@@ -108,7 +108,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 * @return array       infinite scroll args.
 		 */
 		public function fix_duplicate_products( $args ) {
-			if ( 'product' === $args['post_type'] ) {
+			if ( ( isset( $args['post_type'] ) && 'product' === $args['post_type'] ) || ( isset( $args['taxonomy'] ) && 'product_cat' === $args['taxonomy'] ) ) {
 				$args['offset'] = $args['posts_per_page'] * $args['paged'];
 			}
 
