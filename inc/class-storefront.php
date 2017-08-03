@@ -165,6 +165,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 					);
 				}
 			}
+			
+			$sidebar_args = apply_filters( 'storefront_sidebar_args', $sidebar_args );
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
 				$widget_tags = array(
