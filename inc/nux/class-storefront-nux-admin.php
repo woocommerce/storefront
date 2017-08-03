@@ -43,9 +43,11 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				return;
 			}
 
+			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
 			wp_enqueue_style( 'storefront-admin-nux', get_template_directory_uri() . '/assets/sass/admin/admin.css', '', $storefront_version );
 
-			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin.min.js', array( 'jquery' ), $storefront_version, 'all' );
+			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin' . $suffix . '.js', array( 'jquery' ), $storefront_version, 'all' );
 
 			$storefront_nux = array(
 				'nonce' => wp_create_nonce( 'storefront_notice_dismiss' )

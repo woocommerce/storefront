@@ -229,12 +229,14 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Scripts
 			 */
-			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation.min.js', array( 'jquery' ), '20120206', true );
-			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array( 'jquery' ), '20120206', true );
+			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix' . $suffix . '.js', array(), '20130115', true );
 
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
 				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array( 'jquery' ), '1.1.0', true );
-				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage.min.js', array( 'jquery' ), '20120206', true );
+				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array( 'jquery' ), '20120206', true );
 			}
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
