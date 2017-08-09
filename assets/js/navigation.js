@@ -53,8 +53,8 @@
 	};
 
 	// Sub-menu access from touchscreens
-		masthead       = jQuery( '#masthead' );
-		siteNavigation = masthead.find( '.main-navigation > div > ul' );
+		var masthead       = jQuery( '#masthead' );
+		var siteNavigation = masthead.find( '.main-navigation > div > ul' );
 
 		function toggleFocusClassTouchScreen() {
 
