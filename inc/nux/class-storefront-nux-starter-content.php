@@ -243,7 +243,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		public function filter_start_content( $content, $config ) {
 			if ( ! isset( $_GET['sf_guided_tour'] ) || 1 !== absint( $_GET['sf_guided_tour'] ) ) {
-				
+
 				// We only allow starter content if the users comes from the NUX wizard.
 				return $content;
 			}
@@ -270,7 +270,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							foreach ( $content['posts'] as $post_id => $post ) {
 								if ( isset( $post['post_type'] ) && 'product' === $post['post_type'] ) {
 									unset( $content['posts'][ $post_id ] );
-								}						
+								}
 							}
 						}
 
@@ -341,7 +341,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @param string $loop_name Loop name.
 		 * @return array $args
 		 */
-		public function shortcode_loop_products( $query_args, $atts, $loop_name ) {
+		public function shortcode_loop_products( $query_args, $atts, $loop_name = null ) {
 			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
 				return $query_args;
 			}
@@ -893,7 +893,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		private function _get_created_starter_content_products() {
 			global $wp_customize;
 
-			$data                 = $wp_customize->get_setting( 'nav_menus_created_posts' );			
+			$data                 = $wp_customize->get_setting( 'nav_menus_created_posts' );
 			$created_products_ids = $data->value();
 
 			if ( ! empty( $created_products_ids ) ) {
