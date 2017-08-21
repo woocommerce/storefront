@@ -20,7 +20,11 @@
 		var offset          = jQuery( '.site-main' ).offset();
 
 		// Make the homepage content full width and centrally aligned.
-		jQuery( homepageContent ).css( 'width', windowWidth ).css( 'margin-left', -offset.left );
+		if ( jQuery( 'html' ).attr( 'dir' ) !== 'rtl' ) {
+			jQuery( homepageContent ).css( 'width', windowWidth ).css( 'margin-left', -offset.left );
+		} else {
+			jQuery( homepageContent ).css( 'width', windowWidth ).css( 'margin-right', -offset.left );
+		}
 	}
 
 	/**
