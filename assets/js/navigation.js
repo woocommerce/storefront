@@ -52,10 +52,41 @@
 		}
 	};
 
-	// Add focus class to li
-	jQuery( '.main-navigation, .secondary-navigation' ).find( 'a' ).on( 'focus.storefront blur.storefront', function() {
-		jQuery( this ).parents().toggleClass( 'focus' );
-	});
+	// Sub-menu access from touchscreens
+		var masthead       = jQuery( '#masthead' );
+		var siteNavigation = masthead.find( '.main-navigation > div > ul' );
+
+		function toggleFocusClassTouchScreen() {
+
+			// Ensure the dropdowns close when user taps outside the site header
+			jQuery( document.body ).on( 'touchstart.storefront', function( e ) {
+				if ( ! jQuery( e.target ).closest( '.main-navigation li' ).length ) {
+					jQuery( '.main-navigation li' ).removeClass( 'focus' );
+				}
+			});
+
+			// Disables the link from working on the first touch of a menu with children
+			siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
+				.on( 'touchstart.storefront', function( e ) {
+					var el = jQuery( this ).parent( 'li' );
+
+					if ( ! el.hasClass( 'focus' ) ) {
+						e.preventDefault();
+						el.toggleClass( 'focus' );
+						el.siblings( '.focus' ).removeClass( 'focus' );
+					}
+				});
+		}
+		// Add Focus Class for parents of sub-menus
+		siteNavigation.find( 'a' ).on( 'focus.storefront blur.storefront', function() {
+			jQuery( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
+		});
+
+		// Triggers toggleFocusClassTouchScreen on touchscreen devices
+		if ( 'ontouchstart' in window ) {
+			jQuery( window ).on( 'resize.storefront', toggleFocusClassTouchScreen );
+			toggleFocusClassTouchScreen();
+		}
 
 	// Add focus to cart dropdown
 	jQuery( window ).load( function() {
@@ -69,10 +100,6 @@
 		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
 		jQuery( '.main-navigation ul ul, .secondary-navigation ul ul, .site-header-cart .widget_shopping_cart' ).addClass( 'sub-menu--is-touch-device' );
 
-		// Ensure the dropdowns close when user taps outside the site header
-		jQuery( '.site-content, .header-widget-region, .site-footer, .site-header:not(a)' ).on( 'click', function() {
-			return;
-		});
 	}
 
 	/**
