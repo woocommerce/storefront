@@ -1,5 +1,21 @@
 # Storefront Changelog
 
+### *2017.08.21* - 2.2.5
+* **New** - Add access to submenus from touchscreen devices. Kudos [@mikeyarce](https://github.com/mikeyarce).
+* **New** - Add styles for keyboard navigation on focus items. Kudos [@mikeyarce](https://github.com/mikeyarce).
+* **Fix** - Fix hero image positioning when page has RTL direction.
+* **Tweak** - Remove non-minified vendor script: `rgbaster.js`.
+* **Tweak** - Enqueue non-minified versions of scripts when `SCRIPT_DEBUG` is defined.
+* **Dev** - New hook to filter sidebar regions: `storefront_sidebar_args`.
+* **Dev** - Adds `grunt-contrib-compress` to the build process.
+* **Fix** - Remove 4th parameter being passed to `remove_action`, it only accepts 3. Kudos [@ashfame](https://github.com/ashfame).
+* **Fix** - Limit product name cell to `300px` in the order review table.
+* **Fix** - Check header cart contents length on `mouseover` to dynamically check if the height needs to be limited.
+* **Tweak** - Removed Structured Data. See [this comment](https://github.com/woocommerce/storefront/issues/620#issuecomment-313629032).
+* **Fix** - Header cart dropdown padding.
+* **Fix** - Updated demo store notice `z-index` value to `9999` to prevent conflicts with other elements. Kudos [@iamdharmesh](https://github.com/iamdharmesh).
+* **Tweak** - Replace WooThemes with WooCommerce.
+
 ### *2017.06.27* - 2.2.4
 * **Fix** - Notice styling in the payment section of the checkout.
 * **Fix** - Fix several typos in the theme description and customizer controls.
