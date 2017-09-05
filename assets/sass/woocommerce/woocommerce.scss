@@ -1643,6 +1643,8 @@ p.stars {
 }
 
 .woocommerce-tabs {
+	@include clearfix;
+	overflow: hidden;
 	padding: 1em 0;
 
 	ul.tabs {
@@ -2750,7 +2752,6 @@ dl.variation {
 	}
 
 	.woocommerce-tabs {
-		@include clearfix;
 		padding-top: ms(5);
 		padding-bottom: ms(5);
 
