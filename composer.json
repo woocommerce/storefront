@@ -1,0 +1,23 @@
+{  
+   "name":"woocommerce/storefront",
+   "description":"Storefront is a robust and flexible WordPress theme, designed and built by the team at WooCommerce to help you make the most out of using the WooCommerce plugin to power your online store. It's available to download for free from the WordPress theme repository.",
+   "homepage":"https://woocommerce.com/",
+   "type":"wordpress-theme",
+   "license":"GPL-2.0+",
+   "require":{  
+      "composer/installers":"~1.2"
+   },
+   "require-dev":{  
+      "squizlabs/php_codesniffer":"*",
+      "wp-coding-standards/wpcs":"0.10.0",
+      "phpunit/phpunit":"6.2.3"
+   },
+   "scripts":{  
+      "post-install-cmd":[  
+         "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+      ],
+      "post-update-cmd":[  
+         "\"vendor/bin/phpcs\" --config-set installed_paths vendor/wp-coding-standards/wpcs"
+      ]
+   }
+}
