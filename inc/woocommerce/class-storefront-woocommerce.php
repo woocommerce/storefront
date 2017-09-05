@@ -145,7 +145,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		}
 
 		/**
-		 * Product gallery thumnail columns
+		 * Product gallery thumbnail columns
 		 *
 		 * @return integer number of columns
 		 * @since  1.0.0
