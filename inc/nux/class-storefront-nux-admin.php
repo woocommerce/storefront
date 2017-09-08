@@ -26,7 +26,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_action( 'admin_enqueue_scripts',                   array( $this, 'enqueue_scripts' ) );
 			add_action( 'admin_notices',                           array( $this, 'admin_notices' ), 99 );
 			add_action( 'wp_ajax_storefront_dismiss_notice',       array( $this, 'dismiss_nux' ) );
-			add_action( 'admin_post_storefront_guided_tour',       array( $this, 'redirect_customizer' ) );
+			add_action( 'admin_post_storefront_starter_content',   array( $this, 'redirect_customizer' ) );
 			add_action( 'init',                                    array( $this, 'log_fresh_site_state' ) );
 			add_filter( 'admin_body_class',                        array( $this, 'admin_body_class' ) );
 		}
@@ -91,8 +91,8 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 					} ?>
 					</p>
 					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
-						<input type="hidden" name="action" value="storefront_guided_tour">
-						<?php wp_nonce_field( 'storefront_guided_tour' ); ?>
+						<input type="hidden" name="action" value="storefront_starter_content">
+						<?php wp_nonce_field( 'storefront_starter_content' ); ?>
 
 						<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
 							<input type="hidden" name="homepage" value="on">
@@ -150,10 +150,10 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2.0
 		 */
 		public function redirect_customizer() {
-			check_admin_referer( 'storefront_guided_tour' );
+			check_admin_referer( 'storefront_starter_content' );
 
 			if ( current_user_can( 'manage_options' ) ) {
-				
+
 				// Dismiss notice.
 				update_option( 'storefront_nux_dismissed', true );
 			}
@@ -178,7 +178,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				$args['sf_tasks'] = implode( ',', $tasks );
 
 				if ( current_user_can( 'manage_options' ) ) {
-					
+
 					// Make sure the fresh_site flag is set to true.
 					update_option( 'fresh_site', true );
 
