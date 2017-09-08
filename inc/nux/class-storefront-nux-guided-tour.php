@@ -109,11 +109,13 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 				'section'     => '#customize-info',
 			);
 
-			$steps[] = array(
-				'title'   => __( 'Add your logo', 'storefront' ),
-				'message' => __( 'Open the Site Identity Panel, then click the \'Select Logo\' button to upload your logo.', 'storefront' ),
-				'section' => 'title_tagline',
-			);
+			if ( ! has_custom_logo() ) {
+				$steps[] = array(
+					'title'   => __( 'Add your logo', 'storefront' ),
+					'message' => __( 'Open the Site Identity Panel, then click the \'Select Logo\' button to upload your logo.', 'storefront' ),
+					'section' => 'title_tagline',
+				);
+			}
 
 			$steps[] = array(
 				'title'   => __( 'Choose your accent color', 'storefront' ),
