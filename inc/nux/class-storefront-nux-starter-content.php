@@ -242,7 +242,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return array $content
 		 */
 		public function filter_start_content( $content, $config ) {
-			if ( ! isset( $_GET['sf_guided_tour'] ) || 1 !== absint( $_GET['sf_guided_tour'] ) ) {
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
 
 				// We only allow starter content if the users comes from the NUX wizard.
 				return $content;

@@ -158,7 +158,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				update_option( 'storefront_nux_dismissed', true );
 			}
 
-			$args = array( 'sf_guided_tour' => '1' );
+			$args = array( 'sf_starter_content' => '1' );
 
 			$tasks = array();
 
