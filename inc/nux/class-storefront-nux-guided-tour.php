@@ -34,9 +34,12 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 		public function customizer() {
 			global $pagenow;
 
-			if ( 'customize.php' === $pagenow && isset( $_GET['sf_starter_content'] ) && 1 === absint( $_GET['sf_starter_content'] ) ) {
+			if ( 'customize.php' === $pagenow && false === (bool) get_option( 'storefront_nux_guided_tour', false ) ) {
 				add_action( 'customize_controls_enqueue_scripts',      array( $this, 'customize_scripts' ) );
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
+
+				// Set Guided Tour flag so it doesn't show up again.
+				update_option( 'storefront_nux_guided_tour', true );
 			}
 		}
 
