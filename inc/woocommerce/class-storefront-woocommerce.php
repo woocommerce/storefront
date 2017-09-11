@@ -310,6 +310,14 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			/**
+			 * WooCommerce Memberships
+			 */
+			if ( $this->is_woocommerce_extension_activated( 'WC_Memberships' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-memberships-style', get_template_directory_uri() . '/assets/sass/woocommerce/extensions/memberships.css', 'storefront-woocommerce-style' );
+				wp_style_add_data( 'storefront-woocommerce-memberships-style', 'rtl', 'replace' );
+			}
+
+			/**
 			 * WooCommerce Quick View
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Quick_View' ) ) {
