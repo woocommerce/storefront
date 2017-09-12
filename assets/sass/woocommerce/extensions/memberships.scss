@@ -15,8 +15,6 @@
 .woocommerce-page {
   .woocommerce-MyAccount-navigation {
     ul {
-
-      /* this wildcard is needed because this CSS class may contain the user membership ID */
       li.woocommerce-MyAccount-navigation-link--members-area a:before {
         content: "\f023";
       }
