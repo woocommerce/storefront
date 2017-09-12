@@ -1,5 +1,5 @@
 /**
- * WooCommerce Product Reviews Pro
+ * WooCommerce Memberships
  */
 
 /**
@@ -17,7 +17,7 @@
     ul {
 
       /* this wildcard is needed because this CSS class may contain the user membership ID */
-      li[class*='woocommerce-MyAccount-navigation-link--members-area'] a:before {
+      li.woocommerce-MyAccount-navigation-link--members-area a:before {
         content: "\f023";
       }
 
