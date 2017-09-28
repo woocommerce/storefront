@@ -187,7 +187,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 			$logo_id = get_theme_mod( 'custom_logo' ); // Check for WP 4.5 Site Logo
 			$logo_id = $logo_id ? $logo_id : $logo['id']; // Use WP Core logo if present, otherwise use Jetpack's.
 			$size    = site_logo()->theme_size();
-			$html    = sprintf( '<a href="%1$s" class="site-logo-link" rel="home" itemprop="url">%2$s</a>',
+			$html    = sprintf( wp_kses ( '<a href="%1$s" class="site-logo-link" rel="home" itemprop="url">%2$s</a>',
 				esc_url( home_url( '/' ) ),
 				wp_get_attachment_image(
 					$logo_id,
@@ -199,7 +199,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 						'itemprop'  => 'logo'
 					)
 				)
-			);
+			) );
 
 			$html = apply_filters( 'jetpack_the_site_logo', $html, $logo, $size );
 		} else {
@@ -366,7 +366,7 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 				storefront_posted_on();
 			}
 
-			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+			the_title( sprintf(  wp_kses ( __( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ) ) );
 		}
 		?>
 		</header><!-- .entry-header -->
