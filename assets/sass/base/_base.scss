@@ -1203,9 +1203,16 @@ button.menu-toggle {
 		&.menu {
 			li {
 				position: relative;
-				button:after {
-					font: normal normal normal 16px/1 FontAwesome;
-					content: "\f107";
+
+				button {					
+					&:after {
+						font: normal normal normal 16px/1 FontAwesome;
+						content: "\f107";
+					}
+
+					&.toggled-on {
+						transform: rotate(180deg);
+					}
 				}
 			}
 			.sub-menu {
