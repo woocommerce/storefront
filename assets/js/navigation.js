@@ -1,3 +1,4 @@
+/* global storefrontScreenReaderText */
 /**
  * navigation.js
  *
@@ -45,12 +46,48 @@
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
+			jQuery( container ).find( '.dropdown-toggle, .sub-menu ').removeClass( 'toggled-on' );
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 		}
 	};
+
+	// Handheld Navigation - submenu toggles
+	function initMainNavigation( container ) {
+
+		// Add dropdown toggle that displays child menu items.
+		var dropdownToggle = jQuery( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+			.append( jQuery( '<span />', { 'class': 'screen-reader-text', text: storefrontScreenReaderText.expand }) );
+
+		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+
+		// Set the active submenu dropdown toggle button initial state.
+		container.find( '.current-menu-ancestor > button' )
+			.addClass( 'toggled-on' )
+			.attr( 'aria-expanded', 'true' )
+			.find( '.screen-reader-text' )
+			.text( storefrontScreenReaderText.collapse );
+		// Set the active submenu initial state.
+		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+
+		container.find( '.dropdown-toggle' ).click( function( e ) {
+			var _this = jQuery( this ),
+				screenReaderSpan = _this.find( '.screen-reader-text' );
+
+			e.preventDefault();
+			_this.toggleClass( 'toggled-on' );
+			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+
+			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+
+			screenReaderSpan.text( screenReaderSpan.text() === storefrontScreenReaderText.expand ? storefrontScreenReaderText.collapse : storefrontScreenReaderText.expand );
+		});
+	}
+
+	initMainNavigation( jQuery( '.handheld-navigation' ) );
+
 
 	// Sub-menu access from touchscreens
 		var masthead       = jQuery( '#masthead' );
