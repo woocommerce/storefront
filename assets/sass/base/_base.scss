@@ -17,6 +17,11 @@
  * Widgets
  */
 
+// Utilities
+// Sass tools and helpers used across the project.
+@import '../utils/mixins';
+@import '../vendors/font-awesome/font-awesome';
+
 /**
  * Typography
  */
@@ -1204,22 +1209,26 @@ button.menu-toggle {
 			li {
 				position: relative;
 
-				button {					
+				button {				
+
 					&:after {
-						font: normal normal normal 16px/1 FontAwesome;
+						@include fa-icon();
 						content: "\f107";
+						transition: all,ease,.9s;
 					}
 
-					&.toggled-on {
+					&.toggled-on:after {
 						transform: rotate(180deg);
 					}
 				}
 			}
+
 			.sub-menu {
 				visibility: hidden;
 				opacity: 0;
 				max-height: 0;
 				transition: all,ease,.9s;
+
 				&.toggled-on {
 					visibility: visible;
 					max-height: 1750px;
