@@ -1214,7 +1214,7 @@ button.menu-toggle {
 					&:after {
 						@include fa-icon();
 						content: "\f107";
-						transition: all,ease,.9s;
+						transition: all, ease, .9s;
 					}
 
 					&.toggled-on:after {
@@ -1227,7 +1227,7 @@ button.menu-toggle {
 				visibility: hidden;
 				opacity: 0;
 				max-height: 0;
-				transition: all,ease,.9s;
+				transition: all, ease, .9s;
 
 				&.toggled-on {
 					visibility: visible;
