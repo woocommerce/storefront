@@ -278,12 +278,18 @@ table.shop_table_responsive {
  * Products
  */
 ul.products {
+	display: flex;
+	flex-wrap: wrap;
 	margin-left: 0;
 	margin-bottom: 0;
 	clear: both;
 	@include clearfix;
 
 	li.product {
+		align-items: center;
+  		display: flex;
+  		flex-direction: column;
+  		justify-content: space-between;
 		list-style: none;
 		margin-left: 0;
 		margin-bottom: ms(7);
