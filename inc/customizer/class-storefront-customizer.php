@@ -639,7 +639,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			.pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], $darken_factor ) . ';
-				color: ' . storefront_adjust_color_brightness($storefront_theme_mods['text_color'], -10 ) . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], -10 ) . ';
 			}
 
 			#comments .comment-list .comment-content .comment-text {
