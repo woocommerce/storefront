@@ -45,8 +45,8 @@ You're now ready to go! You can now activate Storefront in your WordPress instal
 
 **Please note:** any style changes you make should be done in the Sass files, not the .css files. Once you've changed a .scss file you will want to compile it to see those changes in your setup. There are two ways to do this;
 
-1. *Manually* - Each time you change a css file run `grunt css` in Terminal to compile all of the css.
-2. *Automatically* - run `grunt watch` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
+1. *Manually* - Each time you change a css file run `npm run css` in Terminal to compile all of the css.
+2. *Automatically* - run `npm run watch` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
 
 #### How To Submit A PR
 
