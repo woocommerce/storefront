@@ -16,6 +16,7 @@
 			return;
 		}
 		var siteMain = document.querySelector('.site-main');
+		var htmlDirValue = document.documentElement.getAttribute('dir');
 		var updateDimensions = function() {
 			if (updateDimensions._tick) {
 				cancelAnimationFrame(updateDimensions._tick);
@@ -24,7 +25,7 @@
 				updateDimensions._tick = null;
 				// Make the homepage content full width and centrally aligned.
 				homepageContent.style.width = window.innerWidth + 'px';
-				if (document.documentElement.getAttribute('dir') !== 'rtl') {
+				if (htmlDirValue !== 'rtl') {
 					homepageContent.style.marginLeft = -siteMain.getBoundingClientRect().left + 'px';
 				} else {
 					homepageContent.style.marginRight = -siteMain.getBoundingClientRect().left + 'px';
