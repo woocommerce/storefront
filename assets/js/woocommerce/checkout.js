@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			var gutter = checkoutWidth - addressWidth - paymentWidth;
 			var paymentOffset = addressWidth + gutter;
 			var currentPaymentInput = document.querySelector('.wc_payment_method input:checked');
-			var currentPaymentBox = currentPaymentInput.closest('.payment_box').offsetHeight;
+			var currentPaymentBox = currentPaymentInput.closest('.wc_payment_method').querySelector('.payment_box').offsetHeight;
 			var termsHeight = 0; // If terms aren't being displayed don't include their height in calculations
 			if (document.querySelector('.wc-terms-and-conditions')) {
 				termsHeight = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
