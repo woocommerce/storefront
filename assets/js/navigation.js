@@ -12,13 +12,13 @@
 		if (!container) {
 			return;
 		}
-
-		var button = container.querySelector('button.menu-toggle');
+		
+		var button = container.querySelector('button');
 		if (!button) {
 			return;
 		}
-
-		var menu = document.getElementById('menu-navigation');
+		
+		var menu = container.querySelector('ul');
 		// Hide menu toggle button if menu is empty and return early.
 		if (!menu) {
 			button.style.display = 'none';
