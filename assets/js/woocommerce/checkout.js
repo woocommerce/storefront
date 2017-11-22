@@ -24,29 +24,26 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 
 			var tallestPaymentBox = -1;
+			var currentPaymentBox = -1;
 			document.querySelectorAll('.payment_box').forEach(function(box) {
-				tallestPaymentBox = Math.max(tallestPaymentBox, box.offsetHeight);
+				var boxHeight = box.offsetHeight;
+				tallestPaymentBox = Math.max(tallestPaymentBox, boxHeight);
+				if (box.querySelector('input:checked')) {
+					currentPaymentBox = boxHeight;
+				}
 			});
 
-			var topDistance = document.scrollTop;
-			var paymentWidth = review.offsetWidth;
-			var paymentHeight = review.offsetHeight;
-			var checkoutWidth = checkout.offsetWidth;
-			var addressWidth = details.offsetWidth;
-			var gutter = checkoutWidth - addressWidth - paymentWidth;
-			var paymentOffset = addressWidth + gutter;
-			var currentPaymentInput = document.querySelector('.wc_payment_method input:checked');
-			var currentPaymentBox = currentPaymentInput.closest('.wc_payment_method').querySelector('.payment_box').offsetHeight;
 			var termsHeight = 0; // If terms aren't being displayed don't include their height in calculations
 			if (document.querySelector('.wc-terms-and-conditions')) {
 				termsHeight = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
 			}
-			var expandedHeight = paymentHeight + termsHeight + (tallestPaymentBox - currentPaymentBox + 30);
-			var customerDetailsHeight = details.offsetHeight;
+			var expandedHeight = review.offsetHeight + termsHeight + (tallestPaymentBox - currentPaymentBox + 30);
 
 			// If we're in desktop orientation and the order review column is taller than the customer details column and smaller than the window height
-			if (customerDetailsHeight > expandedHeight && window.innerWidth > 768 && window.innerHeight > expandedHeight) {
-				if (topDistance > heading.getBoundingClientRect().top) {
+			if (details.offsetHeight > expandedHeight && window.innerWidth > 768 && window.innerHeight > expandedHeight) {
+				if (document.body.scrollTop > heading.getBoundingClientRect().top) {
+					var paymentWidth = review.offsetWidth;
+					var paymentOffset = checkout.offsetWidth - paymentWidth;
 					review.classList.add('payment-fixed');
 					review.style.width = paymentWidth + 'px';
 					// Compute only once rtl.
