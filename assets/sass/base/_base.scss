@@ -1398,7 +1398,8 @@ button.menu-toggle {
 			width: 100%;
 		}
 
-		input[type=submit] {
+		input[type=submit],
+		button[type=submit] {
 			@include screen-reader-text();
 			top: 0;
 			left: 0;
