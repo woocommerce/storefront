@@ -118,6 +118,12 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 			}
 
 			$steps[] = array(
+				'title'   => __( 'Customize your navigation menus', 'storefront' ),
+				'message' => __( 'Organize your menus by adding Pages, Categories, Tags, and Custom Links.', 'storefront' ),
+				'section' => 'nav_menus',
+			);
+
+			$steps[] = array(
 				'title'   => __( 'Choose your accent color', 'storefront' ),
 				'message' => __( 'In the typography panel you can specify an accent color which will be applied to things like links and star ratings. We recommend using your brand color for this setting.', 'storefront' ),
 				'section' => 'storefront_typography',
