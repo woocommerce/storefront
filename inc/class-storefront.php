@@ -112,7 +112,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_theme_support( 'site-logo', array( 'size' => 'full' ) );
 
 			// Declare WooCommerce support.
-			add_theme_support( 'woocommerce' );
+			add_theme_support( 'woocommerce', apply_filters( 'storefront_woocommerce_args', array(
+				'single_image_width'    => 324,
+				'thumbnail_image_width' => 232,
+			) ) );
+
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
@@ -165,7 +169,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					);
 				}
 			}
-			
+
 			$sidebar_args = apply_filters( 'storefront_sidebar_args', $sidebar_args );
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
