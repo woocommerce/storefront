@@ -1,5 +1,15 @@
 # Storefront Changelog
 
+### *2017.12.##* - 2.2.6
+* **Dev** - [WooCommerce 3.3] - Declare image sizes.
+* **Dev** - [WooCommerce 3.3] - Hide search button.
+* **Fix** - Apply styles to `a.woocommerce-store-notice__dismiss-link` instead of all links in the store notice.
+* **New** - Added "Navigation menus" step to Guided tour.
+* **Tweak** - Guided tour in the Customizer in now shown to all sites.
+* **Fix** - Fix hidden content when there are no reviews.
+* **Dev** - `composer.json` file. Kudos [@pmgarman](https://github.com/pmgarman).
+* **Fix** - Fixed typo in the `Storefront_WooCommerce` class, `thumbnail_columns` method description. Kudos [@cryptexvinci](https://github.com/cryptexvinci).
+
 ### *2017.08.21* - 2.2.5
 * **New** - Add access to submenus from touchscreen devices. Kudos [@mikeyarce](https://github.com/mikeyarce).
 * **New** - Add styles for keyboard navigation on focus items. Kudos [@mikeyarce](https://github.com/mikeyarce).
