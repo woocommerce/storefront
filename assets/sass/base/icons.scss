@@ -892,10 +892,12 @@ a#variations_clear {
 
 	.demo_store {
 		a {
-			&:before {
-				@include fa-icon();
-				content: "\f057";
-				margin-right: ms(-5);
+			&.woocommerce-store-notice__dismiss-link {
+				&:before {
+					@include fa-icon();
+					content: "\f057";
+					margin-right: ms(-5);
+				}
 			}
 		}
 	}
