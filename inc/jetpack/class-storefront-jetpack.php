@@ -38,7 +38,6 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 			add_theme_support( 'infinite-scroll', apply_filters( 'storefront_jetpack_infinite_scroll_args', array(
 				'container'      => 'main',
 				'footer'         => 'page',
-				'type'           => 'click',
 				'posts_per_page' => '12',
 				'render'         => array( $this, 'jetpack_infinite_scroll_loop' ),
 				'footer_widgets' => array(
