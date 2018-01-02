@@ -185,7 +185,13 @@ if ( ! function_exists( 'storefront_loop_columns' ) ) {
 	 * @since  1.0.0
 	 */
 	function storefront_loop_columns() {
-		return apply_filters( 'storefront_loop_columns', 3 ); // 3 products per row
+		$columns = 3; // 3 products per row
+
+		if ( function_exists( 'wc_get_default_products_per_row' ) ) {
+			$columns = wc_get_default_products_per_row();
+		}
+
+		return apply_filters( 'storefront_loop_columns', $columns );
 	}
 }
 
