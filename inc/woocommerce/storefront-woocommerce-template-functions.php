@@ -173,7 +173,7 @@ if ( ! function_exists( 'storefront_product_columns_wrapper' ) ) {
 	 */
 	function storefront_product_columns_wrapper() {
 		$columns = storefront_loop_columns();
-		echo '<div class="columns-' . intval( $columns ) . '">';
+		echo '<div class="columns-' . absint( $columns ) . '">';
 	}
 }
 
