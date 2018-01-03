@@ -163,11 +163,18 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		/**
 		 * Products per page
 		 *
-		 * @return integer number of products
 		 * @since  1.0.0
+		 * @param  integer $number number of products
+		 * @return integer         number of products
 		 */
-		public function products_per_page() {
-			return intval( apply_filters( 'storefront_products_per_page', 12 ) );
+		public function products_per_page( $number ) {
+
+			// Default number of products if < WooCommerce 3.3.
+			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
+				$number = 12;
+			}
+
+			return absint( apply_filters( 'storefront_products_per_page', $number ) );
 		}
 
 		/**
