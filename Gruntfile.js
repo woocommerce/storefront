@@ -340,7 +340,8 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/quick-view.css',
 					'assets/sass/woocommerce/woocommerce.css',
 					'assets/sass/admin/welcome-screen/welcome.css',
-					'assets/sass/jetpack/jetpack.css'
+					'assets/sass/jetpack/jetpack.css',
+					'assets/sass/base/icons.css'
 				]
 			}
 		},
