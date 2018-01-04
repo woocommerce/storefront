@@ -295,30 +295,76 @@ module.exports = function( grunt ) {
 
 		// RTLCSS
 		rtlcss: {
-			options: {
-				config: {
-					swapLeftRightInUrl: false,
-					swapLtrRtlInUrl: false,
-					autoRename: false,
-					preserveDirectives: true
-				},
-				properties : [
-					{
-						name: 'swap-fontawesome-left-right-angles',
-						expr: /content/im,
-						action: function( prop, value ) {
-							if ( value === '"\\f105"' ) { // fontawesome-angle-left
-								value = '"\\f104"';
-							}
-							if ( value === '"\\f178"' ) { // fontawesome-long-arrow-right
-								value = '"\\f177"';
-							}
-							return { prop: prop, value: value };
-						}
-					}
-				]
-			},
 			main: {
+				options: {
+					plugins: [
+						{
+							name: 'swap-fontawesome-directional-icons',
+							priority: 10,
+							directives: {
+								control: {},
+								value: []
+							},
+							processors: [
+								{
+									expr: /content/im,
+									action: function( prop, value ) {
+										if ( value === '"\\f190"' ) { // arrow-circle-o-left
+											value = '"\\f18e"';
+										} else if ( value === '"\\f18e"' ) { // arrow-circle-o-right
+											value = '"\\f190"';
+										} else if ( value === '"\\f191"' ) { // caret-square-o-left
+											value = '"\\f152"';
+										} else if ( value === '"\\f152"' ) { // caret-square-o-right
+											value = '"\\f191"';
+										} else if ( value === '"\\f100"' ) { // angle-double-left
+											value = '"\\f101"';
+										} else if ( value === '"\\f101"' ) { // angle-double-right
+											value = '"\\f100"';
+										} else if ( value === '"\\f104"' ) { // angle-left
+											value = '"\\f105"';
+										} else if ( value === '"\\f105"' ) { // angle-right
+											value = '"\\f104"';
+										} else if ( value === '"\\f0a8"' ) { // arrow-circle-left
+											value = '"\\f0a9"';
+										} else if ( value === '"\\f0a9"' ) { // arrow-circle-right
+											value = '"\\f0a8"';
+										} else if ( value === '"\\f060"' ) { // arrow-left
+											value = '"\\f061"';
+										} else if ( value === '"\\f061"' ) { // arrow-right
+											value = '"\\f060"';
+										} else if ( value === '"\\f0d9"' ) { // caret-left
+											value = '"\\f0da"';
+										} else if ( value === '"\\f0da"' ) { // caret-right
+											value = '"\\f0d9"';
+										} else if ( value === '"\\f137"' ) { // chevron-circle-left
+											value = '"\\f138"';
+										} else if ( value === '"\\f138"' ) { // chevron-circle-right
+											value = '"\\f137"';
+										} else if ( value === '"\\f053"' ) { // chevron-left
+											value = '"\\f054"';
+										} else if ( value === '"\\f054"' ) { // chevron-right
+											value = '"\\f053"';
+										} else if ( value === '"\\f0a5"' ) { // hand-o-left
+											value = '"\\f0a4"';
+										} else if ( value === '"\\f0a4"' ) { // hand-o-right
+											value = '"\\f0a5"';
+										} else if ( value === '"\\f177"' ) { // long-arrow-left
+											value = '"\\f178"';
+										} else if ( value === '"\\f178"' ) { // long-arrow-right
+											value = '"\\f177"';
+										} else if ( value === '"\\f191"' ) { // toggle-left
+											value = '"\\f152"';
+										} else if ( value === '"\\f152"' ) { // toggle-right
+											value = '"\\f191"';
+										}
+										return { prop: prop, value: value };
+									}
+								}
+							]
+						}
+					]
+				},
 				expand: true,
 				ext: '-rtl.css',
 				src: [
@@ -340,7 +386,8 @@ module.exports = function( grunt ) {
 					'assets/sass/woocommerce/extensions/quick-view.css',
 					'assets/sass/woocommerce/woocommerce.css',
 					'assets/sass/admin/welcome-screen/welcome.css',
-					'assets/sass/jetpack/jetpack.css'
+					'assets/sass/jetpack/jetpack.css',
+					'assets/sass/base/icons.css'
 				]
 			}
 		},
