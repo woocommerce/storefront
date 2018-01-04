@@ -753,7 +753,7 @@ table {
 	}
 
 	.entry-meta {
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	&.type-page {
@@ -880,6 +880,10 @@ input[type="search"]::-webkit-search-decoration { /* Corrects inner padding disp
 
 input[type="search"] {
 	box-sizing: border-box; // Overrules normalize.css.
+
+	&::placeholder {
+		color: #616161;
+	}
 }
 
 button::-moz-focus-inner,
@@ -1367,7 +1371,7 @@ button.menu-toggle {
 
 .widget-area {
 	.widget {
-		font-weight: 300;
+		font-weight: 400;
 
 		a.button {
 			font-weight: 600 !important;

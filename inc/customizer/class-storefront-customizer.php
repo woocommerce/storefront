@@ -47,7 +47,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'storefront_text_color'                  => '#6d6d6d',
 				'storefront_accent_color'                => '#96588a',
 				'storefront_header_background_color'     => '#ffffff',
-				'storefront_header_text_color'           => '#6d6d6d',
+				'storefront_header_text_color'           => '#404040',
 				'storefront_header_link_color'           => '#333333',
 				'storefront_footer_background_color'     => '#f0f0f0',
 				'storefront_footer_heading_color'        => '#333333',
@@ -526,7 +526,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.site-header-cart .widget_shopping_cart a:hover,
 			.site-header-cart:hover > li > a,
 			.site-header ul.menu li.current-menu-item > a {
-				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 80 ) . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 65 ) . ';
 			}
 
 			table th {
@@ -594,7 +594,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.widget-area .widget a,
 			.hentry .entry-header .posted-on a,
 			.hentry .entry-header .byline a {
-				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 50 ) . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 5 ) . ';
 			}
 
 			a  {
@@ -639,7 +639,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			.pagination .page-numbers li .page-numbers.current, .woocommerce-pagination .page-numbers li .page-numbers.current {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], $darken_factor ) . ';
-				color: ' . $storefront_theme_mods['text_color'] . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], -10 ) . ';
 			}
 
 			#comments .comment-list .comment-content .comment-text {
@@ -737,7 +737,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.woocommerce-breadcrumb a,
 			a.woocommerce-review-link,
 			.product_meta a {
-				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 50 ) . ';
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 5 ) . ';
 			}
 
 			.onsale {
