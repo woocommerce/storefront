@@ -120,8 +120,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					'default_rows'    => 4,
 					'min_columns'     => 1,
 					'max_columns'     => 6,
-					'min_rows'        => 1,
-					'max_rows'        => ''
+					'min_rows'        => 1
 				)
 			) ) );
 
