@@ -33,9 +33,7 @@ textarea {
 	color: $color_body;
 	font-family: $base-font;
 	line-height: 1.618;
-	-moz-osx-font-smoothing: grayscale;
 	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
 	font-weight: 400;
 }
 
@@ -831,7 +829,6 @@ input[type="submit"],
 	display: inline-block;
 	outline: none;
 	-webkit-appearance: none;
-	-webkit-font-smoothing: antialiased;
 	border-radius: 0;
 
 	&.cta,
