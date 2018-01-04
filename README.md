@@ -1,4 +1,14 @@
-# Storefront [![Designed for WooCommerce](http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg)](https://woocommerce.com/) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/) [![Build Status](https://scrutinizer-ci.com/g/woothemes/storefront/badges/build.png?b=master)](https://scrutinizer-ci.com/g/woothemes/storefront/build-status/master)
+<h1 align="center">
+  <img src="https://storefront.files.wordpress.com/2017/02/storefront1.png?w=100&h=100&crop=1" alt="Storefront">
+</h1>
+
+<p align="center">
+  <a href="https://packagist.org/packages/woocommerce/woocommerce"><img src="https://poser.pugx.org/woocommerce/woocommerce/license" alt="license"></a> 
+  <a href="https://woocommerce.com/"><img src="http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg" alt="Designed for WooCommerce"></a>
+  <img src="https://img.shields.io/wordpress/theme/dt/storefront.svg" alt="WordPress.org downloads">
+  <img src="https://img.shields.io/wordpress/theme/r/storefront.svg" alt="WordPress.org rating">
+  <a href="https://scrutinizer-ci.com/g/woothemes/storefront/build-status/master"><img src="https://scrutinizer-ci.com/g/woothemes/storefront/badges/build.png?b=master" alt="Build Status"></a>
+</p>
 
 *Storefront* is a robust and flexible [WordPress](http://wordpress.org) theme, designed and built by the team at [WooCommerce](https://woocommerce.com/) to help you make the most out of using the [WooCommerce](http://woocommerce.com) plugin to power your online store. It's available to download for free from the WordPress [theme repository](https://wordpress.org/themes/storefront/).
 
