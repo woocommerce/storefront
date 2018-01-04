@@ -37,17 +37,16 @@ If you think something could be improved and you're able to do so, make your cha
 Storefront utilises technologies such as [Grunt](http://gruntjs.com/), [Sass](http://sass-lang.com/), [Bourbon](http://bourbon.io/) and [Susy](http://susy.oddbird.net/) to standardise and speed up development. You should familiarise yourself with each before contributing. To get started with your Storefront development environment:
 
 * Install [Node.js](https://nodejs.org/en/) with NPM, its package manager.
-* Install [Grunt](http://gruntjs.com/installing-grunt).
 * [Fork](https://help.github.com/articles/fork-a-repo/) the [Storefront repository](https://github.com/woothemes/storefront) on GitHub.
 * Pull the Storefront project dependencies into your environment by navigating to your `/storefront/` directory in Terminal then run `npm install`.
-* Run Grunt jobs with the command `grunt`. This will create local copies of Storefront css (we do not version control the .css files) and minify them and JS scripts.
+* Run Grunt jobs with the command `npm run build`. This will create local copies of Storefront css (we do not version control the .css files) and minify them and JS scripts.
 
 You're now ready to go! You can now activate Storefront in your WordPress install and begin making changes.
 
 **Please note:** any style changes you make should be done in the Sass files, not the .css files. Once you've changed a .scss file you will want to compile it to see those changes in your setup. There are two ways to do this;
 
-1. *Manually* - Each time you change a css file run `grunt css` in Terminal to compile all of the css.
-2. *Automatically* - run `grunt watch` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
+1. *Manually* - Each time you change a css file run `npm run css` in Terminal to compile all of the css.
+2. *Automatically* - run `npm run watch` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
 
 #### How To Submit A PR
 

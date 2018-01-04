@@ -7,6 +7,11 @@
     "type": "git",
     "url": "https://github.com/woothemes/storefront.git"
   },
+  "scripts": {
+    "build": "grunt",
+    "css": "grunt css",
+    "watch": "grunt watch"
+  },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
