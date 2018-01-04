@@ -341,7 +341,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 					border: 0 !important;
 					border-radius: 3px !important;
 					font-family: "Source Sans Pro", "Open Sans", sans-serif !important;
-					-webkit-font-smoothing: antialiased;
 					background-color: <?php echo esc_html( storefront_adjust_color_brightness( $background_color, -7 ) ); ?> !important;
 				}
 
