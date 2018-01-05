@@ -40,7 +40,7 @@
 
 		window.RGBaster.colors( img, {
 			paletteSize: 1,
-			success: function(payload) {
+			success: function( payload ) {
 				var rgb = payload.dominant;
 				var colors = rgb.match( /^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/ );
 
@@ -62,10 +62,10 @@
 				var color = 'rgb(' + newr + ', ' + newg + ', ' + newb + ')';
 
 				homepageContent.style.color = color;
-				homepageContent.querySelectorAll( 'h1' ).forEach( function(h1) {
+				homepageContent.querySelectorAll( 'h1' ).forEach( function( h1 ) {
 					h1.style.color = color;
 				} );
-				homepageContent.querySelectorAll( '.entry-title, .entry-content' ).forEach( function(el) {
+				homepageContent.querySelectorAll( '.entry-title, .entry-content' ).forEach( function( el ) {
 					el.classList.add( 'loaded' );
 					el.style.textShadow = brightness >= 30 ? '0 4px 30px rgba(0,0,0,.9)' : '';
 				} );

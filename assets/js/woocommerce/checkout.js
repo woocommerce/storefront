@@ -25,7 +25,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 			var tallestPaymentBox = -1;
 			var currentPaymentBox = -1;
-			document.querySelectorAll( '.payment_box' ).forEach( function(box) {
+			document.querySelectorAll( '.payment_box' ).forEach( function( box ) {
 				var boxHeight = box.offsetHeight;
 				tallestPaymentBox = Math.max( tallestPaymentBox, boxHeight );
 				if ( box.querySelector( 'input:checked' ) ) {
