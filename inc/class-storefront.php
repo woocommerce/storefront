@@ -245,12 +245,12 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array(), '20120206', true );
+			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array(), $storefront_version, true );
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix' . $suffix . '.js', array(), '20130115', true );
 
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
 				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array(), '1.1.0', true );
-				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array(), '20120206', true );
+				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array(), $storefront_version, true );
 			}
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
