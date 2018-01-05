@@ -127,7 +127,20 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 		<div class="site-info">
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
-			<br /> <?php printf( esc_attr__( 'Built with %1$s by %2$s.', 'storefront' ), 'Storefront', '<a href="https://woocommerce.com" title="WooCommerce - The Best eCommerce Platform for WordPress" rel="author">WooCommerce</a>' ); ?>
+			<br /> <?php printf(
+					wp_kses(
+						__( 'Built with <a href="%1$s" target="_blank" title="WooCommerce - The Best eCommerce Platform for WordPress" rel="author">Storefront & WooCommerce</a>.', 'storefront' ),
+						array(
+							'a' => array(
+								'href'   => array(),
+								'target' => array(),
+								'title'  => array(),
+								'rel'    => array(),
+							),
+						)
+					),
+					'https://woocommerce.com'
+				); ?>
 			<?php } ?>
 		</div><!-- .site-info -->
 		<?php
