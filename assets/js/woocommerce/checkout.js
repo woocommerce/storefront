@@ -38,27 +38,24 @@ document.addEventListener( 'DOMContentLoaded', function() {
 				termsHeight = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
 			}
 			var expandedHeight = review.offsetHeight + termsHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
-
-			// If we're in desktop orientation and the order review column is taller than the customer details column and smaller than the window height
-			if ( details.offsetHeight > expandedHeight && window.innerWidth > 768 && window.innerHeight > expandedHeight ) {
-				if ( document.body.scrollTop > heading.getBoundingClientRect().top ) {
-					var paymentWidth = review.offsetWidth;
-					var paymentOffset = checkout.offsetWidth - paymentWidth;
-					review.classList.add( 'payment-fixed' );
-					review.style.width = paymentWidth + 'px';
-					// Compute only once rtl.
-					if ( review._isRTL === undefined ) {
-						review._isRTL = getComputedStyle( review ).direction === 'rtl';
-					}
-					if ( review._isRTL ) {
-						review.style.marginRight = paymentOffset + 'px';
-					} else {
-						review.style.marginLeft = paymentOffset + 'px';
-					}
-				} else {
-					review.classList.remove( 'payment-fixed' );
-					review.removeAttribute( 'style' );
+			// Ensure user can always see Place order when customer details and order review are side by side.
+			if ( details.offsetLeft < heading.offsetLeft && heading.getBoundingClientRect().top <= 0 && window.innerHeight > expandedHeight ) {
+				var paymentWidth = review.offsetWidth;
+				var paymentOffset = checkout.offsetWidth - paymentWidth;
+				review.classList.add( 'payment-fixed' );
+				review.style.width = paymentWidth + 'px';
+				// Compute only once rtl.
+				if ( review._isRTL === undefined ) {
+					review._isRTL = getComputedStyle( review ).direction === 'rtl';
 				}
+				if ( review._isRTL ) {
+					review.style.marginRight = paymentOffset + 'px';
+				} else {
+					review.style.marginLeft = paymentOffset + 'px';
+				}
+			} else {
+				review.classList.remove( 'payment-fixed' );
+				review.removeAttribute( 'style' );
 			}
 		} );
 	}
