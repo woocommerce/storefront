@@ -117,13 +117,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( is_product() ) {
 		?>
 			<script type="text/javascript">
-				var starsEl = document.querySelector('#respond p.stars');
-				if (starsEl) {
-					starsEl.addEventListener('click', function(event) {
-						if (event.target.tagName === 'A') {
-							starsEl.classList.add('selected');
+				var starsEl = document.querySelector( '#respond p.stars' );
+				if ( starsEl ) {
+					starsEl.addEventListener( 'click', function( event ) {
+						if ( event.target.tagName === 'A' ) {
+							starsEl.classList.add( 'selected' );
 						}
-					});
+					} );
 				}
 			</script>
 		<?php
