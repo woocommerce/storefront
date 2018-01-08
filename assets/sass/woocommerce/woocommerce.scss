@@ -876,6 +876,7 @@ a.reset_variations {
 
 	.ui-slider .ui-slider-handle {
 		position: absolute;
+		top: auto;
 		z-index: 2;
 		width: 1em;
 		height: 1em;
@@ -886,7 +887,9 @@ a.reset_variations {
 		background: $color_links;
 		box-sizing: border-box;
 		margin-top: -.25em;
+		margin-left: auto;
 		opacity: 1;
+		border: 0;
 
 		&:last-child {
 			margin-left: -1em;
@@ -913,6 +916,7 @@ a.reset_variations {
 		@include border-top-radius(1em);
 		@include border-bottom-radius(1em);
 		background: rgba(0,0,0,0.1);
+		border: 0;
 	}
 
 	.ui-slider-horizontal {
