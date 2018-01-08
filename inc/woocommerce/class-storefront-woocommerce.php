@@ -350,8 +350,12 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
 				}
 
-				.wc-bookings-date-picker .ui-datepicker td.bookable-range .ui-state-default {
+				.wc-bookings-date-picker .ui-datepicker td.bookable a.ui-state-default {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['accent_color'], -10 ) . ' !important;
+				}
+
+				.wc-bookings-date-picker .ui-datepicker td.bookable a.ui-state-active {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['accent_color'], -50 ) . ' !important;
 				}
 				';
 			}
