@@ -879,14 +879,18 @@ a.reset_variations {
 		z-index: 2;
 		width: 1em;
 		height: 1em;
-		border: 0;
 		@include border-top-radius(1em);
 		@include border-bottom-radius(1em);
 		cursor: ew-resize;
 		outline: none;
 		background: $color_links;
 		box-sizing: border-box;
+		margin-top: -.25em;
 		opacity: 1;
+
+		&:last-child {
+			margin-left: -1em;
+		}
 
 		&:hover,
 		&.ui-state-active {
@@ -913,7 +917,6 @@ a.reset_variations {
 	}
 
 	.ui-slider-horizontal {
-		margin: 0 .5em ms(2) .5em;
 		height: .5em;
 	}
 
