@@ -423,11 +423,11 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search.
 
 			?>
-			<div class="author">
+			<div class="vcard author">
 				<?php
 					echo get_avatar( get_the_author_meta( 'ID' ), 128 );
 					echo '<div class="label">' . esc_attr( __( 'Written by', 'storefront' ) ) . '</div>';
-					the_author_posts_link();
+					echo sprintf( '<a href="%1$s" class="url fn" rel="author">%2$s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 				?>
 			</div>
 			<?php
