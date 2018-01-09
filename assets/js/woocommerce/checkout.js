@@ -1,65 +1,63 @@
-jQuery( window ).load( function() {
+document.addEventListener( 'DOMContentLoaded', function() {
+
+	// Do sticky on scroll
+	document.addEventListener( 'scroll', stickyPayment );
+	// Do sticky on window resize
+	window.addEventListener( 'resize', stickyPayment );
 
 	/**
 	 * Make the order review element stick to the top of the browser window.
 	 */
 	function stickyPayment() {
-		var windowHeight	= jQuery( window ).height();
-		var paymentHeight	= jQuery( '#order_review' ).height();
-
-		if ( ! jQuery( '#order_review_heading' ).length || ! jQuery( 'form.woocommerce-checkout' ).length || ! jQuery( '#customer_details' ).length ) {
-			return;
+		if ( stickyPayment._tick ) {
+			cancelAnimationFrame( stickyPayment._tick );
 		}
 
-		var tallestPaymentBox = -1;
-		jQuery( '.payment_box' ).each( function() {
-			tallestPaymentBox = tallestPaymentBox > jQuery( this ).outerHeight() ? tallestPaymentBox : jQuery( this ).outerHeight();
-		});
+		stickyPayment._tick = requestAnimationFrame( function() {
+			stickyPayment._tick = null;
 
-		var topDistance           = jQuery( document ).scrollTop();
-		var paymentWidth          = jQuery( '#order_review_heading' ).outerWidth();
-		var	checkoutWidth         = jQuery( 'form.woocommerce-checkout' ).outerWidth();
-		var	addressWidth          = jQuery( '#customer_details' ).outerWidth();
-		var	gutter                = checkoutWidth - addressWidth - paymentWidth;
-		var	paymentOffset         = addressWidth + gutter;
-		var checkoutPosition      = jQuery( '#order_review_heading' ).offset();
-		var currentPaymentBox     = jQuery( '.wc_payment_method input:checked' ).siblings( '.payment_box' ).outerHeight();
-		var termsHeight           = 0; // If terms aren't being displayed don't include their height in calculations
-		if ( jQuery( '.wc-terms-and-conditions' ).length ) {
-			termsHeight           = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
-		}
-		var expandedHeight        = paymentHeight + termsHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
-		var customerDetailsHeight = jQuery( '#customer_details' ).outerHeight();
+			var review = document.querySelector( '#order_review' );
+			var heading = document.querySelector( '#order_review_heading' );
+			var checkout = document.querySelector( 'form.woocommerce-checkout' );
+			var details = document.querySelector( '#customer_details' );
+			if ( !heading || !checkout || !details ) {
+				return;
+			}
 
-		// If we're in desktop orientation and the order review column is taller than the customer details column and smaller than the window height
-		if ( ( jQuery( window ).width() > 768 ) && ( customerDetailsHeight > expandedHeight ) && ( windowHeight > expandedHeight ) ) {
-
-				if ( topDistance > checkoutPosition.top ) {
-					jQuery( '#order_review' ).addClass( 'payment-fixed' );
-					if ( jQuery( '#order_review' ).css( 'direction' ) === 'rtl' ) {
-						jQuery( '#order_review' ).css({
-							'margin-right':		paymentOffset,
-							'width':			paymentWidth
-						});
-					} else {
-						jQuery( '#order_review' ).css({
-							'margin-left':		paymentOffset,
-							'width':			paymentWidth
-						});
-					}
-				} else {
-					jQuery( '#order_review' ).removeAttr( 'style' ).removeClass( 'payment-fixed' );
+			var tallestPaymentBox = -1;
+			var currentPaymentBox = -1;
+			document.querySelectorAll( '.payment_box' ).forEach( function( box ) {
+				var boxHeight = box.offsetHeight;
+				tallestPaymentBox = Math.max( tallestPaymentBox, boxHeight );
+				if ( box.querySelector( 'input:checked' ) ) {
+					currentPaymentBox = boxHeight;
 				}
-		}
+			} );
+
+			var termsHeight = 0; // If terms aren't being displayed don't include their height in calculations
+			if ( document.querySelector( '.wc-terms-and-conditions' ) ) {
+				termsHeight = 216; // This is static and set by WooCommerce core + 16px margin added by Storefront
+			}
+			var expandedHeight = review.offsetHeight + termsHeight + ( tallestPaymentBox - currentPaymentBox + 30 );
+			// Ensure user can always see Place order when customer details and order review are side by side.
+			if ( details.offsetLeft < heading.offsetLeft && heading.getBoundingClientRect().top <= 0 && window.innerHeight > expandedHeight ) {
+				var paymentWidth = review.offsetWidth;
+				var paymentOffset = checkout.offsetWidth - paymentWidth;
+				review.classList.add( 'payment-fixed' );
+				review.style.width = paymentWidth + 'px';
+				// Compute only once rtl.
+				if ( review._isRTL === undefined ) {
+					review._isRTL = getComputedStyle( review ).direction === 'rtl';
+				}
+				if ( review._isRTL ) {
+					review.style.marginRight = paymentOffset + 'px';
+				} else {
+					review.style.marginLeft = paymentOffset + 'px';
+				}
+			} else {
+				review.classList.remove( 'payment-fixed' );
+				review.removeAttribute( 'style' );
+			}
+		} );
 	}
-
-	// Do sticky on scroll
-	jQuery( window ).scroll( function() {
-		stickyPayment();
-	});
-
-	// Do sticky on window resize
-	jQuery( window ).resize( function() {
-		stickyPayment();
-	});
-});
+} );
