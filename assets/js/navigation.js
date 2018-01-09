@@ -6,107 +6,62 @@
  * Finally adds a class required to reveal the search in the handheld footer bar.
  */
 ( function() {
-	// Add class to footer search when clicked
-	jQuery( window ).load( function() {
-		jQuery( '.storefront-handheld-footer-bar .search > a' ).click( function(e) {
-			jQuery( this ).parent().toggleClass( 'active' );
-			e.preventDefault();
-		});
-	});
-
-	var container, button, menu;
-
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
-	}
-
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
-
-	menu = container.getElementsByTagName( 'ul' )[0];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	menu.setAttribute( 'aria-expanded', 'false' );
-
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
-
-	// Sub-menu access from touchscreens
-		var masthead       = jQuery( '#masthead' );
-		var siteNavigation = masthead.find( '.main-navigation > div > ul' );
-
-		function toggleFocusClassTouchScreen() {
-
-			// Ensure the dropdowns close when user taps outside the site header
-			jQuery( document.body ).on( 'touchstart.storefront', function( e ) {
-				if ( ! jQuery( e.target ).closest( '.main-navigation li' ).length ) {
-					jQuery( '.main-navigation li' ).removeClass( 'focus' );
-				}
-			});
-
-			// Disables the link from working on the first touch of a menu with children
-			siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-				.on( 'touchstart.storefront', function( e ) {
-					var el = jQuery( this ).parent( 'li' );
-
-					if ( ! el.hasClass( 'focus' ) ) {
-						e.preventDefault();
-						el.toggleClass( 'focus' );
-						el.siblings( '.focus' ).removeClass( 'focus' );
-					}
-				});
-		}
-		// Add Focus Class for parents of sub-menus
-		siteNavigation.find( 'a' ).on( 'focus.storefront blur.storefront', function() {
-			jQuery( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
-		});
-
-		// Triggers toggleFocusClassTouchScreen on touchscreen devices
-		if ( 'ontouchstart' in window ) {
-			jQuery( window ).on( 'resize.storefront', toggleFocusClassTouchScreen );
-			toggleFocusClassTouchScreen();
+	// Wait for DOM to be ready.
+	document.addEventListener( 'DOMContentLoaded', function() {
+		var container = document.getElementById( 'site-navigation' );
+		if ( !container ) {
+			return;
 		}
 
-	// Add focus to cart dropdown
-	jQuery( window ).load( function() {
-		jQuery( '.site-header-cart' ).find( 'a' ).on( 'focus.storefront blur.storefront', function() {
-			jQuery( this ).parents().toggleClass( 'focus' );
-		});
-	});
+		var button = container.querySelector( 'button' );
+		if ( !button ) {
+			return;
+		}
 
-	if ( is_touch_device() && jQuery( window ).width() > 767 ) {
+		var menu = container.querySelector( 'ul' );
+		// Hide menu toggle button if menu is empty and return early.
+		if ( !menu ) {
+			button.style.display = 'none';
+			return;
+		}
+
+		button.setAttribute( 'aria-expanded', 'false' );
+		menu.setAttribute( 'aria-expanded', 'false' );
+		menu.classList.add( 'nav-menu' );
+
+		button.addEventListener( 'click', function() {
+			container.classList.toggle( 'toggled' );
+			var expanded = container.classList.contains( 'toggled' ) ? 'true' : 'false';
+			button.setAttribute( 'aria-expanded', expanded );
+			menu.setAttribute( 'aria-expanded', expanded );
+		} );
+
+		// Add class to footer search when clicked.
+		document.querySelectorAll( '.storefront-handheld-footer-bar .search > a' ).forEach( function( anchor ) {
+			anchor.addEventListener( 'click', function( event ) {
+				anchor.parentElement.classList.toggle( 'active' );
+				event.preventDefault();
+			} );
+		} );
+
+		// Add focus class to parents of sub-menu anchors.
+		document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ).forEach( function( anchor ) {
+			var li = anchor.parentNode;
+			anchor.addEventListener( 'focus', function() {
+				li.classList.add( 'focus' );
+			} );
+			anchor.addEventListener( 'blur', function() {
+				li.classList.remove( 'focus' );
+			} );
+		} );
+
 		// Add an identifying class to dropdowns when on a touch device
 		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
-		jQuery( '.main-navigation ul ul, .secondary-navigation ul ul, .site-header-cart .widget_shopping_cart' ).addClass( 'sub-menu--is-touch-device' );
+		if ( ( 'ontouchstart' in window || navigator.maxTouchPoints ) && window.innerWidth > 767 ) {
+			document.querySelectorAll( '.site-header ul ul, .site-header-cart .widget_shopping_cart' ).forEach( function( element ) {
+				element.classList.add( 'sub-menu--is-touch-device' );
+			} );
+		}
+	} );
 
-	}
-
-	/**
-	 * Check if the device is touch enabled
-	 * @return Boolean
-	 */
-	function is_touch_device() {
-		return 'ontouchstart' in window || navigator.maxTouchPoints;
-	}
 } )();
