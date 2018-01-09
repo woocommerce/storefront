@@ -1105,6 +1105,7 @@ form.checkout {
 		margin: 0 !important;
 		padding: 0 !important;
 
+		> .woocommerce-PaymentMethod,
 		> .wc_payment_method {
 			> label {
 				display: block;
@@ -1412,12 +1413,6 @@ ul.order_details {
 	#payment {
 		.payment_methods {
 			margin-bottom: ms(3) !important;
-
-			li {
-				.payment_box {
-					background-color: rgba(#000,.05);
-				}
-			}
 		}
 	}
 }

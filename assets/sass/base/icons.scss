@@ -510,6 +510,7 @@ a.remove {
 
 #payment {
 	.payment_methods {
+		> .woocommerce-PaymentMethod,
 		> .wc_payment_method {
 			> label {
 				&:before {
@@ -522,11 +523,14 @@ a.remove {
 		}
 
 		li {
-			&.wc_payment_method > input[type=radio]:first-child {
-				@include screen-reader-text();
+			&.woocommerce-PaymentMethod,
+			&.wc_payment_method {
+				> input[type=radio]:first-child {
+					@include screen-reader-text();
 
-				&:checked + label:before {
-					content: "\f192";
+					&:checked + label:before {
+						content: "\f192";
+					}
 				}
 			}
 		}
