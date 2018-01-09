@@ -1,11 +1,12 @@
 jQuery( window ).load( function() {
-	var windowHeight	= jQuery( window ).height();
-	var paymentHeight	= jQuery( '#order_review' ).height();
 
 	/**
 	 * Make the order review element stick to the top of the browser window.
 	 */
 	function stickyPayment() {
+		var windowHeight	= jQuery( window ).height();
+		var paymentHeight	= jQuery( '#order_review' ).height();
+
 		if ( ! jQuery( '#order_review_heading' ).length || ! jQuery( 'form.woocommerce-checkout' ).length || ! jQuery( '#customer_details' ).length ) {
 			return;
 		}
