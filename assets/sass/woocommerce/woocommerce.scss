@@ -1274,21 +1274,8 @@ table.woocommerce-checkout-review-order-table {
 	}
 }
 
-.woocommerce-checkout {
-	.payment-fixed {
-		position: fixed;
-		top: 0;
-		z-index: 9;
-		box-shadow: 0 6px 2em rgba(#000,.2);
-	}
-}
-
 .admin-bar {
 	.woocommerce-checkout {
-		.payment-fixed {
-			top: 32px;
-		}
-
 		#wc_checkout_add_ons label + br {
 			display: none;
 		}
