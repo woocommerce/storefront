@@ -43,12 +43,20 @@ Images License: GNU General Public License v2 or later
 
 == Changelog ==
 
-= 2.2.6 - 2018-XX-XX =
+= 2.2.6 - 2018-01-16 =
+* Fix - Price slider widget styling.
 * Fix - Apply styles to `a.woocommerce-store-notice__dismiss-link` instead of all links in the store notice.
 * Fix - Fix hidden content when there are no reviews.
 * Fix - Fixed typo in the `Storefront_WooCommerce` class, `thumbnail_columns` method description. Kudos [@cryptexvinci](https://github.com/cryptexvinci).
+* Tweak - Added vcard markup to template.
+* Tweak - Improved My Account Payment Methods styles.
+* Tweak - Improved the Bookings calendar styles.
+* Tweak - Removed jQuery dependency. Kudos [@valdrinkoshi](https://github.com/valdrinkoshi). 
 * Tweak - Added "Navigation menus" step to Guided tour.
-* Tweak - Guided tour in the Customizer in now shown to all sites.
+* Tweak - Guided tour in the Customizer is now shown to all sites.
+* Dev - Removed non-standard outdated CSS. Kudos [@ElectricFeet](https://github.com/ElectricFeet).
+* Dev - Removed sticky cart. See [this issue](https://github.com/woocommerce/storefront/issues/637) for more information.
+* Dev - [WooCommerce 3.3] - Support for new columns & rows option in the customizer.
 * Dev - [WooCommerce 3.3] - Declare image sizes.
 * Dev - [WooCommerce 3.3] - Hide search button.
 * Dev - `composer.json` file. Kudos [@pmgarman](https://github.com/pmgarman).
