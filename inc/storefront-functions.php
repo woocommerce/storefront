@@ -125,7 +125,7 @@ function storefront_homepage_content_styles() {
 
 	if ( '' !== $background_image ) {
 		$styles['background-image'] = $background_image;
-	}	
+	}
 
 	$styles = apply_filters( 'storefront_homepage_content_styles', $styles );
 
@@ -311,4 +311,36 @@ function storefront_categorized_blog() {
 		// This blog has only 1 category so storefront_categorized_blog should return false.
 		return false;
 	}
+}
+
+/**
+ * Returns a custom logo, linked to home.
+ *
+ * We use a custom function instead of `get_custom_logo()` to control the
+ * HTML output and remove the itemprop attributes from the logo.
+ *
+ * @param  id     $logo_id The logo id. Optional.
+ * @param  string $size    The size of the attachment. Optional.
+ * @since  2.2.7
+ * @return string
+ */
+function storefront_get_custom_logo( $logo_id = false, $size = 'full' ) {
+	if ( false === $logo_id ) {
+		$logo_id = get_theme_mod( 'custom_logo' );
+	}
+
+	$html = sprintf( '<a href="%1$s" class="site-logo-link" rel="home">%2$s</a>',
+		esc_url( home_url( '/' ) ),
+		wp_get_attachment_image(
+			$logo_id,
+			$size,
+			false,
+			array(
+				'class'     => 'site-logo attachment-' . $size,
+				'data-size' => $size
+			)
+		)
+	);
+
+	return $html;
 }
