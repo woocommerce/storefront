@@ -72,31 +72,31 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Enable support for site logo
 			 */
-			add_theme_support( 'custom-logo', array(
+			add_theme_support( 'custom-logo', apply_filters( 'storefront_custom_logo_args', array(
 				'height'      => 110,
 				'width'       => 470,
 				'flex-width'  => true,
-			) );
+			) ) );
 
 			// This theme uses wp_nav_menu() in two locations.
-			register_nav_menus( array(
+			register_nav_menus( apply_filters( 'storefront_register_nav_menus', array(
 				'primary'   => __( 'Primary Menu', 'storefront' ),
 				'secondary' => __( 'Secondary Menu', 'storefront' ),
 				'handheld'  => __( 'Handheld Menu', 'storefront' ),
-			) );
+			) ) );
 
 			/*
 			 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
 			 * to output valid HTML5.
 			 */
-			add_theme_support( 'html5', array(
+			add_theme_support( 'html5', apply_filters( 'storefront_html5_args', array(
 				'search-form',
 				'comment-form',
 				'comment-list',
 				'gallery',
 				'caption',
 				'widgets',
-			) );
+			) ) );
 
 			// Setup the WordPress core custom background feature.
 			add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
@@ -109,7 +109,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 *  https://github.com/automattic/site-logo
 			 *  http://jetpack.me/
 			 */
-			add_theme_support( 'site-logo', array( 'size' => 'full' ) );
+			add_theme_support( 'site-logo', apply_filters( 'storefront_site_logo_args', array(
+				'size' => 'full'
+			) ) );
 
 			// Declare WooCommerce support.
 			add_theme_support( 'woocommerce', apply_filters( 'storefront_woocommerce_args', array(
