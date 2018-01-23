@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.2.6\n"
+"Project-Id-Version: Storefront 2.2.7\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2018-01-16 15:07:17+00:00\n"
+"POT-Creation-Date: 2018-01-23 13:59:35+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -238,37 +238,37 @@ msgstr ""
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/class-storefront.php:145
+#: inc/class-storefront.php:147
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-storefront.php:151
+#: inc/class-storefront.php:153
 msgid "Below Header"
 msgstr ""
 
-#: inc/class-storefront.php:153
+#: inc/class-storefront.php:155
 msgid ""
 "Widgets added to this region will appear beneath the header and above the "
 "main content."
 msgstr ""
 
-#: inc/class-storefront.php:165
+#: inc/class-storefront.php:167
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-storefront.php:166
+#: inc/class-storefront.php:168
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-storefront.php:168
+#: inc/class-storefront.php:170
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-storefront.php:169
+#: inc/class-storefront.php:171
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:330
+#: inc/class-storefront.php:332
 msgid "Post Navigation"
 msgstr ""
 
