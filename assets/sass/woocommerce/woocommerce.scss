@@ -529,6 +529,17 @@ ul.products {
 				float: left;
 				margin-right: ms(-1);
 			}
+
+			table.woocommerce-grouped-product-list {
+				.woocommerce-grouped-product-list-item__quantity {
+					float: none;
+					margin-right: 0;
+
+					.quantity {
+						margin-right: 0;
+					}
+				}
+			}
 		}
 
 		p.price {
