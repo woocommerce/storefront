@@ -43,6 +43,12 @@ Images License: GNU General Public License v2 or later
 
 == Changelog ==
 
+= 2.2.7 - 2018-01-23 =
+* Fix - Reverted Chromium overflow fix introduced in 2.2.6 due to incompatibility with other Storefront products.
+* Fix - Jetpack Google Translate widget styling.
+* Tweak - Improved Grouped products table styling.
+* Dev - Added filters; `storefront_custom_logo_args`, `storefront_register_nav_menus`, `storefront_html5_args`, and `storefront_site_logo_args`.
+
 = 2.2.6 - 2018-01-16 =
 * Fix - Price slider widget styling.
 * Fix - Apply styles to `a.woocommerce-store-notice__dismiss-link` instead of all links in the store notice.
