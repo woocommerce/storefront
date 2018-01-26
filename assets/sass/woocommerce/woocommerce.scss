@@ -406,7 +406,7 @@ ul.products {
 			.woocommerce-product-gallery__wrapper {
 				.woocommerce-product-gallery__image {
 					&:not(:only-child):not(.flex-active-slide) {
-						opacity: 0;
+						margin-left: 1px;
 					}
 				}
 			}
