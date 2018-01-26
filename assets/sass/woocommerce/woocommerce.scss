@@ -403,6 +403,14 @@ ul.products {
 				margin-bottom: ms(3);
 			}
 
+			.woocommerce-product-gallery__wrapper {
+				.woocommerce-product-gallery__image {
+					&:not(.flex-active-slide) {
+						opacity: 0;
+					}
+				}
+			}
+
 			.flex-control-thumbs {
 				@include clearfix;
 				margin: 0;
