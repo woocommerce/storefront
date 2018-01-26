@@ -18,11 +18,13 @@ add_action( 'storefront_sidebar',        'storefront_get_sidebar',          10 )
  * Header
  *
  * @see  storefront_skip_links()
+ * @see  storefront_social_icons()
  * @see  storefront_secondary_navigation()
  * @see  storefront_site_branding()
  * @see  storefront_primary_navigation()
  */
 add_action( 'storefront_header', 'storefront_skip_links',                       0 );
+add_action( 'storefront_header', 'storefront_social_icons',                     10 );
 add_action( 'storefront_header', 'storefront_site_branding',                    20 );
 add_action( 'storefront_header', 'storefront_secondary_navigation',             30 );
 add_action( 'storefront_header', 'storefront_primary_navigation_wrapper',       42 );
