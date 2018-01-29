@@ -56,6 +56,7 @@
 
 	.widget_shopping_cart {
 		display: none;
+		padding-right: 15px;
 
 		.woocommerce-mini-cart__empty-message {
 			margin: ms(2);
@@ -159,7 +160,8 @@
 				}
 			}
 
-			&.cart {
+			&.
+			{
 				.count {
 					text-indent: 0;
 					display: block;
