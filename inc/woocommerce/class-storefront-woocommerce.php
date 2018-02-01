@@ -185,8 +185,8 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 		/**
 		 * Remove the breadcrumb delimiter
-		 * @param  array $defaults thre breadcrumb defaults
-		 * @return array           thre breadcrumb defaults
+		 * @param  array $defaults The breadcrumb defaults
+		 * @return array           The breadcrumb defaults
 		 * @since 2.2.0
 		 */
 		public function change_breadcrumb_delimiter( $defaults ) {
