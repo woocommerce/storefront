@@ -180,7 +180,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 	function storefront_site_title_or_logo( $echo = true ) {
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			$logo = get_custom_logo();
-			$html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
+			$html = is_front_page() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
 		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 			// Copied from jetpack_the_site_logo() function.
 			$logo    = site_logo()->logo;
@@ -203,7 +203,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 
 			$html = apply_filters( 'jetpack_the_site_logo', $html, $logo, $size );
 		} else {
-			$tag = is_home() ? 'h1' : 'div';
+			$tag = is_front_page() ? 'h1' : 'div';
 
 			$html = '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
 
