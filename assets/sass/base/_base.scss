@@ -588,24 +588,26 @@ table {
 		border-width: 1px 0;
 		margin-bottom: ms(5);
 
-		ul.products,
 		ul.products li.product,
 		.widget {
 			margin-bottom: 0;
 		}
 
 		.col-1 {
-			@include span( 6 of 12 );
-
 			ul.products {
+				margin-bottom: ms(4);
+
 				li.product {
 					@include span( 3 of 6 );
+
+					&:last-child {
+						margin-right: 0;
+					}
 				}
 			}
 		}
 
 		.col-2 {
-			@include span( last 6 of 12 );
 			padding: ms(3);
 			background-color: rgba(#000,.025);
 		}
