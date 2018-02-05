@@ -845,8 +845,12 @@ if ( ! function_exists( 'storefront_homepage_content' ) ) {
 		while ( have_posts() ) {
 			the_post();
 
-			get_template_part( 'content', 'homepage' );
+			$title   = get_the_title( get_the_ID() );
+			$content = get_the_content( get_the_ID() );
 
+			if ( '' !== $title || '' !== $content ) {
+				get_template_part( 'content', 'homepage' );
+			}
 		} // end of the loop.
 	}
 }
