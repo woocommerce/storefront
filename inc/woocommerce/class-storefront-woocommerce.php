@@ -24,20 +24,23 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_filter( 'body_class', 								array( $this, 'woocommerce_body_class' ) );
-			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_scripts' ),	20 );
-			add_filter( 'woocommerce_enqueue_styles', 				'__return_empty_array' );
+			add_filter( 'body_class',                               array( $this, 'woocommerce_body_class' ) );
+			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_scripts' ),	20 );
+			add_filter( 'woocommerce_enqueue_styles',               '__return_empty_array' );
 			add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) );
-			add_filter( 'woocommerce_product_thumbnails_columns', 	array( $this, 'thumbnail_columns' ) );
-			add_filter( 'loop_shop_per_page', 						array( $this, 'products_per_page' ) );
+			add_filter( 'woocommerce_product_thumbnails_columns',   array( $this, 'thumbnail_columns' ) );
 			add_filter( 'woocommerce_breadcrumb_defaults',          array( $this,'change_breadcrumb_delimiter' ) );
 
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {
-				add_action( 'wp_footer', 							array( $this, 'star_rating_script' ) );
+				add_action( 'wp_footer',                            array( $this, 'star_rating_script' ) );
+			}
+
+			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
+				add_filter( 'loop_shop_per_page',                   array( $this, 'products_per_page' ) );
 			}
 
 			// Integrations.
-			add_action( 'wp_enqueue_scripts', 						array( $this, 'woocommerce_integrations_scripts' ), 99 );
+			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_integrations_scripts' ), 99 );
 			add_action( 'wp_enqueue_scripts',                       array( $this, 'add_customizer_css' ), 140 );
 
 			add_action( 'after_switch_theme',                       array( $this, 'set_storefront_style_theme_mods' ) );
