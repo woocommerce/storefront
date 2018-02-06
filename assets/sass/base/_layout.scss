@@ -570,6 +570,25 @@
 			}
 		}
 	}
+
+	/**
+	 * 404 Styles
+	 */
+	 .error404 {
+		.fourohfour-columns-2 {
+			.col-1 {
+				@include span( 6 of 12 );
+
+				ul.products {
+					margin-bottom: 0;
+				}
+			}
+
+			.col-2 {
+				@include span( last 6 of 12 );
+			}
+		}
+	 }
 }
 
 @include susy-media (max-width $container-width) {
