@@ -1,0 +1,47 @@
+/**
+ * WooCommerce Memberships
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../../../assets/sass/utils/variables';
+@import '../../../../assets/sass/utils/mixins';
+@import '../../../../node_modules/susy/sass/susy';
+@import '../../../../assets/sass/vendors/modular-scale';
+
+.woocommerce,
+.woocommerce-page {
+  .woocommerce-MyAccount-navigation {
+    ul {
+      li.woocommerce-MyAccount-navigation-link--members-area a:before {
+        content: "\f023";
+      }
+
+      li.woocommerce-MyAccount-navigation-link--back-to-memberships a:before {
+        content: "\f0a8";
+      }
+
+      li.woocommerce-MyAccount-navigation-link--my-membership-content a:before {
+        content: "\f02d";
+      }
+
+      li.woocommerce-MyAccount-navigation-link--my-membership-products a:before {
+        content: "\f07a";
+      }
+
+      li.woocommerce-MyAccount-navigation-link--my-membership-discounts a:before {
+        content: "\f02c";
+      }
+
+      li.woocommerce-MyAccount-navigation-link--my-membership-notes a:before {
+        content: "\f27b";
+      }
+
+      li.woocommerce-MyAccount-navigation-link--my-membership-details a:before {
+        content: "\f013";
+      }
+    }
+  }
+}
