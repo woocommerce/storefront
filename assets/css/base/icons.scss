@@ -6,10 +6,10 @@
 
 // Utilities
 // Sass tools and helpers used across the project.
-@import '../utils/variables';
-@import '../utils/mixins';
-@import '../vendors/font-awesome/font-awesome';
-@import '../vendors/modular-scale';
+@import '../sass/utils/variables';
+@import '../sass/utils/mixins';
+@import '../sass/vendors/font-awesome/font-awesome';
+@import '../sass/vendors/modular-scale';
 
 .site-search {
 	.widget_product_search {

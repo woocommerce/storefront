@@ -40,7 +40,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 
 			wp_enqueue_script( 'storefront-plugin-install', get_template_directory_uri() . '/assets/js/admin/plugin-install' . $suffix . '.js', array( 'jquery', 'updates' ), $storefront_version, 'all' );
 
-			wp_enqueue_style( 'storefront-plugin-install', get_template_directory_uri() . '/assets/sass/admin/plugin-install.css', array(), $storefront_version, 'all' );
+			wp_enqueue_style( 'storefront-plugin-install', get_template_directory_uri() . '/assets/css/admin/plugin-install.css', array(), $storefront_version, 'all' );
 		}
 
 		/**
