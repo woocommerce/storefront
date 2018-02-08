@@ -292,18 +292,11 @@ body {
 	.site-logo-link,
 	.custom-logo-link {
 		display: block;
+		margin-bottom: 0;
 
 		img {
 			max-width: 210px;
 		}
-	}
-
-	.site-branding,
-	.site-logo-anchor,
-	.site-logo-link,
-	.custom-logo-link {
-		margin-bottom: 0;
-		float: left;
 	}
 
 	.widget {
@@ -337,6 +330,9 @@ body {
 }
 
 .site-branding {
+	float: left;
+	margin-bottom: 0;
+
 	.site-title {
 		font-size: 2em;
 		letter-spacing: -1px;
