@@ -2791,7 +2791,7 @@ dl.variation {
 	}
 }
 
-@media (min-width: $handheld) and (max-width: 900px) {
+@media (min-width: $desktop) and (max-width: 900px) {
 	body {
 		&:not(.page-template-template-fullwidth-php) {
 			table.cart {
