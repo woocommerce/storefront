@@ -286,7 +286,8 @@ module.exports = function( grunt ) {
 					'!package.json',
 					'!node_modules/**',
 					'!.DS_Store',
-					'!npm-debug.log'
+					'!npm-debug.log',
+					'!composer.json'
 				],
 				dest: 'storefront',
 				expand: true,
