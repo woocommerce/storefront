@@ -2790,3 +2790,16 @@ dl.variation {
 		padding-right: 2.618rem;
 	}
 }
+
+@media (min-width: $desktop) and (max-width: 900px) {
+	body {
+		&:not(.page-template-template-fullwidth-php) {
+			table.cart {
+				td,
+				th {
+					padding: ms(1);
+				}
+			}
+		}
+	}
+}

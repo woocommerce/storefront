@@ -287,6 +287,7 @@ module.exports = function( grunt ) {
 					'!node_modules/**',
 					'!.DS_Store',
 					'!npm-debug.log',
+					'!composer.json',
 					'!assets/css/sass/**',
 					'!assets/css/**/*.scss'
 				],

@@ -72,7 +72,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 					<ul>
 						<li><a href="https://wordpress.org/support/theme/storefront" target="_blank"><?php esc_attr_e( 'Support', 'storefront' ); ?></a></li>
 						<li><a href="https://docs.woocommerce.com/documentation/themes/storefront/" target="_blank"><?php esc_attr_e( 'Documentation', 'storefront' ); ?></a></li>
-						<li><a href="https://storefront.wordpress.com" target="_blank"><?php esc_attr_e( 'Development blog', 'storefront' ); ?></a></li>
+						<li><a href="https://woocommerce.wordpress.com/category/storefront/" target="_blank"><?php esc_attr_e( 'Development blog', 'storefront' ); ?></a></li>
 					</ul>
 				</section>
 
