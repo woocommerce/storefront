@@ -25,6 +25,7 @@ module.exports = function( grunt ) {
 					'assets/css/admin/customizer/customizer.css',
 					'assets/css/woocommerce/extensions/*.css',
 					'assets/css/woocommerce/woocommerce.css',
+					'assets/css/woocommerce/woocommerce-legacy.css',
 					'assets/css/jetpack/jetpack.css',
 					'assets/css/base/*.css'
 				]
@@ -133,6 +134,7 @@ module.exports = function( grunt ) {
 					'assets/css/woocommerce/extensions/memberships.css': 'assets/css/woocommerce/extensions/memberships.scss',
 					'assets/css/woocommerce/extensions/quick-view.css': 'assets/css/woocommerce/extensions/quick-view.scss',
 					'assets/css/woocommerce/woocommerce.css': 'assets/css/woocommerce/woocommerce.scss',
+					'assets/css/woocommerce/woocommerce-legacy.css': 'assets/css/woocommerce/woocommerce-legacy.scss',
 					'assets/css/jetpack/jetpack.css': 'assets/css/jetpack/jetpack.scss',
 					'assets/css/base/icons.css': 'assets/css/base/icons.scss'
 				}]
@@ -390,6 +392,7 @@ module.exports = function( grunt ) {
 					'assets/css/woocommerce/extensions/memberships.css',
 					'assets/css/woocommerce/extensions/quick-view.css',
 					'assets/css/woocommerce/woocommerce.css',
+					'assets/css/woocommerce/woocommerce-legacy.css',
 					'assets/css/admin/welcome-screen/welcome.css',
 					'assets/css/jetpack/jetpack.css',
 					'assets/css/base/icons.css'
