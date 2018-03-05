@@ -3,21 +3,20 @@
 // yourself. This means that changes that should be small, such as tweaking the
 // coloring or the sizing, can be done in one place, not all over the stylesheet.
 
-$base-font: 		"Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$base-font: 		'Source Sans Pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
 $header-font: 		$base-font;
-$ms-base:           1em, .875em;
+$ms-base:           1em, 0.875em;
 $ms-ratio:          1.618;
-
 
 // base color scheme
 $body-background: 	#ffffff;
 $color_body: 		#43454b;
 $color_links: 		#2c2d33;
-$color_border:		rgba(0,0,0,0.05);
+$color_border:		rgba( 0, 0, 0, 0.05 );
 $color_woocommerce: #96588a;
 $error: 			#e2401c;
 $success: 			#0f834d;
-$info: 				#3D9CD2;
+$info: 				#3d9cd2;
 
 // layout sizes
 $desktop:			768px;
