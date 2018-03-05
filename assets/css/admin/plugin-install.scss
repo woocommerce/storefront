@@ -1,8 +1,8 @@
 .sf-install-now {
 	&.updating-message {
-		&:before {
+		&::before {
 			display: inline-block;
-			content: "\f463";
+			content: '\f463';
 			font: normal 19px/1 'dashicons';
 			margin: 0 5px 0 -2px;
 			vertical-align: bottom;
