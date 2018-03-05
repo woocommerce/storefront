@@ -26,25 +26,25 @@
 	.commentlist {
 		.bypostauthor {
 			> .comment-body cite {
-				&:after {
+				&::after {
 					@include fa-icon();
 					margin-left: ms(-3);
-					content: "\f0f6";
+					content: '\f0f6';
 				}
 			}
 		}
 
 		.reply {
 			a {
-				&:after {
+				&::after {
 					@include fa-icon();
-					content: "\f112";
+					content: '\f112';
 					margin-left: ms(-3);
 				}
 
 				&.comment-edit-link {
-					&:after {
-						content: "\f040";
+					&::after {
+						content: '\f040';
 					}
 				}
 			}
@@ -54,9 +54,9 @@
 
 #respond {
 	#cancel-comment-reply-link {
-		&:before {
+		&::before {
 			@include fa-icon();
-			content: "\f057";
+			content: '\f057';
 			display: block;
 		}
 	}
@@ -64,27 +64,27 @@
 
 .sticky {
 	.entry-title {
-		&:before {
+		&::before {
 			@include fa-icon();
 			margin-right: ms(-3);
-			content: "\f08d";
+			content: '\f08d';
 		}
 	}
 }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
 .button,
 .added_to_cart {
 	&.loading {
 		position: relative;
 
-		&:after {
+		&::after {
 			@include fa-icon();
-			content: "\f110";
-			animation: fa-spin .75s linear infinite;
+			content: '\f110';
+			animation: fa-spin 0.75s linear infinite;
 			height: 20px;
 			width: 20px;
 			line-height: 20px;
@@ -102,9 +102,9 @@ input[type="submit"],
 	ul {
 		li {
 			a {
-				&:before {
+				&::before {
 					@include fa-icon();
-					content: "\f0f6";
+					content: '\f0f6';
 					margin-right: ms(-3);
 				}
 			}
@@ -116,9 +116,9 @@ input[type="submit"],
 	nav.navigation {
 		.nav-previous {
 			a {
-				&:before {
+				&::before {
 					@include fa-icon();
-					content: "\f177";
+					content: '\f177';
 					margin-right: ms(-3);
 				}
 			}
@@ -126,9 +126,9 @@ input[type="submit"],
 
 		.nav-next {
 			a {
-				&:after {
+				&::after {
 					@include fa-icon();
-					content: "\f178";
+					content: '\f178';
 					margin-left: ms(-3);
 				}
 			}
@@ -139,9 +139,9 @@ input[type="submit"],
 .widget_search,
 .widget_product_search {
 	form {
-		&:before {
+		&::before {
 			@include fa-icon();
-			content: "\f002";
+			content: '\f002';
 			position: absolute;
 			top: 1em;
 			left: 1em;
@@ -158,7 +158,7 @@ input[type="submit"],
 	ul {
 		li {
 			> a {
-				&:before {
+				&::before {
 					@include fa-icon();
 					position: absolute;
 					top: 0;
@@ -176,20 +176,20 @@ input[type="submit"],
 			}
 
 			&.search {
-				> a:before {
-					content: "\f002";
+				> a::before {
+					content: '\f002';
 				}
 			}
 
 			&.my-account {
-				> a:before {
-					content: "\f007";
+				> a::before {
+					content: '\f007';
 				}
 			}
 
 			&.cart {
-				> a:before {
-					content: "\f291";
+				> a::before {
+					content: '\f291';
 				}
 			}
 		}
@@ -207,10 +207,10 @@ input[type="submit"],
 				text-indent: -999px;
 				overflow: hidden;
 
-				&:before {
+				&::before {
 					@include fa-icon();
 					display: block;
-					content: "\f00e";
+					content: '\f00e';
 					line-height: 2;
 					text-indent: 0;
 				}
@@ -224,28 +224,28 @@ input[type="submit"],
 }
 
 .stock {
-	&:before {
+	&::before {
 		@include fa-icon();
 		margin-right: ms(-3);
 	}
 
 	&.in-stock {
-		&:before {
-			content: "\f118";
+		&::before {
+			content: '\f118';
 		}
 	}
 
 	&.out-of-stock {
-		&:before {
-			content: "\f119";
+		&::before {
+			content: '\f119';
 		}
 	}
 }
 
 a.reset_variations {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f021";
+		content: '\f021';
 		margin-right: ms(-3);
 	}
 }
@@ -253,9 +253,9 @@ a.reset_variations {
 .woocommerce-breadcrumb {
 	a {
 		&:first-of-type {
-			&:before {
+			&::before {
 				@include fa-icon();
-				content: "\f015";
+				content: '\f015';
 				margin-right: ms(-3);
 			}
 		}
@@ -278,8 +278,8 @@ a.reset_variations {
 		li {
 			padding-left: ms(3);
 
-			&:before {
-				font-family: "FontAwesome";
+			&::before {
+				font-family: 'FontAwesome';
 				margin-right: ms(-3);
 				display: block;
 				float: left;
@@ -294,13 +294,13 @@ a.reset_variations {
 .widget_product_categories {
 	ul {
 		li {
-			&:before {
-				content: "\f114";
+			&::before {
+				content: '\f114';
 			}
 
 			&.current-cat {
-				&:before {
-					content: "\f115";
+				&::before {
+					content: '\f115';
 				}
 			}
 		}
@@ -309,14 +309,14 @@ a.reset_variations {
 
 .widget_layered_nav {
 	li {
-		&:before {
-			content: "\f0c8";
+		&::before {
+			content: '\f0c8';
 		}
 	}
 
 	.chosen {
-		&:before {
-			content: "\f14a";
+		&::before {
+			content: '\f14a';
 		}
 	}
 }
@@ -325,8 +325,8 @@ a.reset_variations {
 	ul {
 		li {
 			&.chosen {
-				&:before {
-					content: "\f00d";
+				&::before {
+					content: '\f00d';
 					color: $error;
 					opacity: 1;
 				}
@@ -339,8 +339,8 @@ a.reset_variations {
 .widget_pages {
 	ul {
 		li {
-			&:before {
-				content: "\f0f6";
+			&::before {
+				content: '\f0f6';
 			}
 		}
 	}
@@ -349,13 +349,13 @@ a.reset_variations {
 .widget_categories {
 	ul {
 		li {
-			&:before {
-				content: "\f114";
+			&::before {
+				content: '\f114';
 			}
 
 			&.current-cat {
-				&:before {
-					content: "\f115";
+				&::before {
+					content: '\f115';
 				}
 			}
 		}
@@ -365,8 +365,8 @@ a.reset_variations {
 .widget_archive {
 	ul {
 		li {
-			&:before {
-				content: "\f115";
+			&::before {
+				content: '\f115';
 			}
 		}
 	}
@@ -375,8 +375,8 @@ a.reset_variations {
 .widget_recent_comments {
 	ul {
 		li {
-			&:before {
-				content: "\f0e5";
+			&::before {
+				content: '\f0e5';
 			}
 		}
 	}
@@ -385,8 +385,8 @@ a.reset_variations {
 .widget_nav_menu {
 	ul {
 		li {
-			&:before {
-				content: "\f0f6";
+			&::before {
+				content: '\f0f6';
 			}
 		}
 	}
@@ -395,8 +395,8 @@ a.reset_variations {
 .widget_links {
 	ul {
 		li {
-			&:before {
-				content: "\f08e";
+			&::before {
+				content: '\f08e';
 			}
 		}
 	}
@@ -411,8 +411,8 @@ a.remove {
 	text-indent: -9999px;
 	position: relative;
 
-	&:before {
-		content: "\f057";
+	&::before {
+		content: '\f057';
 		@include fa-icon();
 		position: absolute;
 		top: 0;
@@ -429,9 +429,9 @@ a.remove {
 .woocommerce-shipping-calculator {
 	> p:first-child {
 		a {
-			&:before {
+			&::before {
 				@include fa-icon();
-				content: "\f0d1";
+				content: '\f0d1';
 				margin-right: ms(-5);
 			}
 		}
@@ -439,10 +439,10 @@ a.remove {
 }
 
 .blockUI {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f110";
-		animation: fa-spin .75s linear infinite;
+		content: '\f110';
+		animation: fa-spin 0.75s linear infinite;
 		height: 30px;
 		width: 30px;
 		line-height: 30px;
@@ -462,9 +462,9 @@ a.remove {
 		display: inline-block;
 		position: relative;
 
-		&:after {
+		&::after {
 			@include fa-icon;
-			content: "\f0d9";
+			content: '\f0d9';
 			text-indent: 0;
 			position: absolute;
 			top: 50%;
@@ -477,8 +477,8 @@ a.remove {
 	}
 
 	.next {
-		&:after {
-			content: "\f0da";
+		&::after {
+			content: '\f0da';
 		}
 	}
 }
@@ -490,10 +490,10 @@ a.remove {
 		display: inline-block;
 		padding: 0 ms(9);
 
-		&:after {
+		&::after {
 			display: block;
 			@include fa-icon;
-			content: "\f105";
+			content: '\f105';
 			font-size: ms(-1);
 			text-indent: 0;
 			position: absolute;
@@ -503,7 +503,7 @@ a.remove {
 			height: 1em;
 			transform: translateX(-50%) translateY(-50%);
 			text-align: center;
-			opacity: .25;
+			opacity: 0.25;
 		}
 	}
 }
@@ -513,11 +513,11 @@ a.remove {
 		> .woocommerce-PaymentMethod,
 		> .wc_payment_method {
 			> label {
-				&:before {
+				&::before {
 					@include fa-icon();
-					content: "\f10c";
+					content: '\f10c';
 					margin-right: ms(-3);
-					transition: color, ease, .2s;
+					transition: color, ease, 0.2s;
 				}
 			}
 		}
@@ -528,8 +528,8 @@ a.remove {
 				> input[type=radio]:first-child {
 					@include screen-reader-text();
 
-					&:checked + label:before {
-						content: "\f192";
+					&:checked + label::before {
+						content: '\f192';
 					}
 				}
 			}
@@ -538,21 +538,21 @@ a.remove {
 }
 
 .woocommerce-password-strength {
-	&:after {
+	&::after {
 		@include fa-icon();
-		content: "\f119";
+		content: '\f119';
 		margin-left: ms(-3);
 	}
 
 	&.strong {
-		&:after {
-			content: "\f118";
+		&::after {
+			content: '\f118';
 		}
 	}
 
 	&.good {
-		&:after {
-			content: "\f11a";
+		&::after {
+			content: '\f11a';
 		}
 	}
 }
@@ -561,60 +561,60 @@ a.remove {
 	ul {
 		li {
 			&.is-active {
-				a:before {
+				a::before {
 					opacity: 1;
 				}
 			}
 
 			a {
-				&:before {
+				&::before {
 					@include fa-icon();
-					content: "\f0f6";
+					content: '\f0f6';
 					line-height: 1.618;
 					margin-left: ms(-3);
 					width: ms(2);
 					text-align: right;
 					float: right;
-					opacity: .25;
+					opacity: 0.25;
 				}
 
 				&:hover {
-					&:before {
+					&::before {
 						opacity: 1;
 					}
 				}
 			}
 
-			&.woocommerce-MyAccount-navigation-link--dashboard a:before {
-				content: "\f0e4";
+			&.woocommerce-MyAccount-navigation-link--dashboard a::before {
+				content: '\f0e4';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--orders a:before {
-				content: "\f291";
+			&.woocommerce-MyAccount-navigation-link--orders a::before {
+				content: '\f291';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--downloads a:before {
-				content: "\f1c6";
+			&.woocommerce-MyAccount-navigation-link--downloads a::before {
+				content: '\f1c6';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--edit-address a:before {
-				content: "\f015";
+			&.woocommerce-MyAccount-navigation-link--edit-address a::before {
+				content: '\f015';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--payment-methods a:before {
-				content: "\f09d";
+			&.woocommerce-MyAccount-navigation-link--payment-methods a::before {
+				content: '\f09d';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--edit-account a:before {
-				content: "\f007";
+			&.woocommerce-MyAccount-navigation-link--edit-account a::before {
+				content: '\f007';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--customer-logout a:before {
-				content: "\f08b";
+			&.woocommerce-MyAccount-navigation-link--customer-logout a::before {
+				content: '\f08b';
 			}
 
-			&.woocommerce-MyAccount-navigation-link--subscriptions a:before {
-				content: "\f021";
+			&.woocommerce-MyAccount-navigation-link--subscriptions a::before {
+				content: '\f021';
 			}
 		}
 	}
@@ -622,9 +622,9 @@ a.remove {
 
 .my_account_orders {
 	.button.view {
-		&:after {
+		&::after {
 			@include fa-icon();
-			content: "\f06e";
+			content: '\f06e';
 			margin-left: ms(-3);
 		}
 	}
@@ -632,9 +632,9 @@ a.remove {
 
 p.order-again {
 	.button {
-		&:after {
+		&::after {
 			@include fa-icon();
-			content: "\f021";
+			content: '\f021';
 			margin-left: ms(-3);
 		}
 	}
@@ -642,39 +642,39 @@ p.order-again {
 
 .woocommerce-MyAccount-downloads {
 	.button {
-		&:after {
+		&::after {
 			@include fa-icon();
-			content: "\f0ed";
+			content: '\f0ed';
 			margin-left: ms(-3);
 		}
 	}
 }
 
 .demo_store {
-	&:before {
+	&::before {
 		@include fa-icon();
 		margin-right: ms(-3);
-		content: "\f05a";
+		content: '\f05a';
 	}
 }
 
 .woocommerce-tabs {
 	ul.tabs {
 		li {
-			&:after {
+			&::after {
 				@include fa-icon();
-				content: "\f107";
+				content: '\f107';
 				display: block;
 				position: absolute;
 				top: 50%;
 				right: -1em;
 				transform: translateY(-50%);
 				opacity: 0;
-				transition: all,ease,.3s;
+				transition: all, ease, 0.3s;
 			}
 
 			&.active {
-				&:after {
+				&::after {
 					opacity: 1;
 					right: 0;
 				}
@@ -685,17 +685,17 @@ p.order-again {
 
 .wc-forward,
 .woocommerce-Button--next {
-	&:after {
+	&::after {
 		@include fa-icon();
-		content: "\f178";
+		content: '\f178';
 		margin-left: ms(-3);
 	}
 }
 
 .woocommerce-Button--previous {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f177";
+		content: '\f177';
 		margin-right: ms(-3);
 	}
 }
@@ -711,9 +711,9 @@ p.order-again {
 					position: relative;
 					text-indent: -9999px;
 
-					&:before {
+					&::before {
 						@include fa-icon();
-						content: "\f058";
+						content: '\f058';
 						color: $success;
 						position: absolute;
 						top: 0;
@@ -733,13 +733,13 @@ p.order-again {
 /**
  * Composite Products
  */
- .single-product div.product {
- 	.component_selections {
- 		.clear_component_options:before {
- 			@include fa-icon();
- 			content: "\f021";
- 			margin-right: ms(-3);
- 		}
+.single-product div.product {
+	.component_selections {
+		.clear_component_options::before {
+			@include fa-icon();
+			content: '\f021';
+			margin-right: ms(-3);
+		}
 	}
 }
 
@@ -750,12 +750,12 @@ p.order-again {
 .shop_table {
 	.mnm_table_item {
 		.mnm_table_item_indent {
-			&:before {
+			&::before {
 				@include fa-icon();
 				@include fa-icon-rotate(90deg,1);
-				content: "\f148";
+				content: '\f148';
 				margin-right: ms(-4);
-				opacity: .25;
+				opacity: 0.25;
 			}
 		}
 	}
@@ -765,9 +765,9 @@ p.order-again {
  * Quick view
  */
 .quick-view-button {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f06e";
+		content: '\f06e';
 		margin-right: ms(-2);
 	}
 }
@@ -780,18 +780,18 @@ p.order-again {
 	.no_shipping_address {
 		.gift-form {
 			label {
-				&:after {
+				&::after {
 					@include fa-icon();
-					content: "\f06b";
+					content: '\f06b';
 					margin-left: ms(-3);
 				}
 			}
 		}
 
 		.modify-address-button {
-			&:before {
+			&::before {
 				@include fa-icon();
-				content: "\f044";
+				content: '\f044';
 				margin-right: ms(-3);
 			}
 		}
@@ -800,8 +800,8 @@ p.order-again {
 	.addresses {
 		+ .addresses {
 			header.title {
-				a:before {
-					content: "\f067";
+				a::before {
+					content: '\f067';
 				}
 			}
 		}
@@ -815,8 +815,8 @@ p.order-again {
 .woocommerce-page {
 	.woocommerce-MyAccount-navigation {
 		li.woocommerce-MyAccount-navigation-link--contributions {
-			a:before {
-				content: "\f005";
+			a::before {
+				content: '\f005';
 			}
 		}
 	}
@@ -826,9 +826,9 @@ p.order-again {
  * Variation Swatches
  */
 a#variations_clear {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f021";
+		content: '\f021';
 		margin-right: ms(-3);
 	}
 }
@@ -837,17 +837,17 @@ a#variations_clear {
  * Wishlists
  */
 .wl-add-link {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f004";
+		content: '\f004';
 		margin-right: ms(-3);
 	}
 }
 
 .button.wl-create-new {
-	&:before {
+	&::before {
 		@include fa-icon();
-		content: "\f067";
+		content: '\f067';
 		margin-right: ms(-3);
 	}
 }
@@ -860,10 +860,10 @@ a#variations_clear {
 				&.menu-item-has-children,
 				&.page_item_has_children {
 					> a {
-						&:after {
+						&::after {
 							// The dropdown indicator
 							@include fa-icon();
-							content: "\f107";
+							content: '\f107';
 							margin-left: 1em;
 						}
 					}
@@ -880,10 +880,10 @@ a#variations_clear {
 					&.menu-item-has-children,
 					&.page_item_has_children {
 						> a {
-							&:after {
+							&::after {
 								// The dropdown indicator
 								@include fa-icon();
-								content: "\f105";
+								content: '\f105';
 								float: right;
 								line-height: 1.618;
 							}
@@ -897,9 +897,9 @@ a#variations_clear {
 	.demo_store {
 		a {
 			&.woocommerce-store-notice__dismiss-link {
-				&:before {
+				&::before {
 					@include fa-icon();
-					content: "\f057";
+					content: '\f057';
 					margin-right: ms(-5);
 				}
 			}
@@ -908,11 +908,11 @@ a#variations_clear {
 
 	.site-header-cart {
 		.cart-contents {
-			&:after {
+			&::after {
 				@include fa-icon();
 				height: 1em;
 				float: right;
-				content: "\f291";
+				content: '\f291';
 				line-height: 1.618;
 			}
 		}
@@ -929,9 +929,9 @@ a#variations_clear {
 				padding: ms(-1);
 				margin-top: ms(-2);
 
-				&:before {
+				&::before {
 					@include fa-icon();
-					content: "\f044";
+					content: '\f044';
 					line-height: 1.618;
 					position: absolute;
 					top :0;
@@ -948,8 +948,8 @@ a#variations_clear {
 	.woocommerce-tabs {
 		ul.tabs {
 			li {
-				&:after {
-					content: "\f105";
+				&::after {
+					content: '\f105';
 				}
 			}
 		}
@@ -958,19 +958,19 @@ a#variations_clear {
 	/**
 	 * Wishlists
 	 */
-	 #wl-wrapper {
+	#wl-wrapper {
 		.wl-tabs {
 			> li {
 				&.active {
-					&:after {
+					&::after {
 						@include fa-icon();
-						content: "\f105";
+						content: '\f105';
 						display: block !important;
 						position: absolute;
 						top: 50%;
 						height: 1em;
 						width: 1em;
-						margin-top: -.5em;
+						margin-top: -0.5em;
 					}
 				}
 			}
