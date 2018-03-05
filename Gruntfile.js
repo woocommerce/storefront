@@ -53,8 +53,8 @@ module.exports = function( grunt ) {
 				configFile: '.stylelintrc'
 			},
 			all: [
-				'assets/sass/**/*.scss',
-				'!assets/sass/vendors/**/*.scss'
+				'assets/css/**/*.scss',
+				'!assets/css/sass/vendors/**/*.scss'
 			]
 		},
 
@@ -443,6 +443,7 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'css', [
+		'stylelint',
 		'sass',
 		'postcss',
 		'cssmin',
