@@ -160,7 +160,7 @@ i {
 
 blockquote {
 	padding: 0 ms(1);
-	border-left: 3px solid rgba(0,0,0,0.05);
+	border-left: 3px solid rgba( 0, 0, 0, 0.05 );
 	font-style: italic;
 }
 
@@ -169,8 +169,8 @@ address {
 }
 
 pre {
-	background: rgba(#000,.1);
-	font-family: "Courier 10 Pitch", Courier, monospace;
+	background: rgba( #000, 0.1 );
+	font-family: 'Courier 10 Pitch', Courier, monospace;
 	margin-bottom: ms(3);
 	padding: ms(3);
 	overflow: auto;
@@ -181,9 +181,9 @@ code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-	background-color: rgba(0,0,0,0.05);
-	padding: .202em ms(-3);
+	font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
+	background-color: rgba( 0, 0, 0, 0.05 );
+	padding: 0.202em ms(-3);
 }
 
 abbr,
@@ -213,7 +213,7 @@ sup {
 }
 
 sub {
-	top: .5ex;
+	top: 0.5ex;
 }
 
 small {
@@ -251,7 +251,7 @@ a {
 
 // Wait, what..?
 .storefront-cute * {
-	font-family: "Comic Sans MS", sans-serif;
+	font-family: 'Comic Sans MS', sans-serif;
 }
 
 /**
@@ -272,7 +272,7 @@ body {
 
 .site-content,
 .header-widget-region {
-	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-tap-highlight-color: rgba( 0, 0, 0, 0 );
 }
 
 /**
@@ -305,7 +305,7 @@ body {
 }
 
 .home.blog,
-.home.page:not(.page-template-template-homepage),
+.home.page:not( .page-template-template-homepage ),
 .home.post-type-archive-product {
 	.site-header {
 		margin-bottom: ms(7);
@@ -364,7 +364,7 @@ body {
 	outline: none;
 }
 
-.page-template-template-homepage:not(.has-post-thumbnail) {
+.page-template-template-homepage:not( .has-post-thumbnail ) {
 	.site-main {
 		padding-top: ms(7);
 	}
@@ -418,7 +418,7 @@ body {
 		.entry-content,
 		.entry-title {
 			opacity: 0;
-			transition: all,ease,.5s;
+			transition: all, ease, 0.5s;
 
 			&.loaded {
 				opacity: 1;
@@ -444,7 +444,7 @@ body {
 		color: $color_body + #222;
 	}
 
-	a:not(.button) {
+	a:not( .button ) {
 		color: $color_links;
 	}
 }
@@ -476,8 +476,10 @@ body {
  * Accessibility
  */
 .screen-reader-text {
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
+	clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */
+	/* stylelint-disable */
+	clip: rect( 1px, 1px, 1px, 1px );
+	/* stylelint-enable */
 	position: absolute !important;
 }
 
@@ -565,7 +567,7 @@ table {
 .error404 {
 	.site-content .widget_product_search {
 		padding: ms(3);
-		background-color: rgba(#000,.025);
+		background-color: rgba( #000, 0.025 );
 
 		form {
 			margin: 0;
@@ -605,7 +607,7 @@ table {
 
 		.col-2 {
 			padding: ms(3);
-			background-color: rgba(#000,.025);
+			background-color: rgba( #000, 0.025 );
 		}
 	}
 }
@@ -693,7 +695,7 @@ table {
 #respond {
 	clear: both;
 	padding: ms(3);
-	background-color: rgba(0,0,0,0.0125);
+	background-color: rgba( 0, 0, 0, 0.0125 );
 	position: relative;
 
 	.comment-form-author,
@@ -720,7 +722,7 @@ table {
 		line-height: 1;
 		font-size: ms(2);
 		text-align: center;
-		transition: transform,ease,.3s;
+		transition: transform, ease, 0.3s;
 
 		&:hover {
 			transform: scale(1.3);
@@ -767,7 +769,7 @@ table {
 }
 
 .byline,
-.updated:not(.published) {
+.updated:not( .published ) {
 	display: none;
 }
 .single, .group-blog {
@@ -809,13 +811,15 @@ textarea {
 	font-size: 100%; /* Corrects font size not being inherited in all browsers */
 	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
 	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	/* stylelint-disable */
 	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+	/* stylelint-enable */
 }
 
 button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
+input[type='button'],
+input[type='reset'],
+input[type='submit'],
 .button,
 .added_to_cart {
 	border: 0;
@@ -871,16 +875,16 @@ input[type="submit"],
 	}
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type='checkbox'],
+input[type='radio'] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
 }
 
-input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+input[type='search']::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
 	-webkit-appearance: none;
 }
 
-input[type="search"] {
+input[type='search'] {
 	box-sizing: border-box; // Overrules normalize.css.
 
 	&::placeholder {
@@ -894,15 +898,15 @@ input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly i
 	padding: 0;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
+input[type='text'],
+input[type='email'],
+input[type='url'],
+input[type='password'],
+input[type='search'],
 textarea,
 .input-text {
 	padding: ms(-2);
-	background-color: darken($body-background,5%);
+	background-color: darken( $body-background, 5% );
 	color: $color_body;
 	outline: none;
 	border: 0;
@@ -910,10 +914,10 @@ textarea,
 	box-sizing: border-box;
 	font-weight: normal;
 	box-shadow:
-		inset 0 1px 1px rgba(0,0,0,0.125);
+		inset 0 1px 1px rgba( 0, 0, 0, 0.125 );
 
 	&:focus {
-		background-color: darken( $body-background,10% );
+		background-color: darken( $body-background, 10% );
 		color: darken( $color_body, 10% );
 	}
 }
@@ -984,7 +988,7 @@ img {
 	margin-bottom: ms(1);
 	max-width: 100%;
 
-	img[class*="wp-image-"] {
+	img[class*='wp-image-'] {
 		display: block;
 		margin: 0 auto;
 	}
@@ -1116,14 +1120,14 @@ button.menu-toggle {
 		background-image: none;
 	}
 
-	span:before {
-		transition: all,ease,.2s;
+	span::before {
+		transition: all, ease, 0.2s;
 	}
 
-	&:before,
-	&:after,
-	span:before {
-		content: "";
+	&::before,
+	&::after,
+	span::before {
+		content: '';
 		display: block;
 		height: 2px;
 		width: 14px;
@@ -1131,32 +1135,31 @@ button.menu-toggle {
 		top: 50%;
 		left: 1em;
 		margin-top: -1px;
-		transition: all,ease,.2s;
+		transition: all, ease, 0.2s;
 		border-radius: 3px;
 	}
 
-	&:before {
+	&::before {
 		transform: translateY(-4px);
 	}
 
-	&:after {
+	&::after {
 		transform: translateY(4px);
 	}
 }
 
 .toggled {
 	button.menu-toggle {
-		&:before,
-		&:after {
-			transform: translateY(0);
+		&::before,
+		&::after {
 			transform: rotate(45deg);
 		}
 
-		&:after {
+		&::after {
 			transform: rotate(-45deg);
 		}
 
-		span:before {
+		span::before {
 			opacity: 0;
 		}
 	}
@@ -1184,10 +1187,10 @@ button.menu-toggle {
 
 .handheld-navigation,
 .nav-menu,
-.main-navigation div.menu > ul:not(.nav-menu) {
+.main-navigation div.menu > ul:not( .nav-menu ) {
 	overflow: hidden;
 	max-height: 0; /* We have to use max-height because `height` isn't animatable */
-	transition: all,ease,.8s;
+	transition: all, ease, 0.8s;
 }
 
 .handheld-navigation {
@@ -1200,7 +1203,7 @@ button.menu-toggle {
 
 .main-navigation.toggled {
 	.handheld-navigation,
-	.menu > ul:not(.nav-menu),
+	.menu > ul:not( .nav-menu ),
 	ul[aria-expanded=true] {
 		max-height: 1750px;
 	}
@@ -1241,7 +1244,7 @@ button.menu-toggle {
 	.nav-next {
 		a {
 			display: inline-block;
-			transition: all,ease,.3s;
+			transition: all, ease, 0.3s;
 			padding: ms(-2) 1em;
 			border-radius: 3px;
 		}
@@ -1298,7 +1301,7 @@ button.menu-toggle {
 				border-left-width: 0;
 				display: inline-block;
 				padding: ms(-5) ms(-1);
-				background-color: rgba(#000,.025);
+				background-color: rgba( #000, 0.025 );
 				color: $color_body;
 
 				&.current {
@@ -1319,7 +1322,7 @@ button.menu-toggle {
 
 			a.page-numbers {
 				&:hover {
-					background-color: rgba(#000,.05);
+					background-color: rgba( #000, 0.05 );
 				}
 			}
 		}
@@ -1446,7 +1449,7 @@ button.menu-toggle {
 	#wp-calendar {
 		th,
 		td {
-			padding: .236em;
+			padding: 0.236em;
 			text-align: center;
 		}
 	}
@@ -1462,7 +1465,7 @@ button.menu-toggle {
 }
 
 .widget_rating_filter {
-	.wc-layered-nav-rating  {
+	.wc-layered-nav-rating {
 		margin-bottom: ms(-2);
 
 		a {
@@ -1485,7 +1488,7 @@ button.menu-toggle {
 			font-size: ms(2);
 		}
 
-		a:not(.button) {
+		a:not( .button ) {
 			@include underlinedLink();
 		}
 	}
