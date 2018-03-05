@@ -26,15 +26,14 @@
 
 	.swatch-wrapper {
 		padding: ms(-2);
-		border: 0;
 		background-color: transparent;
-		border: 1px solid rgba(#000,.1);
+		border: 1px solid rgba( #000, 0.1 );
 		float: left;
 		display: inline-block;
-		margin: 0 .327em 1em 0;
+		margin: 0 0.327em 1em 0;
 
 		img {
-			opacity: .5;
+			opacity: 0.5;
 		}
 
 		.swatch-anchor {
@@ -55,7 +54,7 @@
 
 		&.selected {
 			border-width: 1px;
-			border-color: rgba(#000,.1);
+			border-color: rgba( #000, 0.1 );
 		}
 	}
 }
