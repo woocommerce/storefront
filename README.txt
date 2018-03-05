@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 4.9
-Stable tag: 2.2.7
-Version: 2.2.7
+Tested up to: 4.9.4
+Stable tag: 2.2.8
+Version: 2.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
@@ -42,6 +42,16 @@ FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
 Images License: GNU General Public License v2 or later
 
 == Changelog ==
+
+= 2.2.8 - 2018-02-13 =
+* Fix - Image bleed from next image in the gallery.
+* Fix - H1 site title tag on Front page instead of Posts page.
+* Fix - Number of columns and rows can now be changed in the Customizer.
+* Fix - Logo image size in Internet Explorer.
+* Fix - Prevent sidebar from overflowing the content at small sizes on cart page.
+* Fix - 404 page responsive layout.
+* Tweak - Updated development blog links.
+* Feature - WooCommerce Memberships integration.
 
 = 2.2.7 - 2018-01-23 =
 * Fix - Reverted Chromium overflow fix introduced in 2.2.6 due to incompatibility with other Storefront products.

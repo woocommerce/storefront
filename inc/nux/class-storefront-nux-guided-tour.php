@@ -56,7 +56,7 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_style( 'sp-guided-tour', get_template_directory_uri() . '/assets/sass/admin/customizer/customizer.css', array(), $storefront_version, 'all' );
+			wp_enqueue_style( 'sp-guided-tour', get_template_directory_uri() . '/assets/css/admin/customizer/customizer.css', array(), $storefront_version, 'all' );
 
 			wp_enqueue_script( 'sf-guided-tour', get_template_directory_uri() . '/assets/js/admin/customizer' . $suffix . '.js', array( 'jquery', 'wp-backbone' ), $storefront_version, true );
 
