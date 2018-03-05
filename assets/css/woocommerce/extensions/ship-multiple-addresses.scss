@@ -27,7 +27,7 @@
 		float: none;
 		width: auto;
 		margin: 0 0 ms(3);
-		background-color: rgba(#000,.025);
+		background-color: rgba( #000, 0.025 );
 		border: 0;
 		padding: 1em;
 		line-height: inherit;
@@ -65,9 +65,9 @@
 			margin: 0 0 ms(3);
 			@include span(4.5 of 9);
 
-			&:nth-child(3),
-			&:nth-child(5),
-			&:nth-child(7) {
+			&:nth-child( 3 ),
+			&:nth-child( 5 ),
+			&:nth-child( 7 ) {
 				margin-right: 0 !important;
 			}
 
