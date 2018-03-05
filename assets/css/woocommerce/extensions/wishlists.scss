@@ -37,7 +37,7 @@
 
 			&.active {
 				a {
-					box-shadow: inset 0 -3px 0 rgba(0,0,0,0.1);
+					box-shadow: inset 0 -3px 0 rgba( 0, 0, 0, 0.1 );
 				}
 			}
 		}
@@ -74,7 +74,7 @@
 
 	ul.tabs {
 		li {
-			&:after {
+			&::after {
 				display: none !important;
 			}
 		}
