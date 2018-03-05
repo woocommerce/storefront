@@ -4,11 +4,10 @@ $background: #23282d;
 
 .sf-guided-tour {
 	display: block;
-	background-color: $background;
-	background-color: rgba(35,40,45,.95);
+	background-color: rgba( 35, 40, 45, 0.95 );
 	border-radius: 5px;
-	box-shadow: 3px 1px 5px -2px rgba(0,0,0,0.145);
-	color: #A4A4A4;
+	box-shadow: 3px 1px 5px -2px rgba( 0, 0, 0, 0.145 );
+	color: #a4a4a4;
 	font-size: 1.1em;
 	z-index: 999999998;
 	text-align: left;
@@ -24,7 +23,7 @@ $background: #23282d;
 
 	opacity: 0;
 
-	&:before {
+	&::before {
 		content: '';
 		position: absolute;
 		top: 30px;
@@ -34,7 +33,7 @@ $background: #23282d;
 		border-style: solid;
 		border-width: 14px 14px 14px 0;
 		border-color: transparent $background transparent transparent;
-		border-right-color: rgba(35,40,45,.95);
+		border-right-color: rgba( 35, 40, 45, 0.95 );
 	}
 
 	.sf-guided-tour-step {
@@ -55,15 +54,15 @@ $background: #23282d;
 
 		.sf-guided-tour-skip {
 			margin-left: 10px;
-			color: #00AADC;
+			color: #00aadc;
 
 			&:hover {
-				opacity: .75;
+				opacity: 0.75;
 			}
 		}
 	}
 
-	&:not(.sf-first-step) {
+	&:not( .sf-first-step ) {
 		.sf-guided-tour-step {
 			a.sf-nux-button {
 				display: none;
@@ -112,15 +111,15 @@ a.sf-nux-button {
 .sf-moving {
 	transition-duration: 250ms;
 	transition-property: transform;
-	transition-timing-function: cubic-bezier(.84,.45,.68,1.44);
+	transition-timing-function: cubic-bezier( 0.84, 0.45, 0.68, 1.44 );
 }
 
 .sf-entering,
 .sf-exiting {
 	.sf-guided-tour {
-		animation-duration: .30s;
+		animation-duration: 0.3s;
 		animation-timing-function: ease-in-out;
-		-webkit-animation-duration: .30s;
+		-webkit-animation-duration: 0.3s;
 		-webkit-animation-timing-function: ease-in-out;
 	}
 }
