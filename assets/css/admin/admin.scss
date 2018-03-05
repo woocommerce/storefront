@@ -1,20 +1,20 @@
 @import 'buttons';
 
 .sf-notice-nux {
-	background: #E9EFF3;
+	background: #e9eff3;
 	border: 10px solid #fff;
 	color: #608299;
 	padding: 60px;
 	text-align: center;
 	box-shadow: none;
 
-	&:before,
-	&:after {
-		content: "";
+	&::before,
+	&::after {
+		content: '';
 		display: table;
 	}
 
-	&:after {
+	&::after {
 		clear: both;
 	}
 
@@ -48,11 +48,11 @@
 	h2 {
 		margin: 0 0 10px;
 		font-weight: normal;
-		color: #2E4453;
+		color: #2e4453;
 	}
 
 	p {
-		margin: 0 0 2em 0;
+		margin: 0 0 2em;
 		padding: 0;
 		line-height: 1.6;
 	}
@@ -74,9 +74,9 @@
 
 .sf-nux-button {
 	&.updating-message {
-		&:before {
+		&::before {
 			display: inline-block;
-			content: "\f463";
+			content: '\f463';
 			font: normal 20px/1 'dashicons';
 			margin: 3px 5px 0 -2px;
 			vertical-align: bottom;
