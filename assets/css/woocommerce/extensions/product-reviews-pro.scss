@@ -28,7 +28,7 @@
 			.product-rating-details {
 				table {
 					td {
-						padding: .202em ms(-3);
+						padding: 0.202em ms(-3);
 
 						&.rating-graph {
 							.bar {
@@ -58,7 +58,7 @@
 						display: inline-block;
 						float: right;
 
-						&.checkbox:before {
+						&.checkbox::before {
 							font-size: ms(-1);
 						}
 					}
@@ -141,7 +141,7 @@
 		}
 
 		.contribution-flag-form {
-			background-color: rgba(0,0,0,0.1);
+			background-color: rgba( 0, 0, 0, 0.1 );
 			padding: ms(3);
 			margin-bottom: ms(3);
 		}
@@ -161,7 +161,7 @@
 			display: inline-block;
 			margin-right: 1em;
 			padding: ms(-3) 0;
-			border-bottom: .202em solid rgba(0,0,0,0.05);
+			border-bottom: 0.202em solid rgba( 0, 0, 0, 0.05 );
 
 			&.active {
 				border-bottom-color: $color_border;
@@ -180,7 +180,7 @@
 		}
 	}
 
-	.star-rating-selector:not(:checked) {
+	.star-rating-selector:not( :checked ) {
 		label.checkbox {
 			float: none;
 		}
@@ -200,10 +200,10 @@
 .chart-tooltip {
 	font-size: ms(-1);
 	padding: ms(-2) 1em;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba( 0, 0, 0, 0.8 );
 }
 
 #tiptip_holder.tip_bottom #tiptip_arrow_inner {
-	border-bottom-color: rgba(0,0,0,0.8);
+	border-bottom-color: rgba( 0, 0, 0, 0.8 );
 	margin-top: -6px;
 }
