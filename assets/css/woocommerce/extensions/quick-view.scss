@@ -1,0 +1,23 @@
+/**
+ * WooCommerce Mix and Match
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../../sass/utils/variables';
+@import '../../sass/utils/mixins';
+@import '../../sass/vendors/modular-scale';
+
+.quick-view-button {
+	span {
+		display: none;
+	}
+}
+
+div.quick-view div.quick-view-image a.button {
+	@include button();
+	line-height: inherit;
+	display: block;
+}

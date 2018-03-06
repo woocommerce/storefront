@@ -1,0 +1,110 @@
+@import 'buttons';
+
+.sf-notice-nux {
+	background: #E9EFF3;
+	border: 10px solid #fff;
+	color: #608299;
+	padding: 60px;
+	text-align: center;
+	box-shadow: none;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.notice-content {
+		max-width: 420px;
+		margin: 0 auto;
+	}
+
+	.sf-icon {
+		position: relative;
+		display: block;
+		width: 100px;
+		height: 100px;
+		background: #fff;
+		border-radius: 100%;
+		margin: 0 auto 30px;
+
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			padding: 16px;
+			box-sizing: border-box;
+			max-width: 100%;
+		}
+	}
+
+	h2 {
+		margin: 0 0 10px;
+		font-weight: normal;
+		color: #2E4453;
+	}
+
+	p {
+		margin: 0 0 2em 0;
+		padding: 0;
+		line-height: 1.6;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 8px;
+		text-align: left;
+
+		&:last-of-type {
+			margin-bottom: 2em;
+		}
+	}
+
+	.sf-plugin-card {
+		display: block;
+	}
+}
+
+.sf-nux-button {
+	&.updating-message {
+		&:before {
+			display: inline-block;
+			content: "\f463";
+			font: normal 20px/1 'dashicons';
+			margin: 3px 5px 0 -2px;
+			vertical-align: bottom;
+			-webkit-animation: rotation 2s infinite linear;
+			animation: rotation 2s infinite linear;
+		}
+	}
+}
+
+@media only screen and (max-width: 782px) {
+	.sf-notice-nux {
+		.sf-icon {
+			width: 65px;
+			height: 65px;
+
+			img {
+				padding: 10px;
+			}
+		}
+
+		form {
+			margin-top: 30px;
+		}
+
+		label {
+			&:last-of-type {
+				margin-top: 20px;
+			}
+		}
+	}
+}

@@ -1,4 +1,5 @@
 /* global storefrontScreenReaderText */
+
 /**
  * navigation.js
  *
@@ -7,143 +8,108 @@
  * Finally adds a class required to reveal the search in the handheld footer bar.
  */
 ( function() {
-	// Add class to footer search when clicked
-	jQuery( window ).load( function() {
-		jQuery( '.storefront-handheld-footer-bar .search > a' ).click( function(e) {
-			jQuery( this ).parent().toggleClass( 'active' );
-			e.preventDefault();
-		});
-	});
 
-	var container, button, menu;
-
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
-	}
-
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
-		return;
-	}
-
-	menu = container.getElementsByTagName( 'ul' )[0];
-
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	menu.setAttribute( 'aria-expanded', 'false' );
-
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
-		menu.className += ' nav-menu';
-	}
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-			jQuery( container ).find( '.dropdown-toggle, .sub-menu ').removeClass( 'toggled-on' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
+	// Wait for DOM to be ready.
+	document.addEventListener( 'DOMContentLoaded', function() {
+		var container = document.getElementById( 'site-navigation' );
+		if ( ! container ) {
+			return;
 		}
-	};
 
-	// Handheld Navigation - submenu toggles
-	function initMainNavigation( container ) {
+		var button = container.querySelector( 'button' );
+
+		if ( ! button ) {
+			return;
+		}
+
+		var menu = container.querySelector( 'ul' );
+
+		// Hide menu toggle button if menu is empty and return early.
+		if ( ! menu ) {
+			button.style.display = 'none';
+			return;
+		}
+
+		button.setAttribute( 'aria-expanded', 'false' );
+		menu.setAttribute( 'aria-expanded', 'false' );
+		menu.classList.add( 'nav-menu' );
+
+		button.addEventListener( 'click', function() {
+			container.classList.toggle( 'toggled' );
+			var expanded = container.classList.contains( 'toggled' ) ? 'true' : 'false';
+			button.setAttribute( 'aria-expanded', expanded );
+			menu.setAttribute( 'aria-expanded', expanded );
+		} );
 
 		// Add dropdown toggle that displays child menu items.
-		var dropdownToggle = jQuery( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
-			.append( jQuery( '<span />', { 'class': 'screen-reader-text', text: storefrontScreenReaderText.expand }) );
+		var handheld = document.getElementsByClassName( 'handheld-navigation' );
 
-		container.find( '.menu-item-has-children > a, .page_item_has_children > a' ).after( dropdownToggle );
+		if ( handheld.length > 0 ) {
+			handheld[0].querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' ).forEach( function( anchor ) {
 
-		// Set the active submenu dropdown toggle button initial state.
-		container.find( '.current-menu-ancestor > button' )
-			.addClass( 'toggled-on' )
-			.attr( 'aria-expanded', 'true' )
-			.find( '.screen-reader-text' )
-			.text( storefrontScreenReaderText.collapse );
-		// Set the active submenu initial state.
-		container.find( '.current-menu-ancestor > .sub-menu' ).addClass( 'toggled-on' );
+				// Add dropdown toggle that displays child menu items
+				var btn = document.createElement( 'button' );
+				btn.setAttribute( 'aria-expanded', 'false' );
+				btn.classList.add( 'dropdown-toggle' );
 
-		container.find( '.dropdown-toggle' ).click( function( e ) {
-			var _this = jQuery( this ),
-				screenReaderSpan = _this.find( '.screen-reader-text' );
+				btnSpan = document.createElement( 'span' );
+				btnSpan.classList.add( 'screen-reader-text' );
+				btnSpan.appendChild( document.createTextNode( storefrontScreenReaderText.expand ) );
 
-			e.preventDefault();
-			_this.toggleClass( 'toggled-on' );
-			_this.next( '.children, .sub-menu' ).toggleClass( 'toggled-on' );
+				btn.appendChild( btnSpan );
 
-			_this.attr( 'aria-expanded', _this.attr( 'aria-expanded' ) === 'false' ? 'true' : 'false' );
+				anchor.parentNode.insertBefore( btn, anchor.nextSibling );
 
-			screenReaderSpan.text( screenReaderSpan.text() === storefrontScreenReaderText.expand ? storefrontScreenReaderText.collapse : storefrontScreenReaderText.expand );
-		});
-	}
-
-	initMainNavigation( jQuery( '.handheld-navigation' ) );
-
-
-	// Sub-menu access from touchscreens
-		var masthead       = jQuery( '#masthead' );
-		var siteNavigation = masthead.find( '.main-navigation > div > ul' );
-
-		function toggleFocusClassTouchScreen() {
-
-			// Ensure the dropdowns close when user taps outside the site header
-			jQuery( document.body ).on( 'touchstart.storefront', function( e ) {
-				if ( ! jQuery( e.target ).closest( '.main-navigation li' ).length ) {
-					jQuery( '.main-navigation li' ).removeClass( 'focus' );
+				// Set the active submenu dropdown toggle button initial state
+				if ( anchor.parentNode.classList.contains( 'current-menu-ancestor' ) ) {
+					btn.setAttribute( 'aria-expanded', 'true' );
+					btn.classList.add( 'toggled-on' );
+					btn.nextElementSibling.classList.add( 'toggled-on' );
 				}
-			});
 
-			// Disables the link from working on the first touch of a menu with children
-			siteNavigation.find( '.menu-item-has-children > a, .page_item_has_children > a' )
-				.on( 'touchstart.storefront', function( e ) {
-					var el = jQuery( this ).parent( 'li' );
+				// Add event listener
+				btn.addEventListener( 'click', function() {
+					btn.classList.toggle( 'toggled-on' );
 
-					if ( ! el.hasClass( 'focus' ) ) {
-						e.preventDefault();
-						el.toggleClass( 'focus' );
-						el.siblings( '.focus' ).removeClass( 'focus' );
+					// Remove text inside span
+					while ( btnSpan.firstChild ) {
+						btnSpan.removeChild( btnSpan.firstChild );
 					}
-				});
-		}
-		// Add Focus Class for parents of sub-menus
-		siteNavigation.find( 'a' ).on( 'focus.storefront blur.storefront', function() {
-			jQuery( this ).parents( '.menu-item, .page_item' ).toggleClass( 'focus' );
-		});
 
-		// Triggers toggleFocusClassTouchScreen on touchscreen devices
-		if ( 'ontouchstart' in window ) {
-			jQuery( window ).on( 'resize.storefront', toggleFocusClassTouchScreen );
-			toggleFocusClassTouchScreen();
+					var expanded = btn.classList.contains( 'toggled-on' );
+
+					btn.setAttribute( 'aria-expanded', expanded );
+					btnSpan.appendChild( document.createTextNode( expanded ? storefrontScreenReaderText.collapse : storefrontScreenReaderText.expand ) );
+					btn.nextElementSibling.classList.toggle( 'toggled-on' );
+				} );
+			} );
 		}
 
-	// Add focus to cart dropdown
-	jQuery( window ).load( function() {
-		jQuery( '.site-header-cart' ).find( 'a' ).on( 'focus.storefront blur.storefront', function() {
-			jQuery( this ).parents().toggleClass( 'focus' );
-		});
-	});
+		// Add class to footer search when clicked.
+		document.querySelectorAll( '.storefront-handheld-footer-bar .search > a' ).forEach( function( anchor ) {
+			anchor.addEventListener( 'click', function( event ) {
+				anchor.parentElement.classList.toggle( 'active' );
+				event.preventDefault();
+			} );
+		} );
 
-	if ( is_touch_device() && jQuery( window ).width() > 767 ) {
+		// Add focus class to parents of sub-menu anchors.
+		document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ).forEach( function( anchor ) {
+			var li = anchor.parentNode;
+			anchor.addEventListener( 'focus', function() {
+				li.classList.add( 'focus' );
+			} );
+			anchor.addEventListener( 'blur', function() {
+				li.classList.remove( 'focus' );
+			} );
+		} );
+
 		// Add an identifying class to dropdowns when on a touch device
 		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
-		jQuery( '.main-navigation ul ul, .secondary-navigation ul ul, .site-header-cart .widget_shopping_cart' ).addClass( 'sub-menu--is-touch-device' );
-
-	}
-
-	/**
-	 * Check if the device is touch enabled
-	 * @return Boolean
-	 */
-	function is_touch_device() {
-		return 'ontouchstart' in window || navigator.maxTouchPoints;
-	}
+		if ( ( 'ontouchstart' in window || navigator.maxTouchPoints ) && window.innerWidth > 767 ) {
+			document.querySelectorAll( '.site-header ul ul, .site-header-cart .widget_shopping_cart' ).forEach( function( element ) {
+				element.classList.add( 'sub-menu--is-touch-device' );
+			} );
+		}
+	} );
 } )();

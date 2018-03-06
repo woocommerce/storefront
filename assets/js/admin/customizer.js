@@ -205,11 +205,11 @@
 		},
 
 		_getSelector: function( pointTo ) {
-			var section = api.section( pointTo );
+			var sectionOrPanel = api.section( pointTo ) ? api.section( pointTo ) : api.panel( pointTo );
 
-			// Check whether this is a section or a regular selector
-			if ( ! _.isUndefined( section ) ) {
-				return $( section.container[0] );
+			// Check whether this is a section, panel, or a regular selector
+			if ( ! _.isUndefined( sectionOrPanel ) ) {
+				return $( sectionOrPanel.container[0] );
 			}
 
 			return $( pointTo );

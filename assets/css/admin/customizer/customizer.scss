@@ -1,0 +1,176 @@
+@import '../buttons';
+
+$background: #23282d;
+
+.sf-guided-tour {
+	display: block;
+	background-color: $background;
+	background-color: rgba(35,40,45,.95);
+	border-radius: 5px;
+	box-shadow: 3px 1px 5px -2px rgba(0,0,0,0.145);
+	color: #A4A4A4;
+	font-size: 1.1em;
+	z-index: 999999998;
+	text-align: left;
+	box-sizing: border-box;
+
+	position: fixed;
+	left: 5px;
+	width: 360px;
+
+	transition-duration: 250ms;
+	transition-property: opacity;
+	transition-timing-function: ease-in-out;
+
+	opacity: 0;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 30px;
+		left: -14px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 14px 14px 14px 0;
+		border-color: transparent $background transparent transparent;
+		border-right-color: rgba(35,40,45,.95);
+	}
+
+	.sf-guided-tour-step {
+		padding: 30px;
+		overflow: hidden;
+
+		p {
+			font-size: 1em;
+			line-height: 1.7;
+		}
+
+		h2 {
+			margin-top: 0;
+			font-size: 1.1em;
+			font-weight: 500;
+			color: #fff;
+		}
+
+		.sf-guided-tour-skip {
+			margin-left: 10px;
+			color: #00AADC;
+
+			&:hover {
+				opacity: .75;
+			}
+		}
+	}
+
+	&:not(.sf-first-step) {
+		.sf-guided-tour-step {
+			a.sf-nux-button {
+				display: none;
+			}
+
+			.sf-guided-tour-skip {
+				display: block;
+				float: right;
+			}
+		}
+	}
+
+	&.sf-inside-section {
+		.sf-guided-tour-step {
+			a.sf-nux-button {
+				display: inline-block;
+			}
+
+			.sf-guided-tour-skip {
+				display: none;
+			}
+		}
+	}
+
+	&.sf-last-step {
+		.sf-guided-tour-step {
+			a.sf-nux-button {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+a.sf-nux-button {
+	vertical-align: middle;
+
+	&:active {
+		vertical-align: middle;
+	}
+}
+
+.sf-loaded {
+	opacity: 1;
+}
+
+.sf-moving {
+	transition-duration: 250ms;
+	transition-property: transform;
+	transition-timing-function: cubic-bezier(.84,.45,.68,1.44);
+}
+
+.sf-entering,
+.sf-exiting {
+	.sf-guided-tour {
+		animation-duration: .30s;
+		animation-timing-function: ease-in-out;
+		-webkit-animation-duration: .30s;
+		-webkit-animation-timing-function: ease-in-out;
+	}
+}
+
+.sf-entering {
+	.sf-guided-tour {
+		animation-name: bounceInLeft;
+		-webkit-animation-name: bounceInLeft;
+	}
+}
+
+.sf-exiting {
+	.sf-guided-tour {
+		animation-name: bounceOutRight;
+		-webkit-animation-name: bounceOutRight;
+	}
+}
+
+@-webkit-keyframes bounceInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+
+@keyframes bounceInLeft {
+	from {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes bounceOutRight {
+	to {
+		opacity: 0;
+		-webkit-transform: translateX(100%);
+	}
+}
+
+@keyframes bounceOutRight {
+	to {
+		opacity: 0;
+		transform: translateX(100%);
+	}
+}

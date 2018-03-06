@@ -38,8 +38,6 @@ add_action( 'woocommerce_after_shop_loop',        'woocommerce_pagination',     
 add_action( 'woocommerce_after_shop_loop',        'storefront_sorting_wrapper_close',         31 );
 add_action( 'woocommerce_after_shop_loop',        'storefront_product_columns_wrapper_close', 40 );
 
-add_filter( 'loop_shop_columns',                  'storefront_loop_columns' );
-
 add_action( 'woocommerce_before_shop_loop',       'storefront_sorting_wrapper',               9 );
 add_action( 'woocommerce_before_shop_loop',       'woocommerce_catalog_ordering',             10 );
 add_action( 'woocommerce_before_shop_loop',       'woocommerce_result_count',                 20 );
@@ -48,6 +46,11 @@ add_action( 'woocommerce_before_shop_loop',       'storefront_sorting_wrapper_cl
 add_action( 'woocommerce_before_shop_loop',       'storefront_product_columns_wrapper',       40 );
 
 add_action( 'storefront_footer',                  'storefront_handheld_footer_bar',           999 );
+
+// Legacy WooCommerce columns filter.
+if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
+	add_filter( 'loop_shop_columns', 'storefront_loop_columns' );
+}
 
 /**
  * Products

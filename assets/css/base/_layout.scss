@@ -1,0 +1,608 @@
+/**
+ * Strictly Layout Styles
+ */
+
+@include susy-media($desktop) {
+	table.shop_table_responsive {
+		tbody {
+			tr {
+				td,
+				th {
+					text-align: left;
+				}
+			}
+		}
+	}
+
+	.site-header {
+		padding-top: ms(5);
+		padding-bottom: 0;
+
+		.site-branding {
+			display: block;
+			@include span(3 of 12);
+			clear: both;
+
+			img {
+				height: auto;
+				max-width: 100%;
+				max-height: none;
+			}
+		}
+	}
+
+	.woocommerce-active {
+		.site-header {
+			.secondary-navigation {
+				@include span(6 of 12);
+			}
+
+			.site-search {
+				@include span(last 3 of 12);
+				clear: none;
+			}
+
+			.main-navigation {
+				@include span(9 of 12);
+				clear: both;
+			}
+
+			.site-header-cart {
+				@include span(last 3 of 12);
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.site-branding {
+		.site-description {
+			margin-bottom: 0;
+			display: block;
+		}
+	}
+
+	.site-branding,
+	.site-search,
+	.site-header-cart,
+	.site-logo-anchor,
+	.site-logo-link,
+	.custom-logo-link {
+		margin-bottom: ms(2);
+	}
+
+	.site-header {
+		.subscribe-and-connect-connect {
+			float: right;
+			margin-bottom: 1em;
+
+			.icons {
+				list-style: none;
+				margin: 0;
+
+				a {
+					font-size: 1em !important;
+				}
+
+				li {
+					margin: 0 0 0 ms(-3) !important;
+					display: inline-block;
+				}
+			}
+		}
+	}
+
+	.col-full {
+		@include clearfix;
+		@include container($container-width);
+		padding: 0 ms(5);
+		box-sizing: content-box;
+	}
+
+	.site-content {
+		@include clearfix;
+	}
+
+	.content-area {
+		@include span(9 of 12);
+	}
+
+	.widget-area {
+		@include span(last 3 of 12);
+	}
+
+	.right-sidebar {
+		.content-area {
+			@include span(9 of 12);
+		}
+
+		.widget-area {
+			@include span(last 3 of 12);
+		}
+	}
+
+	.left-sidebar {
+		.content-area {
+			@include span(last 9 of 12);
+		}
+
+		.widget-area {
+			@include span(3 of 12);
+		}
+	}
+
+	.storefront-full-width-content {
+		.content-area {
+			@include span(full);
+		}
+	}
+
+	.content-area,
+	.widget-area {
+		margin-bottom: ms(5);
+	}
+
+	/**
+	 * Full width & homepage template
+	 */
+	.page-template-template-fullwidth-php,
+	.page-template-template-homepage-php {
+		.content-area {
+			@include span(full);
+		}
+	}
+
+	/**
+	 * Footer widgets
+	 */
+	.footer-widgets {
+		@include clearfix;
+		padding-top: ms(7);
+		border-bottom: 1px solid rgba(0,0,0,0.05);
+
+		&.col-2 {
+			.block {
+				@include span(6 of 12);
+
+				&.footer-widget-2 {
+					@include last;
+				}
+			}
+		}
+
+		&.col-3 {
+			.block {
+				@include span(4 of 12);
+
+				&.footer-widget-3 {
+					@include last;
+				}
+			}
+		}
+
+		&.col-4 {
+			.block {
+				@include span(3 of 12);
+
+				&.footer-widget-4 {
+					@include last;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Comments
+	 */
+
+
+	.comment-list {
+		@include clearfix;
+
+		.comment {
+			clear: both;
+		}
+
+		.comment-meta {
+			@include span(2 of 9);
+			text-align: right;
+
+			.avatar {
+				float: right;
+			}
+		}
+
+		.comment-content {
+			padding-bottom: ms(6);
+			margin-bottom: ms(6);
+		}
+
+		.comment-content,
+		#respond {
+			@include span(last 7 of 9);
+		}
+
+		#respond {
+			float: right;
+			.comment-form-author,
+			.comment-form-email,
+			.comment-form-url {
+				width: 100%;
+				margin-right: 0;
+			}
+		}
+
+		.comment-body {
+			#respond {
+				box-shadow: 0 6px 2em rgba(#000,.2);
+				margin-bottom: ms(5);
+				margin-top: - ms(3);
+			}
+		}
+
+		.reply {
+			clear: both;
+			text-align: right;
+		}
+
+		ol.children {
+			@include span(last 8 of 9);
+			list-style: none;
+
+			.comment-meta {
+				@include span(2 of 8);
+			}
+
+			.comment-content,
+			#respond {
+				@include span(last 6 of 8);
+			}
+
+			ol.children {
+				@include span(last 7 of 8);
+
+				.comment-meta {
+					@include span(2 of 7);
+				}
+
+				.comment-content,
+				#respond {
+					@include span(last 5 of 7);
+				}
+
+				ol.children {
+					@include span(last 6 of 7);
+
+					.comment-meta {
+						@include span(2 of 6);
+					}
+
+					.comment-content,
+					#respond {
+						@include span(last 4 of 6);
+					}
+
+					ol.children {
+						@include span(last 5 of 6);
+
+						.comment-meta {
+							@include span(2 of 5);
+						}
+
+						.comment-content,
+						#respond {
+							@include span(last 3 of 5);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#respond {
+		padding: ms(5);
+
+		.comment-form-author,
+		.comment-form-email,
+		.comment-form-url {
+			@include span(3 of 9);
+		}
+
+		.comment-form-url {
+			@include last;
+		}
+
+		.comment-form-comment {
+			clear: both;
+		}
+	}
+
+	/**
+	 * Content
+	 */
+	.hentry {
+		.entry-header {
+			margin-bottom: ms(5);
+		}
+	}
+
+	.hentry.type-post {
+		@include clearfix;
+
+		.entry-meta {
+			@include span(2 of 9);
+			font-size: ms(-1);
+		}
+
+		.entry-content {
+			@include span(last 7 of 9);
+		}
+	}
+
+	/**
+	 * Menus
+	 *
+	 * 1 - We have to use a `left` declaration so that dropdowns are revealed when tabbed.
+	 */
+	.menu-toggle,
+	.handheld-navigation,
+	.main-navigation.toggled .handheld-navigation,
+	.main-navigation.toggled div.menu {
+		display: none;
+	}
+
+	.primary-navigation {
+		display: block;
+	}
+
+	.main-navigation,
+	.secondary-navigation {
+		clear: both;
+		display: block;
+		width: 100%;
+
+		// first level
+		ul {
+			list-style: none;
+			margin: 0;
+			padding-left: 0;
+			display: block;
+
+			li {
+				position: relative;
+				display: inline-block;
+				text-align: left;
+
+				a {
+					display: block;
+
+					&:before {
+						display: none;
+					}
+				}
+
+				// link hover
+				&:hover,
+				&.focus {
+					> ul {
+						left: 0;
+						display: block;
+
+						li {
+							> ul {
+								left: -9999px; /* 1 */
+
+								&.sub-menu--is-touch-device {
+									display: none;
+									left: 0;
+								}
+							}
+
+							&:hover,
+							&.focus {
+								> ul {
+									left: 100%;
+									top: 0;
+									display: block;
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			// second level
+			ul {
+				float: left;
+				position: absolute;
+				top: 100%;
+				z-index: 99999;
+				left: -9999px; /* 1 */
+
+				&.sub-menu--is-touch-device {
+					display: none;
+					left: 0;
+				}
+
+				li {
+					display: block;
+
+					a {
+						width: 200px;
+					}
+				}
+			}
+		}
+
+	}
+
+	ul.menu {
+		li {
+			&.current-menu-item {
+				> a {
+					color: $color_body;
+				}
+			}
+		}
+	}
+
+	/**
+	 * Primary Navigation
+	 */
+	.storefront-primary-navigation {
+		clear: both;
+		@include clearfix;
+		margin-left: -99em;
+		margin-right: -99em;
+		padding-left: 99em;
+		padding-right: 99em;
+	}
+
+	.main-navigation {
+		div.menu {
+			display: block;
+		}
+
+		ul.menu,
+		ul.nav-menu {
+			max-height: none;
+			overflow: visible;
+
+			> li {
+				// The first level menu item
+				> a {
+					padding: ms(3) 1em;
+				}
+
+				&:first-child {
+					margin-left: -1em;
+				}
+
+				&.menu-item-has-children,
+				&.page_item_has_children {
+					&:hover {
+						&:after {
+							display: block;
+						}
+					}
+				}
+			}
+
+			ul {
+				// Dropdowns
+				margin-left: 0;
+
+				li {
+					a {
+						padding: ms(-1) ms(2);
+						font-weight: 400;
+						font-size: ms(-1);
+					}
+
+					&:last-child {
+						border-bottom: 0;
+					}
+				}
+
+				ul {
+					margin-left: 0;
+					box-shadow: none;
+				}
+
+				a:hover,
+				li:hover > a,
+				li.focus {
+					background-color: rgba(0,0,0,0.025);
+				}
+			}
+		}
+
+		a {
+			padding: 0 1em ms(4);
+		}
+	}
+
+	/**
+	 * Secondary Navigation
+	 */
+	.secondary-navigation {
+		margin: 0 0 ms(3);
+		width: auto;
+		clear: none;
+		line-height: 1;
+
+		.menu {
+			font-size: ms(-1);
+			width: auto;
+			float: right;
+
+			> li:hover > a {
+				text-decoration: none;
+			}
+
+			ul {
+				a {
+					padding: .326em ms(-1);
+					background: rgba(#000,0.05);
+				}
+
+				li:first-child a {
+					padding-top: 1em;
+				}
+
+				li:last-child a {
+					padding-bottom: 1em;
+				}
+
+				ul {
+					margin-top: - ms(-2);
+				}
+			}
+
+			a {
+				padding: ms(1) ms(-1);
+				color: lighten( $color_body, 20% );
+				font-weight: 400;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	/**
+	 * 404 Styles
+	 */
+	 .error404 {
+		.fourohfour-columns-2 {
+			.col-1 {
+				@include span( 6 of 12 );
+
+				ul.products {
+					margin-bottom: 0;
+				}
+			}
+
+			.col-2 {
+				@include span( last 6 of 12 );
+			}
+		}
+	 }
+}
+
+@include susy-media (max-width $container-width) {
+	.col-full {
+		margin-left: ms(5);
+		margin-right: ms(5);
+		padding: 0;
+	}
+}
+
+@include susy-media (max-width $handheld) {
+	.col-full {
+		margin-left: ms(2);
+		margin-right: ms(2);
+		padding: 0;
+	}
+}

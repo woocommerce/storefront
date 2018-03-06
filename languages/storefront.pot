@@ -1,17 +1,17 @@
-# <!=Copyright (C) 2017 WooThemes
+# <!=Copyright (C) 2018 Automattic
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.2.5\n"
+"Project-Id-Version: Storefront 2.2.8\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2017-08-21 15:29:12+00:00\n"
+"POT-Creation-Date: 2018-02-12 22:12:30+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"X-Generator: grunt-wp-i18n1.0.0\n"
+"X-Generator: grunt-wp-i18n1.0.1\n"
 
 #: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
@@ -23,7 +23,7 @@ msgid ""
 "below."
 msgstr ""
 
-#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:338
+#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:344
 msgid "Search"
 msgstr ""
 
@@ -238,37 +238,37 @@ msgstr ""
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/class-storefront.php:134
+#: inc/class-storefront.php:147
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-storefront.php:140
+#: inc/class-storefront.php:153
 msgid "Below Header"
 msgstr ""
 
-#: inc/class-storefront.php:142
+#: inc/class-storefront.php:155
 msgid ""
 "Widgets added to this region will appear beneath the header and above the "
 "main content."
 msgstr ""
 
-#: inc/class-storefront.php:154
+#: inc/class-storefront.php:167
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-storefront.php:155
+#: inc/class-storefront.php:168
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-storefront.php:157
+#: inc/class-storefront.php:170
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-storefront.php:158
+#: inc/class-storefront.php:171
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:317
+#: inc/class-storefront.php:332
 msgid "Post Navigation"
 msgstr ""
 
@@ -419,70 +419,78 @@ msgid "Add example products"
 msgstr ""
 
 #: inc/nux/class-storefront-nux-admin.php:125
-#: inc/nux/class-storefront-nux-guided-tour.php:105
+#: inc/nux/class-storefront-nux-guided-tour.php:111
 msgid "Let's go!"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:77
+#: inc/nux/class-storefront-nux-guided-tour.php:83
 msgid "Next"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:83
+#: inc/nux/class-storefront-nux-guided-tour.php:89
 msgid "No thanks, skip the tour"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:85
+#: inc/nux/class-storefront-nux-guided-tour.php:91
 msgid "Skip this step"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:103
+#: inc/nux/class-storefront-nux-guided-tour.php:109
 msgid "Welcome to the Customizer"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:104
+#: inc/nux/class-storefront-nux-guided-tour.php:110
 msgid ""
 "Here you can control the overall look and feel of your store.%sTo get "
 "started, let's add your logo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:110
+#: inc/nux/class-storefront-nux-guided-tour.php:117
 msgid "Add your logo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:111
+#: inc/nux/class-storefront-nux-guided-tour.php:118
 msgid ""
 "Open the Site Identity Panel, then click the 'Select Logo' button to upload "
 "your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:116
+#: inc/nux/class-storefront-nux-guided-tour.php:124
+msgid "Customize your navigation menus"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-guided-tour.php:125
+msgid "Organize your menus by adding Pages, Categories, Tags, and Custom Links."
+msgstr ""
+
+#: inc/nux/class-storefront-nux-guided-tour.php:130
 msgid "Choose your accent color"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:117
+#: inc/nux/class-storefront-nux-guided-tour.php:131
 msgid ""
 "In the typography panel you can specify an accent color which will be "
 "applied to things like links and star ratings. We recommend using your "
 "brand color for this setting."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:122
+#: inc/nux/class-storefront-nux-guided-tour.php:136
 msgid "Color your buttons"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:123
+#: inc/nux/class-storefront-nux-guided-tour.php:137
 msgid ""
 "Choose colors for your button backgrounds and text. Once again, brand "
 "colors are good choices here."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:129
+#: inc/nux/class-storefront-nux-guided-tour.php:143
 msgid ""
 "All set! Remember to %ssave & publish%s your changes when you're done.%sYou "
 "can return to your dashboard by clicking the X in the top left corner."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-guided-tour.php:131
+#: inc/nux/class-storefront-nux-guided-tour.php:145
 msgid "Done"
 msgstr ""
 
@@ -592,7 +600,11 @@ msgid "Edit"
 msgstr ""
 
 #: inc/storefront-template-functions.php:130
-msgid "%1$s designed by %2$s."
+msgid "WooCommerce - The Best eCommerce Platform for WordPress"
+msgstr ""
+
+#: inc/storefront-template-functions.php:130
+msgid "Built with Storefront &amp; WooCommerce"
 msgstr ""
 
 #: inc/storefront-template-functions.php:232
@@ -679,7 +691,7 @@ msgid "We Recommend"
 msgstr ""
 
 #: inc/storefront-template-functions.php:674
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:255
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:261
 msgid "Featured Products"
 msgstr ""
 
@@ -704,7 +716,7 @@ msgid "Best Selling Products"
 msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:74
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:351
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:357
 msgid "View your shopping cart"
 msgstr ""
 
@@ -714,15 +726,15 @@ msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:263
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:269
 msgid "On Sale Now"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:271
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:277
 msgid "New In Store"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:365
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:371
 msgid "My Account"
 msgstr ""
 
@@ -751,7 +763,7 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "WooThemes"
+msgid "Automattic"
 msgstr ""
 
 #. Author URI of the plugin/theme

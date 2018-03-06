@@ -3,6 +3,7 @@
 
 # Minified js
 *.min.js
+!/assets/js/vendor/*.min.js
 
 # Sass
 .sass-cache
@@ -25,3 +26,7 @@ config.codekit
 
 # macOS
 .DS_Store
+
+# Composer
+composer.lock
+/vendor

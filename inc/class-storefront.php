@@ -65,38 +65,38 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/*
 			 * Enable support for Post Thumbnails on posts and pages.
 			 *
-			 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
+			 * @link https://developer.wordpress.org/reference/functions/add_theme_support/#Post_Thumbnails
 			 */
 			add_theme_support( 'post-thumbnails' );
 
 			/**
 			 * Enable support for site logo
 			 */
-			add_theme_support( 'custom-logo', array(
+			add_theme_support( 'custom-logo', apply_filters( 'storefront_custom_logo_args', array(
 				'height'      => 110,
 				'width'       => 470,
 				'flex-width'  => true,
-			) );
+			) ) );
 
 			// This theme uses wp_nav_menu() in two locations.
-			register_nav_menus( array(
+			register_nav_menus( apply_filters( 'storefront_register_nav_menus', array(
 				'primary'   => __( 'Primary Menu', 'storefront' ),
 				'secondary' => __( 'Secondary Menu', 'storefront' ),
 				'handheld'  => __( 'Handheld Menu', 'storefront' ),
-			) );
+			) ) );
 
 			/*
 			 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
 			 * to output valid HTML5.
 			 */
-			add_theme_support( 'html5', array(
+			add_theme_support( 'html5', apply_filters( 'storefront_html5_args', array(
 				'search-form',
 				'comment-form',
 				'comment-list',
 				'gallery',
 				'caption',
 				'widgets',
-			) );
+			) ) );
 
 			// Setup the WordPress core custom background feature.
 			add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
@@ -109,10 +109,23 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 *  https://github.com/automattic/site-logo
 			 *  http://jetpack.me/
 			 */
-			add_theme_support( 'site-logo', array( 'size' => 'full' ) );
+			add_theme_support( 'site-logo', apply_filters( 'storefront_site_logo_args', array(
+				'size' => 'full'
+			) ) );
 
 			// Declare WooCommerce support.
-			add_theme_support( 'woocommerce' );
+			add_theme_support( 'woocommerce', apply_filters( 'storefront_woocommerce_args', array(
+				'single_image_width'    => 416,
+				'thumbnail_image_width' => 324,
+				'product_grid'          => array(
+					'default_columns' => 3,
+					'default_rows'    => 4,
+					'min_columns'     => 1,
+					'max_columns'     => 6,
+					'min_rows'        => 1
+				)
+			) ) );
+
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
@@ -127,7 +140,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		/**
 		 * Register widget area.
 		 *
-		 * @link http://codex.wordpress.org/Function_Reference/register_sidebar
+		 * @link https://codex.wordpress.org/Function_Reference/register_sidebar
 		 */
 		public function widgets_init() {
 			$sidebar_args['sidebar'] = array(
@@ -165,7 +178,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					);
 				}
 			}
-			
+
 			$sidebar_args = apply_filters( 'storefront_sidebar_args', $sidebar_args );
 
 			foreach ( $sidebar_args as $sidebar => $args ) {
@@ -210,7 +223,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
-			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/sass/base/icons.css', '', $storefront_version );
+			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', $storefront_version );
+			wp_style_add_data( 'storefront-icons', 'rtl', 'replace' );
 
 			/**
 			 * Fonts
@@ -233,7 +247,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
-			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array( 'jquery' ), '20120206', true );
+			wp_enqueue_script( 'storefront-navigation', get_template_directory_uri() . '/assets/js/navigation' . $suffix . '.js', array(), $storefront_version, true );
 			wp_enqueue_script( 'storefront-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix' . $suffix . '.js', array(), '20130115', true );
 
 			$storefront_l10n = array();
@@ -247,8 +261,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
-				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array( 'jquery' ), '1.1.0', true );
-				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array( 'jquery' ), '20120206', true );
+				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array(), '1.1.0', true );
+				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array(), $storefront_version, true );
 			}
 
 			if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -265,7 +279,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function child_scripts() {
 			if ( is_child_theme() ) {
-				wp_enqueue_style( 'storefront-child-style', get_stylesheet_uri(), '' );
+				$child_theme = wp_get_theme( get_stylesheet() );
+				wp_enqueue_style( 'storefront-child-style', get_stylesheet_uri(), array(), $child_theme->get( 'Version' ) );
 			}
 		}
 
@@ -346,7 +361,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 					border: 0 !important;
 					border-radius: 3px !important;
 					font-family: "Source Sans Pro", "Open Sans", sans-serif !important;
-					-webkit-font-smoothing: antialiased;
 					background-color: <?php echo esc_html( storefront_adjust_color_brightness( $background_color, -7 ) ); ?> !important;
 				}
 
