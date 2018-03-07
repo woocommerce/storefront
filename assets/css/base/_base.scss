@@ -1209,14 +1209,13 @@ button.menu-toggle {
 				position: relative;
 
 				button {
-
-					&:after {
+					&::after {
 						@include fa-icon();
-						content: "\f107";
-						transition: all, ease, .9s;
+						content: '\f107';
+						transition: all, ease, 0.9s;
 					}
 
-					&.toggled-on:after {
+					&.toggled-on::after {
 						transform: rotate(180deg);
 					}
 				}
@@ -1226,7 +1225,7 @@ button.menu-toggle {
 				visibility: hidden;
 				opacity: 0;
 				max-height: 0;
-				transition: all, ease, .9s;
+				transition: all, ease, 0.9s;
 
 				&.toggled-on {
 					visibility: visible;
