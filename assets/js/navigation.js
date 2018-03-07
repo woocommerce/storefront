@@ -1,3 +1,5 @@
+/* global storefrontScreenReaderText */
+
 /**
  * navigation.js
  *
@@ -6,21 +8,24 @@
  * Finally adds a class required to reveal the search in the handheld footer bar.
  */
 ( function() {
+
 	// Wait for DOM to be ready.
 	document.addEventListener( 'DOMContentLoaded', function() {
 		var container = document.getElementById( 'site-navigation' );
-		if ( !container ) {
+		if ( ! container ) {
 			return;
 		}
 
 		var button = container.querySelector( 'button' );
-		if ( !button ) {
+
+		if ( ! button ) {
 			return;
 		}
 
 		var menu = container.querySelector( 'ul' );
+
 		// Hide menu toggle button if menu is empty and return early.
-		if ( !menu ) {
+		if ( ! menu ) {
 			button.style.display = 'none';
 			return;
 		}
@@ -35,6 +40,50 @@
 			button.setAttribute( 'aria-expanded', expanded );
 			menu.setAttribute( 'aria-expanded', expanded );
 		} );
+
+		// Add dropdown toggle that displays child menu items.
+		var handheld = document.getElementsByClassName( 'handheld-navigation' );
+
+		if ( handheld.length > 0 ) {
+			handheld[0].querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' ).forEach( function( anchor ) {
+
+				// Add dropdown toggle that displays child menu items
+				var btn = document.createElement( 'button' );
+				btn.setAttribute( 'aria-expanded', 'false' );
+				btn.classList.add( 'dropdown-toggle' );
+
+				btnSpan = document.createElement( 'span' );
+				btnSpan.classList.add( 'screen-reader-text' );
+				btnSpan.appendChild( document.createTextNode( storefrontScreenReaderText.expand ) );
+
+				btn.appendChild( btnSpan );
+
+				anchor.parentNode.insertBefore( btn, anchor.nextSibling );
+
+				// Set the active submenu dropdown toggle button initial state
+				if ( anchor.parentNode.classList.contains( 'current-menu-ancestor' ) ) {
+					btn.setAttribute( 'aria-expanded', 'true' );
+					btn.classList.add( 'toggled-on' );
+					btn.nextElementSibling.classList.add( 'toggled-on' );
+				}
+
+				// Add event listener
+				btn.addEventListener( 'click', function() {
+					btn.classList.toggle( 'toggled-on' );
+
+					// Remove text inside span
+					while ( btnSpan.firstChild ) {
+						btnSpan.removeChild( btnSpan.firstChild );
+					}
+
+					var expanded = btn.classList.contains( 'toggled-on' );
+
+					btn.setAttribute( 'aria-expanded', expanded );
+					btnSpan.appendChild( document.createTextNode( expanded ? storefrontScreenReaderText.collapse : storefrontScreenReaderText.expand ) );
+					btn.nextElementSibling.classList.toggle( 'toggled-on' );
+				} );
+			} );
+		}
 
 		// Add class to footer search when clicked.
 		document.querySelectorAll( '.storefront-handheld-footer-bar .search > a' ).forEach( function( anchor ) {
@@ -63,5 +112,4 @@
 			} );
 		}
 	} );
-
 } )();
