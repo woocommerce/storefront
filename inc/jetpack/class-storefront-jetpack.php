@@ -108,7 +108,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 
 		/**
 		 * Jetpack infinite scroll duplicates posts where orderby is anything other than modified or date
-		 * This filter offsets the products returned by however many are displayed per page
+		 * This filter increases the current page by one.
 		 *
 		 * @link https://github.com/Automattic/jetpack/issues/1135
 		 * @param  array $args infinite scroll args.
@@ -116,7 +116,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 */
 		public function fix_duplicate_products( $args ) {
 			if ( ( isset( $args['post_type'] ) && 'product' === $args['post_type'] ) || ( isset( $args['taxonomy'] ) && 'product_cat' === $args['taxonomy'] ) ) {
-				$args['offset'] = $args['posts_per_page'] * $args['paged'];
+				$args['paged'] = $args['paged'] + 1;
 			}
 
 		 	return $args;
