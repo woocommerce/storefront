@@ -157,7 +157,7 @@
 	.footer-widgets {
 		@include clearfix;
 		padding-top: ms(7);
-		border-bottom: 1px solid rgba(0,0,0,0.05);
+		border-bottom: 1px solid rgba( 0, 0, 0, 0.05 );
 
 		&.col-2 {
 			.block {
@@ -233,7 +233,7 @@
 
 		.comment-body {
 			#respond {
-				box-shadow: 0 6px 2em rgba(#000,.2);
+				box-shadow: 0 6px 2em rgba( #000, 0.2 );
 				margin-bottom: ms(5);
 				margin-top: - ms(3);
 			}
@@ -375,7 +375,7 @@
 				a {
 					display: block;
 
-					&:before {
+					&::before {
 						display: none;
 					}
 				}
@@ -481,7 +481,7 @@
 				&.menu-item-has-children,
 				&.page_item_has_children {
 					&:hover {
-						&:after {
+						&::after {
 							display: block;
 						}
 					}
@@ -512,7 +512,7 @@
 				a:hover,
 				li:hover > a,
 				li.focus {
-					background-color: rgba(0,0,0,0.025);
+					background-color: rgba( 0, 0, 0, 0.025 );
 				}
 			}
 		}
@@ -542,8 +542,8 @@
 
 			ul {
 				a {
-					padding: .326em ms(-1);
-					background: rgba(#000,0.05);
+					padding: 0.326em ms(-1);
+					background: rgba( #000, 0.05 );
 				}
 
 				li:first-child a {
@@ -574,7 +574,7 @@
 	/**
 	 * 404 Styles
 	 */
-	 .error404 {
+	.error404 {
 		.fourohfour-columns-2 {
 			.col-1 {
 				@include span( 6 of 12 );
@@ -588,7 +588,7 @@
 				@include span( last 6 of 12 );
 			}
 		}
-	 }
+	}
 }
 
 @include susy-media (max-width $container-width) {

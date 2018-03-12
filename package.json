@@ -27,9 +27,11 @@
     "grunt-postcss": "^0.8.0",
     "grunt-rtlcss": "~2.0.1",
     "grunt-sass": "~2.0.0",
+    "grunt-stylelint": "~0.9.0",
     "grunt-wp-i18n": "^1.0.0",
     "node-bourbon": "~4.2.8",
     "node-sass": "~4.5.2",
+    "stylelint": "~8.2.0",
     "susy": "~2.2.12"
   },
   "engines": {

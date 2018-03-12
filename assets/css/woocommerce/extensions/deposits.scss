@@ -18,12 +18,12 @@
 		li {
 			padding: ms(-2) 1em;
 			border: none;
-			background: rgba(#000,.0125);
+			background: rgba( #000, 0.0125 );
 			box-shadow: none;
 			border-radius: 0;
 
 			&:hover {
-				background: rgba(#000,.02);
+				background: rgba( #000, 0.02 );
 			}
 
 			input {
@@ -39,12 +39,11 @@
 	.wc-deposits-payment-plans {
 		background: transparent;
 		padding: 0;
-		background: none;
 		border: 0;
 		box-shadow: none;
 
 		li.wc-deposits-payment-plan {
-			border: 1em solid rgba(#000,.0125);
+			border: 1em solid rgba( #000, 0.0125 );
 			padding: ms(3);
 			margin-bottom: 1em;
 
@@ -53,11 +52,11 @@
 			}
 
 			&:hover {
-				background: rgba(#000,.0125);
+				background: rgba( #000, 0.0125 );
 			}
 
 			&:last-child {
-				border-bottom: 1em solid rgba(#000,.0125);
+				border-bottom: 1em solid rgba( #000, 0.0125 );
 			}
 
 			.wc-deposits-payment-plan-description {
@@ -77,12 +76,12 @@
 		.wc-deposits-payment-plans {
 			margin-bottom: ms(3);
 
-			&:after {
+			&::after {
 				display: none;
 			}
 
-			&:before {
-				border-bottom-color: rgba(#000,.025);
+			&::before {
+				border-bottom-color: rgba( #000, 0.025 );
 				top: -1px;
 			}
 		}

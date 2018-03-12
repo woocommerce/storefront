@@ -47,6 +47,17 @@ module.exports = function( grunt ) {
 			]
 		},
 
+		// Sass linting with Stylelint.
+		stylelint: {
+			options: {
+				configFile: '.stylelintrc'
+			},
+			all: [
+				'assets/css/**/*.scss',
+				'!assets/css/sass/vendors/**/*.scss'
+			]
+		},
+
 		// Minify .js files.
 		uglify: {
 			options: {
@@ -421,6 +432,7 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-rtlcss' );
 	grunt.loadNpmTasks( 'grunt-postcss' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
+	grunt.loadNpmTasks( 'grunt-stylelint' );
 
 
 	// Register tasks
@@ -431,6 +443,7 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'css', [
+		'stylelint',
 		'sass',
 		'postcss',
 		'cssmin',
