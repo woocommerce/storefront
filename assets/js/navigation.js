@@ -52,7 +52,7 @@
 				btn.setAttribute( 'aria-expanded', 'false' );
 				btn.classList.add( 'dropdown-toggle' );
 
-				btnSpan = document.createElement( 'span' );
+				var btnSpan = document.createElement( 'span' );
 				btnSpan.classList.add( 'screen-reader-text' );
 				btnSpan.appendChild( document.createTextNode( storefrontScreenReaderText.expand ) );
 
