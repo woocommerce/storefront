@@ -37,13 +37,15 @@
 			if ( product_id ) {
 				var product = document.getElementById( 'product-' + product_id );
 
-				if ( ! product || ! product.classList.contains( 'product-type-simple' ) ) {
-					var selectOptions = document.getElementsByClassName( 'storefront-sticky-add-to-cart__content-button' );
+				if ( product ) {
+					if ( ! product.classList.contains( 'product-type-simple' ) && ! product.classList.contains( 'product-type-external' ) ) {
+						var selectOptions = document.getElementsByClassName( 'storefront-sticky-add-to-cart__content-button' );
 
-					selectOptions[0].addEventListener( 'click', function( event ) {
-						event.preventDefault();
-						document.getElementById( 'product-' + product_id ).scrollIntoView();
-					} );
+						selectOptions[0].addEventListener( 'click', function( event ) {
+							event.preventDefault();
+							document.getElementById( 'product-' + product_id ).scrollIntoView();
+						} );
+					}
 				}
 			}
 		}
