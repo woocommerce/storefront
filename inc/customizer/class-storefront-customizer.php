@@ -509,6 +509,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			ul.menu li a,
 			.site-branding h1 a,
 			.site-footer .storefront-handheld-footer-bar a:not(.button),
+			.storefront-sticky-add-to-cart a:not(.button),
 			button.menu-toggle,
 			button.menu-toggle:hover {
 				color: ' . $storefront_theme_mods['header_link_color'] . ';
@@ -574,6 +575,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			.storefront-handheld-footer-bar ul li.cart .count {
 				border-color: ' . $storefront_theme_mods['header_background_color'] . ';
+			}
+
+			.storefront-sticky-add-to-cart {
+				color: ' . $storefront_theme_mods['text_color'] . ';
+				background-color: ' . $storefront_theme_mods['background_color'] . ';
 			}
 
 			h1, h2, h3, h4, h5, h6 {

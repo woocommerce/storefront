@@ -23,6 +23,29 @@
 	font-style: normal;
 }
 
+// Animations
+@keyframes slideInDown {
+	from {
+		transform: translate3d( 0, -100%, 0 );
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d( 0, 0, 0 );
+	}
+}
+
+@keyframes slideOutUp {
+	from {
+		transform: translate3d( 0, 0, 0 );
+	}
+
+	to {
+		visibility: hidden;
+		transform: translate3d( 0, -100%, 0 );
+	}
+}
+
 .price {
 	ins {
 		font-weight: 400;
@@ -1818,6 +1841,13 @@ dl.variation {
 	}
 }
 
+/**
+ * Sticky Add to Cart
+ */
+.storefront-sticky-add-to-cart {
+	display: none;
+}
+
 @include susy-media($desktop) {
 	.demo_store {
 		bottom: 0;
@@ -2289,7 +2319,6 @@ dl.variation {
 			}
 		}
 	}
-
 
 	.woocommerce .page-description {
 		margin-bottom: ms(3);
@@ -2776,6 +2805,74 @@ dl.variation {
 		.panel {
 			@include span(last 6 of 9);
 			margin-top: 0;
+		}
+	}
+
+	/**
+	 * Sticky Add to Cart
+	 */
+	.storefront-sticky-add-to-cart {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 99998;
+		transform: translate3d( 0, -100%, 0 );
+		padding: ms(3);
+		overflow: hidden;
+		zoom: 1;
+		box-shadow: 0 1px 2px rgba( #000000, 0.2 );
+		animation-duration: 0.5s;
+		animation-fill-mode: both;
+
+		&--slideInDown {
+			animation-name: slideInDown;
+		}
+
+		&--slideOutUp {
+			animation-name: slideOutUp;
+		}
+
+		&__content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-title {
+				display: block;
+				font-size: 1.1em;
+			}
+
+			&-price {
+				margin-right: ms(-1);
+				opacity: 0.5;
+			}
+
+			&-button {
+				margin-left: auto;
+			}
+		}
+
+		img {
+			max-width: ms(6);
+			margin: 0 ms(2) 0 0;
+			padding: 3px;
+			border: 1px solid rgba( #000000, 0.1 );
+		}
+
+		.star-rating {
+			display: inline-block;
+			margin: 0;
+			vertical-align: bottom;
+		}
+	}
+
+	.admin-bar {
+		.storefront-sticky-add-to-cart {
+			&--slideInDown {
+				top: 32px;
+			}
 		}
 	}
 }

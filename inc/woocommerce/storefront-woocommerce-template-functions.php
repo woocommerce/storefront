@@ -371,3 +371,37 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 		echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'storefront' ) . '</a>';
 	}
 }
+
+if ( ! function_exists( 'storefront_sticky_add_to_cart' ) ) {
+	/**
+	 * Sticky Add to Cart
+	 *
+	 * @since 2.3.0
+	 */
+	function storefront_sticky_add_to_cart() {
+		global $product;
+
+		if ( ! is_product() ) {
+			return;
+		}
+
+		wp_enqueue_script( 'storefront-sticky-add-to-cart' );
+		?>
+			<section class="storefront-sticky-add-to-cart">
+				<div class="col-full">
+					<div class="storefront-sticky-add-to-cart__content">
+						<?php echo wp_kses_post( woocommerce_get_product_thumbnail() ); ?>
+						<div class="storefront-sticky-add-to-cart__content-product-info">
+							<span class="storefront-sticky-add-to-cart__content-title"><?php esc_attr_e( 'You\'re viewing:', 'storefront' ); ?> <strong><?php the_title(); ?></strong></span>
+							<span class="storefront-sticky-add-to-cart__content-price"><?php echo wp_kses_data( $product->get_price_html() ); ?></span>
+							<?php echo wp_kses_post( wc_get_rating_html( $product->get_average_rating() ) ); ?>
+						</div>
+						<a href="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="storefront-sticky-add-to-cart__content-button button alt">
+							<?php echo $product->is_type( 'variable' ) ? esc_attr__( 'Select options', 'storefront' ) : esc_attr__( $product->single_add_to_cart_text() ); ?>
+						</a>
+					</div>
+				</div>
+			</section><!-- .storefront-sticky-add-to-cart -->
+		<?php
+	}
+}
