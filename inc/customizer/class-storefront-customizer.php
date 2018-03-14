@@ -519,6 +519,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				border-color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
+			.storefront-single-product-pagination a {
+				color: ' . $storefront_theme_mods['text_color'] . ';
+				background-color: ' . $storefront_theme_mods['background_color'] . ';
+			}
+
 			.main-navigation ul li a:hover,
 			.main-navigation ul li:hover > a,
 			.site-title a:hover,

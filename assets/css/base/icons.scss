@@ -196,6 +196,32 @@ input[type='submit'],
 	}
 }
 
+.storefront-single-product-pagination {
+	a {
+		&[rel='prev'],
+		&[rel='next'] {
+			&::after {
+				@include fa-icon();
+
+			}
+		}
+
+		&[rel='prev'] {
+			&::after {
+				content: '\f104';
+				padding-right: ms(2);
+			}
+		}
+
+		&[rel='next'] {
+			&::after {
+				content: '\f105';
+				padding-left: ms(2);
+			}
+		}
+	}
+}
+
 .single-product {
 	.pswp__button {
 		background-color: transparent;
