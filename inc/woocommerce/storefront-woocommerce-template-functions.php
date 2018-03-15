@@ -400,15 +400,15 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 		}
 
 		?>
-		<nav class="storefront-single-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
+		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
 			<?php if ( $previous_product && $previous_product->is_visible() ) : ?>
-				<?php previous_post_link( '%link', wp_kses_post( $previous_product->get_image() ) . '<span class="storefront-single-product-pagination__title">%title</span>', $same_category, '', 'product_cat' ); ?>
+				<?php previous_post_link( '%link', wp_kses_post( $previous_product->get_image() ) . '<span class="storefront-product-pagination__title">%title</span>', $same_category, '', 'product_cat' ); ?>
 			<?php endif; ?>
 
 			<?php if ( $next_product && $next_product->is_visible() ) : ?>
-				<?php next_post_link( '%link', wp_kses_post( $next_product->get_image() ) . '<span class="storefront-single-product-pagination__title">%title</span>', $same_category, '', 'product_cat' ); ?>
+				<?php next_post_link( '%link', wp_kses_post( $next_product->get_image() ) . '<span class="storefront-product-pagination__title">%title</span>', $same_category, '', 'product_cat' ); ?>
 			<?php endif; ?>
-		</nav><!-- .storefront-single-product-pagination -->
+		</nav><!-- .storefront-product-pagination -->
 		<?php
 	}
 }

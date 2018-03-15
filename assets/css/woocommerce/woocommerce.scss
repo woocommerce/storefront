@@ -1821,7 +1821,7 @@ dl.variation {
 /**
  * Single Product Pagination
  */
-.storefront-single-product-pagination {
+.storefront-product-pagination {
 	display: none;
 }
 
@@ -2789,7 +2789,7 @@ dl.variation {
 	/**
 	 * Single Product Pagination
 	 */
-	.storefront-single-product-pagination {
+	.storefront-product-pagination {
 		display: block;
 
 		a {
@@ -2820,7 +2820,7 @@ dl.variation {
 					margin-left: ms(2);
 				}
 
-				.storefront-single-product-pagination__title {
+				.storefront-product-pagination__title {
 					margin-right: auto;
 				}
 			}
@@ -2838,7 +2838,7 @@ dl.variation {
 					margin-right: ms(2);
 				}
 
-				.storefront-single-product-pagination__title {
+				.storefront-product-pagination__title {
 					margin-left: auto;
 				}
 			}

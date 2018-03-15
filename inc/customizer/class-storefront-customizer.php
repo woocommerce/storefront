@@ -519,11 +519,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				border-color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
-			.storefront-single-product-pagination a {
-				color: ' . $storefront_theme_mods['text_color'] . ';
-				background-color: ' . $storefront_theme_mods['background_color'] . ';
-			}
-
 			.main-navigation ul li a:hover,
 			.main-navigation ul li:hover > a,
 			.site-title a:hover,
@@ -705,6 +700,13 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					border-bottom-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -15 ) . ';
 				}
 			}';
+
+			if ( ! class_exists( 'Storefront_Product_Pagination' ) ) {
+				$styles .= '.storefront-product-pagination a {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+					background-color: ' . $storefront_theme_mods['background_color'] . ';
+				}';
+			}
 
 			return apply_filters( 'storefront_customizer_css', $styles );
 		}

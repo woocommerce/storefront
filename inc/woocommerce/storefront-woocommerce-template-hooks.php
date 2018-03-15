@@ -63,7 +63,9 @@ add_action( 'woocommerce_after_single_product_summary',    'storefront_upsell_di
 remove_action( 'woocommerce_before_shop_loop_item_title',  'woocommerce_show_product_loop_sale_flash', 10 );
 add_action( 'woocommerce_after_shop_loop_item_title',      'woocommerce_show_product_loop_sale_flash', 6 );
 
-add_action( 'woocommerce_after_single_product_summary',    'storefront_single_product_pagination',     30 );
+if ( ! class_exists( 'Storefront_Product_Pagination' ) ) {
+	add_action( 'woocommerce_after_single_product_summary', 'storefront_single_product_pagination',     30 );
+}
 
 /**
  * Header
