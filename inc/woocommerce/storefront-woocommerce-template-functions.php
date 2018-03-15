@@ -372,13 +372,13 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_sticky_add_to_cart' ) ) {
+if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 	/**
 	 * Sticky Add to Cart
 	 *
 	 * @since 2.3.0
 	 */
-	function storefront_sticky_add_to_cart() {
+	function storefront_sticky_single_add_to_cart() {
 		global $product;
 
 		if ( ! is_product() ) {
