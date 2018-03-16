@@ -838,11 +838,17 @@ a.reset_variations {
 	}
 
 	.buttons {
-		.button {
+		a {
 			display: block;
+			margin-bottom: ms( -2 );
 
-			&:nth-child( odd ) {
-				margin-bottom: ms(-2);
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			img {
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
