@@ -27,7 +27,6 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 			add_action( 'init',                       array( $this, 'jetpack_setup' ) );
 			add_action( 'init',                       array( $this, 'jetpack_infinite_scroll_wrapper_columns' ) );
 			add_action( 'wp_enqueue_scripts',         array( $this, 'jetpack_scripts' ), 10 );
-			add_filter( 'infinite_scroll_query_args', array( $this, 'fix_duplicate_products' ), 100 );
 		}
 
 		/**
@@ -104,22 +103,6 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 
 			wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/assets/css/jetpack/jetpack.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-jetpack-style', 'rtl', 'replace' );
-		}
-
-		/**
-		 * Jetpack infinite scroll duplicates posts where orderby is anything other than modified or date
-		 * This filter increases the current page by one.
-		 *
-		 * @link https://github.com/Automattic/jetpack/issues/1135
-		 * @param  array $args infinite scroll args.
-		 * @return array       infinite scroll args.
-		 */
-		public function fix_duplicate_products( $args ) {
-			if ( ( isset( $args['post_type'] ) && 'product' === $args['post_type'] ) || ( isset( $args['taxonomy'] ) && 'product_cat' === $args['taxonomy'] ) ) {
-				$args['paged'] = $args['paged'] + 1;
-			}
-
-		 	return $args;
 		}
 	}
 
