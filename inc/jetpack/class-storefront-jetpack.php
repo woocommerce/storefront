@@ -39,20 +39,9 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		public function jetpack_setup() {
 			global $storefront;
 
-			$per_page = get_option( 'posts_per_page' );
-
-			if ( storefront_is_woocommerce_activated() ) {
-				if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
-					$per_page = $storefront->woocommerce->products_per_page();
-				} else {
-					$per_page = wc_get_default_products_per_row() * wc_get_default_product_rows_per_page();
-				}
-			}
-
 			add_theme_support( 'infinite-scroll', apply_filters( 'storefront_jetpack_infinite_scroll_args', array(
 				'container'      => 'main',
 				'footer'         => 'page',
-				'posts_per_page' => $per_page,
 				'render'         => array( $this, 'jetpack_infinite_scroll_loop' ),
 				'footer_widgets' => array(
 					'footer-1',
