@@ -37,8 +37,6 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 * See: http://jetpack.me/support/infinite-scroll/
 		 */
 		public function jetpack_setup() {
-			global $storefront;
-
 			add_theme_support( 'infinite-scroll', apply_filters( 'storefront_jetpack_infinite_scroll_args', array(
 				'container'      => 'main',
 				'footer'         => 'page',
