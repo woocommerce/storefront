@@ -201,6 +201,7 @@ module.exports = function( grunt ) {
 					'style.scss',
 					'assets/css/admin/welcome-screen/*.scss',
 					'assets/css/woocommerce/*.scss',
+					'assets/css/woocommerce/extensions/*.scss',
 					'assets/css/jetpack/*.scss',
 					'assets/css/base/*.scss',
 					'assets/css/components/*.scss',
