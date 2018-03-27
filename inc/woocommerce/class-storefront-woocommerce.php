@@ -103,6 +103,11 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			wp_register_script( 'storefront-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart' . $suffix . '.js', array(), $storefront_version, true );
 			wp_enqueue_script( 'storefront-header-cart' );
+
+			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-legacy', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce-legacy.css', array(), $storefront_version );
+				wp_style_add_data( 'storefront-woocommerce-legacy', 'rtl', 'replace' );
+			}
 		}
 
 		/**
