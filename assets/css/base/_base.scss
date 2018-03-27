@@ -777,11 +777,13 @@ table {
 .updated:not( .published ) {
 	display: none;
 }
+
 .single, .group-blog {
 	.byline {
 		display: inline;
 	}
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 ms(1);
@@ -790,12 +792,12 @@ table {
 .cat-links,
 .tags-links,
 .comments-link,
-.author {
+.vcard.author {
 	display: block;
 	margin-bottom: ms(3);
 }
 
-.author {
+.vcard.author {
 	.avatar {
 		width: 64px;
 		margin-bottom: 1em;
