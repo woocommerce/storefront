@@ -45,7 +45,7 @@
 		var handheld = document.getElementsByClassName( 'handheld-navigation' );
 
 		if ( handheld.length > 0 ) {
-			handheld[0].querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' ).forEach( function( anchor ) {
+			[].forEach.call( handheld[0].querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' ), function( anchor ) {
 
 				// Add dropdown toggle that displays child menu items
 				var btn = document.createElement( 'button' );
@@ -86,7 +86,7 @@
 		}
 
 		// Add class to footer search when clicked.
-		document.querySelectorAll( '.storefront-handheld-footer-bar .search > a' ).forEach( function( anchor ) {
+		[].forEach.call( document.querySelectorAll( '.storefront-handheld-footer-bar .search > a' ), function( anchor ) {
 			anchor.addEventListener( 'click', function( event ) {
 				anchor.parentElement.classList.toggle( 'active' );
 				event.preventDefault();
@@ -94,7 +94,7 @@
 		} );
 
 		// Add focus class to parents of sub-menu anchors.
-		document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ).forEach( function( anchor ) {
+		[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
 			var li = anchor.parentNode;
 			anchor.addEventListener( 'focus', function() {
 				li.classList.add( 'focus' );
@@ -107,7 +107,7 @@
 		// Add an identifying class to dropdowns when on a touch device
 		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
 		if ( ( 'ontouchstart' in window || navigator.maxTouchPoints ) && window.innerWidth > 767 ) {
-			document.querySelectorAll( '.site-header ul ul, .site-header-cart .widget_shopping_cart' ).forEach( function( element ) {
+			[].forEach.call( document.querySelectorAll( '.site-header ul ul, .site-header-cart .widget_shopping_cart' ), function( element ) {
 				element.classList.add( 'sub-menu--is-touch-device' );
 			} );
 		}

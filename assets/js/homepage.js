@@ -48,8 +48,10 @@
 				var g = colors[2];
 				var b = colors[3];
 				var brightness = 1;
+
 				// Get the average rgb value.
 				var overall = Math.round( ( ( parseInt( r, 10 ) * 299 ) + ( parseInt( g, 10 ) * 587 ) + ( parseInt( b, 10 ) * 114 ) ) / 1000 );
+
 				if ( overall > 230 ) {
 					brightness = 0; // Black.
 				} else {
@@ -62,13 +64,15 @@
 				var color = 'rgb(' + newr + ', ' + newg + ', ' + newb + ')';
 
 				homepageContent.style.color = color;
-				homepageContent.querySelectorAll( 'h1' ).forEach( function( h1 ) {
-					h1.style.color = color;
-				} );
-				homepageContent.querySelectorAll( '.entry-title, .entry-content' ).forEach( function( el ) {
-					el.classList.add( 'loaded' );
-					el.style.textShadow = brightness >= 30 ? '0 4px 30px rgba(0,0,0,.9)' : '';
-				} );
+
+				for ( var i = 0; i < homepageContent.querySelectorAll( 'h1' ).length; i++ ) {
+					homepageContent.querySelectorAll( 'h1' )[ i ].style.color = color;
+				}
+
+				for ( i = 0; i < homepageContent.querySelectorAll( '.entry-title, .entry-content' ).length; i++ ) {
+					homepageContent.querySelectorAll( '.entry-title, .entry-content' )[ i ].classList.add( 'loaded' );
+					homepageContent.querySelectorAll( '.entry-title, .entry-content' )[ i ].style.textShadow = brightness >= 30 ? '0 4px 30px rgba(0,0,0,.9)' : '';
+				}
 			}
 		} );
 	} );
