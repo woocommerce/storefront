@@ -211,6 +211,12 @@
 	}
 }
 
+.sf-input-focused {
+	.storefront-handheld-footer-bar {
+		display: none;
+	}
+}
+
 /**
  * Shop tables
  */

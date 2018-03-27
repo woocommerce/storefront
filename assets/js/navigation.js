@@ -93,6 +93,31 @@
 			} );
 		} );
 
+		// Add focus class to body when an input field is focused.
+		// This is used to hide the Handheld Footer Bar when an input is focused.
+		var footer_bar = document.getElementsByClassName( 'storefront-handheld-footer-bar' );
+		var forms      = document.forms;
+		var isFocused  = function( focused ) {
+			return function() {
+				if ( !! focused ) {
+					document.body.classList.add( 'sf-input-focused' );
+				} else {
+					document.body.classList.remove( 'sf-input-focused' );
+				}
+			};
+		};
+
+		if ( footer_bar.length && forms.length ) {
+			for ( var i = 0; i < forms.length; i++ ) {
+				if ( footer_bar[0].contains( forms[ i ] ) ) {
+					continue;
+				}
+
+				forms[ i ].addEventListener( 'focus', isFocused( true ), true );
+				forms[ i ].addEventListener( 'blur', isFocused( false ), true );
+			}
+		}
+
 		// Add focus class to parents of sub-menu anchors.
 		[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
 			var li = anchor.parentNode;
