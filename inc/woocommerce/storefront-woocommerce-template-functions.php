@@ -371,3 +371,31 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 		echo '<a href="' . esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) . '">' . esc_attr__( 'My Account', 'storefront' ) . '</a>';
 	}
 }
+
+if ( ! function_exists( 'storefront_woocommerce_brands_single' ) ) {
+	/**
+	 * Output product brand image for use on single product pages
+	 * Requires WooCommerce Brands.
+	 *
+	 * @since  2.3.0
+	 * @link   https://woocommerce.com/products/brands/
+	 * @uses   storefront_do_shortcode()
+	 * @uses   wp_kses_post()
+	 * @return void
+	 */
+	function storefront_woocommerce_brands_single() {
+		$brand = storefront_do_shortcode( 'product_brand', array(
+			'class' => ''
+		) );
+
+		if ( empty( $brand ) ) {
+			return;
+		}
+
+		?>
+		<div class="storefront-wc-brands-single-product">
+			<?php echo wp_kses_post( $brand ); ?>
+		</div>
+		<?php
+	}
+}

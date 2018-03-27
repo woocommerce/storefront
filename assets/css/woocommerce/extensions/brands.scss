@@ -90,6 +90,14 @@ div#brands_a_z {
 	}
 }
 
+.storefront-wc-brands-single-product {
+	margin: 0 0 ms( -3 );
+
+	img {
+		max-height: ms( 4 );
+	}
+}
+
 @include susy-media($desktop) {
 	div#brands_a_z {
 		ul.brands_index {

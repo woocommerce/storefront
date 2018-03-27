@@ -55,7 +55,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
 /**
  * Products
  *
- * @see  storefront_upsell_display()
+ * @see storefront_upsell_display()
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display',               15 );
 add_action( 'woocommerce_after_single_product_summary',    'storefront_upsell_display',                15 );
@@ -65,8 +65,8 @@ add_action( 'woocommerce_after_shop_loop_item_title',      'woocommerce_show_pro
 /**
  * Header
  *
- * @see  storefront_product_search()
- * @see  storefront_header_cart()
+ * @see storefront_product_search()
+ * @see storefront_header_cart()
  */
 add_action( 'storefront_header', 'storefront_product_search', 40 );
 add_action( 'storefront_header', 'storefront_header_cart',    60 );
@@ -80,4 +80,13 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 	add_filter( 'woocommerce_add_to_cart_fragments', 'storefront_cart_link_fragment' );
 } else {
 	add_filter( 'add_to_cart_fragments', 'storefront_cart_link_fragment' );
+}
+
+/**
+ * Integrations
+ *
+ * @see storefront_woocommerce_brands_single()
+ */
+if ( class_exists( 'WC_Brands' ) ) {
+	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single', 4 );
 }
