@@ -196,6 +196,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return void
 		 */
 		public function woocommerce_integrations_scripts() {
+			global $storefront_version;
+
+			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
 			/**
 			 * Bookings
 			 */
@@ -210,6 +214,8 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( $this->is_woocommerce_extension_activated( 'WC_Brands' ) ) {
 				wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/brands.css', 'storefront-woocommerce-style' );
 				wp_style_add_data( 'storefront-woocommerce-brands-style', 'rtl', 'replace' );
+
+				wp_enqueue_script( 'storefront-woocommerce-brands', get_template_directory_uri() . '/assets/js/woocommerce/extensions/brands' . $suffix . '.js', array(), $storefront_version, true );
 			}
 
 			/**

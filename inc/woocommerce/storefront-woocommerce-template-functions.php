@@ -372,6 +372,72 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 	}
 }
 
+if ( ! function_exists( 'storefront_woocommerce_brands_homepage_section' ) ) {
+	/**
+	 * Display WooCommerce Brands
+	 * Hooked into the `homepage` action in the homepage template.
+	 * Requires WooCommerce Brands.
+	 *
+	 * @since  2.3.0
+	 * @link   https://woocommerce.com/products/brands/
+	 * @uses   apply_filters()
+	 * @uses   storefront_do_shortcode()
+	 * @uses   wp_kses_post()
+	 * @uses   do_action()
+	 * @return void
+	 */
+	function storefront_woocommerce_brands_homepage_section() {
+		$args = apply_filters( 'storefront_woocommerce_brands_args', array(
+			'number'     => 6,
+			'columns'    => 4,
+			'orderby'    => 'name',
+			'show_empty' => false,
+			'title'      => __( 'Shop by Brand', 'storefront' ),
+		) );
+
+		$shortcode_content = storefront_do_shortcode( 'product_brand_thumbnails', apply_filters( 'storefront_woocommerce_brands_shortcode_args', array(
+			'number'     => absint( $args['number'] ),
+			'columns'    => absint( $args['columns'] ),
+			'orderby'    => esc_attr( $args['orderby'] ),
+			'show_empty' => (bool) $args['show_empty'],
+		) ) );
+
+		echo '<section class="storefront-product-section storefront-woocommerce-brands" aria-label="' . esc_attr__( 'Product Brands', 'storefront' ) . '">';
+
+		do_action( 'storefront_homepage_before_woocommerce_brands' );
+
+		echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+
+		do_action( 'storefront_homepage_after_woocommerce_brands_title' );
+
+		echo $shortcode_content;
+
+		do_action( 'storefront_homepage_after_woocommerce_brands' );
+
+		echo '</section>';
+	}
+}
+
+if ( ! function_exists( 'storefront_woocommerce_brands_archive' ) ) {
+	/**
+	 * Display brand image on brand archives
+	 * Requires WooCommerce Brands.
+	 *
+	 * @since  2.3.0
+	 * @link   https://woocommerce.com/products/brands/
+	 * @uses   is_tax()
+	 * @uses   wp_kses_post()
+	 * @uses   get_brand_thumbnail_image()
+	 * @uses   get_queried_object()
+	 * @return void
+	 */
+	function storefront_woocommerce_brands_archive() {
+		if ( is_tax( 'product_brand' ) ) {
+			echo wp_kses_post( get_brand_thumbnail_image( get_queried_object() ) );
+		}
+	}
+}
+
 if ( ! function_exists( 'storefront_woocommerce_brands_single' ) ) {
 	/**
 	 * Output product brand image for use on single product pages

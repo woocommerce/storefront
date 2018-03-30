@@ -85,8 +85,12 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
 /**
  * Integrations
  *
+ * @see storefront_woocommerce_brands_archive()
  * @see storefront_woocommerce_brands_single()
+ * @see storefront_woocommerce_brands_homepage_section()
  */
 if ( class_exists( 'WC_Brands' ) ) {
+	add_action( 'woocommerce_archive_description', 'storefront_woocommerce_brands_archive', 5 );
 	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single', 4 );
+	add_action( 'homepage', 'storefront_woocommerce_brands_homepage_section', 80 );
 }

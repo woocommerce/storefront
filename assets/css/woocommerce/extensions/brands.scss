@@ -11,6 +11,9 @@
 @import '../../../../node_modules/susy/sass/susy';
 @import '../../sass/vendors/modular-scale';
 
+/**
+ * Header region
+ */
 .header-widget-region {
 	.widget_brand_thumbnails {
 		ul.brand-thumbnails {
@@ -29,6 +32,44 @@
 					display: block;
 				}
 			}
+		}
+	}
+}
+
+/**
+ * WooCommerce Brand Layered Nav
+ */
+.widget_brand_nav {
+	ul {
+		li {
+			.count {
+				float: right;
+			}
+		}
+	}
+}
+
+/**
+ * WooCommerce Brand Archive
+ */
+.tax-product_brand {
+	.woocommerce-products-header {
+		display: flex;
+		flex-direction: column;
+		margin: 0 0 ms( 4 );
+		text-align: center;
+
+		.brand-thumbnail {
+			margin: 0 0 ms( 1 );
+			width: auto;
+			max-height: ms( 4 );
+			align-self: center;
+			order: 1;
+		}
+
+		.woocommerce-products-header__title,
+		.term-description {
+			order: 2;
 		}
 	}
 }
@@ -90,6 +131,9 @@ div#brands_a_z {
 	}
 }
 
+/**
+ * WooCommerce Brand single product
+ */
 .storefront-wc-brands-single-product {
 	margin: 0 0 ms( -3 );
 
@@ -102,6 +146,7 @@ div#brands_a_z {
 	div#brands_a_z {
 		ul.brands_index {
 			@include span(3 of 12);
+			transition: all 0.5s ease;
 		}
 	}
 
