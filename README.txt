@@ -5,16 +5,18 @@ Tested up to: 4.9.4
 Stable tag: 2.2.8
 Version: 2.2.8
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
 
 Storefront is the perfect theme for your next WooCommerce project.
 
 == Description ==
 
-Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooCommerce Core developers, it features a bespoke integration with WooCommerce itself plus many of the most popular customer facing WooCommerce extensions. There are several layout & color options to personalize your shop, multiple widget regions, a responsive design and much more. Developers will love it's lean and extensible codebase making it a joy to customize and extend. Looking for a WooCommerce theme? Look no further!
+Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooCommerce Core developers, it features a bespoke integration with WooCommerce itself plus many of the most popular customer facing WooCommerce extensions. There are several layout & color options to personalize your shop, multiple widget regions, a responsive design and much more. Developers will love its lean and extensible codebase making it a joy to customize and extend. Looking for a WooCommerce theme? Look no further!
 
 For more information about Storefront please go to https://woocommerce.com/storefront/.
+
+For even more customization, check out Storefront extensions https://woocommerce.com/product-category/storefront-extensions/ and Storefront child themes https://woocommerce.com/product-category/themes/storefront-child-theme-themes/.
 
 == Installation ==
 
@@ -29,16 +31,16 @@ For more information about Storefront please go to https://woocommerce.com/store
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Storefront is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+Storefront is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+Eric Meyer https://meyerweb.com/eric/tools/css/reset/
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 
 All sizing (typography, layout, padding/margins etc) are inspired by a modular scale that uses 1em as a base size with a 1.618 ratio.
-You can read more about the calculator we use in our sass here; https://github.com/modularscale/modularscale-sass
+You can read more about the calculator we use in our sass here: https://github.com/modularscale/modularscale-sass
 
-FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
+FontAwesome License: SIL Open Font License - http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 Images License: GNU General Public License v2 or later
 
 == Changelog ==
@@ -135,7 +137,7 @@ Images License: GNU General Public License v2 or later
 * Dev - Homepage product sections only display if products are returned.
 * Tweak - Escape background content color before output. Kudos [@pdewouters](https://github.com/pdewouters).
 * Dev - Updated package versions. You'll need to `npm install` next time you try to build.
-* Dev - Adds `grunt-postcss` + `autoprefixer` to the build process to reduce reliance on [Bourbon](http://bourbon.io/).
+* Dev - Adds `grunt-postcss` + `autoprefixer` to the build process to reduce reliance on [Bourbon](https://www.bourbon.io/).
 * Tweak - Doctype in lowercase. Kudos [@B-07](https://github.com/B-07).
 * Fix - Only output `background-image` styles for the header and homepage content sections if an image exists.
 * Fix - Translatable aria labels in the homepage sections. Kudos [@andreaskian](https://github.com/andreaskian).
@@ -568,4 +570,3 @@ Images License: GNU General Public License v2 or later
 
 = 1.0.0 - 2014-09-05 =
 * Initial release
-
