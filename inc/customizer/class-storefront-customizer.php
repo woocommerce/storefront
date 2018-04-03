@@ -988,7 +988,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		public function is_homepage_template() {
 			$template = get_post_meta( get_the_ID(), '_wp_page_template', true );
 
-			if ( ! $template || 'template-homepage.php' !== $template ) {
+			if ( ! $template || 'template-homepage.php' !== $template || ! has_post_thumbnail( get_the_ID() ) ) {
 				return false;
 			}
 
