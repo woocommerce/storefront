@@ -69,7 +69,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			}
 
 			// Coming from the WooCommerce Wizard?
-			if ( wp_get_referer() && 'index.php?page=wc-setup&step=next_steps' === basename( wp_get_referer() ) ) {
+			if ( wp_get_referer() && 'index.php?page=wc-setup&step=next_steps' === basename( wp_get_referer() ) && 'post-new.php' === $pagenow ) {
 				return;
 			}
 			?>
