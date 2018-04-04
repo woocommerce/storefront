@@ -112,6 +112,21 @@ input[type='submit'],
 	}
 }
 
+.handheld-navigation {
+	ul {
+		&.menu {
+			li {
+				button {
+					&::after {
+						@include fa-icon();
+						content: '\f107';
+					}
+				}
+			}
+		}
+	}
+}
+
 .site-main {
 	nav.navigation {
 		.nav-previous {
