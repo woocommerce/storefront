@@ -2629,6 +2629,7 @@ dl.variation {
 		}
 	}
 
+
 	.woocommerce-MyAccount-navigation {
 		@include span( 2 of 9 );
 	}
@@ -2646,12 +2647,12 @@ dl.variation {
 	}
 
 	.left-sidebar:not( .page-template-template-fullwidth-php ) {
-		.woocommerce-MyAccount-navigation {
-			@include span( last 2 of 9 );
-		}
-
 		.woocommerce-MyAccount-content {
 			@include span( 7 of 9 );
+		}
+
+		.woocommerce-MyAccount-navigation {
+			@include span( last 2 of 9 );
 		}
 	}
 
@@ -2671,12 +2672,8 @@ dl.variation {
 			}
 		}
 
-		.woocommerce-MyAccount-navigation {
-			@include span( 3 of 12 );
-		}
-
 		.woocommerce-MyAccount-content {
-			@include span( last 9 of 12 );
+			@include span( 9 of 12 );
 
 			.form-row-first {
 				@include span( 4 of 8 );
@@ -2697,6 +2694,10 @@ dl.variation {
 					@include span( last 4 of 8 );
 				}
 			}
+		}
+
+		.woocommerce-MyAccount-navigation {
+			@include span( last 3 of 12 );
 		}
 	}
 
