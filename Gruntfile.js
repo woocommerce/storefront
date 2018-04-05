@@ -44,7 +44,9 @@ module.exports = function( grunt ) {
 				'assets/js/admin/*.js',
 				'!assets/js/admin/*.min.js',
 				'assets/js/woocommerce/*.js',
-				'!assets/js/woocommerce/*.min.js'
+				'!assets/js/woocommerce/*.min.js',
+				'assets/js/woocommerce/extensions/*.js',
+				'!assets/js/woocommerce/extensions/*.min.js'
 			]
 		},
 
@@ -97,6 +99,18 @@ module.exports = function( grunt ) {
 						'!*.min.js'
 					],
 					dest: 'assets/js/woocommerce/',
+					ext: '.min.js'
+				}]
+			},
+			extensions: {
+				files: [{
+					expand: true,
+					cwd: 'assets/js/woocommerce/extensions/',
+					src: [
+						'*.js',
+						'!*.min.js'
+					],
+					dest: 'assets/js/woocommerce/extensions/',
 					ext: '.min.js'
 				}]
 			},
@@ -203,6 +217,7 @@ module.exports = function( grunt ) {
 					'style.scss',
 					'assets/css/admin/welcome-screen/*.scss',
 					'assets/css/woocommerce/*.scss',
+					'assets/css/woocommerce/extensions/*.scss',
 					'assets/css/jetpack/*.scss',
 					'assets/css/base/*.scss',
 					'assets/css/components/*.scss',
@@ -227,6 +242,10 @@ module.exports = function( grunt ) {
 					// WooCommerce js
 					'assets/js/woocommerce/*js',
 					'!assets/js/woocommerce/*.min.js',
+
+					// Extensions js
+					'assets/js/woocommerce/extensions/*js',
+					'!assets/js/woocommerce/extensions/*.min.js',
 
 					// Welcome screen js
 					'assets/js/admin/welcome-screen/*js',
