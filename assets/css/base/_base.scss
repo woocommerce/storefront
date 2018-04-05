@@ -20,7 +20,6 @@
 // Utilities
 // Sass tools and helpers used across the project.
 @import '../sass/utils/mixins';
-@import '../sass/vendors/font-awesome/font-awesome';
 
 /**
  * Typography
@@ -1212,8 +1211,6 @@ button.menu-toggle {
 
 				button {
 					&::after {
-						@include fa-icon();
-						content: '\f107';
 						transition: all, ease, 0.9s;
 					}
 
