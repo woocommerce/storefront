@@ -330,6 +330,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$classes[] = 'has-post-thumbnail';
 			}
 
+			// Add class when Secondary Navigation is in use
+			if ( has_nav_menu( 'secondary' ) ) {
+				$classes[] = 'storefront-secondary-navigation';
+			}
+
 			return $classes;
 		}
 
