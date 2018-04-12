@@ -492,8 +492,8 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	 */
 	function storefront_post_nav() {
 		$args = array(
-			'next_text' => '%title',
-			'prev_text' => '%title',
+			'next_text' => '<span class="screen-reader-text">Next post: </span>%title',
+			'prev_text' => '<span class="screen-reader-text">Previous post: </span>%title',
 			);
 		the_post_navigation( $args );
 	}
