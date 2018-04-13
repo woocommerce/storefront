@@ -758,11 +758,9 @@ a.reset_variations {
  * Breadcrumbs
  */
 .woocommerce-breadcrumb {
-	margin-left: -1.387rem;
-	margin-right: -1.387rem;
-	margin-bottom: ms(3);
+	margin: 0 0 ms(3);
 	font-size: ms(-1);
-	padding: 1em 1.387rem;
+	padding: 1em 0;
 
 	.breadcrumb-separator {
 		display: inline-block;
@@ -1856,10 +1854,8 @@ dl.variation {
 	 * Breadcrumbs
 	 */
 	.woocommerce-breadcrumb {
-		padding: ms(2) 99em ms(2);
-		margin-left: -99em;
-		margin-right: -99em;
-		margin-bottom: ms(7);
+		padding: ms(2) 0;
+		margin: 0 0 ms(7);
 	}
 
 	/**
@@ -2768,15 +2764,6 @@ dl.variation {
 			@include span(last 6 of 9);
 			margin-top: 0;
 		}
-	}
-}
-
-@media (min-width: $handheld) and (max-width: $container-width) {
-	.woocommerce-breadcrumb {
-		margin-left: -2.618rem;
-		margin-right: -2.618rem;
-		padding-left: 2.618rem;
-		padding-right: 2.618rem;
 	}
 }
 
