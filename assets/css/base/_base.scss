@@ -480,11 +480,7 @@ body {
  * Accessibility
  */
 .screen-reader-text {
-	clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */
-	/* stylelint-disable */
-	clip: rect( 1px, 1px, 1px, 1px );
-	/* stylelint-enable */
-	position: absolute !important;
+	@include screen-reader-text;
 }
 
 .screen-reader-text:focus {
