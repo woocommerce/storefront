@@ -1228,7 +1228,7 @@ button.menu-toggle {
 
 				&.toggled-on {
 					visibility: visible;
-					max-height: 1750px;
+					max-height: 9999px;
 					opacity: 1;
 				}
 			}
@@ -1248,7 +1248,7 @@ button.menu-toggle {
 	.handheld-navigation,
 	.menu > ul:not( .nav-menu ),
 	ul[aria-expanded=true] {
-		max-height: 1750px;
+		max-height: 9999px;
 	}
 }
 
