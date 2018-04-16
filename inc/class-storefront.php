@@ -343,7 +343,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function navigation_markup_template() {
 			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'storefront' ) . '">';
-			$template .= '<span class="screen-reader-text">%2$s</span>';
+			$template .= '<h2 class="screen-reader-text">%2$s</h2>';
 			$template .= '<div class="nav-links">%3$s</div>';
 			$template .= '</nav>';
 
