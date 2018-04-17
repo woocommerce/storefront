@@ -47,7 +47,7 @@ add_action( 'woocommerce_before_shop_loop',       'storefront_product_columns_wr
 
 add_action( 'storefront_footer',                  'storefront_handheld_footer_bar',           999 );
 
-if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) ) {
+if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) && true === get_theme_mod( 'storefront_sticky_add_to_cart' ) ) {
 	add_action( 'storefront_after_footer', 'storefront_sticky_single_add_to_cart', 999 );
 }
 
