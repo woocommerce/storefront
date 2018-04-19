@@ -22,9 +22,11 @@ add_action( 'storefront_sidebar',        'storefront_get_sidebar',          10 )
  * @see  storefront_site_branding()
  * @see  storefront_primary_navigation()
  */
-add_action( 'storefront_header', 'storefront_skip_links',                       0 );
+add_action( 'storefront_header', 'storefront_header_container',                 0 );
+add_action( 'storefront_header', 'storefront_skip_links',                       5 );
 add_action( 'storefront_header', 'storefront_site_branding',                    20 );
 add_action( 'storefront_header', 'storefront_secondary_navigation',             30 );
+add_action( 'storefront_header', 'storefront_header_container_close',           41 );
 add_action( 'storefront_header', 'storefront_primary_navigation_wrapper',       42 );
 add_action( 'storefront_header', 'storefront_primary_navigation',               50 );
 add_action( 'storefront_header', 'storefront_primary_navigation_wrapper_close', 68 );
