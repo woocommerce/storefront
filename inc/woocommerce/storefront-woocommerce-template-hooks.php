@@ -47,10 +47,6 @@ add_action( 'woocommerce_before_shop_loop',       'storefront_product_columns_wr
 
 add_action( 'storefront_footer',                  'storefront_handheld_footer_bar',           999 );
 
-if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) && true === get_theme_mod( 'storefront_sticky_add_to_cart' ) ) {
-	add_action( 'storefront_after_footer', 'storefront_sticky_single_add_to_cart', 999 );
-}
-
 // Legacy WooCommerce columns filter.
 if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
 	add_filter( 'loop_shop_columns', 'storefront_loop_columns' );
@@ -65,6 +61,8 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_d
 add_action( 'woocommerce_after_single_product_summary',    'storefront_upsell_display',                15 );
 remove_action( 'woocommerce_before_shop_loop_item_title',  'woocommerce_show_product_loop_sale_flash', 10 );
 add_action( 'woocommerce_after_shop_loop_item_title',      'woocommerce_show_product_loop_sale_flash', 6 );
+
+add_action( 'storefront_after_footer',                     'storefront_sticky_single_add_to_cart',     999 );
 
 /**
  * Header
