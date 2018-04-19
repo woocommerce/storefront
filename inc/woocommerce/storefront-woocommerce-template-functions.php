@@ -379,6 +379,9 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 	 * @since 2.3.0
 	 */
 	function storefront_single_product_pagination() {
+		if ( class_exists( 'Storefront_Product_Pagination' ) || true !== get_theme_mod( 'storefront_product_pagination' ) ) {
+			return;
+		}
 
 		// Show only products in the same category?
 		$same_category = apply_filters( 'storefront_single_product_pagination_same_category', false );
