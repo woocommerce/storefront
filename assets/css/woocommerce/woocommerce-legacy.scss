@@ -1,0 +1,144 @@
+/**
+ * Legacy WooCommerce Styles
+ *
+ * @todo Remove in Storefront 2.4
+ */
+
+/**
+ * Imports
+ */
+@import 'bourbon';
+@import '../sass/utils/variables';
+@import '../sass/utils/mixins';
+@import '../../../node_modules/susy/sass/susy';
+@import '../sass/vendors/modular-scale';
+
+@include susy-media($desktop) {
+	/**
+	 * Full width content area product layout
+	 */
+	.page-template-template-fullwidth-php,
+	.page-template-template-homepage-php,
+	.storefront-full-width-content {
+		.site-main {
+			.columns-1 {
+				ul.products {
+					li.product {
+						width: 100%;
+						margin-right: 0;
+						float: none;
+					}
+				}
+			}
+
+			.columns-2 {
+				ul.products {
+					li.product {
+						@include span(6 of 12);
+					}
+				}
+			}
+
+			.columns-3 {
+				ul.products {
+					li.product {
+						@include span(4 of 12);
+					}
+				}
+			}
+
+			.columns-4 {
+				ul.products {
+					li.product {
+						@include span(3 of 12);
+					}
+				}
+			}
+
+			// The grid wont work for 5 columns :-(
+			.columns-5 {
+				ul.products {
+					li.product {
+						width: 16.9%;
+						margin-right: 3.8%;
+					}
+				}
+			}
+
+			.columns-6 {
+				ul.products {
+					li.product {
+						@include span(2 of 12);
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * Main content area (adjacent to sidebar) product layout
+	 */
+	.site-main {
+		.columns-1 {
+			ul.products {
+				li.product {
+					width: 100%;
+					margin-right: 0;
+					float: none;
+				}
+			}
+		}
+
+		// The grid wont work for 2 columns :-(
+		.columns-2 {
+			ul.products {
+				li.product {
+					width: 48%;
+					margin-right: 3.8%;
+				}
+			}
+		}
+
+		.columns-3 {
+			ul.products {
+				li.product {
+					@include span(3 of 9);
+				}
+			}
+		}
+
+		// The grid wont work for 4 columns :-(
+		.columns-4 {
+			ul.products {
+				li.product {
+					width: 22.05%;
+					margin-right: 3.8%;
+				}
+			}
+		}
+
+		// The grid wont work for 5 columns :-(
+		.columns-5 {
+			ul.products {
+				li.product {
+					width: 16.9%;
+					margin-right: 3.8%;
+				}
+			}
+		}
+
+		.columns-6 {
+			ul.products {
+				li.product {
+					@include span(1.5 of 9);
+				}
+			}
+		}
+
+		ul.products {
+			li.product {
+				@include span(3 of 9);
+			}
+		}
+	}
+}

@@ -24,10 +24,12 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme', 	      array( $this, 'jetpack_setup' ) );
-			add_action( 'wp_enqueue_scripts', 	      array( $this, 'jetpack_scripts' ), 10 );
-			add_filter( 'infinite_scroll_query_args', array( $this, 'fix_duplicate_products' ), 100 );
-			add_action( 'init',                       array( $this, 'jetpack_infinite_scroll_wrapper_columns' ) );
+			add_action( 'init',                       array( $this, 'jetpack_setup' ) );
+			add_action( 'wp_enqueue_scripts',         array( $this, 'jetpack_scripts' ), 10 );
+
+			if ( storefront_is_woocommerce_activated() ) {
+				add_action( 'init', array( $this, 'jetpack_infinite_scroll_wrapper_columns' ) );
+			}
 		}
 
 		/**
@@ -38,14 +40,13 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 			add_theme_support( 'infinite-scroll', apply_filters( 'storefront_jetpack_infinite_scroll_args', array(
 				'container'      => 'main',
 				'footer'         => 'page',
-				'posts_per_page' => '12',
 				'render'         => array( $this, 'jetpack_infinite_scroll_loop' ),
 				'footer_widgets' => array(
-										'footer-1',
-										'footer-2',
-										'footer-3',
-										'footer-4',
-									),
+					'footer-1',
+					'footer-2',
+					'footer-3',
+					'footer-4',
+				),
 			) ) );
 		}
 
@@ -96,22 +97,6 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 
 			wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/assets/css/jetpack/jetpack.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-jetpack-style', 'rtl', 'replace' );
-		}
-
-		/**
-		 * Jetpack infinite scroll duplicates posts where orderby is anything other than modified or date
-		 * This filter offsets the products returned by however many are displayed per page
-		 *
-		 * @link https://github.com/Automattic/jetpack/issues/1135
-		 * @param  array $args infinite scroll args.
-		 * @return array       infinite scroll args.
-		 */
-		public function fix_duplicate_products( $args ) {
-			if ( ( isset( $args['post_type'] ) && 'product' === $args['post_type'] ) || ( isset( $args['taxonomy'] ) && 'product_cat' === $args['taxonomy'] ) ) {
-				$args['offset'] = $args['posts_per_page'] * $args['paged'];
-			}
-
-		 	return $args;
 		}
 	}
 

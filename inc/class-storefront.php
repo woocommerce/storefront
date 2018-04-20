@@ -260,7 +260,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			}
 
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
-				wp_enqueue_script( 'storefront-rgbaster', get_template_directory_uri() . '/assets/js/vendor/rgbaster.min.js', array(), '1.1.0', true );
 				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array(), $storefront_version, true );
 			}
 
@@ -331,6 +330,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$classes[] = 'has-post-thumbnail';
 			}
 
+			// Add class when Secondary Navigation is in use
+			if ( has_nav_menu( 'secondary' ) ) {
+				$classes[] = 'storefront-secondary-navigation';
+			}
+
 			return $classes;
 		}
 
@@ -339,7 +343,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function navigation_markup_template() {
 			$template  = '<nav id="post-navigation" class="navigation %1$s" role="navigation" aria-label="' . esc_html__( 'Post Navigation', 'storefront' ) . '">';
-			$template .= '<span class="screen-reader-text">%2$s</span>';
+			$template .= '<h2 class="screen-reader-text">%2$s</h2>';
 			$template .= '<div class="nav-links">%3$s</div>';
 			$template .= '</nav>';
 

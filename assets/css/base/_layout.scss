@@ -20,12 +20,12 @@
 
 		.site-branding {
 			display: block;
-			@include span(3 of 12);
+			@include span(12 of 12);
 			clear: both;
 
 			img {
 				height: auto;
-				max-width: 100%;
+				max-width: 230px;
 				max-height: none;
 			}
 		}
@@ -33,8 +33,12 @@
 
 	.woocommerce-active {
 		.site-header {
-			.secondary-navigation {
-				@include span(6 of 12);
+			.site-branding {
+				@include span(9 of 12);
+
+				img {
+					max-width: 100%;
+				}
 			}
 
 			.site-search {
@@ -50,6 +54,31 @@
 			.site-header-cart {
 				@include span(last 3 of 12);
 				margin-bottom: 0;
+			}
+		}
+	}
+
+	.storefront-secondary-navigation {
+		.site-header {
+			.site-branding {
+				@include span(5 of 12);
+			}
+
+			.secondary-navigation {
+				@include span(last 7 of 12);
+			}
+		}
+
+		&.woocommerce-active {
+			.site-header {
+				.site-branding {
+					@include span(3 of 12);
+
+				}
+
+				.secondary-navigation {
+					@include span(6 of 12);
+				}
 			}
 		}
 	}
@@ -452,10 +481,6 @@
 	.storefront-primary-navigation {
 		clear: both;
 		@include clearfix;
-		margin-left: -99em;
-		margin-right: -99em;
-		padding-left: 99em;
-		padding-right: 99em;
 	}
 
 	.main-navigation {

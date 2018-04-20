@@ -492,8 +492,8 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	 */
 	function storefront_post_nav() {
 		$args = array(
-			'next_text' => '%title',
-			'prev_text' => '%title',
+			'next_text' => '<span class="screen-reader-text">' . esc_html__( 'Next post:', 'storefront' ) . ' </span>%title',
+			'prev_text' => '<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'storefront' ) . ' </span>%title',
 			);
 		the_post_navigation( $args );
 	}
@@ -902,7 +902,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<div class="storefront-primary-navigation">';
+		echo '<div class="storefront-primary-navigation"><div class="col-full">';
 	}
 }
 
@@ -911,6 +911,24 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
 	 * The primary navigation wrapper close
 	 */
 	function storefront_primary_navigation_wrapper_close() {
+		echo '</div></div>';
+	}
+}
+
+if ( ! function_exists( 'storefront_header_container' ) ) {
+	/**
+	 * The header container
+	 */
+	function storefront_header_container() {
+		echo '<div class="col-full">';
+	}
+}
+
+if ( ! function_exists( 'storefront_header_container_close' ) ) {
+	/**
+	 * The header container close
+	 */
+	function storefront_header_container_close() {
 		echo '</div>';
 	}
 }

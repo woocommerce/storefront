@@ -20,7 +20,6 @@
 // Utilities
 // Sass tools and helpers used across the project.
 @import '../sass/utils/mixins';
-@import '../sass/vendors/font-awesome/font-awesome';
 
 /**
  * Typography
@@ -481,11 +480,7 @@ body {
  * Accessibility
  */
 .screen-reader-text {
-	clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */
-	/* stylelint-disable */
-	clip: rect( 1px, 1px, 1px, 1px );
-	/* stylelint-enable */
-	position: absolute !important;
+	@include screen-reader-text;
 }
 
 .screen-reader-text:focus {
@@ -777,11 +772,13 @@ table {
 .updated:not( .published ) {
 	display: none;
 }
+
 .single, .group-blog {
 	.byline {
 		display: inline;
 	}
 }
+
 .page-links {
 	clear: both;
 	margin: 0 0 ms(1);
@@ -790,12 +787,12 @@ table {
 .cat-links,
 .tags-links,
 .comments-link,
-.author {
+.vcard.author {
 	display: block;
 	margin-bottom: ms(3);
 }
 
-.author {
+.vcard.author {
 	.avatar {
 		width: 64px;
 		margin-bottom: 1em;
@@ -1210,8 +1207,6 @@ button.menu-toggle {
 
 				button {
 					&::after {
-						@include fa-icon();
-						content: '\f107';
 						transition: all, ease, 0.9s;
 					}
 
@@ -1229,7 +1224,7 @@ button.menu-toggle {
 
 				&.toggled-on {
 					visibility: visible;
-					max-height: 1750px;
+					max-height: 9999px;
 					opacity: 1;
 				}
 			}
@@ -1249,7 +1244,7 @@ button.menu-toggle {
 	.handheld-navigation,
 	.menu > ul:not( .nav-menu ),
 	ul[aria-expanded=true] {
-		max-height: 1750px;
+		max-height: 9999px;
 	}
 }
 

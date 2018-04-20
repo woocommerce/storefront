@@ -7,7 +7,7 @@
 
 ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
 	/**
 	 * Functions hooked in to storefront_page add_action
@@ -17,4 +17,4 @@
 	 */
 	do_action( 'storefront_page' );
 	?>
-</div><!-- #post-## -->
+</article><!-- #post-## -->
