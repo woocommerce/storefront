@@ -477,6 +477,26 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			) ) );
 
 			/**
+			 * Product Page
+			 */
+			$wp_customize->add_section( 'storefront_single_product_page' , array(
+				'title'                 => __( 'Product Page', 'storefront' ),
+				'priority'              => 60,
+			) );
+
+			$wp_customize->add_setting( 'storefront_sticky_add_to_cart', array(
+				'default'               => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
+				'sanitize_callback'     => 'wp_validate_boolean',
+			) );
+
+			$wp_customize->add_control( 'storefront_sticky_add_to_cart', array(
+				'type'                  => 'checkbox',
+				'section'               => 'storefront_single_product_page',
+				'label'                 => __( 'Sticky Add-To-Cart', 'storefront' ),
+				'description'           => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'storefront' ),
+			) );
+
+			/**
 			 * More
 			 */
 			if ( apply_filters( 'storefront_customizer_more', true ) ) {
@@ -744,6 +764,18 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					border-bottom-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_background_color'], -15 ) . ';
 				}
 			}';
+
+			if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) ) {
+				$styles .= '
+				.storefront-sticky-add-to-cart {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+					background-color: ' . $storefront_theme_mods['background_color'] . ';
+				}
+
+				.storefront-sticky-add-to-cart a:not(.button){
+					color: ' . $storefront_theme_mods['header_link_color'] . ';
+				}';
+			}
 
 			return apply_filters( 'storefront_customizer_css', $styles );
 		}
