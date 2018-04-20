@@ -1,7 +1,7 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 4.9.5
+Tested up to: 4.9
 Stable tag: 2.3.0
 Version: 2.3.0
 License: GPLv2 or later
