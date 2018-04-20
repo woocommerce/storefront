@@ -321,7 +321,8 @@ module.exports = function( grunt ) {
 					'!npm-debug.log',
 					'!composer.json',
 					'!assets/css/sass/**',
-					'!assets/css/**/*.scss'
+					'!assets/css/**/*.scss',
+					'!*.scss',
 				],
 				dest: 'storefront',
 				expand: true,
