@@ -484,6 +484,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'priority'              => 60,
 			) );
 
+			$wp_customize->add_setting( 'storefront_product_pagination', array(
+				'default'               => apply_filters( 'storefront_default_product_pagination', true ),
+				'sanitize_callback'     => 'wp_validate_boolean',
+			) );
+
 			$wp_customize->add_setting( 'storefront_sticky_add_to_cart', array(
 				'default'               => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
 				'sanitize_callback'     => 'wp_validate_boolean',
@@ -494,6 +499,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'section'               => 'storefront_single_product_page',
 				'label'                 => __( 'Sticky Add-To-Cart', 'storefront' ),
 				'description'           => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'storefront' ),
+				'priority' 				=> 10,
+			) );
+
+			$wp_customize->add_control( 'storefront_product_pagination', array(
+				'type'                  => 'checkbox',
+				'section'               => 'storefront_single_product_page',
+				'label'                 => __( 'Product Pagination', 'storefront' ),
+				'description'           => __( 'Displays next and previous links on product pages. A product thumbnail is displayed with the title revealed on hover.', 'storefront' ),
+				'priority' 				=> 20,
 			) );
 
 			/**
@@ -765,6 +779,13 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				}
 			}';
 
+			if ( ! class_exists( 'Storefront_Product_Pagination' ) ) {
+				$styles .= '.storefront-product-pagination a {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+					background-color: ' . $storefront_theme_mods['background_color'] . ';
+				}';
+			}
+
 			if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) ) {
 				$styles .= '
 				.storefront-sticky-add-to-cart {
@@ -772,7 +793,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					background-color: ' . $storefront_theme_mods['background_color'] . ';
 				}
 
-				.storefront-sticky-add-to-cart a:not(.button){
+				.storefront-sticky-add-to-cart a:not(.button) {
 					color: ' . $storefront_theme_mods['header_link_color'] . ';
 				}';
 			}

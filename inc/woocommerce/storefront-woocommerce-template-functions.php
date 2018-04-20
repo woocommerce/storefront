@@ -372,6 +372,50 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_account_link' ) ) {
 	}
 }
 
+if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
+	/**
+	 * Single Product Pagination
+	 *
+	 * @since 2.3.0
+	 */
+	function storefront_single_product_pagination() {
+		if ( class_exists( 'Storefront_Product_Pagination' ) || true !== get_theme_mod( 'storefront_product_pagination' ) ) {
+			return;
+		}
+
+		// Show only products in the same category?
+		$same_category = apply_filters( 'storefront_single_product_pagination_same_category', false );
+
+		// Get previous and next products
+		$previous_product = get_previous_post( $same_category );
+		$next_product     = get_next_post( $same_category );
+
+		if ( ! $previous_product && ! $next_product ) {
+			return;
+		}
+
+		if ( $previous_product ) {
+			$previous_product = wc_get_product( $previous_product->ID );
+		}
+
+		if ( $next_product ) {
+			$next_product = wc_get_product( $next_product->ID );
+		}
+
+		?>
+		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
+			<?php if ( $previous_product && $previous_product->is_visible() ) : ?>
+				<?php previous_post_link( '%link', wp_kses_post( $previous_product->get_image() ) . '<span class="storefront-product-pagination__title">%title</span>', $same_category, '', 'product_cat' ); ?>
+			<?php endif; ?>
+
+			<?php if ( $next_product && $next_product->is_visible() ) : ?>
+				<?php next_post_link( '%link', wp_kses_post( $next_product->get_image() ) . '<span class="storefront-product-pagination__title">%title</span>', $same_category, '', 'product_cat' ); ?>
+			<?php endif; ?>
+		</nav><!-- .storefront-product-pagination -->
+		<?php
+	}
+}
+
 if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 	/**
 	 * Sticky Add to Cart

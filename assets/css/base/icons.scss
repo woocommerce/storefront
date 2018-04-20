@@ -226,6 +226,31 @@ input[type='submit'],
 	}
 }
 
+.storefront-product-pagination {
+	a {
+		&[rel='prev'],
+		&[rel='next'] {
+			&::after {
+				@include sf-fa-icon;
+			}
+		}
+
+		&[rel='prev'] {
+			&::after {
+				content: fa-content( $fa-var-angle-left );
+				padding-right: ms(2);
+			}
+		}
+
+		&[rel='next'] {
+			&::after {
+				content: fa-content( $fa-var-angle-right );
+				padding-left: ms(2);
+			}
+		}
+	}
+}
+
 .single-product {
 	.pswp__button {
 		background-color: transparent;
