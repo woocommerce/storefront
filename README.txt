@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 4.9.4
-Stable tag: 2.2.8
-Version: 2.2.8
+Tested up to: 4.9.5
+Stable tag: 2.3.0
+Version: 2.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
@@ -44,6 +44,30 @@ FontAwesome License: SIL Open Font License - http://scripts.sil.org/cms/scripts/
 Images License: GNU General Public License v2 or later
 
 == Changelog ==
+
+= 2.3.0 - 2018-XX-XX =
+* Fix - Reduce padding on cart table to prevent sidebar from overflowing container.
+* Fix - Hide handheld footer bar when an input is focused.
+* Fix - Prevent entry meta author styles from being applied to the author archives.
+* Fix - All included JavaScript is now compatible with Internet Explorer 11.
+* Fix - Added styling for other buttons in the header mini cart added by extensions.
+* Fix - Improved semantic HTML for pages and single posts.
+* Fix - Removed negative margins in the primary navigation and breadcrumb containers to fix an overflow issue in the Linux version of Chrome.
+* Fix - Removed 1px pixel margin on the product images gallery.
+* Tweak - Increased size of branding section if secondary navigation not used.
+* Tweak - Added a screen reader label to post navigation links.
+* Tweak - Removed RGBaster and added Customizer controls to change the color of text in the homepage Hero section.
+* Tweak - Removed NUX notice if coming from the WooCommerce wizard.
+* Tweak - Updated My Account layout.
+* Tweak - Removed column wrappers, unnecessary as of WooCommerce 3.3.
+* Tweak - Removed Jetpack Infinite Scroll hacks; they are no longer needed as of the latest version of Jetpack / WooCommerce.
+* Feature - Sticky Add-To-Cart.
+* Feature - Product Pagination.
+* Feature - WooCommerce Memberships integration.
+* Dev - Upgrade to Font Awesome 5.
+* Dev - Remove `composer.json` from production version.
+* Dev - Added CSS style linting.
+* Dev - Renamed the `sass` folder to `css`. All `.scss` files are now excluded from the production version.
 
 = 2.2.8 - 2018-02-13 =
 * Fix - Image bleed from next image in the gallery.
