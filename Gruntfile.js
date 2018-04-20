@@ -322,7 +322,7 @@ module.exports = function( grunt ) {
 					'!composer.json',
 					'!assets/css/sass/**',
 					'!assets/css/**/*.scss',
-					'!*.scss',
+					'!*.scss'
 				],
 				dest: 'storefront',
 				expand: true,
