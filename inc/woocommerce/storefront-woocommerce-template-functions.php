@@ -415,3 +415,135 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 		<?php
 	}
 }
+
+if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
+	/**
+	 * Sticky Add to Cart
+	 *
+	 * @since 2.3.0
+	 */
+	function storefront_sticky_single_add_to_cart() {
+		global $product;
+
+		if ( class_exists( 'Storefront_Sticky_Add_to_Cart' ) || true !== get_theme_mod( 'storefront_sticky_add_to_cart' ) ) {
+			return;
+		}
+
+		if ( ! is_product() ) {
+			return;
+		}
+
+		wp_enqueue_script( 'storefront-sticky-add-to-cart' );
+		?>
+			<section class="storefront-sticky-add-to-cart">
+				<div class="col-full">
+					<div class="storefront-sticky-add-to-cart__content">
+						<?php echo wp_kses_post( woocommerce_get_product_thumbnail() ); ?>
+						<div class="storefront-sticky-add-to-cart__content-product-info">
+							<span class="storefront-sticky-add-to-cart__content-title"><?php esc_attr_e( 'You\'re viewing:', 'storefront' ); ?> <strong><?php the_title(); ?></strong></span>
+							<span class="storefront-sticky-add-to-cart__content-price"><?php echo wp_kses_data( $product->get_price_html() ); ?></span>
+							<?php echo wp_kses_post( wc_get_rating_html( $product->get_average_rating() ) ); ?>
+						</div>
+						<a href="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="storefront-sticky-add-to-cart__content-button button alt">
+							<?php echo $product->is_type( 'variable' ) ? esc_attr__( 'Select options', 'storefront' ) : esc_attr__( $product->single_add_to_cart_text() ); ?>
+						</a>
+					</div>
+				</div>
+			</section><!-- .storefront-sticky-add-to-cart -->
+		<?php
+	}
+}
+
+if ( ! function_exists( 'storefront_woocommerce_brands_homepage_section' ) ) {
+	/**
+	 * Display WooCommerce Brands
+	 * Hooked into the `homepage` action in the homepage template.
+	 * Requires WooCommerce Brands.
+	 *
+	 * @since  2.3.0
+	 * @link   https://woocommerce.com/products/brands/
+	 * @uses   apply_filters()
+	 * @uses   storefront_do_shortcode()
+	 * @uses   wp_kses_post()
+	 * @uses   do_action()
+	 * @return void
+	 */
+	function storefront_woocommerce_brands_homepage_section() {
+		$args = apply_filters( 'storefront_woocommerce_brands_args', array(
+			'number'     => 6,
+			'columns'    => 4,
+			'orderby'    => 'name',
+			'show_empty' => false,
+			'title'      => __( 'Shop by Brand', 'storefront' ),
+		) );
+
+		$shortcode_content = storefront_do_shortcode( 'product_brand_thumbnails', apply_filters( 'storefront_woocommerce_brands_shortcode_args', array(
+			'number'     => absint( $args['number'] ),
+			'columns'    => absint( $args['columns'] ),
+			'orderby'    => esc_attr( $args['orderby'] ),
+			'show_empty' => (bool) $args['show_empty'],
+		) ) );
+
+		echo '<section class="storefront-product-section storefront-woocommerce-brands" aria-label="' . esc_attr__( 'Product Brands', 'storefront' ) . '">';
+
+		do_action( 'storefront_homepage_before_woocommerce_brands' );
+
+		echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+
+		do_action( 'storefront_homepage_after_woocommerce_brands_title' );
+
+		echo $shortcode_content;
+
+		do_action( 'storefront_homepage_after_woocommerce_brands' );
+
+		echo '</section>';
+	}
+}
+
+if ( ! function_exists( 'storefront_woocommerce_brands_archive' ) ) {
+	/**
+	 * Display brand image on brand archives
+	 * Requires WooCommerce Brands.
+	 *
+	 * @since  2.3.0
+	 * @link   https://woocommerce.com/products/brands/
+	 * @uses   is_tax()
+	 * @uses   wp_kses_post()
+	 * @uses   get_brand_thumbnail_image()
+	 * @uses   get_queried_object()
+	 * @return void
+	 */
+	function storefront_woocommerce_brands_archive() {
+		if ( is_tax( 'product_brand' ) ) {
+			echo wp_kses_post( get_brand_thumbnail_image( get_queried_object() ) );
+		}
+	}
+}
+
+if ( ! function_exists( 'storefront_woocommerce_brands_single' ) ) {
+	/**
+	 * Output product brand image for use on single product pages
+	 * Requires WooCommerce Brands.
+	 *
+	 * @since  2.3.0
+	 * @link   https://woocommerce.com/products/brands/
+	 * @uses   storefront_do_shortcode()
+	 * @uses   wp_kses_post()
+	 * @return void
+	 */
+	function storefront_woocommerce_brands_single() {
+		$brand = storefront_do_shortcode( 'product_brand', array(
+			'class' => ''
+		) );
+
+		if ( empty( $brand ) ) {
+			return;
+		}
+
+		?>
+		<div class="storefront-wc-brands-single-product">
+			<?php echo wp_kses_post( $brand ); ?>
+		</div>
+		<?php
+	}
+}

@@ -103,6 +103,15 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			wp_register_script( 'storefront-header-cart', get_template_directory_uri() . '/assets/js/woocommerce/header-cart' . $suffix . '.js', array(), $storefront_version, true );
 			wp_enqueue_script( 'storefront-header-cart' );
+
+			if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) && is_product() ) {
+				wp_register_script( 'storefront-sticky-add-to-cart', get_template_directory_uri() . '/assets/js/sticky-add-to-cart' . $suffix . '.js', array(), $storefront_version, true );
+			}
+
+			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-legacy', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce-legacy.css', array(), $storefront_version );
+				wp_style_add_data( 'storefront-woocommerce-legacy', 'rtl', 'replace' );
+			}
 		}
 
 		/**
@@ -186,7 +195,9 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 2.2.0
 		 */
 		public function change_breadcrumb_delimiter( $defaults ) {
-			$defaults['delimiter'] = '<span class="breadcrumb-separator"> / </span>';
+			$defaults['delimiter']   = '<span class="breadcrumb-separator"> / </span>';
+			$defaults['wrap_before'] = '<div class="storefront-breadcrumb"><div class="col-full"><nav class="woocommerce-breadcrumb">';
+			$defaults['wrap_after']  = '</nav></div></div>';
 			return $defaults;
 		}
 
@@ -196,6 +207,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return void
 		 */
 		public function woocommerce_integrations_scripts() {
+			global $storefront_version;
+
+			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
 			/**
 			 * Bookings
 			 */
@@ -210,6 +225,8 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( $this->is_woocommerce_extension_activated( 'WC_Brands' ) ) {
 				wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/brands.css', 'storefront-woocommerce-style' );
 				wp_style_add_data( 'storefront-woocommerce-brands-style', 'rtl', 'replace' );
+
+				wp_enqueue_script( 'storefront-woocommerce-brands', get_template_directory_uri() . '/assets/js/woocommerce/extensions/brands' . $suffix . '.js', array(), $storefront_version, true );
 			}
 
 			/**

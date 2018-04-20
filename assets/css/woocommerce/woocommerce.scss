@@ -23,6 +23,29 @@
 	font-style: normal;
 }
 
+// Animations
+@keyframes slideInDown {
+	from {
+		transform: translate3d( 0, -100%, 0 );
+		visibility: visible;
+	}
+
+	to {
+		transform: translate3d( 0, 0, 0 );
+	}
+}
+
+@keyframes slideOutUp {
+	from {
+		transform: translate3d( 0, 0, 0 );
+	}
+
+	to {
+		visibility: hidden;
+		transform: translate3d( 0, -100%, 0 );
+	}
+}
+
 .price {
 	ins {
 		font-weight: 400;
@@ -208,6 +231,12 @@
 				width: 20%;
 			}
 		}
+	}
+}
+
+.sf-input-focused {
+	.storefront-handheld-footer-bar {
+		display: none;
 	}
 }
 
@@ -401,14 +430,6 @@ ul.products {
 
 			.flex-viewport {
 				margin-bottom: ms(3);
-			}
-
-			.woocommerce-product-gallery__wrapper {
-				.woocommerce-product-gallery__image {
-					&:not( :only-child ):not( .flex-active-slide ) {
-						margin-left: 1px;
-					}
-				}
 			}
 
 			.flex-control-thumbs {
@@ -752,11 +773,9 @@ a.reset_variations {
  * Breadcrumbs
  */
 .woocommerce-breadcrumb {
-	margin-left: -1.387rem;
-	margin-right: -1.387rem;
-	margin-bottom: ms(3);
+	margin: 0 0 ms(3);
 	font-size: ms(-1);
-	padding: 1em 1.387rem;
+	padding: 1em 0;
 
 	.breadcrumb-separator {
 		display: inline-block;
@@ -838,11 +857,17 @@ a.reset_variations {
 	}
 
 	.buttons {
-		.button {
+		a {
 			display: block;
+			margin-bottom: ms( -2 );
 
-			&:nth-child( odd ) {
-				margin-bottom: ms(-2);
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			img {
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
@@ -1825,6 +1850,13 @@ dl.variation {
 	display: none;
 }
 
+/**
+ * Sticky Add to Cart
+ */
+.storefront-sticky-add-to-cart {
+	display: none;
+}
+
 @include susy-media($desktop) {
 	.demo_store {
 		bottom: 0;
@@ -1851,10 +1883,8 @@ dl.variation {
 	 * Breadcrumbs
 	 */
 	.woocommerce-breadcrumb {
-		padding: ms(2) 99em ms(2);
-		margin-left: -99em;
-		margin-right: -99em;
-		margin-bottom: ms(7);
+		padding: ms(2) 0;
+		margin: 0 0 ms(7);
 	}
 
 	/**
@@ -1985,52 +2015,42 @@ dl.variation {
 	.page-template-template-homepage-php,
 	.storefront-full-width-content {
 		.site-main {
-			.columns-1 {
-				ul.products {
+			ul.products {
+				&.columns-1 {
 					li.product {
 						width: 100%;
 						margin-right: 0;
 						float: none;
 					}
 				}
-			}
 
-			.columns-2 {
-				ul.products {
+				&.columns-2 {
 					li.product {
 						@include span(6 of 12);
 					}
 				}
-			}
 
-			.columns-3 {
-				ul.products {
+				&.columns-3 {
 					li.product {
 						@include span(4 of 12);
 					}
 				}
-			}
 
-			.columns-4 {
-				ul.products {
+				&.columns-4 {
 					li.product {
 						@include span(3 of 12);
 					}
 				}
-			}
 
-			// The grid wont work for 5 columns :-(
-			.columns-5 {
-				ul.products {
+				// The grid wont work for 5 columns :-(
+				&.columns-5 {
 					li.product {
 						width: 16.9%;
 						margin-right: 3.8%;
 					}
 				}
-			}
 
-			.columns-6 {
-				ul.products {
+				&.columns-6 {
 					li.product {
 						@include span(2 of 12);
 					}
@@ -2043,65 +2063,53 @@ dl.variation {
 	 * Main content area (adjacent to sidebar) product layout
 	 */
 	.site-main {
-		.columns-1 {
-			ul.products {
+		ul.products {
+			li.product {
+				@include span(3 of 9);
+			}
+
+			&.columns-1 {
 				li.product {
 					width: 100%;
 					margin-right: 0;
 					float: none;
 				}
 			}
-		}
 
-		// The grid wont work for 2 columns :-(
-		.columns-2 {
-			ul.products {
+			// The grid wont work for 2 columns :-(
+			&.columns-2 {
 				li.product {
 					width: 48%;
 					margin-right: 3.8%;
 				}
 			}
-		}
 
-		.columns-3 {
-			ul.products {
+			&.columns-3 {
 				li.product {
 					@include span(3 of 9);
 				}
 			}
-		}
 
-		// The grid wont work for 4 columns :-(
-		.columns-4 {
-			ul.products {
+			// The grid wont work for 4 columns :-(
+			&.columns-4 {
 				li.product {
 					width: 22.05%;
 					margin-right: 3.8%;
 				}
 			}
-		}
 
-		// The grid wont work for 5 columns :-(
-		.columns-5 {
-			ul.products {
+			// The grid wont work for 5 columns :-(
+			&.columns-5 {
 				li.product {
 					width: 16.9%;
 					margin-right: 3.8%;
 				}
 			}
-		}
 
-		.columns-6 {
-			ul.products {
+			&.columns-6 {
 				li.product {
 					@include span(1.5 of 9);
 				}
-			}
-		}
-
-		ul.products {
-			li.product {
-				@include span(3 of 9);
 			}
 		}
 	}
@@ -2296,7 +2304,6 @@ dl.variation {
 			}
 		}
 	}
-
 
 	.woocommerce .page-description {
 		margin-bottom: ms(3);
@@ -2646,6 +2653,7 @@ dl.variation {
 		}
 	}
 
+
 	.woocommerce-MyAccount-navigation {
 		@include span( 2 of 9 );
 	}
@@ -2663,12 +2671,12 @@ dl.variation {
 	}
 
 	.left-sidebar:not( .page-template-template-fullwidth-php ) {
-		.woocommerce-MyAccount-navigation {
-			@include span( last 2 of 9 );
-		}
-
 		.woocommerce-MyAccount-content {
 			@include span( 7 of 9 );
+		}
+
+		.woocommerce-MyAccount-navigation {
+			@include span( last 2 of 9 );
 		}
 	}
 
@@ -2688,12 +2696,8 @@ dl.variation {
 			}
 		}
 
-		.woocommerce-MyAccount-navigation {
-			@include span( 3 of 12 );
-		}
-
 		.woocommerce-MyAccount-content {
-			@include span( last 9 of 12 );
+			@include span( 9 of 12 );
 
 			.form-row-first {
 				@include span( 4 of 8 );
@@ -2714,6 +2718,10 @@ dl.variation {
 					@include span( last 4 of 8 );
 				}
 			}
+		}
+
+		.woocommerce-MyAccount-navigation {
+			@include span( last 3 of 12 );
 		}
 	}
 
@@ -2844,14 +2852,72 @@ dl.variation {
 			}
 		}
 	}
-}
 
-@media (min-width: $handheld) and (max-width: $container-width) {
-	.woocommerce-breadcrumb {
-		margin-left: -2.618rem;
-		margin-right: -2.618rem;
-		padding-left: 2.618rem;
-		padding-right: 2.618rem;
+	/**
+	 * Sticky Add to Cart
+	 */
+	.storefront-sticky-add-to-cart {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 99998;
+		transform: translate3d( 0, -100%, 0 );
+		padding: ms(1);
+		overflow: hidden;
+		zoom: 1;
+		box-shadow: 0 1px 2px rgba( #000000, 0.2 );
+		animation-duration: 0.5s;
+		animation-fill-mode: both;
+
+		&--slideInDown {
+			animation-name: slideInDown;
+		}
+
+		&--slideOutUp {
+			animation-name: slideOutUp;
+		}
+
+		&__content {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&-title {
+				display: block;
+			}
+
+			&-price {
+				margin-right: ms(-1);
+				opacity: 0.5;
+			}
+
+			&-button {
+				margin-left: auto;
+			}
+		}
+
+		img {
+			max-width: ms(6);
+			margin: 0 ms(2) 0 0;
+			padding: 3px;
+			border: 1px solid rgba( #000000, 0.1 );
+		}
+
+		.star-rating {
+			display: inline-block;
+			margin: 0;
+			vertical-align: bottom;
+		}
+	}
+
+	.admin-bar {
+		.storefront-sticky-add-to-cart {
+			&--slideInDown {
+				top: 32px;
+			}
+		}
 	}
 }
 
