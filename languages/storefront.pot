@@ -2,16 +2,16 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.2.8\n"
+"Project-Id-Version: Storefront 2.3.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2018-02-12 22:12:30+00:00\n"
+"POT-Creation-Date: 2018-04-20 11:12:04+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
-"X-Generator: grunt-wp-i18n1.0.1\n"
+"X-Generator: grunt-wp-i18n1.0.2\n"
 
 #: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
@@ -268,7 +268,15 @@ msgstr ""
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:332
+#: inc/class-storefront.php:255
+msgid "Expand child menu"
+msgstr ""
+
+#: inc/class-storefront.php:256
+msgid "Collapse child menu"
+msgstr ""
+
+#: inc/class-storefront.php:345
 msgid "Post Navigation"
 msgstr ""
 
@@ -286,139 +294,172 @@ msgstr ""
 msgid "Why not leave us a review on %sWordPress.org%s?  We'd really appreciate it!"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:140
+#: inc/customizer/class-storefront-customizer.php:142
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:144
+#: inc/customizer/class-storefront-customizer.php:146
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:182
+#: inc/customizer/class-storefront-customizer.php:184
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:195
-#: inc/customizer/class-storefront-customizer.php:316
+#: inc/customizer/class-storefront-customizer.php:197
+#: inc/customizer/class-storefront-customizer.php:350
 msgid "Heading color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:210
-#: inc/customizer/class-storefront-customizer.php:262
-#: inc/customizer/class-storefront-customizer.php:331
-#: inc/customizer/class-storefront-customizer.php:385
+#: inc/customizer/class-storefront-customizer.php:212
+#: inc/customizer/class-storefront-customizer.php:296
+#: inc/customizer/class-storefront-customizer.php:365
+#: inc/customizer/class-storefront-customizer.php:419
 msgid "Text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:225
+#: inc/customizer/class-storefront-customizer.php:227
 msgid "Link / accent color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:234
+#: inc/customizer/class-storefront-customizer.php:242
+msgid "Hero heading color"
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:258
+msgid "Hero text color"
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:268
 msgid "Header background image"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:247
-#: inc/customizer/class-storefront-customizer.php:301
-#: inc/customizer/class-storefront-customizer.php:370
+#: inc/customizer/class-storefront-customizer.php:281
+#: inc/customizer/class-storefront-customizer.php:335
+#: inc/customizer/class-storefront-customizer.php:404
 msgid "Background color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:277
-#: inc/customizer/class-storefront-customizer.php:346
+#: inc/customizer/class-storefront-customizer.php:311
+#: inc/customizer/class-storefront-customizer.php:380
 msgid "Link color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:287
+#: inc/customizer/class-storefront-customizer.php:321
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:289
+#: inc/customizer/class-storefront-customizer.php:323
 msgid "Customize the look & feel of your website footer."
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:356
+#: inc/customizer/class-storefront-customizer.php:390
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:358
+#: inc/customizer/class-storefront-customizer.php:392
 msgid "Customize the look & feel of your website buttons."
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:400
+#: inc/customizer/class-storefront-customizer.php:434
 msgid "Alternate button background color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:415
+#: inc/customizer/class-storefront-customizer.php:449
 msgid "Alternate button text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:425
+#: inc/customizer/class-storefront-customizer.php:459
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:437
+#: inc/customizer/class-storefront-customizer.php:471
 msgid "General Layout"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:450
+#: inc/customizer/class-storefront-customizer.php:483
+msgid "Product Page"
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:500
+msgid "Sticky Add-To-Cart"
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:501
+msgid ""
+"A small content bar at the top of the browser window which includes "
+"relevant product information and an add-to-cart button. It slides into view "
+"once the standard add-to-cart button has scrolled out of view."
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:508
+msgid "Product Pagination"
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:509
+msgid ""
+"Displays next and previous links on product pages. A product thumbnail is "
+"displayed with the title revealed on hover."
+msgstr ""
+
+#: inc/customizer/class-storefront-customizer.php:518
 msgid "More"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:460
+#: inc/customizer/class-storefront-customizer.php:528
 msgid "Looking for more options?"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:78
+#: inc/nux/class-storefront-nux-admin.php:84
 msgid "Thanks for installing Storefront, you rock! 🤘"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:79
+#: inc/nux/class-storefront-nux-admin.php:85
 msgid "To enable eCommerce features you need to install the WooCommerce plugin."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:80
+#: inc/nux/class-storefront-nux-admin.php:86
 msgid "WooCommerce activated"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:80
+#: inc/nux/class-storefront-nux-admin.php:86
 msgid "Activate WooCommerce"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:80
+#: inc/nux/class-storefront-nux-admin.php:86
 msgid "Install WooCommerce"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:84
+#: inc/nux/class-storefront-nux-admin.php:90
 msgid "Design your store 🎨"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:88
+#: inc/nux/class-storefront-nux-admin.php:94
 msgid ""
 "Before you add your first product let's design your store. We'll add some "
 "example products for you. When you're ready let's get started by adding "
 "your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:90
+#: inc/nux/class-storefront-nux-admin.php:96
 msgid ""
 "You've set up WooCommerce, now it's time to give it some style! Let's get "
 "started by entering the Customizer and adding your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:110
+#: inc/nux/class-storefront-nux-admin.php:116
 msgid "Apply the Storefront homepage template"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:112
+#: inc/nux/class-storefront-nux-admin.php:118
 msgid "Create a homepage using Storefront's homepage template"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:120
+#: inc/nux/class-storefront-nux-admin.php:126
 msgid "Add example products"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:125
+#: inc/nux/class-storefront-nux-admin.php:131
 #: inc/nux/class-storefront-nux-guided-tour.php:111
 msgid "Let's go!"
 msgstr ""
@@ -674,6 +715,14 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
+#: inc/storefront-template-functions.php:495
+msgid "Next post:"
+msgstr ""
+
+#: inc/storefront-template-functions.php:496
+msgid "Previous post:"
+msgstr ""
+
 #: inc/storefront-template-functions.php:559
 msgid "Shop by Category"
 msgstr ""
@@ -736,6 +785,26 @@ msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:371
 msgid "My Account"
+msgstr ""
+
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:406
+msgid "More products"
+msgstr ""
+
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:443
+msgid "You're viewing:"
+msgstr ""
+
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:448
+msgid "Select options"
+msgstr ""
+
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:477
+msgid "Shop by Brand"
+msgstr ""
+
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:487
+msgid "Product Brands"
 msgstr ""
 
 #: search.php:16
