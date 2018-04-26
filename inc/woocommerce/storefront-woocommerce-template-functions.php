@@ -433,6 +433,12 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 			return;
 		}
 
+		$params = apply_filters( 'storefront_sticky_add_to_cart_params', array(
+			'trigger_class' => 'entry-summary'
+		) );
+
+		wp_localize_script( 'storefront-sticky-add-to-cart', 'storefront_sticky_add_to_cart_params', $params );
+
 		wp_enqueue_script( 'storefront-sticky-add-to-cart' );
 		?>
 			<section class="storefront-sticky-add-to-cart">

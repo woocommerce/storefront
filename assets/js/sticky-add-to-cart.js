@@ -1,3 +1,4 @@
+/*global storefront_sticky_add_to_cart_params */
 ( function() {
 	document.addEventListener( 'DOMContentLoaded', function() {
 		var stickyAddToCart = document.getElementsByClassName( 'storefront-sticky-add-to-cart' );
@@ -6,7 +7,11 @@
 			return;
 		}
 
-		var trigger = document.getElementsByClassName( 'entry-summary' );
+		if ( typeof storefront_sticky_add_to_cart_params === 'undefined' ) {
+			return;
+		}
+
+		var trigger = document.getElementsByClassName( storefront_sticky_add_to_cart_params.trigger_class );
 
 		if ( trigger.length > 0 ) {
 			var stickyAddToCartToggle = function() {
