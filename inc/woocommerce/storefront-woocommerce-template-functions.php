@@ -445,7 +445,7 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 							<?php echo wp_kses_post( wc_get_rating_html( $product->get_average_rating() ) ); ?>
 						</div>
 						<a href="<?php echo esc_url( $product->add_to_cart_url() ); ?>" class="storefront-sticky-add-to-cart__content-button button alt">
-							<?php echo $product->is_type( 'variable' ) ? esc_attr__( 'Select options', 'storefront' ) : esc_attr( $product->single_add_to_cart_text() ); ?>
+							<?php echo esc_attr( $product->add_to_cart_text() ); ?>
 						</a>
 					</div>
 				</div>
