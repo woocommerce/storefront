@@ -52,6 +52,7 @@
 	 * Functions hooked in to storefront_before_content
 	 *
 	 * @hooked storefront_header_widget_region - 10
+	 * @hooked woocommerce_breadcrumb - 10
 	 */
 	do_action( 'storefront_before_content' ); ?>
 
@@ -59,9 +60,4 @@
 		<div class="col-full">
 
 		<?php
-		/**
-		 * Functions hooked in to storefront_content_top
-		 *
-		 * @hooked woocommerce_breadcrumb - 10
-		 */
 		do_action( 'storefront_content_top' );
