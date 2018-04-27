@@ -60,6 +60,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				'storefront_button_alt_background_color' => '#333333',
 				'storefront_button_alt_text_color'       => '#ffffff',
 				'storefront_layout'                      => 'right',
+				'storefront_sticky_add_to_cart'          => true,
+				'storefront_product_pagination'          => true,
 				'background_color'                       => 'ffffff',
 			) );
 		}
