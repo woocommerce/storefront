@@ -97,54 +97,6 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 				</div>
 
 				<div class="storefront-enhance">
-					<div class="storefront-enhance__column storefront-free-plugins">
-						<h3><?php esc_attr_e( 'Install-and-go enhancements', 'storefront' ); ?></h3>
-						<ul class="storefront-free-plugins__wrap">
-							<li class="storefront-plugin">
-								<h4><?php esc_attr_e( 'Cart Tab', 'storefront' ); ?></h4>
-								<p>
-									<?php esc_attr_e( 'Provide a more streamlined checkout experience. Cart Tab adds a fixed cart icon that displays the number of products in the cart to all pages of your site.', 'storefront' ); ?>
-								</p>
-
-								<p>
-									<?php esc_attr_e( 'Clicking the tab will reveal the cart contents in a sidebar that overlays the main site content from which visitors can conveniently edit their cart or checkout.', 'storefront' ); ?>
-								</p>
-
-								<p>
-									<?php
-										Storefront_Plugin_Install::install_plugin_button( 'woocommerce-cart-tab', 'cart-tab.php', 'WooCommerce Cart Tab
-' );
-									?>
-								</p>
-							</li>
-
-							<li class="storefront-plugin">
-								<h4><?php esc_attr_e( 'Product Sharing', 'storefront' ); ?></h4>
-								<p>
-									<?php esc_attr_e( 'Enable your visitors to market your products on your behalf! Add social icons to your product pages allowing guests to share your products on their favorite social networks.', 'storefront' ); ?>
-								</p>
-
-								<p>
-									<?php
-										Storefront_Plugin_Install::install_plugin_button( 'storefront-product-sharing', 'storefront-product-sharing.php', 'Storefront Product Sharing' );
-									?>
-								</p>
-							</li>
-
-							<li class="storefront-plugin">
-								<h4><?php esc_attr_e( 'Sticky add to cart', 'storefront' ); ?></h4>
-								<p>
-									<?php esc_attr_e( 'Increase conversions by adding a sticky add-to-cart button to all your product pages so that folks can always add to cart, regardless of how far they scroll down the page.', 'storefront' ); ?>
-								</p>
-
-								<p>
-									<?php
-										Storefront_Plugin_Install::install_plugin_button( 'storefront-sticky-add-to-cart', 'storefront-sticky-add-to-cart.php', 'Storefront Sticky Add to Cart' );
-									?>
-								</p>
-							</li>
-						</ul>
-					</div>
 					<div class="storefront-enhance__column storefront-bundle">
 						<h3><?php esc_attr_e( 'Storefront Extensions Bundle', 'storefront' ); ?></h3>
 						<span class="bundle-image">
