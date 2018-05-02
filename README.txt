@@ -48,7 +48,7 @@ Images License: GNU General Public License v2 or later
 = 2.3.0 - 2018-XX-XX =
 * Feature - Sticky Add-To-Cart.
 * Feature - Product Pagination.
-* Feature - WooCommerce Memberships integration.
+* Feature - WooCommerce Brands integration.
 * Tweak - Increased size of branding section if secondary navigation not used.
 * Tweak - Added a screen reader label to post navigation links.
 * Tweak - Removed RGBaster and added Customizer controls to change the color of text in the homepage Hero section.
@@ -56,6 +56,7 @@ Images License: GNU General Public License v2 or later
 * Tweak - Updated My Account layout.
 * Tweak - Removed column wrappers, unnecessary as of WooCommerce 3.3.
 * Tweak - Removed Jetpack Infinite Scroll hacks; they are no longer needed as of the latest version of Jetpack / WooCommerce.
+* Tweak - Removed "Free Extensions" column from Welcome page.
 * Fix - Reduce padding on cart table to prevent sidebar from overflowing container.
 * Fix - Hide handheld footer bar when an input is focused.
 * Fix - Prevent entry meta author styles from being applied to the author archives.
@@ -64,6 +65,7 @@ Images License: GNU General Public License v2 or later
 * Fix - Improved semantic HTML for pages and single posts.
 * Fix - Removed negative margins in the primary navigation and breadcrumb containers to fix an overflow issue in the Linux version of Chrome.
 * Fix - Removed 1px pixel margin on the product images gallery.
+* Fix - Added missing styles to Composite Products integration.
 * Dev - Upgrade to Font Awesome 5.
 * Dev - Remove `composer.json` from production version.
 * Dev - Added CSS style linting.
