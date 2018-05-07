@@ -43,6 +43,10 @@ You can read more about the calculator we use in our sass here: https://github.c
 FontAwesome License: SIL Open Font License - http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 Images License: GNU General Public License v2 or later
 
+Storefront serves fonts via the hosted Google Fonts service. Storefront does not share any data with Google directly.
+To the best of our knowledge, Google doesn’t track nor share end user data.
+Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
+
 == Changelog ==
 
 = 2.3.0 - 2018-XX-XX =
