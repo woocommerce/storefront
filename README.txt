@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.3.0 - 2018-XX-XX =
+= 2.3.0 - 2018-05-08 =
 * Feature - Sticky Add-To-Cart.
 * Feature - Product Pagination.
 * Feature - WooCommerce Brands integration.
