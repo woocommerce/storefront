@@ -12,13 +12,10 @@
 @import '../sass/vendors/font-awesome/fa-solid';
 @import '../sass/vendors/modular-scale';
 
-%fas {
-	@extend .fas;
-}
-
 @mixin sf-fa-icon {
 	@include fa-icon;
-	@extend %fas;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
 	line-height: inherit;
 	vertical-align: baseline;
 }
