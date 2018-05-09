@@ -922,8 +922,12 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @return void
 		 */
 		public function set_storefront_style_theme_mods() {
-			set_theme_mod( 'storefront_styles', $this->get_css() );
-			set_theme_mod( 'storefront_woocommerce_styles', $this->get_woocommerce_css() );
+			global $storefront_version;
+
+			$version_key = sanitize_title( $storefront_version );
+
+			set_theme_mod( 'storefront-styles-' . $version_key, $this->get_css() );
+			set_theme_mod( 'storefront-woocommerce-styles-' . $version_key, $this->get_woocommerce_css() );
 		}
 
 		/**
@@ -934,24 +938,34 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @return void
 		 */
 		public function add_customizer_css() {
-			$storefront_styles             = get_theme_mod( 'storefront_styles' );
-			$storefront_woocommerce_styles = get_theme_mod( 'storefront_woocommerce_styles' );
+			global $storefront_version;
 
-			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || ( false === $storefront_styles && false === $storefront_woocommerce_styles ) ) {
-				wp_add_inline_style( 'storefront-style', $this->get_css() );
-				wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_css() );
-			} else {
-				wp_add_inline_style( 'storefront-style', get_theme_mod( 'storefront_styles' ) );
-				wp_add_inline_style( 'storefront-woocommerce-style', get_theme_mod( 'storefront_woocommerce_styles' ) );
+			$version_key                   = sanitize_title( $storefront_version );
+			$storefront_styles             = get_theme_mod( 'storefront-styles-' . $version_key );
+			$storefront_woocommerce_styles = get_theme_mod( 'storefront-woocommerce-styles-' . $version_key );
+
+			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) ) {
+				$storefront_styles             = $this->get_css();
+				$storefront_woocommerce_styles = $this->get_woocommerce_css();
+			} elseif ( false === $storefront_styles && false === $storefront_woocommerce_styles ) {
+
+				// Refresh inline CSS cache.
+				$this->set_storefront_style_theme_mods();
+
+				$storefront_styles             = get_theme_mod( 'storefront-styles-' . $version_key );
+				$storefront_woocommerce_styles = get_theme_mod( 'storefront-woocommerce-styles-' . $version_key );
 			}
+
+			wp_add_inline_style( 'storefront-style', $storefront_styles );
+			wp_add_inline_style( 'storefront-woocommerce-style', $storefront_woocommerce_styles );
 		}
 
 		/**
 		 * Layout classes
 		 * Adds 'right-sidebar' and 'left-sidebar' classes to the body tag
 		 *
-		 * @param  array $classes current body classes.
-		 * @return string[]          modified body classes
+		 * @param  array  $classes current body classes.
+		 * @return string          modified body classes.
 		 * @since  1.0.0
 		 */
 		public function layout_class( $classes ) {
