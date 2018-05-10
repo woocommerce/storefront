@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 2.3.0
-Version: 2.3.0
+Stable tag: 2.3.1
+Version: 2.3.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
@@ -48,6 +48,12 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.3.1 - 2018-05-10 =
+* Feature - Add support for GDPR features soon to be introduced in WordPress 4.9.6.
+* Tweak - Removed inline CSS cache; WordPress autoloads options by default, there's no advantage to caching the CSS.
+* Fix - Made changes to `icons.scss` to address an issue where Font Awesome icons were not being displayed correctly on some sites.
+* Fix - Apply clearfix to `.col-full` globally.
 
 = 2.3.0 - 2018-05-08 =
 * Feature - Sticky Add-To-Cart.
