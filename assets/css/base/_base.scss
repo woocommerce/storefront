@@ -880,6 +880,10 @@ input[type='submit'],
 input[type='checkbox'],
 input[type='radio'] {
 	padding: 0; /* Addresses excess padding in IE8/9 */
+
+	& + label {
+		margin: 0 0 0 ms(-4);
+	}
 }
 
 input[type='search']::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
