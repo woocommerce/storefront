@@ -42,9 +42,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			// Integrations.
 			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_integrations_scripts' ), 99 );
 			add_action( 'wp_enqueue_scripts',                       array( $this, 'add_customizer_css' ), 140 );
-
-			add_action( 'after_switch_theme',                       array( $this, 'set_storefront_style_theme_mods' ) );
-			add_action( 'customize_save_after',                     array( $this, 'set_storefront_style_theme_mods' ) );
 		}
 
 		/**
@@ -55,23 +52,22 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return void
 		 */
 		public function add_customizer_css() {
-			$storefront_woocommerce_extension_styles = get_theme_mod( 'storefront_woocommerce_extension_styles' );
-
-			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || ( false === $storefront_woocommerce_extension_styles ) ) {
-				wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_extension_css() );
-			} else {
-				wp_add_inline_style( 'storefront-woocommerce-style', $storefront_woocommerce_extension_styles );
-			}
+			wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_extension_css() );
 		}
 
 		/**
 		 * Assign styles to individual theme mod.
 		 *
+		 * @deprecated 2.3.1
 		 * @since 2.1.0
 		 * @return void
 		 */
 		public function set_storefront_style_theme_mods() {
-			set_theme_mod( 'storefront_woocommerce_extension_styles', $this->get_woocommerce_extension_css() );
+			if ( function_exists( 'wc_deprecated_function' ) ) {
+				wc_deprecated_function( __FUNCTION__, '2.3.1' );
+			} else {
+				_deprecated_function( __FUNCTION__, '2.3.1' );
+			}
 		}
 
 		/**
