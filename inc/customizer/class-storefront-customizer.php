@@ -31,9 +31,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'customize_controls_print_styles', array( $this, 'customizer_custom_control_css' ) );
 			add_action( 'customize_register',              array( $this, 'edit_default_customizer_settings' ), 99 );
 			add_action( 'init',                            array( $this, 'default_theme_mod_values' ), 10 );
-
-			add_action( 'after_switch_theme',              array( $this, 'set_storefront_style_theme_mods' ) );
-			add_action( 'customize_save_after',            array( $this, 'set_storefront_style_theme_mods' ) );
 		}
 
 		/**
@@ -919,31 +916,26 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		/**
 		 * Assign Storefront styles to individual theme mods.
 		 *
+		 * @deprecated 2.3.1
 		 * @return void
 		 */
 		public function set_storefront_style_theme_mods() {
-			set_theme_mod( 'storefront_styles', $this->get_css() );
-			set_theme_mod( 'storefront_woocommerce_styles', $this->get_woocommerce_css() );
+			if ( function_exists( 'wc_deprecated_function' ) ) {
+				wc_deprecated_function( __FUNCTION__, '2.3.1' );
+			} else {
+				_deprecated_function( __FUNCTION__, '2.3.1' );
+			}
 		}
 
 		/**
 		 * Add CSS in <head> for styles handled by the theme customizer
-		 * If the Customizer is active pull in the raw css. Otherwise pull in the prepared theme_mods if they exist.
 		 *
 		 * @since 1.0.0
 		 * @return void
 		 */
 		public function add_customizer_css() {
-			$storefront_styles             = get_theme_mod( 'storefront_styles' );
-			$storefront_woocommerce_styles = get_theme_mod( 'storefront_woocommerce_styles' );
-
-			if ( is_customize_preview() || ( defined( 'WP_DEBUG' ) && true === WP_DEBUG ) || ( false === $storefront_styles && false === $storefront_woocommerce_styles ) ) {
-				wp_add_inline_style( 'storefront-style', $this->get_css() );
-				wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_css() );
-			} else {
-				wp_add_inline_style( 'storefront-style', get_theme_mod( 'storefront_styles' ) );
-				wp_add_inline_style( 'storefront-woocommerce-style', get_theme_mod( 'storefront_woocommerce_styles' ) );
-			}
+			wp_add_inline_style( 'storefront-style', $this->get_css() );
+			wp_add_inline_style( 'storefront-woocommerce-style', $this->get_woocommerce_css() );
 		}
 
 		/**
