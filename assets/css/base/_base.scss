@@ -455,6 +455,14 @@ body {
 
 .site-info {
 	padding: ms(5) 0;
+
+	span[role=separator] {
+		padding: 0 ms(-6) 0 ms(-5);
+
+		&::before {
+			content: '\007c';
+		}
+	}
 }
 
 /**
