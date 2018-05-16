@@ -491,15 +491,12 @@
 		ul.nav-menu {
 			max-height: none;
 			overflow: visible;
+			margin-left: -1em;
 
 			> li {
 				// The first level menu item
 				> a {
 					padding: ms(3) 1em;
-				}
-
-				&:first-child {
-					margin-left: -1em;
 				}
 
 				&.menu-item-has-children,
