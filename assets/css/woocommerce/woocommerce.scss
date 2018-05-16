@@ -772,10 +772,13 @@ a.reset_variations {
 /**
  * Breadcrumbs
  */
-.woocommerce-breadcrumb {
+.storefront-breadcrumb {
 	margin: 0 0 ms(3);
-	font-size: ms(-1);
 	padding: 1em 0;
+}
+
+.woocommerce-breadcrumb {
+	font-size: ms(-1);
 
 	.breadcrumb-separator {
 		display: inline-block;
@@ -1882,7 +1885,7 @@ dl.variation {
 	/**
 	 * Breadcrumbs
 	 */
-	.woocommerce-breadcrumb {
+	.storefront-breadcrumb {
 		padding: ms(2) 0;
 		margin: 0 0 ms(7);
 	}
