@@ -121,6 +121,7 @@
 	}
 
 	.col-full {
+		@include clearfix;
 		@include container($container-width);
 		padding: 0 ms(5);
 		box-sizing: content-box;
