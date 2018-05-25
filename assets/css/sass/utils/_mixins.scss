@@ -40,55 +40,6 @@
 	}
 }
 
-@mixin message( $glyph: '\f05a', $color: $info ) {
-	padding: 1em ms(3) 1em ms(6);
-	background: rgba( $color, 0.7 );
-	margin-bottom: ms(5);
-	font-weight: normal;
-	position: relative;
-	color: #fff;
-	text-shadow: none;
-
-	&::before {
-		font-family: 'FontAwesome';
-		content: $glyph;
-		color: #fff;
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: ms(5);
-		background: rgba( darken( $color, 3% ), 0.7 );
-		text-align: center;
-		padding: 1em ms(-2);
-		font-weight: normal !important;
-		text-shadow: none;
-	}
-
-	a {
-		color: #fff;
-		text-decoration: underline;
-
-		&:hover {
-			color: #fff;
-			text-decoration: none;
-		}
-	}
-
-	a.button {
-		background: #fff;
-		color: $color;
-		font-size: ms(-1);
-		padding: 0.202em ms(-2);
-
-		&:hover,
-		&:active {
-			background: rgba( #fff, 0.8 );
-			color: $color;
-		}
-	}
-}
-
 @mixin button() {
 	border: 0;
 	background: none;
