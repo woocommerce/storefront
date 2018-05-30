@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.3.1\n"
+"Project-Id-Version: Storefront 2.3.2\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2018-05-10 15:51:26+00:00\n"
+"POT-Creation-Date: 2018-05-30 15:26:14+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Product Categories"
 msgstr ""
 
-#: 404.php:57 404.php:59 inc/storefront-template-functions.php:728
+#: 404.php:57 404.php:59 inc/storefront-template-functions.php:738
 msgid "Popular Products"
 msgstr ""
 
@@ -683,40 +683,40 @@ msgstr ""
 msgid "Shop by Category"
 msgstr ""
 
-#: inc/storefront-template-functions.php:615
+#: inc/storefront-template-functions.php:617
 msgid "New In"
 msgstr ""
 
-#: inc/storefront-template-functions.php:628
+#: inc/storefront-template-functions.php:632
 msgid "Recent Products"
 msgstr ""
 
-#: inc/storefront-template-functions.php:665
+#: inc/storefront-template-functions.php:670
 msgid "We Recommend"
 msgstr ""
 
-#: inc/storefront-template-functions.php:680
+#: inc/storefront-template-functions.php:686
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:261
 msgid "Featured Products"
 msgstr ""
 
-#: inc/storefront-template-functions.php:715
+#: inc/storefront-template-functions.php:723
 msgid "Fan Favorites"
 msgstr ""
 
-#: inc/storefront-template-functions.php:763
+#: inc/storefront-template-functions.php:776
 msgid "On Sale"
 msgstr ""
 
-#: inc/storefront-template-functions.php:776
+#: inc/storefront-template-functions.php:792
 msgid "On Sale Products"
 msgstr ""
 
-#: inc/storefront-template-functions.php:810
+#: inc/storefront-template-functions.php:828
 msgid "Best Sellers"
 msgstr ""
 
-#: inc/storefront-template-functions.php:823
+#: inc/storefront-template-functions.php:843
 msgid "Best Selling Products"
 msgstr ""
 
