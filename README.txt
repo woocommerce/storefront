@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 2.3.1
-Version: 2.3.1
+Stable tag: 2.3.2
+Version: 2.3.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
@@ -48,6 +48,16 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.3.2 - 2018-05-30 =
+* Tweak - Replaced `wp_kses_data()` with `wp_kses_post()` on price outputs in the Mini-Cart and Sticky Add-To-Cart.
+* Tweak - Added support for `tel` type fields in forms.
+* Tweak - Replaced legacy homepage shortcodes with the new `[products]` shortcode.
+* Fix - WooCommerce Memberships mobile table styling.
+* Fix - Moved margin from `.woocommerce-breadcrumb` to the new `.storefront-breadcrumb` wrapper.
+* Fix - Fixed alignment of mobile menu toggle.
+* Fix - Removed H1 from logo when the Homepage is not the Blog page.
+* Dev - Removed legacy Sass mixins.
 
 = 2.3.1 - 2018-05-10 =
 * Feature - Add support for GDPR features soon to be introduced in WordPress 4.9.6.
