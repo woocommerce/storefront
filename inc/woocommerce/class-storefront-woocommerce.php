@@ -24,6 +24,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
+			add_action( 'after_setup_theme',                        array( $this, 'setup' ) );
 			add_filter( 'body_class',                               array( $this, 'woocommerce_body_class' ) );
 			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_scripts' ),	20 );
 			add_filter( 'woocommerce_enqueue_styles',               '__return_empty_array' );
@@ -42,6 +43,34 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			// Integrations.
 			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_integrations_scripts' ), 99 );
 			add_action( 'wp_enqueue_scripts',                       array( $this, 'add_customizer_css' ), 140 );
+		}
+
+		/**
+		 * Sets up theme defaults and registers support for various WooCommerce features.
+		 *
+		 * Note that this function is hooked into the after_setup_theme hook, which
+		 * runs before the init hook. The init hook is too late for some features, such
+		 * as indicating support for post thumbnails.
+		 *
+		 * @since 2.4.0
+		 * @return void
+		 */
+		public function setup() {
+			add_theme_support( 'woocommerce', apply_filters( 'storefront_woocommerce_args', array(
+				'single_image_width'    => 416,
+				'thumbnail_image_width' => 324,
+				'product_grid'          => array(
+					'default_columns' => 3,
+					'default_rows'    => 4,
+					'min_columns'     => 1,
+					'max_columns'     => 6,
+					'min_rows'        => 1
+				)
+			) ) );
+
+			add_theme_support( 'wc-product-gallery-zoom' );
+			add_theme_support( 'wc-product-gallery-lightbox' );
+			add_theme_support( 'wc-product-gallery-slider' );
 		}
 
 		/**

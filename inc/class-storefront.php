@@ -70,7 +70,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_theme_support( 'post-thumbnails' );
 
 			/**
-			 * Enable support for site logo
+			 * Enable support for site logo.
 			 */
 			add_theme_support( 'custom-logo', apply_filters( 'storefront_custom_logo_args', array(
 				'height'      => 110,
@@ -78,7 +78,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'flex-width'  => true,
 			) ) );
 
-			// This theme uses wp_nav_menu() in two locations.
+			/**
+			 * Register menu locations.
+			 */
 			register_nav_menus( apply_filters( 'storefront_register_nav_menus', array(
 				'primary'   => __( 'Primary Menu', 'storefront' ),
 				'secondary' => __( 'Secondary Menu', 'storefront' ),
@@ -98,7 +100,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'widgets',
 			) ) );
 
-			// Setup the WordPress core custom background feature.
+			/**
+			 * Setup the WordPress core custom background feature.
+			 */
 			add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
 				'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
 				'default-image' => '',
@@ -113,27 +117,14 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'size' => 'full'
 			) ) );
 
-			// Declare WooCommerce support.
-			add_theme_support( 'woocommerce', apply_filters( 'storefront_woocommerce_args', array(
-				'single_image_width'    => 416,
-				'thumbnail_image_width' => 324,
-				'product_grid'          => array(
-					'default_columns' => 3,
-					'default_rows'    => 4,
-					'min_columns'     => 1,
-					'max_columns'     => 6,
-					'min_rows'        => 1
-				)
-			) ) );
-
-			add_theme_support( 'wc-product-gallery-zoom' );
-			add_theme_support( 'wc-product-gallery-lightbox' );
-			add_theme_support( 'wc-product-gallery-slider' );
-
-			// Declare support for title theme feature.
+			/**
+			 * Declare support for title theme feature.
+			 */
 			add_theme_support( 'title-tag' );
 
-			// Declare support for selective refreshing of widgets.
+			/**
+			 * Declare support for selective refreshing of widgets.
+			 */
 			add_theme_support( 'customize-selective-refresh-widgets' );
 		}
 
