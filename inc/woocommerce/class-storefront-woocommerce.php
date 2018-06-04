@@ -100,14 +100,17 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		}
 
 		/**
-		 * Add 'woocommerce-active' class to the body tag
+		 * Add WooCommerce specific classes to the body tag
 		 *
 		 * @param  array $classes css classes applied to the body tag.
 		 * @return array $classes modified to include 'woocommerce-active' class
 		 */
 		public function woocommerce_body_class( $classes ) {
-			if ( storefront_is_woocommerce_activated() ) {
-				$classes[] = 'woocommerce-active';
+			$classes[] = 'woocommerce-active';
+
+			// Remove `no-wc-breadcrumb` body class
+			if ( false !== $key = array_search( 'no-wc-breadcrumb', $classes ) ) {
+				unset( $classes[ $key ] );
 			}
 
 			return $classes;

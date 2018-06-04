@@ -291,14 +291,17 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @return array
 		 */
 		public function body_classes( $classes ) {
-			// Adds a class of group-blog to blogs with more than 1 published author.
+			// Adds a class to blogs with more than 1 published author.
 			if ( is_multi_author() ) {
 				$classes[] = 'group-blog';
 			}
 
-			if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
-				$classes[]	= 'no-wc-breadcrumb';
-			}
+			/**
+			 * Adds a class when WooCommerce is not active.
+			 *
+			 * @todo Refactor child themes to remove dependency on this class.
+			 */
+			$classes[] = 'no-wc-breadcrumb';
 
 			/**
 			 * What is this?!
@@ -316,12 +319,12 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$classes[] = 'storefront-full-width-content';
 			}
 
-			// Add class when using homepage template + featured image
+			// Add class when using homepage template + featured image.
 			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
 				$classes[] = 'has-post-thumbnail';
 			}
 
-			// Add class when Secondary Navigation is in use
+			// Add class when Secondary Navigation is in use.
 			if ( has_nav_menu( 'secondary' ) ) {
 				$classes[] = 'storefront-secondary-navigation';
 			}
