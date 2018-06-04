@@ -125,7 +125,7 @@ function storefront_homepage_content_styles() {
 
 	if ( '' !== $background_image ) {
 		$styles['background-image'] = $background_image;
-	}	
+	}
 
 	$styles = apply_filters( 'storefront_homepage_content_styles', $styles );
 
@@ -204,62 +204,6 @@ function storefront_sanitize_checkbox( $checked ) {
 	return ( ( isset( $checked ) && true == $checked ) ? true : false );
 }
 
-if ( ! function_exists( 'is_woocommerce_activated' ) ) {
-	/**
-	 * Query WooCommerce activation
-	 */
-	function is_woocommerce_activated() {
-		_deprecated_function( 'is_woocommerce_activated', '2.1.6', 'storefront_is_woocommerce_activated' );
-
-		return class_exists( 'woocommerce' ) ? true : false;
-	}
-}
-
-/**
- * Schema type
- *
- * @return void
- */
-function storefront_html_tag_schema() {
-	_deprecated_function( 'storefront_html_tag_schema', '2.0.2' );
-
-	$schema = 'http://schema.org/';
-	$type   = 'WebPage';
-
-	if ( is_singular( 'post' ) ) {
-		$type = 'Article';
-	} elseif ( is_author() ) {
-		$type = 'ProfilePage';
-	} elseif ( is_search() ) {
-		$type 	= 'SearchResultsPage';
-	}
-
-	echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
-}
-
-/**
- * Sanitizes the layout setting
- *
- * Ensures only array keys matching the original settings specified in add_control() are valid
- *
- * @param array $input the layout options.
- * @since 1.0.3
- */
-function storefront_sanitize_layout( $input ) {
-	_deprecated_function( 'storefront_sanitize_layout', '2.0', 'storefront_sanitize_choices' );
-
-	$valid = array(
-		'right' => 'Right',
-		'left'  => 'Left',
-	);
-
-	if ( array_key_exists( $input, $valid ) ) {
-		return $input;
-	} else {
-		return '';
-	}
-}
-
 /**
  * Storefront Sanitize Hex Color
  *
@@ -279,36 +223,4 @@ function storefront_sanitize_hex_color( $color ) {
 	}
 
 	return null;
-}
-
-/**
- * Returns true if a blog has more than 1 category.
- *
- * @return bool
- * @todo remove in 2.1.
- */
-function storefront_categorized_blog() {
-	_deprecated_function( 'storefront_categorized_blog', '2.0' );
-
-	if ( false === ( $all_the_cool_cats = get_transient( 'storefront_categories' ) ) ) {
-		// Create an array of all the categories that are attached to posts.
-		$all_the_cool_cats = get_categories( array(
-			'fields'     => 'ids',
-			'hide_empty' => 1,
-			// We only need to know if there is more than one category.
-			'number'     => 2,
-		) );
-
-		// Count the number of categories that are attached to the posts.
-		$all_the_cool_cats = count( $all_the_cool_cats );
-		set_transient( 'storefront_categories', $all_the_cool_cats );
-	}
-
-	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so storefront_categorized_blog should return true.
-		return true;
-	} else {
-		// This blog has only 1 category so storefront_categorized_blog should return false.
-		return false;
-	}
 }
