@@ -27,7 +27,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'customize_register',              array( $this, 'customize_register' ), 10 );
 			add_filter( 'body_class',                      array( $this, 'layout_class' ) );
 			add_action( 'wp_enqueue_scripts',              array( $this, 'add_customizer_css' ), 130 );
-			add_action( 'after_setup_theme',               array( $this, 'custom_header_setup' ) );
 			add_action( 'customize_controls_print_styles', array( $this, 'customizer_custom_control_css' ) );
 			add_action( 'customize_register',              array( $this, 'edit_default_customizer_settings' ), 99 );
 			add_action( 'init',                            array( $this, 'default_theme_mod_values' ), 10 );
@@ -110,19 +109,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		/**
 		 * Setup the WordPress core custom header feature.
 		 *
-		 * @uses storefront_header_style()
-		 * @uses storefront_admin_header_style()
-		 * @uses storefront_admin_header_image()
+		 * @deprecated 2.4.0
+		 * @return void
 		 */
 		public function custom_header_setup() {
-			add_theme_support( 'custom-header', apply_filters( 'storefront_custom_header_args', array(
-				'default-image' => '',
-				'header-text'   => false,
-				'width'         => 1950,
-				'height'        => 500,
-				'flex-width'    => true,
-				'flex-height'   => true,
-			) ) );
+			if ( function_exists( 'wc_deprecated_function' ) ) {
+				wc_deprecated_function( __FUNCTION__, '2.4.0' );
+			} else {
+				_deprecated_function( __FUNCTION__, '2.4.0' );
+			}
 		}
 
 		/**

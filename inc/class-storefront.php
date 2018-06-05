@@ -109,6 +109,18 @@ if ( ! class_exists( 'Storefront' ) ) :
 			) ) );
 
 			/**
+			 * Setup the WordPress core custom header feature.
+			 */
+			add_theme_support( 'custom-header', apply_filters( 'storefront_custom_header_args', array(
+				'default-image' => '',
+				'header-text'   => false,
+				'width'         => 1950,
+				'height'        => 500,
+				'flex-width'    => true,
+				'flex-height'   => true,
+			) ) );
+
+			/**
 			 *  Add support for the Site Logo plugin and the site logo functionality in JetPack
 			 *  https://github.com/automattic/site-logo
 			 *  http://jetpack.me/
