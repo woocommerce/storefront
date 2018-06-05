@@ -3,7 +3,7 @@
  * Storefront WooCommerce Class
  *
  * @package  storefront
- * @author   WooThemes
+ * @author   Automattic
  * @since    2.0.0
  */
 

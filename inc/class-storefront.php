@@ -2,7 +2,7 @@
 /**
  * Storefront Class
  *
- * @author   WooThemes
+ * @author   Automattic
  * @since    2.0.0
  * @package  storefront
  */
