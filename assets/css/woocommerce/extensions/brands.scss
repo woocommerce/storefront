@@ -148,24 +148,24 @@ div#brands_a_z {
 			@include span(3 of 12);
 			transition: all 0.5s ease;
 		}
-	}
 
-	h3 {
-		@include span(last 9 of 12);
-		clear: right;
-		text-transform: uppercase;
+		h3 {
+			@include span(last 9 of 12);
+			clear: right;
+			text-transform: uppercase;
 
-		&:first-of-type {
-			margin-top: 0;
+			&:first-of-type {
+				margin-top: 0;
+			}
 		}
-	}
 
-	a.top {
-		clear: right;
-	}
+		a.top {
+			clear: right;
+		}
 
-	ul.brands {
-		@include span(last 9 of 12);
-		clear: right;
+		ul.brands {
+			@include span(last 9 of 12);
+			clear: right;
+		}
 	}
 }
