@@ -28,5 +28,4 @@ config.codekit
 .DS_Store
 
 # Composer
-composer.lock
 /vendor
