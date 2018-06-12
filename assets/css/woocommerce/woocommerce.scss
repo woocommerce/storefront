@@ -254,10 +254,12 @@ table.shop_table_responsive {
 			text-align: right;
 			clear: both;
 
-			&::before {
-				content: attr(data-title) ': ';
-				font-weight: 600;
-				float: left;
+			&[data-title] {
+				&::before {
+					content: attr(data-title) ': ';
+					font-weight: 600;
+					float: left;
+				}
 			}
 
 			&.product-remove {
