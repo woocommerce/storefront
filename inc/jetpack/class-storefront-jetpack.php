@@ -3,7 +3,6 @@
  * Storefront Jetpack Class
  *
  * @package  storefront
- * @author   WooThemes
  * @since    2.0.0
  */
 

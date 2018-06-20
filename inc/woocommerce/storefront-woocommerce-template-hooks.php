@@ -6,10 +6,21 @@
  */
 
 /**
- * Styles
+ * Homepage
  *
- * @see  storefront_woocommerce_scripts()
+ * @see  storefront_product_categories()
+ * @see  storefront_recent_products()
+ * @see  storefront_featured_products()
+ * @see  storefront_popular_products()
+ * @see  storefront_on_sale_products()
+ * @see  storefront_best_selling_products()
  */
+add_action( 'homepage', 'storefront_product_categories',    20 );
+add_action( 'homepage', 'storefront_recent_products',       30 );
+add_action( 'homepage', 'storefront_featured_products',     40 );
+add_action( 'homepage', 'storefront_popular_products',      50 );
+add_action( 'homepage', 'storefront_on_sale_products',      60 );
+add_action( 'homepage', 'storefront_best_selling_products', 70 );
 
 /**
  * Layout
@@ -19,31 +30,31 @@
  * @see  woocommerce_breadcrumb()
  * @see  storefront_shop_messages()
  */
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb',                   20 );
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper',       10 );
-remove_action( 'woocommerce_after_main_content',  'woocommerce_output_content_wrapper_end',   10 );
-remove_action( 'woocommerce_sidebar',             'woocommerce_get_sidebar',                  10 );
-remove_action( 'woocommerce_after_shop_loop',     'woocommerce_pagination',                   10 );
-remove_action( 'woocommerce_before_shop_loop',    'woocommerce_result_count',                 20 );
-remove_action( 'woocommerce_before_shop_loop',    'woocommerce_catalog_ordering',             30 );
-add_action( 'woocommerce_before_main_content',    'storefront_before_content',                10 );
-add_action( 'woocommerce_after_main_content',     'storefront_after_content',                 10 );
-add_action( 'storefront_content_top',             'storefront_shop_messages',                 15 );
-add_action( 'storefront_before_content',          'woocommerce_breadcrumb',                   10 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb',                 20 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper',     10 );
+remove_action( 'woocommerce_after_main_content',  'woocommerce_output_content_wrapper_end', 10 );
+remove_action( 'woocommerce_sidebar',             'woocommerce_get_sidebar',                10 );
+remove_action( 'woocommerce_after_shop_loop',     'woocommerce_pagination',                 10 );
+remove_action( 'woocommerce_before_shop_loop',    'woocommerce_result_count',               20 );
+remove_action( 'woocommerce_before_shop_loop',    'woocommerce_catalog_ordering',           30 );
+add_action( 'woocommerce_before_main_content',    'storefront_before_content',              10 );
+add_action( 'woocommerce_after_main_content',     'storefront_after_content',               10 );
+add_action( 'storefront_content_top',             'storefront_shop_messages',               15 );
+add_action( 'storefront_before_content',          'woocommerce_breadcrumb',                 10 );
 
-add_action( 'woocommerce_after_shop_loop',        'storefront_sorting_wrapper',               9 );
-add_action( 'woocommerce_after_shop_loop',        'woocommerce_catalog_ordering',             10 );
-add_action( 'woocommerce_after_shop_loop',        'woocommerce_result_count',                 20 );
-add_action( 'woocommerce_after_shop_loop',        'woocommerce_pagination',                   30 );
-add_action( 'woocommerce_after_shop_loop',        'storefront_sorting_wrapper_close',         31 );
+add_action( 'woocommerce_after_shop_loop',        'storefront_sorting_wrapper',             9 );
+add_action( 'woocommerce_after_shop_loop',        'woocommerce_catalog_ordering',           10 );
+add_action( 'woocommerce_after_shop_loop',        'woocommerce_result_count',               20 );
+add_action( 'woocommerce_after_shop_loop',        'woocommerce_pagination',                 30 );
+add_action( 'woocommerce_after_shop_loop',        'storefront_sorting_wrapper_close',       31 );
 
-add_action( 'woocommerce_before_shop_loop',       'storefront_sorting_wrapper',               9 );
-add_action( 'woocommerce_before_shop_loop',       'woocommerce_catalog_ordering',             10 );
-add_action( 'woocommerce_before_shop_loop',       'woocommerce_result_count',                 20 );
-add_action( 'woocommerce_before_shop_loop',       'storefront_woocommerce_pagination',        30 );
-add_action( 'woocommerce_before_shop_loop',       'storefront_sorting_wrapper_close',         31 );
+add_action( 'woocommerce_before_shop_loop',       'storefront_sorting_wrapper',             9 );
+add_action( 'woocommerce_before_shop_loop',       'woocommerce_catalog_ordering',           10 );
+add_action( 'woocommerce_before_shop_loop',       'woocommerce_result_count',               20 );
+add_action( 'woocommerce_before_shop_loop',       'storefront_woocommerce_pagination',      30 );
+add_action( 'woocommerce_before_shop_loop',       'storefront_sorting_wrapper_close',       31 );
 
-add_action( 'storefront_footer',                  'storefront_handheld_footer_bar',           999 );
+add_action( 'storefront_footer',                  'storefront_handheld_footer_bar',         999 );
 
 // Legacy WooCommerce columns filter.
 if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
@@ -94,7 +105,7 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
  * @see storefront_woocommerce_brands_homepage_section()
  */
 if ( class_exists( 'WC_Brands' ) ) {
-	add_action( 'woocommerce_archive_description', 'storefront_woocommerce_brands_archive', 5 );
-	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single', 4 );
-	add_action( 'homepage', 'storefront_woocommerce_brands_homepage_section', 80 );
+	add_action( 'woocommerce_archive_description',    'storefront_woocommerce_brands_archive',          5 );
+	add_action( 'woocommerce_single_product_summary', 'storefront_woocommerce_brands_single',           4 );
+	add_action( 'homepage',                           'storefront_woocommerce_brands_homepage_section', 80 );
 }
