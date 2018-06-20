@@ -2,7 +2,6 @@
 /**
  * Storefront Plugin Install Class
  *
- * @author   WooThemes
  * @package  storefront
  * @since    2.2.0
  */

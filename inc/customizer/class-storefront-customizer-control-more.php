@@ -2,7 +2,6 @@
 /**
  * Class to create a Customizer control for displaying information
  *
- * @author   WooThemes
  * @package  storefront
  */
 

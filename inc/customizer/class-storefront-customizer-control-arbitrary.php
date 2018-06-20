@@ -2,7 +2,6 @@
 /**
  * Class to create a custom arbitrary html control for dividers etc
  *
- * @author   WooThemes
  * @package  storefront
  */
 

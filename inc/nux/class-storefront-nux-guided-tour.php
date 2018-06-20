@@ -2,7 +2,6 @@
 /**
  * Storefront NUX Guided Tour Class
  *
- * @author   WooThemes
  * @package  storefront
  * @since    2.0.0
  */
