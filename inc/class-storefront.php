@@ -2,7 +2,6 @@
 /**
  * Storefront Class
  *
- * @author   Automattic
  * @since    2.0.0
  * @package  storefront
  */

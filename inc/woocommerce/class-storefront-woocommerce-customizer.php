@@ -2,7 +2,6 @@
 /**
  * Storefront WooCommerce Customizer Class
  *
- * @author   Automattic
  * @package  storefront
  * @since    2.4.0
  */

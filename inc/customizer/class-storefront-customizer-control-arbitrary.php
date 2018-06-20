@@ -2,7 +2,6 @@
 /**
  * Class to create a custom arbitrary html control for dividers etc
  *
- * @author   Automattic
  * @package  storefront
  */
 
