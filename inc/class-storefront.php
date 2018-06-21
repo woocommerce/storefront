@@ -75,6 +75,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 				'height'      => 110,
 				'width'       => 470,
 				'flex-width'  => true,
+				'flex-height' => true,
 			) ) );
 
 			/**
