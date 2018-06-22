@@ -23,25 +23,25 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',                        array( $this, 'setup' ) );
-			add_filter( 'body_class',                               array( $this, 'woocommerce_body_class' ) );
-			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_scripts' ),	20 );
-			add_filter( 'woocommerce_enqueue_styles',               '__return_empty_array' );
+			add_action( 'after_setup_theme', array( $this, 'setup' ) );
+			add_filter( 'body_class', array( $this, 'woocommerce_body_class' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_scripts' ), 20 );
+			add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 			add_filter( 'woocommerce_output_related_products_args', array( $this, 'related_products_args' ) );
-			add_filter( 'woocommerce_product_thumbnails_columns',   array( $this, 'thumbnail_columns' ) );
-			add_filter( 'woocommerce_breadcrumb_defaults',          array( $this,'change_breadcrumb_delimiter' ) );
+			add_filter( 'woocommerce_product_thumbnails_columns', array( $this, 'thumbnail_columns' ) );
+			add_filter( 'woocommerce_breadcrumb_defaults', array( $this, 'change_breadcrumb_delimiter' ) );
 
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {
-				add_action( 'wp_footer',                            array( $this, 'star_rating_script' ) );
+				add_action( 'wp_footer', array( $this, 'star_rating_script' ) );
 			}
 
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
-				add_filter( 'loop_shop_per_page',                   array( $this, 'products_per_page' ) );
+				add_filter( 'loop_shop_per_page', array( $this, 'products_per_page' ) );
 			}
 
 			// Integrations.
-			add_action( 'wp_enqueue_scripts',                       array( $this, 'woocommerce_integrations_scripts' ), 99 );
-			add_action( 'wp_enqueue_scripts',                       array( $this, 'add_customizer_css' ), 140 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_integrations_scripts' ), 99 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'add_customizer_css' ), 140 );
 		}
 
 		/**
@@ -55,17 +55,21 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return void
 		 */
 		public function setup() {
-			add_theme_support( 'woocommerce', apply_filters( 'storefront_woocommerce_args', array(
-				'single_image_width'    => 416,
-				'thumbnail_image_width' => 324,
-				'product_grid'          => array(
-					'default_columns' => 3,
-					'default_rows'    => 4,
-					'min_columns'     => 1,
-					'max_columns'     => 6,
-					'min_rows'        => 1
+			add_theme_support(
+				'woocommerce', apply_filters(
+					'storefront_woocommerce_args', array(
+						'single_image_width'    => 416,
+						'thumbnail_image_width' => 324,
+						'product_grid'          => array(
+							'default_columns' => 3,
+							'default_rows'    => 4,
+							'min_columns'     => 1,
+							'max_columns'     => 6,
+							'min_rows'        => 1,
+						),
+					)
 				)
-			) ) );
+			);
 
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
@@ -107,8 +111,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		public function woocommerce_body_class( $classes ) {
 			$classes[] = 'woocommerce-active';
 
-			// Remove `no-wc-breadcrumb` body class
-			if ( false !== $key = array_search( 'no-wc-breadcrumb', $classes ) ) {
+			// Remove `no-wc-breadcrumb` body class.
+			$key = array_search( 'no-wc-breadcrumb', $classes );
+
+			if ( false !== $key ) {
 				unset( $classes[ $key ] );
 			}
 
@@ -148,7 +154,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function star_rating_script() {
 			if ( is_product() ) {
-		?>
+				?>
 			<script type="text/javascript">
 				var starsEl = document.querySelector( '#respond p.stars' );
 				if ( starsEl ) {
@@ -159,7 +165,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 					} );
 				}
 			</script>
-		<?php
+				<?php
 			}
 		}
 
@@ -171,10 +177,12 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return  array $args related products args
 		 */
 		public function related_products_args( $args ) {
-			$args = apply_filters( 'storefront_related_products_args', array(
-				'posts_per_page' => 3,
-				'columns'        => 3,
-			) );
+			$args = apply_filters(
+				'storefront_related_products_args', array(
+					'posts_per_page' => 3,
+					'columns'        => 3,
+				)
+			);
 
 			return $args;
 		}
@@ -217,8 +225,9 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 		/**
 		 * Remove the breadcrumb delimiter
-		 * @param  array $defaults The breadcrumb defaults
-		 * @return array           The breadcrumb defaults
+		 *
+		 * @param  array $defaults The breadcrumb defaults.
+		 * @return array           The breadcrumb defaults.
 		 * @since 2.2.0
 		 */
 		public function change_breadcrumb_delimiter( $defaults ) {
@@ -386,10 +395,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			$storefront_customizer = new Storefront_Customizer();
 			$storefront_theme_mods = $storefront_customizer->get_storefront_theme_mods();
 
-			$woocommerce_extension_style 				= '';
+			$woocommerce_extension_style                = '';
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-				$woocommerce_extension_style 					.= '
+				$woocommerce_extension_style                    .= '
 				.wc-bookings-date-picker .ui-datepicker td.bookable a {
 					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
 				}
@@ -405,7 +414,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-				$woocommerce_extension_style 					.= '
+				$woocommerce_extension_style                    .= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
 					background-color: ' . $storefront_theme_mods['text_color'] . ' !important;
@@ -431,7 +440,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-				$woocommerce_extension_style 					.= '
+				$woocommerce_extension_style                    .= '
 				.coupon-container {
 					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
 				}

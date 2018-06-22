@@ -21,13 +21,15 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php get_template_part( 'loop' );
+			<?php
+			get_template_part( 'loop' );
 
 		else :
 
 			get_template_part( 'content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

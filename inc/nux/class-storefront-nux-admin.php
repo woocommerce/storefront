@@ -22,12 +22,12 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2.0
 		 */
 		public function __construct() {
-			add_action( 'admin_enqueue_scripts',                   array( $this, 'enqueue_scripts' ) );
-			add_action( 'admin_notices',                           array( $this, 'admin_notices' ), 99 );
-			add_action( 'wp_ajax_storefront_dismiss_notice',       array( $this, 'dismiss_nux' ) );
-			add_action( 'admin_post_storefront_starter_content',   array( $this, 'redirect_customizer' ) );
-			add_action( 'init',                                    array( $this, 'log_fresh_site_state' ) );
-			add_filter( 'admin_body_class',                        array( $this, 'admin_body_class' ) );
+			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+			add_action( 'admin_notices', array( $this, 'admin_notices' ), 99 );
+			add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
+			add_action( 'admin_post_storefront_starter_content', array( $this, 'redirect_customizer' ) );
+			add_action( 'init', array( $this, 'log_fresh_site_state' ) );
+			add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
 		}
 
 		/**
@@ -49,7 +49,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			wp_enqueue_script( 'storefront-admin-nux', get_template_directory_uri() . '/assets/js/admin/admin' . $suffix . '.js', array( 'jquery' ), $storefront_version, 'all' );
 
 			$storefront_nux = array(
-				'nonce' => wp_create_nonce( 'storefront_notice_dismiss' )
+				'nonce' => wp_create_nonce( 'storefront_notice_dismiss' ),
 			);
 
 			wp_localize_script( 'storefront-admin-nux', 'storefrontNUX', $storefront_nux );
@@ -93,7 +93,8 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 						echo esc_attr__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'storefront' );
 					} else {
 						echo esc_attr__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'storefront' );
-					} ?>
+					}
+					?>
 					</p>
 					<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
 						<input type="hidden" name="action" value="storefront_starter_content">
@@ -111,11 +112,11 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 							<label>
 								<input type="checkbox" name="homepage" checked>
 								<?php
-									if ( 'page' === get_option( 'show_on_front' ) ) {
-										esc_attr_e( 'Apply the Storefront homepage template', 'storefront' );
-									} else {
-										esc_attr_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
-									}
+								if ( 'page' === get_option( 'show_on_front' ) ) {
+									esc_attr_e( 'Apply the Storefront homepage template', 'storefront' );
+								} else {
+									esc_attr_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
+								}
 								?>
 							</label>
 
@@ -132,7 +133,8 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				<?php endif; ?>
 				</div>
 			</div>
-		<?php }
+			<?php
+		}
 
 		/**
 		 * AJAX dismiss notice.
@@ -140,9 +142,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2.0
 		 */
 		public function dismiss_nux() {
-			$nonce = ! empty( $_POST['nonce'] ) ? $_POST['nonce'] : false;
-
-			if ( ! $nonce || ! wp_verify_nonce( $nonce, 'storefront_notice_dismiss' ) || ! current_user_can( 'manage_options' ) ) {
+			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'storefront_notice_dismiss' ) || ! current_user_can( 'manage_options' ) ) {
 				die();
 			}
 
@@ -209,13 +209,15 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		public static function get_woocommerce_pages() {
 			$woocommerce_pages = array();
 
-			$wc_pages_options = apply_filters( 'storefront_page_option_names', array(
-				'woocommerce_cart_page_id',
-				'woocommerce_checkout_page_id',
-				'woocommerce_myaccount_page_id',
-				'woocommerce_shop_page_id',
-				'woocommerce_terms_page_id'
-			) );
+			$wc_pages_options = apply_filters(
+				'storefront_page_option_names', array(
+					'woocommerce_cart_page_id',
+					'woocommerce_checkout_page_id',
+					'woocommerce_myaccount_page_id',
+					'woocommerce_shop_page_id',
+					'woocommerce_terms_page_id',
+				)
+			);
 
 			foreach ( $wc_pages_options as $option ) {
 				$page_id = get_option( $option );
@@ -272,10 +274,14 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				if ( ! empty( $plugins ) ) {
 					$keys        = array_keys( $plugins );
 					$plugin_file = 'woocommerce/' . $keys[0];
-					$url         = wp_nonce_url( add_query_arg( array(
-						'action' => 'activate',
-						'plugin' => $plugin_file
-					), admin_url( 'plugins.php' ) ), 'activate-plugin_' . $plugin_file );
+					$url         = wp_nonce_url(
+						add_query_arg(
+							array(
+								'action' => 'activate',
+								'plugin' => $plugin_file,
+							), admin_url( 'plugins.php' )
+						), 'activate-plugin_' . $plugin_file
+					);
 
 					return $url;
 				}
@@ -301,9 +307,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * Given a page id assign a given page template to it.
 		 *
 		 * @since 2.2.0
-		 * @param int $page_id
-		 * @param string $template
-		 * @return void
+		 * @param int    $page_id  Page id.
+		 * @param string $template Template file name.
+		 * @return void|bool Returns false if $page_id or $template is empty.
 		 */
 		private function _assign_page_template( $page_id, $template ) {
 			if ( empty( $page_id ) || empty( $template ) || '' === locate_template( $template ) ) {

@@ -37,7 +37,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			$add_below = 'div-comment';
 		}
 		?>
-		<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ) ?> id="comment-<?php comment_ID() ?>">
+		<<?php echo esc_attr( $tag ); ?> <?php comment_class( empty( $args['has_children'] ) ? '' : 'parent' ); ?> id="comment-<?php comment_ID(); ?>">
 		<div class="comment-body">
 		<div class="comment-meta commentmetadata">
 			<div class="comment-author vcard">
@@ -54,20 +54,30 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			</a>
 		</div>
 		<?php if ( 'div' != $args['style'] ) : ?>
-		<div id="div-comment-<?php comment_ID() ?>" class="comment-content">
+		<div id="div-comment-<?php comment_ID(); ?>" class="comment-content">
 		<?php endif; ?>
 		<div class="comment-text">
 		<?php comment_text(); ?>
 		</div>
 		<div class="reply">
-		<?php comment_reply_link( array_merge( $args, array( 'add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+		<?php
+		comment_reply_link(
+			array_merge(
+				$args, array(
+					'add_below' => $add_below,
+					'depth' => $depth,
+					'max_depth' => $args['max_depth'],
+				)
+			)
+		);
+		?>
 		<?php edit_comment_link( __( 'Edit', 'storefront' ), '  ', '' ); ?>
 		</div>
 		</div>
 		<?php if ( 'div' != $args['style'] ) : ?>
 		</div>
 		<?php endif; ?>
-	<?php
+		<?php
 	}
 }
 
@@ -86,30 +96,36 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 
 			// Defines the number of active columns in this footer row.
 			for ( $region = $regions; 0 < $region; $region-- ) {
-				if ( is_active_sidebar( 'footer-' . strval( $region + $regions * ( $row - 1 ) ) ) ) {
+				if ( is_active_sidebar( 'footer-' . esc_attr( $region + $regions * ( $row - 1 ) ) ) ) {
 					$columns = $region;
 					break;
 				}
 			}
 
-			if ( isset( $columns ) ) : ?>
-				<div class=<?php echo '"footer-widgets row-' . strval( $row ) . ' col-' . strval( $columns ) . ' fix"'; ?>><?php
+			if ( isset( $columns ) ) :
+				?>
+				<div class=<?php echo '"footer-widgets row-' . esc_attr( $row ) . ' col-' . esc_attr( $columns ) . ' fix"'; ?>>
+									  <?php
 
-					for ( $column = 1; $column <= $columns; $column++ ) :
-						$footer_n = $column + $regions * ( $row - 1 );
+										for ( $column = 1; $column <= $columns; $column++ ) :
+											$footer_n = $column + $regions * ( $row - 1 );
 
-						if ( is_active_sidebar( 'footer-' . strval( $footer_n ) ) ) : ?>
+											if ( is_active_sidebar( 'footer-' . esc_attr( $footer_n ) ) ) :
+												?>
 
-							<div class="block footer-widget-<?php echo strval( $column ); ?>">
-								<?php dynamic_sidebar( 'footer-' . strval( $footer_n ) ); ?>
-							</div><?php
+							<div class="block footer-widget-<?php echo esc_attr( $column ); ?>">
+												<?php dynamic_sidebar( 'footer-' . esc_attr( $footer_n ) ); ?>
+							</div>
+												<?php
 
-						endif;
-					endfor; ?>
+												endif;
+					endfor;
+										?>
 
-				</div><!-- .footer-widgets.row-<?php echo strval( $row ); ?> --><?php
+				</div><!-- .footer-widgets.row-<?php echo esc_attr( $row ); ?> -->
+														  <?php
 
-				unset( $columns );
+															unset( $columns );
 			endif;
 		endfor;
 	}
@@ -128,12 +144,12 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
 			<?php if ( apply_filters( 'storefront_credit_link', true ) ) { ?>
 			<br />
-			<?php
+				<?php
 				if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
 					the_privacy_policy_link( '', '<span role="separator" aria-hidden="true"></span>' );
 				}
-			?>
-			<?php echo '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.' ?>
+				?>
+				<?php echo '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.'; ?>
 			<?php } ?>
 		</div><!-- .site-info -->
 		<?php
@@ -148,13 +164,13 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	 */
 	function storefront_header_widget_region() {
 		if ( is_active_sidebar( 'header-1' ) ) {
-		?>
+			?>
 		<div class="header-widget-region" role="complementary">
 			<div class="col-full">
 				<?php dynamic_sidebar( 'header-1' ); ?>
 			</div>
 		</div>
-		<?php
+			<?php
 		}
 	}
 }
@@ -190,10 +206,11 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 		} elseif ( function_exists( 'jetpack_has_site_logo' ) && jetpack_has_site_logo() ) {
 			// Copied from jetpack_the_site_logo() function.
 			$logo    = site_logo()->logo;
-			$logo_id = get_theme_mod( 'custom_logo' ); // Check for WP 4.5 Site Logo
+			$logo_id = get_theme_mod( 'custom_logo' ); // Check for WP 4.5 Site Logo.
 			$logo_id = $logo_id ? $logo_id : $logo['id']; // Use WP Core logo if present, otherwise use Jetpack's.
 			$size    = site_logo()->theme_size();
-			$html    = sprintf( '<a href="%1$s" class="site-logo-link" rel="home" itemprop="url">%2$s</a>',
+			$html    = sprintf(
+				'<a href="%1$s" class="site-logo-link" rel="home" itemprop="url">%2$s</a>',
 				esc_url( home_url( '/' ) ),
 				wp_get_attachment_image(
 					$logo_id,
@@ -202,7 +219,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 					array(
 						'class'     => 'site-logo attachment-' . $size,
 						'data-size' => $size,
-						'itemprop'  => 'logo'
+						'itemprop'  => 'logo',
 					)
 				)
 			);
@@ -211,7 +228,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 		} else {
 			$tag = is_home() ? 'h1' : 'div';
 
-			$html = '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) .'>';
+			$html = '<' . esc_attr( $tag ) . ' class="beta site-title"><a href="' . esc_url( home_url( '/' ) ) . '" rel="home">' . esc_html( get_bloginfo( 'name' ) ) . '</a></' . esc_attr( $tag ) . '>';
 
 			if ( '' !== get_bloginfo( 'description' ) ) {
 				$html .= '<p class="site-description">' . esc_html( get_bloginfo( 'description', 'display' ) ) . '</p>';
@@ -222,7 +239,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 			return $html;
 		}
 
-		echo $html;
+		echo $html; // WPCS: XSS ok.
 	}
 }
 
@@ -240,16 +257,16 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location'	=> 'primary',
-					'container_class'	=> 'primary-navigation',
-					)
+					'theme_location'    => 'primary',
+					'container_class'   => 'primary-navigation',
+				)
 			);
 
 			wp_nav_menu(
 				array(
-					'theme_location'	=> 'handheld',
-					'container_class'	=> 'handheld-navigation',
-					)
+					'theme_location'    => 'handheld',
+					'container_class'   => 'handheld-navigation',
+				)
 			);
 			?>
 		</nav><!-- #site-navigation -->
@@ -265,19 +282,19 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	 * @return void
 	 */
 	function storefront_secondary_navigation() {
-	    if ( has_nav_menu( 'secondary' ) ) {
-		    ?>
-		    <nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
-			    <?php
-				    wp_nav_menu(
-					    array(
-						    'theme_location'	=> 'secondary',
-						    'fallback_cb'		=> '',
-					    )
-				    );
-			    ?>
-		    </nav><!-- #site-navigation -->
-		    <?php
+		if ( has_nav_menu( 'secondary' ) ) {
+			?>
+			<nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
+				<?php
+					wp_nav_menu(
+						array(
+							'theme_location'    => 'secondary',
+							'fallback_cb'       => '',
+						)
+					);
+				?>
+			</nav><!-- #site-navigation -->
+			<?php
 		}
 	}
 }
@@ -344,10 +361,12 @@ if ( ! function_exists( 'storefront_page_content' ) ) {
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php
-				wp_link_pages( array(
-					'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
-					'after'  => '</div>',
-				) );
+				wp_link_pages(
+					array(
+						'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+						'after'  => '</div>',
+					)
+				);
 			?>
 		</div><!-- .entry-content -->
 		<?php
@@ -400,6 +419,7 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 
 		the_content(
 			sprintf(
+				/* translators: %s: post title */
 				__( 'Continue reading %s', 'storefront' ),
 				'<span class="screen-reader-text">' . get_the_title() . '</span>'
 			)
@@ -407,10 +427,12 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 
 		do_action( 'storefront_post_content_after' );
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
-			'after'  => '</div>',
-		) );
+		wp_link_pages(
+			array(
+				'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
+				'after'  => '</div>',
+			)
+		);
 		?>
 		</div><!-- .entry-content -->
 		<?php
@@ -426,9 +448,10 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	function storefront_post_meta() {
 		?>
 		<aside class="entry-meta">
-			<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search.
+			<?php
+			if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search.
 
-			?>
+				?>
 			<div class="vcard author">
 				<?php
 					echo get_avatar( get_the_author_meta( 'ID' ), 128 );
@@ -436,31 +459,33 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 					echo sprintf( '<a href="%1$s" class="url fn" rel="author">%2$s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
 				?>
 			</div>
-			<?php
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+				<?php
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
-			if ( $categories_list ) : ?>
+				if ( $categories_list ) :
+					?>
 				<div class="cat-links">
-					<?php
-					echo '<div class="label">' . esc_attr( __( 'Posted in', 'storefront' ) ) . '</div>';
-					echo wp_kses_post( $categories_list );
-					?>
+						<?php
+						echo '<div class="label">' . esc_attr( __( 'Posted in', 'storefront' ) ) . '</div>';
+						echo wp_kses_post( $categories_list );
+						?>
 				</div>
-			<?php endif; // End if categories. ?>
+				<?php endif; // End if categories. ?>
 
-			<?php
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
+				<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
 
-			if ( $tags_list ) : ?>
+				if ( $tags_list ) :
+					?>
 				<div class="tags-links">
-					<?php
-					echo '<div class="label">' . esc_attr( __( 'Tagged', 'storefront' ) ) . '</div>';
-					echo wp_kses_post( $tags_list );
-					?>
+						<?php
+						echo '<div class="label">' . esc_attr( __( 'Tagged', 'storefront' ) ) . '</div>';
+						echo wp_kses_post( $tags_list );
+						?>
 				</div>
-			<?php endif; // End if $tags_list. ?>
+				<?php endif; // End if $tags_list. ?>
 
 		<?php endif; // End if 'post' == get_post_type(). ?>
 
@@ -483,10 +508,10 @@ if ( ! function_exists( 'storefront_paging_nav' ) ) {
 		global $wp_query;
 
 		$args = array(
-			'type' 	    => 'list',
+			'type'      => 'list',
 			'next_text' => _x( 'Next', 'Next post', 'storefront' ),
 			'prev_text' => _x( 'Previous', 'Previous post', 'storefront' ),
-			);
+		);
 
 		the_posts_pagination( $args );
 	}
@@ -500,7 +525,7 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 		$args = array(
 			'next_text' => '<span class="screen-reader-text">' . esc_html__( 'Next post:', 'storefront' ) . ' </span>%title',
 			'prev_text' => '<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'storefront' ) . ' </span>%title',
-			);
+		);
 		the_post_navigation( $args );
 	}
 }
@@ -515,7 +540,8 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
 		}
 
-		$time_string = sprintf( $time_string,
+		$time_string = sprintf(
+			$time_string,
 			esc_attr( get_the_date( 'c' ) ),
 			esc_html( get_the_date() ),
 			esc_attr( get_the_modified_date( 'c' ) ),
@@ -523,24 +549,27 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 		);
 
 		$posted_on = sprintf(
+			/* translators: %s: post date */
 			_x( 'Posted on %s', 'post date', 'storefront' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
-		echo wp_kses( apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
-			'span' => array(
-				'class'  => array(),
-			),
-			'a'    => array(
-				'href'  => array(),
-				'title' => array(),
-				'rel'   => array(),
-			),
-			'time' => array(
-				'datetime' => array(),
-				'class'    => array(),
-			),
-		) );
+		echo wp_kses(
+			apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
+				'span' => array(
+					'class'  => array(),
+				),
+				'a'    => array(
+					'href'  => array(),
+					'title' => array(),
+					'rel'   => array(),
+				),
+				'time' => array(
+					'datetime' => array(),
+					'class'    => array(),
+				),
+			)
+		);
 	}
 }
 
