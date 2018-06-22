@@ -67,7 +67,7 @@ get_header(); ?>
 								)
 							);
 
-							echo wp_kses_post( $shortcode_content );
+							echo $shortcode_content; // WPCS: XSS ok.
 
 						echo '</section>';
 					}
