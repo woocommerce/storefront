@@ -22,15 +22,15 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @since 2.2.0
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',                    array( $this, 'starter_content' ) );
-			add_filter( 'get_theme_starter_content',            array( $this, 'filter_start_content' ), 10, 2 );
-			add_action( 'woocommerce_product_query',            array( $this, 'wc_query' ) );
+			add_action( 'after_setup_theme', array( $this, 'starter_content' ) );
+			add_filter( 'get_theme_starter_content', array( $this, 'filter_start_content' ), 10, 2 );
+			add_action( 'woocommerce_product_query', array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
-			add_action( 'customize_preview_init',               array( $this, 'add_product_tax' ), 10 );
-			add_action( 'customize_preview_init',               array( $this, 'set_product_data' ), 10 );
-			add_action( 'after_setup_theme',                    array( $this, 'remove_default_widgets' ) );
-			add_action( 'transition_post_status',               array( $this, 'transition_post_status' ), 10, 3 );
-			add_filter( 'the_title',                            array( $this, 'filter_auto_draft_title' ) , 10, 2 );
+			add_action( 'customize_preview_init', array( $this, 'add_product_tax' ), 10 );
+			add_action( 'customize_preview_init', array( $this, 'set_product_data' ), 10 );
+			add_action( 'after_setup_theme', array( $this, 'remove_default_widgets' ) );
+			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
+			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
 		}
 
 		/**
@@ -57,6 +57,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				'posts' => array(
 					'home' => array(
 						'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
+						/* translators: %s: 'End Of Line' symbol */
 						'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
 						'template'     => 'template-homepage.php',
 						'thumbnail'    => '{{hero-image}}',
@@ -71,7 +72,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'post_title' => __( 'Contact', 'storefront' ),
 						'post_content' => __( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'storefront' ),
 					),
-					'blog'
+					'blog',
 				),
 				'attachments' => array(
 					'beanie-image' => array(
@@ -146,10 +147,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				),
 				'widgets' => array(
 					'footer-1' => array(
-						'text_about'
+						'text_about',
 					),
 					'footer-2' => array(
-						'text_business_info'
+						'text_business_info',
 					),
 				),
 				'nav_menus' => array(
@@ -249,8 +250,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			$tasks = array();
 
-			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( $_GET['sf_tasks'] ) ) {
-				$tasks = explode( ',', sanitize_text_field( $_GET['sf_tasks'] ) );
+			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) {
+				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) );
 			}
 
 			$tasks = $this->_validate_tasks( $tasks );
@@ -347,14 +348,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			$query_args['post__in'] = array();
 
-			// Add existing products to query
+			// Add existing products to query.
 			$existing_products = $this->_get_existing_wc_products();
 
 			if ( ! empty( $existing_products ) ) {
 				$query_args['post__in'] = array_merge( $query_args['post__in'], $existing_products );
 			}
 
-			// Add starter content to query
+			// Add starter content to query.
 			$created_products = $this->_get_created_starter_content_products();
 
 			if ( false !== $created_products ) {
@@ -490,32 +491,32 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 					$product_data = $starter_products[ $post_name ]['product_data'];
 
-					// Set visibility
+					// Set visibility.
 					$product->set_catalog_visibility( 'visible' );
 
-					// Set regular price
+					// Set regular price.
 					if ( ! empty( $product_data['regular_price'] ) ) {
 						$product->set_regular_price( floatval( $product_data['regular_price'] ) );
 					}
 
-					// Set price
+					// Set price.
 					if ( ! empty( $product_data['price'] ) ) {
 						$product->set_price( floatval( $product_data['price'] ) );
 					}
 
-					// Set sale price
+					// Set sale price.
 					if ( ! empty( $product_data['sale_price'] ) ) {
 						$product->set_sale_price( floatval( $product_data['sale_price'] ) );
 					}
 
-					// Set featured
+					// Set featured.
 					if ( ! empty( $product_data['featured'] ) ) {
 						$product->set_featured( true );
 					} else {
 						$product->set_featured( false );
 					}
 
-					// Save
+					// Save.
 					$product->save();
 				}
 			}
@@ -530,7 +531,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		public function filter_sf_categories( $args ) {
 			// Get Categories.
-			$product_cats = get_terms( 'product_cat', array( 'fields' => 'ids', 'hide_empty' => false ) );
+			$product_cats = get_terms(
+				'product_cat', array(
+					'fields' => 'ids',
+					'hide_empty' => false,
+				)
+			);
 
 			if ( ! empty( $product_cats ) ) {
 
@@ -549,9 +555,9 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Here we change the title back when the post status changes.
 		 *
 		 * @since 2.2.0
-		 * @param string $new_status
-		 * @param string $old_status
-		 * @param object $post
+		 * @param string  $new_status New status.
+		 * @param string  $old_status Old status.
+		 * @param WP_Post $post       Post data.
 		 */
 		public function transition_post_status( $new_status, $old_status, $post ) {
 			if ( 'publish' === $new_status && 'auto-draft' === $old_status && in_array( $post->post_type, array( 'product' ) ) ) {
@@ -562,7 +568,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				if ( $post_name && array_key_exists( $post_name, $starter_products ) ) {
 					$update_product = array(
 						'ID'         => $post->ID,
-						'post_title' => $starter_products[ $post_name ]['post_title']
+						'post_title' => $starter_products[ $post_name ]['post_title'],
 					);
 
 					wp_update_post( $update_product );
@@ -575,8 +581,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Here we filter the title and display the correct one instead.
 		 *
 		 * @since 2.2.0
-		 * @param string $title
-		 * @param int $post_id
+		 * @param string $title   Post title.
+		 * @param int    $post_id Post id.
 		 */
 		public function filter_auto_draft_title( $title, $post_id = null ) {
 			if ( ! $post_id ) {
@@ -614,7 +620,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$tshirts_description     = esc_attr__( 'A short category description', 'storefront' );
 
 			$products = array(
-				// Accessories
+				// Accessories.
 				'beanie' => array(
 					'post_title'     => esc_attr__( 'Beanie', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',

@@ -23,14 +23,14 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * @since 1.0
 		 */
 		public function __construct() {
-			add_action( 'after_setup_theme',          array( $this, 'setup' ) );
-			add_action( 'widgets_init',               array( $this, 'widgets_init' ) );
-			add_action( 'wp_enqueue_scripts',         array( $this, 'scripts' ),       10 );
-			add_action( 'wp_enqueue_scripts',         array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
-			add_filter( 'body_class',                 array( $this, 'body_classes' ) );
-			add_filter( 'wp_page_menu_args',          array( $this, 'page_menu_args' ) );
+			add_action( 'after_setup_theme', array( $this, 'setup' ) );
+			add_action( 'widgets_init', array( $this, 'widgets_init' ) );
+			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
+			add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_filter( 'body_class', array( $this, 'body_classes' ) );
+			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
-			add_action( 'enqueue_embed_scripts',      array( $this, 'print_embed_styles' ) );
+			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
 		}
 
 		/**
@@ -71,63 +71,87 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Enable support for site logo.
 			 */
-			add_theme_support( 'custom-logo', apply_filters( 'storefront_custom_logo_args', array(
-				'height'      => 110,
-				'width'       => 470,
-				'flex-width'  => true,
-				'flex-height' => true,
-			) ) );
+			add_theme_support(
+				'custom-logo', apply_filters(
+					'storefront_custom_logo_args', array(
+						'height'      => 110,
+						'width'       => 470,
+						'flex-width'  => true,
+						'flex-height' => true,
+					)
+				)
+			);
 
 			/**
 			 * Register menu locations.
 			 */
-			register_nav_menus( apply_filters( 'storefront_register_nav_menus', array(
-				'primary'   => __( 'Primary Menu', 'storefront' ),
-				'secondary' => __( 'Secondary Menu', 'storefront' ),
-				'handheld'  => __( 'Handheld Menu', 'storefront' ),
-			) ) );
+			register_nav_menus(
+				apply_filters(
+					'storefront_register_nav_menus', array(
+						'primary'   => __( 'Primary Menu', 'storefront' ),
+						'secondary' => __( 'Secondary Menu', 'storefront' ),
+						'handheld'  => __( 'Handheld Menu', 'storefront' ),
+					)
+				)
+			);
 
 			/*
 			 * Switch default core markup for search form, comment form, comments, galleries, captions and widgets
 			 * to output valid HTML5.
 			 */
-			add_theme_support( 'html5', apply_filters( 'storefront_html5_args', array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-				'widgets',
-			) ) );
+			add_theme_support(
+				'html5', apply_filters(
+					'storefront_html5_args', array(
+						'search-form',
+						'comment-form',
+						'comment-list',
+						'gallery',
+						'caption',
+						'widgets',
+					)
+				)
+			);
 
 			/**
 			 * Setup the WordPress core custom background feature.
 			 */
-			add_theme_support( 'custom-background', apply_filters( 'storefront_custom_background_args', array(
-				'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
-				'default-image' => '',
-			) ) );
+			add_theme_support(
+				'custom-background', apply_filters(
+					'storefront_custom_background_args', array(
+						'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
+						'default-image' => '',
+					)
+				)
+			);
 
 			/**
 			 * Setup the WordPress core custom header feature.
 			 */
-			add_theme_support( 'custom-header', apply_filters( 'storefront_custom_header_args', array(
-				'default-image' => '',
-				'header-text'   => false,
-				'width'         => 1950,
-				'height'        => 500,
-				'flex-width'    => true,
-				'flex-height'   => true,
-			) ) );
+			add_theme_support(
+				'custom-header', apply_filters(
+					'storefront_custom_header_args', array(
+						'default-image' => '',
+						'header-text'   => false,
+						'width'         => 1950,
+						'height'        => 500,
+						'flex-width'    => true,
+						'flex-height'   => true,
+					)
+				)
+			);
 
 			/**
 			 *  Add support for the Site Logo plugin and the site logo functionality in JetPack
 			 *  https://github.com/automattic/site-logo
 			 *  http://jetpack.me/
 			 */
-			add_theme_support( 'site-logo', apply_filters( 'storefront_site_logo_args', array(
-				'size' => 'full'
-			) ) );
+			add_theme_support(
+				'site-logo', apply_filters(
+					'storefront_site_logo_args', array(
+						'size' => 'full',
+					)
+				)
+			);
 
 			/**
 			 * Declare support for title theme feature.
@@ -149,7 +173,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			$sidebar_args['sidebar'] = array(
 				'name'          => __( 'Sidebar', 'storefront' ),
 				'id'            => 'sidebar-1',
-				'description'   => ''
+				'description'   => '',
 			);
 
 			$sidebar_args['header'] = array(
@@ -167,10 +191,16 @@ if ( ! class_exists( 'Storefront' ) ) :
 					$footer   = sprintf( 'footer_%d', $footer_n );
 
 					if ( 1 == $rows ) {
+						/* translators: 1: column number */
 						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront' ), $region );
+
+						/* translators: 1: column number */
 						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of the footer.', 'storefront' ), $region );
 					} else {
+						/* translators: 1: row number, 2: column number */
 						$footer_region_name = sprintf( __( 'Footer Row %1$d - Column %2$d', 'storefront' ), $row, $region );
+
+						/* translators: 1: column number, 2: row number */
 						$footer_region_description = sprintf( __( 'Widgets added here will appear in column %1$d of footer row %2$d.', 'storefront' ), $region, $row );
 					}
 
@@ -232,9 +262,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Fonts
 			 */
-			$google_fonts = apply_filters( 'storefront_google_font_families', array(
-				'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
-			) );
+			$google_fonts = apply_filters(
+				'storefront_google_font_families', array(
+					'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
+				)
+			);
 
 			$query_args = array(
 				'family' => implode( '|', $google_fonts ),

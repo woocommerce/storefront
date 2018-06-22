@@ -27,7 +27,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			add_action( 'customize_register', array( $this, 'customize_register' ), 10 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'add_customizer_css' ), 130 );
 			add_action( 'customize_register', array( $this, 'edit_default_customizer_settings' ), 99 );
-			add_action( 'init',               array( $this, 'default_theme_mod_values' ), 10 );
+			add_action( 'init', array( $this, 'default_theme_mod_values' ), 10 );
 		}
 
 		/**
@@ -37,10 +37,12 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 		 * @return array
 		 */
 		public static function get_storefront_default_setting_values() {
-			return apply_filters( 'storefront_woocommerce_setting_default_values', $args = array(
-				'storefront_sticky_add_to_cart' => true,
-				'storefront_product_pagination' => true,
-			) );
+			return apply_filters(
+				'storefront_woocommerce_setting_default_values', $args = array(
+					'storefront_sticky_add_to_cart' => true,
+					'storefront_product_pagination' => true,
+				)
+			);
 		}
 
 		/**
@@ -54,36 +56,46 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			/**
 			 * Product Page
 			 */
-			$wp_customize->add_section( 'storefront_single_product_page' , array(
-				'title'                 => __( 'Product Page', 'storefront' ),
-				'priority'              => 60,
-			) );
+			$wp_customize->add_section(
+				'storefront_single_product_page', array(
+					'title'                 => __( 'Product Page', 'storefront' ),
+					'priority'              => 60,
+				)
+			);
 
-			$wp_customize->add_setting( 'storefront_product_pagination', array(
-				'default'               => apply_filters( 'storefront_default_product_pagination', true ),
-				'sanitize_callback'     => 'wp_validate_boolean',
-			) );
+			$wp_customize->add_setting(
+				'storefront_product_pagination', array(
+					'default'               => apply_filters( 'storefront_default_product_pagination', true ),
+					'sanitize_callback'     => 'wp_validate_boolean',
+				)
+			);
 
-			$wp_customize->add_setting( 'storefront_sticky_add_to_cart', array(
-				'default'               => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
-				'sanitize_callback'     => 'wp_validate_boolean',
-			) );
+			$wp_customize->add_setting(
+				'storefront_sticky_add_to_cart', array(
+					'default'               => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
+					'sanitize_callback'     => 'wp_validate_boolean',
+				)
+			);
 
-			$wp_customize->add_control( 'storefront_sticky_add_to_cart', array(
-				'type'                  => 'checkbox',
-				'section'               => 'storefront_single_product_page',
-				'label'                 => __( 'Sticky Add-To-Cart', 'storefront' ),
-				'description'           => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'storefront' ),
-				'priority' 				=> 10,
-			) );
+			$wp_customize->add_control(
+				'storefront_sticky_add_to_cart', array(
+					'type'                  => 'checkbox',
+					'section'               => 'storefront_single_product_page',
+					'label'                 => __( 'Sticky Add-To-Cart', 'storefront' ),
+					'description'           => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'storefront' ),
+					'priority'              => 10,
+				)
+			);
 
-			$wp_customize->add_control( 'storefront_product_pagination', array(
-				'type'                  => 'checkbox',
-				'section'               => 'storefront_single_product_page',
-				'label'                 => __( 'Product Pagination', 'storefront' ),
-				'description'           => __( 'Displays next and previous links on product pages. A product thumbnail is displayed with the title revealed on hover.', 'storefront' ),
-				'priority' 				=> 20,
-			) );
+			$wp_customize->add_control(
+				'storefront_product_pagination', array(
+					'type'                  => 'checkbox',
+					'section'               => 'storefront_single_product_page',
+					'label'                 => __( 'Product Pagination', 'storefront' ),
+					'description'           => __( 'Displays next and previous links on product pages. A product thumbnail is displayed with the title revealed on hover.', 'storefront' ),
+					'priority'              => 20,
+				)
+			);
 		}
 
 		/**
