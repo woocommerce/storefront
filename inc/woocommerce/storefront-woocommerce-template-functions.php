@@ -709,11 +709,13 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 		}
 
 		// Show only products in the same category?
-		$same_category = apply_filters( 'storefront_single_product_pagination_same_category', false );
+		$in_same_term   = apply_filters( 'storefront_single_product_pagination_same_category', false );
+		$excluded_terms = apply_filters( 'storefront_single_product_pagination_excluded_terms', '' );
+		$taxonomy       = apply_filters( 'storefront_single_product_pagination_taxonomy', 'product_cat' );
 
 		// Get previous and next products.
-		$previous_product = get_previous_post( $same_category );
-		$next_product     = get_next_post( $same_category );
+		$previous_product = get_previous_post( $in_same_term, $excluded_terms, $taxonomy );
+		$next_product     = get_next_post( $in_same_term, $excluded_terms, $taxonomy );
 
 		if ( ! $previous_product && ! $next_product ) {
 			return;
