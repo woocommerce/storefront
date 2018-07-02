@@ -316,6 +316,7 @@ module.exports = function( grunt ) {
 					'.htaccess',
 					'!Gruntfile.js',
 					'!package.json',
+					'!package-lock.json',
 					'!node_modules/**',
 					'!.DS_Store',
 					'!npm-debug.log',
