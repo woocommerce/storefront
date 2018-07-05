@@ -141,4 +141,18 @@
 			}
 		}
 	}
+
+	/**
+	 * Full width single product
+	 */
+	.storefront-full-width-content.single-product {
+		.related,
+		.upsells {
+			ul.products {
+				li.product {
+					@include span(4 of 12);
+				}
+			}
+		}
+	}
 }
