@@ -2269,15 +2269,6 @@ dl.variation {
 				}
 			}
 		}
-
-		.related,
-		.upsells {
-			ul.products {
-				li.product {
-					@include span(4 of 12);
-				}
-			}
-		}
 	}
 
 	/**
