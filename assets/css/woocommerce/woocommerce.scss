@@ -981,6 +981,22 @@ a.reset_variations {
 }
 
 /**
+ * Right to left styles
+ */
+
+/*!rtl:begin:ignore*/
+.rtl {
+	.widget_price_filter {
+		.price_label,
+		.price_label span {
+			direction: ltr;
+			unicode-bidi: embed;
+		}
+	}
+}
+/*!rtl:end:ignore*/
+
+/**
  * Cart
  */
 table.cart {
