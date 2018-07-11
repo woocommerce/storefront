@@ -579,7 +579,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			.site-branding h1 a,
 			.site-footer .storefront-handheld-footer-bar a:not(.button),
 			button.menu-toggle,
-			button.menu-toggle:hover {
+			button.menu-toggle:hover,
+			.handheld-navigation .dropdown-toggle {
 				color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
