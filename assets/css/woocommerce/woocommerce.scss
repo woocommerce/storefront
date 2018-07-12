@@ -573,6 +573,7 @@ ul.products {
 		}
 
 		table.variations {
+			table-layout: fixed;
 			margin: 0;
 
 			th,
@@ -585,6 +586,10 @@ ul.products {
 
 			.value {
 				margin-bottom: 1em;
+			}
+
+			select {
+				max-width: 70%;
 			}
 		}
 
