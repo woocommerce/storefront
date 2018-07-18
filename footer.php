@@ -34,6 +34,8 @@
 
 </div><!-- #page -->
 
+<?php do_action( 'storefront_after_site' ); ?>
+
 <?php wp_footer(); ?>
 
 </body>
