@@ -34,7 +34,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 		 *
 		 * @param array $defaults array of default options.
 		 * @since 2.4.0
-		 * @return $defaults
+		 * @return array
 		 */
 		public function setting_default_values( $defaults = array() ) {
 			$defaults['storefront_sticky_add_to_cart'] = true;
