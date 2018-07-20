@@ -26,23 +26,21 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 		public function __construct() {
 			add_action( 'customize_register', array( $this, 'customize_register' ), 10 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'add_customizer_css' ), 130 );
-			add_action( 'customize_register', array( $this, 'edit_default_customizer_settings' ), 99 );
-			add_action( 'init', array( $this, 'default_theme_mod_values' ), 10 );
+			add_filter( 'storefront_setting_default_values', array( $this, 'setting_default_values' ) );
 		}
 
 		/**
 		 * Returns an array of the desired default Storefront Options
 		 *
+		 * @param array $defaults array of default options.
 		 * @since 2.4.0
 		 * @return array
 		 */
-		public static function get_storefront_default_setting_values() {
-			return apply_filters(
-				'storefront_woocommerce_setting_default_values', $args = array(
-					'storefront_sticky_add_to_cart' => true,
-					'storefront_product_pagination' => true,
-				)
-			);
+		public function setting_default_values( $defaults = array() ) {
+			$defaults['storefront_sticky_add_to_cart'] = true;
+			$defaults['storefront_product_pagination'] = true;
+
+			return $defaults;
 		}
 
 		/**
