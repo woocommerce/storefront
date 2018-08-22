@@ -31,7 +31,11 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'customize_preview_init',               array( $this, 'set_product_data' ), 10 );
 			add_action( 'after_setup_theme',                    array( $this, 'remove_default_widgets' ) );
 			add_action( 'transition_post_status',               array( $this, 'transition_post_status' ), 10, 3 );
-			add_filter( 'the_title',                            array( $this, 'filter_auto_draft_title' ) , 10, 2 );
+			add_filter( 'the_title',                            array( $this, 'filter_auto_draft_title' ), 10, 2 );
+
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
+				add_filter( 'storefront_starter_content', '__return_empty_array' );
+			}
 		}
 
 		/**
@@ -243,8 +247,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		public function filter_start_content( $content, $config ) {
 			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
-
-				// We only allow starter content if the users comes from the NUX wizard.
 				return $content;
 			}
 
@@ -637,7 +639,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-
 				),
 				'belt' => array(
 					'post_title'     => esc_attr__( 'Belt', 'storefront' ),
