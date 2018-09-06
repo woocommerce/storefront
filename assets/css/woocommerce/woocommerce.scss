@@ -269,10 +269,6 @@ table.shop_table_responsive {
 				a {
 					text-align: left;
 				}
-
-				&::before {
-					display: none;
-				}
 			}
 
 			&.actions,
@@ -1035,7 +1031,6 @@ table.cart {
 	}
 
 	td.product-remove {
-		@include clearfix;
 		padding: 0;
 		border-top: ms(3) solid;
 		position: relative;
