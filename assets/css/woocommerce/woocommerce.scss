@@ -250,6 +250,9 @@ table.shop_table_responsive {
 
 	tr {
 		td {
+
+			@include clearfix;
+
 			display: block;
 			text-align: right;
 			clear: both;
@@ -265,10 +268,6 @@ table.shop_table_responsive {
 			&.product-remove {
 				a {
 					text-align: left;
-				}
-
-				&::before {
-					display: none;
 				}
 			}
 
@@ -1032,7 +1031,6 @@ table.cart {
 	}
 
 	td.product-remove {
-		@include clearfix;
 		padding: 0;
 		border-top: ms(3) solid;
 		position: relative;
