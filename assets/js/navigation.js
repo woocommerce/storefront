@@ -130,9 +130,7 @@
 						el.classList.remove( 'focus' );
 
 						// Remove blocked class, if it exists.
-						if ( el.firstChild && el.firstChild.classList ) {
-							el.firstChild.classList.remove( 'blocked' );
-						}
+						el.firstChild.classList.remove( 'blocked' );
 					}
 				} );
 
@@ -167,7 +165,7 @@
 			} );
 
 			// Ensure the dropdowns close when user taps outside the site header
-			[].forEach.call( document.querySelectorAll( 'body #page > :not( .site-header ), .site-header .col-full > :not( nav )' ), function( element ) {
+			[].forEach.call( document.querySelectorAll( '.site-content, .header-widget-region, .site-footer' ), function( element ) {
 				element.addEventListener( 'click', function() {
 					[].forEach.call( document.querySelectorAll( '.focus, .blocked' ), function( el ) {
 					 	el.classList.remove( 'focus' );

@@ -37,11 +37,11 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 				add_action( 'customize_controls_enqueue_scripts', array( $this, 'customize_scripts' ) );
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
 
-				// if ( current_user_can( 'manage_options' ) ) {
+				if ( current_user_can( 'manage_options' ) ) {
 
-				// 	// Set Guided Tour flag so it doesn't show up again.
-				// 	update_option( 'storefront_nux_guided_tour', true );
-				// }
+					// Set Guided Tour flag so it doesn't show up again.
+					update_option( 'storefront_nux_guided_tour', true );
+				}
 			}
 		}
 
@@ -56,7 +56,6 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
 
 			wp_enqueue_style( 'sp-guided-tour', get_template_directory_uri() . '/assets/css/admin/customizer/customizer.css', array(), $storefront_version, 'all' );
-			wp_style_add_data( 'sp-guided-tour', 'rtl', 'replace' );
 
 			wp_enqueue_script( 'sf-guided-tour', get_template_directory_uri() . '/assets/js/admin/customizer' . $suffix . '.js', array( 'jquery', 'wp-backbone' ), $storefront_version, true );
 

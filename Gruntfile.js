@@ -426,7 +426,6 @@ module.exports = function( grunt ) {
 					'assets/css/woocommerce/woocommerce.css',
 					'assets/css/woocommerce/woocommerce-legacy.css',
 					'assets/css/admin/welcome-screen/welcome.css',
-					'assets/css/admin/customizer/customizer.css',
 					'assets/css/jetpack/jetpack.css',
 					'assets/css/base/icons.css'
 				]
