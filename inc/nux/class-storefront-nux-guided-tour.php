@@ -38,11 +38,11 @@ if ( ! class_exists( 'Storefront_NUX_Guided_Tour' ) ) :
 				add_action( 'customize_controls_enqueue_scripts',      array( $this, 'customize_scripts' ) );
 				add_action( 'customize_controls_print_footer_scripts', array( $this, 'print_templates' ) );
 
-				// if ( current_user_can( 'manage_options' ) ) {
+				if ( current_user_can( 'manage_options' ) ) {
 
-				// 	// Set Guided Tour flag so it doesn't show up again.
-				// 	update_option( 'storefront_nux_guided_tour', true );
-				// }
+					// Set Guided Tour flag so it doesn't show up again.
+					update_option( 'storefront_nux_guided_tour', true );
+				}
 			}
 		}
 
