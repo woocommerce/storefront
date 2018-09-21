@@ -38,7 +38,7 @@
 			this._addListeners();
 
 			// Initial position
-			this.$container.css( 'left', ( $( '#customize-controls' ).width() + 10 ) + 'px' ).on( 'transitionend', function() {
+			this.$container.css( ! $( 'body' ).hasClass( 'rtl' ) ? 'left' : 'right', ( $( '#customize-controls' ).width() + 10 ) + 'px' ).on( 'transitionend', function() {
 				self.$container.addClass( 'sf-loaded' );
 			});
 
