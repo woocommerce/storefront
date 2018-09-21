@@ -120,12 +120,26 @@
 
 		// Add focus class to parents of sub-menu anchors.
 		[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
-			var li = anchor.parentNode;
 			anchor.addEventListener( 'focus', function() {
+
+				// Remove focus class from other sub-menus previously open.
+				var elems = document.querySelectorAll( '.focus' );
+
+				[].forEach.call( elems, function( el ) {
+					if ( ! el.contains( anchor ) ) {
+						el.classList.remove( 'focus' );
+
+						// Remove blocked class, if it exists.
+						if ( el.firstChild && el.firstChild.classList ) {
+							el.firstChild.classList.remove( 'blocked' );
+						}
+					}
+				} );
+
+				// Add focus class.
+				var li = anchor.parentNode;
+
 				li.classList.add( 'focus' );
-			} );
-			anchor.addEventListener( 'blur', function() {
-				li.classList.remove( 'focus' );
 			} );
 		} );
 
@@ -134,6 +148,32 @@
 		if ( ( 'ontouchstart' in window || navigator.maxTouchPoints ) && window.innerWidth > 767 ) {
 			[].forEach.call( document.querySelectorAll( '.site-header ul ul, .site-header-cart .widget_shopping_cart' ), function( element ) {
 				element.classList.add( 'sub-menu--is-touch-device' );
+			} );
+
+			// Add blocked class to links that open sub-menus, and prevent from navigating away on first touch.
+			[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
+				[ 'click', 'touchstart' ].forEach( function( event ) {
+					anchor.addEventListener( event, function( aEvent ) {
+						if ( 'click' !== aEvent.type || anchor.classList.contains( 'blocked' ) ) {
+							return true;
+						}
+
+						if ( ( 'cart-contents' === anchor.className && anchor.parentNode.nextElementSibling ) || anchor.nextElementSibling ) {
+							anchor.classList.add( 'blocked' );
+							aEvent.preventDefault();
+						}
+					} );
+				} );
+			} );
+
+			// Ensure the dropdowns close when user taps outside the site header
+			[].forEach.call( document.querySelectorAll( 'body #page > :not( .site-header ), .site-header .col-full > :not( nav )' ), function( element ) {
+				element.addEventListener( 'click', function() {
+					[].forEach.call( document.querySelectorAll( '.focus, .blocked' ), function( el ) {
+					 	el.classList.remove( 'focus' );
+					 	el.classList.remove( 'blocked' );
+					} );
+				} );
 			} );
 		}
 	} );
