@@ -49,6 +49,13 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
+= 2.3.4 - 2018-09-XX =
+* Fix - Improved touch support for dropdowns.
+* Fix - Added missing RTL support to the Guided Tour in the Customizer.
+* Fix - Added a fix to prevent starter content from showing up if not entering the customizer through the NUX.
+* Fix - Fixed clearing of cart item rows on handheld screens.
+* Fix - Changed store notice `z-index` value to prevent overlap with the handheld footer bar.
+
 = 2.3.3 - 2018-07-18 =
 * Tweak - Removed `user-scalable=no` from the viewport meta tag to allow for zooming on mobile browsers.
 * Tweak - Allow for a flexible height on the site logo.
