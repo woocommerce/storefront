@@ -13,9 +13,7 @@
  * @package  storefront
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
  * The radio image class.
