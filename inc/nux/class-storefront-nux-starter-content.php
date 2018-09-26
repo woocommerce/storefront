@@ -6,9 +6,7 @@
  * @since    2.0.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 

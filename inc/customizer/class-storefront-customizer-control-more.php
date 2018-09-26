@@ -5,9 +5,7 @@
  * @package  storefront
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+defined( 'ABSPATH' ) || exit;
 
 /**
  * The 'more' Storefront control class
