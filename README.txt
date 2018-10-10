@@ -49,7 +49,8 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.3.4 - 2018-09-XX =
+= 2.3.4 - 2018-10-11 =
+* Tweak - Introduced new styles for enhanced compatibility with Composite Products 3.14.0 and Product Bundles 5.8.0.
 * Fix - Improved touch support for dropdowns.
 * Fix - Added missing RTL support to the Guided Tour in the Customizer.
 * Fix - Added a fix to prevent starter content from showing up if not entering the customizer through the NUX.
