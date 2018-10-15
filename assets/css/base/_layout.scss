@@ -35,10 +35,6 @@
 		.site-header {
 			.site-branding {
 				@include span(9 of 12);
-
-				img {
-					max-width: 100%;
-				}
 			}
 
 			.site-search {
