@@ -476,7 +476,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		/**
 		 * Sets up integrations.
 		 *
-		 * @since  2.4.0
+		 * @since  2.3.4
 		 *
 		 * @return void
 		 */
@@ -497,7 +497,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * Add "Includes" meta to parent cart items.
 		 * Displayed only on handheld/mobile screens.
 		 *
-		 * @since  2.4.0
+		 * @since  2.3.4
 		 *
 		 * @param  array  $group_mode_data
 		 * @return array
