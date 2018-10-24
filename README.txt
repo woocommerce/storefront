@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 4.9
-Stable tag: 2.3.4
-Version: 2.3.4
+Stable tag: 2.3.5
+Version: 2.3.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
@@ -48,6 +48,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.3.5 - 2018-10-24 =
+* Fix - Use Pointer Events API for consistency across touchscreen devices when interacting with menus.
+* Fix - Removed CSS rule that was incorrectly changing the width of images logos to 100%.
 
 = 2.3.4 - 2018-10-11 =
 * Tweak - Introduced new styles for enhanced compatibility with Composite Products 3.14.0 and Product Bundles 5.8.0.
