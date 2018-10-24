@@ -151,23 +151,30 @@
 			} );
 
 			// Add blocked class to links that open sub-menus, and prevent from navigating away on first touch.
-			[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
-				[ 'click', 'touchstart' ].forEach( function( event ) {
-					anchor.addEventListener( event, function( aEvent ) {
-						if ( 'click' !== aEvent.type || anchor.classList.contains( 'blocked' ) ) {
-							return true;
-						}
+			var acceptClick = false;
 
-						if ( ( 'cart-contents' === anchor.className && anchor.parentNode.nextElementSibling ) || anchor.nextElementSibling ) {
-							anchor.classList.add( 'blocked' );
-							aEvent.preventDefault();
-						}
-					} );
+			[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
+				anchor.addEventListener( 'click', function( event ) {
+					if ( anchor.classList.contains( 'blocked' ) && false === acceptClick ) {
+						event.preventDefault();
+					}
+
+					acceptClick = false;
+				} );
+
+				anchor.addEventListener( 'pointerup', function( event ) {
+					if ( anchor.classList.contains( 'blocked' ) || 'mouse' === event.pointerType ) {
+						acceptClick = true;
+					} else if ( ( 'cart-contents' === anchor.className && anchor.parentNode.nextElementSibling && '' !== anchor.parentNode.nextElementSibling.textContent.trim() ) || anchor.nextElementSibling ) {
+						anchor.classList.add( 'blocked' );
+					} else {
+						acceptClick = true;
+					}
 				} );
 			} );
 
 			// Ensure the dropdowns close when user taps outside the site header
-			[].forEach.call( document.querySelectorAll( 'body #page > :not( .site-header ), .site-header .col-full > :not( nav )' ), function( element ) {
+			[].forEach.call( document.querySelectorAll( 'body #page > :not( .site-header )' ), function( element ) {
 				element.addEventListener( 'click', function() {
 					[].forEach.call( document.querySelectorAll( '.focus, .blocked' ), function( el ) {
 					 	el.classList.remove( 'focus' );
