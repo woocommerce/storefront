@@ -51,7 +51,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 = 2.3.5 - 2018-10-24 =
 * Fix - Use Pointer Events API for consistency across touchscreen devices when interacting with menus.
-* Fix - Removed CSS rule that was incorrectly changing the width of images logos to 100%.
+* Fix - Removed CSS rule that was incorrectly changing the width of image logos to 100%.
 
 = 2.3.4 - 2018-10-11 =
 * Tweak - Introduced new styles for enhanced compatibility with Composite Products 3.14.0 and Product Bundles 5.8.0.
