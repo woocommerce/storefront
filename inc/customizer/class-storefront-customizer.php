@@ -723,6 +723,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			.widget-area .widget a,
 			.hentry .entry-header .posted-on a,
+			.hentry .entry-header .post-author a,
+			.hentry .entry-header .post-comments a,
 			.hentry .entry-header .byline a {
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 5 ) . ';
 			}
