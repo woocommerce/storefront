@@ -183,7 +183,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			add_editor_style( 'assets/css/base/gutenberg-editor.css' );
 
-			// Editor color palette
+			/**
+			 * Editor color palette.
+			 */
 			add_theme_support(
 				'editor-color-palette',
 				array(
@@ -194,6 +196,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 					),
 				)
 			);
+
+			/**
+			 * Add support for responsive embedded content.
+			 */
+			add_theme_support( 'responsive-embeds' );
 		}
 
 		/**
