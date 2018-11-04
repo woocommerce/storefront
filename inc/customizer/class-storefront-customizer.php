@@ -886,6 +886,10 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				.wp-block-preformatted pre {
 					color: ' . $storefront_theme_mods['text_color'] . ';
 				}
+
+				.wp-block-table:not( .is-style-stripes ) tbody tr:nth-child(2n) td {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
+				}
 			';
 
 			return apply_filters( 'storefront_gutenberg_customizer_css', $styles );
