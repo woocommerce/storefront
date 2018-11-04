@@ -182,6 +182,18 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Enqueue editor styles.
 			 */
 			add_editor_style( 'assets/css/base/gutenberg-editor.css' );
+
+			// Editor color palette
+			add_theme_support(
+				'editor-color-palette',
+				array(
+					array(
+						'name'  => esc_html__( 'Primary Color', 'storefront' ),
+						'slug'  => 'primary',
+						'color' => get_theme_mod( 'storefront_accent_color', apply_filters( 'storefront_default_accent_color', '#96588a' ) ),
+					),
+				)
+			);
 		}
 
 		/**
