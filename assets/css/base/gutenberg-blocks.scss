@@ -302,15 +302,21 @@ p {
 
 .wp-block-cover-image,
 .wp-block-cover {
+	flex-flow: row wrap;
+
 	.wp-block-cover-image-text,
 	.wp-block-cover-text,
-	h2 {
+	h2,
+	p {
 		font-size: ms(3);
 		font-weight: 300;
 		line-height: 1.618;
 		padding: ms(1);
 		width: calc(100vw - #{ms(1)});
 		max-width: calc(100vw - #{ms(1)});
+		color: #fff;
+		z-index: 1;
+		text-align: center;
 
 		@include susy-media($handheld) {
 			padding: ms(1);
