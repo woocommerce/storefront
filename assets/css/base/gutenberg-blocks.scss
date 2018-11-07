@@ -173,16 +173,24 @@
 	}
 
 	li {
-		margin: 0 0 ms(1);
+		margin: 0;
+	}
 
-		&:last-child {
-			margin-bottom: 0;
+	&.has-dates {
+		li {
+			margin: 0 0 1em;
 		}
 	}
 
 	&.is-grid {
 		li {
-			margin: 0 ms(1) ms(1) 0;
+			margin: 0 ms(1) 0 0;
+		}
+
+		&.has-dates {
+			li {
+				margin-bottom: 1em;
+			}
 		}
 	}
 }
