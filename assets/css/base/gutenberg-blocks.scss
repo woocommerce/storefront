@@ -535,6 +535,10 @@ p {
 .wp-block-latest-comments {
 	margin: 0 0 ms(2);
 
+	&__comment-avatar {
+		margin-top: ms(-4);
+	}
+
 	&__comment {
 		font-size: ms(1);
 		margin: 0 0 ms(1);
@@ -550,5 +554,26 @@ p {
 			font-size: 1em;
 			line-height: 1.618;
 		}
+	}
+
+	&.has-avatars {
+		.wp-block-latest-comments__comment {
+			.wp-block-latest-comments__comment-excerpt,
+			.wp-block-latest-comments__comment-meta {
+				margin-left: ms(6);
+			}
+		}
+	}
+
+	&:not( .has-avatars ):not( .has-dates ):not( .has-excerpts ) {
+		.wp-block-latest-comments__comment {
+			margin: 0;
+			line-height: 1.618;
+		}
+	}
+
+	br {
+		display: inline;
+		content: '';
 	}
 }
