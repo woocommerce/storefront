@@ -27,48 +27,29 @@
 	font-size: ms(4);
 }
 
-// Layout
-.alignfull {
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
-	width: auto;
-	max-width: 1000%;
-}
-
-.alignwide {
-	margin-left: calc(25% - 25vw);
-	margin-right: calc(25% - 25vw);
-	width: auto;
-	max-width: 1000%;
-}
-
-@include susy-media($desktop) {
-	.alignfull,
-	.alignwide {
-		margin-left: auto;
-		margin-right: auto;
-		max-width: none;
-	}
-
+@media ( min-width: $container-width ) {
 	// Global
 	.page-template-template-fullwidth-php,
 	.storefront-full-width-content {
+		.alignfull,
+		.alignwide {
+			width: auto;
+			max-width: 1000%;
+			padding-left: ms(2);
+			padding-right: ms(2);
+		}
+
 		.alignfull {
 			margin-left: calc(50% - 50vw);
 			margin-right: calc(50% - 50vw);
-			width: auto;
-			max-width: 1000%;
 		}
 
 		.alignwide {
 			margin-left: calc(25% - 25vw);
 			margin-right: calc(25% - 25vw);
-			width: auto;
-			max-width: 1000%;
 		}
 	}
 }
-
 
 // Audio
 .wp-block-audio {
@@ -333,13 +314,30 @@ p {
 	}
 }
 
+@media ( min-width: $container-width ) {
+	// Global
+	.page-template-template-fullwidth-php,
+	.storefront-full-width-content {
+		.wp-block-cover-image,
+		.wp-block-cover,
+		.wp-block-image {
+			&.alignfull,
+			&.alignwide {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+}
+
 // Galleries
 .wp-block-gallery {
 	margin: 0 0 ms(2);
 
 	.blocks-gallery-image,
 	.blocks-gallery-item {
-		margin: 0 ms(1) ms(1) 0;
+		width: span(6);
+		margin: 0 gutter(12) gutter(12) 0;
 
 		figcaption {
 			font-size: ms(1);
@@ -488,20 +486,7 @@ p {
 	}
 }
 
-@media (min-width:600px) {
-	.wp-block-column {
-		padding-right: 0;
-
-		&:nth-child( odd ) {
-			padding-left: 0;
-		}
-
-		&:nth-child( 2n ) {
-			padding-right: 0;
-			margin-right: gutter(9);
-		}
-	}
-
+@media (min-width:782px) {
 	.wp-block-columns {
 		@for $i from 2 through 6 {
 			&.has-#{$i}-columns {
@@ -514,36 +499,30 @@ p {
 		}
 	}
 
+	.wp-block-column {
+		padding-right: 0;
+
+		&:not( :first-child ) {
+			padding-left: 0;
+		}
+
+		&:not( :last-child ) {
+			padding-right: 0;
+			margin-right: gutter(9);
+		}
+	}
+
 	.page-template-template-fullwidth-php,
 	.storefront-full-width-content {
 		.wp-block-column {
 			padding-right: 0;
 
-			&:nth-child( 2n ) {
+			&:not( :last-child ) {
 				margin-right: gutter(12);
 			}
 		}
 	}
 }
-
-@media (min-width:782px) {
-	.wp-block-column:not( :first-child ) {
-		padding-left: 0;
-	}
-
-	.wp-block-column:not( :last-child ) {
-		padding-right: 0;
-		margin-right: gutter(9);
-	}
-
-	.page-template-template-fullwidth-php,
-	.storefront-full-width-content {
-		.wp-block-column:not( :last-child ) {
-			margin-right: gutter(12);
-		}
-	}
-}
-
 
 // Latest Comments
 .wp-block-latest-comments {
