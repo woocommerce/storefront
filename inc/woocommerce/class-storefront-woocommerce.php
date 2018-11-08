@@ -392,8 +392,9 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return array $styles the css
 		 */
 		public function get_woocommerce_extension_css() {
-			$storefront_customizer = new Storefront_Customizer();
-			$storefront_theme_mods = $storefront_customizer->get_storefront_theme_mods();
+			global $storefront;
+
+			$storefront_theme_mods = $storefront->customizer->get_storefront_theme_mods();
 
 			$woocommerce_extension_style                = '';
 
