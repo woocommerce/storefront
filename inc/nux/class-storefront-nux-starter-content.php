@@ -32,7 +32,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
 
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // Input var okay.
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
 				add_filter( 'storefront_starter_content', '__return_empty_array' );
 			}
 		}
@@ -246,14 +246,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return array $content
 		 */
 		public function filter_start_content( $content, $config ) {
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // Input var okay.
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
 				return $content;
 			}
 
 			$tasks = array();
 
-			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // Input var okay.
-				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) );
+			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // WPCS: input var ok.
+				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ); // WPCS: input var ok.
 			}
 
 			$tasks = $this->_validate_tasks( $tasks );
