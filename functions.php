@@ -19,7 +19,7 @@ if ( ! isset( $content_width ) ) {
 }
 
 $storefront = (object) array(
-	'version' => $storefront_version,
+	'version'    => $storefront_version,
 
 	/**
 	 * Initialize all the things.

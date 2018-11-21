@@ -171,9 +171,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function widgets_init() {
 			$sidebar_args['sidebar'] = array(
-				'name'          => __( 'Sidebar', 'storefront' ),
-				'id'            => 'sidebar-1',
-				'description'   => '',
+				'name'        => __( 'Sidebar', 'storefront' ),
+				'id'          => 'sidebar-1',
+				'description' => '',
 			);
 
 			$sidebar_args['header'] = array(

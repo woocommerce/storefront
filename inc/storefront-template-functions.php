@@ -30,10 +30,10 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 	 */
 	function storefront_comment( $comment, $args, $depth ) {
 		if ( 'div' == $args['style'] ) {
-			$tag = 'div';
+			$tag       = 'div';
 			$add_below = 'comment';
 		} else {
-			$tag = 'li';
+			$tag       = 'li';
 			$add_below = 'div-comment';
 		}
 		?>
@@ -65,7 +65,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			array_merge(
 				$args, array(
 					'add_below' => $add_below,
-					'depth' => $depth,
+					'depth'     => $depth,
 					'max_depth' => $args['max_depth'],
 				)
 			)
@@ -235,15 +235,15 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 			<?php
 			wp_nav_menu(
 				array(
-					'theme_location'    => 'primary',
-					'container_class'   => 'primary-navigation',
+					'theme_location'  => 'primary',
+					'container_class' => 'primary-navigation',
 				)
 			);
 
 			wp_nav_menu(
 				array(
-					'theme_location'    => 'handheld',
-					'container_class'   => 'handheld-navigation',
+					'theme_location'  => 'handheld',
+					'container_class' => 'handheld-navigation',
 				)
 			);
 			?>
@@ -266,8 +266,8 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 				<?php
 					wp_nav_menu(
 						array(
-							'theme_location'    => 'secondary',
-							'fallback_cb'       => '',
+							'theme_location' => 'secondary',
+							'fallback_cb'    => '',
 						)
 					);
 				?>
@@ -535,7 +535,7 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 		echo wp_kses(
 			apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
 				'span' => array(
-					'class'  => array(),
+					'class' => array(),
 				),
 				'a'    => array(
 					'href'  => array(),

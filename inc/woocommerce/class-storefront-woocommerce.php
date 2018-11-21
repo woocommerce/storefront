@@ -396,10 +396,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			$storefront_theme_mods = $storefront->customizer->get_storefront_theme_mods();
 
-			$woocommerce_extension_style                = '';
+			$woocommerce_extension_style = '';
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-				$woocommerce_extension_style                    .= '
+				$woocommerce_extension_style .= '
 				.wc-bookings-date-picker .ui-datepicker td.bookable a {
 					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
 				}
@@ -415,7 +415,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-				$woocommerce_extension_style                    .= '
+				$woocommerce_extension_style .= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
 					background-color: ' . $storefront_theme_mods['text_color'] . ' !important;
@@ -441,7 +441,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-				$woocommerce_extension_style                    .= '
+				$woocommerce_extension_style .= '
 				.coupon-container {
 					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
 				}
