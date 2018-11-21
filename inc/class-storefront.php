@@ -171,9 +171,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function widgets_init() {
 			$sidebar_args['sidebar'] = array(
-				'name'          => __( 'Sidebar', 'storefront' ),
-				'id'            => 'sidebar-1',
-				'description'   => '',
+				'name'        => __( 'Sidebar', 'storefront' ),
+				'id'          => 'sidebar-1',
+				'description' => '',
 			);
 
 			$sidebar_args['header'] = array(
@@ -190,7 +190,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 					$footer_n = $region + $regions * ( $row - 1 ); // Defines footer sidebar ID.
 					$footer   = sprintf( 'footer_%d', $footer_n );
 
-					if ( 1 == $rows ) {
+					if ( 1 === $rows ) {
 						/* translators: 1: column number */
 						$footer_region_name = sprintf( __( 'Footer Column %1$d', 'storefront' ), $region );
 
@@ -270,7 +270,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			$query_args = array(
 				'family' => implode( '|', $google_fonts ),
-				'subset' => urlencode( 'latin,latin-ext' ),
+				'subset' => rawurlencode( 'latin,latin-ext' ),
 			);
 
 			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
