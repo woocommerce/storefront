@@ -1,76 +1,187 @@
 /**
- * WooCommerce AJAX Layered Nav
+ * WooCommerce Product Bundles
  */
 
 /**
  * Imports
  */
+
 @import 'bourbon';
 @import '../../sass/utils/variables';
 @import '../../sass/utils/mixins';
 @import '../../../../node_modules/susy/sass/susy';
 @import '../../sass/vendors/modular-scale';
 
+/**
+ * Base
+ */
+
 .bundle_form {
+
 	div.bundled_product_summary {
+
 		padding-bottom: ms(3) !important;
 		margin-bottom: ms(3);
 		border-bottom: 1px solid $color_border;
+
+		padding-left: 0;
+
+		.bundled_product_images {
+
+			margin-left: 0;
+
+			a {
+				margin: 0 !important;
+			}
+
+			img {
+				width: 100% !important;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	div.bundled_product_summary, tr.bundled_product_summary {
+		.details {
+			font-size: ms(-1);
+		}
 	}
 }
 
+.woocommerce, .woocommerce-page {
+	#content div.product, div.product {
+		.bundle_form div.bundled_product_summary .bundled_product_images {
+			@include span( 2 of 10 );
+		}
+	}
+}
+
+.bundle_form {
+	div.bundled_product_summary:not( .thumbnail_hidden ) {
+		.details {
+			@include span( last 8 of 10 );
+		}
+	}
+}
+
+
+.bundle_form {
+	div.bundled_product_summary:not( .thumbnail_hidden ) {
+		.details {
+			padding: 0 !important;
+		}
+	}
+}
+
+.bundled_table_item {
+	.product-name {
+		padding-left: 4rem;
+	}
+}
+
+/**
+ * Desktop
+ */
+
 @include susy-media($desktop) {
-	.bundle_form {
-		div.bundled_product_summary {
-			padding-left: 0;
-			.bundled_product_images {
-				margin-left: 0;
-				@include span( 2 of 10 );
 
-				a {
-					margin: 0 !important;
+	.bundle_table_item dl.bundle_configuration {
+		display: none;
+	}
+
+	.sp-product-gallery-stacked, .storefront-full-width-content, .page-template-template-fullwidth-php {
+		.bundle_form {
+			.bundled_product_summary {
+				.details {
+					font-size: 1em;
 				}
-
-				img {
-					width: 100% !important;
-				}
-			}
-
-			.details {
-				@include span( last 8 of 10 );
-				font-size: ms(-1);
 			}
 		}
-		div.bundled_product_summary.thumbnail_hidden {
-			padding-left: 0;
+	}
+
+	.sp-product-gallery-stacked, .storefront-full-width-content, .page-template-template-fullwidth-php {
+
+		#content div.product, div.product {
+			.bundle_form div.bundled_product_summary .bundled_product_images {
+				@include span( 2 of 8 );
+			}
+		}
+
+		.bundle_form {
+			div.bundled_product_summary:not( .thumbnail_hidden ) {
+				.details {
+					@include span( last 6 of 8 );
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Handheld
+ */
+
+@include susy-media(max-width $handheld) {
+
+	.woocommerce, .woocommerce-page {
+		#content div.product, div.product {
+			.bundle_form div.bundled_product_summary .bundled_product_images {
+				@include span( 10 of 10 );
+			}
+		}
+	}
+
+	.bundle_form {
+		div.bundled_product_summary:not( .thumbnail_hidden ) {
 			.details {
 				@include span( 10 of 10 );
 			}
 		}
 	}
 
-	.page-template-template-fullwidth-php,
-	.storefront-full-width-content {
-		.bundle_form {
-			div.bundled_product_summary {
-				padding-left: 0;
-				.bundled_product_images {
-					margin-left: 0;
-					@include span( 2 of 8 );
-				}
+	table.shop_table_responsive tr.bundled_table_item {
+		display: none;
+	}
 
-				.details {
-					@include span( last 6 of 8 );
-					font-size: 1em;
-				}
+	.bundle_form {
+
+		div.bundled_product_summary .bundled_product_images {
+			max-width: 50%;
+		}
+
+		div.bundled_product_summary .bundled_product_images {
+			img {
+				margin-bottom: 1em;
 			}
-			div.bundled_product_summary.thumbnail_hidden {
-				padding-left: 0;
-				.details {
-					@include span( 8 of 8 );
-				}
+		}
+
+		table.bundled_products td {
+			display: block;
+		}
+
+		table.bundled_products thead {
+			display: none;
+		}
+
+		table.bundled_products tr td.bundled_item_images_col {
+			width: 100%;
+			padding-bottom: 0;
+		}
+
+		table.bundled_products tr {
+
+			td.bundled_item_images_col, td.bundled_item_details_col {
+				padding-bottom: 0;
 			}
+
+			td.bundled_item_images_col {
+				width: 100%;
+			}
+		}
+
+		table.bundled_products tr td.bundled_item_qty_col {
+			max-width: 100%;
+			text-align: left;
 		}
 	}
 }
-

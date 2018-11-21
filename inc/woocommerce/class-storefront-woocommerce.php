@@ -40,6 +40,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			// Integrations.
+			add_action( 'storefront_woocommerce_setup', array( $this, 'setup_integrations' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_integrations_scripts' ), 99 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'add_customizer_css' ), 140 );
 		}
@@ -74,6 +75,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
+
+			/**
+			 * Add 'storefront_woocommerce_setup' action.
+			 *
+			 * @since  2.4.0
+			 */
+			do_action( 'storefront_woocommerce_setup' );
 		}
 
 		/**
@@ -458,6 +466,48 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			return apply_filters( 'storefront_customizer_woocommerce_extension_css', $woocommerce_extension_style );
+		}
+
+		/*
+		|--------------------------------------------------------------------------
+		| Integrations.
+		|--------------------------------------------------------------------------
+		*/
+
+		/**
+		 * Sets up integrations.
+		 *
+		 * @since  2.3.4
+		 *
+		 * @return void
+		 */
+		public function setup_integrations() {
+
+			if ( $this->is_woocommerce_extension_activated( 'WC_Bundles' ) ) {
+				add_filter( 'woocommerce_bundled_table_item_js_enqueued', '__return_true' );
+				add_filter( 'woocommerce_bundles_group_mode_options_data', array( $this, 'bundles_group_mode_options_data' ) );
+			}
+
+			if ( $this->is_woocommerce_extension_activated( 'WC_Composite_Products' ) ) {
+				add_filter( 'woocommerce_composited_table_item_js_enqueued', '__return_true' );
+				add_filter( 'woocommerce_display_composite_container_cart_item_data', '__return_true' );
+			}
+		}
+
+		/**
+		 * Add "Includes" meta to parent cart items.
+		 * Displayed only on handheld/mobile screens.
+		 *
+		 * @since  2.3.4
+		 *
+		 * @param  array  $group_mode_data
+		 * @return array
+		 */
+		public function bundles_group_mode_options_data( $group_mode_data ) {
+
+			$group_mode_data[ 'parent' ][ 'features' ][] = 'parent_cart_item_meta';
+
+			return $group_mode_data;
 		}
 	}
 
