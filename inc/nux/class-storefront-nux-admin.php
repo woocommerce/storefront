@@ -142,7 +142,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2.0
 		 */
 		public function dismiss_nux() {
-			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'storefront_notice_dismiss' ) || ! current_user_can( 'manage_options' ) ) {
+			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( sanitize_key( wp_unslash( $_POST['nonce'] ) ), 'storefront_notice_dismiss' ) || ! current_user_can( 'manage_options' ) ) { // Input var okay.
 				die();
 			}
 
@@ -167,7 +167,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 			$tasks = array();
 
-			if ( ! empty( $_REQUEST['homepage'] ) && 'on' === $_REQUEST['homepage'] ) {
+			if ( ! empty( $_REQUEST['homepage'] ) && 'on' === sanitize_text_field( wp_unslash( $_REQUEST['homepage'] ) ) ) { // Input var okay.
 				if ( current_user_can( 'edit_pages' ) && 'page' === get_option( 'show_on_front' ) ) {
 					$this->_assign_page_template( get_option( 'page_on_front' ), 'template-homepage.php' );
 				} else {
@@ -175,7 +175,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				}
 			}
 
-			if ( ! empty( $_REQUEST['products'] ) && 'on' === $_REQUEST['products'] ) {
+			if ( ! empty( $_REQUEST['products'] ) && 'on' === sanitize_text_field( wp_unslash( $_REQUEST['products'] ) ) ) { // Input var okay.
 				$tasks[] = 'products';
 			}
 
@@ -194,7 +194,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			}
 
 			// Redirect to the Storefront Welcome screen when exiting the Customizer.
-			$args['return'] = urlencode( admin_url( 'themes.php?page=storefront-welcome' ) );
+			$args['return'] = rawurlencode( admin_url( 'themes.php?page=storefront-welcome' ) );
 
 			wp_safe_redirect( add_query_arg( $args, admin_url( 'customize.php' ) ) );
 

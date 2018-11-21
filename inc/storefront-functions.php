@@ -56,7 +56,7 @@ function storefront_get_content_background_color() {
 	$bg_color = str_replace( '#', '', get_theme_mod( 'background_color' ) );
 
 	if ( class_exists( 'Storefront_Powerpack' ) || class_exists( 'Storefront_Designer' ) ) {
-		if ( $content_bg_color && ( 'true' == $content_frame || 'frame' == $content_frame ) ) {
+		if ( $content_bg_color && ( 'true' === $content_frame || 'frame' === $content_frame ) ) {
 			$bg_color = str_replace( '#', '', $content_bg_color );
 		}
 	}
@@ -134,7 +134,7 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
 	// Format the hex color string.
 	$hex = str_replace( '#', '', $hex );
 
-	if ( 3 == strlen( $hex ) ) {
+	if ( 3 === strlen( $hex ) ) {
 		$hex = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
 	}
 
@@ -185,7 +185,7 @@ function storefront_sanitize_choices( $input, $setting ) {
  * @since  1.5.0
  */
 function storefront_sanitize_checkbox( $checked ) {
-	return ( ( isset( $checked ) && true == $checked ) ? true : false );
+	return ( ( isset( $checked ) && true === $checked ) ? true : false );
 }
 
 /**

@@ -32,7 +32,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
 
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // Input var okay.
 				add_filter( 'storefront_starter_content', '__return_empty_array' );
 			}
 		}
@@ -246,13 +246,13 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return array $content
 		 */
 		public function filter_start_content( $content, $config ) {
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // Input var okay.
 				return $content;
 			}
 
 			$tasks = array();
 
-			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) {
+			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // Input var okay.
 				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) );
 			}
 
@@ -562,7 +562,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @param WP_Post $post       Post data.
 		 */
 		public function transition_post_status( $new_status, $old_status, $post ) {
-			if ( 'publish' === $new_status && 'auto-draft' === $old_status && in_array( $post->post_type, array( 'product' ) ) ) {
+			if ( 'publish' === $new_status && 'auto-draft' === $old_status && in_array( $post->post_type, array( 'product' ), true ) ) {
 				$post_name = get_post_meta( $post->ID, '_customize_draft_post_name', true );
 
 				$starter_products = $this->_starter_content_products();
@@ -593,7 +593,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			$post = get_post( $post_id );
 
-			if ( $post && 'auto-draft' === $post->post_status && in_array( $post->post_type, array( 'product' ) ) && 'AUTO-DRAFT' === $post->post_title ) {
+			if ( $post && 'auto-draft' === $post->post_status && in_array( $post->post_type, array( 'product' ), true ) && 'AUTO-DRAFT' === $post->post_title ) {
 				$post_name = get_post_meta( $post->ID, '_customize_draft_post_name', true );
 
 				$starter_products = $this->_starter_content_products();

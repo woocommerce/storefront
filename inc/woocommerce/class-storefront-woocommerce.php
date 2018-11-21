@@ -112,7 +112,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			$classes[] = 'woocommerce-active';
 
 			// Remove `no-wc-breadcrumb` body class.
-			$key = array_search( 'no-wc-breadcrumb', $classes );
+			$key = array_search( 'no-wc-breadcrumb', $classes, true );
 
 			if ( false !== $key ) {
 				unset( $classes[ $key ] );
