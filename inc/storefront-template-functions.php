@@ -424,7 +424,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_meta() {
-		// Posted on
+		// Posted on.
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -445,7 +445,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			'<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>'
 		);
 
-		// Author
+		// Author.
 		$author = sprintf(
 			'<span class="post-author">%1$s <a href="%2$s" class="url fn" rel="author">%3$s</a></span>',
 			__( 'by', 'storefront' ),
@@ -453,7 +453,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			esc_html( get_the_author() )
 		);
 
-		// Comments
+		// Comments.
 		$comments = '';
 
 		if ( ! post_password_required() && ( comments_open() || '0' !== get_comments_number() ) ) {
@@ -486,6 +486,11 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 }
 
 if ( ! function_exists( 'storefront_post_taxonomy' ) ) {
+	/**
+	 * Display the post taxonomies
+	 *
+	 * @since 2.4.0
+	 */
 	function storefront_post_taxonomy() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
