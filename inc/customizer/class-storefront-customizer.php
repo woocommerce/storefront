@@ -827,7 +827,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public function gutenberg_get_css() {
 			$storefront_theme_mods = $this->get_storefront_theme_mods();
-			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
 			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
 
 			// Gutenberg.
