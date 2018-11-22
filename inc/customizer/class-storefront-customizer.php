@@ -830,7 +830,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
 			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
 
-			// Gutenberg
+			// Gutenberg.
 			$styles = '
 				.wp-block-button .wp-block-button__link {
 					border-color: ' . $storefront_theme_mods['button_background_color'] . ';
