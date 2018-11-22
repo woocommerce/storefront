@@ -723,6 +723,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			.widget-area .widget a,
 			.hentry .entry-header .posted-on a,
+			.hentry .entry-header .post-author a,
+			.hentry .entry-header .post-comments a,
 			.hentry .entry-header .byline a {
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 5 ) . ';
 			}
@@ -818,6 +820,81 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		}
 
 		/**
+		 * Get Gutenberg Customizer css.
+		 *
+		 * @see get_storefront_theme_mods()
+		 * @return array $styles the css
+		 */
+		public function gutenberg_get_css() {
+			$storefront_theme_mods = $this->get_storefront_theme_mods();
+			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
+
+			// Gutenberg.
+			$styles = '
+				.wp-block-button .wp-block-button__link {
+					border-color: ' . $storefront_theme_mods['button_background_color'] . ';
+				}
+
+				.wp-block-button:not(.has-text-color) .wp-block-button__link {
+					color: ' . $storefront_theme_mods['button_text_color'] . ';
+				}
+
+				.wp-block-button:not(.has-text-color) .wp-block-button__link:hover,
+				.wp-block-button:not(.has-text-color) .wp-block-button__link:focus,
+				.wp-block-button:not(.has-text-color) .wp-block-button__link:active {
+					color: ' . $storefront_theme_mods['button_text_color'] . ';
+				}
+
+				.wp-block-button:not(.has-background) .wp-block-button__link {
+					background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+				}
+
+				.wp-block-button:not(.has-background) .wp-block-button__link:hover,
+				.wp-block-button:not(.has-background) .wp-block-button__link:focus,
+				.wp-block-button:not(.has-background) .wp-block-button__link:active {
+					border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				}
+
+				.wp-block-quote footer,
+				.wp-block-quote cite {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+				}
+
+				.wp-block-image figcaption {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+				}
+
+				.wp-block-separator.is-style-dots::before {
+					color: ' . $storefront_theme_mods['heading_color'] . ';
+				}
+
+				.wp-block-file .wp-block-file__button {
+					color: ' . $storefront_theme_mods['button_text_color'] . ';
+					background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+					border-color: ' . $storefront_theme_mods['button_background_color'] . ';
+				}
+
+				.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:focus, .wp-block-file .wp-block-file__button:active {
+					color: ' . $storefront_theme_mods['button_text_color'] . ';
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				}
+
+				.wp-block-code,
+				.wp-block-preformatted pre {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+				}
+
+				.wp-block-table:not( .is-style-stripes ) tbody tr:nth-child(2n) td {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
+				}
+			';
+
+			return apply_filters( 'storefront_gutenberg_customizer_css', $styles );
+		}
+
+		/**
 		 * Add CSS in <head> for styles handled by the theme customizer
 		 *
 		 * @since 1.0.0
@@ -825,6 +902,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public function add_customizer_css() {
 			wp_add_inline_style( 'storefront-style', $this->get_css() );
+			wp_add_inline_style( 'storefront-gutenberg-blocks', $this->gutenberg_get_css() );
 		}
 
 		/**

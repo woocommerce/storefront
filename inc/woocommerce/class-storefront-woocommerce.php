@@ -500,12 +500,11 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 *
 		 * @since  2.3.4
 		 *
-		 * @param  array  $group_mode_data
+		 * @param  array $group_mode_data Group mode data.
 		 * @return array
 		 */
 		public function bundles_group_mode_options_data( $group_mode_data ) {
-
-			$group_mode_data[ 'parent' ][ 'features' ][] = 'parent_cart_item_meta';
+			$group_mode_data['parent']['features'][] = 'parent_cart_item_meta';
 
 			return $group_mode_data;
 		}

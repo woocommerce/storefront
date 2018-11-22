@@ -357,11 +357,11 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		<header class="entry-header">
 		<?php
 		if ( is_single() ) {
-			storefront_posted_on();
+			storefront_post_meta();
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
 			if ( 'post' === get_post_type() ) {
-				storefront_posted_on();
+				storefront_post_meta();
 			}
 
 			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
@@ -419,56 +419,97 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_meta() {
+		// Posted on.
+		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
+
+		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
+		}
+
+		$time_string = sprintf(
+			$time_string,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$posted_on = sprintf(
+			/* translators: %s: post date */
+			_x( 'Posted on %s', 'post date', 'storefront' ),
+			'<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>'
+		);
+
+		// Author.
+		$author = sprintf(
+			'<span class="post-author">%1$s <a href="%2$s" class="url fn" rel="author">%3$s</a></span>',
+			__( 'by', 'storefront' ),
+			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+			esc_html( get_the_author() )
+		);
+
+		// Comments.
+		$comments = '';
+
+		if ( ! post_password_required() && ( comments_open() || '0' !== get_comments_number() ) ) {
+			$comments_number = get_comments_number_text( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) );
+
+			$comments = sprintf(
+				'<span class="post-comments">&mdash; <a href="%1$s">%2$s</a></span>',
+				esc_url( get_comments_link() ),
+				$comments_number
+			);
+		}
+
+		echo wp_kses(
+			sprintf( '%1$s %2$s %3$s', $posted_on, $author, $comments ), array(
+				'span' => array(
+					'class'  => array(),
+				),
+				'a'    => array(
+					'href'  => array(),
+					'title' => array(),
+					'rel'   => array(),
+				),
+				'time' => array(
+					'datetime' => array(),
+					'class'    => array(),
+				),
+			)
+		);
+	}
+}
+
+if ( ! function_exists( 'storefront_post_taxonomy' ) ) {
+	/**
+	 * Display the post taxonomies
+	 *
+	 * @since 2.4.0
+	 */
+	function storefront_post_taxonomy() {
+		/* translators: used between list items, there is a space after the comma */
+		$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
 		?>
-		<aside class="entry-meta">
-			<?php
-			if ( 'post' === get_post_type() ) : // Hide category and tag text for pages on Search.
 
-				?>
-			<div class="vcard author">
-				<?php
-					echo get_avatar( get_the_author_meta( 'ID' ), 128 );
-					echo '<div class="label">' . esc_attr( __( 'Written by', 'storefront' ) ) . '</div>';
-					echo sprintf( '<a href="%1$s" class="url fn" rel="author">%2$s</a>', esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ), get_the_author() );
-				?>
+		<aside class="entry-taxonomy">
+			<?php if ( $categories_list ) : ?>
+			<div class="cat-links">
+				<span class="screen-reader-text"><?php echo esc_attr( __( 'Posted in', 'storefront' ) ); ?></span>
+				<?php echo wp_kses_post( $categories_list ); ?>
 			</div>
-				<?php
-				/* translators: used between list items, there is a space after the comma */
-				$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
+			<?php endif; // End if categories. ?>
 
-				if ( $categories_list ) :
-					?>
-				<div class="cat-links">
-						<?php
-						echo '<div class="label">' . esc_attr( __( 'Posted in', 'storefront' ) ) . '</div>';
-						echo wp_kses_post( $categories_list );
-						?>
-				</div>
-				<?php endif; // End if categories. ?>
-
-				<?php
-				/* translators: used between list items, there is a space after the comma */
-				$tags_list = get_the_tag_list( '', __( ', ', 'storefront' ) );
-
-				if ( $tags_list ) :
-					?>
-				<div class="tags-links">
-						<?php
-						echo '<div class="label">' . esc_attr( __( 'Tagged', 'storefront' ) ) . '</div>';
-						echo wp_kses_post( $tags_list );
-						?>
-				</div>
-				<?php endif; // End if $tags_list. ?>
-
-		<?php endif; // End if 'post' == get_post_type(). ?>
-
-			<?php if ( ! post_password_required() && ( comments_open() || 0 !== get_comments_number() ) ) : ?>
-				<div class="comments-link">
-					<?php echo '<div class="label">' . esc_attr( __( 'Comments', 'storefront' ) ) . '</div>'; ?>
-					<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) ); ?></span>
-				</div>
-			<?php endif; ?>
+			<?php if ( $tags_list ) : ?>
+			<div class="tags-links">
+				<span class="screen-reader-text"><?php echo esc_attr( __( 'Tagged', 'storefront' ) ); ?></span>
+				<?php echo wp_kses_post( $tags_list ); ?>
+			</div>
+			<?php endif; // End if $tags_list. ?>
 		</aside>
+
 		<?php
 	}
 }
@@ -506,43 +547,11 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 if ( ! function_exists( 'storefront_posted_on' ) ) {
 	/**
 	 * Prints HTML with meta information for the current post-date/time and author.
+	 *
+	 * @deprecated 2.4.0
 	 */
 	function storefront_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time> <time class="updated" datetime="%3$s">%4$s</time>';
-		}
-
-		$time_string = sprintf(
-			$time_string,
-			esc_attr( get_the_date( 'c' ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( 'c' ) ),
-			esc_html( get_the_modified_date() )
-		);
-
-		$posted_on = sprintf(
-			/* translators: %s: post date */
-			_x( 'Posted on %s', 'post date', 'storefront' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
-
-		echo wp_kses(
-			apply_filters( 'storefront_single_post_posted_on_html', '<span class="posted-on">' . $posted_on . '</span>', $posted_on ), array(
-				'span' => array(
-					'class' => array(),
-				),
-				'a'    => array(
-					'href'  => array(),
-					'title' => array(),
-					'rel'   => array(),
-				),
-				'time' => array(
-					'datetime' => array(),
-					'class'    => array(),
-				),
-			)
-		);
+		_deprecated_function( 'storefront_posted_on', '2.4.0' );
 	}
 }
 

@@ -350,19 +350,6 @@
 		}
 	}
 
-	.hentry.type-post {
-		@include clearfix;
-
-		.entry-meta {
-			@include span(2 of 9);
-			font-size: ms(-1);
-		}
-
-		.entry-content {
-			@include span(last 7 of 9);
-		}
-	}
-
 	/**
 	 * Menus
 	 *

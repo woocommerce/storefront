@@ -162,6 +162,31 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Declare support for selective refreshing of widgets.
 			 */
 			add_theme_support( 'customize-selective-refresh-widgets' );
+
+			/**
+			 * Add support for Block Styles.
+			 */
+			add_theme_support( 'wp-block-styles' );
+
+			/**
+			 * Add support for full and wide align images.
+			 */
+			add_theme_support( 'align-wide' );
+
+			/**
+			 * Add support for editor styles.
+			 */
+			add_theme_support( 'editor-styles' );
+
+			/**
+			 * Enqueue editor styles.
+			 */
+			add_editor_style( 'assets/css/base/gutenberg-editor.css' );
+
+			/**
+			 * Add support for responsive embedded content.
+			 */
+			add_theme_support( 'responsive-embeds' );
 		}
 
 		/**
@@ -255,6 +280,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
+
+			wp_enqueue_style( 'storefront-gutenberg-blocks', get_template_directory_uri() . '/assets/css/base/gutenberg-blocks.css', '', $storefront_version );
+			wp_style_add_data( 'storefront-gutenberg-blocks', 'rtl', 'replace' );
 
 			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-icons', 'rtl', 'replace' );

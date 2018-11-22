@@ -755,6 +755,8 @@ table {
 		border-bottom: 1px solid $color_border;
 
 		.posted-on,
+		.post-author,
+		.post-comments,
 		.byline {
 			font-size: ms(-1);
 
@@ -764,8 +766,8 @@ table {
 		}
 	}
 
-	.entry-meta {
-		font-weight: 400;
+	.entry-taxonomy {
+		margin: ms(2) 0 0;
 	}
 
 	&.type-page {
@@ -793,17 +795,12 @@ table {
 }
 
 .cat-links,
-.tags-links,
-.comments-link,
-.vcard.author {
+.tags-links {
 	display: block;
-	margin-bottom: ms(3);
-}
+	margin-bottom: ms(1);
 
-.vcard.author {
-	.avatar {
-		width: 64px;
-		margin-bottom: 1em;
+	&:last-child {
+		margin-bottom: 0;
 	}
 }
 
