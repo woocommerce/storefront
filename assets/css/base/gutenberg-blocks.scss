@@ -485,9 +485,21 @@
 				padding-right: gutter(9);
 				margin-left: 0;
 
+				&:not( :last-child ) {
+					margin-right: 0;
+				}
+
+				&:nth-of-type( even ) {
+					padding-right: 0;
+				}
+
 				.page-template-template-fullwidth-php &,
 				.storefront-full-width-content & {
-					padding-right: gutter(9);
+					padding-right: gutter(12);
+
+					&:nth-of-type( even ) {
+						padding-right: 0;
+					}
 				}
 			}
 		}
