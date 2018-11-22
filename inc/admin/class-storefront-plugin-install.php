@@ -82,7 +82,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 					}
 				} else {
 					// The plugin doesn't exist.
-					$url = wp_nonce_url(
+					$url    = wp_nonce_url(
 						add_query_arg(
 							array(
 								'action' => 'install-plugin',

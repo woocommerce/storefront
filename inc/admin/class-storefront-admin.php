@@ -58,9 +58,9 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 * @since 1.0.0
 		 */
 		public function storefront_welcome_screen() {
-			require_once( ABSPATH . 'wp-load.php' );
-			require_once( ABSPATH . 'wp-admin/admin.php' );
-			require_once( ABSPATH . 'wp-admin/admin-header.php' );
+			require_once ABSPATH . 'wp-load.php';
+			require_once ABSPATH . 'wp-admin/admin.php';
+			require_once ABSPATH . 'wp-admin/admin-header.php';
 
 			global $storefront_version;
 			?>
@@ -156,7 +156,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 * @since 1.0.0
 		 */
 		public function welcome_intro() {
-			require_once( get_template_directory() . '/inc/admin/welcome-screen/component-intro.php' );
+			require_once get_template_directory() . '/inc/admin/welcome-screen/component-intro.php';
 		}
 
 		/**
@@ -186,7 +186,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 					);
 				} else {
 					// The plugin doesn't exist.
-					$url = wp_nonce_url(
+					$url    = wp_nonce_url(
 						add_query_arg(
 							array(
 								'action' => 'install-plugin',
@@ -237,7 +237,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 * @since 1.5.2
 		 */
 		public function welcome_enhance() {
-			require_once( get_template_directory() . '/inc/admin/welcome-screen/component-enhance.php' );
+			require_once get_template_directory() . '/inc/admin/welcome-screen/component-enhance.php';
 		}
 
 		/**
@@ -246,7 +246,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 * @since 1.5.2
 		 */
 		public function welcome_contribute() {
-			require_once( get_template_directory() . '/inc/admin/welcome-screen/component-contribute.php' );
+			require_once get_template_directory() . '/inc/admin/welcome-screen/component-contribute.php';
 		}
 
 		/**

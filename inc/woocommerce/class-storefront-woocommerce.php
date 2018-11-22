@@ -40,6 +40,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			// Integrations.
+			add_action( 'storefront_woocommerce_setup', array( $this, 'setup_integrations' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_integrations_scripts' ), 99 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'add_customizer_css' ), 140 );
 		}
@@ -74,6 +75,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			add_theme_support( 'wc-product-gallery-zoom' );
 			add_theme_support( 'wc-product-gallery-lightbox' );
 			add_theme_support( 'wc-product-gallery-slider' );
+
+			/**
+			 * Add 'storefront_woocommerce_setup' action.
+			 *
+			 * @since  2.4.0
+			 */
+			do_action( 'storefront_woocommerce_setup' );
 		}
 
 		/**
@@ -112,7 +120,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			$classes[] = 'woocommerce-active';
 
 			// Remove `no-wc-breadcrumb` body class.
-			$key = array_search( 'no-wc-breadcrumb', $classes );
+			$key = array_search( 'no-wc-breadcrumb', $classes, true );
 
 			if ( false !== $key ) {
 				unset( $classes[ $key ] );
@@ -251,7 +259,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Bookings
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-bookings-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bookings.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-bookings-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bookings.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-bookings-style', 'rtl', 'replace' );
 			}
 
@@ -259,7 +267,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Brands
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Brands' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/brands.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-brands-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/brands.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-brands-style', 'rtl', 'replace' );
 
 				wp_enqueue_script( 'storefront-woocommerce-brands', get_template_directory_uri() . '/assets/js/woocommerce/extensions/brands' . $suffix . '.js', array(), $storefront_version, true );
@@ -269,7 +277,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Wishlists
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Wishlists_Wishlist' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/wishlists.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-wishlists-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/wishlists.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-wishlists-style', 'rtl', 'replace' );
 			}
 
@@ -277,7 +285,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * AJAX Layered Nav
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'SOD_Widget_Ajax_Layered_Nav' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ajax-layered-nav.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-ajax-layered-nav-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ajax-layered-nav.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-ajax-layered-nav-style', 'rtl', 'replace' );
 			}
 
@@ -285,7 +293,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Variation Swatches
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_SwatchesPlugin' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-variation-swatches-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/variation-swatches.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-variation-swatches-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/variation-swatches.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-variation-swatches-style', 'rtl', 'replace' );
 			}
 
@@ -293,7 +301,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Composite Products
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Composite_Products' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-composite-products-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/composite-products.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-composite-products-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/composite-products.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-composite-products-style', 'rtl', 'replace' );
 			}
 
@@ -301,7 +309,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Photography
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Photography' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-photography-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/photography.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-photography-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/photography.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-photography-style', 'rtl', 'replace' );
 			}
 
@@ -309,7 +317,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * Product Reviews Pro
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-reviews-pro.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-product-reviews-pro-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-reviews-pro.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-product-reviews-pro-style', 'rtl', 'replace' );
 			}
 
@@ -317,7 +325,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Smart Coupons
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-smart-coupons-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/smart-coupons.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-smart-coupons-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/smart-coupons.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-smart-coupons-style', 'rtl', 'replace' );
 			}
 
@@ -325,7 +333,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Deposits
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Deposits' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-deposits-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/deposits.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-deposits-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/deposits.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-deposits-style', 'rtl', 'replace' );
 			}
 
@@ -333,7 +341,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Product Bundles
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bundles' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-bundles-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bundles.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-bundles-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/bundles.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-bundles-style', 'rtl', 'replace' );
 			}
 
@@ -341,7 +349,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Multiple Shipping Addresses
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Ship_Multiple' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-sma-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ship-multiple-addresses.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-sma-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/ship-multiple-addresses.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-sma-style', 'rtl', 'replace' );
 			}
 
@@ -349,7 +357,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Advanced Product Labels
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'Woocommerce_Advanced_Product_Labels' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-apl-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/advanced-product-labels.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-apl-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/advanced-product-labels.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-apl-style', 'rtl', 'replace' );
 			}
 
@@ -357,7 +365,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Mix and Match
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Mix_and_Match' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-mix-and-match-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/mix-and-match.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-mix-and-match-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/mix-and-match.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-mix-and-match-style', 'rtl', 'replace' );
 			}
 
@@ -365,7 +373,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Memberships
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Memberships' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-memberships-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/memberships.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-memberships-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/memberships.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-memberships-style', 'rtl', 'replace' );
 			}
 
@@ -373,7 +381,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			 * WooCommerce Quick View
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Quick_View' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-quick-view-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/quick-view.css', 'storefront-woocommerce-style' );
+				wp_enqueue_style( 'storefront-woocommerce-quick-view-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/quick-view.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-quick-view-style', 'rtl', 'replace' );
 			}
 
@@ -392,13 +400,14 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 * @return array $styles the css
 		 */
 		public function get_woocommerce_extension_css() {
-			$storefront_customizer = new Storefront_Customizer();
-			$storefront_theme_mods = $storefront_customizer->get_storefront_theme_mods();
+			global $storefront;
 
-			$woocommerce_extension_style                = '';
+			$storefront_theme_mods = $storefront->customizer->get_storefront_theme_mods();
+
+			$woocommerce_extension_style = '';
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Bookings' ) ) {
-				$woocommerce_extension_style                    .= '
+				$woocommerce_extension_style .= '
 				.wc-bookings-date-picker .ui-datepicker td.bookable a {
 					background-color: ' . $storefront_theme_mods['accent_color'] . ' !important;
 				}
@@ -414,7 +423,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Reviews_Pro' ) ) {
-				$woocommerce_extension_style                    .= '
+				$woocommerce_extension_style .= '
 				.woocommerce #reviews .product-rating .product-rating-details table td.rating-graph .bar,
 				.woocommerce-page #reviews .product-rating .product-rating-details table td.rating-graph .bar {
 					background-color: ' . $storefront_theme_mods['text_color'] . ' !important;
@@ -440,7 +449,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			if ( $this->is_woocommerce_extension_activated( 'WC_Smart_Coupons' ) ) {
-				$woocommerce_extension_style                    .= '
+				$woocommerce_extension_style .= '
 				.coupon-container {
 					background-color: ' . $storefront_theme_mods['button_background_color'] . ' !important;
 				}
@@ -457,6 +466,48 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			return apply_filters( 'storefront_customizer_woocommerce_extension_css', $woocommerce_extension_style );
+		}
+
+		/*
+		|--------------------------------------------------------------------------
+		| Integrations.
+		|--------------------------------------------------------------------------
+		*/
+
+		/**
+		 * Sets up integrations.
+		 *
+		 * @since  2.3.4
+		 *
+		 * @return void
+		 */
+		public function setup_integrations() {
+
+			if ( $this->is_woocommerce_extension_activated( 'WC_Bundles' ) ) {
+				add_filter( 'woocommerce_bundled_table_item_js_enqueued', '__return_true' );
+				add_filter( 'woocommerce_bundles_group_mode_options_data', array( $this, 'bundles_group_mode_options_data' ) );
+			}
+
+			if ( $this->is_woocommerce_extension_activated( 'WC_Composite_Products' ) ) {
+				add_filter( 'woocommerce_composited_table_item_js_enqueued', '__return_true' );
+				add_filter( 'woocommerce_display_composite_container_cart_item_data', '__return_true' );
+			}
+		}
+
+		/**
+		 * Add "Includes" meta to parent cart items.
+		 * Displayed only on handheld/mobile screens.
+		 *
+		 * @since  2.3.4
+		 *
+		 * @param  array  $group_mode_data
+		 * @return array
+		 */
+		public function bundles_group_mode_options_data( $group_mode_data ) {
+
+			$group_mode_data[ 'parent' ][ 'features' ][] = 'parent_cart_item_meta';
+
+			return $group_mode_data;
 		}
 	}
 

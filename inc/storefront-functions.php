@@ -56,7 +56,7 @@ function storefront_get_content_background_color() {
 	$bg_color = str_replace( '#', '', get_theme_mod( 'background_color' ) );
 
 	if ( class_exists( 'Storefront_Powerpack' ) || class_exists( 'Storefront_Designer' ) ) {
-		if ( $content_bg_color && ( 'true' == $content_frame || 'frame' == $content_frame ) ) {
+		if ( $content_bg_color && ( 'true' === $content_frame || 'frame' === $content_frame ) ) {
 			$bg_color = str_replace( '#', '', $content_bg_color );
 		}
 	}
@@ -129,28 +129,28 @@ function storefront_homepage_content_styles() {
  */
 function storefront_adjust_color_brightness( $hex, $steps ) {
 	// Steps should be between -255 and 255. Negative = darker, positive = lighter.
-	$steps  = max( -255, min( 255, $steps ) );
+	$steps = max( -255, min( 255, $steps ) );
 
 	// Format the hex color string.
-	$hex    = str_replace( '#', '', $hex );
+	$hex = str_replace( '#', '', $hex );
 
-	if ( 3 == strlen( $hex ) ) {
-		$hex    = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
+	if ( 3 === strlen( $hex ) ) {
+		$hex = str_repeat( substr( $hex, 0, 1 ), 2 ) . str_repeat( substr( $hex, 1, 1 ), 2 ) . str_repeat( substr( $hex, 2, 1 ), 2 );
 	}
 
 	// Get decimal values.
-	$r  = hexdec( substr( $hex, 0, 2 ) );
-	$g  = hexdec( substr( $hex, 2, 2 ) );
-	$b  = hexdec( substr( $hex, 4, 2 ) );
+	$r = hexdec( substr( $hex, 0, 2 ) );
+	$g = hexdec( substr( $hex, 2, 2 ) );
+	$b = hexdec( substr( $hex, 4, 2 ) );
 
 	// Adjust number of steps and keep it inside 0 to 255.
-	$r  = max( 0, min( 255, $r + $steps ) );
-	$g  = max( 0, min( 255, $g + $steps ) );
-	$b  = max( 0, min( 255, $b + $steps ) );
+	$r = max( 0, min( 255, $r + $steps ) );
+	$g = max( 0, min( 255, $g + $steps ) );
+	$b = max( 0, min( 255, $b + $steps ) );
 
-	$r_hex  = str_pad( dechex( $r ), 2, '0', STR_PAD_LEFT );
-	$g_hex  = str_pad( dechex( $g ), 2, '0', STR_PAD_LEFT );
-	$b_hex  = str_pad( dechex( $b ), 2, '0', STR_PAD_LEFT );
+	$r_hex = str_pad( dechex( $r ), 2, '0', STR_PAD_LEFT );
+	$g_hex = str_pad( dechex( $g ), 2, '0', STR_PAD_LEFT );
+	$b_hex = str_pad( dechex( $b ), 2, '0', STR_PAD_LEFT );
 
 	return '#' . $r_hex . $g_hex . $b_hex;
 }
@@ -185,7 +185,7 @@ function storefront_sanitize_choices( $input, $setting ) {
  * @since  1.5.0
  */
 function storefront_sanitize_checkbox( $checked ) {
-	return ( ( isset( $checked ) && true == $checked ) ? true : false );
+	return ( ( isset( $checked ) && true === $checked ) ? true : false );
 }
 
 /**

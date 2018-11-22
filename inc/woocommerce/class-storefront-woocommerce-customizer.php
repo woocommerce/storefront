@@ -56,42 +56,42 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			 */
 			$wp_customize->add_section(
 				'storefront_single_product_page', array(
-					'title'                 => __( 'Product Page', 'storefront' ),
-					'priority'              => 60,
+					'title'    => __( 'Product Page', 'storefront' ),
+					'priority' => 60,
 				)
 			);
 
 			$wp_customize->add_setting(
 				'storefront_product_pagination', array(
-					'default'               => apply_filters( 'storefront_default_product_pagination', true ),
-					'sanitize_callback'     => 'wp_validate_boolean',
+					'default'           => apply_filters( 'storefront_default_product_pagination', true ),
+					'sanitize_callback' => 'wp_validate_boolean',
 				)
 			);
 
 			$wp_customize->add_setting(
 				'storefront_sticky_add_to_cart', array(
-					'default'               => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
-					'sanitize_callback'     => 'wp_validate_boolean',
+					'default'           => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
+					'sanitize_callback' => 'wp_validate_boolean',
 				)
 			);
 
 			$wp_customize->add_control(
 				'storefront_sticky_add_to_cart', array(
-					'type'                  => 'checkbox',
-					'section'               => 'storefront_single_product_page',
-					'label'                 => __( 'Sticky Add-To-Cart', 'storefront' ),
-					'description'           => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'storefront' ),
-					'priority'              => 10,
+					'type'        => 'checkbox',
+					'section'     => 'storefront_single_product_page',
+					'label'       => __( 'Sticky Add-To-Cart', 'storefront' ),
+					'description' => __( 'A small content bar at the top of the browser window which includes relevant product information and an add-to-cart button. It slides into view once the standard add-to-cart button has scrolled out of view.', 'storefront' ),
+					'priority'    => 10,
 				)
 			);
 
 			$wp_customize->add_control(
 				'storefront_product_pagination', array(
-					'type'                  => 'checkbox',
-					'section'               => 'storefront_single_product_page',
-					'label'                 => __( 'Product Pagination', 'storefront' ),
-					'description'           => __( 'Displays next and previous links on product pages. A product thumbnail is displayed with the title revealed on hover.', 'storefront' ),
-					'priority'              => 20,
+					'type'        => 'checkbox',
+					'section'     => 'storefront_single_product_page',
+					'label'       => __( 'Product Pagination', 'storefront' ),
+					'description' => __( 'Displays next and previous links on product pages. A product thumbnail is displayed with the title revealed on hover.', 'storefront' ),
+					'priority'    => 20,
 				)
 			);
 		}
@@ -108,7 +108,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
 			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
 
-			$styles    = '
+			$styles = '
 			a.cart-contents,
 			.site-header-cart .widget_shopping_cart a {
 				color: ' . $storefront_theme_mods['header_link_color'] . ';

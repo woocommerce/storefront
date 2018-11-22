@@ -19,7 +19,7 @@ class Arbitrary_Storefront_Control extends WP_Customize_Control {
 	 *
 	 * @var string $settings the blog name.
 	 */
-	public $settings    = 'blogname';
+	public $settings = 'blogname';
 
 	/**
 	 * The description var

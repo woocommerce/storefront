@@ -32,7 +32,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
 
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
 				add_filter( 'storefront_starter_content', '__return_empty_array' );
 			}
 		}
@@ -58,40 +58,40 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		public function starter_content() {
 			$starter_content = array(
-				'posts' => array(
-					'home' => array(
+				'posts'       => array(
+					'home'    => array(
 						'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
 						/* translators: %s: 'End Of Line' symbol */
 						'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
 						'template'     => 'template-homepage.php',
 						'thumbnail'    => '{{hero-image}}',
 					),
-					'about' => array(
-						'post_type' => 'page',
-						'post_title' => __( 'About', 'storefront' ),
+					'about'   => array(
+						'post_type'    => 'page',
+						'post_title'   => __( 'About', 'storefront' ),
 						'post_content' => __( 'You might be an artist who would like to introduce yourself and your work here or maybe you&rsquo;re a business with a mission to describe.', 'storefront' ),
 					),
 					'contact' => array(
-						'post_type' => 'page',
-						'post_title' => __( 'Contact', 'storefront' ),
+						'post_type'    => 'page',
+						'post_title'   => __( 'Contact', 'storefront' ),
 						'post_content' => __( 'This is a page with some basic contact information, such as an address and phone number. You might also try a plugin to add a contact form.', 'storefront' ),
 					),
 					'blog',
 				),
 				'attachments' => array(
-					'beanie-image' => array(
+					'beanie-image'             => array(
 						'post_title' => 'Beanie',
 						'file'       => 'assets/images/customizer/starter-content/products/beanie.jpg',
 					),
-					'belt-image' => array(
+					'belt-image'               => array(
 						'post_title' => 'Belt',
 						'file'       => 'assets/images/customizer/starter-content/products/belt.jpg',
 					),
-					'cap-image' => array(
+					'cap-image'                => array(
 						'post_title' => 'Cap',
 						'file'       => 'assets/images/customizer/starter-content/products/cap.jpg',
 					),
-					'hoodie-with-logo-image' => array(
+					'hoodie-with-logo-image'   => array(
 						'post_title' => 'Hoodie with Logo',
 						'file'       => 'assets/images/customizer/starter-content/products/hoodie-with-logo.jpg',
 					),
@@ -103,53 +103,53 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'post_title' => 'Hoodie with Zipper',
 						'file'       => 'assets/images/customizer/starter-content/products/hoodie-with-zipper.jpg',
 					),
-					'hoodie-image' => array(
+					'hoodie-image'             => array(
 						'post_title' => 'Hoodie',
 						'file'       => 'assets/images/customizer/starter-content/products/hoodie.jpg',
 					),
-					'long-sleeve-tee-image' => array(
+					'long-sleeve-tee-image'    => array(
 						'post_title' => 'Long Sleeve Tee',
 						'file'       => 'assets/images/customizer/starter-content/products/long-sleeve-tee.jpg',
 					),
-					'polo-image' => array(
+					'polo-image'               => array(
 						'post_title' => 'Polo',
 						'file'       => 'assets/images/customizer/starter-content/products/polo.jpg',
 					),
-					'sunglasses-image' => array(
+					'sunglasses-image'         => array(
 						'post_title' => 'Sunglasses',
 						'file'       => 'assets/images/customizer/starter-content/products/sunglasses.jpg',
 					),
-					'tshirt-image' => array(
+					'tshirt-image'             => array(
 						'post_title' => 'Tshirt',
 						'file'       => 'assets/images/customizer/starter-content/products/tshirt.jpg',
 					),
-					'vneck-tee-image' => array(
+					'vneck-tee-image'          => array(
 						'post_title' => 'Vneck Tshirt',
 						'file'       => 'assets/images/customizer/starter-content/products/vneck-tee.jpg',
 					),
-					'hero-image' => array(
+					'hero-image'               => array(
 						'post_title' => 'Hero',
 						'file'       => 'assets/images/customizer/starter-content/hero.jpg',
 					),
-					'accessories-image' => array(
+					'accessories-image'        => array(
 						'post_title' => 'Accessories',
 						'file'       => 'assets/images/customizer/starter-content/categories/accessories.jpg',
 					),
-					'tshirts-image' => array(
+					'tshirts-image'            => array(
 						'post_title' => 'T-shirts',
 						'file'       => 'assets/images/customizer/starter-content/categories/tshirts.jpg',
 					),
-					'hoodies-image' => array(
+					'hoodies-image'            => array(
 						'post_title' => 'Hoodies',
 						'file'       => 'assets/images/customizer/starter-content/categories/hoodies.jpg',
 					),
 				),
-				'options' => array(
+				'options'     => array(
 					'show_on_front'  => 'page',
 					'page_on_front'  => '{{home}}',
 					'page_for_posts' => '{{blog}}',
 				),
-				'widgets' => array(
+				'widgets'     => array(
 					'footer-1' => array(
 						'text_about',
 					),
@@ -157,29 +157,29 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'text_business_info',
 					),
 				),
-				'nav_menus' => array(
-					'primary' => array(
-						'name' => __( 'Primary Menu', 'storefront' ),
+				'nav_menus'   => array(
+					'primary'   => array(
+						'name'  => __( 'Primary Menu', 'storefront' ),
 						'items' => array(
-							'shop' => array(
+							'shop'         => array(
 								'type'      => 'post_type',
 								'object'    => 'page',
 								'object_id' => '{{sf_shop}}',
 							),
-							'page_about' => array(
-								'type' => 'post_type',
-								'object' => 'page',
+							'page_about'   => array(
+								'type'      => 'post_type',
+								'object'    => 'page',
 								'object_id' => '{{about}}',
 							),
 							'page_contact' => array(
-								'type' => 'post_type',
-								'object' => 'page',
+								'type'      => 'post_type',
+								'object'    => 'page',
 								'object_id' => '{{contact}}',
 							),
 						),
 					),
 					'secondary' => array(
-						'name' => __( 'Secondary Menu', 'storefront' ),
+						'name'  => __( 'Secondary Menu', 'storefront' ),
 						'items' => array(
 							'my_account' => array(
 								'type'      => 'post_type',
@@ -188,8 +188,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 							),
 						),
 					),
-					'handheld' => array(
-						'name' => __( 'Handheld Menu', 'storefront' ),
+					'handheld'  => array(
+						'name'  => __( 'Handheld Menu', 'storefront' ),
 						'items' => array(
 							'shop' => array(
 								'type'      => 'post_type',
@@ -246,14 +246,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return array $content
 		 */
 		public function filter_start_content( $content, $config ) {
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) {
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
 				return $content;
 			}
 
 			$tasks = array();
 
-			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) {
-				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) );
+			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // WPCS: input var ok.
+				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ); // WPCS: input var ok.
 			}
 
 			$tasks = $this->_validate_tasks( $tasks );
@@ -535,7 +535,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			// Get Categories.
 			$product_cats = get_terms(
 				'product_cat', array(
-					'fields' => 'ids',
+					'fields'     => 'ids',
 					'hide_empty' => false,
 				)
 			);
@@ -562,7 +562,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @param WP_Post $post       Post data.
 		 */
 		public function transition_post_status( $new_status, $old_status, $post ) {
-			if ( 'publish' === $new_status && 'auto-draft' === $old_status && in_array( $post->post_type, array( 'product' ) ) ) {
+			if ( 'publish' === $new_status && 'auto-draft' === $old_status && in_array( $post->post_type, array( 'product' ), true ) ) {
 				$post_name = get_post_meta( $post->ID, '_customize_draft_post_name', true );
 
 				$starter_products = $this->_starter_content_products();
@@ -593,7 +593,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 			$post = get_post( $post_id );
 
-			if ( $post && 'auto-draft' === $post->post_status && in_array( $post->post_type, array( 'product' ) ) && 'AUTO-DRAFT' === $post->post_title ) {
+			if ( $post && 'auto-draft' === $post->post_status && in_array( $post->post_type, array( 'product' ), true ) && 'AUTO-DRAFT' === $post->post_title ) {
 				$post_name = get_post_meta( $post->ID, '_customize_draft_post_name', true );
 
 				$starter_products = $this->_starter_content_products();
@@ -615,15 +615,15 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$accessories_name        = esc_attr__( 'Accessories', 'storefront' );
 			$accessories_description = esc_attr__( 'A short category description', 'storefront' );
 
-			$hoodies_name            = esc_attr__( 'Hoodies', 'storefront' );
-			$hoodies_description     = esc_attr__( 'A short category description', 'storefront' );
+			$hoodies_name        = esc_attr__( 'Hoodies', 'storefront' );
+			$hoodies_description = esc_attr__( 'A short category description', 'storefront' );
 
-			$tshirts_name            = esc_attr__( 'Tshirts', 'storefront' );
-			$tshirts_description     = esc_attr__( 'A short category description', 'storefront' );
+			$tshirts_name        = esc_attr__( 'Tshirts', 'storefront' );
+			$tshirts_description = esc_attr__( 'A short category description', 'storefront' );
 
 			$products = array(
 				// Accessories.
-				'beanie' => array(
+				'beanie'             => array(
 					'post_title'     => esc_attr__( 'Beanie', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -635,7 +635,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'sale_price'    => '18',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $accessories_name,
@@ -645,7 +645,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'belt' => array(
+				'belt'               => array(
 					'post_title'     => esc_attr__( 'Belt', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -657,7 +657,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'sale_price'    => '55',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $accessories_name,
@@ -667,7 +667,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'cap' => array(
+				'cap'                => array(
 					'post_title'     => esc_attr__( 'Cap', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -679,7 +679,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'sale_price'    => '16',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $accessories_name,
@@ -689,7 +689,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'sunglasses' => array(
+				'sunglasses'         => array(
 					'post_title'     => esc_attr__( 'Sunglasses', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -700,7 +700,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '90',
 						'featured'      => true,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $accessories_name,
@@ -710,7 +710,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'hoodie-with-logo' => array(
+				'hoodie-with-logo'   => array(
 					'post_title'     => esc_attr__( 'Hoodie with Logo', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -721,7 +721,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '45',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $hoodies_name,
@@ -743,7 +743,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'sale_price'    => '35',
 						'featured'      => true,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $hoodies_name,
@@ -764,7 +764,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '45',
 						'featured'      => true,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $hoodies_name,
@@ -774,7 +774,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'hoodie' => array(
+				'hoodie'             => array(
 					'post_title'     => esc_attr__( 'Hoodie', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -786,7 +786,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'sale_price'    => '42',
 						'featured'      => true,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $hoodies_name,
@@ -796,7 +796,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'long-sleeve-tee' => array(
+				'long-sleeve-tee'    => array(
 					'post_title'     => esc_attr__( 'Long Sleeve Tee', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -807,7 +807,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '25',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $tshirts_name,
@@ -817,7 +817,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'polo' => array(
+				'polo'               => array(
 					'post_title'     => esc_attr__( 'Polo', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -828,7 +828,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '20',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $tshirts_name,
@@ -838,7 +838,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'tshirt' => array(
+				'tshirt'             => array(
 					'post_title'     => esc_attr__( 'Tshirt', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -849,7 +849,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '18',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $tshirts_name,
@@ -859,7 +859,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						),
 					),
 				),
-				'vneck-tee' => array(
+				'vneck-tee'          => array(
 					'post_title'     => esc_attr__( 'Vneck Tshirt', 'storefront' ),
 					'post_content'   => 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.',
 					'post_type'      => 'product',
@@ -870,7 +870,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 						'price'         => '18',
 						'featured'      => false,
 					),
-					'taxonomy' => array(
+					'taxonomy'       => array(
 						'product_cat' => array(
 							array(
 								'term'        => $tshirts_name,
