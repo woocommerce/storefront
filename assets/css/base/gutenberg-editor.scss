@@ -1,0 +1,7 @@
+// Galleries
+.wp-block-gallery {
+	.blocks-gallery-image,
+	.blocks-gallery-item {
+		flex-grow: 0;
+	}
+}
