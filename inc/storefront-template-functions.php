@@ -13,7 +13,7 @@ if ( ! function_exists( 'storefront_display_comments' ) ) {
 	 */
 	function storefront_display_comments() {
 		// If comments are open or we have at least one comment, load up the comment template.
-		if ( comments_open() || '0' !== get_comments_number() ) :
+		if ( comments_open() || 0 !== intval( get_comments_number() ) ) :
 			comments_template();
 		endif;
 	}
@@ -451,7 +451,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 		// Comments.
 		$comments = '';
 
-		if ( ! post_password_required() && ( comments_open() || '0' !== get_comments_number() ) ) {
+		if ( ! post_password_required() && ( comments_open() || 0 !== intval( get_comments_number() ) ) ) {
 			$comments_number = get_comments_number_text( __( 'Leave a comment', 'storefront' ), __( '1 Comment', 'storefront' ), __( '% Comments', 'storefront' ) );
 
 			$comments = sprintf(
