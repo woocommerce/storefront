@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 4.9
-Stable tag: 2.4.0-dev
-Version: 2.4.0-dev
+Tested up to: 5.0
+Stable tag: 2.3.5
+Version: 2.4.0-beta1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
@@ -48,6 +48,13 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.4.0 - 2018-11-23 =
+* New - Adds support for the new blocks introduced in WordPress 5.0.
+* Tweak - Remove legacy Jetpack logo feature.
+* Tweak - Move all WooCommerce related code inside of the `inc/woocommerce` directory.
+* Fix - Allow zooming and scaling for improved accessibility.
+* Fix - Multiple code standards improvements.
 
 = 2.3.5 - 2018-10-24 =
 * Fix - Use Pointer Events API for consistency across touchscreen devices when interacting with menus.
