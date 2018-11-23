@@ -435,9 +435,9 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 		);
 
 		$posted_on = sprintf(
+			'<span class="posted-on">%s <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>',
 			/* translators: %s: post date */
-			_x( 'Posted on %s', 'post date', 'storefront' ),
-			'<span class="posted-on"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>'
+			_x( 'Posted on', 'post date', 'storefront' )
 		);
 
 		// Author.
@@ -464,7 +464,7 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 		echo wp_kses(
 			sprintf( '%1$s %2$s %3$s', $posted_on, $author, $comments ), array(
 				'span' => array(
-					'class'  => array(),
+					'class' => array(),
 				),
 				'a'    => array(
 					'href'  => array(),
