@@ -403,6 +403,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$classes[] = 'storefront-secondary-navigation';
 			}
 
+			// Add class if align-wide is supported.
+			if ( current_theme_supports( 'align-wide' ) ) {
+				$classes[] = 'storefront-align-wide';
+			}
+
 			return $classes;
 		}
 
