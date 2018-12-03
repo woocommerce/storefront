@@ -13,8 +13,8 @@
 .hentry .entry-content {
 	// Global
 	@media ( min-width: $container-width ) {
-		.page-template-template-fullwidth-php &,
-		.storefront-full-width-content & {
+		.storefront-align-wide.page-template-template-fullwidth-php &,
+		.storefront-align-wide.storefront-full-width-content & {
 			.alignfull,
 			.alignwide {
 				width: auto;
@@ -278,8 +278,8 @@
 		}
 
 		@media ( min-width: $container-width ) {
-			.page-template-template-fullwidth-php &,
-			.storefront-full-width-content & {
+			.storefront-align-wide.page-template-template-fullwidth-php &,
+			.storefront-align-wide.storefront-full-width-content & {
 				&.alignfull,
 				&.alignwide {
 					padding-left: 0;
@@ -322,8 +322,8 @@
 		}
 
 		@media ( min-width: $container-width ) {
-			.page-template-template-fullwidth-php &,
-			.storefront-full-width-content & {
+			.storefront-align-wide.page-template-template-fullwidth-php &,
+			.storefront-align-wide.storefront-full-width-content & {
 				&.alignfull,
 				&.alignwide {
 					padding-left: 0;
