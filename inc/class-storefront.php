@@ -27,6 +27,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_assets' ) );
 			add_filter( 'body_class', array( $this, 'body_classes' ) );
 			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
@@ -181,7 +182,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Enqueue editor styles.
 			 */
-			add_editor_style( 'assets/css/base/gutenberg-editor.css' );
+			add_editor_style( array( 'assets/css/base/gutenberg-editor.css', $this->google_fonts() ) );
 
 			/**
 			 * Add support for responsive embedded content.
@@ -290,20 +291,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Fonts
 			 */
-			$google_fonts = apply_filters(
-				'storefront_google_font_families', array(
-					'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
-				)
-			);
-
-			$query_args = array(
-				'family' => implode( '|', $google_fonts ),
-				'subset' => rawurlencode( 'latin,latin-ext' ),
-			);
-
-			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-
-			wp_enqueue_style( 'storefront-fonts', $fonts_url, array(), null );
+			wp_enqueue_style( 'storefront-fonts', $this->google_fonts(), array(), null );
 
 			/**
 			 * Scripts
@@ -331,6 +319,41 @@ if ( ! class_exists( 'Storefront' ) ) :
 			}
 
 			wp_enqueue_script( 'jquery-pep', get_template_directory_uri() . '/assets/js/vendor/pep.min.js', array(), '0.4.3', true );
+		}
+
+		/**
+		 * Register Google fonts.
+		 *
+		 * @since 2.4.0
+		 * @return string Google fonts URL for the theme.
+		 */
+		public function google_fonts() {
+			$google_fonts = apply_filters(
+				'storefront_google_font_families', array(
+					'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
+				)
+			);
+
+			$query_args = array(
+				'family' => implode( '|', $google_fonts ),
+				'subset' => rawurlencode( 'latin,latin-ext' ),
+			);
+
+			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+
+			return $fonts_url;
+		}
+
+		/**
+		 * Enqueue supplemental block editor styles.
+		 *
+		 * @since 2.4.0
+		 */
+		public function block_editor_assets() {
+			global $storefront_version;
+
+			wp_enqueue_style( 'storefront-editor-block-styles', get_theme_file_uri( '/assets/css/base/gutenberg-blocks.css' ), false, $storefront_version, 'all' );
+			wp_style_add_data( 'storefront-editor-block-styles', 'rtl', 'replace' );
 		}
 
 		/**
