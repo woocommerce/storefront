@@ -10,6 +10,9 @@
 @import '../sass/utils/mixins';
 @import '../sass/vendors/modular-scale';
 
+/**
+ * Front-end only styles
+ */
 .hentry .entry-content {
 	// Global
 	@media ( min-width: $container-width ) {
@@ -35,6 +38,40 @@
 		}
 	}
 
+	// Image
+	.wp-block-image {
+		@media ( min-width: $container-width ) {
+			.storefront-align-wide.page-template-template-fullwidth-php &,
+			.storefront-align-wide.storefront-full-width-content & {
+				&.alignfull,
+				&.alignwide {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+
+	.wp-block-cover-image,
+	.wp-block-cover {
+		@media ( min-width: $container-width ) {
+			.storefront-align-wide.page-template-template-fullwidth-php &,
+			.storefront-align-wide.storefront-full-width-content & {
+				&.alignfull,
+				&.alignwide {
+					padding-left: 0;
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * Front-end + editor styles
+ */
+.hentry .entry-content,
+.editor-styles-wrapper {
 	// Typography
 	.has-small-font-size {
 		font-size: ms(-1);
@@ -179,8 +216,8 @@
 		@media (min-width:600px) {
 			@for $i from 2 through 6 {
 				&.columns-#{$i} li {
-					margin-right: gutter(9);
-					width: span(9 / $i);
+					margin-right: gutter(12);
+					width: span(12 / $i);
 
 					&:nth-of-type( #{$i}n ) {
 						margin-right: 0;
@@ -188,12 +225,11 @@
 				}
 			}
 
-			.page-template-template-fullwidth-php &,
-			.storefront-full-width-content & {
+			body:not( .page-template-template-fullwidth-php ):not( .storefront-full-width-content ) & {
 				@for $i from 2 through 6 {
 					&.columns-#{$i} li {
-						margin-right: gutter(12);
-						width: span(12 / $i);
+						margin-right: gutter(9);
+						width: span(9 / $i);
 
 						&:nth-of-type( #{$i}n ) {
 							margin-right: 0;
@@ -235,7 +271,7 @@
 	// Blockquote
 	.wp-block-quote {
 		margin: 0 0 ms(2);
-		padding: 0;
+		padding: 0 0 0 1em;
 
 		&.is-large,
 		&.is-style-large {
@@ -250,7 +286,8 @@
 		}
 
 		footer,
-		cite {
+		cite,
+		&__citation {
 			color: $color_body;
 			font-size: ms(1);
 			font-weight: 700;
@@ -275,17 +312,6 @@
 			font-size: ms(-1);
 			font-style: italic;
 			color: $color_body;
-		}
-
-		@media ( min-width: $container-width ) {
-			.storefront-align-wide.page-template-template-fullwidth-php &,
-			.storefront-align-wide.storefront-full-width-content & {
-				&.alignfull,
-				&.alignwide {
-					padding-left: 0;
-					padding-right: 0;
-				}
-			}
 		}
 	}
 
@@ -356,14 +382,14 @@
 		@media (min-width:600px) {
 			.blocks-gallery-image,
 			.blocks-gallery-item {
-				margin: 0 gutter(9) gutter(9) 0;
+				margin: 0 gutter(12) gutter(12) 0;
 			}
 
 			@for $i from 2 through 8 {
 				&.columns-#{$i} .blocks-gallery-image,
 				&.columns-#{$i} .blocks-gallery-item {
-					margin-right: gutter(9);
-					width: calc(( 100% - #{gutter(9)} * #{$i - 1} ) / #{$i});
+					margin-right: gutter(12);
+					width: calc(( 100% - #{gutter(12)} * #{$i - 1} ) / #{$i});
 
 					&:nth-of-type( #{$i}n ) {
 						margin-right: 0;
@@ -371,19 +397,18 @@
 				}
 			}
 
-			.page-template-template-fullwidth-php &,
-			.storefront-full-width-content & {
+			body:not( .page-template-template-fullwidth-php ):not( .storefront-full-width-content ) & {
 				.blocks-gallery-image,
 				.blocks-gallery-item {
-					margin-bottom: gutter(12);
-					margin-right: gutter(12);
+					margin-bottom: gutter(9);
+					margin-right: gutter(9);
 				}
 
 				@for $i from 2 through 8 {
 					&.columns-#{$i} .blocks-gallery-image,
 					&.columns-#{$i} .blocks-gallery-item {
-						margin-right: gutter(12);
-						width: calc(( 100% - #{gutter(12)} * #{$i - 1} ) / #{$i});
+						margin-right: gutter(9);
+						width: calc(( 100% - #{gutter(9)} * #{$i - 1} ) / #{$i});
 
 						&:nth-of-type( #{$i}n ) {
 							margin-right: 0;
@@ -482,7 +507,7 @@
 
 			@media (min-width:600px) {
 				padding-left: 0;
-				padding-right: gutter(9);
+				padding-right: gutter(12);
 				margin-left: 0;
 
 				&:not( :last-child ) {
@@ -493,9 +518,8 @@
 					padding-right: 0;
 				}
 
-				.page-template-template-fullwidth-php &,
-				.storefront-full-width-content & {
-					padding-right: gutter(12);
+				body:not( .page-template-template-fullwidth-php ):not( .storefront-full-width-content ) & {
+					padding-right: gutter(9);
 
 					&:nth-of-type( even ) {
 						padding-right: 0;
@@ -524,15 +548,14 @@
 
 				&:not( :last-child ) {
 					padding-right: 0;
-					margin-right: gutter(9);
+					margin-right: gutter(12);
 				}
 
-				.page-template-template-fullwidth-php &,
-				.storefront-full-width-content & {
+				body:not( .page-template-template-fullwidth-php ):not( .storefront-full-width-content ) & {
 					padding-right: 0;
 
 					&:not( :last-child ) {
-						margin-right: gutter(12);
+						margin-right: gutter(9);
 					}
 				}
 			}
