@@ -897,6 +897,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 		/**
 		 * Enqueue dynamic colors to use editor blocks.
+		 *
+		 * @since 2.4.0
 		 */
 		public static function block_editor_customizer_css() {
 			global $storefront_version;
