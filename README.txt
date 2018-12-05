@@ -2,11 +2,11 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.0
-Stable tag: 2.3.5
-Version: 2.4.0-beta1
+Stable tag: 2.4.0
+Version: 2.4.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options
+Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
 
 Storefront is the perfect theme for your next WooCommerce project.
 
@@ -49,8 +49,9 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.4.0 - 2018-11-23 =
-* New - Adds support for the new blocks introduced in WordPress 5.0.
+= 2.4.0 - 2018-12-06 =
+* Feature - Add support for the new blocks introduced in WordPress 5.0.
+* Feature - Gutenberg editor styles.
 * Tweak - Remove legacy Jetpack logo feature.
 * Tweak - Move all WooCommerce related code inside of the `inc/woocommerce` directory.
 * Fix - Allow zooming and scaling for improved accessibility.
