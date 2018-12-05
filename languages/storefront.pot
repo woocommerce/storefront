@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.4.0-beta1\n"
+"Project-Id-Version: Storefront 2.4.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2018-11-23 17:14:36+00:00\n"
+"POT-Creation-Date: 2018-12-05 22:55:06+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -184,64 +184,64 @@ msgstr ""
 msgid "Learn more"
 msgstr ""
 
-#: inc/class-storefront.php:91
+#: inc/class-storefront.php:92
 #: inc/nux/class-storefront-nux-starter-content.php:162
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-storefront.php:92
+#: inc/class-storefront.php:93
 #: inc/nux/class-storefront-nux-starter-content.php:182
 msgid "Secondary Menu"
 msgstr ""
 
-#: inc/class-storefront.php:93
+#: inc/class-storefront.php:94
 #: inc/nux/class-storefront-nux-starter-content.php:192
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/class-storefront.php:199
+#: inc/class-storefront.php:200
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-storefront.php:205
+#: inc/class-storefront.php:206
 msgid "Below Header"
 msgstr ""
 
-#: inc/class-storefront.php:207
+#: inc/class-storefront.php:208
 msgid ""
 "Widgets added to this region will appear beneath the header and above the "
 "main content."
 msgstr ""
 
-#: inc/class-storefront.php:220
+#: inc/class-storefront.php:221
 #. translators: 1: column number
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-storefront.php:223
+#: inc/class-storefront.php:224
 #. translators: 1: column number
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-storefront.php:226
+#: inc/class-storefront.php:227
 #. translators: 1: row number, 2: column number
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-storefront.php:229
+#: inc/class-storefront.php:230
 #. translators: 1: column number, 2: row number
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:318
+#: inc/class-storefront.php:306
 msgid "Expand child menu"
 msgstr ""
 
-#: inc/class-storefront.php:319
+#: inc/class-storefront.php:307
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/class-storefront.php:413
+#: inc/class-storefront.php:441
 msgid "Post Navigation"
 msgstr ""
 
@@ -265,94 +265,94 @@ msgid ""
 "it!"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:121
+#: inc/customizer/class-storefront-customizer.php:122
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:125
+#: inc/customizer/class-storefront-customizer.php:126
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:170
+#: inc/customizer/class-storefront-customizer.php:171
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:188
-#: inc/customizer/class-storefront-customizer.php:401
+#: inc/customizer/class-storefront-customizer.php:189
+#: inc/customizer/class-storefront-customizer.php:402
 msgid "Heading color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:209
-#: inc/customizer/class-storefront-customizer.php:327
-#: inc/customizer/class-storefront-customizer.php:422
-#: inc/customizer/class-storefront-customizer.php:496
+#: inc/customizer/class-storefront-customizer.php:210
+#: inc/customizer/class-storefront-customizer.php:328
+#: inc/customizer/class-storefront-customizer.php:423
+#: inc/customizer/class-storefront-customizer.php:497
 msgid "Text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:230
+#: inc/customizer/class-storefront-customizer.php:231
 msgid "Link / accent color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:251
+#: inc/customizer/class-storefront-customizer.php:252
 msgid "Hero heading color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:273
+#: inc/customizer/class-storefront-customizer.php:274
 msgid "Hero text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:287
+#: inc/customizer/class-storefront-customizer.php:288
 msgid "Header background image"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:306
-#: inc/customizer/class-storefront-customizer.php:380
-#: inc/customizer/class-storefront-customizer.php:475
+#: inc/customizer/class-storefront-customizer.php:307
+#: inc/customizer/class-storefront-customizer.php:381
+#: inc/customizer/class-storefront-customizer.php:476
 msgid "Background color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:348
-#: inc/customizer/class-storefront-customizer.php:443
+#: inc/customizer/class-storefront-customizer.php:349
+#: inc/customizer/class-storefront-customizer.php:444
 msgid "Link color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:361
+#: inc/customizer/class-storefront-customizer.php:362
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:363
+#: inc/customizer/class-storefront-customizer.php:364
 msgid "Customize the look & feel of your website footer."
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:456
+#: inc/customizer/class-storefront-customizer.php:457
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:458
+#: inc/customizer/class-storefront-customizer.php:459
 msgid "Customize the look & feel of your website buttons."
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:517
+#: inc/customizer/class-storefront-customizer.php:518
 msgid "Alternate button background color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:538
+#: inc/customizer/class-storefront-customizer.php:539
 msgid "Alternate button text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:551
+#: inc/customizer/class-storefront-customizer.php:552
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:568
+#: inc/customizer/class-storefront-customizer.php:569
 msgid "General Layout"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:584
+#: inc/customizer/class-storefront-customizer.php:585
 msgid "More"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:599
+#: inc/customizer/class-storefront-customizer.php:600
 msgid "Looking for more options?"
 msgstr ""
 
