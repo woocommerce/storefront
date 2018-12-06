@@ -1,7 +1,7 @@
 {
   "name": "storefront",
   "title": "Storefront",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "homepage": "http://woocommerce.com/storefront/",
   "repository": {
     "type": "git",
@@ -10,7 +10,8 @@
   "scripts": {
     "build": "grunt",
     "css": "grunt css",
-    "watch": "grunt watch"
+    "watch": "grunt watch",
+    "deploy": "grunt deploy"
   },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",

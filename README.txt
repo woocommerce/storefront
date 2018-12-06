@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.0
-Stable tag: 2.4.0
-Version: 2.4.0
+Stable tag: 2.4.1
+Version: 2.4.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.4.1 - 2018-12-06 =
+* Fix - Fatal error caused by a method incorrectly defined as static.
+* Fix - Remove unnecessary trailing slash in the first `load_theme_textdomain()` call.
 
 = 2.4.0 - 2018-12-06 =
 * Feature - Add support for the new blocks introduced in WordPress 5.0.
