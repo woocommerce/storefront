@@ -49,7 +49,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 
 			// Loads wp-content/languages/themes/storefront-it_IT.mo.
-			load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes/' );
+			load_theme_textdomain( 'storefront', trailingslashit( WP_LANG_DIR ) . 'themes' );
 
 			// Loads wp-content/themes/child-theme-name/languages/it_IT.mo.
 			load_theme_textdomain( 'storefront', get_stylesheet_directory() . '/languages' );
