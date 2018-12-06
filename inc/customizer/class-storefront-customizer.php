@@ -900,9 +900,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 *
 		 * @since 2.4.0
 		 */
-		public static function block_editor_customizer_css() {
-			global $storefront_version;
-
+		public function block_editor_customizer_css() {
 			$storefront_theme_mods = $this->get_storefront_theme_mods();
 			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
 			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
