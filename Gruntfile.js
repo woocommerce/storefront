@@ -319,7 +319,10 @@ module.exports = function( grunt ) {
 					'!Gruntfile.js',
 					'!package.json',
 					'!package-lock.json',
+					'!composer.lock',
+					'!phpcs.xml',
 					'!node_modules/**',
+					'!vendor/**',
 					'!.DS_Store',
 					'!npm-debug.log',
 					'!composer.json',
@@ -485,6 +488,7 @@ module.exports = function( grunt ) {
 	]);
 
 	grunt.registerTask( 'deploy', [
+		'dev',
 		'copy',
 		'compress'
 	]);
