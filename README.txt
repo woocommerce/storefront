@@ -56,6 +56,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 = 2.4.0 - 2018-12-06 =
 * Feature - Add support for the new blocks introduced in WordPress 5.0.
 * Feature - Gutenberg editor styles.
+* Feature - Redesign blog post templates.
 * Tweak - Remove legacy Jetpack logo feature.
 * Tweak - Move all WooCommerce related code inside of the `inc/woocommerce` directory.
 * Fix - Allow zooming and scaling for improved accessibility.
