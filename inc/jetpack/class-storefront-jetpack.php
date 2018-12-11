@@ -61,21 +61,21 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		public function jetpack_infinite_scroll_loop() {
 			do_action( 'storefront_jetpack_infinite_scroll_before' );
 
-			if ( storefront_is_product_archive() ) {
+			if ( function_exists( 'storefront_is_product_archive' ) && storefront_is_product_archive() ) {
 				do_action( 'storefront_jetpack_product_infinite_scroll_before' );
 				woocommerce_product_loop_start();
 			}
 
 			while ( have_posts() ) :
 				the_post();
-				if ( storefront_is_product_archive() ) {
+				if ( function_exists( 'storefront_is_product_archive' ) && storefront_is_product_archive() ) {
 					wc_get_template_part( 'content', 'product' );
 				} else {
 					get_template_part( 'content', get_post_format() );
 				}
 			endwhile; // end of the loop.
 
-			if ( storefront_is_product_archive() ) {
+			if ( function_exists( 'storefront_is_product_archive' ) && storefront_is_product_archive() ) {
 				woocommerce_product_loop_end();
 				do_action( 'storefront_jetpack_product_infinite_scroll_after' );
 			}
