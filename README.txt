@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.4.2 - 2018-12-10 =
+= 2.4.2 - 2018-12-11 =
 * Fix - Load in `functions.php` missing `storefront-woocommerce-functions.php` file required for compatibility with Jetpack's Infinite Scroll feature.
 * Dev - Update order of Sass import files in `gutenberg-blocks.scss` and `gutenberg-editor.scss` to ensure that these are compiled correctly.
 * Dev - Update Grunt tasks.
@@ -157,7 +157,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Tweak - Added vcard markup to template.
 * Tweak - Improved My Account Payment Methods styles.
 * Tweak - Improved the Bookings calendar styles.
-* Tweak - Removed jQuery dependency. Kudos [@valdrinkoshi](https://github.com/valdrinkoshi). 
+* Tweak - Removed jQuery dependency. Kudos [@valdrinkoshi](https://github.com/valdrinkoshi).
 * Tweak - Added "Navigation menus" step to Guided tour.
 * Tweak - Guided tour in the Customizer is now shown to all sites.
 * Dev - Removed non-standard outdated CSS. Kudos [@ElectricFeet](https://github.com/ElectricFeet).
