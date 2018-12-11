@@ -920,6 +920,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
 			}
 
+			.editor-post-title__block .editor-post-title__input,
 			.editor-styles-wrapper h1,
 			.editor-styles-wrapper h2,
 			.editor-styles-wrapper h3,
