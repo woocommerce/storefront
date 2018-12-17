@@ -832,33 +832,36 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			// Gutenberg.
 			$styles = '
-				.wp-block-button .wp-block-button__link {
-					border-color: ' . $storefront_theme_mods['button_background_color'] . ';
-				}
-
-				.wp-block-button:not(.has-text-color) .wp-block-button__link {
+				.wp-block-button__link:not(.has-text-color) {
 					color: ' . $storefront_theme_mods['button_text_color'] . ';
 				}
 
-				.wp-block-button:not(.has-text-color) .wp-block-button__link:hover,
-				.wp-block-button:not(.has-text-color) .wp-block-button__link:focus,
-				.wp-block-button:not(.has-text-color) .wp-block-button__link:active {
+				.wp-block-button__link:not(.has-text-color):hover,
+				.wp-block-button__link:not(.has-text-color):focus,
+				.wp-block-button__link:not(.has-text-color):active {
 					color: ' . $storefront_theme_mods['button_text_color'] . ';
 				}
 
-				.wp-block-button:not(.has-background) .wp-block-button__link {
+				.wp-block-button__link:not(.has-background) {
 					background-color: ' . $storefront_theme_mods['button_background_color'] . ';
 				}
 
-				.wp-block-button:not(.has-background) .wp-block-button__link:hover,
-				.wp-block-button:not(.has-background) .wp-block-button__link:focus,
-				.wp-block-button:not(.has-background) .wp-block-button__link:active {
+				.wp-block-button__link:not(.has-background):hover,
+				.wp-block-button__link:not(.has-background):focus,
+				.wp-block-button__link:not(.has-background):active {
 					border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 				}
 
 				.wp-block-quote footer,
-				.wp-block-quote cite {
+				.wp-block-quote cite,
+				.wp-block-quote__citation {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+				}
+
+				.wp-block-pullquote cite,
+				.wp-block-pullquote footer,
+				.wp-block-pullquote__citation {
 					color: ' . $storefront_theme_mods['text_color'] . ';
 				}
 
@@ -870,15 +873,16 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					color: ' . $storefront_theme_mods['heading_color'] . ';
 				}
 
-				.wp-block-file .wp-block-file__button {
+				.wp-block-file a.wp-block-file__button {
 					color: ' . $storefront_theme_mods['button_text_color'] . ';
 					background-color: ' . $storefront_theme_mods['button_background_color'] . ';
 					border-color: ' . $storefront_theme_mods['button_background_color'] . ';
 				}
 
-				.wp-block-file .wp-block-file__button:hover, .wp-block-file .wp-block-file__button:focus, .wp-block-file .wp-block-file__button:active {
+				.wp-block-file a.wp-block-file__button:hover,
+				.wp-block-file a.wp-block-file__button:focus,
+				.wp-block-file a.wp-block-file__button:active {
 					color: ' . $storefront_theme_mods['button_text_color'] . ';
-					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 				}
 
@@ -902,8 +906,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public function block_editor_customizer_css() {
 			$storefront_theme_mods = $this->get_storefront_theme_mods();
-			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
-			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
 
 			$styles = '
 			.editor-styles-wrapper table th {
@@ -920,6 +922,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
 			}
 
+			.editor-post-title__block .editor-post-title__input,
 			.editor-styles-wrapper h1,
 			.editor-styles-wrapper h2,
 			.editor-styles-wrapper h3,

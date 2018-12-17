@@ -131,8 +131,6 @@
 			font-size: ms(1);
 			line-height: 1.618;
 			border: 0;
-			background: none;
-			border-color: $color_body;
 			cursor: pointer;
 			padding: ms(-2) ms(2);
 			text-decoration: none;
@@ -147,30 +145,6 @@
 		&:not( .is-style-squared ) {
 			.wp-block-button__link {
 				border-radius: 5px;
-			}
-		}
-
-		&:not( .has-text-color ) {
-			.wp-block-button__link {
-				color: #fff;
-
-				&:hover,
-				&:focus,
-				&:active {
-					color: #fff;
-				}
-			}
-		}
-
-		&:not( .has-background ) {
-			.wp-block-button__link {
-				background-color: $color_body;
-
-				&:hover,
-				&:focus,
-				&:active {
-					background-color: $color_body;
-				}
 			}
 		}
 
@@ -293,7 +267,6 @@
 		footer,
 		cite,
 		&__citation {
-			color: $color_body;
 			font-size: ms(1);
 			font-weight: 700;
 		}
@@ -316,7 +289,6 @@
 			padding: ms(-1) 0;
 			font-size: ms(-1);
 			font-style: italic;
-			color: $color_body;
 		}
 	}
 
@@ -428,12 +400,6 @@
 	.wp-block-separator {
 		border: 0;
 		margin: 0 auto ms(2);
-
-		&.is-style-dots {
-			&::before {
-				color: darken( $color_body, 20% );
-			}
-		}
 	}
 
 	// Twitter Embed
@@ -467,10 +433,6 @@
 			font-size: ms(-1);
 			line-height: 1.618;
 			border: 0;
-			background: none;
-			color: #fff;
-			background-color: $color_body;
-			border-color: $color_body;
 			cursor: pointer;
 			padding: ms(-2) ms(2);
 			text-decoration: none;
@@ -480,21 +442,13 @@
 			outline: none;
 			-webkit-appearance: none;
 			border-radius: 0;
-
-			&:hover,
-			&:focus,
-			&:active {
-				color: #fff;
-				background-color: $color_body;
-				border-color: $color_body;
-			}
+			opacity: 1;
 		}
 	}
 
 	// Code
 	.wp-block-code,
 	.wp-block-preformatted pre {
-		color: $color_body;
 		font-family: 'Courier 10 Pitch', Courier, monospace;
 		font-size: ms(1);
 	}
