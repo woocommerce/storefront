@@ -55,7 +55,6 @@
 .editor-post-title__block .editor-post-title__input {
 	clear: both;
 	font-weight: 300;
-	color: darken( $color_body, 20% );
 	font-size: ms(5);
 	line-height: 1.214;
 	letter-spacing: -1px;
@@ -77,7 +76,6 @@ h6,
 	clear: both;
 	font-weight: 300;
 	margin: 0 0 ms(-3);
-	color: darken( $color_body, 20% );
 }
 
 h1,
@@ -254,10 +252,6 @@ img {
 
 a {
 	text-decoration: none;
-
-	&:focus {
-		outline: 1px dotted $color_woocommerce;
-	}
 }
 
 table {
