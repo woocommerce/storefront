@@ -434,10 +434,11 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			'<span class="posted-on">%s <a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a></span>',
+		$posted_on = sprintf( '<span class="posted-on">%1$s <a href="%2$s" rel="bookmark">%3$s</a></span>',
 			/* translators: %s: post date */
-			_x( 'Posted on', 'post date', 'storefront' )
+			_x( 'Posted on', 'post date', 'storefront' ),
+			esc_url( get_permalink() ),
+			$time_string
 		);
 
 		// Author.
