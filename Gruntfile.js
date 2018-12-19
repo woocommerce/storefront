@@ -328,7 +328,8 @@ module.exports = function( grunt ) {
 					'!composer.json',
 					'!assets/css/sass/**',
 					'!assets/css/**/*.scss',
-					'!*.scss'
+					'!*.scss',
+					'!assets/js/src/**'
 				],
 				dest: 'storefront',
 				expand: true,
@@ -449,6 +450,16 @@ module.exports = function( grunt ) {
 					{ src: './storefront/**' }
 				]
 			}
+		},
+		babel: {
+			options: {
+				presets: ['@wordpress/babel-preset-default']
+			},
+			dist: {
+				files: {
+					'./assets/js/editor.js': './assets/js/src/editor.js'
+				}
+			}
 		}
 	});
 
@@ -465,11 +476,13 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( 'grunt-postcss' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
+	grunt.loadNpmTasks( 'grunt-babel' );
 
 
 	// Register tasks
 	grunt.registerTask( 'default', [
 		'css',
+		'babel',
 		'jshint',
 		'uglify'
 	]);
