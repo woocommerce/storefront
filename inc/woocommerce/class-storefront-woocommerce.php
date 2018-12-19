@@ -402,6 +402,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		public function get_woocommerce_extension_css() {
 			global $storefront;
 
+			if ( ! is_object( $storefront ) ||
+				 ! property_exists( $storefront, 'customizer' ) ||
+				 ! is_a( $storefront->customizer, 'Storefront_Customizer' ) ||
+				 ! method_exists( $storefront->customizer, 'get_storefront_theme_mods' ) ) {
+				return apply_filters( 'storefront_customizer_woocommerce_extension_css', '' );
+			}
+
 			$storefront_theme_mods = $storefront->customizer->get_storefront_theme_mods();
 
 			$woocommerce_extension_style = '';
