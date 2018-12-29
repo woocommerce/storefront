@@ -12,6 +12,9 @@ if ( ! function_exists( 'storefront_display_comments' ) ) {
 	 * @since  1.0.0
 	 */
 	function storefront_display_comments() {
+		if ( ! apply_filters('storefront_display_comments', true) ) 
+			return;
+		
 		// If comments are open or we have at least one comment, load up the comment template.
 		if ( comments_open() || 0 !== intval( get_comments_number() ) ) :
 			comments_template();
@@ -29,6 +32,9 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_comment( $comment, $args, $depth ) {
+		if ( ! apply_filters('storefront_comment', true,  $comment, $args, $depth ) )
+			return;
+		
 		if ( 'div' === $args['style'] ) {
 			$tag       = 'div';
 			$add_below = 'comment';
@@ -89,6 +95,9 @@ if ( ! function_exists( 'storefront_footer_widgets' ) ) {
 	 * @return void
 	 */
 	function storefront_footer_widgets() {
+		if ( ! apply_filters('storefront_footer_widgets', true ) )
+			return;
+		
 		$rows    = intval( apply_filters( 'storefront_footer_widget_rows', 1 ) );
 		$regions = intval( apply_filters( 'storefront_footer_widget_columns', 4 ) );
 
@@ -134,6 +143,8 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 	 * @return void
 	 */
 	function storefront_credit() {
+		if ( ! apply_filters('storefront_credit', true ) )
+			return;
 		?>
 		<div class="site-info">
 			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
@@ -158,6 +169,8 @@ if ( ! function_exists( 'storefront_header_widget_region' ) ) {
 	 * @since  1.0.0
 	 */
 	function storefront_header_widget_region() {
+		if ( ! apply_filters('storefront_header_widget_region', true ) )
+			return;
 		if ( is_active_sidebar( 'header-1' ) ) {
 			?>
 		<div class="header-widget-region" role="complementary">
@@ -178,6 +191,8 @@ if ( ! function_exists( 'storefront_site_branding' ) ) {
 	 * @return void
 	 */
 	function storefront_site_branding() {
+		if ( ! apply_filters('storefront_site_branding', true ) )
+			return;
 		?>
 		<div class="site-branding">
 			<?php storefront_site_title_or_logo(); ?>
@@ -195,6 +210,8 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 	 * @return string
 	 */
 	function storefront_site_title_or_logo( $echo = true ) {
+		if ( ! apply_filters('storefront_site_title_or_logo', true, $echo ) )
+			return;
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			$logo = get_custom_logo();
 			$html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
@@ -223,7 +240,9 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	 * @since  1.0.0
 	 * @return void
 	 */
-	function storefront_primary_navigation() {
+	function storefront_primary_navigation() { 
+		if ( ! apply_filters('storefront_primary_navigation', true ) )
+			return;
 		?>
 		<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
 		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
@@ -255,6 +274,8 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	 * @return void
 	 */
 	function storefront_secondary_navigation() {
+		if ( ! apply_filters('storefront_secondary_navigation', true ) )
+			return;
 		if ( has_nav_menu( 'secondary' ) ) {
 			?>
 			<nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
@@ -280,6 +301,8 @@ if ( ! function_exists( 'storefront_skip_links' ) ) {
 	 * @return void
 	 */
 	function storefront_skip_links() {
+		if ( ! apply_filters('storefront_skip_links', true ) )
+			return;
 		?>
 		<a class="skip-link screen-reader-text" href="#site-navigation"><?php esc_attr_e( 'Skip to navigation', 'storefront' ); ?></a>
 		<a class="skip-link screen-reader-text" href="#content"><?php esc_attr_e( 'Skip to content', 'storefront' ); ?></a>
@@ -294,6 +317,8 @@ if ( ! function_exists( 'storefront_homepage_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_homepage_header() {
+		if ( ! apply_filters('storefront_homepage_header', true ) )
+			return;
 		edit_post_link( __( 'Edit this section', 'storefront' ), '', '', '', 'button storefront-hero__button-edit' );
 		?>
 		<header class="entry-header">
@@ -312,6 +337,8 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_page_header() {
+		if ( ! apply_filters('storefront_page_header', true ) )
+			return;
 		?>
 		<header class="entry-header">
 			<?php
@@ -330,6 +357,8 @@ if ( ! function_exists( 'storefront_page_content' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_page_content() {
+		if ( ! apply_filters('storefront_page_content', true ) )
+			return;
 		?>
 		<div class="entry-content">
 			<?php the_content(); ?>
@@ -353,6 +382,8 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_header() {
+		if ( ! apply_filters('storefront_post_header', true ) )
+			return;
 		?>
 		<header class="entry-header">
 		<?php
@@ -379,6 +410,8 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_content() {
+		if ( ! apply_filters('storefront_post_content', true ) )
+			return;
 		?>
 		<div class="entry-content">
 		<?php
@@ -419,6 +452,8 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_meta() {
+		if ( ! apply_filters('storefront_post_meta', true ) )
+			return;
 		// Posted on.
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
@@ -487,6 +522,9 @@ if ( ! function_exists( 'storefront_post_taxonomy' ) ) {
 	 * @since 2.4.0
 	 */
 	function storefront_post_taxonomy() {
+		if ( ! apply_filters('storefront_post_taxonomy', true ) )
+			return;
+		
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'storefront' ) );
 
@@ -519,6 +557,9 @@ if ( ! function_exists( 'storefront_paging_nav' ) ) {
 	 * Display navigation to next/previous set of posts when applicable.
 	 */
 	function storefront_paging_nav() {
+		if ( ! apply_filters('storefront_paging_nav', true ) )
+			return;
+		
 		global $wp_query;
 
 		$args = array(
@@ -536,6 +577,9 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	 * Display navigation to next/previous post when applicable.
 	 */
 	function storefront_post_nav() {
+		if ( ! apply_filters('storefront_post_nav', true ) )
+			return;
+		
 		$args = array(
 			'next_text' => '<span class="screen-reader-text">' . esc_html__( 'Next post:', 'storefront' ) . ' </span>%title',
 			'prev_text' => '<span class="screen-reader-text">' . esc_html__( 'Previous post:', 'storefront' ) . ' </span>%title',
@@ -551,6 +595,8 @@ if ( ! function_exists( 'storefront_posted_on' ) ) {
 	 * @deprecated 2.4.0
 	 */
 	function storefront_posted_on() {
+		if ( ! apply_filters('storefront_posted_on', true ) )
+			return;
 		_deprecated_function( 'storefront_posted_on', '2.4.0' );
 	}
 }
@@ -564,6 +610,9 @@ if ( ! function_exists( 'storefront_homepage_content' ) ) {
 	 * @return  void
 	 */
 	function storefront_homepage_content() {
+		if ( ! apply_filters('storefront_homepage_content', true ) )
+			return;
+		
 		while ( have_posts() ) {
 			the_post();
 
@@ -582,6 +631,9 @@ if ( ! function_exists( 'storefront_social_icons' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_social_icons() {
+		if ( ! apply_filters('storefront_social_icons', true ) )
+			return;
+		
 		if ( class_exists( 'Subscribe_And_Connect' ) ) {
 			echo '<div class="subscribe-and-connect-connect">';
 			subscribe_and_connect_connect();
@@ -598,6 +650,8 @@ if ( ! function_exists( 'storefront_get_sidebar' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_get_sidebar() {
+		if ( ! apply_filters('storefront_get_sidebar', true ) )
+			return;
 		get_sidebar();
 	}
 }
@@ -613,6 +667,8 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 * @since 1.5.0
 	 */
 	function storefront_post_thumbnail( $size = 'full' ) {
+		if ( ! apply_filters('storefront_post_thumbnail', true, $size ) )
+			return;
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( $size );
 		}
@@ -624,6 +680,8 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
+		if ( ! apply_filters('storefront_primary_navigation_wrapper', true ) )
+			return;
 		echo '<div class="storefront-primary-navigation"><div class="col-full">';
 	}
 }
@@ -633,6 +691,8 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper_close' ) ) {
 	 * The primary navigation wrapper close
 	 */
 	function storefront_primary_navigation_wrapper_close() {
+		if ( ! apply_filters('storefront_primary_navigation_wrapper_close', true ) )
+			return;
 		echo '</div></div>';
 	}
 }
@@ -642,6 +702,8 @@ if ( ! function_exists( 'storefront_header_container' ) ) {
 	 * The header container
 	 */
 	function storefront_header_container() {
+		if ( ! apply_filters('storefront_header_container', true ) )
+			return;
 		echo '<div class="col-full">';
 	}
 }
@@ -651,6 +713,8 @@ if ( ! function_exists( 'storefront_header_container_close' ) ) {
 	 * The header container close
 	 */
 	function storefront_header_container_close() {
+		if ( ! apply_filters('storefront_header_container_close', true ) )
+			return;
 		echo '</div>';
 	}
 }
