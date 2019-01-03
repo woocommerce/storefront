@@ -304,7 +304,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 				}';
 			}
 
-			return apply_filters( 'storefront_woocommerce_customizer_css', $styles );
+			return apply_filters( 'storefront_customizer_woocommerce_css', $styles );
 		}
 
 		/**
