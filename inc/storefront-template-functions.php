@@ -499,17 +499,15 @@ if ( ! function_exists( 'storefront_post_taxonomy' ) ) {
 		<aside class="entry-taxonomy">
 			<?php if ( $categories_list ) : ?>
 			<div class="cat-links">
-				<span class="screen-reader-text"><?php echo esc_attr( __( 'Posted in', 'storefront' ) ); ?></span>
-				<?php echo wp_kses_post( $categories_list ); ?>
+				<?php echo esc_html( _n( 'Category:', 'Categories:', count( get_the_category() ), 'storefront' ) ); ?> <?php echo wp_kses_post( $categories_list ); ?>
 			</div>
-			<?php endif; // End if categories. ?>
+			<?php endif; ?>
 
 			<?php if ( $tags_list ) : ?>
 			<div class="tags-links">
-				<span class="screen-reader-text"><?php echo esc_attr( __( 'Tagged', 'storefront' ) ); ?></span>
-				<?php echo wp_kses_post( $tags_list ); ?>
+				<?php echo esc_html( _n( 'Tag:', 'Tags:', count( get_the_tags() ), 'storefront' ) ); ?> <?php echo wp_kses_post( $tags_list ); ?>
 			</div>
-			<?php endif; // End if $tags_list. ?>
+			<?php endif; ?>
 		</aside>
 
 		<?php
