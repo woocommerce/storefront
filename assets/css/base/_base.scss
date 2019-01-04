@@ -768,6 +768,8 @@ table {
 
 	.entry-taxonomy {
 		margin: ms(2) 0 0;
+		padding-top: 1em;
+		border-top: 1px solid rgba( 0, 0, 0, 0.05 );
 	}
 
 	&.type-page {
@@ -775,6 +777,17 @@ table {
 			border-bottom: 0;
 			margin-bottom: 0;
 		}
+	}
+}
+
+.cat-links,
+.tags-links {
+	font-size: 0.875em;
+
+	a {
+		color: #727272;
+		font-weight: 600;
+		text-decoration: underline;
 	}
 }
 
@@ -792,16 +805,6 @@ table {
 .page-links {
 	clear: both;
 	margin: 0 0 ms(1);
-}
-
-.cat-links,
-.tags-links {
-	display: block;
-	margin-bottom: ms(1);
-
-	&:last-child {
-		margin-bottom: 0;
-	}
 }
 
 /**

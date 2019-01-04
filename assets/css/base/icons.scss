@@ -31,24 +31,6 @@
 	}
 }
 
-.entry-taxonomy {
-	.cat-links {
-		&::before {
-			@include sf-fa-icon;
-			content: fa-content( $fa-var-folder );
-			margin-right: ms(-3);
-		}
-	}
-
-	.tags-links {
-		&::before {
-			@include sf-fa-icon;
-			content: fa-content( $fa-var-tag );
-			margin-right: ms(-3);
-		}
-	}
-}
-
 #comments {
 	.commentlist {
 		.bypostauthor {
