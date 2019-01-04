@@ -37,7 +37,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 *
 		 * @return array
 		 */
-		public static function get_storefront_default_setting_values() {
+		public function get_storefront_default_setting_values() {
 			return apply_filters(
 				'storefront_setting_default_values', $args = array(
 					'storefront_heading_color'           => '#333333',
@@ -68,7 +68,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @uses get_storefront_default_setting_values()
 		 */
 		public function default_theme_mod_values() {
-			foreach ( self::get_storefront_default_setting_values() as $mod => $val ) {
+			foreach ( $this->get_storefront_default_setting_values() as $mod => $val ) {
 				add_filter( 'theme_mod_' . $mod, array( $this, 'get_theme_mod_value' ), 10 );
 			}
 		}
@@ -101,7 +101,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 * @uses   get_storefront_default_setting_values()
 		 */
 		public function edit_default_customizer_settings( $wp_customize ) {
-			foreach ( self::get_storefront_default_setting_values() as $mod => $val ) {
+			foreach ( $this->get_storefront_default_setting_values() as $mod => $val ) {
 				$wp_customize->get_setting( $mod )->default = $val;
 			}
 		}
