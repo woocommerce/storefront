@@ -52,7 +52,7 @@
 	/**
 	 * Update editor wide support.
 	 *
-	 * @param {boolean} alignWide Whether to enable or disable
+	 * @param {boolean} alignWide Whether the editor supports
 	 *                            alignWide support.
 	 *
 	 * @return {void}
@@ -62,22 +62,28 @@
 	};
 
 	/**
-	 * Update blocks to remove alignWide support.
+	 * Update `data-align` attribute on each block.
+	 *
+	 * @param {boolean} alignWide Whether alignWide is supported.
 	 *
 	 * @return {void}
 	 */
-	const removeWideAlignFromBlocks = () => {
+	const updateAlignAttribute = ( alignWide ) => {
 		let blocks = wp.data.select( 'core/editor' ).getBlocks();
 
 		blocks.forEach( ( block ) => {
-			let align = '';
-
 			if ( block.attributes.hasOwnProperty( 'align' ) ) {
-				align = block.attributes.align;
-			}
+				let align = block.attributes.align;
 
-			if ( 'full' === align || 'wide' === align ) {
-				wp.data.dispatch( 'core/editor' ).updateBlockAttributes( block.clientId, { 'align': '' } );
+				if ( ! [ 'full', 'wide' ].includes( align ) ) {
+					return;
+				}
+
+				let blockWrapper = document.getElementById( 'block-' + block.clientId );
+
+				if ( blockWrapper ) {
+					blockWrapper.setAttribute( 'data-align', alignWide ? align : '' );
+				}
 			}
 		} );
 	};
@@ -112,13 +118,15 @@
 		if ( 'template-fullwidth.php' === getCurrentPageTemplate() ) {
 			updateWideSupport( true );
 			toggleCustomSidebarClass( false );
+			updateAlignAttribute( true );
 		} else if ( sidebarIsActive() ) {
 			updateWideSupport( false );
-			removeWideAlignFromBlocks();
 			toggleCustomSidebarClass( true );
+			updateAlignAttribute( false );
 		} else {
 			updateWideSupport( true );
 			toggleCustomSidebarClass( false );
+			updateAlignAttribute( true );
 		}
 	};
 
