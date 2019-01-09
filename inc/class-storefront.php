@@ -359,7 +359,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 
 			// JS.
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-			wp_enqueue_script( 'storefront-editor', get_template_directory_uri() . '/assets/js/editor' . $suffix . '.js', array( 'wp-editor' ), $storefront_version, true );
+			wp_enqueue_script( 'storefront-editor', get_template_directory_uri() . '/assets/js/editor' . $suffix . '.js', array( 'wp-data', 'wp-dom-ready' ), $storefront_version, true );
 		}
 
 		/**
