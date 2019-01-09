@@ -32,6 +32,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
+			add_filter( 'block_editor_settings', array( $this, 'custom_editor_settings' ), 10, 2 );
 		}
 
 		/**
@@ -345,15 +346,20 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * Enqueue supplemental block editor styles.
+		 * Enqueue supplemental block editor assets.
 		 *
 		 * @since 2.4.0
 		 */
 		public function block_editor_assets() {
 			global $storefront_version;
 
+			// Styles.
 			wp_enqueue_style( 'storefront-editor-block-styles', get_theme_file_uri( '/assets/css/base/gutenberg-blocks.css' ), false, $storefront_version, 'all' );
 			wp_style_add_data( 'storefront-editor-block-styles', 'rtl', 'replace' );
+
+			// JS.
+			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+			wp_enqueue_script( 'storefront-editor', get_template_directory_uri() . '/assets/js/editor' . $suffix . '.js', array( 'wp-data', 'wp-dom-ready', 'wp-edit-post' ), $storefront_version, true );
 		}
 
 		/**
@@ -432,6 +438,26 @@ if ( ! class_exists( 'Storefront' ) ) :
 			}
 
 			return $classes;
+		}
+
+		/**
+		 * Adds a custom parameter to the editor settings that is used
+		 * to track whether the main sidebar has widgets.
+		 *
+		 * @since 2.4.3
+		 * @param array   $settings Default editor settings.
+		 * @param WP_Post $post Post being edited.
+		 *
+		 * @return array Filtered block editor settings.
+		 */
+		public function custom_editor_settings( $settings, $post ) {
+			$settings['mainSidebarActive'] = false;
+
+			if ( is_active_sidebar( 'sidebar-1' ) ) {
+				$settings['mainSidebarActive'] = true;
+			}
+
+			return $settings;
 		}
 
 		/**
