@@ -40,6 +40,8 @@ if ( storefront_is_woocommerce_activated() ) {
 	$storefront->woocommerce            = require 'inc/woocommerce/class-storefront-woocommerce.php';
 	$storefront->woocommerce_customizer = require 'inc/woocommerce/class-storefront-woocommerce-customizer.php';
 
+	require 'inc/woocommerce/class-storefront-woocommerce-adjacent-products.php';
+
 	require 'inc/woocommerce/storefront-woocommerce-template-hooks.php';
 	require 'inc/woocommerce/storefront-woocommerce-template-functions.php';
 	require 'inc/woocommerce/storefront-woocommerce-functions.php';

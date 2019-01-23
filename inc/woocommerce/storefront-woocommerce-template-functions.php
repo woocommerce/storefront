@@ -709,34 +709,31 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 		}
 
 		// Show only products in the same category?
-		$in_same_term   = apply_filters( 'storefront_single_product_pagination_same_category', false );
+		$in_same_term   = apply_filters( 'storefront_single_product_pagination_same_category', true );
 		$excluded_terms = apply_filters( 'storefront_single_product_pagination_excluded_terms', '' );
 		$taxonomy       = apply_filters( 'storefront_single_product_pagination_taxonomy', 'product_cat' );
 
-		// Get previous and next products.
-		$previous_product = get_previous_post( $in_same_term, $excluded_terms, $taxonomy );
-		$next_product     = get_next_post( $in_same_term, $excluded_terms, $taxonomy );
+		$previous_product = storefront_get_previous_product( $in_same_term, $excluded_terms, $taxonomy );
+		$next_product     = storefront_get_next_product( $in_same_term, $excluded_terms, $taxonomy );
 
 		if ( ! $previous_product && ! $next_product ) {
 			return;
 		}
 
-		if ( $previous_product ) {
-			$previous_product = wc_get_product( $previous_product->ID );
-		}
-
-		if ( $next_product ) {
-			$next_product = wc_get_product( $next_product->ID );
-		}
-
 		?>
 		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
-			<?php if ( $previous_product && $previous_product->is_visible() ) : ?>
-				<?php previous_post_link( '%link', wp_kses_post( $previous_product->get_image() ) . '<span class="storefront-product-pagination__title">%title</span>', $in_same_term, $excluded_terms, $taxonomy ); ?>
+			<?php if ( $previous_product ) : ?>
+				<a href="<?php echo esc_url( $previous_product->get_permalink() ); ?>" rel="prev">
+					<?php echo wp_kses_post( $previous_product->get_image() ); ?>
+					<span class="storefront-product-pagination__title"><?php echo wp_kses_post( $previous_product->get_name() ); ?></span>
+				</a>
 			<?php endif; ?>
 
-			<?php if ( $next_product && $next_product->is_visible() ) : ?>
-				<?php next_post_link( '%link', wp_kses_post( $next_product->get_image() ) . '<span class="storefront-product-pagination__title">%title</span>', $in_same_term, $excluded_terms, $taxonomy ); ?>
+			<?php if ( $next_product ) : ?>
+				<a href="<?php echo esc_url( $next_product->get_permalink() ); ?>" rel="next">
+					<?php echo wp_kses_post( $next_product->get_image() ); ?>
+					<span class="storefront-product-pagination__title"><?php echo wp_kses_post( $next_product->get_name() ); ?></span>
+				</a>
 			<?php endif; ?>
 		</nav><!-- .storefront-product-pagination -->
 		<?php
