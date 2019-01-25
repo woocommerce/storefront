@@ -1296,33 +1296,18 @@ button.menu-toggle {
 	.nav-next {
 		a {
 			display: inline-block;
-			transition: all, ease, 0.3s;
-			padding: ms(-2) 1em;
-			border-radius: 3px;
 		}
 	}
 
 	.nav-previous {
 		float: left;
 		width: 50%;
-
-		a {
-			&:hover {
-				transform: translate(-1em);
-			}
-		}
 	}
 
 	.nav-next {
 		float: right;
 		text-align: right;
 		width: 50%;
-
-		a {
-			&:hover {
-				transform: translate(1em);
-			}
-		}
 	}
 
 }
