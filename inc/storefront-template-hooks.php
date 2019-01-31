@@ -67,6 +67,7 @@ add_action( 'storefront_single_post', 'storefront_post_content', 30 );
 add_action( 'storefront_single_post_bottom', 'storefront_post_taxonomy', 5 );
 add_action( 'storefront_single_post_bottom', 'storefront_post_nav', 10 );
 add_action( 'storefront_single_post_bottom', 'storefront_display_comments', 20 );
+add_action( 'storefront_post_header_before', 'storefront_post_meta', 10 );
 add_action( 'storefront_post_content_before', 'storefront_post_thumbnail', 10 );
 
 /**

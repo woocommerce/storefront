@@ -356,16 +356,21 @@ if ( ! function_exists( 'storefront_post_header' ) ) {
 		?>
 		<header class="entry-header">
 		<?php
+
+		/**
+		 * Functions hooked in to storefront_post_header_before action.
+		 *
+		 * @hooked storefront_post_meta - 10
+		 */
+		do_action( 'storefront_post_header_before' );
+
 		if ( is_single() ) {
-			storefront_post_meta();
 			the_title( '<h1 class="entry-title">', '</h1>' );
 		} else {
-			if ( 'post' === get_post_type() ) {
-				storefront_post_meta();
-			}
-
 			the_title( sprintf( '<h2 class="alpha entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 		}
+
+		do_action( 'storefront_post_header_after' );
 		?>
 		</header><!-- .entry-header -->
 		<?php
@@ -419,6 +424,10 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 	 * @since 1.0.0
 	 */
 	function storefront_post_meta() {
+		if ( 'post' !== get_post_type() ) {
+			return;
+		}
+
 		// Posted on.
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
