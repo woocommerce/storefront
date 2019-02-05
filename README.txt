@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.4.3 - 2019-02-04 =
+= 2.4.3 - 2019-02-05 =
 * Feature - Replicate Storefront's layout logic in the block editor. Wide and Full-width options are made available only if supported.
 * Enhancement - Product pagination is now circular and skips hidden products.
 * Tweak - Remove unused variables from `inc/customizer/class-storefront-customizer.php`.
