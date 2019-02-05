@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.0
-Stable tag: 2.4.2
-Version: 2.4.2
+Stable tag: 2.4.3
+Version: 2.4.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,21 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.4.3 - 2019-02-05 =
+* Feature - Replicate Storefront's layout logic in the block editor. Wide and Full-width options are made available only if supported.
+* Enhancement - Product pagination is now circular and skips hidden products.
+* Tweak - Remove unused variables from `inc/customizer/class-storefront-customizer.php`.
+* Tweak - Refactored "Posted on" section in `storefront_post_meta()`.
+* Tweak - Standardize mixing of static/non static function calls in the `Storefront_Customizer` class.
+* Tweak - Remove padding and transition styles from post navigation.
+* Fix - Remove hard coded colors for Blocks from `gutenberg-blocks.css` and use colors set in the Customizer instead.
+* Fix - Clear floats on alignwide and alignfull blocks.
+* Fix - When outputting custom styling for extensions, check if the object `$storefront` is in the expected format and has right properties.
+* Dev - Babel added as a dependency.
+* Dev - New `assets/js/src/editor.js` file.
+* Dev - Revert filter name. `storefront_woocommerce_customizer_css` reverted to `storefront_customizer_woocommerce_css`.
+* Dev - New hooks added to post header section: `storefront_post_header_before`, `storefront_post_header_after`.
 
 = 2.4.2 - 2018-12-11 =
 * Fix - Load in `functions.php` missing `storefront-woocommerce-functions.php` file required for compatibility with Jetpack's Infinite Scroll feature.
