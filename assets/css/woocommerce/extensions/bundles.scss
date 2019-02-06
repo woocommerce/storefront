@@ -79,6 +79,10 @@
 	}
 }
 
+table.shop_table_responsive tr.bundled_table_item {
+	display: none;
+}
+
 /**
  * Desktop
  */
@@ -87,6 +91,10 @@
 
 	.bundle_table_item dl.bundle_configuration {
 		display: none;
+	}
+
+	table.shop_table_responsive tr.bundled_table_item {
+		display: table-row;
 	}
 
 	.sp-product-gallery-stacked, .storefront-full-width-content, .page-template-template-fullwidth-php {
@@ -137,10 +145,6 @@
 				@include span( 10 of 10 );
 			}
 		}
-	}
-
-	table.shop_table_responsive tr.bundled_table_item {
-		display: none;
 	}
 
 	.bundle_form {
