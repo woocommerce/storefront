@@ -36,7 +36,7 @@
     "node-bourbon": "~4.2.8",
     "node-sass": "^4.11.0",
     "stylelint": "~9.10.1",
-    "susy": "~3.0.5"
+    "susy": "2.2.12"
   },
   "engines": {
     "node": ">=0.8.0",
