@@ -16,6 +16,8 @@
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@wordpress/babel-preset-default": "3.0.2",
     "autoprefixer": "^9.4.7",
     "grunt": "~1.0.3",
     "grunt-babel": "^8.0.0",
@@ -34,9 +36,7 @@
     "node-bourbon": "~4.2.8",
     "node-sass": "^4.11.0",
     "stylelint": "~9.10.1",
-    "susy": "~3.0.5",
-    "@babel/core": "7.2.2",
-    "@wordpress/babel-preset-default": "3.0.2"
+    "susy": "~3.0.5"
   },
   "engines": {
     "node": ">=0.8.0",
