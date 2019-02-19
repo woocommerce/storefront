@@ -2,6 +2,8 @@
 module.exports = function( grunt ) {
 	'use strict';
 
+	var sass = require( 'node-sass' );
+
 	grunt.initConfig({
 
 		// Autoprefixer.
@@ -132,8 +134,9 @@ module.exports = function( grunt ) {
 		sass: {
 			dist: {
 				options: {
+					implementation: sass,
 					require: 'susy',
-					sourcemap: 'none',
+					sourceMap: false,
 					includePaths: require( 'node-bourbon' ).includePaths
 				},
 				files: [{
