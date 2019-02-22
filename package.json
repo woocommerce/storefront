@@ -19,6 +19,7 @@
     "@babel/core": "^7.3.3",
     "@wordpress/babel-preset-default": "3.0.2",
     "autoprefixer": "^9.4.7",
+    "bourbon": "^5.1.0",
     "grunt": "~1.0.3",
     "grunt-babel": "^8.0.0",
     "grunt-checktextdomain": "^1.0.1",
@@ -33,7 +34,6 @@
     "grunt-sass": "~3.0.2",
     "grunt-stylelint": "~0.10.1",
     "grunt-wp-i18n": "^1.0.3",
-    "node-bourbon": "~4.2.8",
     "node-sass": "^4.11.0",
     "stylelint": "~9.10.1",
     "susy": "2.2.12"
@@ -41,5 +41,6 @@
   "engines": {
     "node": ">=0.8.0",
     "npm": ">=1.1.0"
-  }
+  },
+  "dependencies": {}
 }
