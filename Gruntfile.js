@@ -137,7 +137,7 @@ module.exports = function( grunt ) {
 					implementation: sass,
 					require: 'susy',
 					sourceMap: false,
-					includePaths: require( 'node-bourbon' ).includePaths
+					includePaths: require( 'bourbon' ).includePaths
 				},
 				files: [{
 					'style.css': 'style.scss',
