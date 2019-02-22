@@ -2826,7 +2826,7 @@ dl.variation {
 
 			&[rel='prev'] {
 				left: -455px;
-				@include transition( left 0.3s ease-out );
+				transition: left 0.3s ease-out;
 				flex-direction: row-reverse;
 				padding-left: ms(1);
 
@@ -2845,7 +2845,7 @@ dl.variation {
 
 			&[rel='next'] {
 				right: -455px;
-				@include transition( right 0.3s ease-in );
+				transition: right 0.3s ease-in;
 				padding-right: ms(1);
 
 				&:hover {
