@@ -129,6 +129,10 @@
 	}
 }
 
+table.shop_table_responsive tr.component_table_item {
+	display: none;
+}
+
 /**
  * Desktop
  */
@@ -137,6 +141,10 @@
 
 	.component_container_table_item dl.composite_configuration {
 		display: none;
+	}
+
+	table.shop_table_responsive tr.component_table_item {
+		display: table-row;
 	}
 
 	.sp-product-gallery-stacked, .storefront-full-width-content, .page-template-template-fullwidth-php {
@@ -166,10 +174,6 @@
  */
 
 @include susy-media(max-width $handheld) {
-
-	table.shop_table_responsive tr.component_table_item {
-		display: none;
-	}
 
 	.woocommerce, .woocommerce-page {
 		#content div.product, div.product {
