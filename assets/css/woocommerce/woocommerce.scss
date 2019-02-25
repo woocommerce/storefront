@@ -2033,7 +2033,8 @@ dl.variation {
 	.page-template-template-fullwidth-php,
 	.page-template-template-homepage-php,
 	.storefront-full-width-content {
-		.site-main {
+		.site-main,
+		.header-widget-region {
 			ul.products {
 				&.columns-1 {
 					li.product {
