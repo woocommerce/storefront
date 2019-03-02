@@ -212,6 +212,13 @@ module.exports = function( grunt ) {
 				src: ['*.css'],
 				dest: 'assets/css/woocommerce/',
 				ext: '.css'
+			},
+			base: {
+				expand: true,
+				cwd: 'assets/css/base/',
+				src: ['*.css'],
+				dest: 'assets/css/base/',
+				ext: '.css'
 			}
 		},
 
