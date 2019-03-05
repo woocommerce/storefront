@@ -66,7 +66,9 @@ module.exports = function( grunt ) {
 		// Minify .js files.
 		uglify: {
 			options: {
-				preserveComments: 'some'
+				output: {
+					comments: 'some'
+				}
 			},
 			main: {
 				files: [{
