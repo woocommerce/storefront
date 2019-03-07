@@ -1,0 +1,30 @@
+/**
+ * Jetpack Widgets
+ */
+
+// Imports
+@import 'bourbon';
+@import '../sass/utils/variables';
+@import '../sass/utils/mixins';
+@import '../sass/vendors/modular-scale';
+
+// Subscription widget
+.jetpack_subscription_widget {
+	#subscribe-email {
+		input {
+			padding: ms(-2) !important;
+			width: 100% !important;
+		}
+	}
+}
+
+// Google Translate widget
+.widget_google_translate_widget {
+	img {
+		display: inline;
+	}
+
+	a {
+		text-decoration: none !important;
+	}
+}

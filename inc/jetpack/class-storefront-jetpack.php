@@ -101,8 +101,11 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		public function jetpack_scripts() {
 			global $storefront_version;
 
-			wp_enqueue_style( 'storefront-jetpack-style', get_template_directory_uri() . '/assets/css/jetpack/jetpack.css', '', $storefront_version );
-			wp_style_add_data( 'storefront-jetpack-style', 'rtl', 'replace' );
+			wp_enqueue_style( 'storefront-jetpack-infinite-scroll', get_template_directory_uri() . '/assets/css/jetpack/infinite-scroll.css', array( 'the-neverending-homepage' ), $storefront_version );
+			wp_style_add_data( 'storefront-jetpack-infinite-scroll', 'rtl', 'replace' );
+
+			wp_enqueue_style( 'storefront-jetpack-widgets', get_template_directory_uri() . '/assets/css/jetpack/widgets.css', array(), $storefront_version );
+			wp_style_add_data( 'storefront-jetpack-widgets', 'rtl', 'replace' );
 		}
 	}
 
