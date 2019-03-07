@@ -28,7 +28,8 @@ module.exports = function( grunt ) {
 					'assets/css/woocommerce/extensions/*.css',
 					'assets/css/woocommerce/woocommerce.css',
 					'assets/css/woocommerce/woocommerce-legacy.css',
-					'assets/css/jetpack/jetpack.css',
+					'assets/css/jetpack/infinite-scroll.css',
+					'assets/css/jetpack/widgets.css',
 					'assets/css/base/*.css'
 				]
 			}
@@ -165,7 +166,8 @@ module.exports = function( grunt ) {
 					'assets/css/woocommerce/extensions/quick-view.css': 'assets/css/woocommerce/extensions/quick-view.scss',
 					'assets/css/woocommerce/woocommerce.css': 'assets/css/woocommerce/woocommerce.scss',
 					'assets/css/woocommerce/woocommerce-legacy.css': 'assets/css/woocommerce/woocommerce-legacy.scss',
-					'assets/css/jetpack/jetpack.css': 'assets/css/jetpack/jetpack.scss',
+					'assets/css/jetpack/infinite-scroll.css': 'assets/css/jetpack/infinite-scroll.scss',
+					'assets/css/jetpack/widgets.css': 'assets/css/jetpack/widgets.scss',
 					'assets/css/base/icons.css': 'assets/css/base/icons.scss',
 					'assets/css/base/gutenberg-blocks.css': 'assets/css/base/gutenberg-blocks.scss',
 					'assets/css/base/gutenberg-editor.css': 'assets/css/base/gutenberg-editor.scss'
@@ -450,7 +452,8 @@ module.exports = function( grunt ) {
 					'assets/css/woocommerce/woocommerce-legacy.css',
 					'assets/css/admin/welcome-screen/welcome.css',
 					'assets/css/admin/customizer/customizer.css',
-					'assets/css/jetpack/jetpack.css',
+					'assets/css/jetpack/infinite-scroll.css',
+					'assets/css/jetpack/widgets.css',
 					'assets/css/base/icons.css',
 					'assets/css/base/gutenberg-blocks.css',
 					'assets/css/base/gutenberg-editor.css'
