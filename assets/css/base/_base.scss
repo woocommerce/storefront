@@ -436,7 +436,7 @@ body {
  */
 .site-footer {
 	background-color: #f3f3f3;
-	color: $color_body + #333;
+	color: mix( $color_body, #333 );
 	padding: ms(3) 0 ms(6);
 
 	h1,
@@ -445,7 +445,7 @@ body {
 	h4,
 	h5,
 	h6 {
-		color: $color_body + #222;
+		color: mix( $color_body, #222 );
 	}
 
 	a:not( .button ) {
