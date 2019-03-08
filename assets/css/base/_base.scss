@@ -450,6 +450,11 @@ body {
 
 	a:not( .button ) {
 		color: $color_links;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -762,6 +767,16 @@ table {
 
 			a {
 				@include underlinedLink();
+			}
+		}
+	}
+
+	.entry-content {
+		a:not( .button ) {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
 			}
 		}
 	}

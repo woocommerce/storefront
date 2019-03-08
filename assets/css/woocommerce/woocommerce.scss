@@ -781,6 +781,14 @@ a.reset_variations {
 .woocommerce-breadcrumb {
 	font-size: ms(-1);
 
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.breadcrumb-separator {
 		display: inline-block;
 		padding: 0 ms(-3);
@@ -1388,9 +1396,12 @@ label.inline {
 			border-bottom: 1px solid $color_border;
 			position: relative;
 
-			a {
-				padding: ms(-1) 0;
-				display: block;
+			&.woocommerce-MyAccount-navigation-link {
+				a {
+					text-decoration: none;
+					padding: ms(-1) 0;
+					display: block;
+				}
 			}
 		}
 	}
