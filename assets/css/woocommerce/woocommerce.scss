@@ -144,11 +144,6 @@
 				text-indent: -9999px;
 				z-index: 999;
 				border-right: 1px solid rgba( #fff, 0.2 );
-
-				&:active,
-				&:focus {
-					outline: none;
-				}
 			}
 
 			&.search {
@@ -939,7 +934,6 @@ a.reset_variations {
 		@include border-top-radius(1em);
 		@include border-bottom-radius(1em);
 		cursor: ew-resize;
-		outline: none;
 		background: $color_links;
 		box-sizing: border-box;
 		margin-top: -0.25em;
@@ -1086,12 +1080,6 @@ table.cart {
 			display: block;
 			width: 100%;
 			margin: ms(-3) 0;
-
-			&[name='update_cart'] {
-				&:focus {
-					outline: none;
-				}
-			}
 		}
 	}
 }
