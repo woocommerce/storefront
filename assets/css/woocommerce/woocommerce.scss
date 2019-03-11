@@ -1374,21 +1374,23 @@ label.inline {
 	margin-left: ms(1);
 }
 
-.woocommerce-MyAccount-navigation {
-	ul {
-		margin-left: 0;
-		border-top: 1px solid $color_border;
+.hentry .entry-content {
+	.woocommerce-MyAccount-navigation {
+		ul {
+			margin-left: 0;
+			border-top: 1px solid $color_border;
 
-		li {
-			list-style: none;
-			border-bottom: 1px solid $color_border;
-			position: relative;
+			li {
+				list-style: none;
+				border-bottom: 1px solid $color_border;
+				position: relative;
 
-			&.woocommerce-MyAccount-navigation-link {
-				a {
-					text-decoration: none;
-					padding: ms(-1) 0;
-					display: block;
+				&.woocommerce-MyAccount-navigation-link {
+					a {
+						text-decoration: none;
+						padding: ms(-1) 0;
+						display: block;
+					}
 				}
 			}
 		}
