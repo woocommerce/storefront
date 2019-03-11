@@ -247,9 +247,14 @@ img {
 a {
 	color: $color_links;
 	text-decoration: none;
+}
 
+a,
+input,
+textarea,
+button {
 	&:focus {
-		outline-color: $color_woocommerce;
+		outline: 2px solid $color_woocommerce;
 	}
 }
 
@@ -933,7 +938,6 @@ textarea,
 	padding: ms(-2);
 	background-color: darken( $body-background, 5% );
 	color: $color_body;
-	outline-color: $color_woocommerce;
 	border: 0;
 	-webkit-appearance: none;
 	box-sizing: border-box;
