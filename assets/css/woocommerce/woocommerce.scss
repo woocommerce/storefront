@@ -144,11 +144,6 @@
 				text-indent: -9999px;
 				z-index: 999;
 				border-right: 1px solid rgba( #fff, 0.2 );
-
-				&:active,
-				&:focus {
-					outline: none;
-				}
 			}
 
 			&.search {
@@ -781,6 +776,14 @@ a.reset_variations {
 .woocommerce-breadcrumb {
 	font-size: ms(-1);
 
+	a {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
 	.breadcrumb-separator {
 		display: inline-block;
 		padding: 0 ms(-3);
@@ -931,7 +934,6 @@ a.reset_variations {
 		@include border-top-radius(1em);
 		@include border-bottom-radius(1em);
 		cursor: ew-resize;
-		outline: none;
 		background: $color_links;
 		box-sizing: border-box;
 		margin-top: -0.25em;
@@ -1078,12 +1080,6 @@ table.cart {
 			display: block;
 			width: 100%;
 			margin: ms(-3) 0;
-
-			&[name='update_cart'] {
-				&:focus {
-					outline: none;
-				}
-			}
 		}
 	}
 }
@@ -1378,19 +1374,24 @@ label.inline {
 	margin-left: ms(1);
 }
 
-.woocommerce-MyAccount-navigation {
-	ul {
-		margin-left: 0;
-		border-top: 1px solid $color_border;
+.hentry .entry-content {
+	.woocommerce-MyAccount-navigation {
+		ul {
+			margin-left: 0;
+			border-top: 1px solid $color_border;
 
-		li {
-			list-style: none;
-			border-bottom: 1px solid $color_border;
-			position: relative;
+			li {
+				list-style: none;
+				border-bottom: 1px solid $color_border;
+				position: relative;
 
-			a {
-				padding: ms(-1) 0;
-				display: block;
+				&.woocommerce-MyAccount-navigation-link {
+					a {
+						text-decoration: none;
+						padding: ms(-1) 0;
+						display: block;
+					}
+				}
 			}
 		}
 	}

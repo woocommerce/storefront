@@ -247,9 +247,14 @@ img {
 a {
 	color: $color_links;
 	text-decoration: none;
+}
 
+a,
+input,
+textarea,
+button {
 	&:focus {
-		outline: 1px dotted $color_woocommerce;
+		outline: 2px solid $color_woocommerce;
 	}
 }
 
@@ -450,6 +455,11 @@ body {
 
 	a:not( .button ) {
 		color: $color_links;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }
 
@@ -766,6 +776,16 @@ table {
 		}
 	}
 
+	.entry-content {
+		a:not( .button ) {
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
 	.entry-taxonomy {
 		margin: ms(2) 0 0;
 		padding-top: 1em;
@@ -843,7 +863,6 @@ input[type='submit'],
 	font-weight: 600;
 	text-shadow: none;
 	display: inline-block;
-	outline: none;
 	-webkit-appearance: none;
 	border-radius: 0;
 
@@ -859,10 +878,6 @@ input[type='submit'],
 
 	&:hover {
 		color: #fff;
-	}
-
-	&:focus {
-		outline: 1px dotted $color_woocommerce;
 	}
 
 	&.loading {
@@ -923,7 +938,6 @@ textarea,
 	padding: ms(-2);
 	background-color: darken( $body-background, 5% );
 	color: $color_body;
-	outline: none;
 	border: 0;
 	-webkit-appearance: none;
 	box-sizing: border-box;
@@ -932,8 +946,7 @@ textarea,
 		inset 0 1px 1px rgba( 0, 0, 0, 0.125 );
 
 	&:focus {
-		background-color: darken( $body-background, 10% );
-		color: darken( $color_body, 10% );
+		background-color: darken( $body-background, 7% );
 	}
 }
 
