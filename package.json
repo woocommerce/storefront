@@ -36,7 +36,7 @@
     "grunt-wp-i18n": "^1.0.3",
     "node-sass": "^4.11.0",
     "stylelint": "~9.10.1",
-    "susy": "2.2.12"
+    "susy": "2.2.14"
   },
   "engines": {
     "node": ">=0.8.0",
