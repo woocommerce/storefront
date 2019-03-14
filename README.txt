@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 5.0
-Stable tag: 2.4.3
-Version: 2.4.3
+Tested up to: 5.1
+Stable tag: 2.4.4
+Version: 2.4.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,19 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.4.4 - 2019-03-14 =
+* Tweak - Update UTM parameters on WooCommerce.com links.
+* Tweak - Compress and minify `pep.min.js`.
+* Tweak - Minify CSS files in the `base` folder.
+* Fix - Underline links in post content, footer, and breadcrumbs for better accessibility.
+* Fix - Bolder outline styles for better accessibility.
+* Fix - Stop Handheld Navigation items from being read by screen readers when the menu is collapsed.
+* Fix - Add styling for product columns on the header widget area.
+* Fix - Hide bundle/composite child cart items below the desktop size threshold.
+* Fix - Split Jetpack styles into separate files to fix a flash of content when using the infinite scroll option.
+* Dev - Update node dependencies.
+* Dev - Handheld Footer Bar JavaScript moved from `navigation.js` to `footer.js`.
 
 = 2.4.3 - 2019-02-05 =
 * Feature - Replicate Storefront's layout logic in the block editor. Wide and Full-width options are made available only if supported.
