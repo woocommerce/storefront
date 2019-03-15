@@ -235,16 +235,20 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 				);
 			?>
 
-			<?php if ( has_nav_menu( 'handheld' ) ) : ?>
+			<?php
+				$handheld = wp_nav_menu(
+					array(
+						'theme_location'  => 'handheld',
+						'container_class' => 'handheld-navigation',
+						'echo'            => false,
+						'fallback_cb'     => '__return_false',
+					)
+				);
+			?>
+
+			<?php if ( ! empty( $handheld ) ) : ?>
 				<button class="menu-toggle" aria-haspopup="true" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
-				<?php
-					wp_nav_menu(
-						array(
-							'theme_location'  => 'handheld',
-							'container_class' => 'handheld-navigation',
-						)
-					);
-				?>
+				<?php echo $handheld; // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped ?>
 			<?php endif; ?>
 		</nav><!-- #site-navigation -->
 		<?php

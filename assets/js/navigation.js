@@ -70,12 +70,6 @@
 
 		var menu = handheld[0].querySelector( 'ul' );
 
-		// Hide menu toggle button if menu is empty and return early.
-		if ( ! menu ) {
-			button.style.display = 'none';
-			return;
-		}
-
 		button.setAttribute( 'aria-expanded', 'false' );
 		menu.classList.add( 'nav-menu' );
 		menu.style.visibility = 'hidden';
