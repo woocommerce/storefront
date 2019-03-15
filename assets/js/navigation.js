@@ -25,7 +25,7 @@
 		// Add dropdown toggle that displays child menu items.
 		var handheld = document.getElementsByClassName( 'handheld-navigation' );
 
-		if ( ! handheld ) {
+		if ( 0 === handheld.length ) {
 			return;
 		}
 
