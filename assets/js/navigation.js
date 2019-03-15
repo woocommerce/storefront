@@ -7,9 +7,7 @@
  * Also adds a focus class to parent li's for accessibility.
  */
 ( function() {
-
-	// Wait for DOM to be ready.
-	document.addEventListener( 'DOMContentLoaded', function() {
+	var handheldMenu = function() {
 		var container = document.getElementById( 'site-navigation' );
 
 		if ( ! container ) {
@@ -88,7 +86,9 @@
 			menu.style.visibility = 'true' === expanded ? 'visible' : 'hidden';
 			button.setAttribute( 'aria-expanded', expanded );
 		} );
+	};
 
+	var focusClass = function() {
 		// Add focus class to parents of sub-menu anchors.
 		[].forEach.call( document.querySelectorAll( '.site-header .menu-item > a, .site-header .page_item > a, .site-header-cart a' ), function( anchor ) {
 			anchor.addEventListener( 'focus', function() {
@@ -114,6 +114,9 @@
 			} );
 		} );
 
+	};
+
+	var touchEvents = function() {
 		// Add an identifying class to dropdowns when on a touch device
 		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
 		if ( ( 'ontouchstart' in window || navigator.maxTouchPoints ) && window.innerWidth > 767 ) {
@@ -154,5 +157,12 @@
 				} );
 			} );
 		}
+	};
+
+	// Wait for DOM to be ready.
+	document.addEventListener( 'DOMContentLoaded', function() {
+		handheldMenu();
+		focusClass();
+		touchEvents();
 	} );
 } )();
