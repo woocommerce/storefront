@@ -894,6 +894,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				.wp-block-table:not( .is-style-stripes ) tbody tr:nth-child(2n) td {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 				}
+
+				.wp-block-cover .wp-block-cover__inner-container h1,
+				.wp-block-cover .wp-block-cover__inner-container h2,
+				.wp-block-cover .wp-block-cover__inner-container h3,
+				.wp-block-cover .wp-block-cover__inner-container h4,
+				.wp-block-cover .wp-block-cover__inner-container h5,
+				.wp-block-cover .wp-block-cover__inner-container h6 {
+					color: ' . $storefront_theme_mods['hero_text_color'] . ';
+				}
 			';
 
 			return apply_filters( 'storefront_gutenberg_customizer_css', $styles );
