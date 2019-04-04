@@ -294,6 +294,7 @@
 
 	.wp-block-cover {
 		flex-flow: row wrap;
+		min-height: 350px;
 
 		// < 5.2 styling
 		> .wp-block-cover-text {
@@ -323,9 +324,65 @@
 
 		// > 5.2 styling
 		.wp-block-cover__inner-container {
-			padding: ms(1);
+			padding: ms(5) ms(1);
 			width: calc(100vw - #{ms(1)});
 			max-width: calc(100vw - #{ms(1)});
+			color: $color-body;
+
+			*:nth-last-child( -n+1 ) {
+				margin-bottom: 0;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				padding: 0;
+				margin-left: auto;
+				margin-right: auto;
+				color: #000000;
+			}
+
+			h1 {
+				font-size: ms(6);
+				margin-bottom: ms(-6);
+			}
+
+			h2 {
+				font-size: ms(5);
+				margin-bottom: ms(-5);
+			}
+
+			h3 {
+				font-size: ms(4);
+				margin-bottom: ms(-4);
+			}
+
+			h4 {
+				font-size: ms(3);
+				margin-bottom: ms(-3);
+			}
+
+			h5 {
+				font-size: ms(2);
+				margin-bottom: ms(-2);
+			}
+
+			h6 {
+				font-size: ms(2);
+				margin-bottom: ms(-2);
+			}
+
+			p {
+				&:not( .has-small-font-size ),
+				&:not( .has-medium-font-size ),
+				&:not( .has-large-font-size ),
+				&:not( .has-huge-font-size ) {
+					font-size: 1.1em;
+				}
+			}
 
 			@media ( min-width: $handheld ) {
 				width: calc(8 * (100vw / 12 ));
@@ -335,6 +392,8 @@
 			@media ( min-width: $desktop ) {
 				width: calc(6 * (100vw / 12 ));
 				max-width: calc(6 * (100vw / 12 ));
+				padding-top: ms(9);
+				padding-bottom: ms(9);
 			}
 		}
 
