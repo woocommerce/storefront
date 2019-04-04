@@ -292,14 +292,11 @@
 		}
 	}
 
-	.wp-block-cover-image,
 	.wp-block-cover {
 		flex-flow: row wrap;
 
-		.wp-block-cover-image-text,
-		.wp-block-cover-text,
-		h2,
-		p {
+		// < 5.2 styling
+		> .wp-block-cover-text {
 			font-size: ms(3);
 			font-weight: 300;
 			line-height: 1.618;
@@ -319,6 +316,23 @@
 
 			@media ( min-width: $desktop ) {
 				font-size: ms(4);
+				width: calc(6 * (100vw / 12 ));
+				max-width: calc(6 * (100vw / 12 ));
+			}
+		}
+
+		// > 5.2 styling
+		.wp-block-cover__inner-container {
+			padding: ms(1);
+			width: calc(100vw - #{ms(1)});
+			max-width: calc(100vw - #{ms(1)});
+
+			@media ( min-width: $handheld ) {
+				width: calc(8 * (100vw / 12 ));
+				max-width: calc(8 * (100vw / 12 ));
+			}
+
+			@media ( min-width: $desktop ) {
 				width: calc(6 * (100vw / 12 ));
 				max-width: calc(6 * (100vw / 12 ));
 			}
