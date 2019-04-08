@@ -26,8 +26,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_filter( 'get_theme_starter_content', array( $this, 'filter_start_content' ), 10, 2 );
 			add_action( 'woocommerce_product_query', array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
-			add_action( 'customize_preview_init', array( $this, 'add_product_tax' ), -1 );
-			add_action( 'customize_preview_init', array( $this, 'set_product_data' ), -1 );
+			add_action( 'customize_preview_init', array( $this, 'add_product_tax' ), 10 );
+			add_action( 'customize_preview_init', array( $this, 'set_product_data' ), 10 );
 			add_action( 'after_setup_theme', array( $this, 'remove_default_widgets' ) );
 			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
