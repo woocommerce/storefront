@@ -73,6 +73,30 @@
 	}
 }
 
+// Homepage
+.home.page-template-template-fullwidth {
+	.hentry {
+		margin-bottom: 0;
+
+		.entry-content {
+			> .wp-block-cover.alignfull,
+			> .wp-block-image.alignfull {
+				width: auto;
+				max-width: 1000%;
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+				margin-top: - ms(7);
+				margin-bottom: ms(7);
+			}
+
+			h2 + .woocommerce,
+			h2 + [class*='wp-block-woocommerce-'] {
+				margin-top: ms(4);
+			}
+		}
+	}
+}
+
 /**
  * Front-end + editor styles
  */
