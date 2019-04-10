@@ -26,6 +26,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_filter( 'get_theme_starter_content', array( $this, 'filter_start_content' ), 10, 2 );
 			add_action( 'woocommerce_product_query', array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
+			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'filter_on_sale_products' ), 20, 3 );
 			add_filter( 'woocommerce_product_categories', array( $this, 'filter_product_categories_shortcode' ) );
 			add_action( 'customize_preview_init', array( $this, 'add_product_tax' ), 10 );
 			add_action( 'customize_preview_init', array( $this, 'set_product_data' ), 10 );
@@ -395,6 +396,38 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 
 				// Allow for multiple status.
 				$query_args['post_status'] = get_post_stati();
+			}
+
+			return $query_args;
+		}
+
+		/**
+		 * Filter shortcode products loop in WooCommerce.
+		 *
+		 * @since 2.5.0
+		 * @param array  $query_args Query args.
+		 * @param array  $atts Shortcode attributes.
+		 * @param string $type Loop type.
+		 * @return array $query_args
+		 */
+		public function filter_on_sale_products( $query_args, $atts, $type ) {
+			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
+				return $query_args;
+			}
+
+			if ( 'sale_products' === $type ) {
+				$onsale = array(
+					'beanie',
+					'belt',
+					'cap',
+					'hoodie-with-pocket',
+				);
+
+				$products = $this->_query_starter_content( 'product', $onsale, true );
+
+				if ( ! empty( $products ) ) {
+					$query_args['post__in'] = $products;
+				}
 			}
 
 			return $query_args;
