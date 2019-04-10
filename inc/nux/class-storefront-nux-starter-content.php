@@ -404,8 +404,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * Override product categories when displaying starter content.
 		 *
 		 * @since 2.5.0
-		 * @param array $categories Starter content.
-		 * @return array $categories
+		 * @param array $categories Product categories.
+		 * @return array $categories Modified product categories.
 		 */
 		public function filter_product_categories_shortcode( $categories ) {
 			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
