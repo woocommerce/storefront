@@ -26,6 +26,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_filter( 'get_theme_starter_content', array( $this, 'filter_start_content' ), 10, 2 );
 			add_action( 'woocommerce_product_query', array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
+			add_filter( 'woocommerce_product_categories', array( $this, 'filter_product_categories_shortcode' ) );
 			add_action( 'customize_preview_init', array( $this, 'add_product_tax' ), 10 );
 			add_action( 'customize_preview_init', array( $this, 'set_product_data' ), 10 );
 			add_action( 'after_setup_theme', array( $this, 'remove_default_widgets' ) );
@@ -397,6 +398,34 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			return $query_args;
+		}
+
+		/**
+		 * Override product categories when displaying starter content.
+		 *
+		 * @since 2.5.0
+		 * @param array $categories Starter content.
+		 * @return array $categories
+		 */
+		public function filter_product_categories_shortcode( $categories ) {
+			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
+				return $categories;
+			}
+
+			// Get empty categories.
+			$categories = get_terms(
+				'product_cat', array(
+					'hide_empty' => false,
+				)
+			);
+
+			foreach ( $categories as $key => $cat ) {
+
+				// Fake number of products in category.
+				$categories[ $key ]->count = 1;
+			}
+
+			return $categories;
 		}
 
 		/**
