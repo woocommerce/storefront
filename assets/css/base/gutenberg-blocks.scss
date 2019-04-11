@@ -351,7 +351,6 @@
 			padding: ms(5) ms(1);
 			width: calc(100vw - #{ms(1)});
 			max-width: calc(100vw - #{ms(1)});
-			color: $color-body;
 
 			*:nth-last-child( -n+1 ) {
 				margin-bottom: 0;
