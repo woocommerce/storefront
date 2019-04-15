@@ -1515,6 +1515,16 @@ ul.order_details {
 		input.input-text {
 			box-shadow: inset 2px 0 0 $error;
 		}
+
+		input.input-checkbox {
+			outline: 2px solid $error;
+			outline-offset: 1px;
+		}
+
+		.select2-selection {
+			border-color: $error;
+			border-width: 2px;
+		}
 	}
 }
 
@@ -1529,7 +1539,7 @@ ul.order_details {
 
 .required {
 	border-bottom: 0 !important;
-	color: red;
+	color: $error;
 }
 
 .demo_store {
