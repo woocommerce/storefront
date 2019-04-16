@@ -19,6 +19,7 @@
 .composite_summary .summary_element {
 
 	.summary_element_wrapper {
+
 		box-shadow: 0 0 0 4px rgba( 0, 0, 0, 0 );
 
 		&.selected,
@@ -83,6 +84,10 @@
 				&.selected,
 				&.selected:hover {
 					box-shadow: 0 0 0 4px rgba( 0, 0, 0, 0.06 );
+				}
+
+				&.selected:not( .loading ) button {
+					border-radius: 50%;
 				}
 
 				&:hover {
