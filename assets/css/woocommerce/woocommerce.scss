@@ -634,6 +634,11 @@ ul.products {
 				@include underlinedLink();
 			}
 		}
+
+		.edit-link {
+			font-size: ms(-1);
+			margin-top: 1em;
+		}
 	}
 }
 
