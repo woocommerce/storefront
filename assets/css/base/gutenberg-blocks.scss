@@ -366,7 +366,7 @@
 				&.columns-#{$i} .blocks-gallery-image,
 				&.columns-#{$i} .blocks-gallery-item {
 					margin-right: gutter(12);
-					width: calc(( 100% - #{gutter(12)} * #{$i - 1} ) / #{$i});
+					width: ( 100% - ( gutter(12) * ( $i - 1 ) ) ) / $i;
 
 					&:nth-of-type( #{$i}n ) {
 						margin-right: 0;
@@ -385,7 +385,7 @@
 					&.columns-#{$i} .blocks-gallery-image,
 					&.columns-#{$i} .blocks-gallery-item {
 						margin-right: gutter(9);
-						width: calc(( 100% - #{gutter(9)} * #{$i - 1} ) / #{$i});
+						width: ( 100% - ( gutter(9) * ( $i - 1 ) ) ) / $i;
 
 						&:nth-of-type( #{$i}n ) {
 							margin-right: 0;
