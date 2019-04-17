@@ -66,8 +66,13 @@ if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
 /**
  * Products
  *
+ * @see storefront_edit_post_link()
  * @see storefront_upsell_display()
+ * @see storefront_single_product_pagination()
+ * @see storefront_sticky_single_add_to_cart()
  */
+add_action( 'woocommerce_single_product_summary', 'storefront_edit_post_link', 60 );
+
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 add_action( 'woocommerce_after_single_product_summary', 'storefront_upsell_display', 15 );
 
