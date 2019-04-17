@@ -757,6 +757,18 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 			return;
 		}
 
+		$show = false;
+
+		if ( $product->is_purchasable() && $product->is_in_stock() ) {
+			$show = true;
+		} else if ( $product->is_type( 'external' ) ) {
+			$show = true;
+		}
+
+		if ( ! $show ) {
+			return;
+		}
+
 		$params = apply_filters(
 			'storefront_sticky_add_to_cart_params', array(
 				'trigger_class' => 'entry-summary',
