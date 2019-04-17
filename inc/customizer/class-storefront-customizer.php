@@ -730,17 +730,23 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 5 ) . ';
 			}
 
-			a  {
+			a {
 				color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
 			a:focus,
-			.button:focus,
-			.button.alt:focus,
 			button:focus,
+			.button.alt:focus,
+			input:focus,
+			textarea:focus,
 			input[type="button"]:focus,
 			input[type="reset"]:focus,
-			input[type="submit"]:focus {
+			input[type="submit"]:focus,
+			input[type="email"]:focus,
+			input[type="tel"]:focus,
+			input[type="url"]:focus,
+			input[type="password"]:focus,
+			input[type="search"]:focus {
 				outline-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
