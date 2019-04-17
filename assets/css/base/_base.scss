@@ -341,6 +341,7 @@ body {
 .site-branding {
 	float: left;
 	margin-bottom: 0;
+	width: calc( 100% - 120px );
 
 	.site-title {
 		font-size: 2em;
@@ -1143,6 +1144,7 @@ button.menu-toggle {
 	background-image: none;
 	padding: ms(-2) ms(-1) ms(-2) ms(5);
 	font-size: ms(-1);
+	max-width: 120px;
 
 	&:hover {
 		background-image: none;
