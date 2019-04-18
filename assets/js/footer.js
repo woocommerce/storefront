@@ -24,8 +24,8 @@
 		var footer_bar = document.getElementsByClassName( 'storefront-handheld-footer-bar' );
 		var forms      = document.forms;
 		var isFocused  = function( focused ) {
-			return function() {
-				if ( !! focused ) {
+			return function( event ) {
+				if ( !! focused && event.target.tabIndex !== -1 ) {
 					document.body.classList.add( 'sf-input-focused' );
 				} else {
 					document.body.classList.remove( 'sf-input-focused' );
