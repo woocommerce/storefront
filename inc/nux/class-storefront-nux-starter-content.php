@@ -273,6 +273,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return $content;
 			}
 
+			// Get hero image and save for later.
+			$hero_image = false;
+
+			if ( array_key_exists( 'attachments', $content ) && array_key_exists( 'hero-image', $content['attachments'] ) ) {
+				$hero_image = $content['attachments']['hero-image'];
+			}
+
+			// Remove some of the content if necessary.
 			$tasks = array();
 
 			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // WPCS: input var ok.
@@ -315,6 +323,13 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				unset( $content['posts']['contact'] );
 				unset( $content['nav_menus'] );
 				unset( $content['widgets'] );
+			}
+
+			// Add homepage attachment image.
+			if ( $hero_image && ! array_key_exists( 'attachments', $content ) ) {
+				$content['attachments'] = array(
+					'hero-image' => $hero_image,
+				);
 			}
 
 			return $content;
