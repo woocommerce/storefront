@@ -1034,10 +1034,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 */
 		private function _homepage_blocks_content() {
 			$content = '
-				<!-- wp:cover {"url":"{{hero-image-url}}","id":{{hero-image-id}},"dimRatio":0,"customOverlayColor":"#ffffff","align":"full"} -->
-				<div class="wp-block-cover alignfull" style="background-image:url({{hero-image-url}});background-color:#ffffff"><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"align":"center"} -->
-				<h1 style="text-align:center">' . __( 'Welcome', 'storefront' ) . '</h1>
-				<!-- /wp:heading -->
+				{{cover}}
 
 				<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
 				<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'This is your homepage which is what most visitors will see when they first visit your shop.', 'storefront' ) . '</p>
@@ -1064,13 +1061,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				<div class="wp-block-woocommerce-product-new">[products limit="4" columns="4" orderby="date" order="DESC"]</div>
 				<!-- /wp:woocommerce/product-new -->
 
-				<!-- wp:heading {"align":"center"} -->
-				<h2 style="text-align:center">' . __( 'We Recommend', 'storefront' ) . '</h2>
-				<!-- /wp:heading -->
-
-				<!-- wp:woocommerce/handpicked-products {"columns":4,"editMode":false,"products":[{{handpicked-products}}]} -->
-				<div class="wp-block-woocommerce-handpicked-products">[products limit="4" columns="4" orderby="date" order="DESC" ids="{{handpicked-products}}"]</div>
-				<!-- /wp:woocommerce/handpicked-products -->
+				{{handpicked-products}}
 
 				<!-- wp:heading {"align":"center"} -->
 				<h2 style="text-align:center">' . __( 'Fan Favorites', 'storefront' ) . '</h2>
@@ -1113,9 +1104,19 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$hero = $this->_query_starter_content( 'attachment', 'hero-image', true );
 
 			if ( ! empty( $hero ) ) {
+				$cover = '
+					<!-- wp:cover {"url":"{{hero-image-url}}","id":{{hero-image-id}},"dimRatio":0,"customOverlayColor":"#ffffff","align":"full"} -->
+					<div class="wp-block-cover alignfull" style="background-image:url({{hero-image-url}});background-color:#ffffff"><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"align":"center"} -->
+					<h1 style="text-align:center">' . __( 'Welcome', 'storefront' ) . '</h1>
+					<!-- /wp:heading -->
+				';
+
 				$attachment = $hero[0];
-				$content    = str_replace( '{{hero-image-id}}', $attachment, $content );
-				$content    = str_replace( '{{hero-image-url}}', wp_get_attachment_url( $attachment ), $content );
+				$cover      = str_replace( '{{hero-image-id}}', $attachment, $cover );
+				$cover      = str_replace( '{{hero-image-url}}', wp_get_attachment_url( $attachment ), $cover );
+				$content    = str_replace( '{{cover}}', $cover, $content );
+			} else {
+				$content = str_replace( '{{cover}}', '', $content );
 			}
 
 			// Replace handpicked products placeholders.
@@ -1129,7 +1130,20 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$products = $this->_query_starter_content( 'product', $featured, true );
 
 			if ( ! empty( $products ) ) {
-				$content = str_replace( '{{handpicked-products}}', implode( ',', $products ), $content );
+				$handpicked = '
+					<!-- wp:heading {"align":"center"} -->
+					<h2 style="text-align:center">' . __( 'We Recommend', 'storefront' ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:woocommerce/handpicked-products {"columns":4,"editMode":false,"products":[{{handpicked-products}}]} -->
+					<div class = "wp-block-woocommerce-handpicked-products">[products limit="4" columns="4" orderby="date" order="DESC" ids="{{handpicked-products}}"]</div>
+					<!-- /wp:woocommerce/handpicked-products -->
+				';
+
+				$handpicked = str_replace( '{{handpicked-products}}', implode( ',', $products ), $handpicked );
+				$content    = str_replace( '{{handpicked-products}}', $handpicked, $content );
+			} else {
+				$content = str_replace( '{{handpicked-products}}', '', $content );
 			}
 
 			return $content;
