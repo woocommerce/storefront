@@ -364,6 +364,16 @@ ul.products {
 	}
 }
 
+.hentry .entry-content {
+	ul.products {
+		li.product {
+			> a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
 .price {
 	del {
 		opacity: 0.5;

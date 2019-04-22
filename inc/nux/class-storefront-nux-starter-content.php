@@ -26,11 +26,18 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_filter( 'get_theme_starter_content', array( $this, 'filter_start_content' ), 10, 2 );
 			add_action( 'woocommerce_product_query', array( $this, 'wc_query' ) );
 			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'shortcode_loop_products' ), 10, 3 );
+			add_filter( 'woocommerce_shortcode_products_query', array( $this, 'filter_on_sale_products' ), 20, 3 );
+			add_filter( 'woocommerce_product_categories', array( $this, 'filter_product_categories_shortcode' ) );
 			add_action( 'customize_preview_init', array( $this, 'add_product_tax' ), 10 );
 			add_action( 'customize_preview_init', array( $this, 'set_product_data' ), 10 );
 			add_action( 'after_setup_theme', array( $this, 'remove_default_widgets' ) );
 			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
+
+			if ( version_compare( get_bloginfo( 'version' ), '5.2', '>=' ) &&
+			( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.6.0', '>=' ) ) ) {
+				add_action( 'customize_preview_init', array( $this, 'update_homepage_content' ), 10 );
+			}
 
 			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
 				add_filter( 'storefront_starter_content', '__return_empty_array' );
@@ -59,13 +66,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		public function starter_content() {
 			$starter_content = array(
 				'posts'       => array(
-					'home'    => array(
-						'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
-						/* translators: %s: 'End Of Line' symbol */
-						'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
-						'template'     => 'template-homepage.php',
-						'thumbnail'    => '{{hero-image}}',
-					),
 					'about'   => array(
 						'post_type'    => 'page',
 						'post_title'   => __( 'About', 'storefront' ),
@@ -201,6 +201,29 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				),
 			);
 
+			// Add homepage.
+			if ( version_compare( get_bloginfo( 'version' ), '5.2', '>=' ) &&
+			   ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.6.0', '>=' ) ) ) {
+				$homepage_content = array(
+					'post_title' => esc_attr__( 'Homepage', 'storefront' ),
+					'template'   => 'template-fullwidth.php',
+				);
+			} else {
+				$homepage_content = array(
+					'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
+					/* translators: %s: 'End Of Line' symbol */
+					'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
+					'template'     => 'template-homepage.php',
+					'thumbnail'    => '{{hero-image}}',
+				);
+			}
+
+			$homepage = array(
+				'home' => $homepage_content,
+			);
+
+			$starter_content['posts'] = array_merge( $starter_content['posts'], $homepage );
+
 			// Add products.
 			$starter_content_wc_products = $this->_starter_content_products();
 
@@ -250,6 +273,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return $content;
 			}
 
+			// Get hero image and save for later.
+			$hero_image = false;
+
+			if ( array_key_exists( 'attachments', $content ) && array_key_exists( 'hero-image', $content['attachments'] ) ) {
+				$hero_image = $content['attachments']['hero-image'];
+			}
+
+			// Remove some of the content if necessary.
 			$tasks = array();
 
 			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // WPCS: input var ok.
@@ -292,6 +323,17 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				unset( $content['posts']['contact'] );
 				unset( $content['nav_menus'] );
 				unset( $content['widgets'] );
+			}
+
+			// Add homepage attachment image, if necessary for blocks.
+			if ( $hero_image &&
+				array_key_exists( 'posts', $content ) &&
+				array_key_exists( 'home', $content['posts'] ) &&
+				! array_key_exists( 'attachments', $content )
+			) {
+				$content['attachments'] = array(
+					'hero-image' => $hero_image,
+				);
 			}
 
 			return $content;
@@ -348,6 +390,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return $query_args;
 			}
 
+			// When a list of ids is already present in the query, return.
+			if ( array_key_exists( 'post__in', $query_args ) ) {
+				$query_args['post_status'] = get_post_stati();
+				return $query_args;
+			}
+
 			$query_args['post__in'] = array();
 
 			// Add existing products to query.
@@ -370,6 +418,66 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			return $query_args;
+		}
+
+		/**
+		 * Filter shortcode products loop in WooCommerce.
+		 *
+		 * @since 2.5.0
+		 * @param array  $query_args Query args.
+		 * @param array  $atts Shortcode attributes.
+		 * @param string $type Loop type.
+		 * @return array $query_args
+		 */
+		public function filter_on_sale_products( $query_args, $atts, $type ) {
+			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
+				return $query_args;
+			}
+
+			if ( 'sale_products' === $type ) {
+				$onsale = array(
+					'beanie',
+					'belt',
+					'cap',
+					'hoodie-with-pocket',
+				);
+
+				$products = $this->_query_starter_content( 'product', $onsale, true );
+
+				if ( ! empty( $products ) ) {
+					$query_args['post__in'] = $products;
+				}
+			}
+
+			return $query_args;
+		}
+
+		/**
+		 * Override product categories when displaying starter content.
+		 *
+		 * @since 2.5.0
+		 * @param array $categories Product categories.
+		 * @return array $categories Modified product categories.
+		 */
+		public function filter_product_categories_shortcode( $categories ) {
+			if ( ! is_customize_preview() || true !== (bool) get_option( 'fresh_site' ) ) {
+				return $categories;
+			}
+
+			// Get empty categories.
+			$categories = get_terms(
+				'product_cat', array(
+					'hide_empty' => false,
+				)
+			);
+
+			foreach ( $categories as $key => $cat ) {
+
+				// Fake number of products in category.
+				$categories[ $key ]->count = 1;
+			}
+
+			return $categories;
 		}
 
 		/**
@@ -891,10 +999,161 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		}
 
 		/**
+		 * Adds blocks to homepage content.
+		 *
+		 * @since 2.5.0
+		 */
+		public function update_homepage_content() {
+			$homepage = $this->_query_starter_content( 'page', 'homepage', true );
+
+			if ( empty( $homepage ) ) {
+				return;
+			}
+
+			$homepage = $homepage[0];
+
+			$content = $this->_replace_homepage_blocks_symbols();
+
+			if ( ! empty( $content ) ) {
+
+				// Update homepage content.
+				$update_homepage = array(
+					'ID'           => $homepage,
+					'post_content' => $content,
+				);
+
+				wp_update_post( $update_homepage );
+			}
+		}
+
+		/**
+		 * Homepage blocks content.
+		 *
+		 * @since 2.5.0
+		 * @return string $content Homepage content.
+		 */
+		private function _homepage_blocks_content() {
+			$content = '
+				{{cover}}
+
+				<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
+				<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'This is your homepage which is what most visitors will see when they first visit your shop.', 'storefront' ) . '</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
+				<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ) . '</p>
+				<!-- /wp:paragraph --></div></div>
+				<!-- /wp:cover -->
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">' . __( 'Shop by Category', 'storefront' ) . '</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:shortcode -->
+				[product_categories limit="3" columns="3" orderby="name"]
+				<!-- /wp:shortcode -->
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">' . __( 'New In', 'storefront' ) . '</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:woocommerce/product-new {"columns":4} -->
+				<div class="wp-block-woocommerce-product-new">[products limit="4" columns="4" orderby="date" order="DESC"]</div>
+				<!-- /wp:woocommerce/product-new -->
+
+				{{handpicked-products}}
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">' . __( 'Fan Favorites', 'storefront' ) . '</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:woocommerce/product-top-rated {"columns":4} -->
+				<div class="wp-block-woocommerce-product-top-rated">[products limit="4" columns="4" orderby="rating"]</div>
+				<!-- /wp:woocommerce/product-top-rated -->
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">' . __( 'On Sale', 'storefront' ) . '</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:woocommerce/product-on-sale {"columns":4} -->
+				<div class="wp-block-woocommerce-product-on-sale">[products limit="4" columns="4" orderby="date" order="DESC" on_sale="1"]</div>
+				<!-- /wp:woocommerce/product-on-sale -->
+
+				<!-- wp:heading {"align":"center"} -->
+				<h2 style="text-align:center">' . __( 'Best Sellers', 'storefront' ) . '</h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:woocommerce/product-best-sellers {"columns":4} -->
+				<div class="wp-block-woocommerce-product-best-sellers">[products limit="4" columns="4" best_selling="1"]</div>
+				<!-- /wp:woocommerce/product-best-sellers -->
+			';
+
+			return trim( $content );
+		}
+
+		/**
+		 * Replaces placeholder symbols with content.
+		 *
+		 * @since 2.5.0
+		 * @return string $content Homepage content.
+		 */
+		private function _replace_homepage_blocks_symbols() {
+			$content = $this->_homepage_blocks_content();
+
+			// Replace hero placeholders.
+			$hero = $this->_query_starter_content( 'attachment', 'hero-image', true );
+
+			if ( ! empty( $hero ) ) {
+				$cover = '
+					<!-- wp:cover {"url":"{{hero-image-url}}","id":{{hero-image-id}},"dimRatio":0,"customOverlayColor":"#ffffff","align":"full"} -->
+					<div class="wp-block-cover alignfull" style="background-image:url({{hero-image-url}});background-color:#ffffff"><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"align":"center"} -->
+					<h1 style="text-align:center">' . __( 'Welcome', 'storefront' ) . '</h1>
+					<!-- /wp:heading -->
+				';
+
+				$attachment = $hero[0];
+				$cover      = str_replace( '{{hero-image-id}}', $attachment, $cover );
+				$cover      = str_replace( '{{hero-image-url}}', wp_get_attachment_url( $attachment ), $cover );
+				$content    = str_replace( '{{cover}}', $cover, $content );
+			} else {
+				$content = str_replace( '{{cover}}', '', $content );
+			}
+
+			// Replace handpicked products placeholders.
+			$featured = array(
+				'sunglasses',
+				'hoodie-with-pocket',
+				'hoodie-with-zipper',
+				'hoodie',
+			);
+
+			$products = $this->_query_starter_content( 'product', $featured, true );
+
+			if ( ! empty( $products ) ) {
+				$handpicked = '
+					<!-- wp:heading {"align":"center"} -->
+					<h2 style="text-align:center">' . __( 'We Recommend', 'storefront' ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:woocommerce/handpicked-products {"columns":4,"editMode":false,"products":[{{handpicked-products}}]} -->
+					<div class = "wp-block-woocommerce-handpicked-products">[products limit="4" columns="4" orderby="date" order="DESC" ids="{{handpicked-products}}"]</div>
+					<!-- /wp:woocommerce/handpicked-products -->
+				';
+
+				$handpicked = str_replace( '{{handpicked-products}}', implode( ',', $products ), $handpicked );
+				$content    = str_replace( '{{handpicked-products}}', $handpicked, $content );
+			} else {
+				$content = str_replace( '{{handpicked-products}}', '', $content );
+			}
+
+			return $content;
+		}
+
+		/**
 		 * Get a list of posts created by starter content.
 		 *
 		 * @since 2.2.1
-		 * @return  mixed false|rray $query Array of post ids.
+		 * @return mixed false|array $query Array of post ids.
 		 */
 		private function _get_created_starter_content_products() {
 			global $wp_customize;
@@ -933,6 +1192,48 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		}
 
 		/**
+		 * Query start content imported by the Customizer.
+		 *
+		 * @since 2.5.0
+		 * @param string             $post_type Post Type.
+		 * @param mixed string|array $draft_slugs Slug or array of draft slugs.
+		 * @param bool               $ids Whether to return just the ids or the whole post object.
+		 * @return mixed false|int $query Query results.
+		 */
+		private function _query_starter_content( $post_type, $draft_slugs, $ids = false ) {
+			$query_args = array(
+				'post_type'      => $post_type,
+				'post_status'    => 'auto-draft',
+				'posts_per_page' => -1,
+				'meta_query'     => array(
+					array(
+						'key'     => '_customize_draft_post_name',
+						'value'   => $draft_slugs,
+						'compare' => is_array( $draft_slugs ) ? 'IN' : '=',
+					),
+				),
+			);
+
+			$created_products = $this->_get_created_starter_content_products();
+
+			if ( false !== $created_products ) {
+				$query_args['post__in'] = $created_products;
+			}
+
+			if ( $ids ) {
+				$query_args['fields'] = 'ids';
+			}
+
+			$query = get_posts( $query_args );
+
+			if ( ! empty( $query ) ) {
+				return $query;
+			}
+
+			return false;
+		}
+
+		/**
 		 * Given a category slug, find the related image attachment.
 		 *
 		 * @since 2.2.0
@@ -940,24 +1241,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return mixed false|int $query first attachment found.
 		 */
 		private function _get_category_image_attachment_id( $category ) {
-			$query_args = array(
-				'post_type'      => 'attachment',
-				'post_status'    => 'auto-draft',
-				'fields'         => 'ids',
-				'posts_per_page' => -1,
-				'meta_query'     => array(
-					array(
-						'key'     => '_customize_draft_post_name',
-						'value'   => $category . '-image',
-						'compare' => '=',
-					),
-				),
-			);
+			$attachment = $this->_query_starter_content( 'attachment', $category . '-image', true );
 
-			$query = get_posts( $query_args );
-
-			if ( $query && ! empty( $query ) ) {
-				return $query[0];
+			if ( ! empty( $attachment ) ) {
+				return $attachment[0];
 			}
 
 			return false;

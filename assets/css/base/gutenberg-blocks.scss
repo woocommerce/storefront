@@ -73,6 +73,30 @@
 	}
 }
 
+// Homepage
+.home.page-template-template-fullwidth {
+	.hentry {
+		margin-bottom: 0;
+
+		.entry-content {
+			> .wp-block-cover.alignfull,
+			> .wp-block-image.alignfull {
+				width: auto;
+				max-width: 1000%;
+				margin-left: calc(50% - 50vw);
+				margin-right: calc(50% - 50vw);
+				margin-top: - ms(7);
+				margin-bottom: ms(7);
+			}
+
+			h2 + .woocommerce,
+			h2 + [class*='wp-block-woocommerce-'] {
+				margin-top: ms(4);
+			}
+		}
+	}
+}
+
 /**
  * Front-end + editor styles
  */
@@ -292,14 +316,12 @@
 		}
 	}
 
-	.wp-block-cover-image,
 	.wp-block-cover {
 		flex-flow: row wrap;
+		min-height: 350px;
 
-		.wp-block-cover-image-text,
-		.wp-block-cover-text,
-		h2,
-		p {
+		// < 5.2 styling
+		p.wp-block-cover-text {
 			font-size: ms(3);
 			font-weight: 300;
 			line-height: 1.618;
@@ -321,6 +343,79 @@
 				font-size: ms(4);
 				width: calc(6 * (100vw / 12 ));
 				max-width: calc(6 * (100vw / 12 ));
+			}
+		}
+
+		// > 5.2 styling
+		.wp-block-cover__inner-container {
+			padding: ms(5) ms(1);
+			width: calc(100vw - #{ms(1)});
+			max-width: calc(100vw - #{ms(1)});
+
+			*:nth-last-child( -n+1 ) {
+				margin-bottom: 0;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				padding: 0;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			h1 {
+				font-size: ms(6);
+				margin-bottom: ms(-6);
+			}
+
+			h2 {
+				font-size: ms(5);
+				margin-bottom: ms(-5);
+			}
+
+			h3 {
+				font-size: ms(4);
+				margin-bottom: ms(-4);
+			}
+
+			h4 {
+				font-size: ms(3);
+				margin-bottom: ms(-3);
+			}
+
+			h5 {
+				font-size: ms(2);
+				margin-bottom: ms(-2);
+			}
+
+			h6 {
+				font-size: ms(2);
+				margin-bottom: ms(-2);
+			}
+
+			p {
+				&:not( .has-small-font-size ),
+				&:not( .has-medium-font-size ),
+				&:not( .has-large-font-size ),
+				&:not( .has-huge-font-size ) {
+					font-size: 1.1em;
+				}
+			}
+
+			@media ( min-width: $handheld ) {
+				width: calc(8 * (100vw / 12 ));
+				max-width: calc(8 * (100vw / 12 ));
+			}
+
+			@media ( min-width: $desktop ) {
+				width: calc(6 * (100vw / 12 ));
+				max-width: calc(6 * (100vw / 12 ));
+				padding-top: ms(9);
+				padding-bottom: ms(9);
 			}
 		}
 
