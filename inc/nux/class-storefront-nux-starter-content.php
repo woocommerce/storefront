@@ -325,8 +325,12 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				unset( $content['widgets'] );
 			}
 
-			// Add homepage attachment image.
-			if ( $hero_image && ! array_key_exists( 'attachments', $content ) ) {
+			// Add homepage attachment image, if necessary for blocks.
+			if ( $hero_image &&
+				array_key_exists( 'posts', $content ) &&
+				array_key_exists( 'home', $content['posts'] ) &&
+				! array_key_exists( 'attachments', $content )
+			) {
 				$content['attachments'] = array(
 					'hero-image' => $hero_image,
 				);
