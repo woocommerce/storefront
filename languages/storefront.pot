@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.4.5\n"
+"Project-Id-Version: Storefront 2.5.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2019-03-15 18:43:32+00:00\n"
+"POT-Creation-Date: 2019-04-24 17:00:23+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -485,18 +485,6 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:63
-msgid "Welcome"
-msgstr ""
-
-#: inc/nux/class-storefront-nux-starter-content.php:65
-#. translators: %s: 'End Of Line' symbol
-msgid ""
-"This is your homepage which is what most visitors will see when they first "
-"visit your shop.%sYou can change this text by editing the \"Welcome\" page "
-"via the \"Pages\" menu in your dashboard."
-msgstr ""
-
 #: inc/nux/class-storefront-nux-starter-content.php:71
 msgid "About"
 msgstr ""
@@ -517,70 +505,129 @@ msgid ""
 "phone number. You might also try a plugin to add a contact form."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:615
+#. Template Name of the plugin/theme
+msgid "Homepage"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:213
+#: inc/nux/class-storefront-nux-starter-content.php:1110
+msgid "Welcome"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:215
+#. translators: %s: 'End Of Line' symbol
+msgid ""
+"This is your homepage which is what most visitors will see when they first "
+"visit your shop.%sYou can change this text by editing the \"Welcome\" page "
+"via the \"Pages\" menu in your dashboard."
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:723
 msgid "Accessories"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:616
-#: inc/nux/class-storefront-nux-starter-content.php:619
-#: inc/nux/class-storefront-nux-starter-content.php:622
+#: inc/nux/class-storefront-nux-starter-content.php:724
+#: inc/nux/class-storefront-nux-starter-content.php:727
+#: inc/nux/class-storefront-nux-starter-content.php:730
 msgid "A short category description"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:618
+#: inc/nux/class-storefront-nux-starter-content.php:726
 msgid "Hoodies"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:621
+#: inc/nux/class-storefront-nux-starter-content.php:729
 msgid "Tshirts"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:627
+#: inc/nux/class-storefront-nux-starter-content.php:735
 msgid "Beanie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:649
+#: inc/nux/class-storefront-nux-starter-content.php:757
 msgid "Belt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:671
+#: inc/nux/class-storefront-nux-starter-content.php:779
 msgid "Cap"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:693
+#: inc/nux/class-storefront-nux-starter-content.php:801
 msgid "Sunglasses"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:714
+#: inc/nux/class-storefront-nux-starter-content.php:822
 msgid "Hoodie with Logo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:735
+#: inc/nux/class-storefront-nux-starter-content.php:843
 msgid "Hoodie with Pocket"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:757
+#: inc/nux/class-storefront-nux-starter-content.php:865
 msgid "Hoodie with Zipper"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:778
+#: inc/nux/class-storefront-nux-starter-content.php:886
 msgid "Hoodie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:800
+#: inc/nux/class-storefront-nux-starter-content.php:908
 msgid "Long Sleeve Tee"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:821
+#: inc/nux/class-storefront-nux-starter-content.php:929
 msgid "Polo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:842
+#: inc/nux/class-storefront-nux-starter-content.php:950
 msgid "Tshirt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:863
+#: inc/nux/class-storefront-nux-starter-content.php:971
 msgid "Vneck Tshirt"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1040
+msgid ""
+"This is your homepage which is what most visitors will see when they first "
+"visit your shop."
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1044
+msgid ""
+"You can change this text by editing the \"Welcome\" page via the \"Pages\" "
+"menu in your dashboard."
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1049
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:259
+msgid "Shop by Category"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1057
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:311
+msgid "New In"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1067
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:417
+msgid "Fan Favorites"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1075
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:470
+msgid "On Sale"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1083
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:523
+msgid "Best Sellers"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1135
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:364
+msgid "We Recommend"
 msgstr ""
 
 #: inc/storefront-template-functions.php:48
@@ -623,60 +670,65 @@ msgstr ""
 msgid "Edit this section"
 msgstr ""
 
-#: inc/storefront-template-functions.php:339
-#: inc/storefront-template-functions.php:410
+#: inc/storefront-template-functions.php:343
+#: inc/storefront-template-functions.php:414
 msgid "Pages:"
 msgstr ""
 
-#: inc/storefront-template-functions.php:401
+#: inc/storefront-template-functions.php:405
 #. translators: %s: post title
 msgid "Continue reading %s"
 msgstr ""
 
-#: inc/storefront-template-functions.php:451
+#: inc/storefront-template-functions.php:455
 #. translators: %s: post date
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/storefront-template-functions.php:457
+#: inc/storefront-template-functions.php:461
 msgid "by"
 msgstr ""
 
-#: inc/storefront-template-functions.php:466
+#: inc/storefront-template-functions.php:470
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:466
+#: inc/storefront-template-functions.php:470
 msgid "1 Comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:466
+#: inc/storefront-template-functions.php:470
 msgid "% Comments"
 msgstr ""
 
-#: inc/storefront-template-functions.php:502
-#: inc/storefront-template-functions.php:505
+#: inc/storefront-template-functions.php:509
+#. translators: %s: Name of current post. Only visible to screen readers
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr ""
+
+#: inc/storefront-template-functions.php:532
+#: inc/storefront-template-functions.php:535
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/storefront-template-functions.php:511
+#: inc/storefront-template-functions.php:541
 msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:517
+#: inc/storefront-template-functions.php:547
 msgid "Tag:"
 msgid_plural "Tags:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:549
+#: inc/storefront-template-functions.php:579
 msgid "Next post:"
 msgstr ""
 
-#: inc/storefront-template-functions.php:550
+#: inc/storefront-template-functions.php:580
 msgid "Previous post:"
 msgstr ""
 
@@ -717,20 +769,8 @@ msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:259
-msgid "Shop by Category"
-msgstr ""
-
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:311
-msgid "New In"
-msgstr ""
-
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:330
 msgid "Recent Products"
-msgstr ""
-
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:364
-msgid "We Recommend"
 msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:384
@@ -738,20 +778,8 @@ msgstr ""
 msgid "Featured Products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:417
-msgid "Fan Favorites"
-msgstr ""
-
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:470
-msgid "On Sale"
-msgstr ""
-
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:490
 msgid "On Sale Products"
-msgstr ""
-
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:523
-msgid "Best Sellers"
 msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:542
@@ -774,15 +802,15 @@ msgstr ""
 msgid "More products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:775
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:787
 msgid "You're viewing:"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:810
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:822
 msgid "Shop by Brand"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:825
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:837
 msgid "Product Brands"
 msgstr ""
 
@@ -823,10 +851,6 @@ msgstr ""
 msgid "Full width"
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Homepage"
-msgstr ""
-
 #: comments.php:30
 #. translators: 1: number of comments, 2: post title
 msgctxt "comments title"
@@ -835,12 +859,12 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:535
+#: inc/storefront-template-functions.php:565
 msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/storefront-template-functions.php:536
+#: inc/storefront-template-functions.php:566
 msgctxt "Previous post"
 msgid "Previous"
 msgstr ""
