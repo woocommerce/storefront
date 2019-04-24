@@ -49,6 +49,19 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
+= 2.5.0 - 2019-XX-XX =
+* Feature - Updated Starter Content to make use of WooCommerce 3.6 blocks, and also the new cover block introduced in WordPress 5.2, to create a custom editable homepage.
+* Tweak - Added edit link to post, pages, and products.
+* Fix - Prevent overlap of site title and handheld menu button when not using a logo image.
+* Fix - Added error styling to T&C checkbox and Country select in the Checkout page.
+* Fix - Ensure all inputs use accent color set in the Customizer.
+* Fix - Don't show sticky add to cart if product cannot be purchased.
+* Fix - Added margin to view cart link in the "Added to cart" notice.
+* Fix - Replaced CSS calc with Sass math when calculating block gallery column widths for better compatibility with IE11.
+* Fix - Change color and size of "remove" icon in the Cart page.
+* Dev - Updated Composite Products integration for compatibility with version 4.0.
+* Dev - Updated FontAwesome to 5.8.1.
+
 = 2.4.5 - 2019-03-15 =
 * Fix - Revert changes made to the navigation menus that in some cases could cause menus to be hidden on the page.
 
