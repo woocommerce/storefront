@@ -255,7 +255,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 				'limit'            => 3,
 				'columns'          => 3,
 				'child_categories' => 0,
-				'orderby'          => 'name',
+				'orderby'          => 'menu_order',
 				'title'            => __( 'Shop by Category', 'storefront' ),
 			)
 		);
