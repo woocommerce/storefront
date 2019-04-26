@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.1
-Stable tag: 2.4.5
-Version: 2.4.5
+Stable tag: 2.4.6
+Version: 2.4.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.4.6 - 2019-04-26 =
+* Fix - Sort homepage template categories by `menu_order` instead of `name`.
+* Fix - Remove menu transition when no menu is assigned to primary location.
 
 = 2.4.5 - 2019-03-15 =
 * Fix - Revert changes made to the navigation menus that in some cases could cause menus to be hidden on the page.
