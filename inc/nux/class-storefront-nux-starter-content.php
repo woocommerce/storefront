@@ -1050,7 +1050,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				<!-- /wp:heading -->
 
 				<!-- wp:shortcode -->
-				[product_categories limit="3" columns="3" orderby="name"]
+				[product_categories limit="3" columns="3" orderby="menu_order"]
 				<!-- /wp:shortcode -->
 
 				<!-- wp:heading {"align":"center"} -->
