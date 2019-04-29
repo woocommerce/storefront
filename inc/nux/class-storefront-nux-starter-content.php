@@ -1036,15 +1036,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			$content = '
 				{{cover}}
 
-				<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
-				<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'This is your homepage which is what most visitors will see when they first visit your shop.', 'storefront' ) . '</p>
-				<!-- /wp:paragraph -->
-
-				<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
-				<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ) . '</p>
-				<!-- /wp:paragraph --></div></div>
-				<!-- /wp:cover -->
-
 				<!-- wp:heading {"align":"center"} -->
 				<h2 style="text-align:center">' . __( 'Shop by Category', 'storefront' ) . '</h2>
 				<!-- /wp:heading -->
@@ -1109,6 +1100,15 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					<div class="wp-block-cover alignfull" style="background-image:url({{hero-image-url}});background-color:#ffffff"><div class="wp-block-cover__inner-container"><!-- wp:heading {"level":1,"align":"center"} -->
 					<h1 style="text-align:center">' . __( 'Welcome', 'storefront' ) . '</h1>
 					<!-- /wp:heading -->
+
+					<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
+					<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'This is your homepage which is what most visitors will see when they first visit your shop.', 'storefront' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"align":"center","customTextColor":"#000000"} -->
+					<p style="color:#000000;text-align:center" class="has-text-color">' . __( 'You can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ) . '</p>
+					<!-- /wp:paragraph --></div></div>
+					<!-- /wp:cover -->
 				';
 
 				$attachment = $hero[0];
