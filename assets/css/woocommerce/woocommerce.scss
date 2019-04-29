@@ -2844,7 +2844,7 @@ dl.variation {
 			top: 50%;
 			width: 500px;
 			box-shadow: 0 0 5px rgba( #000, 0.2 );
-			z-index: 999999;
+			z-index: 1499; /* Lower than PhotoSwipe */
 			display: flex;
 			align-items: center;
 
