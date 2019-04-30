@@ -62,6 +62,10 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Dev - Updated Composite Products integration for compatibility with version 4.0.
 * Dev - Updated FontAwesome to 5.8.1.
 
+= 2.4.6 - 2019-04-26 =
+* Fix - Sort homepage template categories by `menu_order` instead of `name`.
+* Fix - Remove menu transition when no menu is assigned to primary location.
+
 = 2.4.5 - 2019-03-15 =
 * Fix - Revert changes made to the navigation menus that in some cases could cause menus to be hidden on the page.
 

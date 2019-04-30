@@ -2006,13 +2006,19 @@ dl.variation {
 				display: none;
 			}
 
-			.product_list_widget li a.remove {
-				position: relative;
-				float: left;
-				top: auto;
+			.product_list_widget {
+				height: 0;
 
-				&::before {
-					text-align: left;
+				li {
+					a.remove {
+						position: relative;
+						float: left;
+						top: auto;
+
+						&::before {
+							text-align: left;
+						}
+					}
 				}
 			}
 		}
@@ -2022,6 +2028,10 @@ dl.variation {
 			.widget_shopping_cart {
 				left: 0;
 				display: block;
+
+				.product_list_widget {
+					height: auto;
+				}
 			}
 		}
 	}
@@ -2844,7 +2854,7 @@ dl.variation {
 			top: 50%;
 			width: 500px;
 			box-shadow: 0 0 5px rgba( #000, 0.2 );
-			z-index: 999999;
+			z-index: 1499; /* Lower than PhotoSwipe */
 			display: flex;
 			align-items: center;
 
