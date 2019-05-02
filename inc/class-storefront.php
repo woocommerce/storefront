@@ -27,6 +27,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_action( 'widgets_init', array( $this, 'widgets_init' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
+			add_action( 'enqueue_block_assets', array( $this, 'block_assets' ) );
 			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_assets' ) );
 			add_filter( 'body_class', array( $this, 'body_classes' ) );
 			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
@@ -283,9 +284,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			wp_enqueue_style( 'storefront-style', get_template_directory_uri() . '/style.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-style', 'rtl', 'replace' );
 
-			wp_enqueue_style( 'storefront-gutenberg-blocks', get_template_directory_uri() . '/assets/css/base/gutenberg-blocks.css', '', $storefront_version );
-			wp_style_add_data( 'storefront-gutenberg-blocks', 'rtl', 'replace' );
-
 			wp_enqueue_style( 'storefront-icons', get_template_directory_uri() . '/assets/css/base/icons.css', '', $storefront_version );
 			wp_style_add_data( 'storefront-icons', 'rtl', 'replace' );
 
@@ -346,16 +344,25 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
+		 * Enqueue block assets.
+		 *
+		 * @since 2.5.0
+		 */
+		public function block_assets() {
+			global $storefront_version;
+
+			// Styles.
+			wp_enqueue_style( 'storefront-gutenberg-blocks', get_template_directory_uri() . '/assets/css/base/gutenberg-blocks.css', '', $storefront_version );
+			wp_style_add_data( 'storefront-gutenberg-blocks', 'rtl', 'replace' );
+		}
+
+		/**
 		 * Enqueue supplemental block editor assets.
 		 *
 		 * @since 2.4.0
 		 */
 		public function block_editor_assets() {
 			global $storefront_version;
-
-			// Styles.
-			wp_enqueue_style( 'storefront-editor-block-styles', get_theme_file_uri( '/assets/css/base/gutenberg-blocks.css' ), false, $storefront_version, 'all' );
-			wp_style_add_data( 'storefront-editor-block-styles', 'rtl', 'replace' );
 
 			// JS.
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
