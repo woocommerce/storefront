@@ -28,7 +28,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			add_action( 'wp_enqueue_scripts', array( $this, 'add_customizer_css' ), 130 );
 			add_action( 'customize_controls_print_styles', array( $this, 'customizer_custom_control_css' ) );
 			add_action( 'customize_register', array( $this, 'edit_default_customizer_settings' ), 99 );
-			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_customizer_css' ) );
+			add_action( 'enqueue_block_assets', array( $this, 'block_editor_customizer_css' ) );
 			add_action( 'init', array( $this, 'default_theme_mod_values' ), 10 );
 		}
 
@@ -922,52 +922,56 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		public function block_editor_customizer_css() {
 			$storefront_theme_mods = $this->get_storefront_theme_mods();
 
-			$styles = '
-			.editor-styles-wrapper table th {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
-			}
+			$styles = '';
 
-			.editor-styles-wrapper table tbody td {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
-			}
+			if ( is_admin() ) {
+				$styles .= '
+				.editor-styles-wrapper table th {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
+				}
 
-			.editor-styles-wrapper table tbody tr:nth-child(2n) td,
-			.editor-styles-wrapper fieldset,
-			.editor-styles-wrapper fieldset legend {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
-			}
+				.editor-styles-wrapper table tbody td {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
+				}
 
-			.editor-post-title__block .editor-post-title__input,
-			.editor-styles-wrapper h1,
-			.editor-styles-wrapper h2,
-			.editor-styles-wrapper h3,
-			.editor-styles-wrapper h4,
-			.editor-styles-wrapper h5,
-			.editor-styles-wrapper h6 {
-				color: ' . $storefront_theme_mods['heading_color'] . ';
-			}
+				.editor-styles-wrapper table tbody tr:nth-child(2n) td,
+				.editor-styles-wrapper fieldset,
+				.editor-styles-wrapper fieldset legend {
+					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
+				}
 
-			.editor-styles-wrapper .editor-block-list__block {
-				color: ' . $storefront_theme_mods['text_color'] . ';
-			}
+				.editor-post-title__block .editor-post-title__input,
+				.editor-styles-wrapper h1,
+				.editor-styles-wrapper h2,
+				.editor-styles-wrapper h3,
+				.editor-styles-wrapper h4,
+				.editor-styles-wrapper h5,
+				.editor-styles-wrapper h6 {
+					color: ' . $storefront_theme_mods['heading_color'] . ';
+				}
 
-			.editor-styles-wrapper a,
-			.wp-block-freeform.block-library-rich-text__tinymce a {
-				color: ' . $storefront_theme_mods['accent_color'] . ';
-			}
+				.editor-styles-wrapper .editor-block-list__block {
+					color: ' . $storefront_theme_mods['text_color'] . ';
+				}
 
-			.editor-styles-wrapper a:focus,
-			.wp-block-freeform.block-library-rich-text__tinymce a:focus {
-				outline-color: ' . $storefront_theme_mods['accent_color'] . ';
-			}
+				.editor-styles-wrapper a,
+				.wp-block-freeform.block-library-rich-text__tinymce a {
+					color: ' . $storefront_theme_mods['accent_color'] . ';
+				}
 
-			body.post-type-post .editor-post-title__block::after {
-				content: "";
-			}';
+				.editor-styles-wrapper a:focus,
+				.wp-block-freeform.block-library-rich-text__tinymce a:focus {
+					outline-color: ' . $storefront_theme_mods['accent_color'] . ';
+				}
+
+				body.post-type-post .editor-post-title__block::after {
+					content: "";
+				}';
+			}
 
 			$styles .= $this->gutenberg_get_css();
 
-			wp_add_inline_style( 'storefront-editor-block-styles', apply_filters( 'storefront_gutenberg_block_editor_customizer_css', $styles ) );
+			wp_add_inline_style( 'storefront-gutenberg-blocks', apply_filters( 'storefront_gutenberg_block_editor_customizer_css', $styles ) );
 		}
 
 		/**
@@ -978,7 +982,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public function add_customizer_css() {
 			wp_add_inline_style( 'storefront-style', $this->get_css() );
-			wp_add_inline_style( 'storefront-gutenberg-blocks', $this->gutenberg_get_css() );
 		}
 
 		/**
