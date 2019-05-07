@@ -79,19 +79,27 @@
 		margin-bottom: 0;
 
 		.entry-content {
-			> .wp-block-cover.alignfull,
-			> .wp-block-image.alignfull {
-				width: auto;
-				max-width: 1000%;
-				margin-left: calc(50% - 50vw);
-				margin-right: calc(50% - 50vw);
-				margin-top: - ms(7);
+			> .wp-block-cover,
+			> .wp-block-image {
 				margin-bottom: ms(7);
 			}
 
 			h2 + .woocommerce,
 			h2 + [class*='wp-block-woocommerce-'] {
 				margin-top: ms(4);
+			}
+		}
+	}
+}
+
+.home.storefront-align-wide.page-template-template-fullwidth {
+	.hentry {
+		.entry-content {
+			> .wp-block-cover,
+			> .wp-block-image {
+				&.alignfull {
+					margin-top: - ms(7);
+				}
 			}
 		}
 	}
