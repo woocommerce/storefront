@@ -907,7 +907,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				.wp-block-cover .wp-block-cover__inner-container h4,
 				.wp-block-cover .wp-block-cover__inner-container h5,
 				.wp-block-cover .wp-block-cover__inner-container h6 {
-					color: ' . $storefront_theme_mods['hero_text_color'] . ';
+					color: ' . $storefront_theme_mods['hero_heading_color'] . ';
 				}
 			';
 
