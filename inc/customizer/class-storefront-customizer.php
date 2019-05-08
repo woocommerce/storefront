@@ -253,7 +253,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 						'section'         => 'storefront_typography',
 						'settings'        => 'storefront_hero_heading_color',
 						'priority'        => 50,
-						'active_callback' => array( $this, 'is_homepage_template' ),
 					)
 				)
 			);
@@ -275,7 +274,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 						'section'         => 'storefront_typography',
 						'settings'        => 'storefront_hero_text_color',
 						'priority'        => 60,
-						'active_callback' => array( $this, 'is_homepage_template' ),
 					)
 				)
 			);
