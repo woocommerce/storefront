@@ -61,6 +61,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Fix - Change color and size of "remove" icon in the Cart page.
 * Fix - Change product pagination z-index for compatibility with PhotoSwipe.
 * Fix - Fix double scrollbar when original length of the mini cart surpasses the end of the page.
+* Fix - Move all Gutenberg assets to Gutenberg hooks.
 * Dev - Updated Composite Products integration for compatibility with version 4.0.
 * Dev - Updated FontAwesome to 5.8.1.
 
