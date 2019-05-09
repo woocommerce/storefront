@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.0 - 2019-XX-XX =
+= 2.5.0 - 2019-05-09 =
 * Feature - Updated Starter Content to make use of WooCommerce 3.6 blocks, and also the new cover block introduced in WordPress 5.2, to create a custom editable homepage.
 * Tweak - Added edit link to post, pages, and products.
 * Fix - Prevent overlap of site title and handheld menu button when not using a logo image.
