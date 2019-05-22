@@ -935,6 +935,18 @@ a.reset_variations {
 		}
 	}
 
+	@media (min-width: $desktop) and (max-width: 1024px) {
+		.price_slider_amount {
+			text-align: left;
+
+			.button {
+				display: block;
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+
 	.ui-slider {
 		position: relative;
 		text-align: left;
