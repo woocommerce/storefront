@@ -69,7 +69,7 @@
 	 * @return {void}
 	 */
 	const updateAlignAttribute = ( alignWide ) => {
-		let blocks = wp.data.select( 'core/editor' ).getBlocks();
+		let blocks = wp.data.select( 'core/block-editor' ).getBlocks();
 
 		blocks.forEach( ( block ) => {
 			if ( block.attributes.hasOwnProperty( 'align' ) ) {
