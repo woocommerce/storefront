@@ -16,7 +16,31 @@
  * Base
  */
 .wc-prl-recommendations {
+
 	h2 {
 		font-size: 1.618em;
+	}
+
+	&.wc-prl-page-product_details {
+
+		&.wc-prl-location-before_tabs,
+		&.wc-prl-location-after_tabs {
+
+			h2 {
+				margin-bottom: 1em;
+				text-align: center;
+			}
+		}
+	}
+
+	&.wc-prl-location-after_pay_button {
+		margin-top: 1.41575em;
+	}
+
+	&.wc-prl-page-checkout {
+
+		&.wc-prl-location-order_review {
+			margin-top: 2.617924em;
+		}
 	}
 }
