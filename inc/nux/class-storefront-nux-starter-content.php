@@ -1158,11 +1158,14 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		private function _get_created_starter_content_products() {
 			global $wp_customize;
 
-			$data                 = $wp_customize->get_setting( 'nav_menus_created_posts' );
-			$created_products_ids = $data->value();
+			$setting = $wp_customize->get_setting( 'nav_menus_created_posts' );
 
-			if ( ! empty( $created_products_ids ) ) {
-				return (array) $created_products_ids;
+			if ( is_object( $setting ) ) {
+				$created_products_ids = $setting->value();
+
+				if ( ! empty( $created_products_ids ) ) {
+					return (array) $created_products_ids;
+				}
 			}
 
 			return false;
