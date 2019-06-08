@@ -86,6 +86,8 @@
 
 				&.selected:not( .loading ) button {
 					border-radius: 50%;
+					width: 0;
+					box-sizing: content-box;
 				}
 
 				&:hover {
