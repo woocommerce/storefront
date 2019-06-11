@@ -2548,11 +2548,11 @@ dl.variation {
 		@include span(5 of 9);
 
 		.form-row-first {
-			@include span(2 of 5);
+			@include span(2.5 of 5);
 		}
 
 		.form-row-last {
-			@include span(last 3 of 5);
+			@include span(last 2.5 of 5);
 		}
 
 		.col-1,
