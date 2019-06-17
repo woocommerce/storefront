@@ -503,6 +503,10 @@
 	.wp-block-separator {
 		border: 0;
 		margin: 0 auto ms(2);
+
+		&:not( .is-style-wide ):not( .is-style-dots ) {
+			max-width: 10%;
+		}
 	}
 
 	// Twitter Embed
