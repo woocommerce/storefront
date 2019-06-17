@@ -2492,16 +2492,6 @@ dl.variation {
 
 		.cross-sells {
 			@include span(4 of 9);
-
-			ul.products {
-				li.product {
-					@include span(2 of 4);
-
-					&:nth-child( 2n ) {
-						margin-right: 0 !important;
-					}
-				}
-			}
 		}
 
 		.cart_totals,
@@ -2526,12 +2516,6 @@ dl.variation {
 		.cart-collaterals {
 			.cross-sells {
 				@include span(6 of 12);
-
-				ul.products {
-					li.product {
-						@include span(3 of 6);
-					}
-				}
 			}
 
 			.cart_totals,
