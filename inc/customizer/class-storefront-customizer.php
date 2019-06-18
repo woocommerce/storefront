@@ -669,15 +669,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_link_color'], 65 ) . ';
 			}
 
-			table th {
+			table:not( .has-background ) th {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 			}
 
-			table tbody td {
+			table:not( .has-background ) tbody td {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 			}
 
-			table tbody tr:nth-child(2n) td,
+			table:not( .has-background ) tbody tr:nth-child(2n) td,
 			fieldset,
 			fieldset legend {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
@@ -895,7 +895,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					color: ' . $storefront_theme_mods['text_color'] . ';
 				}
 
-				.wp-block-table:not( .is-style-stripes ) tbody tr:nth-child(2n) td {
+				.wp-block-table:not( .has-background ):not( .is-style-stripes ) tbody tr:nth-child(2n) td {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 				}
 
@@ -924,15 +924,15 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			if ( is_admin() ) {
 				$styles .= '
-				.editor-styles-wrapper table th {
+				.editor-styles-wrapper table:not( .has-background ) th {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 				}
 
-				.editor-styles-wrapper table tbody td {
+				.editor-styles-wrapper table:not( .has-background ) tbody td {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 				}
 
-				.editor-styles-wrapper table tbody tr:nth-child(2n) td,
+				.editor-styles-wrapper table:not( .has-background ) tbody tr:nth-child(2n) td,
 				.editor-styles-wrapper fieldset,
 				.editor-styles-wrapper fieldset legend {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -4 ) . ';
