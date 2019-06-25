@@ -306,14 +306,16 @@
 
 	// Image
 	.wp-block-image {
-		margin-bottom: ms(2);
+		figure {
+			margin-bottom: ms(2);
+		}
 
 		.alignleft {
-			margin-right: ms(1);
+			margin-right: ms(2);
 		}
 
 		.alignright {
-			margin-left: ms(1);
+			margin-left: ms(2);
 		}
 
 		figcaption {
@@ -324,10 +326,16 @@
 		}
 	}
 
-	.wp-block-cover {
-		flex-flow: row wrap;
-		min-height: 350px;
+	figure.wp-block-image {
+		margin: 0 0 ms(2);
+	}
 
+	div.wp-block-image {
+		display: inline;
+	}
+
+	// Cover
+	.wp-block-cover {
 		// < 5.2 styling
 		p.wp-block-cover-text {
 			font-size: ms(3);

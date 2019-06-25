@@ -68,10 +68,8 @@
 		}
 
 		&:not( .selection_thumbnail_hidden ) .component_summary {
-			.composited_product_details_wrapper {
-				.details {
-					padding: 0;
-				}
+			.composited_product_details_wrapper > .details {
+				padding: 0;
 			}
 		}
 
@@ -88,6 +86,8 @@
 
 				&.selected:not( .loading ) button {
 					border-radius: 50%;
+					width: 0;
+					box-sizing: content-box;
 				}
 
 				&:hover {
@@ -119,10 +119,8 @@
 .composite_form {
 	.component {
 		&:not( .selection_thumbnail_hidden ) .component_summary {
-			.composited_product_details_wrapper {
-				.details {
-					@include span( last 8 of 10 );
-				}
+			.composited_product_details_wrapper > .details {
+				@include span( last 8 of 10 );
 			}
 		}
 	}
@@ -163,10 +161,8 @@ table.shop_table_responsive tr.component_table_item {
 		.composite_form {
 			.component {
 				&:not( .selection_thumbnail_hidden ) .component_summary {
-					.composited_product_details_wrapper {
-						.details {
-							@include span( last 6 of 8 );
-						}
+					.composited_product_details_wrapper > .details {
+						@include span( last 6 of 8 );
 					}
 				}
 			}
@@ -192,10 +188,8 @@ table.shop_table_responsive tr.component_table_item {
 		.component {
 
 			&:not( .selection_thumbnail_hidden ) .component_summary {
-				.composited_product_details_wrapper {
-					.details {
-						@include span( 10 of 10 );
-					}
+				.composited_product_details_wrapper > .details {
+					@include span( 10 of 10 );
 				}
 			}
 

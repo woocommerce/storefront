@@ -935,6 +935,18 @@ a.reset_variations {
 		}
 	}
 
+	@media (min-width: $desktop) and (max-width: 1024px) {
+		.price_slider_amount {
+			text-align: left;
+
+			.button {
+				display: block;
+				float: none;
+				width: 100%;
+			}
+		}
+	}
+
 	.ui-slider {
 		position: relative;
 		text-align: left;
@@ -2480,16 +2492,6 @@ dl.variation {
 
 		.cross-sells {
 			@include span(4 of 9);
-
-			ul.products {
-				li.product {
-					@include span(2 of 4);
-
-					&:nth-child( 2n ) {
-						margin-right: 0 !important;
-					}
-				}
-			}
 		}
 
 		.cart_totals,
@@ -2514,12 +2516,6 @@ dl.variation {
 		.cart-collaterals {
 			.cross-sells {
 				@include span(6 of 12);
-
-				ul.products {
-					li.product {
-						@include span(3 of 6);
-					}
-				}
 			}
 
 			.cart_totals,
@@ -2552,11 +2548,11 @@ dl.variation {
 		@include span(5 of 9);
 
 		.form-row-first {
-			@include span(2 of 5);
+			@include span(2.5 of 5);
 		}
 
 		.form-row-last {
-			@include span(last 3 of 5);
+			@include span(last 2.5 of 5);
 		}
 
 		.col-1,
