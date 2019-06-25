@@ -49,7 +49,7 @@ function storefront_get_next_product( $in_same_term = false, $excluded_terms = '
 }
 
 /**
- * Retrieves the homepage sections to diplay.
+ * Retrieves the homepage sections to display.
  *
  * @since 2.5.1
  *
@@ -64,7 +64,6 @@ function storefront_get_homepage_sections() {
 		50 => 'popular_products',
 		60 => 'on_sale_products',
 		70 => 'best_selling_products'
-
 	);
 
 	/**
