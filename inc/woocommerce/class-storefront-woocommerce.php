@@ -397,7 +397,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			/**
 			 * WooCommerce Product Recommendations
 			 */
-			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Recommendations_Lab' ) ) {
+			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Recommendations' ) ) {
 				wp_enqueue_style( 'storefront-woocommerce-product-recommendations-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-recommendations.css', 'storefront-woocommerce-style', $storefront_version );
 				wp_style_add_data( 'storefront-woocommerce-product-recommendations-style', 'rtl', 'replace' );
 			}
@@ -509,6 +509,27 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 				add_filter( 'woocommerce_composited_table_item_js_enqueued', '__return_true' );
 				add_filter( 'woocommerce_display_composite_container_cart_item_data', '__return_true' );
 			}
+
+			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Recommendations' ) ) {
+				add_filter( 'woocommerce_prl_locations', array( $this, 'recommendations_add_storefront_location' ) );
+			}
+		}
+
+		/**
+		 * Add 'Homepage' Location.
+		 *
+		 * @since  2.5.1
+		 *
+		 * @param  array  $locations
+		 * @return array
+		 */
+		public function recommendations_add_storefront_location( $locations ) {
+
+			require 'integrations/product-recommendations/class-wc-prl-location-storefront-homepage.php';
+
+			array_unshift( $locations, 'WC_PRL_Location_Storefront_Homepage' );
+
+			return $locations;
 		}
 
 		/**
