@@ -17,8 +17,16 @@
  */
 .wc-prl-recommendations {
 
-	h2 {
+	&:not( .wc-prl-location-homepage ) h2 {
 		font-size: 1.618em;
+	}
+
+	&.wc-prl-location-homepage {
+
+		h2 {
+			text-align: center;
+			margin-bottom: 1em;
+		}
 	}
 
 	&.wc-prl-page-product_details {
