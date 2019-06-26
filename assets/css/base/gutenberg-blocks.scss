@@ -414,11 +414,12 @@
 			}
 
 			p {
-				&:not( .has-small-font-size ),
-				&:not( .has-medium-font-size ),
-				&:not( .has-large-font-size ),
-				&:not( .has-huge-font-size ) {
+				&:not( .has-small-font-size ):not( .has-medium-font-size ):not( .has-large-font-size ):not( .has-huge-font-size ) {
 					font-size: 1.1em;
+				}
+
+				&:not( .has-text-color ) {
+					color: #fff;
 				}
 			}
 
