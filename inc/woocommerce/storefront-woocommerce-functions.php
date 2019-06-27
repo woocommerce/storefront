@@ -47,31 +47,3 @@ function storefront_get_next_product( $in_same_term = false, $excluded_terms = '
 	$product = new Storefront_WooCommerce_Adjacent_Products( $in_same_term, $excluded_terms, $taxonomy );
 	return $product->get_product();
 }
-
-/**
- * Retrieves the homepage sections to display.
- *
- * @since 2.5.1
- *
- * @return array Array of homepage section to add.
- */
-function storefront_get_homepage_sections() {
-
-	$sections = array(
-		20 => 'product_categories',
-		30 => 'recent_products',
-		40 => 'featured_products',
-		50 => 'popular_products',
-		60 => 'on_sale_products',
-		70 => 'best_selling_products'
-	);
-
-	/**
-	 * Filter homepage sections.
-	 *
-	 * @since 2.5.1
-	 *
-	 * @param array $sections
-	 */
-	return apply_filters( 'woocommerce_storefront_homepage_sections', $sections );
-}
