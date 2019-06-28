@@ -49,6 +49,24 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
+= 2.5.1 - 2019-07-01 =
+* Enhancement - Add support for color styles in the "Table" block.
+* Fix - Increase Shipping Methods cell size on the Checkout page.
+* Fix - Stop logo image from overlapping with the "Menu" toggle on small screens.
+* Fix - Cover block placeholder layout.
+* Fix - Cover block paragraph size and default color.
+* Fix - Floated images alignment when using the "Image" block.
+* Fix - Uneven form input widths on checkout page.
+* Fix - Composite Products: Layout issue limited to Bundles contained in Composites when the "Hide Thumbnail" option of a bundled product is hidden.
+* Fix - Fixed an edge case where a PHP warning could show up when going through the NUX.
+* Fix - Removed CSS rule that forced a 2-column layout on cart cross-sells.
+* Fix - "Product Filter" widget styling on small screens.
+* Fix - Add styling for number input type.
+* Fix - Warning in the Query Monitor plugin when using Jetpack without the "Infinite Scroll" module enabled.
+* Dev - Removed minification from front-end stylesheets since it makes the files impossible to read for folks trying to do simple tweaks.
+* Dev - Moved style.css "do not edit" note to a non important comment.
+* Dev - Updated node dependencies.
+
 = 2.5.0 - 2019-05-09 =
 * Feature - Updated Starter Content to make use of WooCommerce 3.6 blocks, and also the new cover block introduced in WordPress 5.2, to create a custom editable homepage.
 * Tweak - Added edit link to post, pages, and products.
