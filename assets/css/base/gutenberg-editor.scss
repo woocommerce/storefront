@@ -345,4 +345,16 @@ ul.wp-block-latest-posts {
 .wp-block-separator {
 	margin-top: ms(2);
 	margin-bottom: ms(2);
+
+	&.is-style-dots {
+		&::before {
+			padding-left: 1em;
+			letter-spacing: 1em;
+
+			.wp-block & {
+				padding-left: 2em;
+				letter-spacing: 2em;
+			}
+		}
+	}
 }
