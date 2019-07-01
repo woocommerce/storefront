@@ -357,4 +357,12 @@ ul.wp-block-latest-posts {
 			}
 		}
 	}
+
+	&:not( .is-style-dots ) {
+		height: 2px;
+
+		.wp-block & {
+			height: 1px;
+		}
+	}
 }
