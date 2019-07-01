@@ -51,6 +51,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 = 2.5.1 - 2019-07-01 =
 * Enhancement - Add support for color styles in the "Table" block.
+* Fix - "Separator" block styles preview styling.
 * Fix - Increase Shipping Methods cell size on the Checkout page.
 * Fix - Stop logo image from overlapping with the "Menu" toggle on small screens.
 * Fix - Cover block placeholder layout.
