@@ -340,3 +340,29 @@ ul.wp-block-latest-posts {
 	margin-right: 0;
 	list-style: none;
 }
+
+// Separator
+.wp-block-separator {
+	margin-top: ms(2);
+	margin-bottom: ms(2);
+
+	&.is-style-dots {
+		&::before {
+			padding-left: 1em;
+			letter-spacing: 1em;
+
+			.wp-block & {
+				padding-left: 2em;
+				letter-spacing: 2em;
+			}
+		}
+	}
+
+	&:not( .is-style-dots ) {
+		height: 2px;
+
+		.wp-block & {
+			height: 1px;
+		}
+	}
+}
