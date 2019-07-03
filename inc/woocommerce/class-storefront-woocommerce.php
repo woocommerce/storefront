@@ -393,6 +393,14 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( $this->is_woocommerce_extension_activated( 'WC_Checkout_Add_Ons' ) ) {
 				add_filter( 'storefront_sticky_order_review', '__return_false' );
 			}
+
+			/**
+			 * WooCommerce Product Recommendations
+			 */
+			if ( $this->is_woocommerce_extension_activated( 'WC_Product_Recommendations' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-product-recommendations-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/product-recommendations.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_style_add_data( 'storefront-woocommerce-product-recommendations-style', 'rtl', 'replace' );
+			}
 		}
 
 		/**
