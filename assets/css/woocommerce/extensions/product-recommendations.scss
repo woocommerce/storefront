@@ -17,16 +17,8 @@
  */
 .wc-prl-recommendations {
 
-	&:not( .wc-prl-location-homepage ) h2 {
-		font-size: 1.618em;
-	}
-
-	&.wc-prl-location-homepage {
-
-		h2 {
-			text-align: center;
-			margin-bottom: 1em;
-		}
+	h2 {
+		font-size: ms(3);
 	}
 
 	&.wc-prl-page-product_details {
@@ -35,24 +27,24 @@
 		&.wc-prl-location-after_tabs {
 
 			h2 {
-				margin-bottom: 1em;
+				margin-bottom: ms(1);
 				text-align: center;
 			}
 		}
 
 		&.wc-prl-location-after_summary {
-			margin-top: 1.41575em;
+			margin-top: ms(2);
 		}
 	}
 
 	&.wc-prl-location-after_pay_button {
-		margin-top: 1.41575em;
+		margin-top: ms(2);
 	}
 
 	&.wc-prl-page-checkout {
 
 		&.wc-prl-location-order_review {
-			margin-top: 2.617924em;
+			margin-top: ms(5);
 		}
 	}
 }
