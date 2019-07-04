@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.1 - 2019-07-03 =
+= 2.5.1 - 2019-07-04 =
 * Feature - WooCommerce Product Recommendations integration.
 * Enhancement - Add support for color styles in the "Table" block.
 * Fix - "Separator" block styles preview styling.
