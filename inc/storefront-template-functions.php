@@ -137,7 +137,7 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 		$links_output = '';
 
 		if ( apply_filters( 'storefront_credit_link', true ) ) {
-			$links_output .= '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . esc_html__( 'Built with Storefront &amp; WooCommerce', 'storefront' ) . '</a>.';
+			$links_output .= '<a href="https://woocommerce.com" target="_blank" title="' . esc_attr__( 'WooCommerce - The Best eCommerce Platform for WordPress', 'storefront' ) . '" rel="author">' . '<img src="wp-content/themes/storefront/assets/images/admin/woo_storefront_logo.gif" style="width:220px;height:50px;"></a>.';
 		}
 
 		if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
