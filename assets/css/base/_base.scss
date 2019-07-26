@@ -455,7 +455,7 @@ body {
 		color: mix( $color_body, #222 );
 	}
 
-	a:not( .button ):not( .component-button ) {
+	a:not( .button ):not( .components-button ) {
 		color: $color_links;
 		text-decoration: underline;
 
@@ -779,7 +779,7 @@ table {
 	}
 
 	.entry-content {
-		a:not( .button ):not( .component-button ) {
+		a:not( .button ):not( .components-button ) {
 			text-decoration: underline;
 
 			&:hover {
@@ -1542,7 +1542,7 @@ button.menu-toggle {
 			font-size: ms(2);
 		}
 
-		a:not( .button ):not( .component-button ) {
+		a:not( .button ):not( .components-button ) {
 			@include underlinedLink();
 		}
 	}
