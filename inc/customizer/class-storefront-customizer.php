@@ -707,7 +707,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				background-color: ' . $storefront_theme_mods['header_link_color'] . ';
 			}
 
-			h1, h2, h3, h4, h5, h6 {
+			h1, h2, h3, h4, h5, h6, .wc-block-grid__product-title {
 				color: ' . $storefront_theme_mods['heading_color'] . ';
 			}
 

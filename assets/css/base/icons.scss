@@ -88,6 +88,7 @@ input[type='button'],
 input[type='reset'],
 input[type='submit'],
 .button,
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
 .added_to_cart {
 	&.loading {
 		position: relative;
@@ -105,6 +106,7 @@ input[type='submit'],
 			left: 50%;
 			margin-left: -10px;
 			margin-top: -10px;
+			display: block;
 		}
 	}
 }

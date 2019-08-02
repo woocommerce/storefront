@@ -296,13 +296,15 @@ table.shop_table_responsive {
 /**
  * Products
  */
-ul.products {
+ul.products,
+.wc-block-grid__products {
 	margin-left: 0;
 	margin-bottom: 0;
 	clear: both;
 	@include clearfix;
 
-	li.product {
+	li.product,
+	.wc-block-grid__product {
 		list-style: none;
 		margin-left: 0;
 		margin-bottom: ms(7);
@@ -331,7 +333,8 @@ ul.products {
 
 		h2, // @todo Remove when WooCommerce 2.8 is live
 		h3, // @todo Remove when WooCommerce 2.8 is live
-		.woocommerce-loop-product__title {
+		.woocommerce-loop-product__title,
+		.wc-block-grid__product-title {
 			font-size: 1rem;
 			font-weight: 400;
 			margin-bottom: ms(-3);
@@ -365,11 +368,10 @@ ul.products {
 }
 
 .hentry .entry-content {
-	ul.products {
-		li.product {
-			> a {
-				text-decoration: none;
-			}
+	.wc-block-grid__products .wc-block-grid__product,
+	ul.products li.product {
+		> a {
+			text-decoration: none;
 		}
 	}
 }
@@ -1705,10 +1707,12 @@ p.stars {
 	}
 }
 
+.wc-block-grid__product-onsale,
 .onsale {
 	border: 1px solid;
 	border-color: $color_body;
 	color: $color_body;
+	background: transparent;
 	padding: 0.202em ms(-2);
 	font-size: ms(-1);
 	text-transform: uppercase;
@@ -1716,6 +1720,7 @@ p.stars {
 	display: inline-block;
 	margin-bottom: 1em;
 	border-radius: 3px;
+	position: relative;
 }
 
 .quantity {
@@ -2059,8 +2064,10 @@ dl.variation {
 	/**
 	 * Reset mobile product styles
 	 */
-	ul.products {
-		li.product {
+	ul.products,
+	.wc-block-grid__products {
+		li.product,
+		.wc-block-grid__product {
 			clear: none;
 			width: 100%;
 			float: left;

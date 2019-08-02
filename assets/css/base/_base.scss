@@ -848,13 +848,20 @@ textarea {
 	/* stylelint-enable */
 }
 
+/* Override gutenberg styles. */
+.wp-block-button__link {
+	border-radius: 0 !important;
+}
+
 button,
 input[type='button'],
 input[type='reset'],
 input[type='submit'],
 .button,
+.wc-block-grid__products .wc-block-grid__product .wp-block-button__link,
 .added_to_cart {
 	border: 0;
+	border-radius: 0;
 	background: none;
 	background-color: $color_body;
 	border-color: $color_body;
@@ -866,7 +873,10 @@ input[type='submit'],
 	text-shadow: none;
 	display: inline-block;
 	-webkit-appearance: none;
-	border-radius: 0;
+
+	&::after {
+		display: none;
+	}
 
 	&.cta,
 	&.alt {
