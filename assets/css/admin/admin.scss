@@ -1,12 +1,8 @@
 @import 'buttons';
 
 .sf-notice-nux {
-	background: #e9eff3;
-	border: 10px solid #fff;
-	color: #608299;
-	padding: 60px;
-	text-align: center;
-	box-shadow: none;
+	background: #e7f5f9;
+	display: flex;
 
 	&::before,
 	&::after {
@@ -19,18 +15,17 @@
 	}
 
 	.notice-content {
-		max-width: 420px;
-		margin: 0 auto;
+		margin: 19px 0 20px 0;
 	}
 
 	.sf-icon {
 		position: relative;
 		display: block;
-		width: 100px;
-		height: 100px;
+		width: 75px;
+		height: 75px;
 		background: #fff;
 		border-radius: 100%;
-		margin: 0 auto 30px;
+		margin: 20px 12px 20px 0;
 
 		img {
 			position: absolute;
@@ -39,7 +34,7 @@
 			left: 0;
 			right: 0;
 			margin: auto;
-			padding: 16px;
+			padding: 10px;
 			box-sizing: border-box;
 			max-width: 100%;
 		}
@@ -47,14 +42,13 @@
 
 	h2 {
 		margin: 0 0 10px;
-		font-weight: normal;
+		font-weight: bolder;
 		color: #2e4453;
 	}
 
 	p {
-		margin: 0 0 2em;
+		margin: 0;
 		padding: 0;
-		line-height: 1.6;
 	}
 
 	label {
@@ -91,6 +85,7 @@
 		.sf-icon {
 			width: 65px;
 			height: 65px;
+			flex-shrink: 0;
 
 			img {
 				padding: 10px;
