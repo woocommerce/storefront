@@ -67,10 +67,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				return;
 			}
 
-			// Coming from the WooCommerce Wizard?
-			if ( wp_get_referer() && 'index.php?page=wc-setup&step=next_steps' === basename( wp_get_referer() ) && 'post-new.php' === $pagenow ) {
-				return;
-			}
+			if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) {
 			?>
 
 			<div class="notice notice-info sf-notice-nux is-dismissible">
@@ -79,14 +76,13 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				</span>
 
 				<div class="notice-content">
-				<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
 					<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
 					<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
 					<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
-				<?php endif; ?>
 				</div>
 			</div>
 			<?php
+			}
 		}
 
 		/**
