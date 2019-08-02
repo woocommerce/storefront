@@ -74,7 +74,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 					$button = array(
 						'message' => esc_attr__( 'Activate', 'storefront' ),
 						'url'     => $url,
-						'classes' => array( 'storefront-button', 'activate-now' ),
+						'classes' => array( 'activate-now' ),
 					);
 
 					if ( '' !== $activate ) {
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 					$button = array(
 						'message' => esc_attr__( 'Install now', 'storefront' ),
 						'url'     => $url,
-						'classes' => array( 'storefront-button', 'sf-install-now', 'install-now', 'install-' . $plugin_slug ),
+						'classes' => array( 'sf-install-now', 'install-now', 'install-' . $plugin_slug ),
 					);
 
 					if ( '' !== $install ) {
