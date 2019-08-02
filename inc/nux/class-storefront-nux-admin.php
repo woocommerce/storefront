@@ -82,7 +82,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
 					<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
 					<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
-					<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array( 'sf-nux-button' ), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
+					<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
 				<?php endif; ?>
 				</div>
 			</div>
