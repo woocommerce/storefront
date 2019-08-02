@@ -3,6 +3,7 @@
 .sf-notice-nux {
 	background: #e7f5f9;
 	display: flex;
+	align-items: center;
 
 	&::before,
 	&::after {
@@ -15,17 +16,17 @@
 	}
 
 	.notice-content {
-		margin: 19px 0 20px;
+		margin: 22px 0 23px;
 	}
 
 	.sf-icon {
 		position: relative;
 		display: block;
-		width: 75px;
-		height: 75px;
+		width: 70px;
+		height: 70px;
 		background: #fff;
 		border-radius: 100%;
-		margin: 20px 12px 20px 0;
+		margin: 20px 17px 20px 5px;
 
 		img {
 			position: absolute;
@@ -34,7 +35,7 @@
 			left: 0;
 			right: 0;
 			margin: auto;
-			padding: 10px;
+			padding: 12px;
 			box-sizing: border-box;
 			max-width: 100%;
 		}
