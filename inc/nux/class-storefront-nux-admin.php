@@ -216,34 +216,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		}
 
 		/**
-		 * Check if WooCommerce is installed.
-		 *
-		 * @since 2.2.0
-		 */
-		private function _is_woocommerce_installed() {
-			if ( file_exists( WP_PLUGIN_DIR . '/woocommerce' ) ) {
-				$plugins = get_plugins( '/woocommerce' );
-
-				if ( ! empty( $plugins ) ) {
-					$keys        = array_keys( $plugins );
-					$plugin_file = 'woocommerce/' . $keys[0];
-					$url         = wp_nonce_url(
-						add_query_arg(
-							array(
-								'action' => 'activate',
-								'plugin' => $plugin_file,
-							), admin_url( 'plugins.php' )
-						), 'activate-plugin_' . $plugin_file
-					);
-
-					return $url;
-				}
-			}
-
-			return false;
-		}
-
-		/**
 		 * Set WooCommerce pages to use the full width template.
 		 *
 		 * @since 2.2.0
@@ -270,22 +242,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			}
 
 			update_post_meta( $page_id, '_wp_page_template', $template );
-		}
-
-		/**
-		 * Check if WooCommerce is empty.
-		 *
-		 * @since 2.2.0
-		 * @return bool
-		 */
-		private function _is_woocommerce_empty() {
-			$products = wp_count_posts( 'product' );
-
-			if ( 0 < $products->publish ) {
-				return false;
-			}
-
-			return true;
 		}
 	}
 
