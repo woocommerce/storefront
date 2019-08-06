@@ -138,8 +138,12 @@
 		}
 
 		label {
+			&:first-of-type {
+				margin-top: 1.5em;
+			}
+
 			&:last-of-type {
-				margin-top: 20px;
+				margin: 20px 0;
 			}
 		}
 	}
