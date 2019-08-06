@@ -54,11 +54,15 @@
 
 	label {
 		display: block;
-		margin-bottom: 8px;
+		margin-top: 0.5em;
 		text-align: left;
 
+		&:first-of-type {
+			margin-top: 0.8em;
+		}
+
 		&:last-of-type {
-			margin-bottom: 2em;
+			margin-bottom: 0.5em;
 		}
 	}
 
@@ -76,6 +80,21 @@
 		box-shadow: initial;
 		color: #0073aa;
 		line-height: initial;
+
+		&:hover {
+			color: #00a0d2;
+		}
+	}
+
+	.sf-nux-button {
+		border: 0;
+		background: initial;
+		text-decoration: underline;
+		color: #0073aa;
+		margin: 5px 0 0;
+		padding: 0;
+		font-size: inherit;
+		cursor: pointer;
 
 		&:hover {
 			color: #00a0d2;
