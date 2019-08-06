@@ -67,7 +67,10 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				return;
 			}
 
-			if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) {
+			// Coming from the WooCommerce Wizard?
+			if ( wp_get_referer() && 0 === strpos( basename( wp_get_referer() ), 'index.php?page=wc-setup' ) && 'post-new.php' === $pagenow ) {
+				return;
+			}
 			?>
 
 			<div class="notice notice-info sf-notice-nux is-dismissible">
@@ -76,13 +79,61 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				</span>
 
 				<div class="notice-content">
-					<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
-					<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
-					<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
+					<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
+						<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
+						<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
+						<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
+					<?php endif; ?>
+
+					<?php if ( storefront_is_woocommerce_activated() ) : ?>
+						<h2><?php esc_html_e( 'Design your store 🎨', 'storefront' ); ?></h2>
+						<p>
+							<?php
+							if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && 'post-new.php' === $pagenow ) {
+								echo esc_attr__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'storefront' );
+							} else {
+								echo esc_attr__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'storefront' );
+							}
+							?>
+						</p>
+						<form action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" method="post">
+							<input type="hidden" name="action" value="storefront_starter_content">
+							<?php wp_nonce_field( 'storefront_starter_content' ); ?>
+
+							<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
+								<input type="hidden" name="homepage" value="on">
+							<?php endif; ?>
+
+							<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && true === $this->_is_woocommerce_empty() ) : ?>
+								<input type="hidden" name="products" value="on">
+							<?php endif; ?>
+
+							<?php if ( false === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
+								<label>
+									<input type="checkbox" name="homepage" checked>
+									<?php
+									if ( 'page' === get_option( 'show_on_front' ) ) {
+										esc_attr_e( 'Apply the Storefront homepage template', 'storefront' );
+									} else {
+										esc_attr_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
+									}
+									?>
+								</label>
+
+								<?php if ( true === $this->_is_woocommerce_empty() ) : ?>
+									<label>
+										<input type="checkbox" name="products" checked>
+										<?php esc_attr_e( 'Add example products', 'storefront' ); ?>
+									</label>
+								<?php endif; ?>
+							<?php endif; ?>
+
+							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
+						</form>
+					<?php endif; ?>
 				</div>
 			</div>
 			<?php
-			}
 		}
 
 		/**
@@ -238,6 +289,22 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			}
 
 			update_post_meta( $page_id, '_wp_page_template', $template );
+		}
+
+		/**
+		 * Check if WooCommerce is empty.
+		 *
+		 * @since 2.2.0
+		 * @return bool
+		 */
+		private function _is_woocommerce_empty() {
+			$products = wp_count_posts( 'product' );
+
+			if ( 0 < $products->publish ) {
+				return false;
+			}
+
+			return true;
 		}
 	}
 
