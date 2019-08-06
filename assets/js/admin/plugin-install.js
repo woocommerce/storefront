@@ -33,13 +33,6 @@
 				} );
 			}
 
-			$( document ).on( 'wp-plugin-install-success', function() {
-				setTimeout( function() {
-					var $message = $( '.sf-install-now.activate-now' );
-					$message.removeClass( 'button-primary' );
-				}, 1050 );
-			} );
-
 			wp.updates.installPlugin( {
 				slug: $button.data( 'slug' )
 			} );

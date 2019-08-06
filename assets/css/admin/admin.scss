@@ -65,6 +65,22 @@
 	.sf-plugin-card {
 		display: block;
 	}
+
+	a.sf-install-now.install-woocommerce.activate-now.button-primary {
+		background: initial;
+		border: none;
+		text-shadow: none;
+		text-decoration: underline;
+		display: initial;
+		padding: 0;
+		box-shadow: initial;
+		color: #0073aa;
+		line-height: initial;
+
+		&:hover {
+			color: #00a0d2;
+		}
+	}
 }
 
 .sf-nux-button {
