@@ -366,3 +366,31 @@ ul.wp-block-latest-posts {
 		}
 	}
 }
+
+// Grid blocks
+.wc-block-grid__products {
+	.wc-block-grid__product {
+		.wp-block-button__link {
+			color: #333333;
+		}
+		.wc-block-grid__product-onsale {
+			border: 1px solid;
+			border-color: $color_body;
+			color: $color_body;
+			background: transparent;
+			padding: 0.202em ms(-2);
+			font-size: ms(-1);
+			text-transform: uppercase;
+			font-weight: 600;
+			display: inline-block;
+			margin-bottom: 1em;
+			border-radius: 3px;
+			position: relative;
+		}
+		.wc-block-grid__product-title {
+			font-weight: 400;
+			font-size: 1rem;
+			color: #000000;
+		}
+	}
+}

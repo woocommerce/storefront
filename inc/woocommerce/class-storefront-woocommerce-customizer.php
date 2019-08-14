@@ -134,6 +134,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			.woocommerce-tabs ul.tabs li.active a,
 			ul.products li.product .price,
 			.onsale,
+			.wc-block-grid__product-onsale,
 			.widget_search form:before,
 			.widget_product_search form:before {
 				color: ' . $storefront_theme_mods['text_color'] . ';
@@ -145,6 +146,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], 5 ) . ';
 			}
 
+			.wc-block-grid__product-onsale,
 			.onsale {
 				border-color: ' . $storefront_theme_mods['text_color'] . ';
 			}
@@ -198,6 +200,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['text_color'], -10 ) . ';
 			}
 
+			.wc-block-grid__product-onsale,
 			.onsale,
 			.woocommerce-pagination .page-numbers li .page-numbers:not(.current) {
 				color: ' . $storefront_theme_mods['text_color'] . ';
@@ -232,13 +235,17 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 				outline-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
-			.added_to_cart, .site-header-cart .widget_shopping_cart a.button {
+			.added_to_cart,
+			.site-header-cart .widget_shopping_cart a.button,
+			.wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
 				background-color: ' . $storefront_theme_mods['button_background_color'] . ';
 				border-color: ' . $storefront_theme_mods['button_background_color'] . ';
 				color: ' . $storefront_theme_mods['button_text_color'] . ';
 			}
 
-			.added_to_cart:hover, .site-header-cart .widget_shopping_cart a.button:hover {
+			.added_to_cart:hover,
+			.site-header-cart .widget_shopping_cart a.button:hover,
+			.wc-block-grid__products .wc-block-grid__product .wp-block-button__link:hover {
 				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 				color: ' . $storefront_theme_mods['button_text_color'] . ';
