@@ -74,7 +74,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 					$button = array(
 						'message' => esc_attr__( 'Activate', 'storefront' ),
 						'url'     => $url,
-						'classes' => array( 'storefront-button', 'activate-now' ),
+						'classes' => array( 'activate-now' ),
 					);
 
 					if ( '' !== $activate ) {
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 					$button = array(
 						'message' => esc_attr__( 'Install now', 'storefront' ),
 						'url'     => $url,
-						'classes' => array( 'storefront-button', 'sf-install-now', 'install-now', 'install-' . $plugin_slug ),
+						'classes' => array( 'sf-install-now', 'install-now', 'install-' . $plugin_slug ),
 					);
 
 					if ( '' !== $install ) {
@@ -108,10 +108,10 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 				$button['classes'] = implode( ' ', $button['classes'] );
 
 				?>
-				<span class="sf-plugin-card plugin-card-<?php echo esc_attr( $plugin_slug ); ?>">
+				<span class="plugin-card-<?php echo esc_attr( $plugin_slug ); ?>">
 					<a href="<?php echo esc_url( $button['url'] ); ?>" class="<?php echo esc_attr( $button['classes'] ); ?>" data-originaltext="<?php echo esc_attr( $button['message'] ); ?>" data-name="<?php echo esc_attr( $plugin_name ); ?>" data-slug="<?php echo esc_attr( $plugin_slug ); ?>" aria-label="<?php echo esc_attr( $button['message'] ); ?>"><?php echo esc_attr( $button['message'] ); ?></a>
-				</span>
-				<a href="https://wordpress.org/plugins/<?php echo esc_attr( $plugin_slug ); ?>" target="_blank"><?php esc_attr_e( 'Learn more', 'storefront' ); ?></a>
+				</span> or
+				<a href="https://wordpress.org/plugins/<?php echo esc_attr( $plugin_slug ); ?>" target="_blank"><?php esc_attr_e( 'learn more', 'storefront' ); ?></a>
 				<?php
 			}
 		}
