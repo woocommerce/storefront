@@ -80,8 +80,8 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 
 				<div class="notice-content">
 					<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
-						<h2><?php esc_attr_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
-						<p><?php esc_attr_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
+						<h2><?php esc_html_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
+						<p><?php esc_html_e( 'To enable eCommerce features you need to install the WooCommerce plugin.', 'storefront' ); ?></p>
 						<p><?php Storefront_Plugin_Install::install_plugin_button( 'woocommerce', 'woocommerce.php', 'WooCommerce', array(), __( 'WooCommerce activated', 'storefront' ), __( 'Activate WooCommerce', 'storefront' ), __( 'Install WooCommerce', 'storefront' ) ); ?></p>
 					<?php endif; ?>
 
@@ -90,9 +90,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 						<p>
 							<?php
 							if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && 'post-new.php' === $pagenow ) {
-								echo esc_attr__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'storefront' );
+								echo esc_html__( 'Before you add your first product let\'s design your store. We\'ll add some example products for you. When you\'re ready let\'s get started by adding your logo.', 'storefront' );
 							} else {
-								echo esc_attr__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'storefront' );
+								echo esc_html__( 'You\'ve set up WooCommerce, now it\'s time to give it some style! Let\'s get started by entering the Customizer and adding your logo.', 'storefront' );
 							}
 							?>
 						</p>
@@ -113,9 +113,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 									<input type="checkbox" name="homepage" checked>
 									<?php
 									if ( 'page' === get_option( 'show_on_front' ) ) {
-										esc_attr_e( 'Apply the Storefront homepage template', 'storefront' );
+										esc_html_e( 'Apply the Storefront homepage template', 'storefront' );
 									} else {
-										esc_attr_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
+										esc_html_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
 									}
 									?>
 								</label>
@@ -123,7 +123,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 								<?php if ( true === $this->_is_woocommerce_empty() ) : ?>
 									<label>
 										<input type="checkbox" name="products" checked>
-										<?php esc_attr_e( 'Add example products', 'storefront' ); ?>
+										<?php esc_html_e( 'Add example products', 'storefront' ); ?>
 									</label>
 								<?php endif; ?>
 							<?php endif; ?>
