@@ -49,6 +49,11 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
+= 2.5.2 - 2019-08-19 =
+* Fix - Introduce extra block styles to fix issue with WooCommerce 3.7 blocks. #1189
+* Fix - Make Storefront admin notices conform to new WP.org theme rules. #1190
+* Dev - Add filter to alter credit links. #1191
+
 = 2.5.1 - 2019-07-04 =
 * Feature - WooCommerce Product Recommendations integration.
 * Enhancement - Add support for color styles in the "Table" block.
