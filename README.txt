@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.2
-Stable tag: 2.5.1
-Version: 2.5.1
+Stable tag: 2.5.2
+Version: 2.5.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,11 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.5.2 - 2019-08-19 =
+* Fix - Introduce extra block styles to fix issue with WooCommerce 3.7 blocks. #1189
+* Fix - Make Storefront admin notices conform to new WP.org theme rules. #1190
+* Dev - Add filter to alter credit links. #1191
 
 = 2.5.1 - 2019-07-04 =
 * Feature - WooCommerce Product Recommendations integration.
