@@ -49,6 +49,9 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
+= 2.5.3 - 2019-08-19 =
+* Fix - Remove directory that was included in the previous release by mistake.
+
 = 2.5.2 - 2019-08-19 =
 * Fix - Introduce extra block styles to fix issue with WooCommerce 3.7 blocks. #1189
 * Fix - Make Storefront admin notices conform to new WP.org theme rules. #1190
