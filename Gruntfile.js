@@ -323,6 +323,8 @@ module.exports = function( grunt ) {
 					'!package.json',
 					'!package-lock.json',
 					'!phpcs.xml',
+					'!storefront/**',
+					'!storefront.zip',
 					'!vendor/**'
 				],
 				dest: 'storefront',
