@@ -303,6 +303,11 @@ ul.products,
 	clear: both;
 	@include clearfix;
 
+	// Override content from included clearfix. See https://github.com/woocommerce/storefront/issues/1197.
+	&::before {
+		content: none;
+	}
+
 	li.product,
 	.wc-block-grid__product {
 		list-style: none;
