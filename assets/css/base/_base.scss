@@ -520,6 +520,10 @@ body {
 	z-index: 100000; /* Above WP toolbar */
 	outline: none;
 }
+	
+.screen-reader-text.skip-link:focus {
+	clip-path: none;
+}
 
 /**
  * Clearing
