@@ -296,12 +296,15 @@ table.shop_table_responsive {
 /**
  * Products
  */
+ul.products {
+	@include clearfix;
+}
+
 ul.products,
 .wc-block-grid__products {
 	margin-left: 0;
 	margin-bottom: 0;
 	clear: both;
-	@include clearfix;
 
 	li.product,
 	.wc-block-grid__product {
