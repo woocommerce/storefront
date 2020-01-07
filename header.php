@@ -20,7 +20,14 @@
 
 <body <?php body_class(); ?>>
 
-<?php do_action( 'storefront_before_site' ); ?>
+<?php 
+	<?php 
+	if ( function_exists( 'wp_body_open' ) ) {
+		wp_body_open();
+	} else {
+		do_action( 'wp_body_open' );
+	}
+?>
 
 <div id="page" class="hfeed site">
 	<?php do_action( 'storefront_before_header' ); ?>
