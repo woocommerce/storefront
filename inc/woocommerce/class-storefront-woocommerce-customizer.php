@@ -57,7 +57,8 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			$wp_customize->add_section(
 				'storefront_single_product_page', array(
 					'title'    => __( 'Product Page', 'storefront' ),
-					'priority' => 60,
+					'priority' => 10,
+					'panel'    => 'woocommerce',
 				)
 			);
 
