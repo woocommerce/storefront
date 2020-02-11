@@ -110,7 +110,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 				?>
 				<span class="plugin-card-<?php echo esc_attr( $plugin_slug ); ?>">
 					<a href="<?php echo esc_url( $button['url'] ); ?>" class="<?php echo esc_attr( $button['classes'] ); ?>" data-originaltext="<?php echo esc_attr( $button['message'] ); ?>" data-name="<?php echo esc_attr( $plugin_name ); ?>" data-slug="<?php echo esc_attr( $plugin_slug ); ?>" aria-label="<?php echo esc_attr( $button['message'] ); ?>"><?php echo esc_attr( $button['message'] ); ?></a>
-				</span> or
+				</span> <?php esc_html_e( 'or', 'storefront' ); ?>
 				<a href="https://wordpress.org/plugins/<?php echo esc_attr( $plugin_slug ); ?>" target="_blank"><?php esc_attr_e( 'learn more', 'storefront' ); ?></a>
 				<?php
 			}
