@@ -1574,6 +1574,34 @@ ul.order_details {
 	color: $error;
 }
 
+.password-input {
+	position: relative;
+}
+
+.show-password-input {
+	position: absolute;
+	right: 0.7em;
+	top: 0;
+	cursor: pointer;
+}
+
+.show-password-input::after {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	vertical-align: baseline;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	content: '\f06e';
+}
+
+.show-password-input.display-password::after {
+	color: #e8e8e8;
+}
+
 .demo_store {
 	position: fixed;
 	left: 0;
