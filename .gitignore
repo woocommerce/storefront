@@ -12,6 +12,7 @@
 # Grunt
 /node_modules/
 /storefront/
+storefront.zip
 npm-debug.log
 
 # Codekit
