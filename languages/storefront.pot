@@ -1,14 +1,14 @@
-# <!=Copyright (C) 2019 Automattic
+# <!=Copyright (C) 2020 Automattic
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.5.2\n"
+"Project-Id-Version: Storefront 2.5.4\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2019-08-19 14:27:53+00:00\n"
+"POT-Creation-Date: 2020-02-13 01:27:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2020-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
@@ -759,22 +759,22 @@ msgstr ""
 msgid "Product Page"
 msgstr ""
 
-#: inc/woocommerce/class-storefront-woocommerce-customizer.php:82
+#: inc/woocommerce/class-storefront-woocommerce-customizer.php:83
 msgid "Sticky Add-To-Cart"
 msgstr ""
 
-#: inc/woocommerce/class-storefront-woocommerce-customizer.php:83
+#: inc/woocommerce/class-storefront-woocommerce-customizer.php:84
 msgid ""
 "A small content bar at the top of the browser window which includes "
 "relevant product information and an add-to-cart button. It slides into view "
 "once the standard add-to-cart button has scrolled out of view."
 msgstr ""
 
-#: inc/woocommerce/class-storefront-woocommerce-customizer.php:92
+#: inc/woocommerce/class-storefront-woocommerce-customizer.php:93
 msgid "Product Pagination"
 msgstr ""
 
-#: inc/woocommerce/class-storefront-woocommerce-customizer.php:93
+#: inc/woocommerce/class-storefront-woocommerce-customizer.php:94
 msgid ""
 "Displays next and previous links on product pages. A product thumbnail is "
 "displayed with the title revealed on hover."
@@ -881,6 +881,13 @@ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
+
+#: inc/admin/class-storefront-plugin-install.php:113
+msgctxt ""
+"Translators: conjunction of two alternative options user can choose (in "
+"missing plugin admin notice). Example: \"Activate WooCommerce or learn more\""
+msgid "or"
+msgstr ""
 
 #: inc/storefront-template-functions.php:573
 msgctxt "Next post"
