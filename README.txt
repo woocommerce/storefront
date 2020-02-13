@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 5.2
-Stable tag: 2.5.3
-Version: 2.5.3
+Tested up to: 5.3.2
+Stable tag: 2.5.4
+Version: 2.5.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,19 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.5.4 - 2020-02-20 =
+* Feature - Add support for new `wp_body_open` hook. #1208
+* Fix - Customizer: Move "Product Page" settings into WooCommerce tab. #1224
+* Fix - Blocks: Ensure product grid blocks don't wrap unnecessarily. #1217
+* Fix - Editor: Fix layout issue with image block placeholder buttons. #1242
+* Fix - Improve "Sale!" badge legibility by using white background (was transparent). #1251
+* Fix - Improve accessibility of screen reader skip links. #1216
+* Fix - Prevent search engine indexing of add-to-cart link. #1207
+* Fix - Ensure password visibility button is not hidden on login form. #1238
+* Fix - Allow translation of "or" in admin notice for activating WooCommerce plugin. #1257
+* Dev - Update npm dev dependencies. #1258
+* Dev - Automatically exclude storefront folder & zip when preparing release. #1199
 
 = 2.5.3 - 2019-08-19 =
 * Fix - Remove directory that was included in the previous release by mistake.
