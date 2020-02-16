@@ -59,6 +59,8 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Fix - Prevent search engine indexing of add-to-cart link. #1207
 * Fix - Ensure password visibility button is not hidden on login form. #1238
 * Fix - Allow translation of "or" in admin notice for activating WooCommerce plugin. #1257
+* Fix - Remove underline from @wordpress/components button links. #1187
+* Fix - Use `noreferrer` on footer credit link. #1243
 * Dev - Update npm dev dependencies. #1258
 * Dev - Automatically exclude storefront folder & zip when preparing release. #1199
 
