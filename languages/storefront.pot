@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.5.4\n"
+"Project-Id-Version: Storefront 2.5.4-rc.1\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2020-02-13 01:27:54+00:00\n"
+"POT-Creation-Date: 2020-02-16 20:09:57+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -661,97 +661,105 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: inc/storefront-template-functions.php:140
+#: inc/storefront-template-functions.php:141
 msgid "WooCommerce - The Best eCommerce Platform for WordPress"
 msgstr ""
 
-#: inc/storefront-template-functions.php:140
+#: inc/storefront-template-functions.php:141
 msgid "Built with Storefront &amp; WooCommerce"
 msgstr ""
 
-#: inc/storefront-template-functions.php:236
+#: inc/storefront-template-functions.php:143
+msgid "Storefront -  The perfect platform for your next WooCommerce project."
+msgstr ""
+
+#: inc/storefront-template-functions.php:143
+msgid "Built with Storefront"
+msgstr ""
+
+#: inc/storefront-template-functions.php:240
 msgid "Primary Navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:237
+#: inc/storefront-template-functions.php:241
 msgid "Menu"
 msgstr ""
 
-#: inc/storefront-template-functions.php:268
+#: inc/storefront-template-functions.php:272
 msgid "Secondary Navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:292
+#: inc/storefront-template-functions.php:296
 msgid "Skip to navigation"
 msgstr ""
 
-#: inc/storefront-template-functions.php:293
+#: inc/storefront-template-functions.php:297
 msgid "Skip to content"
 msgstr ""
 
-#: inc/storefront-template-functions.php:305
+#: inc/storefront-template-functions.php:309
 msgid "Edit this section"
 msgstr ""
 
-#: inc/storefront-template-functions.php:351
-#: inc/storefront-template-functions.php:422
+#: inc/storefront-template-functions.php:355
+#: inc/storefront-template-functions.php:426
 msgid "Pages:"
 msgstr ""
 
-#: inc/storefront-template-functions.php:413
+#: inc/storefront-template-functions.php:417
 #. translators: %s: post title
 msgid "Continue reading %s"
 msgstr ""
 
-#: inc/storefront-template-functions.php:463
+#: inc/storefront-template-functions.php:467
 #. translators: %s: post date
 msgid "Posted on %s"
 msgstr ""
 
-#: inc/storefront-template-functions.php:469
+#: inc/storefront-template-functions.php:473
 msgid "by"
 msgstr ""
 
-#: inc/storefront-template-functions.php:478
+#: inc/storefront-template-functions.php:482
 msgid "Leave a comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:478
+#: inc/storefront-template-functions.php:482
 msgid "1 Comment"
 msgstr ""
 
-#: inc/storefront-template-functions.php:478
+#: inc/storefront-template-functions.php:482
 msgid "% Comments"
 msgstr ""
 
-#: inc/storefront-template-functions.php:517
+#: inc/storefront-template-functions.php:521
 #. translators: %s: Name of current post. Only visible to screen readers
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/storefront-template-functions.php:540
-#: inc/storefront-template-functions.php:543
+#: inc/storefront-template-functions.php:544
+#: inc/storefront-template-functions.php:547
 #. translators: used between list items, there is a space after the comma
 msgid ", "
 msgstr ""
 
-#: inc/storefront-template-functions.php:549
+#: inc/storefront-template-functions.php:553
 msgid "Category:"
 msgid_plural "Categories:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:555
+#: inc/storefront-template-functions.php:559
 msgid "Tag:"
 msgid_plural "Tags:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/storefront-template-functions.php:587
+#: inc/storefront-template-functions.php:591
 msgid "Next post:"
 msgstr ""
 
-#: inc/storefront-template-functions.php:588
+#: inc/storefront-template-functions.php:592
 msgid "Previous post:"
 msgstr ""
 
@@ -889,12 +897,12 @@ msgctxt ""
 msgid "or"
 msgstr ""
 
-#: inc/storefront-template-functions.php:573
+#: inc/storefront-template-functions.php:577
 msgctxt "Next post"
 msgid "Next"
 msgstr ""
 
-#: inc/storefront-template-functions.php:574
+#: inc/storefront-template-functions.php:578
 msgctxt "Previous post"
 msgid "Previous"
 msgstr ""
