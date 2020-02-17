@@ -786,11 +786,12 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['footer_text_color'] . ';
 			}
 
-			.site-footer a:not(.button) {
+			.site-footer a:not(.button),
+			.site-footer a:not(.button):not(.components-button) {
 				color: ' . $storefront_theme_mods['footer_link_color'] . ';
 			}
 
-			.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6 {
+			.site-footer h1, .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5, .site-footer h6, .widget .widget-title, .widget .widgettitle {
 				color: ' . $storefront_theme_mods['footer_heading_color'] . ';
 			}
 
