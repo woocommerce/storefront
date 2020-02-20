@@ -305,7 +305,9 @@
 	}
 
 	// Image
-	.wp-block-image {
+	.wp-block-image:not( .block-editor-media-placeholder ) {
+		display: inline;
+
 		figure {
 			margin-bottom: ms(2);
 		}
