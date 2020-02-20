@@ -307,7 +307,9 @@
 	// Image
 	.wp-block-image {
 		
-		display: inline;
+		&:not( .block-editor-media-placeholder ) {
+			display: inline;
+		}
 
 		figure {
 			margin-bottom: ms(2);
