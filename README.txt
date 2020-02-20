@@ -3,7 +3,7 @@ Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.3.2
 Stable tag: 2.5.3
-Version: 2.5.4-rc.1
+Version: 2.5.5-dev.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.4-rc.1 - 2020-02-17 =
+= 2.5.4 - 2020-02-19 =
 * Feature - Add support for new `wp_body_open` hook. #1208
 * Fix - Customizer: Move "Product Page" settings into WooCommerce tab. #1224
 * Fix - Blocks: Ensure product grid blocks don't wrap unnecessarily. #1217
