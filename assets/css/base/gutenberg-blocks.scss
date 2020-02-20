@@ -306,6 +306,9 @@
 
 	// Image
 	.wp-block-image {
+		
+		display: inline;
+
 		figure {
 			margin-bottom: ms(2);
 		}
