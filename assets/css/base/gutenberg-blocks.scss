@@ -305,7 +305,7 @@
 	}
 
 	// Image
-	.wp-block-image {
+	.wp-block-image:not( .block-editor-media-placeholder ) {
 		
 		&:not( .block-editor-media-placeholder ) {
 			display: inline;
