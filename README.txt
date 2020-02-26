@@ -3,7 +3,7 @@ Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
 Tested up to: 5.3.2
 Stable tag: 2.5.3
-Version: 2.5.5-rc.1
+Version: 2.5.5-rc.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -49,9 +49,10 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.5 - 2020-02-21 =
+= 2.5.5 - 2020-02-28 =
 * Fix - Blocks: Fix vertical alignment of left/right aligned image blocks. #1265
 * Fix - Blocks: Correct center alignment of product image in Top Rated Products block with small number of columns. #1267
+* Fix - Blocks: Improve margins between embed block and list block. #12651272
 * Fix - Customizer: Ensure headings and links in the footer use colors set in Customizer. #1261
 
 = 2.5.4 - 2020-02-19 =
