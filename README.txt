@@ -52,7 +52,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 = 2.5.5 - 2020-02-28 =
 * Fix - Blocks: Fix vertical alignment of left/right aligned image blocks. #1265
 * Fix - Blocks: Correct center alignment of product image in Top Rated Products block with small number of columns. #1267
-* Fix - Blocks: Improve margins between embed block and list block. #12651272
+* Fix - Blocks: Improve margins between floated embed/image block and list block. #1272 #1274
 * Fix - Customizer: Ensure headings and links in the footer use colors set in Customizer. #1261
 
 = 2.5.4 - 2020-02-19 =
