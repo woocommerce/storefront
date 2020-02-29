@@ -317,7 +317,7 @@
 	}
 
 	// Image
-	.wp-block-image:not( .block-editor-media-placeholder ) {
+	div.wp-block-image:not( .block-editor-media-placeholder ) {
 		display: inline;
 
 		figure {
