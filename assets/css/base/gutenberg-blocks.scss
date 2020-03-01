@@ -320,10 +320,6 @@
 	.wp-block-image:not( .block-editor-media-placeholder ) {
 		display: inline;
 
-		figure {
-			margin-bottom: ms(2);
-		}
-
 		.alignleft {
 			margin-right: ms(5);
 		}
@@ -332,11 +328,16 @@
 			margin-left: ms(5);
 		}
 
+		figure {
+			margin-bottom: ms(2);
+		}
+
 		figcaption {
-			margin: 0;
-			padding: ms(-1) 0;
+			display: block;
 			font-size: ms(-1);
 			font-style: italic;
+			margin: 0;
+			padding: ms(-1) 0;
 		}
 	}
 
