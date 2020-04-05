@@ -391,6 +391,10 @@ module.exports = function( grunt ) {
 											value = '"\\f152"';
 										} else if ( value === '"\\f152"' ) { // toggle-right
 											value = '"\\f191"';
+										} else if ( value === '"\\f30b"' ) { // long-arrow-alt-right
+											value = '"\\f30a"';
+										} else if ( value === '"\\f30a"' ) { // long-arrow-alt-left
+											value = '"\\f30b"';
 										}
 										return { prop: prop, value: value };
 									}
