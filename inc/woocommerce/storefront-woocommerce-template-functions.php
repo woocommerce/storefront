@@ -632,6 +632,10 @@ if ( ! function_exists( 'storefront_handheld_footer_bar' ) ) {
 			),
 		);
 
+		if ( did_action( 'woocommerce_blocks_enqueue_cart_block_scripts_after' ) || did_action( 'woocommerce_blocks_enqueue_checkout_block_scripts_after' ) ) {
+			return;
+		}
+
 		if ( wc_get_page_id( 'myaccount' ) === -1 ) {
 			unset( $links['my-account'] );
 		}
