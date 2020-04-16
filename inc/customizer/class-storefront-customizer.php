@@ -924,6 +924,10 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			if ( is_admin() ) {
 				$styles .= '
+				.editor-styles-wrapper {
+					background-color: ' . $storefront_theme_mods['background_color'] . ';
+				}
+
 				.editor-styles-wrapper table:not( .has-background ) th {
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -7 ) . ';
 				}
