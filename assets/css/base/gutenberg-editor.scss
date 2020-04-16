@@ -19,15 +19,15 @@
  * Base styles
  */
 
-.editor-block-list__block,
-.editor-default-block-appender textarea.editor-default-block-appender__content,
+.block-editor-block-list__block,
+.block-editor-default-block-appender textarea.block-editor-default-block-appender__content,
 .editor-post-title__block .editor-post-title__input {
 	font-family: $base-font;
 }
 
-.editor-block-list__block,
-.editor-block-list__block p,
-.editor-default-block-appender textarea.editor-default-block-appender__content {
+.block-editor-block-list__block,
+.block-editor-block-list__block p,
+.block-editor-default-block-appender textarea.block-editor-default-block-appender__content {
 	font-size: 16px;
 	line-height: 1.618;
 }

@@ -948,7 +948,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					color: ' . $storefront_theme_mods['heading_color'] . ';
 				}
 
-				.editor-styles-wrapper .editor-block-list__block {
+				.editor-styles-wrapper .block-editor-block-list__block {
 					color: ' . $storefront_theme_mods['text_color'] . ';
 				}
 

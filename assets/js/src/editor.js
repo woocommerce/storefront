@@ -96,7 +96,7 @@
 	 * @return {void}
 	 */
 	const toggleCustomSidebarClass = ( showSidebar ) => {
-		let editorWrapper = document.getElementsByClassName( 'editor-writing-flow' );
+		let editorWrapper = document.getElementsByClassName( 'block-editor-writing-flow' );
 
 		if ( ! editorWrapper.length ) {
 			return;
