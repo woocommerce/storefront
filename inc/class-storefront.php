@@ -111,6 +111,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 						'gallery',
 						'caption',
 						'widgets',
+						'style',
+						'script',
 					)
 				)
 			);
