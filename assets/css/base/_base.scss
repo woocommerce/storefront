@@ -1512,14 +1512,11 @@ button.menu-toggle {
 	}
 }
 
-.widget-area,
-.footer-widgets {
-	#wp-calendar {
-		th,
-		td {
-			padding: 0.236em;
-			text-align: center;
-		}
+.wp-calendar-table {
+	th,
+	td {
+		padding: 0.236em;
+		text-align: center;
 	}
 }
 
