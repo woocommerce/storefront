@@ -514,21 +514,18 @@ a.remove {
 .woocommerce-pagination {
 	.next,
 	.prev {
-		color: transparent;
-		display: inline-block;
+		text-indent: -9999px;
 		position: relative;
+		overflow: hidden;
 
 		&::after {
 			@include sf-fa-icon;
-			color: initial;
 			content: fa-content( $fa-var-caret-left );
+			text-indent: 0;
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			width: 1em;
-			height: 1em;
 			transform: translateX(-50%) translateY(-50%);
-			line-height: 1;
 		}
 	}
 
