@@ -464,6 +464,7 @@ a.remove {
 	line-height: 1.618;
 	font-weight: 400;
 	text-indent: -9999px;
+	overflow: hidden;
 	position: relative;
 
 	&::before {
@@ -513,14 +514,14 @@ a.remove {
 .woocommerce-pagination {
 	.next,
 	.prev {
-		text-indent: -9999px;
+		color: transparent;
 		display: inline-block;
 		position: relative;
 
 		&::after {
 			@include sf-fa-icon;
+			color: initial;
 			content: fa-content( $fa-var-caret-left );
-			text-indent: 0;
 			position: absolute;
 			top: 50%;
 			left: 50%;

@@ -207,6 +207,16 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['text_color'] . ';
 			}
 
+			.woocommerce-pagination .page-numbers li .page-numbers.prev,
+			.woocommerce-pagination .page-numbers li .page-numbers.next {
+				color: transparent;
+			}
+
+			.woocommerce-pagination .page-numbers li .page-numbers.prev::after,
+			.woocommerce-pagination .page-numbers li .page-numbers.next::after {
+				color: ' . $storefront_theme_mods['text_color'] . ';
+			}
+
 			p.stars a:before,
 			p.stars a:hover~a:before,
 			p.stars.selected a.active~a:before {

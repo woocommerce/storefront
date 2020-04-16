@@ -144,6 +144,12 @@
 				text-indent: -9999px;
 				z-index: 999;
 				border-right: 1px solid rgba( #fff, 0.2 );
+				overflow: hidden;
+
+				// Raise it so focus outline is shown.
+				&:focus {
+					z-index: 1000;
+				}
 			}
 
 			&.search {
@@ -1669,6 +1675,7 @@ p.stars {
 		height: 1em;
 		width: 1em;
 		text-indent: -999em;
+		overflow: hidden;
 		display: inline-block;
 		text-decoration: none;
 		margin-right: 1px;
