@@ -948,6 +948,9 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					color: ' . $storefront_theme_mods['heading_color'] . ';
 				}
 
+				// WP <=5.3
+				.editor-styles-wrapper .editor-block-list__block,
+				// WP >=5.4
 				.editor-styles-wrapper .block-editor-block-list__block {
 					color: ' . $storefront_theme_mods['text_color'] . ';
 				}

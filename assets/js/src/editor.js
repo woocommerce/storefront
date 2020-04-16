@@ -96,7 +96,12 @@
 	 * @return {void}
 	 */
 	const toggleCustomSidebarClass = ( showSidebar ) => {
-		let editorWrapper = document.getElementsByClassName( 'block-editor-writing-flow' );
+		let editorWrapper = [
+			// WP <=5.3
+			...document.getElementsByClassName( 'editor-writing-flow' ),
+			// WP >=5.4
+			...document.getElementsByClassName( 'block-editor-writing-flow' ),
+		];
 
 		if ( ! editorWrapper.length ) {
 			return;
