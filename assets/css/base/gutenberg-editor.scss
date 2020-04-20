@@ -15,19 +15,9 @@
 @import '../sass/utils/variables';
 @import '../sass/utils/mixins';
 
-/**
- * Base styles
- */
-
-.editor-block-list__block,
-.editor-default-block-appender textarea.editor-default-block-appender__content,
-.editor-post-title__block .editor-post-title__input {
+// Base typography
+body {
 	font-family: $base-font;
-}
-
-.editor-block-list__block,
-.editor-block-list__block p,
-.editor-default-block-appender textarea.editor-default-block-appender__content {
 	font-size: 16px;
 	line-height: 1.618;
 }
@@ -44,7 +34,7 @@
 		bottom: 0;
 		right: 14px;
 		left: 14px;
-		border-bottom: 1px solid rgba( 0, 0, 0, 0.05);
+		border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 	}
 
 	@media ( min-width: $desktop ) {
@@ -54,6 +44,7 @@
 
 .editor-post-title__block .editor-post-title__input {
 	clear: both;
+	font-family: $base-font;
 	font-weight: 300;
 	font-size: ms(5);
 	line-height: 1.214;

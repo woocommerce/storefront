@@ -96,16 +96,17 @@
 	 * @return {void}
 	 */
 	const toggleCustomSidebarClass = ( showSidebar ) => {
-		let editorWrapper = document.getElementsByClassName( 'editor-writing-flow' );
+		// First class for WP<=5.3 and second class for WP>=5.4.
+		const editorWrapper = document.querySelector( '.editor-writing-flow, .block-editor-writing-flow' );
 
-		if ( ! editorWrapper.length ) {
+		if ( ! editorWrapper ) {
 			return;
 		}
 
 		if ( !! showSidebar ) {
-			editorWrapper[0].classList.add( 'storefront-has-sidebar' );
+			editorWrapper.classList.add( 'storefront-has-sidebar' );
 		} else {
-			editorWrapper[0].classList.remove( 'storefront-has-sidebar' );
+			editorWrapper.classList.remove( 'storefront-has-sidebar' );
 		}
 	};
 
