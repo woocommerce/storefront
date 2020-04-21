@@ -342,7 +342,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 				wp_localize_script( 'storefront-navigation', 'storefrontScreenReaderText', $storefront_l10n );
 			}
 
-			if ( is_page_template( 'template-homepage.php' ) && has_post_thumbnail() ) {
+			if ( is_page_template( 'storefront/template-homepage.php' ) && has_post_thumbnail() ) {
 				wp_enqueue_script( 'storefront-homepage', get_template_directory_uri() . '/assets/js/homepage' . $suffix . '.js', array(), $storefront_version, true );
 			}
 
