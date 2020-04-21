@@ -161,6 +161,7 @@
 		margin-bottom: ms(2);
 
 		.wp-block-button__link {
+			border-radius: 0;
 			font-size: ms(1);
 			line-height: 1.618;
 			border: 0;
@@ -171,12 +172,6 @@
 			text-shadow: none;
 			display: inline-block;
 			-webkit-appearance: none;
-		}
-
-		&:not( .is-style-squared ) {
-			.wp-block-button__link {
-				border-radius: 5px;
-			}
 		}
 
 		&.is-style-outline .wp-block-button__link,
