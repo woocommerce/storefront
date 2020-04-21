@@ -32,6 +32,15 @@
 	}
 }
 
+// Remove underline if element has a button class.
+@mixin notUnderlinedWhenButton() {
+	&.button,
+	&.components-button,
+	&.wp-block-button__link {
+		text-decoration: none;
+	}
+}
+
 @mixin button() {
 	border: 0;
 	background: none;

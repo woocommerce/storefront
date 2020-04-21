@@ -455,13 +455,15 @@ body {
 		color: mix( $color_body, #222 );
 	}
 
-	a:not( .button ):not( .components-button ):not( .wp-block-button__link ) {
+	a {
 		color: $color_links;
 		text-decoration: underline;
 
 		&:hover {
 			text-decoration: none;
 		}
+
+		@include notUnderlinedWhenButton;
 	}
 }
 
@@ -783,12 +785,14 @@ table {
 	}
 
 	.entry-content {
-		a:not( .button ):not( .components-button ):not( .wp-block-button__link ) {
+		a {
 			text-decoration: underline;
 
 			&:hover {
 				text-decoration: none;
 			}
+
+			@include notUnderlinedWhenButton;
 		}
 	}
 
@@ -1545,8 +1549,9 @@ button.menu-toggle {
 			font-size: ms(2);
 		}
 
-		a:not( .button ):not( .components-button ):not( .wp-block-button__link ) {
+		a {
 			@include underlinedLink();
+			@include notUnderlinedWhenButton;
 		}
 	}
 }
