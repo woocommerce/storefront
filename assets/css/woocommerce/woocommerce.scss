@@ -1094,6 +1094,10 @@ table.cart {
 		}
 	}
 
+	td.product-name {
+		word-break: break-word;
+	}
+
 	td,
 	th {
 		padding: ms(-1) ms(-1) 0;
