@@ -571,6 +571,10 @@ ul.products,
 			}
 
 			table.woocommerce-grouped-product-list {
+				.woocommerce-grouped-product-list-item__label {
+					word-break: break-word;
+				}
+
 				.woocommerce-grouped-product-list-item__quantity {
 					float: none;
 					margin-right: 0;
