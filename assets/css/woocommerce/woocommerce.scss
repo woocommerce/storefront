@@ -572,7 +572,7 @@ ul.products,
 
 			table.woocommerce-grouped-product-list {
 				.woocommerce-grouped-product-list-item__label {
-					word-break: break-word;
+					@include wrapBreakWord();
 				}
 
 				.woocommerce-grouped-product-list-item__quantity {
@@ -1095,7 +1095,7 @@ table.cart {
 	}
 
 	td.product-name {
-		word-break: break-word;
+		@include wrapBreakWord();
 	}
 
 	td,
@@ -1374,7 +1374,7 @@ form.checkout {
 table.woocommerce-checkout-review-order-table {
 	.product-name {
 		width: 45%;
-		word-break: break-word;
+		@include wrapBreakWord();
 	}
 }
 
