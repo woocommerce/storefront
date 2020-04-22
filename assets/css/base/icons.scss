@@ -8,11 +8,8 @@
 // Sass tools and helpers used across the project.
 @import '../sass/utils/variables';
 @import '../sass/utils/mixins';
-@import '../sass/vendors/font-awesome/brands';
 @import '../sass/vendors/font-awesome/fontawesome';
-@import '../sass/vendors/font-awesome/regular';
 @import '../sass/vendors/font-awesome/solid';
-@import '../sass/vendors/font-awesome/v4-shims';
 @import '../sass/vendors/modular-scale';
 
 @mixin sf-fa-icon {
