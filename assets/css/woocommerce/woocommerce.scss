@@ -1581,13 +1581,16 @@ ul.order_details {
 }
 
 .password-input {
+	display: block;
 	position: relative;
 }
 
 .show-password-input {
 	position: absolute;
-	right: 0.7em;
+	right: 0;
 	top: 0;
+	padding: 0.618em;
+	line-height: 1.618;
 	cursor: pointer;
 }
 
