@@ -455,13 +455,15 @@ body {
 		color: mix( $color_body, #222 );
 	}
 
-	a:not( .button ):not( .components-button ) {
+	a {
 		color: $color_links;
 		text-decoration: underline;
 
 		&:hover {
 			text-decoration: none;
 		}
+
+		@include removeButtonUnderline();
 	}
 }
 
@@ -783,12 +785,14 @@ table {
 	}
 
 	.entry-content {
-		a:not( .button ):not( .components-button ) {
+		a {
 			text-decoration: underline;
 
 			&:hover {
 				text-decoration: none;
 			}
+
+			@include removeButtonUnderline();
 		}
 	}
 
@@ -1546,8 +1550,9 @@ button.menu-toggle {
 			font-size: ms(2);
 		}
 
-		a:not( .button ):not( .components-button ) {
+		a {
 			@include underlinedLink();
+			@include removeButtonUnderline();
 		}
 	}
 }
