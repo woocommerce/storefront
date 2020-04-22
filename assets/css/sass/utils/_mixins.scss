@@ -66,5 +66,6 @@
 	overflow-wrap: anywhere;
 	// Safari supports word-break.
 	word-break: break-word;
-	// (We may also need word-wrap for IE.)
+	// We also need word-wrap and for IE.
+	-ms-word-break: break-all;
 }
