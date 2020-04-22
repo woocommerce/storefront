@@ -19,7 +19,7 @@
 		}
 
 		var entries = homepageContent.querySelectorAll( '.entry-title, .entry-content' );
-		for ( var i = 0, l = entries.length; i < l; i++ ) {
+		for ( var i = 0, i < entries.length; i++ ) {
 			entries[ i ].classList.add( 'loaded' );
 		}
 
