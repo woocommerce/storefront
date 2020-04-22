@@ -464,6 +464,7 @@ a.remove {
 	line-height: 1.618;
 	font-weight: 400;
 	text-indent: -9999px;
+	overflow: hidden;
 	position: relative;
 
 	&::before {
@@ -514,8 +515,8 @@ a.remove {
 	.next,
 	.prev {
 		text-indent: -9999px;
-		display: inline-block;
 		position: relative;
+		overflow: hidden;
 
 		&::after {
 			@include sf-fa-icon;
@@ -524,10 +525,7 @@ a.remove {
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			width: 1em;
-			height: 1em;
 			transform: translateX(-50%) translateY(-50%);
-			line-height: 1;
 		}
 	}
 
