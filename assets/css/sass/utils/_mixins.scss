@@ -58,3 +58,14 @@
 	border-radius: 0;
 	box-shadow: inset 0 -1px 0 rgba( #000, 0.3 );
 }
+
+@mixin wrapBreakWord {
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
+	// https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
+	// This is the current standard, works in most browsers.
+	overflow-wrap: anywhere;
+	// Safari supports word-break.
+	word-break: break-word;
+	// We also need word-wrap and for IE.
+	-ms-word-break: break-all;
+}

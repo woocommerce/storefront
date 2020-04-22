@@ -571,6 +571,10 @@ ul.products,
 			}
 
 			table.woocommerce-grouped-product-list {
+				.woocommerce-grouped-product-list-item__label {
+					@include wrapBreakWord();
+				}
+
 				.woocommerce-grouped-product-list-item__quantity {
 					float: none;
 					margin-right: 0;
@@ -1090,6 +1094,10 @@ table.cart {
 		}
 	}
 
+	td.product-name {
+		@include wrapBreakWord();
+	}
+
 	td,
 	th {
 		padding: ms(-1) ms(-1) 0;
@@ -1366,7 +1374,7 @@ form.checkout {
 table.woocommerce-checkout-review-order-table {
 	.product-name {
 		width: 45%;
-		word-wrap: break-word;
+		@include wrapBreakWord();
 	}
 }
 
