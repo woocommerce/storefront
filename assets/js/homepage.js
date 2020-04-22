@@ -18,8 +18,9 @@
 			return;
 		}
 
-		for ( var i = 0; i < homepageContent.querySelectorAll( '.entry-title, .entry-content' ).length; i++ ) {
-			homepageContent.querySelectorAll( '.entry-title, .entry-content' )[ i ].classList.add( 'loaded' );
+		var entries = homepageContent.querySelectorAll( '.entry-title, .entry-content' );
+		for ( var i = 0; i < entries.length; i++ ) {
+			entries[ i ].classList.add( 'loaded' );
 		}
 
 		var siteMain         = document.querySelector( '.site-main' );
