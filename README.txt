@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 5.3.2
-Stable tag: 2.5.3
-Version: 2.5.5
+Tested up to: 5.4
+Stable tag: 2.5.5
+Version: 2.5.6-rc.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,27 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.5.6 - 2020-04-23 =
+* Enhancement - Custom site background color is now used in editor preview. #1317
+* Fix - Ensure mobile sticky footer navigation links are visible when colours are customised (use header/nav colour scheme, consistent with 2.5.4 and earlier releases). #1321
+* Fix – Fix issue where product and category images were not centered on homepage & category pages. #1313
+* Fix – "Reveal password" button (eye icon) is now positioned correctly in new password fields (my account change password and signup). #1325
+* Fix - Fix several mispositioned :focus rings (in Firefox and other browsers). #1318
+* Fix – Ensure product images have appropriate bottom margin. #1313
+* Fix – Buttons blocks now respect the border radius set by the user. #1323
+* Fix - Buttons blocks now respect the border radius set by the user. #1311
+* Fix - Buttons blocks no longer show an underline. #1310
+* Fix – Product page, cart, and checkout layout fixes affecting stores with longer product names on smaller screens. #1326
+* Fix - WordPress 5.4 compatibility – Text inside the Calendar block is now centered, in line with the Calendar widget. #1315
+* Fix – WordPress 5.4 compatibility – Ensure block editor uses theme typography styling. #1316
+* Fix – WordPress 5.4 compatibility – Adapt block editor width if sidebar widgets are present/disabled. #1316
+* Compatibility - Disable the footer bar when used with Checkout or Cart blocks (currently in development). #1307
+* i18n – Use correct direction arrow icons in RTL languages (next, previous and forward). #1306
+* i18n – Fix inappropriate use of disambiguation context in admin notice 'or' string. #1303
+* Tweak – Improve HTML5 compliance for enqueued scripts and styles. #1309
+* Tweak – Removed unnecessary vertical-align css rule for button, select, input and textarea elements. #1295
+* Dependencies – Update Font Awesome icon font to 5.13.0. #1279
 
 = 2.5.5 - 2020-02-28 =
 * Fix - Blocks: Fix vertical alignment of left/right aligned image blocks. #1265
