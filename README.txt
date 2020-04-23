@@ -57,7 +57,6 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 * Fix - Fix several mispositioned :focus rings (in Firefox and other browsers). #1318
 * Fix – Ensure product images have appropriate bottom margin. #1313
 * Fix – Buttons blocks now respect the border radius set by the user. #1323
-* Fix - Buttons blocks now respect the border radius set by the user. #1311
 * Fix - Buttons blocks no longer show an underline. #1310
 * Fix – Product page, cart, and checkout layout fixes affecting stores with longer product names on smaller screens. #1326
 * Fix - WordPress 5.4 compatibility – Text inside the Calendar block is now centered, in line with the Calendar widget. #1315
