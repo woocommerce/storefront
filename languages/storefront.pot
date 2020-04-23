@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 2.5.5\n"
+"Project-Id-Version: Storefront 2.5.6-rc.1\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2020-02-27 21:17:07+00:00\n"
+"POT-Creation-Date: 2020-04-23 00:27:42+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgid ""
 "below."
 msgstr ""
 
-#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:669
+#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:673
 msgid "Search"
 msgstr ""
 
@@ -183,6 +183,12 @@ msgstr ""
 msgid "Learn more"
 msgstr ""
 
+#: inc/admin/class-storefront-plugin-install.php:113
+#. translators: conjunction of two alternative options user can choose (in
+#. missing plugin admin notice). Example: "Activate WooCommerce or learn more"
+msgid "or"
+msgstr ""
+
 #: inc/admin/class-storefront-plugin-install.php:114
 msgid "learn more"
 msgstr ""
@@ -202,69 +208,69 @@ msgstr ""
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/class-storefront.php:189
+#: inc/class-storefront.php:191
 msgid "Small"
 msgstr ""
 
-#: inc/class-storefront.php:194
+#: inc/class-storefront.php:196
 msgid "Normal"
 msgstr ""
 
-#: inc/class-storefront.php:199
+#: inc/class-storefront.php:201
 msgid "Medium"
 msgstr ""
 
-#: inc/class-storefront.php:204
+#: inc/class-storefront.php:206
 msgid "Large"
 msgstr ""
 
-#: inc/class-storefront.php:209
+#: inc/class-storefront.php:211
 msgid "Huge"
 msgstr ""
 
-#: inc/class-storefront.php:233
+#: inc/class-storefront.php:235
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-storefront.php:239
+#: inc/class-storefront.php:241
 msgid "Below Header"
 msgstr ""
 
-#: inc/class-storefront.php:241
+#: inc/class-storefront.php:243
 msgid ""
 "Widgets added to this region will appear beneath the header and above the "
 "main content."
 msgstr ""
 
-#: inc/class-storefront.php:254
+#: inc/class-storefront.php:256
 #. translators: 1: column number
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-storefront.php:257
+#: inc/class-storefront.php:259
 #. translators: 1: column number
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-storefront.php:260
+#: inc/class-storefront.php:262
 #. translators: 1: row number, 2: column number
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-storefront.php:263
+#: inc/class-storefront.php:265
 #. translators: 1: column number, 2: row number
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:336
+#: inc/class-storefront.php:338
 msgid "Expand child menu"
 msgstr ""
 
-#: inc/class-storefront.php:337
+#: inc/class-storefront.php:339
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/class-storefront.php:505
+#: inc/class-storefront.php:507
 msgid "Post Navigation"
 msgstr ""
 
@@ -379,56 +385,56 @@ msgstr ""
 msgid "Looking for more options?"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:83
+#: inc/nux/class-storefront-nux-admin.php:84
 msgid "Thanks for installing Storefront, you rock! 🤘"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:84
+#: inc/nux/class-storefront-nux-admin.php:85
 msgid "To enable eCommerce features you need to install the WooCommerce plugin."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:85
+#: inc/nux/class-storefront-nux-admin.php:86
 msgid "WooCommerce activated"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:85
+#: inc/nux/class-storefront-nux-admin.php:86
 msgid "Activate WooCommerce"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:85
+#: inc/nux/class-storefront-nux-admin.php:86
 msgid "Install WooCommerce"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:89
+#: inc/nux/class-storefront-nux-admin.php:90
 msgid "Design your store 🎨"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:93
+#: inc/nux/class-storefront-nux-admin.php:94
 msgid ""
 "Before you add your first product let's design your store. We'll add some "
 "example products for you. When you're ready let's get started by adding "
 "your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:95
+#: inc/nux/class-storefront-nux-admin.php:96
 msgid ""
 "You've set up WooCommerce, now it's time to give it some style! Let's get "
 "started by entering the Customizer and adding your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:116
+#: inc/nux/class-storefront-nux-admin.php:117
 msgid "Apply the Storefront homepage template"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:118
+#: inc/nux/class-storefront-nux-admin.php:119
 msgid "Create a homepage using Storefront's homepage template"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:126
+#: inc/nux/class-storefront-nux-admin.php:127
 msgid "Add example products"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:131
+#: inc/nux/class-storefront-nux-admin.php:132
 #: inc/nux/class-storefront-nux-guided-tour.php:112
 msgid "Let's go!"
 msgstr ""
@@ -789,7 +795,7 @@ msgid ""
 msgstr ""
 
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:75
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:682
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:686
 msgid "View your shopping cart"
 msgstr ""
 
@@ -825,23 +831,23 @@ msgstr ""
 msgid "New In Store"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:696
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:700
 msgid "My Account"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:724
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:728
 msgid "More products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:787
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:791
 msgid "You're viewing:"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:822
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:826
 msgid "Shop by Brand"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:837
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:841
 msgid "Product Brands"
 msgstr ""
 
@@ -889,13 +895,6 @@ msgid "%1$s thought on &ldquo;%2$s&rdquo;"
 msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
-
-#: inc/admin/class-storefront-plugin-install.php:113
-msgctxt ""
-"Translators: conjunction of two alternative options user can choose (in "
-"missing plugin admin notice). Example: \"Activate WooCommerce or learn more\""
-msgid "or"
-msgstr ""
 
 #: inc/storefront-template-functions.php:577
 msgctxt "Next post"
