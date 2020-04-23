@@ -37,6 +37,7 @@ __*Outcome*: A `storefront.zip` file that you can test with.__
   - Upload release zip.
   - Use this format for tag: `version/1.2.3-rc.1`.
   - Paste changelog into “release details” field.
+  - Check `This is a pre-release` tickbox.
 
 __*Outcome*: A `storefront.zip` file is available to the community and other stakeholders for testing and feedback.__
 
