@@ -35,7 +35,7 @@ This document lists the features and flows supported in Storefront. This is not 
 - [ ] On smaller screens, a sticky footer provides easy access to important site functions (for example, shopping cart).
 
 ### Testing tips
-- If you're not seeing the onboarding notice, delete the  `storefront_nux_dismissed` option to bring it back.
+- If you're not seeing the onboarding notice, delete the  `storefront_nux_dismissed` [option](https://codex.wordpress.org/Options_API) to bring it back. For example, with [WP CLI](https://developer.wordpress.org/cli/commands/option/): `wp option delete storefront_nux_dismissed`.
 
 ## Customization
 - [ ] Merchant can use custom colors for site typography / text.
