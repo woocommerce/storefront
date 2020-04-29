@@ -14,7 +14,7 @@ This document lists the features and flows supported in Storefront. This is not 
 - [ ] Log in as customer, view account info, manage account, change password.
 - [ ] Customer can view previous orders.
 - [ ] Visitors and customers can review and rate products.
-- [ ] Visitors can view reviews & ratings to get "social proof" about product quality/performance.
+- [ ] Visitors can view reviews & ratings of products.
 - [ ] Merchant can customise eCommerce related features in pages and layout areas via WooCommerce widgets.
 
 ## WooCommerce - editing and publishing content
