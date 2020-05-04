@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 4.7
-Tested up to: 5.4
-Stable tag: 2.5.5
-Version: 2.5.6-rc.1
+Tested up to: 5.4.1
+Stable tag: 2.5.6
+Version: 2.5.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.6 - 2020-04-23 =
+= 2.5.6 - 2020-05-05 =
 * Enhancement - Custom site background color is now used in editor preview. #1317
 * Fix - Ensure mobile sticky footer navigation links are visible when colours are customised (use header/nav colour scheme, consistent with 2.5.4 and earlier releases). #1321
 * Fix – Fix issue where product and category images were not centered on homepage & category pages. #1313
