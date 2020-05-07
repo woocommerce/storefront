@@ -631,7 +631,7 @@ ul.products,
 			margin-top: - ms(-1);
 
 			a {
-				@include underlinedLink();
+				@include underlined-link();
 			}
 
 			.star-rating {
@@ -656,7 +656,7 @@ ul.products,
 			}
 
 			a {
-				@include underlinedLink();
+				@include underlined-link();
 			}
 		}
 

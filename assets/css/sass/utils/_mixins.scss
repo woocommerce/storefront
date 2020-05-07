@@ -23,7 +23,7 @@
 	word-wrap: normal !important;
 }
 
-@mixin underlinedLink() {
+@mixin underlined-link() {
 	font-weight: 600;
 	text-decoration: underline;
 
@@ -33,7 +33,7 @@
 }
 
 // Remove underline if element has a button class.
-@mixin removeButtonUnderline() {
+@mixin remove-button-underline() {
 	&.button,
 	&.components-button:not( .is-link ),
 	&.wp-block-button__link {

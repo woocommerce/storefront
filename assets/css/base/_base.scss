@@ -463,7 +463,7 @@ body {
 			text-decoration: none;
 		}
 
-		@include removeButtonUnderline();
+		@include remove-button-underline();
 	}
 }
 
@@ -779,7 +779,7 @@ table {
 			font-size: ms(-1);
 
 			a {
-				@include underlinedLink();
+				@include underlined-link();
 			}
 		}
 	}
@@ -792,7 +792,7 @@ table {
 				text-decoration: none;
 			}
 
-			@include removeButtonUnderline();
+			@include remove-button-underline();
 		}
 	}
 
@@ -1551,8 +1551,8 @@ button.menu-toggle {
 		}
 
 		a {
-			@include underlinedLink();
-			@include removeButtonUnderline();
+			@include underlined-link();
+			@include remove-button-underline();
 		}
 	}
 }
