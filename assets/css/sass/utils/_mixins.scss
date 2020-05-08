@@ -23,7 +23,7 @@
 	word-wrap: normal !important;
 }
 
-@mixin underlinedLink() {
+@mixin underlined-link() {
 	font-weight: 600;
 	text-decoration: underline;
 
@@ -33,7 +33,7 @@
 }
 
 // Remove underline if element has a button class.
-@mixin removeButtonUnderline() {
+@mixin remove-button-underline() {
 	&.button,
 	&.components-button:not( .is-link ),
 	&.wp-block-button__link {
@@ -59,7 +59,7 @@
 	box-shadow: inset 0 -1px 0 rgba( #000, 0.3 );
 }
 
-@mixin wrapBreakWord {
+@mixin wrap-break-word {
 	// https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap
 	// https://developer.mozilla.org/en-US/docs/Web/CSS/word-break
 	// This is the current standard, works in most browsers.
