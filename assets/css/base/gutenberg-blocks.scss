@@ -458,9 +458,7 @@
 
 		.blocks-gallery-image,
 		.blocks-gallery-item {
-			width: span(6);
-			margin: 0 gutter(12) gutter(12) 0;
-			flex-grow: 0;
+			width: calc( (100% - 16px) / 2);
 
 			&:nth-of-type( even ) {
 				margin-right: 0;
