@@ -9,12 +9,21 @@
 @import '../sass/utils/variables';
 @import '../sass/utils/mixins';
 @import '../sass/vendors/font-awesome/fontawesome';
+@import '../sass/vendors/font-awesome/brands';
 @import '../sass/vendors/font-awesome/solid';
 @import '../sass/vendors/modular-scale';
 
 @mixin sf-fa-icon {
 	@include fa-icon;
 	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	line-height: inherit;
+	vertical-align: baseline;
+}
+
+@mixin sf-fab-icon {
+	@include fab-icon;
+	font-family: 'Font Awesome 5 Brands';
 	font-weight: 900;
 	line-height: inherit;
 	vertical-align: baseline;
