@@ -111,20 +111,6 @@ input[type='submit'],
 	}
 }
 
-.main-navigtion {
-	ul {
-		li {
-			a {
-				&::before {
-					@include sf-fa-icon;
-					content: fa-content( $fa-var-file-alt );
-					margin-right: ms(-3);
-				}
-			}
-		}
-	}
-}
-
 .handheld-navigation {
 	ul {
 		&.menu {
