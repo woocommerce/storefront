@@ -1,7 +1,9 @@
 <!-- Reference any related issues or PRs here -->
 Fixes #
 
-<!-- Describing the changes made in this Pull Request, and the reason for such changes. -->
+<!-- Briefly describe the issue or problem that this PR solves. -->
+
+<!-- Explain your fix - how it addresses the problem, what else might be affected, any risks etc. -->
 
 <!-- Don't forget to update the title with something descriptive. -->
 
@@ -9,7 +11,7 @@ Fixes #
 <!-- If your change has a visual component, add a screenshot here. A "before" screenshot would also be helpful. -->
 
 ### How to test the changes in this Pull Request:
-<!-- Add detailed instructions for how to test that this PR fixes the issue, and doesn't break any other features :) -->
+<!-- Add detailed instructions for how to test that this PR fixes the issue, and confirm that it doesn't break any other features :) -->
 
 1.
 2.
