@@ -19,4 +19,10 @@ Fixes #
 
 ### Changelog
 
-> Add suggested changelog entry here.
+Add suggested changelog entry here.
+
+For example:
+
+> Fix – Edit, reply and author icons are now displayed in comment list form. #1319
+
+See [previous releases](https://github.com/woocommerce/storefront/releases) for more examples.
