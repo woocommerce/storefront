@@ -20,14 +20,12 @@ Fixes #
 <!-- Review the [flows & features doc](https://github.com/woocommerce/storefront/wiki/Testing-Storefront:-flows-and-features) and list any flows that might be impacted or improved -->
 
 -
-- 
+-
 
 ### Changelog
 
-Add suggested changelog entry here.
-
-For example:
+<!-- Add suggested changelog entry here. For example: -->
 
 > Fix – Edit, reply and author icons are now displayed in comment list form. #1319
 
-See [previous releases](https://github.com/woocommerce/storefront/releases) for more examples.
+<!-- See [previous releases](https://github.com/woocommerce/storefront/releases) for more examples. -->
