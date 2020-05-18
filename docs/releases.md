@@ -45,7 +45,7 @@ __*Outcome*: A `storefront.zip` file is available to the community and other sta
 
 Note: all new code should have been fully tested during development. This test pass is to confirm that there are no major regressions or bugs, aka [“happy path”](https://en.wikipedia.org/wiki/Happy_path) or [smoke testing](http://softwaretestingfundamentals.com/smoke-testing/).
 
-There's a [testing checklist covering some of the key areas here](./testing.md).
+There's a [testing checklist covering some of the key areas here](https://github.com/woocommerce/storefront/wiki/Testing-Storefront:-flows-and-features).
 
 - __Recommended__: Test in a clean environment, similar to a typical hosting environment. Avoid testing in your development environment.
 - __Recommended__: Test with a snapshot of data from a real store, with customers, products and reviews.
