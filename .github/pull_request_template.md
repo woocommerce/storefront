@@ -17,6 +17,11 @@ Fixes #
 2.
 3.
 
+<!-- Review the [flows & features doc](https://github.com/woocommerce/storefront/wiki/Testing-Storefront:-flows-and-features) and list any flows that might be impacted or improved -->
+
+-
+- 
+
 ### Changelog
 
 Add suggested changelog entry here.
