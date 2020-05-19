@@ -49,7 +49,7 @@ Note: all new code should have been fully tested during development. This test p
 Testing documentation is available in the [wiki](https://github.com/woocommerce/storefront/wiki/):
 
 - [Checklist of main flows and features.](https://github.com/woocommerce/storefront/wiki/Testing-Storefront:-flows-and-features).
-- [Testing instructions for each release (from 2.5.7))](https://github.com/woocommerce/storefront/wiki/Release-Testing-Instructions).
+- [Testing instructions for each release (from 2.5.7)](https://github.com/woocommerce/storefront/wiki/Release-Testing-Instructions).
 
 - __Recommended__: Test in a clean environment, similar to a typical hosting environment. Avoid testing in your development environment.
 - __Recommended__: Test with a snapshot of data from a real store, with customers, products and reviews.
