@@ -43,7 +43,7 @@
 #comments {
 	.comment-list {
 		.bypostauthor {
-			> .comment-body cite {
+			> .comment-body cite a {
 				&::after {
 					@include sf-fa-icon;
 					content: fa-content( $fa-var-file-alt );
