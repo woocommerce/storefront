@@ -15,13 +15,14 @@ Depending on the release, releasing and testing an RC may not be necessary (i.e.
 ### 1 – Prepare code & build zip file
 
 - Confirm all work intended for release (fixes, features) is completed and merged to release branch.
+  - Ensure testing instructions for all enhancements are [available on the wiki](https://github.com/woocommerce/storefront/wiki/Release-Testing-Instructions).
 - Ensure your local checkout is in release branch and up to date!
 - Update version numbers and release date:
   - `readme.txt`
   - `style.scss`
   - `package.json` and `package-lock.json`
 - Confirm/update metadata in `readme.txt`, e.g. “tested up to” version.
-- Draft changelog and add to `readme.txt`.
+- Finalise changelog and add to `readme.txt`.
 - Clean install of dependencies: `npm ci`.
 - Run a production build: `npm run deploy`. Note this does not deploy anywhere, you can run multiple times safely 🙂
 - Ensure all changes above are committed and pushed (you should not have uncommitted changes):
@@ -45,7 +46,11 @@ __*Outcome*: A `storefront.zip` file is available to the community and other sta
 
 Note: all new code should have been fully tested during development. This test pass is to confirm that there are no major regressions or bugs, aka [“happy path”](https://en.wikipedia.org/wiki/Happy_path) or [smoke testing](http://softwaretestingfundamentals.com/smoke-testing/).
 
-There's a [testing checklist covering some of the key areas here](https://github.com/woocommerce/storefront/wiki/Testing-Storefront:-flows-and-features).
+Testing documentation is available in the [wiki](https://github.com/woocommerce/storefront/wiki/):
+
+- [Checklist of main flows and features](https://github.com/woocommerce/storefront/wiki/Testing-Storefront:-flows-and-features).
+- [Testing instructions for each release (2.5.7 and newer)](https://github.com/woocommerce/storefront/wiki/Release-Testing-Instructions).
+
 
 - __Recommended__: Test in a clean environment, similar to a typical hosting environment. Avoid testing in your development environment.
 - __Recommended__: Test with a snapshot of data from a real store, with customers, products and reviews.
