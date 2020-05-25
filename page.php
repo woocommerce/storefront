@@ -7,6 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
+ * 2.5.8 - Sidebar removed; default page template is now full width
+ *
  * @package storefront
  */
 
@@ -37,5 +39,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-do_action( 'storefront_sidebar' );
 get_footer();

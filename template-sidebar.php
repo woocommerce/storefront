@@ -1,9 +1,15 @@
 <?php
 /**
- * The template for displaying full width pages.
+ * Template for displaying pages with a sidebar.
  *
- * Template Name: Full width
+ * In Storefront 2.5.7 and earlier, the default page template included a
+ * sidebar. In 2.5.8 the sidebar was removed from the default template.
+ * This template was added so stores can opt-in to sidebar layout on a
+ * per-page basis.
  *
+ * Template Name: Sidebar
+ *
+ * @since 2.5.8
  * @package storefront
  */
 
@@ -34,4 +40,5 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
+do_action( 'storefront_sidebar' );
 get_footer();
