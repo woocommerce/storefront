@@ -7,7 +7,7 @@
  * This template was added so stores can opt-in to sidebar layout on a
  * per-page basis.
  *
- * Template Name: Sidebar
+ * Template Name: Page with sidebar
  *
  * @since 2.5.8
  * @package storefront
