@@ -457,9 +457,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$classes[] = 'storefront-cute';
 			}
 
-			// Add the full width class unless the current page template is sidebar
+			// On pages, add the full width class unless the current page template is sidebar
 			// AND the sidebar has widgets.
-			if ( ! is_active_sidebar( 'sidebar-1' ) || ! is_page_template( 'template-sidebar.php' ) ) {
+			if ( is_page() && ( ! is_active_sidebar( 'sidebar-1' ) || ! is_page_template( 'template-sidebar.php' ) ) ) {
 				$classes[] = 'storefront-full-width-content';
 			}
 
