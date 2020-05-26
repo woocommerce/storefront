@@ -22,6 +22,27 @@ Fixes #
 -
 -
 
+### Release testing instructions
+
+<!-- 
+  https://github.com/woocommerce/storefront/wiki
+  Please add testing instructions to the wiki, ideally soon after merge.
+-->
+
+### User documentation
+
+<!-- 
+  Should documentation be updated as part of this change? 
+  Storefront docs home: https://docs.woocommerce.com/documentation/themes/storefront/
+  
+  List new pages or urls for pages to update/review.
+
+  Feel free to add draft docs in this section :)
+-->
+
+-
+-
+
 ### Changelog
 
 <!-- Add suggested changelog entry here. For example: -->
@@ -29,3 +50,4 @@ Fixes #
 > Fix – Edit, reply and author icons are now displayed in comment list form. #1319
 
 <!-- See [previous releases](https://github.com/woocommerce/storefront/releases) for more examples. -->
+
