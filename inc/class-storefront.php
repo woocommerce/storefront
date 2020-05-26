@@ -457,8 +457,9 @@ if ( ! class_exists( 'Storefront' ) ) :
 				$classes[] = 'storefront-cute';
 			}
 
-			// If our main sidebar doesn't contain widgets, adjust the layout to be full-width.
-			if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+			// Add the full width class unless the current page template is sidebar
+			// AND the sidebar has widgets.
+			if ( ! is_active_sidebar( 'sidebar-1' ) || ! is_page_template( 'template-sidebar.php' ) ) {
 				$classes[] = 'storefront-full-width-content';
 			}
 
