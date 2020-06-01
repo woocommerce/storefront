@@ -3,7 +3,7 @@ Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.2.6
 Tested up to: 5.4.1
 Stable tag: 2.5.6
-Version: 2.5.7-rc.1
+Version: 2.5.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -49,7 +49,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.7-rc.1 - 2020-05-19 =
+= 2.5.7 - 2020-06-02 =
 * Fix - Edit, reply and author icons are now displayed in comment list. #1319
 * Fix - Updated font-weight of the All Products block so it matches the other product grid blocks. #1344
 * Dev - Include FontAwesome brands icon set. #1345
