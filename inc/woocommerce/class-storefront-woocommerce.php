@@ -150,11 +150,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) && is_product() ) {
 				wp_register_script( 'storefront-sticky-add-to-cart', get_template_directory_uri() . '/assets/js/sticky-add-to-cart' . $suffix . '.js', array(), $storefront_version, true );
 			}
-
-			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
-				wp_enqueue_style( 'storefront-woocommerce-legacy', get_template_directory_uri() . '/assets/css/woocommerce/woocommerce-legacy.css', array(), $storefront_version );
-				wp_style_add_data( 'storefront-woocommerce-legacy', 'rtl', 'replace' );
-			}
 		}
 
 		/**
