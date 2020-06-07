@@ -2,6 +2,8 @@
 
 This document outlines the process for releasing new versions of the Storefront theme.
 
+Note that Storefront uses [semantic versioning](https://semver.org). Please keep this in mind when preparing releases. 
+
 ## Steps
 
 The release process has three main phases:
