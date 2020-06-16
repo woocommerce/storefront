@@ -18,7 +18,7 @@
   "devDependencies": {
     "@babel/core": "7.10.2",
     "@wordpress/babel-preset-default": "3.0.2",
-    "autoprefixer": "9.7.4",
+    "autoprefixer": "9.8.0",
     "bourbon": "5.1.0",
     "grunt": "1.0.4",
     "grunt-babel": "8.0.0",
