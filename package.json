@@ -32,7 +32,7 @@
     "grunt-postcss": "0.9.0",
     "grunt-rtlcss": "2.0.2",
     "grunt-sass": "3.1.0",
-    "grunt-stylelint": "0.10.1",
+    "grunt-stylelint": "0.15.0",
     "grunt-wp-i18n": "1.0.3",
     "node-sass": "4.13.1",
     "stylelint": "9.10.1",
