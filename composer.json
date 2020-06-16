@@ -5,16 +5,16 @@
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
   "require": {
-    "composer/installers": "~1.2"
+    "composer/installers": "1.5.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
-    "wp-coding-standards/wpcs": "^0.14",
-    "phpunit/phpunit": "6.*",
+    "wp-coding-standards/wpcs": "0.14.1",
+    "phpunit/phpunit": "6.5.14",
     "woocommerce/woocommerce-git-hooks": "*",
     "woocommerce/woocommerce-sniffs": "*",
-    "wimg/php-compatibility": "^8.0",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+    "wimg/php-compatibility": "8.2.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "0.4.4"
   },
   "scripts": {
     "pre-update-cmd": [
