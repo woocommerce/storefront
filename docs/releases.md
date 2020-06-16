@@ -18,6 +18,9 @@ Depending on the release, releasing and testing an RC may not be necessary (i.e.
 
 - Confirm all work intended for release (fixes, features) is completed and merged to release branch.
   - Ensure testing instructions for all enhancements are [available on the wiki](https://github.com/woocommerce/storefront/wiki/Release-Testing-Instructions).
+- Review any [dependency updates since the last release](https://github.com/woocommerce/storefront/pulls?q=is%3Apr+author%3Aapp%2Frenovate+is%3Aclosed). 
+  - Is extra testing needed?
+  - Add release notes as appropriate (e.g. major versions or risky/impactful updates).
 - Ensure your local checkout is in release branch and up to date!
 - Update version numbers and release date:
   - `readme.txt`
@@ -61,6 +64,8 @@ Testing documentation is available in the [wiki](https://github.com/woocommerce/
 - Test compatibility with Storefront child themes and plugins.
 - Spot-check to confirm recent fixes (this release, previous release) are working correctly and haven’t regressed.
 - If there are blocking issues or major regressions, the process stops here! (So they can be fixed.)
+
+In addition, please [review recent dependency updates](https://github.com/woocommerce/storefront/pulls?q=is%3Apr+author%3Aapp%2Frenovate+is%3Aclosed) and ensure that these changes are well tested.
 
 __*Outcome*: You (release lead) are confident that the product is ready for release, and a safe & worthwhile upgrade for merchants.__
 
