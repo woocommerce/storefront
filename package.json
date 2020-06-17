@@ -35,7 +35,7 @@
     "grunt-stylelint": "0.15.0",
     "grunt-wp-i18n": "1.0.3",
     "node-sass": "4.14.1",
-    "stylelint": "9.10.1",
+    "stylelint": "13.6.1",
     "susy": "2.2.14"
   },
   "engines": {
