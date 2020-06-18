@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
-Requires at least: 5.2.6
-Tested up to: 5.4.1
-Stable tag: 2.5.6
-Version: 2.5.7
+Requires at least: 5.2.7
+Tested up to: 5.4.2
+Stable tag: 2.5.8
+Version: 2.5.8
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
