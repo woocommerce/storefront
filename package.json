@@ -11,7 +11,12 @@
     "build": "grunt",
     "css": "grunt css",
     "watch": "grunt watch",
-    "deploy": "grunt deploy"
+    "deploy": "grunt deploy",
+    "e2e": "jest"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "setupFilesAfterEnv": ["expect-puppeteer"]
   },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
