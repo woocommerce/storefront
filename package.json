@@ -16,7 +16,9 @@
   },
   "jest": {
     "preset": "jest-puppeteer",
-    "setupFilesAfterEnv": ["expect-puppeteer"],
+    "setupFilesAfterEnv": [
+      "expect-puppeteer"
+    ],
     "globals": {
       "STORE_URL": "http://localhost:8889"
     }
