@@ -1,6 +1,6 @@
 describe( 'Storefront', () => {
 	beforeAll( async () => {
-		await page.goto( 'http://localhost:8889/' );
+		await page.goto( STORE_URL );
 	} );
 
 	it( 'should have "built with Storefront" footer', async () => {
