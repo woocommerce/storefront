@@ -49,7 +49,13 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.5.8-rc.1 - 2020-06-02 =
+= 2.5.8-rc.1 - 2020-06-19 =
+* Fix – Stylesheet storefront-woocommerce-style has storefront-style and storefront-icons as explicit dependencies, so child themes can define storefront-woocommerce-style as a dependency without the risk of breaking the stylesheets order. #1369
+* Fix – Removed woocommerce-legacy.css stylesheets for unsupported versions of WooCommerce (< 4.0). #1368
+* Dev - Adopt RenovateBot for managing dependencies. #1363
+* Dev - Update various dependencies, including major updates:
+  - `@wordpress/babel-preset-default` v4 #1387
+  - `stylelint` v13 #1390
 
 = 2.5.7 - 2020-06-02 =
 * Fix - Edit, reply and author icons are now displayed in comment list. #1319
