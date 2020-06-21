@@ -10,7 +10,7 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "0.14.1",
-    "phpunit/phpunit": "6.5.14",
+    "phpunit/phpunit": "9.2.4",
     "woocommerce/woocommerce-git-hooks": "*",
     "woocommerce/woocommerce-sniffs": "*",
     "wimg/php-compatibility": "8.2.0",
