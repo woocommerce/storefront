@@ -20,7 +20,7 @@
       "expect-puppeteer"
     ],
     "globals": {
-      "STORE_URL": "http://localhost:8889"
+      "STORE_URL": "http://localhost:8801"
     }
   },
   "license": "GPL-2.0+",
