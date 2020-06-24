@@ -1,0 +1,9 @@
+{
+  "core": null,
+  "plugins": [
+    "https://downloads.wordpress.org/plugin/woocommerce.latest-stable.zip"
+  ],
+  "themes": ["./"],
+  "port": 8801,
+  "testsPort": 8802
+}

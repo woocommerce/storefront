@@ -11,7 +11,17 @@
     "build": "grunt",
     "css": "grunt css",
     "watch": "grunt watch",
-    "deploy": "grunt deploy"
+    "deploy": "grunt deploy",
+    "e2e": "jest"
+  },
+  "jest": {
+    "preset": "jest-puppeteer",
+    "setupFilesAfterEnv": [
+      "expect-puppeteer"
+    ],
+    "globals": {
+      "STORE_URL": "http://localhost:8801"
+    }
   },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
@@ -34,7 +44,10 @@
     "grunt-sass": "3.1.0",
     "grunt-stylelint": "0.15.0",
     "grunt-wp-i18n": "1.0.3",
+    "jest": "26.0.1",
+    "jest-puppeteer": "4.4.0",
     "node-sass": "4.14.1",
+    "puppeteer": "4.0.0",
     "stylelint": "13.6.1",
     "susy": "2.2.14"
   },
