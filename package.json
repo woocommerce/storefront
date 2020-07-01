@@ -12,7 +12,11 @@
     "css": "grunt css",
     "watch": "grunt watch",
     "deploy": "grunt deploy",
-    "e2e": "jest"
+    "e2e:start": "wp-env start",
+    "e2e:stop": "wp-env stop",
+    "e2e:destroy": "wp-env destroy",
+    "e2e": "jest",
+    "e2e:ci": "npm run e2e:start && npm run e2e"
   },
   "jest": {
     "preset": "jest-puppeteer",
@@ -20,7 +24,7 @@
       "expect-puppeteer"
     ],
     "globals": {
-      "STORE_URL": "http://localhost:8801"
+      "STORE_URL": "http://localhost:8802"
     }
   },
   "license": "GPL-2.0+",
@@ -28,6 +32,7 @@
   "devDependencies": {
     "@babel/core": "7.10.4",
     "@wordpress/babel-preset-default": "4.16.0",
+    "@wordpress/env": "1.6.0",
     "autoprefixer": "9.8.4",
     "bourbon": "5.1.0",
     "grunt": "1.1.0",
