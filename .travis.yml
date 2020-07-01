@@ -1,0 +1,15 @@
+language: node_js
+
+services:
+  - docker
+
+install:
+    - npm install
+    - composer install
+
+jobs:
+    include:
+        - name: End-to-end (e2e) tests
+          script:
+            - npm run build
+            - npm run e2e:ci
