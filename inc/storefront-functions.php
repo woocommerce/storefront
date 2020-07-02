@@ -119,18 +119,13 @@ function storefront_homepage_content_styles() {
 }
 
 /**
- * Adjust a hex color brightness
- * Allows us to create hover styles for custom link colors
+ * Given an hex colors, returns an array with the colors components.
  *
- * @param  strong  $hex   hex color e.g. #111111.
- * @param  integer $steps factor by which to brighten/darken ranging from -255 (darken) to 255 (brighten).
- * @return string        brightened/darkened hex color
- * @since  1.0.0
+ * @param  strong $hex Hex color e.g. #111111.
+ * @return bool        Array with color components (r, g, b).
+ * @since  2.5.8
  */
-function storefront_adjust_color_brightness( $hex, $steps ) {
-	// Steps should be between -255 and 255. Negative = darker, positive = lighter.
-	$steps = max( -255, min( 255, $steps ) );
-
+function get_rgb_values_from_hex( $hex ) {
 	// Format the hex color string.
 	$hex = str_replace( '#', '', $hex );
 
@@ -143,10 +138,52 @@ function storefront_adjust_color_brightness( $hex, $steps ) {
 	$g = hexdec( substr( $hex, 2, 2 ) );
 	$b = hexdec( substr( $hex, 4, 2 ) );
 
+	return array(
+		'r' => $r,
+		'g' => $g,
+		'b' => $b,
+	);
+}
+
+/**
+ * Returns true for light colors and false for dark colors.
+ *
+ * @param  strong $hex Hex color e.g. #111111.
+ * @return bool        True if the average lightness of the three components of the color is higher or equal than 127.5.
+ * @since  2.5.8
+ */
+function is_color_light( $hex ) {
+	$rgb_values = get_rgb_values_from_hex( $hex );
+	$average_lightness = ( $rgb_values['r'] + $rgb_values['g'] + $rgb_values['b'] ) / 3;
+	return $average_lightness >= 127.5;
+}
+
+/**
+ * Adjust a hex color brightness
+ * Allows us to create hover styles for custom link colors
+ *
+ * @since 2.5.8 Added $opacity argument.
+ *
+ * @param  strong  $hex     Hex color e.g. #111111.
+ * @param  integer $steps   Factor by which to brighten/darken ranging from -255 (darken) to 255 (brighten).
+ * @param  float   $opacity Opacity factor between 0 and 1.
+ * @return string           Brightened/darkened color (hex by default, rgba if opacity is set to a valid value below 1).
+ * @since  1.0.0
+ */
+function storefront_adjust_color_brightness( $hex, $steps, $opacity = 1 ) {
+	// Steps should be between -255 and 255. Negative = darker, positive = lighter.
+	$steps = max( -255, min( 255, $steps ) );
+
+	$rgb_values = get_rgb_values_from_hex( $hex );
+
 	// Adjust number of steps and keep it inside 0 to 255.
-	$r = max( 0, min( 255, $r + $steps ) );
-	$g = max( 0, min( 255, $g + $steps ) );
-	$b = max( 0, min( 255, $b + $steps ) );
+	$r = max( 0, min( 255, $rgb_values['r'] + $steps ) );
+	$g = max( 0, min( 255, $rgb_values['g'] + $steps ) );
+	$b = max( 0, min( 255, $rgb_values['b'] + $steps ) );
+
+	if ( $opacity >= 0 && $opacity < 1 ) {
+		return 'rgba(' . $r . ',' . $g . ',' . $b . ',' . $opacity . ')';
+	}
 
 	$r_hex = str_pad( dechex( $r ), 2, '0', STR_PAD_LEFT );
 	$g_hex = str_pad( dechex( $g ), 2, '0', STR_PAD_LEFT );
