@@ -3,18 +3,8 @@ language: generic
 services:
     - docker
 
-env:
-    - CXX=g++-4.8
-
-addons:
-    apt:
-        sources:
-          - ubuntu-toolchain-r-test
-        packages:
-          - g++-4.8
-
-node_js:
-    - lts/*
+before_install:
+    - nvm install --lts
 
 install:
     - npm install
