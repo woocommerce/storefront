@@ -18,15 +18,6 @@
     "e2e": "jest",
     "e2e:ci": "npm run e2e:start && npm run e2e"
   },
-  "jest": {
-    "preset": "jest-puppeteer",
-    "setupFilesAfterEnv": [
-      "expect-puppeteer"
-    ],
-    "globals": {
-      "STORE_URL": "http://localhost:8802"
-    }
-  },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {

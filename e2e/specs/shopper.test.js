@@ -1,4 +1,4 @@
-describe( 'Storefront', () => {
+describe( 'Storefront front end', () => {
 	beforeAll( async () => {
 		await page.goto( STORE_URL );
 	} );
