@@ -14,7 +14,7 @@ beforeAll( async () => {
 } );
 
 describe( 'Storefront onboarding', () => {
-	// Work in progress!
+	// Work in progress - testing!
 	it( 'should launch customizer', async () => {
 		await expect( page ).toMatch( 'You are customizing' );
 	} );
