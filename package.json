@@ -14,8 +14,10 @@
     "deploy": "grunt deploy",
     "e2e:start": "wp-env start",
     "e2e:stop": "wp-env stop",
+    "e2e:clean": "wp-env clean",
     "e2e:destroy": "wp-env destroy",
-    "e2e": "jest",
+    "e2e": "WP_BASE_URL=http://localhost:8802 jest",
+    "e2e:dev": "STOREFRONT_E2E_DEV=true WP_BASE_URL=http://localhost:8802 jest",
     "e2e:ci": "npm run e2e:start && npm run e2e"
   },
   "license": "GPL-2.0+",
