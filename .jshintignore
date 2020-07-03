@@ -1,0 +1,4 @@
+# Minified js
+*.min.js
+/assets/js/vendor/*.min.js
+/assets/js/editor.js
