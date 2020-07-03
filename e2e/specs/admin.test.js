@@ -12,7 +12,10 @@ describe( 'Storefront onboarding', () => {
 		await visitAdminPage( '' );
 
 		// Click the onboarding notice "Let's go" link, wait for customizer.
-		await page.click( '.sf-notice-nux .sf-nux-button' );
+		await Promise.all([
+			page.click( '.sf-notice-nux .sf-nux-button' ),
+			page.waitForNavigation(),
+		]);
 		await page.waitForSelector( '#customize-header-actions input#save' );
 	} );
 
