@@ -806,14 +806,12 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			}
 
 			.wc-block-components-button:not(.is-link) {
-				background-color: ' . $storefront_theme_mods['button_background_color'] . ';
-				border-color: ' . $storefront_theme_mods['button_background_color'] . ';
-				color: ' . $storefront_theme_mods['button_text_color'] . ';
+				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
 			}
 
 			.wc-block-components-button:not(.is-link):hover {
-				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
-				border-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
 			}
 
 			.wc-block-cart__submit-container {
