@@ -1,6 +1,6 @@
 describe( 'Storefront front end', () => {
 	beforeAll( async () => {
-		await page.goto( STORE_URL );
+		await page.goto( process.env.WP_BASE_URL );
 	} );
 
 	it( 'should have "built with Storefront" footer', async () => {
