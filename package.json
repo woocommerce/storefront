@@ -35,7 +35,7 @@
     "@wordpress/env": "1.6.0",
     "autoprefixer": "9.8.4",
     "bourbon": "5.1.0",
-    "grunt": "1.2.0",
+    "grunt": "1.2.1",
     "grunt-babel": "8.0.0",
     "grunt-checktextdomain": "1.0.1",
     "grunt-contrib-compress": "1.6.0",
