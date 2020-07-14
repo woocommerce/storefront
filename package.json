@@ -30,7 +30,7 @@
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "@babel/core": "7.10.4",
+    "@babel/core": "7.10.5",
     "@wordpress/babel-preset-default": "4.17.0",
     "@wordpress/env": "1.6.0",
     "autoprefixer": "9.8.5",
