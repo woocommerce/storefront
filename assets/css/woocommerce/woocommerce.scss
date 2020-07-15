@@ -345,9 +345,15 @@ ul.products,
 		.woocommerce-loop-product__title,
 		.wc-block-grid__product-title,
 		.wc-block-grid__product-title > a {
-			font-size: 1rem;
 			font-weight: 400;
 			margin-bottom: ms(-3);
+		}
+		h2, // @todo Remove when WooCommerce 2.8 is live
+		h3, // @todo Remove when WooCommerce 2.8 is live
+		.woocommerce-loop-product__title,
+		.wc-block-grid__product-title,
+		.wc-block-grid__product-title > a:not(.has-font-size) {
+			font-size: 1rem;
 		}
 
 		.star-rating {
