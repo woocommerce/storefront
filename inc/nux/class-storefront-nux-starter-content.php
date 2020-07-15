@@ -1048,9 +1048,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				<h2 style="text-align:center">' . __( 'New In', 'storefront' ) . '</h2>
 				<!-- /wp:heading -->
 
-				<!-- wp:woocommerce/product-new {"columns":4} -->
-				<div class="wp-block-woocommerce-product-new">[products limit="4" columns="4" orderby="date" order="DESC"]</div>
-				<!-- /wp:woocommerce/product-new -->
+				<!-- wp:woocommerce/product-new {"columns":4} /-->
 
 				{{handpicked-products}}
 
@@ -1058,25 +1056,19 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				<h2 style="text-align:center">' . __( 'Fan Favorites', 'storefront' ) . '</h2>
 				<!-- /wp:heading -->
 
-				<!-- wp:woocommerce/product-top-rated {"columns":4} -->
-				<div class="wp-block-woocommerce-product-top-rated">[products limit="4" columns="4" orderby="rating"]</div>
-				<!-- /wp:woocommerce/product-top-rated -->
+				<!-- wp:woocommerce/product-top-rated {"columns":4} /-->
 
 				<!-- wp:heading {"align":"center"} -->
 				<h2 style="text-align:center">' . __( 'On Sale', 'storefront' ) . '</h2>
 				<!-- /wp:heading -->
 
-				<!-- wp:woocommerce/product-on-sale {"columns":4} -->
-				<div class="wp-block-woocommerce-product-on-sale">[products limit="4" columns="4" orderby="date" order="DESC" on_sale="1"]</div>
-				<!-- /wp:woocommerce/product-on-sale -->
+				<!-- wp:woocommerce/product-on-sale {"columns":4} /-->
 
 				<!-- wp:heading {"align":"center"} -->
 				<h2 style="text-align:center">' . __( 'Best Sellers', 'storefront' ) . '</h2>
 				<!-- /wp:heading -->
 
-				<!-- wp:woocommerce/product-best-sellers {"columns":4} -->
-				<div class="wp-block-woocommerce-product-best-sellers">[products limit="4" columns="4" best_selling="1"]</div>
-				<!-- /wp:woocommerce/product-best-sellers -->
+				<!-- wp:woocommerce/product-best-sellers {"columns":4} /-->
 			';
 
 			return trim( $content );
@@ -1135,9 +1127,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					<h2 style="text-align:center">' . __( 'We Recommend', 'storefront' ) . '</h2>
 					<!-- /wp:heading -->
 
-					<!-- wp:woocommerce/handpicked-products {"columns":4,"editMode":false,"products":[{{handpicked-products}}]} -->
-					<div class = "wp-block-woocommerce-handpicked-products">[products limit="4" columns="4" orderby="date" order="DESC" ids="{{handpicked-products}}"]</div>
-					<!-- /wp:woocommerce/handpicked-products -->
+					<!-- wp:woocommerce/handpicked-products {"columns":4,"editMode":false,"products":[{{handpicked-products}}]} /-->
 				';
 
 				$handpicked = str_replace( '{{handpicked-products}}', implode( ',', $products ), $handpicked );
