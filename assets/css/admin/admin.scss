@@ -1,4 +1,4 @@
-@import 'buttons';
+@import "buttons";
 
 .sf-notice-nux {
 	background: #e7f5f9;
@@ -7,7 +7,7 @@
 
 	&::before,
 	&::after {
-		content: '';
+		content: "";
 		display: table;
 	}
 
@@ -112,11 +112,13 @@
 }
 
 .sf-nux-button {
+
 	&.updating-message {
+
 		&::before {
 			display: inline-block;
-			content: '\f463';
-			font: normal 20px/1 'dashicons';
+			content: "\f463";
+			font: normal 20px/1 "dashicons";
 			margin: 3px 5px 0 -2px;
 			vertical-align: bottom;
 			-webkit-animation: rotation 2s infinite linear;
@@ -126,7 +128,9 @@
 }
 
 @media only screen and (max-width: 782px) {
+
 	.sf-notice-nux {
+
 		.sf-icon {
 			width: 65px;
 			height: 65px;
@@ -142,6 +146,7 @@
 		}
 
 		label {
+
 			&:first-of-type {
 				margin-top: 1.5em;
 			}

@@ -5,11 +5,12 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/vendors/modular-scale";
 
 .mnm_table {
+
 	.product-thumbnail,
 	.product-name,
 	.product-quantity,
@@ -18,6 +19,7 @@
 	}
 
 	.mnm_item {
+
 		img {
 			max-width: 100%;
 		}
@@ -30,8 +32,11 @@
 
 .cart,
 .shop_table {
+
 	.mnm_table_item {
+
 		.product-thumbnail {
+
 			img {
 				max-width: ms(5) !important;
 			}

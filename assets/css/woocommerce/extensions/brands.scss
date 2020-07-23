@@ -5,18 +5,21 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../../../node_modules/susy/sass/susy';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../../../node_modules/susy/sass/susy";
+@import "../../sass/vendors/modular-scale";
 
 /**
  * Header region
  */
 .header-widget-region {
+
 	.widget_brand_thumbnails {
+
 		ul.brand-thumbnails {
+
 			@include clearfix;
 			text-align: center;
 
@@ -40,8 +43,11 @@
  * WooCommerce Brand Layered Nav
  */
 .widget_brand_nav {
+
 	ul {
+
 		li {
+
 			.count {
 				float: right;
 			}
@@ -53,16 +59,17 @@
  * WooCommerce Brand Archive
  */
 .tax-product_brand {
+
 	.woocommerce-products-header {
 		display: flex;
 		flex-direction: column;
-		margin: 0 0 ms( 4 );
+		margin: 0 0 ms(4);
 		text-align: center;
 
 		.brand-thumbnail {
-			margin: 0 0 ms( 1 );
+			margin: 0 0 ms(1);
 			width: auto;
-			max-height: ms( 4 );
+			max-height: ms(4);
 			align-self: center;
 			order: 1;
 		}
@@ -75,6 +82,7 @@
 }
 
 div#brands_a_z {
+
 	@include clearfix;
 
 	ul.brands_index {
@@ -84,7 +92,7 @@ div#brands_a_z {
 		li {
 			float: none;
 			display: inline-block;
-			margin: 0 ms( -5 ) ms( -6 ) 0;
+			margin: 0 ms(-5) ms(-6) 0;
 			padding: 0;
 			text-transform: uppercase;
 
@@ -93,10 +101,10 @@ div#brands_a_z {
 				float: none;
 				display: block;
 				border: 0;
-				padding: ms( -4 );
-				min-width: ms( 3 );
+				padding: ms(-4);
+				min-width: ms(3);
 				text-align: center;
-				background-color: #eeeeee;
+				background-color: #eee;
 				color: $color_body;
 				line-height: 1;
 			}
@@ -112,8 +120,8 @@ div#brands_a_z {
 	}
 
 	a.top {
-		padding: ms( -2 );
-		background-color: #eeeeee;
+		padding: ms(-2);
+		background-color: #eee;
 		color: $color_body;
 		border: 0;
 		line-height: 1;
@@ -124,8 +132,8 @@ div#brands_a_z {
 		list-style-position: inside;
 
 		li {
-			margin: 0 0 ms( -4 );
-			padding: 0 0 ms( -4 );
+			margin: 0 0 ms(-4);
+			padding: 0 0 ms(-4);
 			border-bottom: 1px solid $color_border;
 		}
 	}
@@ -135,21 +143,25 @@ div#brands_a_z {
  * WooCommerce Brand single product
  */
 .storefront-wc-brands-single-product {
-	margin: 0 0 ms( -3 );
+	margin: 0 0 ms(-3);
 
 	img {
-		max-height: ms( 4 );
+		max-height: ms(4);
 	}
 }
 
 @include susy-media($desktop) {
+
 	div#brands_a_z {
+
 		ul.brands_index {
+
 			@include span(3 of 12);
 			transition: all 0.5s ease;
 		}
 
 		h3 {
+
 			@include span(last 9 of 12);
 			clear: right;
 			text-transform: uppercase;
@@ -164,6 +176,7 @@ div#brands_a_z {
 		}
 
 		ul.brands {
+
 			@include span(last 9 of 12);
 			clear: right;
 		}

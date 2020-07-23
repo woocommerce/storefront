@@ -1,11 +1,12 @@
-@import 'bourbon';
-@import '../../../../assets/css/sass/utils/variables';
-@import '../../../../assets/css/sass/utils/mixins';
-@import '../../../../assets/css/sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../../../assets/css/sass/utils/variables";
+@import "../../../../assets/css/sass/utils/mixins";
+@import "../../../../assets/css/sass/vendors/modular-scale";
 
 $green: #45b964;
 
 .appearance_page_storefront-welcome {
+
 	.storefront-wrap {
 		background: #e9eff3;
 		padding: 50px;
@@ -223,7 +224,9 @@ $green: #45b964;
 }
 
 @media all and (max-width: 768px) {
+
 	.appearance_page_storefront-welcome {
+
 		.storefront-logo {
 			margin-top: 20px;
 		}
