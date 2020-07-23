@@ -30,7 +30,7 @@ a.sf-nux-button {
 	&:hover,
 	&:focus {
 		border-color: #005082;
-		color: white;
+		color: #fff;
 	}
 
 	&:focus {
@@ -45,7 +45,7 @@ a.sf-nux-button {
 
 	&[disabled],
 	&:disabled {
-		color: white;
+		color: #fff;
 		background: tint(#78dcfa, 50%);
 		border-color: tint(#0087be, 55%);
 		cursor: default;
