@@ -5,14 +5,16 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../../../node_modules/susy/sass/susy';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../../../node_modules/susy/sass/susy";
+@import "../../sass/vendors/modular-scale";
 
 .woocommerce-page {
+
 	.woocommerce-checkout-review-order-table {
+
 		th.product-name {
 			width: 70%;
 		}
@@ -27,7 +29,7 @@
 		float: none;
 		width: auto;
 		margin: 0 0 ms(3);
-		background-color: rgba( #000, 0.025 );
+		background-color: rgba(#000, 0.025);
 		border: 0;
 		padding: 1em;
 		line-height: inherit;
@@ -59,15 +61,17 @@
 
 	.addresses {
 		clear: both;
+
 		@include clearfix;
 
 		.address-block {
 			margin: 0 0 ms(3);
+
 			@include span(4.5 of 9);
 
-			&:nth-child( 3 ),
-			&:nth-child( 5 ),
-			&:nth-child( 7 ) {
+			&:nth-child(3),
+			&:nth-child(5),
+			&:nth-child(7) {
 				margin-right: 0 !important;
 			}
 
@@ -83,12 +87,14 @@
 	}
 
 	&.page-template-template-fullwidth-php {
+
 		.ship_address,
 		.no_shipping_address {
 			font-size: 1em;
 		}
 
 		.address-block {
+
 			@include span(6 of 12);
 		}
 	}

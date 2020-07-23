@@ -5,11 +5,11 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../../../node_modules/susy/sass/susy';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../../../node_modules/susy/sass/susy";
+@import "../../sass/vendors/modular-scale";
 
 #wc-bookings-booking-form {
 	border: 0;
@@ -21,6 +21,7 @@
 	}
 
 	.wc-bookings-date-picker-date-fields {
+
 		input {
 			margin-bottom: 0;
 		}
@@ -35,6 +36,7 @@
 	}
 
 	.wc-bookings-date-picker {
+
 		.ui-datepicker-header {
 			border: 0;
 			background-image: none;
@@ -48,6 +50,7 @@
 		}
 
 		.ui-datepicker {
+
 			table {
 				font-size: 1em;
 			}
@@ -61,19 +64,22 @@
 				border: 0;
 
 				&.bookable {
+
 					a {
 						text-shadow: none;
 					}
 				}
 
 				&.ui-datepicker-today {
+
 					a,
 					span {
-						box-shadow: inset 0 0 0 3px rgba( #000, 0.2 );
+						box-shadow: inset 0 0 0 3px rgba(#000, 0.2);
 					}
 				}
 
 				&.fully_booked {
+
 					a,
 					span {
 						text-decoration: line-through;
@@ -88,6 +94,7 @@
 		text-align: left;
 
 		li {
+
 			a {
 				border: 0 !important;
 				padding: 0.236em ms(-3);
@@ -104,6 +111,7 @@
 }
 
 .product-type-booking {
+
 	form.cart {
 		padding-left: 0;
 		padding-right: 0;
@@ -111,6 +119,7 @@
 }
 
 @include susy-media($desktop) {
+
 	table.my_account_bookings {
 		font-size: ms(-1);
 	}

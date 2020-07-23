@@ -5,51 +5,57 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../../../node_modules/susy/sass/susy';
-@import '../../sass/vendors/modular-scale';
-@import '../../sass/vendors/font-awesome/variables';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../../../node_modules/susy/sass/susy";
+@import "../../sass/vendors/modular-scale";
+@import "../../sass/vendors/font-awesome/variables";
 
 .woocommerce,
 .woocommerce-page {
+
 	.woocommerce-MyAccount-navigation {
+
 		ul {
+
 			li.woocommerce-MyAccount-navigation-link--members-area a::before {
-				content: fa-content( $fa-var-lock );
+				content: fa-content($fa-var-lock);
 			}
 
 			li.woocommerce-MyAccount-navigation-link--back-to-memberships a::before {
-				content: fa-content( $fa-var-arrow-circle-left );
+				content: fa-content($fa-var-arrow-circle-left);
 			}
 
 			li.woocommerce-MyAccount-navigation-link--my-membership-content a::before {
-				content: fa-content( $fa-var-lock );
+				content: fa-content($fa-var-lock);
 			}
 
 			li.woocommerce-MyAccount-navigation-link--my-membership-products a::before {
-				content: fa-content( $fa-var-shopping-cart );
+				content: fa-content($fa-var-shopping-cart);
 			}
 
 			li.woocommerce-MyAccount-navigation-link--my-membership-discounts a::before {
-				content: fa-content( $fa-var-tags );
+				content: fa-content($fa-var-tags);
 			}
 
 			li.woocommerce-MyAccount-navigation-link--my-membership-notes a::before {
-				content: fa-content( $fa-var-comment );
+				content: fa-content($fa-var-comment);
 			}
 
 			li.woocommerce-MyAccount-navigation-link--my-membership-details a::before {
-				content: fa-content( $fa-var-cog );
+				content: fa-content($fa-var-cog);
 			}
 		}
 	}
 }
 
 @include susy-media (max-width $desktop) {
+
 	.woocommerce-account {
+
 		table {
+
 			&.my_account_memberships {
 				table-layout: auto;
 			}

@@ -5,10 +5,10 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../sass/vendors/modular-scale";
 
 .variations-table {
 	margin: 0;
@@ -27,7 +27,7 @@
 	.swatch-wrapper {
 		padding: ms(-2);
 		background-color: transparent;
-		border: 1px solid rgba( #000, 0.1 );
+		border: 1px solid rgba(#000, 0.1);
 		float: left;
 		display: inline-block;
 		margin: 0 0.327em 1em 0;
@@ -37,6 +37,7 @@
 		}
 
 		.swatch-anchor {
+
 			&:focus {
 				outline: none;
 			}
@@ -54,7 +55,7 @@
 
 		&.selected {
 			border-width: 1px;
-			border-color: rgba( #000, 0.1 );
+			border-color: rgba(#000, 0.1);
 		}
 	}
 }

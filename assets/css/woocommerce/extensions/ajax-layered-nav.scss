@@ -5,14 +5,17 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../sass/vendors/modular-scale";
 
 .widget_layered_nav {
+
 	ul.colors {
+
 		li {
+
 			a {
 				display: block;
 			}
@@ -27,6 +30,7 @@
 			}
 
 			&.chosen {
+
 				a {
 					opacity: 1;
 
@@ -39,7 +43,9 @@
 	}
 
 	ul.checkboxes {
+
 		li {
+
 			input {
 				margin-right: ms(-2);
 			}
@@ -47,7 +53,9 @@
 	}
 
 	ul.sizes {
+
 		li {
+
 			a {
 				opacity: 1;
 			}
@@ -70,6 +78,7 @@
 			}
 
 			&.chosen {
+
 				.size-filter {
 					opacity: 1;
 
@@ -84,14 +93,18 @@
 	ul.colors,
 	ul.checkboxes,
 	ul.sizes {
+
 		li {
+
 			&.chosen {
+
 				&::before {
 					display: none;
 				}
 			}
 
 			&.show-count {
+
 				a {
 					display: inline-block;
 				}
