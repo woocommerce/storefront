@@ -527,7 +527,7 @@ body {
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	display: block;
-	font-weight: bold;
+	font-weight: 700;
 	height: auto;
 	left: 0;
 	line-height: normal;
@@ -598,10 +598,10 @@ table {
 		h2 {
 			font-size: 1em;
 			letter-spacing: normal;
-			font-weight: normal;
+			font-weight: 400;
 
 			a {
-				font-weight: normal;
+				font-weight: 400;
 			}
 		}
 	}
@@ -985,7 +985,7 @@ textarea,
 	border: 0;
 	-webkit-appearance: none;
 	box-sizing: border-box;
-	font-weight: normal;
+	font-weight: 400;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.125);
 
 	&:focus {
