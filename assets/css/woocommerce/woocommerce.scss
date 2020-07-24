@@ -1290,8 +1290,9 @@ ul#shipping_method {
 /**
  * Checkout
  *
- * 1 - Required to make the blockUI overlay cover the entire page rather than just the checkout form. We do this because
- *     otherwise our sticky order review can break out of the checkout form (and the blockUI element).
+ * 1 - Required to make the blockUI overlay cover the entire page rather than
+ *     just the checkout form. We do this because otherwise our sticky order
+ *     review can break out of the checkout form (and the blockUI element).
  */
 .checkout_coupon {
 	margin-bottom: ms(5);
