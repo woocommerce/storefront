@@ -6,7 +6,6 @@
         "font-family-no-missing-generic-family-keyword": null,
         "no-descending-specificity": null,
         "no-duplicate-selectors": null,
-        "font-family-no-duplicate-names": null,
         "selector-class-pattern": null,
         "value-keyword-case": null,
         "scss/selector-no-redundant-nesting-selector": null,
