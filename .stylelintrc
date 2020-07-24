@@ -10,7 +10,6 @@
         "selector-class-pattern": null,
         "value-keyword-case": null,
         "scss/selector-no-redundant-nesting-selector": null,
-        "selector-id-pattern": null,
-		"declaration-property-unit-whitelist": null
+        "selector-id-pattern": null
     }
 }
