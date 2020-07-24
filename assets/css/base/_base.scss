@@ -337,6 +337,7 @@ body {
 }
 
 .header-widget-region {
+
 	@include clearfix;
 	position: relative;
 	z-index: 99;
@@ -1504,6 +1505,7 @@ button.menu-toggle {
 		}
 
 		a {
+
 			@include underlined-link();
 			@include remove-button-underline();
 		}
