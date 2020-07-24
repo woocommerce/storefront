@@ -14,12 +14,12 @@
 // Star font, FontAwesome doesn't work :(
 @font-face {
 	font-family: star;
-	src: url("../../../../../plugins/woocommerce/assets/fonts/star.eot");
+	src: url(../../../../../plugins/woocommerce/assets/fonts/star.eot);
 	src:
-		url("../../../../../plugins/woocommerce/assets/fonts/star.eot?#iefix") format("embedded-opentype"),
-		url("../../../../../plugins/woocommerce/assets/fonts/star.woff") format("woff"),
-		url("../../../../../plugins/woocommerce/assets/fonts/star.ttf") format("truetype"),
-		url("../../../../../plugins/woocommerce/assets/fonts/star.svg#star") format("svg");
+		url(../../../../../plugins/woocommerce/assets/fonts/star.eot?#iefix) format("embedded-opentype"),
+		url(../../../../../plugins/woocommerce/assets/fonts/star.woff) format("woff"),
+		url(../../../../../plugins/woocommerce/assets/fonts/star.ttf) format("truetype"),
+		url(../../../../../plugins/woocommerce/assets/fonts/star.svg#star) format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
@@ -1399,38 +1399,38 @@ form.checkout {
 					background-repeat: no-repeat;
 					background-position: right ms(-2) center;
 					background-size: 31px 20px;
-					background-image: url("../../../assets/images/credit-cards/unknown.svg");
+					background-image: url(../../../assets/images/credit-cards/unknown.svg);
 
 					&.visa {
-						background-image: url("../../../assets/images/credit-cards/visa.svg");
+						background-image: url(../../../assets/images/credit-cards/visa.svg);
 					}
 
 					&.mastercard {
-						background-image: url("../../../assets/images/credit-cards/mastercard.svg");
+						background-image: url(../../../assets/images/credit-cards/mastercard.svg);
 					}
 
 					&.laser {
-						background-image: url("../../../assets/images/credit-cards/laser.svg");
+						background-image: url(../../../assets/images/credit-cards/laser.svg);
 					}
 
 					&.dinersclub {
-						background-image: url("../../../assets/images/credit-cards/diners.svg");
+						background-image: url(../../../assets/images/credit-cards/diners.svg);
 					}
 
 					&.maestro {
-						background-image: url("../../../assets/images/credit-cards/maestro.svg");
+						background-image: url(../../../assets/images/credit-cards/maestro.svg);
 					}
 
 					&.jcb {
-						background-image: url("../../../assets/images/credit-cards/jcb.svg");
+						background-image: url(../../../assets/images/credit-cards/jcb.svg);
 					}
 
 					&.amex {
-						background-image: url("../../../assets/images/credit-cards/amex.svg");
+						background-image: url(../../../assets/images/credit-cards/amex.svg);
 					}
 
 					&.discover {
-						background-image: url("../../../assets/images/credit-cards/discover.svg");
+						background-image: url(../../../assets/images/credit-cards/discover.svg);
 					}
 				}
 			}
