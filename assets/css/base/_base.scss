@@ -233,15 +233,11 @@ figure {
 	margin: 0;
 }
 
-table {
-	margin: 0 0 ms(2);
-	width: 100%;
-}
-
 img {
 	height: auto; // Make sure images are scaled correctly.
 	max-width: 100%; // Adhere to container width.
 	display: block;
+	border-radius: 3px;
 }
 
 a {
@@ -335,8 +331,15 @@ body {
 }
 
 .header-widget-region {
+	@include clearfix;
 	position: relative;
 	z-index: 99;
+
+	.widget {
+		margin: 0;
+		padding: 1em 0;
+		font-size: ms(-1);
+	}
 }
 
 .site-branding {
@@ -522,7 +525,7 @@ body {
 	z-index: 100000; /* Above WP toolbar */
 	outline: none;
 }
-	
+
 .screen-reader-text.skip-link:focus {
 	clip-path: none;
 }
@@ -545,6 +548,7 @@ body {
 table {
 	border-spacing: 0;
 	width: 100%;
+	margin: 0 0 ms(2);
 	border-collapse: separate;
 
 	caption {
@@ -1004,10 +1008,6 @@ fieldset {
 /**
  * Media
  */
-img {
-	border-radius: 3px;
-}
-
 .page-content,
 .entry-content,
 .comment-content {
@@ -1440,21 +1440,21 @@ button.menu-toggle {
 
 .widget-area {
 	.widget {
+		font-size: ms(-1);
 		font-weight: 400;
+
+		h1.widget-title {
+			font-size: ms(2);
+		}
+
+		a {
+			@include underlined-link();
+			@include remove-button-underline();
+		}
 
 		a.button {
 			font-weight: 600 !important;
 		}
-	}
-}
-
-.header-widget-region {
-	@include clearfix;
-
-	.widget {
-		margin: 0;
-		padding: 1em 0;
-		font-size: ms(-1);
 	}
 }
 
@@ -1494,11 +1494,6 @@ button.menu-toggle {
 			list-style: none;
 			margin-bottom: ms(1);
 			line-height: ms(2);
-		}
-
-		.children {
-			margin-top: ms(-2);
-			margin-left: ms(3);
 		}
 
 		.children {
@@ -1542,17 +1537,3 @@ button.menu-toggle {
 	}
 }
 
-.widget-area {
-	.widget {
-		font-size: ms(-1);
-
-		h1.widget-title {
-			font-size: ms(2);
-		}
-
-		a {
-			@include underlined-link();
-			@include remove-button-underline();
-		}
-	}
-}
