@@ -99,8 +99,8 @@
 
 	.widget_product_search {
 
-		input[type=text],
-		input[type=search] {
+		input[type="text"],
+		input[type="search"] {
 			padding: ms(1) ms(2);
 			line-height: 1;
 		}
@@ -1378,7 +1378,7 @@ form.checkout {
 					li {
 						margin-top: ms(-2);
 
-						input[type=radio] {
+						input[type="radio"] {
 							margin-right: 0.236em;
 						}
 					}
@@ -1647,8 +1647,8 @@ ul.order_details {
 		width: 100%;
 	}
 
-	input[type=checkbox],
-	input[type=radio] {
+	input[type="checkbox"],
+	input[type="radio"] {
 		width: auto;
 	}
 
@@ -2866,7 +2866,7 @@ dl.variation {
 
 	#wc_checkout_add_ons {
 
-		input[type=radio] {
+		input[type="radio"] {
 			float: left;
 			margin-right: ms(-3);
 			clear: left;
