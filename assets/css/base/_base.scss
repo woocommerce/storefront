@@ -482,7 +482,7 @@ body {
 .site-info {
 	padding: ms(5) 0;
 
-	span[role=separator] {
+	span[role="separator"] {
 		padding: 0 ms(-6) 0 ms(-5);
 
 		&::before {
@@ -1338,7 +1338,7 @@ button.menu-toggle {
 
 	.handheld-navigation,
 	.menu > ul:not(.nav-menu),
-	ul[aria-expanded=true] {
+	ul[aria-expanded="true"] {
 		max-height: 9999px;
 	}
 }
@@ -1529,13 +1529,13 @@ button.menu-toggle {
 	form {
 		position: relative;
 
-		input[type=text],
-		input[type=search] {
+		input[type="text"],
+		input[type="search"] {
 			width: 100%;
 		}
 
-		input[type=submit],
-		button[type=submit] {
+		input[type="submit"],
+		button[type="submit"] {
 
 			@include screen-reader-text();
 			top: 0;

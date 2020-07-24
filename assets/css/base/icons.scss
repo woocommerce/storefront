@@ -37,8 +37,8 @@
 
 		form {
 
-			input[type=search],
-			input[type=text] {
+			input[type="search"],
+			input[type="text"] {
 				padding-left: ms(5);
 			}
 		}
@@ -211,8 +211,8 @@ input[type="submit"],
 			line-height: 1;
 		}
 
-		input[type=text],
-		input[type=search] {
+		input[type="text"],
+		input[type="search"] {
 			padding-left: ms(5);
 		}
 	}
@@ -695,7 +695,7 @@ a.remove {
 			&.woocommerce-PaymentMethod,
 			&.wc_payment_method {
 
-				> input[type=radio]:first-child {
+				> input[type="radio"]:first-child {
 
 					@include screen-reader-text();
 
