@@ -33,7 +33,7 @@
     "@babel/core": "7.10.5",
     "@wordpress/babel-preset-default": "4.17.0",
     "@wordpress/env": "1.6.0",
-    "autoprefixer": "9.8.5",
+    "autoprefixer": "9.8.6",
     "bourbon": "5.1.0",
     "grunt": "1.2.1",
     "grunt-babel": "8.0.0",
