@@ -352,7 +352,7 @@ ul.products,
 		h3, // @todo Remove when WooCommerce 2.8 is live
 		.woocommerce-loop-product__title,
 		.wc-block-grid__product-title,
-		.wc-block-grid__product-title > a:not(.has-font-size) {
+		.wc-block-grid__product-title > a:not( .has-font-size ) {
 			font-size: 1rem;
 		}
 
