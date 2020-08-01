@@ -915,6 +915,16 @@ input[type='submit'],
 	}
 }
 
+.wc-block-components-button:not( .is-link ).disabled,
+.wc-block-components-button:not( .is-link ):disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+
+	&:hover {
+		opacity: 0.5;
+	}
+}
+
 input[type='checkbox'],
 input[type='radio'] {
 	padding: 0; /* Addresses excess padding in IE8/9 */

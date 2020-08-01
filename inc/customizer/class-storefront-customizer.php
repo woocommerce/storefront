@@ -805,6 +805,38 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['hero_text_color'] . ';
 			}
 
+			.wc-block-components-button:not(.is-link) {
+				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
+			}
+
+			.wc-block-components-button:not(.is-link):hover,
+			.wc-block-components-button:not(.is-link):focus,
+			.wc-block-components-button:not(.is-link):active {
+				background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_alt_background_color'], $darken_factor ) . ';
+				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
+			}
+
+			.wc-block-components-button:not(.is-link):disabled {
+				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
+				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
+			}
+
+			.wc-block-cart__submit-container {
+				background-color: ' . $storefront_theme_mods['background_color'] . ';
+			}
+
+			.wc-block-cart__submit-container::before {
+				color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], is_color_light( $storefront_theme_mods['background_color'] ) ? -35 : 70, 0.5 ) . ';
+			}
+
+			.wc-block-components-order-summary-item__quantity {
+				background-color: ' . $storefront_theme_mods['background_color'] . ';
+				border-color: ' . $storefront_theme_mods['text_color'] . ';
+				box-shadow: 0 0 0 2px ' . $storefront_theme_mods['background_color'] . ';
+				color: ' . $storefront_theme_mods['text_color'] . ';
+			}
+
 			@media screen and ( min-width: 768px ) {
 				.secondary-navigation ul.menu a:hover {
 					color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['header_text_color'], $brighten_factor ) . ';
