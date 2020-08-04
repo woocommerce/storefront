@@ -5,6 +5,19 @@
  * @package storefront
  */
 
+if ( ! function_exists( 'storefront_woo_cart_available' ) ) {
+	/**
+	 * Validates whether the Woo Cart instance is available in the request
+	 *
+	 * @since 2.6.0
+	 * @return bool
+	 */
+	function storefront_woo_cart_available() {
+		$woo = WC();
+		return $woo instanceof \WooCommerce && $woo->cart instanceof \WC_Cart;
+	}
+}
+
 if ( ! function_exists( 'storefront_before_content' ) ) {
 	/**
 	 * Before Content
@@ -71,6 +84,9 @@ if ( ! function_exists( 'storefront_cart_link' ) ) {
 	 * @since  1.0.0
 	 */
 	function storefront_cart_link() {
+		if ( ! storefront_woo_cart_available() ) {
+			return;
+		}
 		?>
 			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
 				<?php /* translators: %d: number of items in cart */ ?>
@@ -682,6 +698,9 @@ if ( ! function_exists( 'storefront_handheld_footer_bar_cart_link' ) ) {
 	 * @since 2.0.0
 	 */
 	function storefront_handheld_footer_bar_cart_link() {
+		if ( ! storefront_woo_cart_available() ) {
+			return;
+		}
 		?>
 			<a class="footer-cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'storefront' ); ?>">
 				<span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></span>
