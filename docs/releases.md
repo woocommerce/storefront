@@ -22,7 +22,7 @@ Depending on the release, releasing and testing an RC may not be necessary (i.e.
   - Is extra testing needed?
   - Add release notes as appropriate (e.g. major versions or risky/impactful updates).
 - Ensure your local checkout is in release branch and up to date!
-- Update version numbers and release date:
+- Update version numbers and release date (if you're releasing an rc version make sure you use the correct version strategy - eg. 2.6.1.rc1):
   - `readme.txt`
   - `style.scss`
   - `package.json` and `package-lock.json`
