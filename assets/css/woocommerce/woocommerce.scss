@@ -23,6 +23,18 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'WooCommerce';
+	src: url('../../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot');
+	src:
+		url('../../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix') format('embedded-opentype'),
+		url('../../../../../plugins/woocommerce/assets/fonts/WooCommerce.woff') format('woff'),
+		url('../../../../../plugins/woocommerce/assets/fonts/WooCommerce.ttf') format('truetype'),
+		url('../../../../../plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 // Animations
 @keyframes slideInDown {
 	from {
@@ -1829,7 +1841,6 @@ p.stars {
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
-	padding: 1em ms(3);
 	@include clearfix;
 	margin-bottom: ms(5);
 	background-color: $success;
@@ -1838,6 +1849,9 @@ p.no-comments {
 	color: #fff;
 	clear: both;
 	border-left: ms(-2) solid rgba( 0, 0, 0, 0.15 );
+	padding: 1em 2em 1em 3.5em;
+	position: relative;
+	list-style: none outside;
 
 	a {
 		color: #fff;
@@ -1850,6 +1864,16 @@ p.no-comments {
 		&.button:hover {
 			opacity: 1;
 		}
+	}
+
+	&::before {
+		font-family: 'WooCommerce';
+		content: '\e028';
+		display: inline-block;
+		position: absolute;
+		top: 1em;
+		left: 1.5em;
+		color: #fff;
 	}
 
 	.button {
@@ -1876,6 +1900,21 @@ p.no-comments {
 
 	pre {
 		background-color: rgba( 0, 0, 0, 0.1 );
+	}
+}
+
+.woocommerce-message {
+
+	&::before {
+		content: '\e015';
+	}
+}
+
+
+.woocommerce-error {
+
+	&::before {
+		content: '\e016';
 	}
 }
 
