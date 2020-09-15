@@ -26,6 +26,10 @@
       "STORE_URL": "http://localhost:8802"
     }
   },
+  "config": {
+    "wp_org_slug": "storefront",
+    "translate": true
+  },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
