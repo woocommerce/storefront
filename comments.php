@@ -72,7 +72,8 @@ if ( post_password_required() ) {
 	endif;
 
 	$args = apply_filters(
-		'storefront_comment_form_args', array(
+		'storefront_comment_form_args',
+		array(
 			'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
 			'title_reply_after'  => '</span>',
 		)

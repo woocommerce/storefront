@@ -47,7 +47,8 @@ get_header(); ?>
 								echo '<h2>' . esc_html__( 'Product Categories', 'storefront' ) . '</h2>';
 
 								the_widget(
-									'WC_Widget_Product_Categories', array(
+									'WC_Widget_Product_Categories',
+									array(
 										'count' => 1,
 									)
 								);
@@ -61,7 +62,8 @@ get_header(); ?>
 							echo '<h2>' . esc_html__( 'Popular Products', 'storefront' ) . '</h2>';
 
 							$shortcode_content = storefront_do_shortcode(
-								'best_selling_products', array(
+								'best_selling_products',
+								array(
 									'per_page' => 4,
 									'columns'  => 4,
 								)
