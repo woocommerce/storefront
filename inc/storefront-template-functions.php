@@ -50,7 +50,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			<?php endif; ?>
 
 			<a href="<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>" class="comment-date">
-				<?php echo '<time datetime="' . get_comment_date( 'c' ) . '">' . get_comment_date() . '</time>'; ?>
+				<?php echo '<time datetime="' . esc_html( get_comment_date( 'c' ) ) . '">' . esc_html( get_comment_date() ) . '</time>'; ?>
 			</a>
 		</div>
 		<?php if ( 'div' !== $args['style'] ) : ?>
@@ -63,7 +63,8 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 		<?php
 		comment_reply_link(
 			array_merge(
-				$args, array(
+				$args,
+				array(
 					'add_below' => $add_below,
 					'depth'     => $depth,
 					'max_depth' => $args['max_depth'],
@@ -145,14 +146,14 @@ if ( ! function_exists( 'storefront_credit' ) ) {
 		}
 
 		if ( apply_filters( 'storefront_privacy_policy_link', true ) && function_exists( 'the_privacy_policy_link' ) ) {
-			$separator = '<span role="separator" aria-hidden="true"></span>';
+			$separator    = '<span role="separator" aria-hidden="true"></span>';
 			$links_output = get_the_privacy_policy_link( '', ( ! empty( $links_output ) ? $separator : '' ) ) . $links_output;
 		}
-		
+
 		$links_output = apply_filters( 'storefront_credit_links_output', $links_output );
 		?>
 		<div class="site-info">
-			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . date( 'Y' ) ) ); ?>
+			<?php echo esc_html( apply_filters( 'storefront_copyright_text', $content = '&copy; ' . get_bloginfo( 'name' ) . ' ' . gmdate( 'Y' ) ) ); ?>
 
 			<?php if ( ! empty( $links_output ) ) { ?>
 				<br />
@@ -224,7 +225,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 			return $html;
 		}
 
-		echo $html; // WPCS: XSS ok.
+		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 
@@ -489,7 +490,8 @@ if ( ! function_exists( 'storefront_post_meta' ) ) {
 		}
 
 		echo wp_kses(
-			sprintf( '%1$s %2$s %3$s', $posted_on, $author, $comments ), array(
+			sprintf( '%1$s %2$s %3$s', $posted_on, $author, $comments ),
+			array(
 				'span' => array(
 					'class' => array(),
 				),
