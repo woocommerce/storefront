@@ -225,7 +225,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 			return $html;
 		}
 
-		echo $html; // WPCS: XSS ok.
+		echo $html; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	}
 }
 

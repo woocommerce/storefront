@@ -302,7 +302,7 @@ if ( ! function_exists( 'storefront_product_categories' ) ) {
 
 			do_action( 'storefront_homepage_after_product_categories_title' );
 
-			echo $shortcode_content; // WPCS: XSS ok.
+			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_homepage_after_product_categories' );
 
@@ -357,7 +357,7 @@ if ( ! function_exists( 'storefront_recent_products' ) ) {
 
 			do_action( 'storefront_homepage_after_recent_products_title' );
 
-			echo $shortcode_content; // WPCS: XSS ok.
+			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_homepage_after_recent_products' );
 
@@ -414,7 +414,7 @@ if ( ! function_exists( 'storefront_featured_products' ) ) {
 
 			do_action( 'storefront_homepage_after_featured_products_title' );
 
-			echo $shortcode_content; // WPCS: XSS ok.
+			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_homepage_after_featured_products' );
 
@@ -469,7 +469,7 @@ if ( ! function_exists( 'storefront_popular_products' ) ) {
 
 			do_action( 'storefront_homepage_after_popular_products_title' );
 
-			echo $shortcode_content; // WPCS: XSS ok.
+			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_homepage_after_popular_products' );
 
@@ -526,7 +526,7 @@ if ( ! function_exists( 'storefront_on_sale_products' ) ) {
 
 			do_action( 'storefront_homepage_after_on_sale_products_title' );
 
-			echo $shortcode_content; // WPCS: XSS ok.
+			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_homepage_after_on_sale_products' );
 
@@ -581,7 +581,7 @@ if ( ! function_exists( 'storefront_best_selling_products' ) ) {
 
 			do_action( 'storefront_homepage_after_best_selling_products_title' );
 
-			echo $shortcode_content; // WPCS: XSS ok.
+			echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 			do_action( 'storefront_homepage_after_best_selling_products' );
 
@@ -613,35 +613,41 @@ if ( ! function_exists( 'storefront_promoted_products' ) ) {
 
 				echo '<h2>' . esc_html__( 'Featured Products', 'storefront' ) . '</h2>';
 
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo storefront_do_shortcode(
 					'featured_products',
 					array(
 						'per_page' => $per_page,
 						'columns'  => $columns,
 					)
-				); // WPCS: XSS ok.
+				);
+				// phpcs:enable
 			} elseif ( wc_get_product_ids_on_sale() ) {
 
 				echo '<h2>' . esc_html__( 'On Sale Now', 'storefront' ) . '</h2>';
 
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo storefront_do_shortcode(
 					'sale_products',
 					array(
 						'per_page' => $per_page,
 						'columns'  => $columns,
 					)
-				); // WPCS: XSS ok.
+				);
+				// phpcs:enable
 			} elseif ( $recent_fallback ) {
 
 				echo '<h2>' . esc_html__( 'New In Store', 'storefront' ) . '</h2>';
 
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
 				echo storefront_do_shortcode(
 					'recent_products',
 					array(
 						'per_page' => $per_page,
 						'columns'  => $columns,
 					)
-				); // WPCS: XSS ok.
+				);
+				// phpcs:enable
 			}
 		}
 	}
@@ -890,7 +896,7 @@ if ( ! function_exists( 'storefront_woocommerce_brands_homepage_section' ) ) {
 
 		do_action( 'storefront_homepage_after_woocommerce_brands_title' );
 
-		echo $shortcode_content; // WPCS: XSS ok.
+		echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		do_action( 'storefront_homepage_after_woocommerce_brands' );
 
