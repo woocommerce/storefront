@@ -6,8 +6,9 @@
 	<description>WooCommerce dev PHP_CodeSniffer ruleset.</description>
 
 	<!-- Exclude paths -->
-	<exclude-pattern>*/node_modules/*</exclude-pattern>
-	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/storefront/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/storefront/vendor/*</exclude-pattern>
+	<exclude-pattern>*/storefront/storefront/*</exclude-pattern>
 
 	<!-- Configs -->
 	<config name="minimum_supported_wp_version" value="5.3" />
