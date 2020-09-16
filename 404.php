@@ -69,7 +69,7 @@ get_header(); ?>
 								)
 							);
 
-							echo $shortcode_content; // WPCS: XSS ok.
+							echo $shortcode_content; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 						echo '</section>';
 					}
