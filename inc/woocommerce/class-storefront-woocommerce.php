@@ -57,8 +57,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function setup() {
 			add_theme_support(
-				'woocommerce', apply_filters(
-					'storefront_woocommerce_args', array(
+				'woocommerce',
+				apply_filters(
+					'storefront_woocommerce_args',
+					array(
 						'single_image_width'    => 416,
 						'thumbnail_image_width' => 324,
 						'product_grid'          => array(
@@ -183,7 +185,8 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function related_products_args( $args ) {
 			$args = apply_filters(
-				'storefront_related_products_args', array(
+				'storefront_related_products_args',
+				array(
 					'posts_per_page' => 3,
 					'columns'        => 3,
 				)
