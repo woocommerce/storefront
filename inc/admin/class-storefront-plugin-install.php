@@ -87,8 +87,10 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 							array(
 								'action' => 'install-plugin',
 								'plugin' => $plugin_slug,
-							), self_admin_url( 'update.php' )
-						), 'install-plugin_' . $plugin_slug
+							),
+							self_admin_url( 'update.php' )
+						),
+						'install-plugin_' . $plugin_slug
 					);
 					$button = array(
 						'message' => esc_attr__( 'Install now', 'storefront' ),
@@ -132,8 +134,10 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 							array(
 								'action' => 'activate',
 								'plugin' => $plugin_file,
-							), admin_url( 'plugins.php' )
-						), 'activate-plugin_' . $plugin_file
+							),
+							admin_url( 'plugins.php' )
+						),
+						'activate-plugin_' . $plugin_file
 					);
 					return $url;
 				}

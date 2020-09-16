@@ -12,6 +12,8 @@
     "css": "grunt css",
     "watch": "grunt watch",
     "deploy": "grunt deploy",
+    "lint:php": "composer run-script phpcs ./",
+    "lint:php:fix": "composer run-script phpcbf ./",
     "e2e:start": "wp-env start",
     "e2e:stop": "wp-env stop",
     "e2e:destroy": "wp-env destroy",

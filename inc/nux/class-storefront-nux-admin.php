@@ -211,7 +211,8 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			$woocommerce_pages = array();
 
 			$wc_pages_options = apply_filters(
-				'storefront_page_option_names', array(
+				'storefront_page_option_names',
+				array(
 					'woocommerce_cart_page_id',
 					'woocommerce_checkout_page_id',
 					'woocommerce_myaccount_page_id',

@@ -55,7 +55,8 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			 * Product Page
 			 */
 			$wp_customize->add_section(
-				'storefront_single_product_page', array(
+				'storefront_single_product_page',
+				array(
 					'title'    => __( 'Product Page', 'storefront' ),
 					'priority' => 10,
 					'panel'    => 'woocommerce',
@@ -63,21 +64,24 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			);
 
 			$wp_customize->add_setting(
-				'storefront_product_pagination', array(
+				'storefront_product_pagination',
+				array(
 					'default'           => apply_filters( 'storefront_default_product_pagination', true ),
 					'sanitize_callback' => 'wp_validate_boolean',
 				)
 			);
 
 			$wp_customize->add_setting(
-				'storefront_sticky_add_to_cart', array(
+				'storefront_sticky_add_to_cart',
+				array(
 					'default'           => apply_filters( 'storefront_default_sticky_add_to_cart', true ),
 					'sanitize_callback' => 'wp_validate_boolean',
 				)
 			);
 
 			$wp_customize->add_control(
-				'storefront_sticky_add_to_cart', array(
+				'storefront_sticky_add_to_cart',
+				array(
 					'type'        => 'checkbox',
 					'section'     => 'storefront_single_product_page',
 					'label'       => __( 'Sticky Add-To-Cart', 'storefront' ),
@@ -87,7 +91,8 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 			);
 
 			$wp_customize->add_control(
-				'storefront_product_pagination', array(
+				'storefront_product_pagination',
+				array(
 					'type'        => 'checkbox',
 					'section'     => 'storefront_single_product_page',
 					'label'       => __( 'Product Pagination', 'storefront' ),

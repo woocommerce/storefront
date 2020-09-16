@@ -153,7 +153,7 @@ function get_rgb_values_from_hex( $hex ) {
  * @since  2.5.8
  */
 function is_color_light( $hex ) {
-	$rgb_values = get_rgb_values_from_hex( $hex );
+	$rgb_values        = get_rgb_values_from_hex( $hex );
 	$average_lightness = ( $rgb_values['r'] + $rgb_values['g'] + $rgb_values['b'] ) / 3;
 	return $average_lightness >= 127.5;
 }
