@@ -1,0 +1,15 @@
+/**
+ * WooCommerce Gateway Stripe
+ */
+
+#add_payment_method,
+.woocommerce-checkout {
+	#payment {
+		ul.payment_methods {
+			li img.stripe-icon {
+				max-width: 35px;
+				padding-top: 2px;
+			}
+		}
+	}
+}

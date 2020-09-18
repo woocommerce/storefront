@@ -330,6 +330,14 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 
 			/**
+			 * WooCommerce Gateway Stripe
+			 */
+			if ( $this->is_woocommerce_extension_activated( 'WC_Gateway_Stripe' ) ) {
+				wp_enqueue_style( 'storefront-woocommerce-gateway-stripe-style', get_template_directory_uri() . '/assets/css/woocommerce/extensions/payment-gateway-stripe.css', 'storefront-woocommerce-style', $storefront_version );
+				wp_style_add_data( 'storefront-woocommerce-gateway-stripe-style', 'rtl', 'replace' );
+			}
+
+			/**
 			 * WooCommerce Deposits
 			 */
 			if ( $this->is_woocommerce_extension_activated( 'WC_Deposits' ) ) {
