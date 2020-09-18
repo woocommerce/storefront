@@ -1984,6 +1984,31 @@ dl.variation {
 	}
 }
 
+@media (max-width: $handheld-max) {
+	.woocommerce-MyAccount-content {
+		.woocommerce-info {
+			padding: 1em;
+			
+			.button {
+				background: $body-background;
+				border: 1px solid;
+				border-radius: 3px;
+				color: $info;
+				display: block;
+				float: none;
+				margin: 0 0 0.5em;
+				padding: 0.5em;
+				width: 100%;
+			}
+
+			&::before {
+				display: none;
+			}
+
+		}
+	}
+}
+
 /**
  * Homepage
  */
