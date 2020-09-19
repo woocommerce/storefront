@@ -67,8 +67,8 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 					if ( '' !== $activated ) {
 						$button['message'] = esc_attr( $activated );
 					}
-				} elseif ( self::_is_plugin_installed( $plugin_slug ) ) {
-					$url = self::_is_plugin_installed( $plugin_slug );
+				} elseif ( self::is_plugin_installed( $plugin_slug ) ) {
+					$url = self::is_plugin_installed( $plugin_slug );
 
 					// The plugin exists but isn't activated yet.
 					$button = array(
@@ -123,7 +123,7 @@ if ( ! class_exists( 'Storefront_Plugin_Install' ) ) :
 		 *
 		 * @param string $plugin_slug The plugin slug.
 		 */
-		private static function _is_plugin_installed( $plugin_slug ) {
+		private static function is_plugin_installed( $plugin_slug ) {
 			if ( file_exists( WP_PLUGIN_DIR . '/' . $plugin_slug ) ) {
 				$plugins = get_plugins( '/' . $plugin_slug );
 				if ( ! empty( $plugins ) ) {
