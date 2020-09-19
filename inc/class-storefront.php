@@ -71,6 +71,11 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			add_theme_support( 'post-thumbnails' );
 
+			/*
+			 * Enable support for pagination thumbnails.
+			 */
+			add_image_size( 'pagination-thumbnails', 180, 180, true );
+
 			/**
 			 * Enable support for site logo.
 			 */

@@ -774,14 +774,14 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
 			<?php if ( $previous_product ) : ?>
 				<a href="<?php echo esc_url( $previous_product->get_permalink() ); ?>" rel="prev">
-					<?php echo wp_kses_post( $previous_product->get_image() ); ?>
+					<?php echo wp_kses_post( $previous_product->get_image( 'pagination-thumbnails' ) ); ?>
 					<span class="storefront-product-pagination__title"><?php echo wp_kses_post( $previous_product->get_name() ); ?></span>
 				</a>
 			<?php endif; ?>
 
 			<?php if ( $next_product ) : ?>
 				<a href="<?php echo esc_url( $next_product->get_permalink() ); ?>" rel="next">
-					<?php echo wp_kses_post( $next_product->get_image() ); ?>
+					<?php echo wp_kses_post( $next_product->get_image( 'pagination-thumbnails' ) ); ?>
 					<span class="storefront-product-pagination__title"><?php echo wp_kses_post( $next_product->get_name() ); ?></span>
 				</a>
 			<?php endif; ?>
