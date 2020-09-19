@@ -208,14 +208,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					'post_title' => esc_attr__( 'Homepage', 'storefront' ),
 					'template'   => 'template-fullwidth.php',
 				);
-			} else {
-				$homepage_content = array(
-					'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
-					/* translators: %s: 'End Of Line' symbol */
-					'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
-					'template'     => 'template-homepage.php',
-					'thumbnail'    => '{{hero-image}}',
-				);
 			}
 
 			$homepage = array(

@@ -90,10 +90,7 @@ if ( ! class_exists( 'Storefront_Jetpack' ) ) :
 		 *
 		 * @return void
 		 */
-		public function jetpack_infinite_scroll_wrapper_columns() {
-			add_action( 'storefront_jetpack_product_infinite_scroll_before', 'storefront_product_columns_wrapper' );
-			add_action( 'storefront_jetpack_product_infinite_scroll_after', 'storefront_product_columns_wrapper_close' );
-		}
+		public function jetpack_infinite_scroll_wrapper_columns() {}
 
 		/**
 		 * Enqueue jetpack styles.

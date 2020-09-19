@@ -31,14 +31,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			add_filter( 'woocommerce_product_thumbnails_columns', array( $this, 'thumbnail_columns' ) );
 			add_filter( 'woocommerce_breadcrumb_defaults', array( $this, 'change_breadcrumb_delimiter' ) );
 
-			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.5', '<' ) ) {
-				add_action( 'wp_footer', array( $this, 'star_rating_script' ) );
-			}
-
-			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
-				add_filter( 'loop_shop_per_page', array( $this, 'products_per_page' ) );
-			}
-
 			// Integrations.
 			add_action( 'storefront_woocommerce_setup', array( $this, 'setup_integrations' ) );
 			add_action( 'wp_enqueue_scripts', array( $this, 'woocommerce_integrations_scripts' ), 99 );
@@ -151,28 +143,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 
 			if ( ! class_exists( 'Storefront_Sticky_Add_to_Cart' ) && is_product() ) {
 				wp_register_script( 'storefront-sticky-add-to-cart', get_template_directory_uri() . '/assets/js/sticky-add-to-cart' . $suffix . '.js', array(), $storefront_version, true );
-			}
-		}
-
-		/**
-		 * Star rating backwards compatibility script (WooCommerce <2.5).
-		 *
-		 * @since 1.6.0
-		 */
-		public function star_rating_script() {
-			if ( is_product() ) {
-				?>
-			<script type="text/javascript">
-				var starsEl = document.querySelector( '#respond p.stars' );
-				if ( starsEl ) {
-					starsEl.addEventListener( 'click', function( event ) {
-						if ( event.target.tagName === 'A' ) {
-							starsEl.classList.add( 'selected' );
-						}
-					} );
-				}
-			</script>
-				<?php
 			}
 		}
 

@@ -183,19 +183,6 @@ if ( ! function_exists( 'storefront_sorting_wrapper_close' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_product_columns_wrapper' ) ) {
-	/**
-	 * Product columns wrapper
-	 *
-	 * @since   2.2.0
-	 * @return  void
-	 */
-	function storefront_product_columns_wrapper() {
-		$columns = storefront_loop_columns();
-		echo '<div class="columns-' . absint( $columns ) . '">';
-	}
-}
-
 if ( ! function_exists( 'storefront_loop_columns' ) ) {
 	/**
 	 * Default loop columns on product archives
@@ -211,18 +198,6 @@ if ( ! function_exists( 'storefront_loop_columns' ) ) {
 		}
 
 		return apply_filters( 'storefront_loop_columns', $columns );
-	}
-}
-
-if ( ! function_exists( 'storefront_product_columns_wrapper_close' ) ) {
-	/**
-	 * Product columns wrapper close
-	 *
-	 * @since   2.2.0
-	 * @return  void
-	 */
-	function storefront_product_columns_wrapper_close() {
-		echo '</div>';
 	}
 }
 
