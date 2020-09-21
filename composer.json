@@ -13,7 +13,7 @@
     "phpunit/phpunit": "6.5.14",
     "woocommerce/woocommerce-git-hooks": "*",
     "woocommerce/woocommerce-sniffs": "*",
-    "wimg/php-compatibility": "8.2.0",
+    "wimg/php-compatibility": "9.3.5",
     "dealerdirect/phpcodesniffer-composer-installer": "0.7.0"
   },
   "scripts": {
