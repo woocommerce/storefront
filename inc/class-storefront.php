@@ -75,10 +75,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Enable support for site logo.
 			 */
 			add_theme_support(
-				'custom-logo',
-				apply_filters(
-					'storefront_custom_logo_args',
-					array(
+				'custom-logo', apply_filters(
+					'storefront_custom_logo_args', array(
 						'height'      => 110,
 						'width'       => 470,
 						'flex-width'  => true,
@@ -92,8 +90,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			register_nav_menus(
 				apply_filters(
-					'storefront_register_nav_menus',
-					array(
+					'storefront_register_nav_menus', array(
 						'primary'   => __( 'Primary Menu', 'storefront' ),
 						'secondary' => __( 'Secondary Menu', 'storefront' ),
 						'handheld'  => __( 'Handheld Menu', 'storefront' ),
@@ -106,10 +103,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * to output valid HTML5.
 			 */
 			add_theme_support(
-				'html5',
-				apply_filters(
-					'storefront_html5_args',
-					array(
+				'html5', apply_filters(
+					'storefront_html5_args', array(
 						'search-form',
 						'comment-form',
 						'comment-list',
@@ -126,10 +121,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Setup the WordPress core custom background feature.
 			 */
 			add_theme_support(
-				'custom-background',
-				apply_filters(
-					'storefront_custom_background_args',
-					array(
+				'custom-background', apply_filters(
+					'storefront_custom_background_args', array(
 						'default-color' => apply_filters( 'storefront_default_background_color', 'ffffff' ),
 						'default-image' => '',
 					)
@@ -140,10 +133,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Setup the WordPress core custom header feature.
 			 */
 			add_theme_support(
-				'custom-header',
-				apply_filters(
-					'storefront_custom_header_args',
-					array(
+				'custom-header', apply_filters(
+					'storefront_custom_header_args', array(
 						'default-image' => '',
 						'header-text'   => false,
 						'width'         => 1950,
@@ -160,10 +151,8 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 *  http://jetpack.me/
 			 */
 			add_theme_support(
-				'site-logo',
-				apply_filters(
-					'storefront_site_logo_args',
-					array(
+				'site-logo', apply_filters(
+					'storefront_site_logo_args', array(
 						'size' => 'full',
 					)
 				)
@@ -197,36 +186,33 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Add support for editor font sizes.
 			 */
-			add_theme_support(
-				'editor-font-sizes',
+			add_theme_support( 'editor-font-sizes', array(
 				array(
-					array(
-						'name' => __( 'Small', 'storefront' ),
-						'size' => 14,
-						'slug' => 'small',
-					),
-					array(
-						'name' => __( 'Normal', 'storefront' ),
-						'size' => 16,
-						'slug' => 'normal',
-					),
-					array(
-						'name' => __( 'Medium', 'storefront' ),
-						'size' => 23,
-						'slug' => 'medium',
-					),
-					array(
-						'name' => __( 'Large', 'storefront' ),
-						'size' => 26,
-						'slug' => 'large',
-					),
-					array(
-						'name' => __( 'Huge', 'storefront' ),
-						'size' => 37,
-						'slug' => 'huge',
-					),
-				)
-			);
+					'name' => __( 'Small', 'storefront' ),
+					'size' => 14,
+					'slug' => 'small',
+				),
+				array(
+					'name' => __( 'Normal', 'storefront' ),
+					'size' => 16,
+					'slug' => 'normal',
+				),
+				array(
+					'name' => __( 'Medium', 'storefront' ),
+					'size' => 23,
+					'slug' => 'medium',
+				),
+				array(
+					'name' => __( 'Large', 'storefront' ),
+					'size' => 26,
+					'slug' => 'large',
+				),
+				array(
+					'name' => __( 'Huge', 'storefront' ),
+					'size' => 37,
+					'slug' => 'huge',
+				),
+			) );
 
 			/**
 			 * Enqueue editor styles.
@@ -337,7 +323,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			/**
 			 * Fonts
 			 */
-			wp_enqueue_style( 'storefront-fonts', $this->google_fonts(), array(), $storefront_version );
+			wp_enqueue_style( 'storefront-fonts', $this->google_fonts(), array(), null );
 
 			/**
 			 * Scripts
@@ -375,8 +361,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function google_fonts() {
 			$google_fonts = apply_filters(
-				'storefront_google_font_families',
-				array(
+				'storefront_google_font_families', array(
 					'source-sans-pro' => 'Source+Sans+Pro:400,300,300italic,400italic,600,700,900',
 				)
 			);
@@ -531,9 +516,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 * Add styles for embeds
 		 */
 		public function print_embed_styles() {
-			global $storefront_version;
-
-			wp_enqueue_style( 'source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,900', array(), $storefront_version );
+			wp_enqueue_style( 'source-sans-pro', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,300italic,400italic,700,900' );
 			$accent_color     = get_theme_mod( 'storefront_accent_color' );
 			$background_color = storefront_get_content_background_color();
 			?>

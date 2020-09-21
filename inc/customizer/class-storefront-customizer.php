@@ -39,8 +39,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 		 */
 		public function get_storefront_default_setting_values() {
 			return apply_filters(
-				'storefront_setting_default_values',
-				$args = array(
+				'storefront_setting_default_values', $args = array(
 					'storefront_heading_color'           => '#333333',
 					'storefront_text_color'              => '#6d6d6d',
 					'storefront_accent_color'            => '#96588a',
@@ -133,24 +132,21 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				$wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
 
 				$wp_customize->selective_refresh->add_partial(
-					'custom_logo',
-					array(
+					'custom_logo', array(
 						'selector'        => '.site-branding',
 						'render_callback' => array( $this, 'get_site_logo' ),
 					)
 				);
 
 				$wp_customize->selective_refresh->add_partial(
-					'blogname',
-					array(
+					'blogname', array(
 						'selector'        => '.site-title.beta a',
 						'render_callback' => array( $this, 'get_site_name' ),
 					)
 				);
 
 				$wp_customize->selective_refresh->add_partial(
-					'blogdescription',
-					array(
+					'blogdescription', array(
 						'selector'        => '.site-description',
 						'render_callback' => array( $this, 'get_site_description' ),
 					)
@@ -171,8 +167,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Add the typography section
 			 */
 			$wp_customize->add_section(
-				'storefront_typography',
-				array(
+				'storefront_typography', array(
 					'title'    => __( 'Typography', 'storefront' ),
 					'priority' => 45,
 				)
@@ -182,8 +177,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Heading color
 			 */
 			$wp_customize->add_setting(
-				'storefront_heading_color',
-				array(
+				'storefront_heading_color', array(
 					'default'           => apply_filters( 'storefront_default_heading_color', '#484c51' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -191,9 +185,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_heading_color',
-					array(
+					$wp_customize, 'storefront_heading_color', array(
 						'label'    => __( 'Heading color', 'storefront' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_heading_color',
@@ -206,8 +198,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Text Color
 			 */
 			$wp_customize->add_setting(
-				'storefront_text_color',
-				array(
+				'storefront_text_color', array(
 					'default'           => apply_filters( 'storefront_default_text_color', '#43454b' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -215,9 +206,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_text_color',
-					array(
+					$wp_customize, 'storefront_text_color', array(
 						'label'    => __( 'Text color', 'storefront' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_text_color',
@@ -230,8 +219,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Accent Color
 			 */
 			$wp_customize->add_setting(
-				'storefront_accent_color',
-				array(
+				'storefront_accent_color', array(
 					'default'           => apply_filters( 'storefront_default_accent_color', '#96588a' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -239,9 +227,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_accent_color',
-					array(
+					$wp_customize, 'storefront_accent_color', array(
 						'label'    => __( 'Link / accent color', 'storefront' ),
 						'section'  => 'storefront_typography',
 						'settings' => 'storefront_accent_color',
@@ -254,8 +240,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Hero Heading Color
 			 */
 			$wp_customize->add_setting(
-				'storefront_hero_heading_color',
-				array(
+				'storefront_hero_heading_color', array(
 					'default'           => apply_filters( 'storefront_default_hero_heading_color', '#000000' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -263,13 +248,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_hero_heading_color',
-					array(
-						'label'    => __( 'Hero heading color', 'storefront' ),
-						'section'  => 'storefront_typography',
-						'settings' => 'storefront_hero_heading_color',
-						'priority' => 50,
+					$wp_customize, 'storefront_hero_heading_color', array(
+						'label'           => __( 'Hero heading color', 'storefront' ),
+						'section'         => 'storefront_typography',
+						'settings'        => 'storefront_hero_heading_color',
+						'priority'        => 50,
 					)
 				)
 			);
@@ -278,8 +261,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Hero Text Color
 			 */
 			$wp_customize->add_setting(
-				'storefront_hero_text_color',
-				array(
+				'storefront_hero_text_color', array(
 					'default'           => apply_filters( 'storefront_default_hero_text_color', '#000000' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -287,22 +269,18 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_hero_text_color',
-					array(
-						'label'    => __( 'Hero text color', 'storefront' ),
-						'section'  => 'storefront_typography',
-						'settings' => 'storefront_hero_text_color',
-						'priority' => 60,
+					$wp_customize, 'storefront_hero_text_color', array(
+						'label'           => __( 'Hero text color', 'storefront' ),
+						'section'         => 'storefront_typography',
+						'settings'        => 'storefront_hero_text_color',
+						'priority'        => 60,
 					)
 				)
 			);
 
 			$wp_customize->add_control(
 				new Arbitrary_Storefront_Control(
-					$wp_customize,
-					'storefront_header_image_heading',
-					array(
+					$wp_customize, 'storefront_header_image_heading', array(
 						'section'  => 'header_image',
 						'type'     => 'heading',
 						'label'    => __( 'Header background image', 'storefront' ),
@@ -315,8 +293,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Header Background
 			 */
 			$wp_customize->add_setting(
-				'storefront_header_background_color',
-				array(
+				'storefront_header_background_color', array(
 					'default'           => apply_filters( 'storefront_default_header_background_color', '#2c2d33' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -324,9 +301,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_header_background_color',
-					array(
+					$wp_customize, 'storefront_header_background_color', array(
 						'label'    => __( 'Background color', 'storefront' ),
 						'section'  => 'header_image',
 						'settings' => 'storefront_header_background_color',
@@ -339,8 +314,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Header text color
 			 */
 			$wp_customize->add_setting(
-				'storefront_header_text_color',
-				array(
+				'storefront_header_text_color', array(
 					'default'           => apply_filters( 'storefront_default_header_text_color', '#9aa0a7' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -348,9 +322,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_header_text_color',
-					array(
+					$wp_customize, 'storefront_header_text_color', array(
 						'label'    => __( 'Text color', 'storefront' ),
 						'section'  => 'header_image',
 						'settings' => 'storefront_header_text_color',
@@ -363,8 +335,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Header link color
 			 */
 			$wp_customize->add_setting(
-				'storefront_header_link_color',
-				array(
+				'storefront_header_link_color', array(
 					'default'           => apply_filters( 'storefront_default_header_link_color', '#d5d9db' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -372,9 +343,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_header_link_color',
-					array(
+					$wp_customize, 'storefront_header_link_color', array(
 						'label'    => __( 'Link color', 'storefront' ),
 						'section'  => 'header_image',
 						'settings' => 'storefront_header_link_color',
@@ -387,8 +356,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Footer section
 			 */
 			$wp_customize->add_section(
-				'storefront_footer',
-				array(
+				'storefront_footer', array(
 					'title'       => __( 'Footer', 'storefront' ),
 					'priority'    => 28,
 					'description' => __( 'Customize the look & feel of your website footer.', 'storefront' ),
@@ -399,8 +367,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Footer Background
 			 */
 			$wp_customize->add_setting(
-				'storefront_footer_background_color',
-				array(
+				'storefront_footer_background_color', array(
 					'default'           => apply_filters( 'storefront_default_footer_background_color', '#f0f0f0' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -408,9 +375,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_footer_background_color',
-					array(
+					$wp_customize, 'storefront_footer_background_color', array(
 						'label'    => __( 'Background color', 'storefront' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_background_color',
@@ -423,8 +388,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Footer heading color
 			 */
 			$wp_customize->add_setting(
-				'storefront_footer_heading_color',
-				array(
+				'storefront_footer_heading_color', array(
 					'default'           => apply_filters( 'storefront_default_footer_heading_color', '#494c50' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -432,9 +396,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_footer_heading_color',
-					array(
+					$wp_customize, 'storefront_footer_heading_color', array(
 						'label'    => __( 'Heading color', 'storefront' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_heading_color',
@@ -447,8 +409,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Footer text color
 			 */
 			$wp_customize->add_setting(
-				'storefront_footer_text_color',
-				array(
+				'storefront_footer_text_color', array(
 					'default'           => apply_filters( 'storefront_default_footer_text_color', '#61656b' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -456,9 +417,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_footer_text_color',
-					array(
+					$wp_customize, 'storefront_footer_text_color', array(
 						'label'    => __( 'Text color', 'storefront' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_text_color',
@@ -471,8 +430,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Footer link color
 			 */
 			$wp_customize->add_setting(
-				'storefront_footer_link_color',
-				array(
+				'storefront_footer_link_color', array(
 					'default'           => apply_filters( 'storefront_default_footer_link_color', '#2c2d33' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -480,9 +438,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_footer_link_color',
-					array(
+					$wp_customize, 'storefront_footer_link_color', array(
 						'label'    => __( 'Link color', 'storefront' ),
 						'section'  => 'storefront_footer',
 						'settings' => 'storefront_footer_link_color',
@@ -495,8 +451,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Buttons section
 			 */
 			$wp_customize->add_section(
-				'storefront_buttons',
-				array(
+				'storefront_buttons', array(
 					'title'       => __( 'Buttons', 'storefront' ),
 					'priority'    => 45,
 					'description' => __( 'Customize the look & feel of your website buttons.', 'storefront' ),
@@ -507,8 +462,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Button background color
 			 */
 			$wp_customize->add_setting(
-				'storefront_button_background_color',
-				array(
+				'storefront_button_background_color', array(
 					'default'           => apply_filters( 'storefront_default_button_background_color', '#96588a' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -516,9 +470,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_button_background_color',
-					array(
+					$wp_customize, 'storefront_button_background_color', array(
 						'label'    => __( 'Background color', 'storefront' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_background_color',
@@ -531,8 +483,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Button text color
 			 */
 			$wp_customize->add_setting(
-				'storefront_button_text_color',
-				array(
+				'storefront_button_text_color', array(
 					'default'           => apply_filters( 'storefront_default_button_text_color', '#ffffff' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -540,9 +491,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_button_text_color',
-					array(
+					$wp_customize, 'storefront_button_text_color', array(
 						'label'    => __( 'Text color', 'storefront' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_text_color',
@@ -555,8 +504,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Button alt background color
 			 */
 			$wp_customize->add_setting(
-				'storefront_button_alt_background_color',
-				array(
+				'storefront_button_alt_background_color', array(
 					'default'           => apply_filters( 'storefront_default_button_alt_background_color', '#2c2d33' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -564,9 +512,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_button_alt_background_color',
-					array(
+					$wp_customize, 'storefront_button_alt_background_color', array(
 						'label'    => __( 'Alternate button background color', 'storefront' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_alt_background_color',
@@ -579,8 +525,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Button alt text color
 			 */
 			$wp_customize->add_setting(
-				'storefront_button_alt_text_color',
-				array(
+				'storefront_button_alt_text_color', array(
 					'default'           => apply_filters( 'storefront_default_button_alt_text_color', '#ffffff' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
@@ -588,9 +533,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new WP_Customize_Color_Control(
-					$wp_customize,
-					'storefront_button_alt_text_color',
-					array(
+					$wp_customize, 'storefront_button_alt_text_color', array(
 						'label'    => __( 'Alternate button text color', 'storefront' ),
 						'section'  => 'storefront_buttons',
 						'settings' => 'storefront_button_alt_text_color',
@@ -603,16 +546,14 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * Layout
 			 */
 			$wp_customize->add_section(
-				'storefront_layout',
-				array(
+				'storefront_layout', array(
 					'title'    => __( 'Layout', 'storefront' ),
 					'priority' => 50,
 				)
 			);
 
 			$wp_customize->add_setting(
-				'storefront_layout',
-				array(
+				'storefront_layout', array(
 					'default'           => apply_filters( 'storefront_default_layout', $layout = is_rtl() ? 'left' : 'right' ),
 					'sanitize_callback' => 'storefront_sanitize_choices',
 				)
@@ -620,9 +561,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			$wp_customize->add_control(
 				new Storefront_Custom_Radio_Image_Control(
-					$wp_customize,
-					'storefront_layout',
-					array(
+					$wp_customize, 'storefront_layout', array(
 						'settings' => 'storefront_layout',
 						'section'  => 'storefront_layout',
 						'label'    => __( 'General Layout', 'storefront' ),
@@ -640,16 +579,14 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 */
 			if ( apply_filters( 'storefront_customizer_more', true ) ) {
 				$wp_customize->add_section(
-					'storefront_more',
-					array(
+					'storefront_more', array(
 						'title'    => __( 'More', 'storefront' ),
 						'priority' => 999,
 					)
 				);
 
 				$wp_customize->add_setting(
-					'storefront_more',
-					array(
+					'storefront_more', array(
 						'default'           => null,
 						'sanitize_callback' => 'sanitize_text_field',
 					)
@@ -657,9 +594,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 				$wp_customize->add_control(
 					new More_Storefront_Control(
-						$wp_customize,
-						'storefront_more',
-						array(
+						$wp_customize, 'storefront_more', array(
 							'label'    => __( 'Looking for more options?', 'storefront' ),
 							'section'  => 'storefront_more',
 							'settings' => 'storefront_more',

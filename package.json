@@ -12,8 +12,6 @@
     "css": "grunt css",
     "watch": "grunt watch",
     "deploy": "grunt deploy",
-    "lint:php": "composer run-script phpcs ./",
-    "lint:php:fix": "composer run-script phpcbf ./",
     "e2e:start": "wp-env start",
     "e2e:stop": "wp-env stop",
     "e2e:destroy": "wp-env destroy",
@@ -32,8 +30,8 @@
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "@babel/core": "7.11.6",
-    "@wordpress/babel-preset-default": "4.18.1",
+    "@babel/core": "7.11.5",
+    "@wordpress/babel-preset-default": "4.17.0",
     "@wordpress/env": "1.6.0",
     "autoprefixer": "9.8.6",
     "bourbon": "5.1.0",
@@ -55,7 +53,7 @@
     "jest-puppeteer": "4.4.0",
     "node-sass": "4.14.1",
     "puppeteer": "4.0.1",
-    "stylelint": "13.7.1",
+    "stylelint": "13.7.0",
     "susy": "2.2.14"
   },
   "engines": {
