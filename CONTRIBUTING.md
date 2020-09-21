@@ -37,8 +37,10 @@ If you think something could be improved and you're able to do so, make your cha
 Storefront utilises technologies such as [Grunt](http://gruntjs.com/), [Sass](http://sass-lang.com/), [Bourbon](http://bourbon.io/) and [Susy](http://susy.oddbird.net/) to standardise and speed up development. You should familiarise yourself with each before contributing. To get started with your Storefront development environment:
 
 * Install [Node.js](https://nodejs.org/en/) with NPM, its package manager.
+* Install [Composer](https://getcomposer.org), a PHP dependency manager.
 * [Fork](https://help.github.com/articles/fork-a-repo/) the [Storefront repository](https://github.com/woothemes/storefront) on GitHub.
 * Pull the Storefront project dependencies into your environment by navigating to your `/storefront/` directory in Terminal then run `npm install`.
+* Run `composer install` to set up PHP dependencies.
 * Run Grunt jobs with the command `npm run build`. This will create local copies of Storefront css (we do not version control the .css files) and minify them and JS scripts.
 
 You're now ready to go! You can now activate Storefront in your WordPress install and begin making changes.

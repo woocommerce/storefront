@@ -25,12 +25,14 @@ if ( post_password_required() ) {
 		?>
 		<h2 class="comments-title">
 			<?php
-				printf( // WPCS: XSS OK.
+				// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped
+				printf(
 					/* translators: 1: number of comments, 2: post title */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'storefront' ) ),
 					number_format_i18n( get_comments_number() ),
 					'<span>' . get_the_title() . '</span>'
 				);
+				// phpcs:enable
 			?>
 		</h2>
 
@@ -72,7 +74,8 @@ if ( post_password_required() ) {
 	endif;
 
 	$args = apply_filters(
-		'storefront_comment_form_args', array(
+		'storefront_comment_form_args',
+		array(
 			'title_reply_before' => '<span id="reply-title" class="gamma comment-reply-title">',
 			'title_reply_after'  => '</span>',
 		)
