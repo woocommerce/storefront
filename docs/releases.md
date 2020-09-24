@@ -2,7 +2,7 @@
 
 This document outlines the process for releasing new versions of the Storefront theme.
 
-Note that Storefront typically just bumps the minor version (2.x.0) between releases and the next version after 2.9.0 would be 3.0.0.  Patch versions are used for fix releases that are deployed outside the usual release schedule.
+Note that Storefront bumps the minor version (2.x.0) between releases and the next version after 2.9.0 would be 3.0.0, [similar to WordPress core version numbering](https://make.wordpress.org/core/handbook/about/release-cycle/version-numbering/). Patch versions are used for fix releases that are deployed outside the usual release schedule (this is rare).
 
 ## Steps
 
