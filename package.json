@@ -8,12 +8,10 @@
     "url": "https://github.com/woothemes/storefront.git"
   },
   "scripts": {
+    "build:dev": "grunt",
     "build": "grunt deploy",
     "css": "grunt css",
-    "watch": "grunt watch",
-    "lint:php": "composer run-script phpcs ./",
-    "lint:php:fix": "composer run-script phpcbf ./",
-    "wp-env": "wp-env",
+    "start": "grunt watch",
     "e2e": "jest",
     "e2e:ci": "npm run wp-env start && npm run e2e"
   },
