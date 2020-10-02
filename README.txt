@@ -49,8 +49,6 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
-= 2.8.0 - 2020-xx-xx =
-
 
 = 2.7.0 - 2020-09-02 =
 * Fix - Respect user-selected Color and Font size values for All Products' Product Title Block. [#1424](https://github.com/woocommerce/storefront/pull/1424)
