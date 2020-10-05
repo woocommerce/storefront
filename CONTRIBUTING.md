@@ -50,19 +50,19 @@ You're now ready to go! You can now activate Storefront in your WordPress instal
 1. *Manually* - Each time you change a css file run `npm run css` in Terminal to compile all of the css.
 2. *Automatically* - run `npm run watch` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
 
-##### NPM commnands
+##### NPM commands
 
 Storefront utilizes npm scripts for task management utilities.
 
-- `npm run build`: Runs the build script
-- `npm run css`: Renders the SCSS files to CSS files
-- `npm run watch`: Watches changed of teh SCSS files and renders the CSS files accordingly
-- `npm run deploy`: Runs the deployment script
-- `npm run lint:php`: Checks the code against the PHP Coding Standards
-- `npm run lint:php:fix`: Fixes PHP Coding Standards issues
-- `npm run wp-env`: Allows starting (via `npm run wp-env start`) and stopping (via `npm run wp-env stop`) the environment
-- `npm run e2e`: Runs the end-to-end tests
-- `npm run e2e:ci`: Runs the end-to-end tests
+- `npm run build`: Runs the build script.
+- `npm run css`: Renders the SCSS files to CSS files.
+- `npm run watch`: Watches changed of the SCSS files and renders the CSS files accordingly.
+- `npm run deploy`: Runs the deployment script.
+- `npm run lint:php`: Checks the code against the PHP Coding Standards.
+- `npm run lint:php:fix`: Fixes PHP Coding Standards issues.
+- `npm run wp-env`: Allows starting (via `npm run wp-env start`) and stopping (via `npm run wp-env stop`) the environment. Read about [more commands you can use here](https://github.com/WordPress/gutenberg/tree/master/packages/env).
+- `npm run e2e`: Runs the end-to-end tests.
+- `npm run e2e:ci`: Starts `wp-env` and runs the end-to-end tests (typically used in ci contexts).
 
 #### How To Submit A PR
 
