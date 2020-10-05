@@ -411,9 +411,9 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			global $storefront;
 
 			if ( ! is_object( $storefront ) ||
-				 ! property_exists( $storefront, 'customizer' ) ||
-				 ! is_a( $storefront->customizer, 'Storefront_Customizer' ) ||
-				 ! method_exists( $storefront->customizer, 'get_storefront_theme_mods' ) ) {
+				! property_exists( $storefront, 'customizer' ) ||
+				! is_a( $storefront->customizer, 'Storefront_Customizer' ) ||
+				! method_exists( $storefront->customizer, 'get_storefront_theme_mods' ) ) {
 				return apply_filters( 'storefront_customizer_woocommerce_extension_css', '' );
 			}
 
