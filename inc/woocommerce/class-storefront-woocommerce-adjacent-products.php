@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 
 	/**
-	 * The Storefront WooCommerce Adjacent Products Class
+	 * The Storefront WooCommerce Adjacent Products class.
 	 */
 	class Storefront_WooCommerce_Adjacent_Products {
 
