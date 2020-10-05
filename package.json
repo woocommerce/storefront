@@ -14,11 +14,9 @@
     "deploy": "grunt deploy",
     "lint:php": "composer run-script phpcs ./",
     "lint:php:fix": "composer run-script phpcbf ./",
-    "e2e:start": "wp-env start",
-    "e2e:stop": "wp-env stop",
-    "e2e:destroy": "wp-env destroy",
+    "wp-env": "wp-env",
     "e2e": "jest",
-    "e2e:ci": "npm run e2e:start && npm run e2e"
+    "e2e:ci": "npm run wp-env start && npm run e2e"
   },
   "jest": {
     "preset": "jest-puppeteer",
