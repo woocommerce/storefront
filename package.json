@@ -12,6 +12,7 @@
     "build": "grunt deploy",
     "css": "grunt css",
     "start": "grunt watch",
+    "wp-env": "wp-env",
     "e2e": "jest",
     "e2e:ci": "npm run wp-env start && npm run e2e"
   },
