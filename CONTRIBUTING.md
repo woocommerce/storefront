@@ -45,10 +45,12 @@ Storefront utilises technologies such as [Grunt](http://gruntjs.com/), [Sass](ht
 
 You're now ready to go! You can now activate Storefront in your WordPress install and begin making changes.
 
-**Please note:** any style changes you make should be done in the Sass files, not the .css files. Once you've changed a .scss file you will want to compile it to see those changes in your setup. There are two ways to do this;
+**Please note:** any style changes you make should be done in the Sass files, not the .css files. Once you've changed a .scss file you will want to compile it to see those changes in your setup.
 
-1. *Manually* - Each time you change a css file run `npm run css` in Terminal to compile all of the css.
-2. *Automatically* - run `npm start` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
+There are two ways to do this. See NPM commands below for more info about what commands are available.
+
+- `npm start` (recommended)
+- manually build using `npm build`, `npm build:dev` or `npm run css`
 
 ##### NPM commands
 
