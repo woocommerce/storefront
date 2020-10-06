@@ -8,12 +8,10 @@
     "url": "https://github.com/woothemes/storefront.git"
   },
   "scripts": {
-    "build": "grunt",
+    "build:dev": "grunt",
+    "build": "grunt deploy",
     "css": "grunt css",
-    "watch": "grunt watch",
-    "deploy": "grunt deploy",
-    "lint:php": "composer run-script phpcs ./",
-    "lint:php:fix": "composer run-script phpcbf ./",
+    "start": "grunt watch",
     "wp-env": "wp-env",
     "e2e": "jest",
     "e2e:ci": "npm run wp-env start && npm run e2e"
@@ -26,6 +24,10 @@
     "globals": {
       "STORE_URL": "http://localhost:8802"
     }
+  },
+  "config": {
+    "wp_org_slug": "storefront",
+    "translate": true
   },
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",

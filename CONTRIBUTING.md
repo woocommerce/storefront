@@ -45,23 +45,28 @@ Storefront utilises technologies such as [Grunt](http://gruntjs.com/), [Sass](ht
 
 You're now ready to go! You can now activate Storefront in your WordPress install and begin making changes.
 
-**Please note:** any style changes you make should be done in the Sass files, not the .css files. Once you've changed a .scss file you will want to compile it to see those changes in your setup. There are two ways to do this;
+**Please note:** any style changes you make should be done in the Sass files, not the .css files. Once you've changed a .scss file you will want to compile it to see those changes in your setup.
 
-1. *Manually* - Each time you change a css file run `npm run css` in Terminal to compile all of the css.
-2. *Automatically* - run `npm run watch` in Terminal. This will instruct grunt to 'watch' each of the sass files for changes and then compile automatically when changes are made. This is the recommended method and will also watch Javascript files for changes too.
+There are two ways to do this. See NPM commands below for more info about what commands are available.
+
+- `npm start` (recommended)
+- manually build using `npm build`, `npm build:dev` or `npm run css`
 
 ##### NPM commands
 
-Storefront utilizes npm scripts for task management utilities.
+Storefront has npm commands configured for essential development & release tasks:
 
-- `npm run build`: Runs the build script.
-- `npm run css`: Renders the SCSS files to CSS files.
-- `npm run watch`: Watches changed of the SCSS files and renders the CSS files accordingly.
-- `npm run deploy`: Runs the deployment script.
-- `npm run lint:php`: Checks the code against the PHP Coding Standards.
-- `npm run lint:php:fix`: Fixes PHP Coding Standards issues.
-- `npm run wp-env`: Allows starting (via `npm run wp-env start`) and stopping (via `npm run wp-env stop`) the environment. Read about [more commands you can use here](https://github.com/WordPress/gutenberg/tree/master/packages/env).
-- `npm run e2e`: Runs the end-to-end tests.
+- `npm run build:dev`: Builds a development version of the theme.
+- `npm start`: Watches for changes to source files and continuously builds a development version.
+- `npm run build`: Builds a production version of the theme.
+
+There are some other commands which may be used occasionally:
+
+- `npm run css`: Runs the css build step only.
+- `npm run lint:php`: Checks PHP source files against the PHP coding standards.
+- `npm run lint:php:fix`: Automatically fix PHP standards issues (if possible).
+- `npm run wp-env`: Provides access to a [wp-env development environment](https://developer.wordpress.org/block-editor/packages/packages-env/). This can be used for testing theme changes locally, or running e2e tests.
+- `npm run e2e`: Runs the end-to-end tests. Requries that the e2e environment is started (currently using wp-env).
 - `npm run e2e:ci`: Starts `wp-env` and runs the end-to-end tests (typically used in ci contexts).
 
 #### How To Submit A PR
