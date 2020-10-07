@@ -31,7 +31,7 @@ Depending on the release, releasing and testing an RC may not be necessary (i.e.
 - Confirm/update metadata in `readme.txt`, e.g. “tested up to” version.
 - Finalise changelog and add to `readme.txt`.
 - Clean install of dependencies: `npm ci`.
-- Run a production build: `npm run deploy`. Note this does not deploy anywhere, you can run multiple times safely 🙂
+- Run a production build: `npm run build`.
 - Ensure all changes above are committed and pushed (you should not have uncommitted changes):
   - Version numbers, dates, metadata
   - Changelog
