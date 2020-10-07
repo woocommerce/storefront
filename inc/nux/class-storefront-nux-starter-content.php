@@ -997,7 +997,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				$products[ $symbol ]['post_name'] = $symbol;
 			}
 
-			return apply_filters( 'storefrontstarter_content_products', $products );
+			return apply_filters( 'storefront_starter_content_products', $products );
 		}
 
 		/**
