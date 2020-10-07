@@ -2,7 +2,7 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.2.7
 Tested up to: 5.5
-Stable tag: 2.7.0
+Stable tag: 2.8.0-rc1
 Version: 2.7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -52,6 +52,7 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 = 2.8.0 - 2020-10-13 =
 - Dev: Reinstate PHPcs linting #1463
 - Dev: Add `wp-env` npm script alias #1489
+- Dev: Tweak npm config & scripts for release tooling changes #1462 
 - Dev: Various dependency updates 
 
 = 2.7.0 - 2020-09-02 =
