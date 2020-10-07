@@ -361,7 +361,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			// Add starter content.
-			$created_products = $this->get_createdstarter_content_products();
+			$created_products = $this->get_created_starter_content_products();
 
 			if ( false !== $created_products ) {
 
@@ -406,7 +406,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			}
 
 			// Add starter content to query.
-			$created_products = $this->get_createdstarter_content_products();
+			$created_products = $this->get_created_starter_content_products();
 
 			if ( false !== $created_products ) {
 
@@ -491,7 +491,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return;
 			}
 
-			$created_products = $this->get_createdstarter_content_products();
+			$created_products = $this->get_created_starter_content_products();
 
 			if ( false === $created_products ) {
 				return;
@@ -574,7 +574,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				return;
 			}
 
-			$created_products = $this->get_createdstarter_content_products();
+			$created_products = $this->get_created_starter_content_products();
 
 			if ( false === $created_products ) {
 				return;
@@ -1147,7 +1147,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @since 2.2.1
 		 * @return mixed false|array $query Array of post ids.
 		 */
-		private function get_createdstarter_content_products() {
+		private function get_created_starter_content_products() {
 			global $wp_customize;
 
 			$setting = $wp_customize->get_setting( 'nav_menus_created_posts' );
@@ -1209,7 +1209,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				),
 			);
 
-			$created_products = $this->get_createdstarter_content_products();
+			$created_products = $this->get_created_starter_content_products();
 
 			if ( false !== $created_products ) {
 				$query_args['post__in'] = $created_products;
