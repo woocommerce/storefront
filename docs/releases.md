@@ -29,6 +29,7 @@ Depending on the release, releasing and testing an RC may not be necessary (i.e.
   - `style.scss`
   - `package.json` and `package-lock.json`
 - Confirm/update metadata in `readme.txt`, e.g. “tested up to” version.
+- Review if any [user documentation](https://docs.woocommerce.com/documentation/themes/storefront/) updates are needed, for example: new features or changed minimum requirements.
 - Finalise changelog and add to `readme.txt`.
 - Clean install of dependencies: `npm ci`.
 - Run a production build: `npm run build`.
@@ -80,13 +81,13 @@ __*Outcome*: You (release lead) are confident that the product is ready for rele
 
 Now we get to release!
 
-- If necessary, build final `storefront.zip` with correct (non-RC) version number (repeat step 1).
+- If necessary, build final `storefront.zip` with correct (non-RC) version number (repeat step 1, and appropriate testing - step 3).
 - Publish release on [GitHub](https://github.com/woocommerce/storefront/releases).
   - Upload release zip.
   - Use this format for tag: `version/1.2.3`.
   - Paste changelog into “release details” field.
 - Upload to [WordPress.org](https://wordpress.org/themes/upload/). (You'll need access to the `Automattic` user account.)
-- Publish any documentation updates.
+- Publish any [user documentation](https://docs.woocommerce.com/documentation/themes/storefront/) updates.
 - Post an announcement on the [dev blog](https://woocommerce.wordpress.com/category/storefront/).
 
 __*Outcome*: Merchants are using the new Storefront, your new features are live, stores are working better, customers are happier!__
