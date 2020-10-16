@@ -8,8 +8,8 @@
     "url": "https://github.com/woothemes/storefront.git"
   },
   "scripts": {
+    "build": "grunt deploy --env=production",
     "build:dev": "grunt",
-    "build": "grunt deploy",
     "css": "grunt css",
     "start": "grunt watch",
     "wp-env": "wp-env",
@@ -37,6 +37,7 @@
     "@wordpress/env": "1.6.0",
     "autoprefixer": "9.8.6",
     "bourbon": "5.1.0",
+    "cssnano": "^4.1.10",
     "grunt": "1.3.0",
     "grunt-babel": "8.0.0",
     "grunt-checktextdomain": "1.0.1",
