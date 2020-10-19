@@ -870,6 +870,11 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				color: ' . $storefront_theme_mods['hero_text_color'] . ';
 			}
 
+			.wc-block-components-price-slider__range-input-progress,
+			.rtl .wc-block-components-price-slider__range-input-progress {
+				--range-color: ' . $storefront_theme_mods['accent_color'] . ';
+			}
+
 			.wc-block-components-button:not(.is-link) {
 				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
 				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
