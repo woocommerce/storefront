@@ -875,6 +875,13 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				--range-color: ' . $storefront_theme_mods['accent_color'] . ';
 			}
 
+			/* Target only IE11 */
+			@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+				.wc-block-components-price-slider__range-input-progress {
+					background: ' . $storefront_theme_mods['accent_color'] . ';
+				}
+			}
+
 			.wc-block-components-button:not(.is-link) {
 				background-color: ' . $storefront_theme_mods['button_alt_background_color'] . ';
 				color: ' . $storefront_theme_mods['button_alt_text_color'] . ';
