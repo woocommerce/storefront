@@ -6,10 +6,10 @@ Storefront continues to be a theme that powers a significant number of WooCommer
 
 To that end, to bring clarity to what we are prioritizing for active Storefront development, we’ve created this criteria list. Our engineers are using this list to help us effectively triage issues. Going forward, we will only be actively addressing issues that fall in one of these criteria “buckets”:
 
-Contribute to improving our release processes or documentation.
-Critical bugs that break expected functionality for important flows in a store (eg. Checkout flow). This also includes security related issues that require immediate release after fixing.
-Non critical  bugs that are still affecting a significant number of merchants or stores but don’t break critical flows (including those related to accessibility or internationalisation). 
-Address significant compatibility issues with any one of: WordPress core updates, WooCommerce core updates, or signature products important to be compatible with (such as WooCommerce Blocks).
+- Contribute to improving our release processes or documentation.
+- Critical bugs that break expected functionality for important flows in a store (eg. Checkout flow). This also includes security related issues that require immediate release after fixing.
+- Non critical  bugs that are still affecting a significant number of merchants or stores but don’t break critical flows (including those related to accessibility or internationalisation). 
+- Address significant compatibility issues with any one of: WordPress core updates, WooCommerce core updates, or signature products important to be compatible with (such as WooCommerce Blocks).
 
 At this time, most enhancements and features will not be worked on and in order to be clear about expectations we will be generally closing issues unless they fall into one of the above buckets.
 
