@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  <a href="https://packagist.org/packages/woocommerce/woocommerce"><img src="https://poser.pugx.org/woocommerce/woocommerce/license" alt="license"></a> 
+  <a href="https://packagist.org/packages/woocommerce/woocommerce"><img src="https://poser.pugx.org/woocommerce/woocommerce/license" alt="license"></a>
   <a href="https://woocommerce.com/"><img src="http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg" alt="Designed for WooCommerce"></a>
   <img src="https://img.shields.io/wordpress/theme/dt/storefront.svg" alt="WordPress.org downloads">
   <img src="https://img.shields.io/wordpress/theme/r/storefront.svg" alt="WordPress.org rating">
@@ -20,6 +20,9 @@ It features deep integration with WooCommerce core plus several of the most popu
 * [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/)
 
 For developers, Storefront is the perfect starting point for your project. It's lean and extensible codebase will allow you to easily add functionality to your site via child theme and/or custom plugin(s).
+
+## Storefront Status
+Please read [this document](./STOREFRONT_STATUS.md) explaining the current status of Storefront development.
 
 ## Storefront extensions
 Looking to take your storefront powered store to the next level? Be sure to checkout the premium [Storefront extensions](https://woocommerce.com/product-category/storefront-extensions/).

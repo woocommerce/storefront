@@ -11,6 +11,9 @@ GitHub is for *bug reports and contributions only* - if you have a support quest
 - [Woo Experts](https://woocommerce.com/experts/)
 - [Codeable](https://codeable.io/)
 
+## Storefront Status
+Please read [this document](./STOREFRONT_STATUS.md) explaining the current status of Storefront development.
+
 ## Contributing To The Core
 
 ### Reporting Issues
