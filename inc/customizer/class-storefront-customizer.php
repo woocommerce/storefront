@@ -999,12 +999,12 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['background_color'], -2 ) . ';
 				}
 
-				.wp-block-cover .wp-block-cover__inner-container h1,
-				.wp-block-cover .wp-block-cover__inner-container h2,
-				.wp-block-cover .wp-block-cover__inner-container h3,
-				.wp-block-cover .wp-block-cover__inner-container h4,
-				.wp-block-cover .wp-block-cover__inner-container h5,
-				.wp-block-cover .wp-block-cover__inner-container h6 {
+				.wp-block-cover .wp-block-cover__inner-container h1:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h2:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h3:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h4:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h5:not(.has-text-color),
+				.wp-block-cover .wp-block-cover__inner-container h6:not(.has-text-color) {
 					color: ' . $storefront_theme_mods['hero_heading_color'] . ';
 				}
 			';
