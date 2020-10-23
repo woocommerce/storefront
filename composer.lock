@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b009a3043dce22362481d00387e6c501",
+    "content-hash": "2d6ba2916698673e455a6f0dceacd093",
     "packages": [
         {
             "name": "composer/installers",
@@ -373,16 +373,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.7",
+            "version": "3.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "4dbf1d59cd3f155c6f906f018a8574bc53b5be30"
+                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4dbf1d59cd3f155c6f906f018a8574bc53b5be30",
-                "reference": "4dbf1d59cd3f155c6f906f018a8574bc53b5be30",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/9d583721a7157ee997f235f327de038e7ea6dac4",
+                "reference": "9d583721a7157ee997f235f327de038e7ea6dac4",
                 "shasum": ""
             },
             "require": {
@@ -420,7 +420,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-10-22T21:09:11+00:00"
+            "time": "2020-10-23T02:01:07+00:00"
         },
         {
             "name": "woocommerce/woocommerce-git-hooks",
