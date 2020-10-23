@@ -51,7 +51,7 @@
     "grunt-sass": "3.1.0",
     "grunt-stylelint": "0.15.0",
     "grunt-wp-i18n": "1.0.3",
-    "jest": "26.6.0",
+    "jest": "26.6.1",
     "jest-puppeteer": "4.4.0",
     "node-sass": "4.14.1",
     "postcss": "8.1.3",
