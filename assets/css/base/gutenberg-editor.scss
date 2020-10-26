@@ -300,18 +300,23 @@ table {
 .wp-block {
 	max-width: $container-width;
 
+	&[data-align='wide'] {
+		max-width: ms(19);
+	}
+
+	&[data-align='full'] {
+		max-width: none;
+
+		.storefront-has-sidebar & {
+			margin-left: auto !important;
+			margin-right: auto !important;
+		}
+	}
+
 	.storefront-has-sidebar & {
 		$span-value: span(9) / 100;
 		max-width: calc(#{$container-width} * #{$span-value / ( $span-value * 0 + 1 )}); // Unitless hack.
 	}
-}
-
-.wp-block[data-align='wide'] {
-	max-width: ms(19);
-}
-
-.wp-block[data-align='full'] {
-	max-width: none;
 }
 
 // Tables

@@ -5,6 +5,9 @@
  * configuration and styling.
  */
 
+// First class for WP<=5.3 and second class for WP>=5.4.
+const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow';
+
 ( function() {
 
 	/**
@@ -16,9 +19,9 @@
 	 * @return {boolean} Whether sidebar is active.
 	 */
 	const sidebarIsActive = () => {
-		let settings = wp.data.select( 'core/editor' ).getEditorSettings();
+		const settings = wp.data.select( 'core/editor' ).getEditorSettings();
 
-		if ( settings.hasOwnProperty( 'mainSidebarActive' ) && !! settings.mainSidebarActive ) {
+		if ( settings.hasOwnProperty( 'mainSidebarActive' ) && settings.mainSidebarActive ) {
 			return true;
 		}
 
@@ -35,21 +38,6 @@
 	};
 
 	/**
-	 * Check if the active theme supports a wide layout.
-	 *
-	 * @return {boolean} Whether the theme supports wide layout.
-	 */
-	const themeSupportsWide = () => {
-		let settings = wp.data.select( 'core/editor' ).getEditorSettings();
-
-		if ( settings.hasOwnProperty( 'alignWide' ) && !! settings.alignWide ) {
-			return true;
-		}
-
-		return false;
-	};
-
-	/**
 	 * Update editor wide support.
 	 *
 	 * @param {boolean} alignWide Whether the editor supports
@@ -58,52 +46,24 @@
 	 * @return {void}
 	 */
 	const updateWideSupport = ( alignWide ) => {
-		wp.data.dispatch( 'core/editor' ).updateEditorSettings( { 'alignWide': !! alignWide } );
-	};
-
-	/**
-	 * Update `data-align` attribute on each block.
-	 *
-	 * @param {boolean} alignWide Whether alignWide is supported.
-	 *
-	 * @return {void}
-	 */
-	const updateAlignAttribute = ( alignWide ) => {
-		let blocks = wp.data.select( 'core/editor' ).getBlocks();
-
-		blocks.forEach( ( block ) => {
-			if ( block.attributes.hasOwnProperty( 'align' ) ) {
-				let align = block.attributes.align;
-
-				if ( ! [ 'full', 'wide' ].includes( align ) ) {
-					return;
-				}
-
-				let blockWrapper = document.getElementById( 'block-' + block.clientId );
-
-				if ( blockWrapper ) {
-					blockWrapper.setAttribute( 'data-align', alignWide ? align : '' );
-				}
-			}
-		} );
+		wp.data.dispatch( 'core/block-editor' ).updateSettings( { 'alignWide': !! alignWide } );
 	};
 
 	/**
 	 * Add custom class to editor wrapper if main sidebar is active.
 	 *
-	 * @param {boolean} showSidebar Whether to add custom class.
+	 * @param {boolean} hasSidebar Whether to add custom class.
 	 *
 	 * @return {void}
 	 */
-	const toggleCustomSidebarClass = ( showSidebar ) => {
-		// First class for WP<=5.3 and second class for WP>=5.4.
-		const editorWrapper = document.querySelector( '.editor-writing-flow, .block-editor-writing-flow' );
+	const toggleCustomSidebarClass = ( hasSidebar ) => {
+		const editorWrapper = document.querySelector( editorWrapperSelector );
 
 		if ( ! editorWrapper ) {
 			return;
 		}
 
-		if ( !! showSidebar ) {
+		if ( hasSidebar ) {
 			editorWrapper.classList.add( 'storefront-has-sidebar' );
 		} else {
 			editorWrapper.classList.remove( 'storefront-has-sidebar' );
@@ -115,39 +75,38 @@
 	 *
 	 * @return {void}
 	 */
-	const maybeUpdateEditor = () => {
-		if ( 'template-fullwidth.php' === getCurrentPageTemplate() ) {
-			updateWideSupport( true );
-			toggleCustomSidebarClass( false );
-			updateAlignAttribute( true );
-		} else if ( sidebarIsActive() ) {
-			updateWideSupport( false );
-			toggleCustomSidebarClass( true );
-			updateAlignAttribute( false );
-		} else {
-			updateWideSupport( true );
-			toggleCustomSidebarClass( false );
-			updateAlignAttribute( true );
-		}
+	const maybeUpdateEditor = ( pageTemplate, sidebarActive ) => {
+		const hasSidebar = 'template-fullwidth.php' !== pageTemplate && sidebarActive;
+		updateWideSupport( ! hasSidebar );
+		toggleCustomSidebarClass( hasSidebar );
 	};
 
 	wp.domReady( () => {
-
-		// Don't do anything if the theme doesn't declare support for `align-wide`.
-		if ( ! themeSupportsWide() ) {
-			return;
-		}
-
-		maybeUpdateEditor();
-
-		let pageTemplate = getCurrentPageTemplate();
-
-		wp.data.subscribe( () => {
-			if ( getCurrentPageTemplate() !== pageTemplate ) {
-				pageTemplate = getCurrentPageTemplate();
-
-				maybeUpdateEditor();
+		const observer = new MutationObserver( ( mutationsList, observer ) => {
+			if ( ! document.querySelector( editorWrapperSelector ) ) {
+				return;
 			}
+
+			let pageTemplate = getCurrentPageTemplate();
+			let sidebarActive = sidebarIsActive();
+			maybeUpdateEditor( pageTemplate, sidebarActive );
+
+			wp.data.subscribe( () => {
+				const newPageTemplate = getCurrentPageTemplate();
+				const newSidebarActive = sidebarIsActive();
+				if ( newPageTemplate !== pageTemplate || newSidebarActive !== sidebarActive ) {
+					pageTemplate = newPageTemplate;
+					sidebarActive = newSidebarActive;
+
+					maybeUpdateEditor( pageTemplate, sidebarActive );
+				}
+			} );
+
+			observer.disconnect();
 		} );
+
+		const targetNode = document.querySelector( '.block-editor__container' );
+		const config = { childList: true, subtree: true };
+		observer.observe(targetNode, config);
 	} );
 } )();
