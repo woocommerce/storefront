@@ -6,10 +6,10 @@
  */
 
 // First class for WP<=5.3 and second class for WP>=5.4.
-const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow';
+const editorWrapperSelector =
+	'.editor-writing-flow, .block-editor-writing-flow';
 
-( function() {
-
+( function () {
 	/**
 	 * Check if the main sidebar is active (has widgets).
 	 *
@@ -21,7 +21,10 @@ const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow'
 	const sidebarIsActive = () => {
 		const settings = wp.data.select( 'core/editor' ).getEditorSettings();
 
-		if ( settings.hasOwnProperty( 'mainSidebarActive' ) && settings.mainSidebarActive ) {
+		if (
+			settings.hasOwnProperty( 'mainSidebarActive' ) &&
+			settings.mainSidebarActive
+		) {
 			return true;
 		}
 
@@ -34,7 +37,9 @@ const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow'
 	 * @return {string} The page template name.
 	 */
 	const getCurrentPageTemplate = () => {
-		return wp.data.select( 'core/editor' ).getEditedPostAttribute( 'template' );
+		return wp.data
+			.select( 'core/editor' )
+			.getEditedPostAttribute( 'template' );
 	};
 
 	/**
@@ -46,7 +51,9 @@ const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow'
 	 * @return {void}
 	 */
 	const updateWideSupport = ( alignWide ) => {
-		wp.data.dispatch( 'core/block-editor' ).updateSettings( { 'alignWide': !! alignWide } );
+		wp.data
+			.dispatch( 'core/block-editor' )
+			.updateSettings( { alignWide: !! alignWide } );
 	};
 
 	/**
@@ -76,7 +83,8 @@ const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow'
 	 * @return {void}
 	 */
 	const maybeUpdateEditor = ( pageTemplate, sidebarActive ) => {
-		const hasSidebar = 'template-fullwidth.php' !== pageTemplate && sidebarActive;
+		const hasSidebar =
+			'template-fullwidth.php' !== pageTemplate && sidebarActive;
 		updateWideSupport( ! hasSidebar );
 		toggleCustomSidebarClass( hasSidebar );
 	};
@@ -94,7 +102,10 @@ const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow'
 			wp.data.subscribe( () => {
 				const newPageTemplate = getCurrentPageTemplate();
 				const newSidebarActive = sidebarIsActive();
-				if ( newPageTemplate !== pageTemplate || newSidebarActive !== sidebarActive ) {
+				if (
+					newPageTemplate !== pageTemplate ||
+					newSidebarActive !== sidebarActive
+				) {
 					pageTemplate = newPageTemplate;
 					sidebarActive = newSidebarActive;
 
@@ -107,6 +118,6 @@ const editorWrapperSelector = '.editor-writing-flow, .block-editor-writing-flow'
 
 		const targetNode = document.querySelector( '.block-editor__container' );
 		const config = { childList: true, subtree: true };
-		observer.observe(targetNode, config);
+		observer.observe( targetNode, config );
 	} );
 } )();
