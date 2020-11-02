@@ -4,14 +4,17 @@ module.exports = function( grunt ) {
 
 	var sass = require( 'node-sass' );
 
+	var processors = [ require( 'autoprefixer' )() ];
+	if ( grunt.option('env') === 'production' ) {
+		processors.push( require( 'cssnano' )() );
+	}
+
 	grunt.initConfig({
 
 		// Autoprefixer.
 		postcss: {
 			options: {
-				processors: [
-					require( 'autoprefixer' )()
-				]
+				processors: processors
 			},
 			dist: {
 				src: [
