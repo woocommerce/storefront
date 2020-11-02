@@ -222,7 +222,6 @@ module.exports = function( grunt ) {
 					// main js
 					'assets/js/**/*.js',
 					'!assets/js/**/*.min.js',
-					'!assets/js/editor.js',
 
 					// customizer js
 					'assets/js/customizer/**/*.js',
@@ -241,7 +240,6 @@ module.exports = function( grunt ) {
 					'!assets/js/admin/welcome-screen/**/*.min.js'
 				],
 				tasks: [
-					'babel',
 					'jshint',
 					'uglify'
 				]
@@ -450,16 +448,6 @@ module.exports = function( grunt ) {
 					{ src: './storefront/**' }
 				]
 			}
-		},
-		babel: {
-			options: {
-				presets: ['@wordpress/babel-preset-default']
-			},
-			dist: {
-				files: {
-					'./assets/js/editor.js': './assets/js/src/editor.js'
-				}
-			}
 		}
 	});
 
@@ -482,7 +470,6 @@ module.exports = function( grunt ) {
 	// Register tasks
 	grunt.registerTask( 'default', [
 		'css',
-		'babel',
 		'jshint',
 		'uglify'
 	]);

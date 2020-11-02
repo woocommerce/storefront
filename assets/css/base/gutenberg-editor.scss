@@ -299,11 +299,6 @@ table {
 // Main content width
 .wp-block {
 	max-width: $container-width;
-
-	.storefront-has-sidebar & {
-		$span-value: span(9) / 100;
-		max-width: calc(#{$container-width} * #{$span-value / ( $span-value * 0 + 1 )}); // Unitless hack.
-	}
 }
 
 .wp-block[data-align='wide'] {

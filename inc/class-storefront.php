@@ -28,12 +28,10 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_action( 'wp_enqueue_scripts', array( $this, 'scripts' ), 10 );
 			add_action( 'wp_enqueue_scripts', array( $this, 'child_scripts' ), 30 ); // After WooCommerce.
 			add_action( 'enqueue_block_assets', array( $this, 'block_assets' ) );
-			add_action( 'enqueue_block_editor_assets', array( $this, 'block_editor_assets' ) );
 			add_filter( 'body_class', array( $this, 'body_classes' ) );
 			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
-			add_filter( 'block_editor_settings', array( $this, 'custom_editor_settings' ), 10, 2 );
 		}
 
 		/**
@@ -405,19 +403,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * Enqueue supplemental block editor assets.
-		 *
-		 * @since 2.4.0
-		 */
-		public function block_editor_assets() {
-			global $storefront_version;
-
-			// JS.
-			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-			wp_enqueue_script( 'storefront-editor', get_template_directory_uri() . '/assets/js/editor' . $suffix . '.js', array( 'wp-data', 'wp-dom-ready', 'wp-edit-post' ), $storefront_version, true );
-		}
-
-		/**
 		 * Enqueue child theme stylesheet.
 		 * A separate function is required as the child theme css needs to be enqueued _after_ the parent theme
 		 * primary css and the separate WooCommerce css.
@@ -493,26 +478,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			}
 
 			return $classes;
-		}
-
-		/**
-		 * Adds a custom parameter to the editor settings that is used
-		 * to track whether the main sidebar has widgets.
-		 *
-		 * @since 2.4.3
-		 * @param array   $settings Default editor settings.
-		 * @param WP_Post $post Post being edited.
-		 *
-		 * @return array Filtered block editor settings.
-		 */
-		public function custom_editor_settings( $settings, $post ) {
-			$settings['mainSidebarActive'] = false;
-
-			if ( is_active_sidebar( 'sidebar-1' ) ) {
-				$settings['mainSidebarActive'] = true;
-			}
-
-			return $settings;
 		}
 
 		/**
