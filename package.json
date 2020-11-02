@@ -54,7 +54,7 @@
     "grunt-wp-i18n": "1.0.3",
     "jest": "26.6.2",
     "jest-puppeteer": "4.4.0",
-    "node-sass": "4.14.1",
+    "node-sass": "5.0.0",
     "postcss": "8.1.4",
     "puppeteer": "4.0.1",
     "stylelint": "13.7.2",
