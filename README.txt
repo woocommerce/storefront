@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
-Tested up to: 5.5.1
-Stable tag: 2.8.0
-Version: 2.8.0
+Tested up to: 5.6.0
+Stable tag: 2.9.0-rc1
+Version: 2.9.0-rc1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,16 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 2.9.0 - 2020-11-10 =
+* Enhancement – Added styles to the Filter Products by Price block, so the accent color is used in the slider. [#1508](https://github.com/woocommerce/storefront/pull/1508)
+* Performance – Added CSS minification. [#1503](https://github.com/woocommerce/storefront/pull/1503)
+* Fix - Cover block text color attributes not being applied. [#1513](https://github.com/woocommerce/storefront/pull/1513)
+* Fix - Inconsistent font sizes of category and product titles in shop page. [#1501](https://github.com/woocommerce/storefront/pull/1501)
+* Dev - Update various dependencies, including major updates:
+  - `autoprefixer` v10 and `postcss` v8 [#1502](https://github.com/woocommerce/storefront/pull/1502)
+  - `grunt-contrib-jshint` v3 [#1507](https://github.com/woocommerce/storefront/pull/1507)
+  - `node-sass` v5 [#1523](https://github.com/woocommerce/storefront/pull/1523)
 
 = 2.8.0 - 2020-10-13 =
 - Dev: Reinstate PHPcs linting #1463
