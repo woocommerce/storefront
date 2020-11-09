@@ -464,7 +464,6 @@ module.exports = function( grunt ) {
 	grunt.loadNpmTasks( '@lodder/grunt-postcss' );
 	grunt.loadNpmTasks( 'grunt-contrib-compress' );
 	grunt.loadNpmTasks( 'grunt-stylelint' );
-	grunt.loadNpmTasks( 'grunt-babel' );
 
 
 	// Register tasks
