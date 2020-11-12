@@ -18,7 +18,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<section id="comments" class="comments-area" aria-label="<?php esc_html_e( 'Post Comments', 'storefront' ); ?>">
+<section id="comments" class="comments-area" aria-label="<?php esc_attr_e( 'Post Comments', 'storefront' ); ?>">
 
 	<?php
 	if ( have_comments() ) :
