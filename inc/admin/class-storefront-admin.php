@@ -69,9 +69,9 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 				<section class="storefront-welcome-nav">
 					<span class="storefront-welcome-nav__version">Storefront <?php echo esc_attr( $storefront_version ); ?></span>
 					<ul>
-						<li><a href="https://wordpress.org/support/theme/storefront" target="_blank"><?php esc_attr_e( 'Support', 'storefront' ); ?></a></li>
-						<li><a href="https://docs.woocommerce.com/documentation/themes/storefront/" target="_blank"><?php esc_attr_e( 'Documentation', 'storefront' ); ?></a></li>
-						<li><a href="https://woocommerce.wordpress.com/category/storefront/" target="_blank"><?php esc_attr_e( 'Development blog', 'storefront' ); ?></a></li>
+						<li><a href="https://wordpress.org/support/theme/storefront" target="_blank"><?php esc_html_e( 'Support', 'storefront' ); ?></a></li>
+						<li><a href="https://docs.woocommerce.com/documentation/themes/storefront/" target="_blank"><?php esc_html_e( 'Documentation', 'storefront' ); ?></a></li>
+						<li><a href="https://woocommerce.wordpress.com/category/storefront/" target="_blank"><?php esc_html_e( 'Development blog', 'storefront' ); ?></a></li>
 					</ul>
 				</section>
 
@@ -98,42 +98,42 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 				<div class="storefront-enhance">
 					<div class="storefront-enhance__column storefront-bundle">
-						<h3><?php esc_attr_e( 'Storefront Extensions Bundle', 'storefront' ); ?></h3>
+						<h3><?php esc_html_e( 'Storefront Extensions Bundle', 'storefront' ); ?></h3>
 						<span class="bundle-image">
 							<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/storefront-bundle-hero.png" alt="Storefront Extensions Hero" />
 						</span>
 
 						<p>
-							<?php esc_attr_e( 'All the tools you\'ll need to define your style and customize Storefront.', 'storefront' ); ?>
+							<?php esc_html_e( 'All the tools you\'ll need to define your style and customize Storefront.', 'storefront' ); ?>
 						</p>
 
 						<p>
-							<?php esc_attr_e( 'Make it yours without touching code with the Storefront Extensions bundle. Express yourself, optimize conversions, delight customers.', 'storefront' ); ?>
+							<?php esc_html_e( 'Make it yours without touching code with the Storefront Extensions bundle. Express yourself, optimize conversions, delight customers.', 'storefront' ); ?>
 						</p>
 
 
 						<p>
-							<a href="https://woocommerce.com/products/storefront-extensions-bundle/?utm_source=storefront&utm_medium=product&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_attr_e( 'Read more and purchase', 'storefront' ); ?></a>
+							<a href="https://woocommerce.com/products/storefront-extensions-bundle/?utm_source=storefront&utm_medium=product&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_html_e( 'Read more and purchase', 'storefront' ); ?></a>
 						</p>
 					</div>
 					<div class="storefront-enhance__column storefront-child-themes">
-						<h3><?php esc_attr_e( 'Alternate designs', 'storefront' ); ?></h3>
+						<h3><?php esc_html_e( 'Alternate designs', 'storefront' ); ?></h3>
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/child-themes.jpg" alt="Storefront Powerpack" />
 
 						<p>
-							<?php esc_attr_e( 'Quickly and easily transform your shops appearance with Storefront child themes.', 'storefront' ); ?>
+							<?php esc_html_e( 'Quickly and easily transform your shops appearance with Storefront child themes.', 'storefront' ); ?>
 						</p>
 
 						<p>
-							<?php esc_attr_e( 'Each has been designed to serve a different industry - from fashion to food.', 'storefront' ); ?>
+							<?php esc_html_e( 'Each has been designed to serve a different industry - from fashion to food.', 'storefront' ); ?>
 						</p>
 
 						<p>
-							<?php esc_attr_e( 'Of course they are all fully compatible with each Storefront extension.', 'storefront' ); ?>
+							<?php esc_html_e( 'Of course they are all fully compatible with each Storefront extension.', 'storefront' ); ?>
 						</p>
 
 						<p>
-							<a href="https://woocommerce.com/product-category/themes/storefront-child-theme-themes/?utm_source=storefront&utm_medium=product&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_attr_e( 'Check \'em out', 'storefront' ); ?></a>
+							<a href="https://woocommerce.com/product-category/themes/storefront-child-theme-themes/?utm_source=storefront&utm_medium=product&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_html_e( 'Check \'em out', 'storefront' ); ?></a>
 						</p>
 					</div>
 				</div>
@@ -203,8 +203,8 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 					);
 				}
 				?>
-				<a href="<?php echo esc_url( $button['url'] ); ?>" class="storefront-button <?php echo esc_attr( $button['classes'] ); ?>" data-originaltext="<?php echo esc_attr( $button['message'] ); ?>" data-slug="<?php echo esc_attr( $plugin_slug ); ?>" aria-label="<?php echo esc_attr( $button['message'] ); ?>"><?php echo esc_attr( $button['message'] ); ?></a>
-				<a href="https://wordpress.org/plugins/<?php echo esc_attr( $plugin_slug ); ?>" target="_blank"><?php esc_attr_e( 'Learn more', 'storefront' ); ?></a>
+				<a href="<?php echo esc_url( $button['url'] ); ?>" class="storefront-button <?php echo esc_attr( $button['classes'] ); ?>" data-originaltext="<?php echo esc_attr( $button['message'] ); ?>" data-slug="<?php echo esc_attr( $plugin_slug ); ?>" aria-label="<?php echo esc_attr( $button['message'] ); ?>"><?php echo esc_html( $button['message'] ); ?></a>
+				<a href="https://wordpress.org/plugins/<?php echo esc_attr( $plugin_slug ); ?>" target="_blank"><?php esc_html_e( 'Learn more', 'storefront' ); ?></a>
 				<?php
 			}
 		}
