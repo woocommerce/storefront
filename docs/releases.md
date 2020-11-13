@@ -87,6 +87,7 @@ Now we get to release!
   - Use this format for tag: `version/1.2.3`.
   - Paste changelog into “release details” field.
 - Upload to [WordPress.org](https://wordpress.org/themes/upload/). (You'll need access to the `Automattic` user account.)
+  - If you get warnings when the theme is auto-scanned during submission, open an issue so they can be fixed before the next release.
 - Publish any [user documentation](https://docs.woocommerce.com/documentation/themes/storefront/) updates.
 - Post an announcement on the [dev blog](https://woocommerce.wordpress.com/category/storefront/).
 
