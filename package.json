@@ -55,7 +55,7 @@
     "postcss": "8.1.7",
     "puppeteer": "4.0.1",
     "stylelint": "13.8.0",
-    "susy": "2.2.14"
+    "susy": "3.0.6"
   },
   "engines": {
     "node": ">=0.8.0",
