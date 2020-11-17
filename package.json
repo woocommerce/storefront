@@ -33,7 +33,7 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "@lodder/grunt-postcss": "3.0.0",
-    "@wordpress/env": "1.6.0",
+    "@wordpress/env": "2.1.0",
     "autoprefixer": "10.0.2",
     "bourbon": "5.1.0",
     "cssnano": "4.1.10",
