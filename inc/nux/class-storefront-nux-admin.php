@@ -23,8 +23,18 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 */
 		public function __construct() {
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
-			add_action( 'admin_notices', array( $this, 'admin_notices' ), 99 );
-			add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
+
+			/*
+			* New admin panel is the default option since WooCommerce 4.6.0.
+			* In case the user has installed the Storefront theme without WooCommerce plugin this will detect this scenario and show the admin notice.
+			*/
+			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.6.0', '>=' ) ) {
+				add_action( 'admin_notices', array( $this, 'admin_inbox_messages' ), 99 );
+			} else {
+				add_action( 'admin_notices', array( $this, 'admin_notices' ), 99 );
+				add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
+			}
+
 			add_action( 'admin_post_storefront_starter_content', array( $this, 'redirect_customizer' ) );
 			add_action( 'init', array( $this, 'log_fresh_site_state' ) );
 			add_filter( 'admin_body_class', array( $this, 'admin_body_class' ) );
@@ -148,6 +158,17 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			}
 
 			update_option( 'storefront_nux_dismissed', true );
+		}
+
+		/**
+		 * Prints Storefront inbox messages.
+		 *
+		 * @since 3.0.0
+		 */
+		public function admin_inbox_messages() {
+			// Customizer link. 
+			require 'class-storefront-nux-admin-inbox-messages-customize.php';
+			Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_add_note();
 		}
 
 		/**
