@@ -13,10 +13,10 @@
     "css": "grunt css",
     "start": "grunt watch",
     "labels:dry": "github-label-sync --labels ./.github/label-sync-config.json --allow-added-labels --dry-run woocommerce/storefront",
-		"labels:sync": "github-label-sync --labels ./.github/label-sync-config.json --allow-added-labels woocommerce/storefront",
+    "labels:sync": "github-label-sync --labels ./.github/label-sync-config.json --allow-added-labels woocommerce/storefront",
     "wp-env": "wp-env",
     "e2e": "jest",
-    "e2e:ci": "npm run wp-env start && npm run e2e"
+    "e2e:ci": "npm run wp-env start && npm run wp-env run tests-cli wp theme activate storefront && npm run e2e"
   },
   "jest": {
     "preset": "jest-puppeteer",
@@ -35,7 +35,7 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "@lodder/grunt-postcss": "3.0.0",
-    "@wordpress/env": "1.6.0",
+    "@wordpress/env": "2.1.0",
     "autoprefixer": "10.0.4",
     "bourbon": "7.0.0",
     "cssnano": "4.1.10",
