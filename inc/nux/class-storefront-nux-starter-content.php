@@ -656,7 +656,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				$args['hide_empty'] = false;
 
 				// List of categories to display.
-				$args['ids'] = implode( $product_cats, ',' );
+				$args['ids'] = implode( ',', $product_cats );
 			}
 
 			return $args;
