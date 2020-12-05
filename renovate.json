@@ -8,5 +8,6 @@
       "automerge": true,
       "requiredStatusChecks": null
     }
-  ]
+  ],
+  "ignoreDeps": ["susy"]
 }
