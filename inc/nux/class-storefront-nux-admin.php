@@ -30,8 +30,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			*/
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.6.0', '>=' ) ) {
 				add_action( 'admin_notices', array( $this, 'admin_inbox_messages' ), 99 );
+			} else {
+				add_action( 'admin_notices', array( 'Storefront_NUX_Admin', 'admin_notices' ), 99 );
 			}
-			add_action( 'admin_notices', array( 'Storefront_NUX_Admin', 'admin_notices' ), 99 );
 			add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
 
 			add_action( 'admin_post_storefront_starter_content', array( $this, 'redirect_customizer' ) );
@@ -90,7 +91,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				<?php
 				self::admin_notices_content();
 				?>
-				</div>
 			</div>
 			<?php
 		}
@@ -129,28 +129,34 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 							<?php endif; ?>
 
 							<?php if ( false === (bool) get_option( 'storefront_nux_fresh_site' ) ) : ?>
-								<label>
-									<input type="checkbox" name="homepage" checked>
-									<?php
-									if ( 'page' === get_option( 'show_on_front' ) ) {
-										esc_html_e( 'Apply the Storefront homepage template', 'storefront' );
-									} else {
-										esc_html_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
-									}
-									?>
-								</label>
+								<div class="notice-input">
+									<label>
+										<input type="checkbox" name="homepage" checked>
+										<?php
+										if ( 'page' === get_option( 'show_on_front' ) ) {
+											esc_html_e( 'Apply the Storefront homepage template', 'storefront' );
+										} else {
+											esc_html_e( 'Create a homepage using Storefront\'s homepage template', 'storefront' );
+										}
+										?>
+									</label>
+								</div>
 
 								<?php if ( true === self::_is_woocommerce_empty() ) : ?>
-									<label>
-										<input type="checkbox" name="products" checked>
-										<?php esc_html_e( 'Add example products', 'storefront' ); ?>
-									</label>
+									<div class="notice-input">
+										<label>
+											<input type="checkbox" name="products" checked>
+											<?php esc_html_e( 'Add example products', 'storefront' ); ?>
+										</label>
+									</div>
 								<?php endif; ?>
 							<?php endif; ?>
 
 							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
+							<a href="#" class="sf-nux-dismiss-button" ><?php esc_attr_e( 'Skip.', 'storefront' ); ?></a>
 						</form>
 					<?php endif; ?>
+				</div>
 			<?php
 		}
 

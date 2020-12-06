@@ -64,7 +64,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 			global $storefront_version;
 
-			$show_setup_screen = false === (bool) get_option( 'storefront_nux_dismissed' );
+			$show_setup_screen = ( false === (bool) get_option( 'storefront_nux_dismissed' ) ) && ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.6.0', '>=' ) );
 			?>
 
 			<div class="storefront-wrap">
