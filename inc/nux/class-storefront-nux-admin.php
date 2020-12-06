@@ -179,9 +179,8 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 3.0.0
 		 */
 		public function admin_inbox_messages() {
-			// Customizer link.
+			// Storefront settings page link and welcome message.
 			require 'class-storefront-nux-admin-inbox-messages-customize.php';
-			Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_delete_note();
 			Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_add_note();
 		}
 
