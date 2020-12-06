@@ -63,6 +63,8 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 			require_once ABSPATH . 'wp-admin/admin-header.php';
 
 			global $storefront_version;
+
+			$show_setup_screen = false === (bool) get_option( 'storefront_nux_dismissed' );
 			?>
 
 			<div class="storefront-wrap">
@@ -81,17 +83,22 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 
 				<div class="storefront-intro">
 					<?php
-					/**
-					 * Display a different message when the user visits this page when returning from the guided tour
-					 */
-					$referrer = wp_get_referer();
 
-					if ( strpos( $referrer, 'sf_starter_content' ) !== false ) {
-						/* translators: 1: HTML, 2: HTML */
-						echo '<h1>' . sprintf( esc_attr__( 'Setup complete %1$sYour Storefront adventure begins now 🚀%2$s ', 'storefront' ), '<span>', '</span>' ) . '</h1>';
-						echo '<p>' . esc_attr__( 'One more thing... You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
+					if ( $show_setup_screen ) {
+						Storefront_NUX_Admin::admin_notices();
 					} else {
-						echo '<p>' . esc_attr__( 'Hello! You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
+						/**
+						 * Display a different message when the user visits this page when returning from the guided tour
+						 */
+						$referrer = wp_get_referer();
+
+						if ( strpos( $referrer, 'sf_starter_content' ) !== false ) {
+							/* translators: 1: HTML, 2: HTML */
+							echo '<h1>' . sprintf( esc_attr__( 'Setup complete %1$sYour Storefront adventure begins now 🚀%2$s ', 'storefront' ), '<span>', '</span>' ) . '</h1>';
+							echo '<p>' . esc_attr__( 'One more thing... You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
+						} else {
+							echo '<p>' . esc_attr__( 'Hello! You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
+						}
 					}
 					?>
 				</div>
