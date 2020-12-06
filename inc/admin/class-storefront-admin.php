@@ -85,7 +85,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 					<?php
 
 					if ( $show_setup_screen ) {
-						Storefront_NUX_Admin::admin_notices();
+						Storefront_NUX_Admin::admin_notices_content();
 					} else {
 						/**
 						 * Display a different message when the user visits this page when returning from the guided tour
