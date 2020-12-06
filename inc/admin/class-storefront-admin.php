@@ -81,12 +81,13 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 					<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/storefront-icon.svg" alt="Storefront" />
 				</div>
 
-				<div class="storefront-intro">
-					<?php
-
-					if ( $show_setup_screen ) {
-						Storefront_NUX_Admin::admin_notices_content();
-					} else {
+				<?php
+				if ( $show_setup_screen ) {
+					Storefront_NUX_Admin::admin_notices_content();
+				} else {
+					?>
+					<div class="storefront-intro">
+						<?php
 						/**
 						 * Display a different message when the user visits this page when returning from the guided tour
 						 */
@@ -99,8 +100,8 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 						} else {
 							echo '<p>' . esc_attr__( 'Hello! You might be interested in the following Storefront extensions and designs.', 'storefront' ) . '</p>';
 						}
-					}
-					?>
+				}
+				?>
 				</div>
 
 				<div class="storefront-enhance">
