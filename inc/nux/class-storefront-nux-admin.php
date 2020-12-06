@@ -166,13 +166,10 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 3.0.0
 		 */
 		public function admin_inbox_messages() {
-			// Customizer link. 
+			// Customizer link.
 			require 'class-storefront-nux-admin-inbox-messages-customize.php';
-			//Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_delete_note();
+			Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_delete_note();
 			Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_add_note();
-			require 'class-storefront-nux-admin-inbox-notices-customize-example-products.php';
-			//Storefront_NUX_Admin_Inbox_Messages_Customize_Example_Products::possibly_delete_note();
-			Storefront_NUX_Admin_Inbox_Messages_Customize_Example_Products::possibly_add_note();
 		}
 
 		/**
