@@ -30,10 +30,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			*/
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.6.0', '>=' ) ) {
 				add_action( 'admin_notices', array( $this, 'admin_inbox_messages' ), 99 );
-			} else {
-				add_action( 'admin_notices', array( $this, 'admin_notices' ), 99 );
-				add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
 			}
+			add_action( 'admin_notices', array( 'Storefront_NUX_Admin', 'admin_notices' ), 99 );
+			add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
 
 			add_action( 'admin_post_storefront_starter_content', array( $this, 'redirect_customizer' ) );
 			add_action( 'init', array( $this, 'log_fresh_site_state' ) );
@@ -71,7 +70,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 *
 		 * @since 2.2.0
 		 */
-		public function admin_notices() {
+		public static function admin_notices() {
 			global $pagenow;
 
 			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
@@ -88,7 +87,17 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 				<span class="sf-icon">
 					<?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/storefront-icon.svg" alt="Storefront" width="250" />'; ?>
 				</span>
+				<?php
+				self::admin_notices_content();
+				?>
+				</div>
+			</div>
+			<?php
+		}
 
+		public static function admin_notices_content() {
+			global $pagenow;
+			?>
 				<div class="notice-content">
 					<?php if ( ! storefront_is_woocommerce_activated() && current_user_can( 'install_plugins' ) && current_user_can( 'activate_plugins' ) ) : ?>
 						<h2><?php esc_html_e( 'Thanks for installing Storefront, you rock! 🤘', 'storefront' ); ?></h2>
@@ -115,7 +124,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 								<input type="hidden" name="homepage" value="on">
 							<?php endif; ?>
 
-							<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && true === $this->_is_woocommerce_empty() ) : ?>
+							<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && true === self::_is_woocommerce_empty() ) : ?>
 								<input type="hidden" name="products" value="on">
 							<?php endif; ?>
 
@@ -131,7 +140,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 									?>
 								</label>
 
-								<?php if ( true === $this->_is_woocommerce_empty() ) : ?>
+								<?php if ( true === self::_is_woocommerce_empty() ) : ?>
 									<label>
 										<input type="checkbox" name="products" checked>
 										<?php esc_html_e( 'Add example products', 'storefront' ); ?>
@@ -142,8 +151,6 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
 						</form>
 					<?php endif; ?>
-				</div>
-			</div>
 			<?php
 		}
 
@@ -321,7 +328,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 2.2.0
 		 * @return bool
 		 */
-		private function _is_woocommerce_empty() {
+		private static function _is_woocommerce_empty() {
 			$products = wp_count_posts( 'product' );
 
 			if ( 0 < $products->publish ) {
