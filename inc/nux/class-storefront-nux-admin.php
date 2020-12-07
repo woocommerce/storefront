@@ -31,7 +31,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.6.0', '>=' ) ) {
 				add_action( 'admin_notices', array( $this, 'admin_inbox_messages' ), 99 );
 			} else {
-				add_action( 'admin_notices', array( 'Storefront_NUX_Admin', 'admin_notices' ), 99 );
+				add_action( 'admin_notices', array( $this, 'admin_notices' ), 99 );
 			}
 			add_action( 'wp_ajax_storefront_dismiss_notice', array( $this, 'dismiss_nux' ) );
 
@@ -71,7 +71,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 *
 		 * @since 2.2.0
 		 */
-		public static function admin_notices() {
+		public function admin_notices() {
 			global $pagenow;
 
 			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
@@ -89,7 +89,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 					<?php echo '<img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/admin/storefront-icon.svg" alt="Storefront" width="250" />'; ?>
 				</span>
 				<?php
-				self::admin_notices_content();
+					self::admin_notices_content();
 				?>
 			</div>
 			<?php
