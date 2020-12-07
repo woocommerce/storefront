@@ -179,6 +179,10 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 * @since 3.0.0
 		 */
 		public function admin_inbox_messages() {
+			// The setup already has happened. No inbox message needed.
+			if ( true === (bool) get_option( 'storefront_nux_dismissed' ) ) {
+				return;
+			}
 			// Storefront settings page link and welcome message.
 			require 'class-storefront-nux-admin-inbox-messages-customize.php';
 			Storefront_NUX_Admin_Inbox_Messages_Customize::possibly_add_note();
