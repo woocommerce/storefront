@@ -95,6 +95,12 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			<?php
 		}
 
+		/**
+		 * Admin notices body.
+		 * Extracted to a separate static function to be usable in other than admin_notice context.
+		 *
+		 * @since 3.0.0
+		 */
 		public static function admin_notices_content() {
 			global $pagenow;
 			?>

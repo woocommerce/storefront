@@ -6,6 +6,9 @@
 		return;
 	}
 
+	/*
+	* Ajax request that will hide the Storefront NUX admin notice or message.
+	*/
 	function dismiss_nux() {
 		$.ajax({
 			type:     'POST',
