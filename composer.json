@@ -13,7 +13,7 @@
     "woocommerce/woocommerce-sniffs": "0.1.0",
     "phpcompatibility/php-compatibility": "9.3.5",
     "woocommerce/woocommerce-git-hooks": "*",
-    "dealerdirect/phpcodesniffer-composer-installer": "0.7.1"
+    "dealerdirect/phpcodesniffer-composer-installer": "0.7.0"
   },
   "scripts": {
     "pre-update-cmd": [
