@@ -31,7 +31,7 @@ class Storefront_NUX_Admin_Inbox_Messages_Customize {
 	public static function get_note() {
 		$note = new Note();
 		$note->set_title( __( 'Design your store with Storefront 🎨', 'storefront' ) );
-		$note->set_content( __( 'Visit the Storefront settings page to start setup and customization of your Shop.', 'storefront' ) );
+		$note->set_content( __( 'Visit the Storefront settings page to start setup and customization of your shop.', 'storefront' ) );
 		$note->set_type( Note::E_WC_ADMIN_NOTE_INFORMATIONAL );
 		$note->set_name( self::NOTE_NAME );
 		$note->set_content_data( (object) array() );
