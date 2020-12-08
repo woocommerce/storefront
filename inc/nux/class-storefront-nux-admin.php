@@ -158,7 +158,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 							<?php endif; ?>
 
 							<input type="submit" name="storefront-guided-tour" class="sf-nux-button" value="<?php esc_attr_e( 'Let\'s go!', 'storefront' ); ?>">
-							<a href="#" class="sf-nux-dismiss-button" ><?php esc_attr_e( 'Skip.', 'storefront' ); ?></a>
+							<a href="#" class="sf-nux-dismiss-button" ><?php esc_attr_e( 'Skip', 'storefront' ); ?></a>
 						</form>
 					<?php endif; ?>
 				</div>
