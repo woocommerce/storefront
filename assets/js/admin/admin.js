@@ -26,6 +26,7 @@
 
 		// Dismiss notice inside theme page.
 		$( document ).on( 'click', '.sf-nux-dismiss-button', function() {
+			dismiss_nux();
 			$( '.storefront-intro-setup' ).hide();
 			$( '.storefront-intro-message' ).fadeIn( 'slow' );
 		});
