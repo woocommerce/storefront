@@ -25,10 +25,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 
 			/*
-			* New admin panel is the default option since WooCommerce 4.6.0.
 			* In case the user has installed the Storefront theme without WooCommerce plugin this will detect this scenario and show the admin notice.
 			*/
-			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.6.0', '>=' ) ) {
+			if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '4.8.0', '>=' ) ) {
 				add_action( 'admin_notices', array( $this, 'admin_inbox_messages' ), 99 );
 			} else {
 				add_action( 'admin_notices', array( $this, 'admin_notices' ), 99 );
