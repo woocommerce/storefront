@@ -3,7 +3,7 @@ Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.6.0
 Stable tag: 2.9.0
-Version: 2.9.0
+Version: 3.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -48,6 +48,17 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.0.0 - 2020-12-15 = 
+* Enhancement - Add missing link text on cart button in handheld footer bar [#1205](https://github.com/woocommerce/storefront/issues/1205)
+* Enhancement - Move Storefront admin notice content to the Storefront Appearance page.[#1544](https://github.com/woocommerce/storefront/pull/1544)
+* Fix - Implode parameters order compatibility for PHP8 [#1553](https://github.com/woocommerce/storefront/pull/1553)
+* Dev - Update various dependencies, including major updates:
+  - `@wordpress/env` to v2 [#1459](https://github.com/woocommerce/storefront/pull/1459)
+  - `autoprefixer` to v10.0.4 [#1548](https://github.com/woocommerce/storefront/pull/1548)
+  - `puppeteer` to v5 [#1410](https://github.com/woocommerce/storefront/pull/1410)
+  - `grunt-contrib-uglify` to v5 [#1426](https://github.com/woocommerce/storefront/pull/1426)
+  - `bourbon` to v7 [#1388](https://github.com/woocommerce/storefront/pull/1388)
 
 = 2.9.0 - 2020-11-10 =
 * Enhancement – Added styles to the Filter Products by Price block, so the accent color is used in the slider. [#1508](https://github.com/woocommerce/storefront/pull/1508)
