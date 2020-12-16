@@ -6,25 +6,17 @@ Note that Storefront bumps the minor version (2.x.0) between releases and the ne
 
 ## Steps
 
-The release process has three main phases:
-
-- Building and testing a release candidate (RC) - steps 1-3 below.
-- Fixing any issues that arise during RC testing.
-- Building and releasing the final release - steps 1 & 4-6.
-
-Depending on the release, releasing and testing an RC may not be necessary (i.e. skip step 2); for larger releases, multiple RCs may be worthwhile (i.e. repeat steps 1-3).
-
 ### 1 – Prepare code & build zip file
 
 - Confirm all work intended for release (fixes, features) is completed and merged to release branch.
   - Typically we release Storefront from default branch (`trunk`).
-    - A release branch (e.g. `release/2.7`) is used as needed, e.g. patch releases (rare).
+    - A release branch (e.g. `2.7`) is used as needed, e.g. patch releases (rare).
   - Ensure testing instructions for all enhancements are [available on the wiki](https://github.com/woocommerce/storefront/wiki/Release-Testing-Instructions).
 - Review any [dependency updates since the last release](https://github.com/woocommerce/storefront/pulls?q=is%3Apr+author%3Aapp%2Frenovate+is%3Aclosed).
   - Is extra testing needed?
   - Add release notes as appropriate (e.g. major versions or risky/impactful updates).
 - Ensure your local checkout is on release branch and up to date!
-- Update version numbers and release date (if you're building an RC version make sure you use the correct version strategy - eg. 2.6.1-rc1):
+- Update version numbers and release date.
   - `readme.txt`
   - `style.scss`
   - `package.json` and `package-lock.json`
@@ -43,16 +35,6 @@ __*Outcome*: You know what changes are in the release, what might be impacted, a
 __*Outcome*: A `storefront.zip` file that you can test with.__
 
 __*Outcome*: All release changes including versions and POT file are committed and pushed to release branch.__
-
-### 2 – Publish RC build (optional)
-
-- Publish release on [GitHub](https://github.com/woocommerce/storefront/releases).
-  - Upload release zip.
-  - Use this format for tag: `version/1.2.3-rc.1`.
-  - Paste changelog into “release details” field.
-  - Check `This is a pre-release` tickbox.
-
-__*Outcome*: A `storefront.zip` file is available to the community and other stakeholders for testing and feedback.__
 
 ### 3 – Test & QA
 
@@ -81,10 +63,9 @@ __*Outcome*: You (release lead) are confident that the product is ready for rele
 
 Now we get to release!
 
-- If necessary, build final `storefront.zip` with correct (non-RC) version number (repeat step 1, and appropriate testing - step 3).
 - Publish release on [GitHub](https://github.com/woocommerce/storefront/releases).
   - Upload release zip.
-  - Use this format for tag: `version/1.2.3`.
+  - Use this format for tag: `1.2.3`.
   - Paste changelog into “release details” field.
 - Upload to [WordPress.org](https://wordpress.org/themes/upload/). (You'll need access to the `Automattic` user account.)
   - If you get warnings when the theme is auto-scanned during submission, open an issue so they can be fixed before the next release.
