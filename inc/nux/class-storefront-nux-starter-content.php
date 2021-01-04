@@ -33,11 +33,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_action( 'after_setup_theme', array( $this, 'remove_default_widgets' ) );
 			add_action( 'transition_post_status', array( $this, 'transition_post_status' ), 10, 3 );
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
-
-			if ( version_compare( get_bloginfo( 'version' ), '5.2', '>=' ) &&
-			( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.6.0', '>=' ) ) ) {
-				add_action( 'customize_preview_init', array( $this, 'update_homepage_content' ), 10 );
-			}
+			add_action( 'customize_preview_init', array( $this, 'update_homepage_content' ), 10 );
 
 			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
 				add_filter( 'storefront_starter_content', '__return_empty_array' );
@@ -66,6 +62,10 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		public function starter_content() {
 			$starter_content = array(
 				'posts'       => array(
+					'home'    => array(
+						'post_title' => esc_attr__( 'Homepage', 'storefront' ),
+						'template'   => 'template-fullwidth.php',
+					),
 					'about'   => array(
 						'post_type'    => 'page',
 						'post_title'   => __( 'About', 'storefront' ),
@@ -200,29 +200,6 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 					),
 				),
 			);
-
-			// Add homepage.
-			if ( version_compare( get_bloginfo( 'version' ), '5.2', '>=' ) &&
-				( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.6.0', '>=' ) ) ) {
-				$homepage_content = array(
-					'post_title' => esc_attr__( 'Homepage', 'storefront' ),
-					'template'   => 'template-fullwidth.php',
-				);
-			} else {
-				$homepage_content = array(
-					'post_title'   => esc_attr__( 'Welcome', 'storefront' ),
-					/* translators: %s: 'End Of Line' symbol */
-					'post_content' => sprintf( esc_attr__( 'This is your homepage which is what most visitors will see when they first visit your shop.%sYou can change this text by editing the "Welcome" page via the "Pages" menu in your dashboard.', 'storefront' ), PHP_EOL . PHP_EOL ),
-					'template'     => 'template-homepage.php',
-					'thumbnail'    => '{{hero-image}}',
-				);
-			}
-
-			$homepage = array(
-				'home' => $homepage_content,
-			);
-
-			$starter_content['posts'] = array_merge( $starter_content['posts'], $homepage );
 
 			// Add products.
 			$starter_content_wc_products = $this->starter_content_products();
