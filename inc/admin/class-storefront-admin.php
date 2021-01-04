@@ -231,7 +231,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 		 *
 		 * @param string $plugin_slug The plugin slug.
 		 */
-		public function is_plugin_installed( $plugin_slug ) {
+		private function is_plugin_installed( $plugin_slug ) {
 			if ( file_exists( WP_PLUGIN_DIR . '/' . $plugin_slug ) ) {
 				$plugins = get_plugins( '/' . $plugin_slug );
 				if ( ! empty( $plugins ) ) {
