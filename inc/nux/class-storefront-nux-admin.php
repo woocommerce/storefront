@@ -129,7 +129,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 								<input type="hidden" name="homepage" value="on">
 							<?php endif; ?>
 
-							<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && true === $this->is_woocommerce_empty() ) : ?>
+							<?php if ( true === (bool) get_option( 'storefront_nux_fresh_site' ) && self::is_woocommerce_empty() ) : ?>
 								<input type="hidden" name="products" value="on">
 							<?php endif; ?>
 
@@ -147,7 +147,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 									</label>
 								</div>
 
-								<?php if ( true === self::is_woocommerce_empty() ) : ?>
+								<?php if ( self::is_woocommerce_empty() ) : ?>
 									<div class="notice-input">
 										<label>
 											<input type="checkbox" name="products" checked>
@@ -341,7 +341,7 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 *
 		 * @return bool
 		 */
-		private function is_woocommerce_empty() {
+		private static function is_woocommerce_empty() {
 			$products = wp_count_posts( 'product' );
 
 			if ( 0 < $products->publish ) {
