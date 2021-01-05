@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.6.0
-Stable tag: 2.9.0
-Version: 3.0.0
+Stable tag: 3.1.0
+Version: 3.1.0
 WC requires at least: 4.2
 WC tested up to: 4.8
 License: GPLv2 or later
@@ -50,6 +50,13 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.1.0 - 2021-01-05 =
+* Fix – Prevent a fatal error on activation if WooCommerce Admin is intentionally disabled.
+* Fix – Removed legacy code targeting unsupported versions of WooCommerce. Storefront currently supports 4.2+.
+* Dev - Update stylelint to use stylelint-config-wordpress\scss config and refactor SCSS files to follow WordPress CSS coding standards.
+* Dev - Updated engines in package.json.
+* Dev - Fixed PHP linting warnings.
 
 = 3.0.0 - 2020-12-15 = 
 * Enhancement - Add missing link text on cart button in handheld footer bar [#1205](https://github.com/woocommerce/storefront/issues/1205)

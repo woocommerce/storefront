@@ -96,4 +96,3 @@ If Storefront is already 100% translated for your language, join the team anyway
 
 * [General GitHub documentation](http://help.github.com/)
 * [GitHub pull request documentation](http://help.github.com/send-pull-requests/)
-* [Storefront release process](./docs/releases.md)

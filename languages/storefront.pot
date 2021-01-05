@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 3.0.0\n"
+"Project-Id-Version: Storefront 3.1.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2021-01-04 15:03:12+00:00\n"
+"POT-Creation-Date: 2021-01-05 16:12:03+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -529,6 +529,10 @@ msgstr ""
 msgid "Done"
 msgstr ""
 
+#. Template Name of the plugin/theme
+msgid "Homepage"
+msgstr ""
+
 #: inc/nux/class-storefront-nux-starter-content.php:71
 msgid "About"
 msgstr ""
@@ -549,127 +553,114 @@ msgid ""
 "phone number. You might also try a plugin to add a contact form."
 msgstr ""
 
-#. Template Name of the plugin/theme
-msgid "Homepage"
-msgstr ""
-
-#: inc/nux/class-storefront-nux-starter-content.php:213
-#: inc/nux/class-storefront-nux-starter-content.php:1095
-msgid "Welcome"
-msgstr ""
-
-#: inc/nux/class-storefront-nux-starter-content.php:215
-#. translators: %s: 'End Of Line' symbol
-msgid ""
-"This is your homepage which is what most visitors will see when they first "
-"visit your shop.%sYou can change this text by editing the \"Welcome\" page "
-"via the \"Pages\" menu in your dashboard."
-msgstr ""
-
-#: inc/nux/class-storefront-nux-starter-content.php:725
+#: inc/nux/class-storefront-nux-starter-content.php:702
 msgid "Accessories"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:726
-#: inc/nux/class-storefront-nux-starter-content.php:729
-#: inc/nux/class-storefront-nux-starter-content.php:732
+#: inc/nux/class-storefront-nux-starter-content.php:703
+#: inc/nux/class-storefront-nux-starter-content.php:706
+#: inc/nux/class-storefront-nux-starter-content.php:709
 msgid "A short category description"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:728
+#: inc/nux/class-storefront-nux-starter-content.php:705
 msgid "Hoodies"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:731
+#: inc/nux/class-storefront-nux-starter-content.php:708
 msgid "Tshirts"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:737
+#: inc/nux/class-storefront-nux-starter-content.php:714
 msgid "Beanie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:759
+#: inc/nux/class-storefront-nux-starter-content.php:736
 msgid "Belt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:781
+#: inc/nux/class-storefront-nux-starter-content.php:758
 msgid "Cap"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:803
+#: inc/nux/class-storefront-nux-starter-content.php:780
 msgid "Sunglasses"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:824
+#: inc/nux/class-storefront-nux-starter-content.php:801
 msgid "Hoodie with Logo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:845
+#: inc/nux/class-storefront-nux-starter-content.php:822
 msgid "Hoodie with Pocket"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:867
+#: inc/nux/class-storefront-nux-starter-content.php:844
 msgid "Hoodie with Zipper"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:888
+#: inc/nux/class-storefront-nux-starter-content.php:865
 msgid "Hoodie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:910
+#: inc/nux/class-storefront-nux-starter-content.php:887
 msgid "Long Sleeve Tee"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:931
+#: inc/nux/class-storefront-nux-starter-content.php:908
 msgid "Polo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:952
+#: inc/nux/class-storefront-nux-starter-content.php:929
 msgid "Tshirt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:973
+#: inc/nux/class-storefront-nux-starter-content.php:950
 msgid "Vneck Tshirt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1042
+#: inc/nux/class-storefront-nux-starter-content.php:1019
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:276
 msgid "Shop by Category"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1050
+#: inc/nux/class-storefront-nux-starter-content.php:1027
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:331
 msgid "New In"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1058
+#: inc/nux/class-storefront-nux-starter-content.php:1035
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:443
 msgid "Fan Favorites"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1064
+#: inc/nux/class-storefront-nux-starter-content.php:1041
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:499
 msgid "On Sale"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1070
+#: inc/nux/class-storefront-nux-starter-content.php:1047
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:555
 msgid "Best Sellers"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1099
+#: inc/nux/class-storefront-nux-starter-content.php:1072
+msgid "Welcome"
+msgstr ""
+
+#: inc/nux/class-storefront-nux-starter-content.php:1076
 msgid ""
 "This is your homepage which is what most visitors will see when they first "
 "visit your shop."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1103
+#: inc/nux/class-storefront-nux-starter-content.php:1080
 msgid ""
 "You can change this text by editing the \"Welcome\" page via the \"Pages\" "
 "menu in your dashboard."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1129
+#: inc/nux/class-storefront-nux-starter-content.php:1106
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:387
 msgid "We Recommend"
 msgstr ""
