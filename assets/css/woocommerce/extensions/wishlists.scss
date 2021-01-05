@@ -5,11 +5,11 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../../../node_modules/susy/sass/susy';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../../../node_modules/susy/sass/susy";
+@import "../../sass/vendors/modular-scale";
 
 #wl-wrapper.wl-button-wrap {
 	padding: ms(3) 0 0 0;
@@ -21,6 +21,7 @@
 }
 
 #wl-wrapper {
+
 	.wl-tabs {
 		border-bottom: 0 !important;
 
@@ -31,19 +32,22 @@
 				padding: 1em ms(2);
 				border: 0 !important;
 				margin: 0 !important;
+
 				@include border-top-radius(0);
 				background-color: transparent !important;
 			}
 
 			&.active {
+
 				a {
-					box-shadow: inset 0 -3px 0 rgba( 0, 0, 0, 0.1 );
+					box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.1);
 				}
 			}
 		}
 	}
 
 	.wl-table {
+
 		td {
 			padding: ms(-1) ms(2) !important;
 
@@ -53,6 +57,7 @@
 		}
 
 		&.manage {
+
 			td {
 				padding: ms(-3) !important;
 			}
@@ -66,6 +71,7 @@
 }
 
 .wl-tab-wrap {
+
 	ul.tabs,
 	.panel {
 		width: 100%;
@@ -73,7 +79,9 @@
 	}
 
 	ul.tabs {
+
 		li {
+
 			&::after {
 				display: none !important;
 			}
@@ -82,14 +90,19 @@
 }
 
 @include susy-media($desktop) {
+
 	#wl-wrapper {
+
 		.wl-tabs {
+
 			> li {
+
 				a {
 					padding-left: 0;
 				}
 
 				&.active {
+
 					a {
 						box-shadow: none;
 					}

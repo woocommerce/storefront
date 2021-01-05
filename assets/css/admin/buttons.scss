@@ -1,4 +1,4 @@
-@import 'bourbon';
+@import "bourbon";
 
 .sf-nux .sf-nux-button,
 a.sf-nux-button {
@@ -6,7 +6,7 @@ a.sf-nux-button {
 	border-color: #0087be;
 	border-style: solid;
 	border-width: 1px 1px 2px;
-	color: #ffffff;
+	color: #fff;
 	cursor: pointer;
 	display: inline-block;
 	outline: 0;
@@ -30,7 +30,7 @@ a.sf-nux-button {
 	&:hover,
 	&:focus {
 		border-color: #005082;
-		color: white;
+		color: #fff;
 	}
 
 	&:focus {
@@ -45,7 +45,7 @@ a.sf-nux-button {
 
 	&[disabled],
 	&:disabled {
-		color: white;
+		color: #fff;
 		background: tint(#78dcfa, 50%);
 		border-color: tint(#0087be, 55%);
 		cursor: default;

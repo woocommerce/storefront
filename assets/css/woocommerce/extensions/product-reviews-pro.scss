@@ -5,16 +5,19 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../../../node_modules/susy/sass/susy';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../../../node_modules/susy/sass/susy";
+@import "../../sass/vendors/modular-scale";
 
 .woocommerce,
 .woocommerce-page {
+
 	#reviews {
+
 		.product-rating {
+
 			.product-rating-summary,
 			.product-rating-details {
 				display: block;
@@ -26,17 +29,21 @@
 			}
 
 			.product-rating-details {
+
 				table {
+
 					td {
 						padding: 0.202em ms(-3);
 
 						&.rating-graph {
+
 							.bar {
 								background-color: $color_body;
 							}
 						}
 
 						&.rating-count {
+
 							a {
 								text-decoration: none;
 							}
@@ -51,6 +58,7 @@
 			padding: 1em;
 
 			#review_rating_field {
+
 				fieldset {
 					float: left;
 
@@ -80,7 +88,9 @@
 		}
 
 		#comments {
+
 			ol.commentlist {
+
 				li {
 					padding-top: 0;
 
@@ -121,6 +131,7 @@
 					}
 
 					ul.children {
+
 						li {
 							margin-bottom: ms(3);
 						}
@@ -129,6 +140,7 @@
 			}
 
 			.form-contribution_comment {
+
 				@include span(last 5 of 6);
 				margin-bottom: ms(6);
 				padding-top: ms(3);
@@ -141,13 +153,14 @@
 		}
 
 		.contribution-flag-form {
-			background-color: rgba( 0, 0, 0, 0.1 );
+			background-color: rgba(0, 0, 0, 0.1);
 			padding: ms(3);
 			margin-bottom: ms(3);
 		}
 	}
 
 	.form-photo {
+
 		#photo_attachment_file {
 			color: inherit;
 			margin: 1em 0;
@@ -161,7 +174,7 @@
 			display: inline-block;
 			margin-right: 1em;
 			padding: ms(-3) 0;
-			border-bottom: 0.202em solid rgba( 0, 0, 0, 0.05 );
+			border-bottom: 0.202em solid rgba(0, 0, 0, 0.05);
 
 			&.active {
 				border-bottom-color: $color_border;
@@ -170,6 +183,7 @@
 	}
 
 	.star-rating-selector {
+
 		fieldset {
 			float: none;
 			clear: both;
@@ -180,14 +194,17 @@
 		}
 	}
 
-	.star-rating-selector:not( :checked ) {
+	.star-rating-selector:not(:checked) {
+
 		label.checkbox {
 			float: none;
 		}
 	}
 
 	#wc-product-reviews-pro-modal {
+
 		#customer_login {
+
 			.col-1,
 			.col-2 {
 				width: 100%;
@@ -200,10 +217,10 @@
 .chart-tooltip {
 	font-size: ms(-1);
 	padding: ms(-2) 1em;
-	background-color: rgba( 0, 0, 0, 0.8 );
+	background-color: rgba(0, 0, 0, 0.8);
 }
 
 #tiptip_holder.tip_bottom #tiptip_arrow_inner {
-	border-bottom-color: rgba( 0, 0, 0, 0.8 );
+	border-bottom-color: rgba(0, 0, 0, 0.8);
 	margin-top: -6px;
 }

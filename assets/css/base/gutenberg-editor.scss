@@ -1,19 +1,19 @@
 // Bourbon
 // See: https://www.bourbon.io/docs/latest/
-@import 'bourbon';
+@import "bourbon";
 
 // Susy
 // Susy grid system. See: http://oddbird.net/susy/docs/
-@import 'node_modules/susy/sass/susy';
+@import "node_modules/susy/sass/susy";
 
 // Vendors
 // External libraries and frameworks.
-@import '../sass/vendors/modular-scale';
+@import "../sass/vendors/modular-scale";
 
 // Utilities
 // Sass tools and helpers used across the project.
-@import '../sass/utils/variables';
-@import '../sass/utils/mixins';
+@import "../sass/utils/variables";
+@import "../sass/utils/mixins";
 
 // Base typography
 body {
@@ -103,6 +103,7 @@ ol,
 table,
 blockquote,
 form {
+
 	& + h2,
 	& + header h2,
 	& + h3,
@@ -166,7 +167,7 @@ blockquote,
 .wp-block-freeform.block-library-rich-text__tinymce blockquote {
 	margin: 1em 40px;
 	padding: 0 ms(1);
-	border-left: 3px solid rgba( 0, 0, 0, 0.05 );
+	border-left: 3px solid rgba(0, 0, 0, 0.05);
 	font-style: italic;
 	box-shadow: none;
 }
@@ -176,8 +177,8 @@ address {
 }
 
 pre {
-	background: rgba( #000, 0.1 );
-	font-family: 'Courier 10 Pitch', Courier, monospace;
+	background: rgba(#000, 0.1);
+	font-family: "Courier 10 Pitch", Courier, monospace;
 	margin-bottom: ms(3);
 	padding: ms(3);
 	overflow: auto;
@@ -188,8 +189,8 @@ code,
 kbd,
 tt,
 var {
-	font-family: Monaco, Consolas, 'Andale Mono', 'DejaVu Sans Mono', monospace;
-	background-color: rgba( 0, 0, 0, 0.05 );
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	background-color: rgba(0, 0, 0, 0.05);
 	padding: 0.202em ms(-3);
 }
 
@@ -273,6 +274,7 @@ table {
 	}
 
 	thead {
+
 		th {
 			padding: ms(2);
 			vertical-align: middle;
@@ -280,13 +282,14 @@ table {
 	}
 
 	tbody {
+
 		h2 {
 			font-size: 1em;
 			letter-spacing: normal;
-			font-weight: normal;
+			font-weight: 400;
 
 			a {
-				font-weight: normal;
+				font-weight: 400;
 			}
 		}
 	}
@@ -302,16 +305,17 @@ table {
 	max-width: calc(#{$container-width} * #{$span-value / ( $span-value * 0 + 1 )}); // Unitless hack.
 }
 
-.wp-block[data-align='wide'] {
+.wp-block[data-align="wide"] {
 	max-width: ms(19);
 }
 
-.wp-block[data-align='full'] {
+.wp-block[data-align="full"] {
 	max-width: none;
 }
 
 // Tables
 .wp-block-table {
+
 	&__cell-content {
 		padding: 0;
 	}
@@ -334,6 +338,7 @@ ul.wp-block-latest-posts {
 	margin-bottom: ms(2);
 
 	&.is-style-dots {
+
 		&::before {
 			padding-left: 1em;
 			letter-spacing: 1em;
@@ -345,7 +350,7 @@ ul.wp-block-latest-posts {
 		}
 	}
 
-	&:not( .is-style-dots ) {
+	&:not(.is-style-dots) {
 		height: 2px;
 
 		.wp-block & {
@@ -356,10 +361,13 @@ ul.wp-block-latest-posts {
 
 // Grid blocks
 .wc-block-grid__products {
+
 	.wc-block-grid__product {
+
 		.wp-block-button__link {
-			color: #333333;
+			color: #333;
 		}
+
 		.wc-block-grid__product-onsale {
 			border: 1px solid;
 			border-color: $color_body;
@@ -373,10 +381,11 @@ ul.wp-block-latest-posts {
 			border-radius: 3px;
 			position: relative;
 		}
+
 		.wc-block-grid__product-title {
 			font-weight: 400;
 			font-size: 1rem;
-			color: #000000;
+			color: #000;
 		}
 	}
 }

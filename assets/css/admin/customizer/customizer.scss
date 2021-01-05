@@ -1,12 +1,12 @@
-@import '../buttons';
+@import "../buttons";
 
 $background: #23282d;
 
 .sf-guided-tour {
 	display: block;
-	background-color: rgba( 35, 40, 45, 0.95 );
+	background-color: rgba(35, 40, 45, 0.95);
 	border-radius: 5px;
-	box-shadow: 3px 1px 5px -2px rgba( 0, 0, 0, 0.145 );
+	box-shadow: 3px 1px 5px -2px rgba(0, 0, 0, 0.145);
 	color: #a4a4a4;
 	font-size: 1.1em;
 	z-index: 999999998;
@@ -24,7 +24,7 @@ $background: #23282d;
 	opacity: 0;
 
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 30px;
 		left: -14px;
@@ -33,7 +33,7 @@ $background: #23282d;
 		border-style: solid;
 		border-width: 14px 14px 14px 0;
 		border-color: transparent $background transparent transparent;
-		border-right-color: rgba( 35, 40, 45, 0.95 );
+		border-right-color: rgba(35, 40, 45, 0.95);
 	}
 
 	.sf-guided-tour-step {
@@ -62,8 +62,10 @@ $background: #23282d;
 		}
 	}
 
-	&:not( .sf-first-step ) {
+	&:not(.sf-first-step) {
+
 		.sf-guided-tour-step {
+
 			a.sf-nux-button {
 				display: none;
 			}
@@ -76,7 +78,9 @@ $background: #23282d;
 	}
 
 	&.sf-inside-section {
+
 		.sf-guided-tour-step {
+
 			a.sf-nux-button {
 				display: inline-block;
 			}
@@ -88,7 +92,9 @@ $background: #23282d;
 	}
 
 	&.sf-last-step {
+
 		.sf-guided-tour-step {
+
 			a.sf-nux-button {
 				display: inline-block;
 			}
@@ -111,11 +117,12 @@ a.sf-nux-button {
 .sf-moving {
 	transition-duration: 250ms;
 	transition-property: transform;
-	transition-timing-function: cubic-bezier( 0.84, 0.45, 0.68, 1.44 );
+	transition-timing-function: cubic-bezier(0.84, 0.45, 0.68, 1.44);
 }
 
 .sf-entering,
 .sf-exiting {
+
 	.sf-guided-tour {
 		animation-duration: 0.3s;
 		animation-timing-function: ease-in-out;
@@ -125,6 +132,7 @@ a.sf-nux-button {
 }
 
 .sf-entering {
+
 	.sf-guided-tour {
 		animation-name: bounceInLeft;
 		-webkit-animation-name: bounceInLeft;
@@ -132,6 +140,7 @@ a.sf-nux-button {
 }
 
 .sf-exiting {
+
 	.sf-guided-tour {
 		animation-name: bounceOutRight;
 		-webkit-animation-name: bounceOutRight;
@@ -139,10 +148,12 @@ a.sf-nux-button {
 }
 
 @-webkit-keyframes bounceInLeft {
+
 	from {
 		opacity: 0;
 		-webkit-transform: translateX(100%);
 	}
+
 	to {
 		opacity: 1;
 		-webkit-transform: translateX(0);
@@ -150,10 +161,12 @@ a.sf-nux-button {
 }
 
 @keyframes bounceInLeft {
+
 	from {
 		opacity: 0;
 		transform: translateX(100%);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateX(0);
@@ -161,6 +174,7 @@ a.sf-nux-button {
 }
 
 @-webkit-keyframes bounceOutRight {
+
 	to {
 		opacity: 0;
 		-webkit-transform: translateX(100%);
@@ -168,6 +182,7 @@ a.sf-nux-button {
 }
 
 @keyframes bounceOutRight {
+
 	to {
 		opacity: 0;
 		transform: translateX(100%);

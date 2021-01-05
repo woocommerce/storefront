@@ -5,25 +5,27 @@
 /**
  * Imports
  */
-@import 'bourbon';
-@import '../../sass/utils/variables';
-@import '../../sass/utils/mixins';
-@import '../../sass/vendors/modular-scale';
+@import "bourbon";
+@import "../../sass/utils/variables";
+@import "../../sass/utils/mixins";
+@import "../../sass/vendors/modular-scale";
 
 /**
  * Style
  */
 .wc-deposits-wrapper {
+
 	.wc-deposits-option {
+
 		li {
 			padding: ms(-2) 1em;
 			border: none;
-			background: rgba( #000, 0.0125 );
+			background: rgba(#000, 0.0125);
 			box-shadow: none;
 			border-radius: 0;
 
 			&:hover {
-				background: rgba( #000, 0.02 );
+				background: rgba(#000, 0.02);
 			}
 
 			input {
@@ -43,7 +45,7 @@
 		box-shadow: none;
 
 		li.wc-deposits-payment-plan {
-			border: 1em solid rgba( #000, 0.0125 );
+			border: 1em solid rgba(#000, 0.0125);
 			padding: ms(3);
 			margin-bottom: 1em;
 
@@ -52,11 +54,11 @@
 			}
 
 			&:hover {
-				background: rgba( #000, 0.0125 );
+				background: rgba(#000, 0.0125);
 			}
 
 			&:last-child {
-				border-bottom: 1em solid rgba( #000, 0.0125 );
+				border-bottom: 1em solid rgba(#000, 0.0125);
 			}
 
 			.wc-deposits-payment-plan-description {
@@ -73,6 +75,7 @@
 	}
 
 	&.wc-deposits-optional {
+
 		.wc-deposits-payment-plans {
 			margin-bottom: ms(3);
 
@@ -81,7 +84,7 @@
 			}
 
 			&::before {
-				border-bottom-color: rgba( #000, 0.025 );
+				border-bottom-color: rgba(#000, 0.025);
 				top: -1px;
 			}
 		}

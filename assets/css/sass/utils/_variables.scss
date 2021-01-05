@@ -1,18 +1,19 @@
 // Some common variables and mixins to get you started.
-// Variables allow you to re-use colors, sizes, and other values without repeating
-// yourself. This means that changes that should be small, such as tweaking the
-// coloring or the sizing, can be done in one place, not all over the stylesheet.
+// Variables allow you to re-use colors, sizes, and other values without
+// repeating yourself. This means that changes that should be small, such as
+// tweaking the coloring or the sizing, can be done in one place,
+// not all over the stylesheet.
 
-$base-font:         'Source Sans Pro', 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$base-font:         "Source Sans Pro", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $header-font:       $base-font;
 $ms-base:           1em, 0.875em;
 $ms-ratio:          1.618;
 
 // base color scheme
-$body-background:   #ffffff;
+$body-background:   #fff;
 $color_body:        #43454b;
 $color_links:       #2c2d33;
-$color_border:      rgba( 0, 0, 0, 0.05 );
+$color_border:      rgba(0, 0, 0, 0.05);
 $color_woocommerce: #96588a;
 $error:             #e2401c;
 $success:           #0f834d;
@@ -24,7 +25,7 @@ $handheld:          568px;
 $container-width:   ms(18);
 
 // fontawesome
-$fa-font-path:      '../../../assets/fonts';
+$fa-font-path:      "../../../assets/fonts";
 
 // susy
 $susy: (
