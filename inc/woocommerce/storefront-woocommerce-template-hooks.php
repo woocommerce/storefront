@@ -56,13 +56,6 @@ add_action( 'woocommerce_before_shop_loop', 'storefront_sorting_wrapper_close', 
 
 add_action( 'storefront_footer', 'storefront_handheld_footer_bar', 999 );
 
-// Legacy WooCommerce columns filter.
-if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '3.3', '<' ) ) {
-	add_filter( 'loop_shop_columns', 'storefront_loop_columns' );
-	add_action( 'woocommerce_before_shop_loop', 'storefront_product_columns_wrapper', 40 );
-	add_action( 'woocommerce_after_shop_loop', 'storefront_product_columns_wrapper_close', 40 );
-}
-
 /**
  * Products
  *
@@ -96,11 +89,7 @@ add_action( 'storefront_header', 'storefront_header_cart', 60 );
  *
  * @see storefront_cart_link_fragment()
  */
-if ( defined( 'WC_VERSION' ) && version_compare( WC_VERSION, '2.3', '>=' ) ) {
-	add_filter( 'woocommerce_add_to_cart_fragments', 'storefront_cart_link_fragment' );
-} else {
-	add_filter( 'add_to_cart_fragments', 'storefront_cart_link_fragment' );
-}
+add_filter( 'woocommerce_add_to_cart_fragments', 'storefront_cart_link_fragment' );
 
 /**
  * Integrations
