@@ -50,7 +50,7 @@ if ( ! function_exists( 'storefront_comment' ) ) {
 			<?php endif; ?>
 
 			<a href="<?php echo esc_url( htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ); ?>" class="comment-date">
-				<?php echo '<time datetime="' . esc_html( get_comment_date( 'c' ) ) . '">' . esc_html( get_comment_date() ) . '</time>'; ?>
+				<?php echo '<time datetime="' . esc_attr( get_comment_date( 'c' ) ) . '">' . esc_html( get_comment_date() ) . '</time>'; ?>
 			</a>
 		</div>
 		<?php if ( 'div' !== $args['style'] ) : ?>
