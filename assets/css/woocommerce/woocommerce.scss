@@ -11,31 +11,6 @@
 @import "../../../node_modules/susy/sass/susy";
 @import "../sass/vendors/modular-scale";
 
-// Star font, FontAwesome doesn't work :(
-@font-face {
-	font-family: star;
-	src: url(../../../../../plugins/woocommerce/assets/fonts/star.eot);
-	src:
-		url(../../../../../plugins/woocommerce/assets/fonts/star.eot?#iefix) format("embedded-opentype"),
-		url(../../../../../plugins/woocommerce/assets/fonts/star.woff) format("woff"),
-		url(../../../../../plugins/woocommerce/assets/fonts/star.ttf) format("truetype"),
-		url(../../../../../plugins/woocommerce/assets/fonts/star.svg#star) format("svg");
-	font-weight: 400;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: WooCommerce;
-	src: url(../../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot);
-	src:
-		url(../../../../../plugins/woocommerce/assets/fonts/WooCommerce.eot?#iefix) format("embedded-opentype"),
-		url(../../../../../plugins/woocommerce/assets/fonts/WooCommerce.woff) format("woff"),
-		url(../../../../../plugins/woocommerce/assets/fonts/WooCommerce.ttf) format("truetype"),
-		url(../../../../../plugins/woocommerce/assets/fonts/WooCommerce.svg#WooCommerce) format("svg");
-	font-weight: 400;
-	font-style: normal;
-}
-
 // Animations
 @keyframes slideInDown {
 
@@ -1777,17 +1752,21 @@ ul.order_details {
 	height: 1.618em;
 	line-height: 1.618;
 	font-size: 1em;
-	width: 5.3em;
-	font-family: star;
+	width: 5.55em;
+	font-family: "Font Awesome 5 Free";
 	font-weight: 400;
 
-	&::before {
-		content: "\53\53\53\53\53";
-		opacity: 0.25;
-		float: left;
+	&::before,
+	span::before {
+		content: "\f005\f005\f005\f005\f005";
 		top: 0;
 		left: 0;
 		position: absolute;
+	}
+
+	&::before {
+		opacity: 0.25;
+		float: left;
 	}
 
 	span {
@@ -1797,13 +1776,6 @@ ul.order_details {
 		left: 0;
 		position: absolute;
 		padding-top: 1.5em;
-	}
-
-	span::before {
-		content: "\53\53\53\53\53";
-		top: 0;
-		position: absolute;
-		left: 0;
 		color: $color_links;
 	}
 }
@@ -1820,7 +1792,6 @@ p.stars {
 		overflow: hidden;
 		display: inline-block;
 		text-decoration: none;
-		margin-right: 1px;
 		font-weight: 400;
 
 		&::before {
@@ -1831,8 +1802,9 @@ p.stars {
 			width: 1em;
 			height: 1em;
 			line-height: 1;
-			font-family: star;
-			content: "\53";
+			font-family: "Font Awesome 5 Free";
+			content: "\f005";
+			font-size: 0.95em; // Font-awesome glyph is rectangular.
 			color: $color_body;
 			text-indent: 0;
 			opacity: 0.25;
@@ -1841,7 +1813,6 @@ p.stars {
 		&:hover {
 
 			~ a::before {
-				content: "\53";
 				color: $color_body;
 				opacity: 0.25;
 			}
@@ -1853,7 +1824,6 @@ p.stars {
 		a {
 
 			&::before {
-				content: "\53";
 				color: $color_woocommerce;
 				opacity: 1;
 			}
@@ -1865,13 +1835,11 @@ p.stars {
 		a.active {
 
 			&::before {
-				content: "\53";
 				color: $color_woocommerce;
 				opacity: 1;
 			}
 
 			~ a::before {
-				content: "\53";
 				color: $color_body;
 				opacity: 0.25;
 			}
@@ -1880,7 +1848,6 @@ p.stars {
 		a:not(.active) {
 
 			&::before {
-				content: "\53";
 				color: $color_woocommerce;
 				opacity: 1;
 			}
@@ -1991,11 +1958,11 @@ p.no-comments {
 	}
 
 	&::before {
-		font-family: WooCommerce;
-		content: "\e028";
+		font-family: "Font Awesome 5 Free";
+		content: "\f06a";
 		display: inline-block;
 		position: absolute;
-		top: 1em;
+		top: 1.05em;
 		left: 1.5em;
 		color: #fff;
 	}
