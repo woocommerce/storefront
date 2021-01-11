@@ -1802,8 +1802,8 @@ p.stars {
 			width: 1em;
 			height: 1em;
 			line-height: 1;
-			font-family: "Font Awesome 5 Free" !important;
-			content: "\f005" !important;
+			font-family: "Font Awesome 5 Free";
+			content: "\f005";
 			font-size: 0.95em; // Font-awesome glyph is rectangular.
 			color: $color_body;
 			text-indent: 0;
