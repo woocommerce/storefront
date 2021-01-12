@@ -2,10 +2,10 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.6.0
-Stable tag: 3.1.0
-Version: 3.1.0
+Stable tag: 3.2.0
+Version: 3.2.0
 WC requires at least: 4.2
-WC tested up to: 4.8
+WC tested up to: 4.9
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -50,6 +50,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.2.0 - 2021-01-12 =
+* Fix – Replaced WooCommerce and Star icon usage with FontAwesome. (#1574)[https://github.com/woocommerce/storefront/pull/1574]
+* Fix - Use proper escape function for `datetime` attribute in comments template. (#1576)[https://github.com/woocommerce/storefront/pull/1576]
 
 = 3.1.0 - 2021-01-05 =
 * Fix – Prevent a fatal error on activation if WooCommerce Admin is intentionally disabled.
