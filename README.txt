@@ -52,8 +52,8 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 == Changelog ==
 
 = 3.2.0 - 2021-01-12 =
-* Fix – Replaced WooCommerce and Star icon usage with FontAwesome. (#1574)[https://github.com/woocommerce/storefront/pull/1574]
-* Fix - Use proper escape function for `datetime` attribute in comments template. (#1576)[https://github.com/woocommerce/storefront/pull/1576]
+* Fix – Replaced WooCommerce and Star icon usage with FontAwesome. [#1574](https://github.com/woocommerce/storefront/pull/1574)
+* Fix - Use proper escape function for `datetime` attribute in comments template. [#1576](https://github.com/woocommerce/storefront/pull/1576)
 
 = 3.1.0 - 2021-01-05 =
 * Fix – Prevent a fatal error on activation if WooCommerce Admin is intentionally disabled.
