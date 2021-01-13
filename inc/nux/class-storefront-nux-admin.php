@@ -48,9 +48,9 @@ if ( ! class_exists( 'Storefront_NUX_Admin' ) ) :
 		 */
 		private function is_inbox_available() {
 			if (
-				function_exists( 'wc' ) &&
-				is_callable( array( wc(), 'is_wc_admin_active' ) ) &&
-				wc()->is_wc_admin_active() &&
+				function_exists( 'WC' ) &&
+				is_callable( array( WC(), 'is_wc_admin_active' ) ) &&
+				WC()->is_wc_admin_active() &&
 				version_compare( WC_VERSION, '4.8.0', '>=' )
 			) {
 				return true;
