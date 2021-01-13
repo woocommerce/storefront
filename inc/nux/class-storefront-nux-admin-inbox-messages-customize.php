@@ -12,7 +12,7 @@ use Automattic\WooCommerce\Admin\Notes\NoteTraits;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * The initial Storefron inbox Message.
+ * The initial Storefront inbox Message.
  */
 class Storefront_NUX_Admin_Inbox_Messages_Customize {
 
