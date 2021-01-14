@@ -270,7 +270,7 @@ if ( ! function_exists( 'storefront_secondary_navigation' ) ) {
 	function storefront_secondary_navigation() {
 		if ( has_nav_menu( 'secondary' ) ) {
 			?>
-			<nav class="secondary-navigation" role="navigation" aria-label="<?php esc_html_e( 'Secondary Navigation', 'storefront' ); ?>">
+			<nav class="secondary-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Secondary Navigation', 'storefront' ); ?>">
 				<?php
 					wp_nav_menu(
 						array(
