@@ -1997,15 +1997,7 @@ p.no-comments {
 .woocommerce-message {
 
 	&::before {
-		content: "\e015";
-	}
-}
-
-
-.woocommerce-error {
-
-	&::before {
-		content: "\e016";
+		content: "\f058";
 	}
 }
 
