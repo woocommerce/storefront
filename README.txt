@@ -52,8 +52,8 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 == Changelog ==
 
 = 3.4.0 - 2021-01-27 =
-- Fix - Missing icons in WC Blocks and some other parts of the UI.
-- Fix - Use proper escape function in comments template.
+- Fix - Missing icons in WC Blocks and some other parts of the UI. [#1588](https://github.com/woocommerce/storefront/pull/1588)
+- Fix - Use proper escape function in comments template. [#1587](https://github.com/woocommerce/storefront/pull/1587)
 
 = 3.3.0 - 2021-01-14 =
 - Fix – Fatal error in old versions of WooCommerce. [#1583](https://github.com/woocommerce/storefront/pull/1583)
