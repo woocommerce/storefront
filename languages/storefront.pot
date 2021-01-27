@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v2 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 3.1.0\n"
+"Project-Id-Version: Storefront 3.4.0\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/storefront/issues\n"
-"POT-Creation-Date: 2021-01-05 16:12:03+00:00\n"
+"POT-Creation-Date: 2021-01-27 09:27:50+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -396,61 +396,61 @@ msgid ""
 msgstr ""
 
 #: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:41
-#: inc/nux/class-storefront-nux-admin.php:160
+#: inc/nux/class-storefront-nux-admin.php:180
 #: inc/nux/class-storefront-nux-guided-tour.php:112
 msgid "Let's go!"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:108
+#: inc/nux/class-storefront-nux-admin.php:128
 msgid "Thanks for installing Storefront, you rock! 🤘"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:109
+#: inc/nux/class-storefront-nux-admin.php:129
 msgid "To enable eCommerce features you need to install the WooCommerce plugin."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:110
+#: inc/nux/class-storefront-nux-admin.php:130
 msgid "WooCommerce activated"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:110
+#: inc/nux/class-storefront-nux-admin.php:130
 msgid "Activate WooCommerce"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:110
+#: inc/nux/class-storefront-nux-admin.php:130
 msgid "Install WooCommerce"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:114
+#: inc/nux/class-storefront-nux-admin.php:134
 msgid "Design your store 🎨"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:118
+#: inc/nux/class-storefront-nux-admin.php:138
 msgid ""
 "Before you add your first product let's design your store. We'll add some "
 "example products for you. When you're ready let's get started by adding "
 "your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:120
+#: inc/nux/class-storefront-nux-admin.php:140
 msgid ""
 "You've set up WooCommerce, now it's time to give it some style! Let's get "
 "started by entering the Customizer and adding your logo."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:142
+#: inc/nux/class-storefront-nux-admin.php:162
 msgid "Apply the Storefront homepage template"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:144
+#: inc/nux/class-storefront-nux-admin.php:164
 msgid "Create a homepage using Storefront's homepage template"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:154
+#: inc/nux/class-storefront-nux-admin.php:174
 msgid "Add example products"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin.php:161
+#: inc/nux/class-storefront-nux-admin.php:181
 msgid "Skip"
 msgstr ""
 

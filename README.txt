@@ -2,10 +2,10 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.6.0
-Stable tag: 3.2.0
-Version: 3.3.0
+Stable tag: 3.4.0
+Version: 3.4.0
 WC requires at least: 4.2
-WC tested up to: 4.9
+WC tested up to: 5.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -50,6 +50,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.4.0 - 2021-01-27 =
+- Fix - Missing icons in WC Blocks and some other parts of the UI.
+- Fix - Use proper escape function in comments template.
 
 = 3.3.0 - 2021-01-14 =
 - Fix – Fatal error in old versions of WooCommerce. [#1583](https://github.com/woocommerce/storefront/pull/1583)
