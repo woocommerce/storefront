@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.6.0
-Stable tag: 3.4.0
-Version: 3.4.0
+Stable tag: 3.5.0
+Version: 3.5.0
 WC requires at least: 4.2
 WC tested up to: 5.0
 License: GPLv2 or later
@@ -50,6 +50,9 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.5.0 - 2021-02-02 =
+- Fix - Remove maximum-scale from viewport meta tag [#1600](https://github.com/woocommerce/storefront/pull/1600)
 
 = 3.4.0 - 2021-01-27 =
 - Fix - Missing icons in WC Blocks and some other parts of the UI. [#1588](https://github.com/woocommerce/storefront/pull/1588)
