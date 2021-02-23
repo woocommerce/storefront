@@ -236,10 +236,14 @@
 	}
 }
 
-.sf-input-focused {
+@media screen and (max-height: 320px) {
 
-	.storefront-handheld-footer-bar {
-		display: none;
+	.sf-input-focused {
+
+		.woocommerce-store-notice,
+		.storefront-handheld-footer-bar {
+			display: none;
+		}
 	}
 }
 
