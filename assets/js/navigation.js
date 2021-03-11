@@ -109,6 +109,16 @@
 			} );
 		} );
 
+		// Ensure the dropdowns close when user taps outside the site header
+		[].forEach.call( document.querySelectorAll( 'body #page > :not( .site-header )' ), function( element ) {
+			element.addEventListener( 'click', function() {
+				[].forEach.call( document.querySelectorAll( '.focus, .blocked' ), function( el ) {
+					el.classList.remove( 'focus' );
+					el.classList.remove( 'blocked' );
+				} );
+			} );
+		} );
+
 		// Add an identifying class to dropdowns when on a touch device
 		// This is required to switch the dropdown hiding method from a negative `left` value to `display: none`.
 		if ( ( 'ontouchstart' in window || navigator.maxTouchPoints ) && window.innerWidth > 767 ) {
@@ -136,16 +146,6 @@
 					} else {
 						acceptClick = true;
 					}
-				} );
-			} );
-
-			// Ensure the dropdowns close when user taps outside the site header
-			[].forEach.call( document.querySelectorAll( 'body #page > :not( .site-header )' ), function( element ) {
-				element.addEventListener( 'click', function() {
-					[].forEach.call( document.querySelectorAll( '.focus, .blocked' ), function( el ) {
-					 	el.classList.remove( 'focus' );
-					 	el.classList.remove( 'blocked' );
-					} );
 				} );
 			} );
 		}
