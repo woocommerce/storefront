@@ -15,6 +15,7 @@
 	 *
 	 * @hooked storefront_post_header          - 10
 	 * @hooked storefront_post_content         - 30
+	 * @hooked storefront_post_taxonomy        - 40
 	 */
 	do_action( 'storefront_loop_post' );
 	?>
