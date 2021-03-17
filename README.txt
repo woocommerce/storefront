@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.6.0
-Stable tag: 3.5.0
-Version: 3.5.0
+Stable tag: 3.5.1
+Version: 3.5.1
 WC requires at least: 4.2
 WC tested up to: 5.0
 License: GPLv2 or later
@@ -50,6 +50,13 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.5.1 - 2021-03-17 =
+
+- Fix - Add missing hook to documentation [#1628](https://github.com/woocommerce/storefront/pull/1628)
+- Fix - Adjust size of download button for files with long names [#1624](https://github.com/woocommerce/storefront/pull/1624)
+- Fix - Close submenu for menu item on outside click [#1627](https://github.com/woocommerce/storefront/pull/1627)
+- Fix - Hide handheld-footer and notice only on smaller devices [#1615](https://github.com/woocommerce/storefront/pull/1615)
 
 = 3.5.0 - 2021-02-02 =
 - Fix - Remove maximum-scale from viewport meta tag [#1600](https://github.com/woocommerce/storefront/pull/1600)
