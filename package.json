@@ -34,7 +34,7 @@
   "license": "GPL-2.0+",
   "main": "Gruntfile.js",
   "devDependencies": {
-    "@lodder/grunt-postcss": "3.0.0",
+    "@lodder/grunt-postcss": "3.0.1",
     "@wordpress/env": "4.0.1",
     "autoprefixer": "10.2.5",
     "bourbon": "7.0.0",
