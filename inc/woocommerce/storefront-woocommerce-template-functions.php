@@ -799,6 +799,10 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 	function storefront_sticky_single_add_to_cart() {
 		global $product;
 
+		if ( $product == null ) {
+			return;
+		}
+
 		if ( class_exists( 'Storefront_Sticky_Add_to_Cart' ) || true !== get_theme_mod( 'storefront_sticky_add_to_cart' ) ) {
 			return;
 		}
