@@ -128,21 +128,6 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		}
 
 		/**
-		 * Assign styles to individual theme mod.
-		 *
-		 * @deprecated 2.3.1
-		 * @since 2.1.0
-		 * @return void
-		 */
-		public function set_storefront_style_theme_mods() {
-			if ( function_exists( 'wc_deprecated_function' ) ) {
-				wc_deprecated_function( __FUNCTION__, '2.3.1' );
-			} else {
-				_deprecated_function( __FUNCTION__, '2.3.1' );
-			}
-		}
-
-		/**
 		 * Add WooCommerce specific classes to the body tag
 		 *
 		 * @param  array $classes css classes applied to the body tag.
