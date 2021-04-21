@@ -1205,47 +1205,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			return true;
 		}
 
-		/**
-		 * Setup the WordPress core custom header feature.
-		 *
-		 * @deprecated 2.4.0
-		 * @return void
-		 */
-		public function custom_header_setup() {
-			if ( function_exists( 'wc_deprecated_function' ) ) {
-				wc_deprecated_function( __FUNCTION__, '2.4.0' );
-			} else {
-				_deprecated_function( __FUNCTION__, '2.4.0' );
-			}
-		}
-
-		/**
-		 * Get Customizer css associated with WooCommerce.
-		 *
-		 * @deprecated 2.4.0
-		 * @return void
-		 */
-		public function get_woocommerce_css() {
-			if ( function_exists( 'wc_deprecated_function' ) ) {
-				wc_deprecated_function( __FUNCTION__, '2.3.1' );
-			} else {
-				_deprecated_function( __FUNCTION__, '2.3.1' );
-			}
-		}
-
-		/**
-		 * Assign Storefront styles to individual theme mods.
-		 *
-		 * @deprecated 2.3.1
-		 * @return void
-		 */
-		public function set_storefront_style_theme_mods() {
-			if ( function_exists( 'wc_deprecated_function' ) ) {
-				wc_deprecated_function( __FUNCTION__, '2.3.1' );
-			} else {
-				_deprecated_function( __FUNCTION__, '2.3.1' );
-			}
-		}
 	}
 
 endif;

@@ -597,17 +597,6 @@ if ( ! function_exists( 'storefront_post_nav' ) ) {
 	}
 }
 
-if ( ! function_exists( 'storefront_posted_on' ) ) {
-	/**
-	 * Prints HTML with meta information for the current post-date/time and author.
-	 *
-	 * @deprecated 2.4.0
-	 */
-	function storefront_posted_on() {
-		_deprecated_function( 'storefront_posted_on', '2.4.0' );
-	}
-}
-
 if ( ! function_exists( 'storefront_homepage_content' ) ) {
 	/**
 	 * Display homepage content
