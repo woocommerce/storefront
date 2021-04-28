@@ -38,7 +38,7 @@
     "@wordpress/env": "4.0.2",
     "autoprefixer": "10.2.5",
     "bourbon": "7.0.0",
-    "cssnano": "5.0.1",
+    "cssnano": "5.0.2",
     "grunt": "1.4.0",
     "grunt-checktextdomain": "1.0.1",
     "grunt-contrib-compress": "2.0.0",
