@@ -55,7 +55,7 @@
     "jest-puppeteer": "5.0.3",
     "node-sass": "5.0.0",
     "postcss": "8.2.13",
-    "puppeteer": "9.0.0",
+    "puppeteer": "9.1.0",
     "stylelint": "13.13.1",
     "stylelint-config-wordpress": "17.0.0",
     "susy": "2.2.14"
