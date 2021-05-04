@@ -615,6 +615,16 @@ a.remove {
 	}
 }
 
+.wc_request_button_is_disabled {
+
+	.blockUI {
+
+		&::before {
+			content: none;
+		}
+	}
+}
+
 .woocommerce-pagination {
 
 	.next,
