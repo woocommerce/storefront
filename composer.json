@@ -10,8 +10,11 @@
 	"archive": {
 		"exclude": [
 			"!/assets",
+			"/assets/css/sass",
+			"/assets/css/**/*.scss",
 			"!/languages",
-			"!style.css"
+			"!/style.css",
+			"!/style-rtl.css"
 		]
 	},
 	"require-dev": {

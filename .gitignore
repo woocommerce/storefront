@@ -8,10 +8,8 @@
 
 # Sass
 .sass-cache
-
-# Grunt
-/node_modules/
-/storefront/
+node_modules
+storefront
 storefront.zip
 npm-debug.log
 
@@ -30,4 +28,4 @@ config.codekit
 .DS_Store
 
 # Composer
-/vendor
+vendor

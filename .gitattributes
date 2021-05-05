@@ -10,3 +10,5 @@ README.md export-ignore
 CONTRIBUTING.md export-ignore
 STOREFRONT_STATUS.md export-ignore
 renovate.json export-ignore
+node_modules export-ignore
+*.scss export-ignore
