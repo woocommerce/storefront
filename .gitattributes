@@ -7,5 +7,6 @@ package-lock.json export-ignore
 phpcs.xml export-ignore
 phpunit.xml export-ignore
 README.md export-ignore
-CONTRIBUTING.md
-STOREFRONT_STATUS.md
+CONTRIBUTING.md export-ignore
+STOREFRONT_STATUS.md export-ignore
+renovate.json export-ignore

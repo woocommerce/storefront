@@ -7,6 +7,13 @@
 	"require": {
 		"composer/installers": "1.11.0"
 	},
+	"archive": {
+		"exclude": [
+			"!/assets",
+			"!/languages",
+			"!style.css"
+		]
+	},
 	"require-dev": {
 		"squizlabs/php_codesniffer": "3.6.0",
 		"wp-coding-standards/wpcs": "2.3.0",
