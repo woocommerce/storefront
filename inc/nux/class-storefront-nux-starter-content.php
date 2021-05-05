@@ -35,7 +35,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			add_filter( 'the_title', array( $this, 'filter_auto_draft_title' ), 10, 2 );
 			add_action( 'customize_preview_init', array( $this, 'update_homepage_content' ), 10 );
 
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				add_filter( 'storefront_starter_content', '__return_empty_array' );
 			}
 		}
@@ -246,7 +246,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 		 * @return array $content
 		 */
 		public function filter_start_content( $content, $config ) {
-			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // WPCS: input var ok.
+			if ( ! isset( $_GET['sf_starter_content'] ) || 1 !== absint( $_GET['sf_starter_content'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 				return $content;
 			}
 
@@ -260,8 +260,8 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 			// Remove some of the content if necessary.
 			$tasks = array();
 
-			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // WPCS: input var ok.
-				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ); // WPCS: input var ok.
+			if ( isset( $_GET['sf_tasks'] ) && '' !== sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				$tasks = explode( ',', sanitize_text_field( wp_unslash( $_GET['sf_tasks'] ) ) ); // phpcs:ignore WordPress.Security.NonceVerification.Recommended
 			}
 
 			$tasks = $this->validate_tasks( $tasks );
@@ -1177,6 +1177,7 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				'post_type'      => $post_type,
 				'post_status'    => 'auto-draft',
 				'posts_per_page' => -1,
+				// phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 				'meta_query'     => array(
 					array(
 						'key'     => '_customize_draft_post_name',
