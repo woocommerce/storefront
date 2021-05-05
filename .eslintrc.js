@@ -1,7 +1,5 @@
 module.exports = {
-	extends: [
-		'plugin:@woocommerce/eslint-plugin/recommended',
-	],
+	extends: [ 'plugin:@woocommerce/eslint-plugin/recommended' ],
 	globals: {
 		jQuery: 'readonly',
 	},
@@ -10,4 +8,5 @@ module.exports = {
 		'woocommerce/feature-flag': 'off',
 		'@wordpress/no-global-active-element': 'warn',
 	},
+	ignorePatterns: [ '**/*.min.js' ],
 };
