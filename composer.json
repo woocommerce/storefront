@@ -1,45 +1,45 @@
 {
-  "name": "woocommerce/storefront",
-  "description": "Storefront is a robust and flexible WordPress theme, designed and built by the team at WooCommerce to help you make the most out of using the WooCommerce plugin to power your online store. It's available to download for free from the WordPress theme repository.",
-  "homepage": "https://woocommerce.com/",
-  "type": "wordpress-theme",
-  "license": "GPL-2.0+",
-  "require": {
-    "composer/installers": "1.11.0"
-  },
-  "require-dev": {
-    "squizlabs/php_codesniffer": "3.6.0",
-    "wp-coding-standards/wpcs": "2.3.0",
-    "woocommerce/woocommerce-sniffs": "^0.1.0",
-    "phpcompatibility/php-compatibility": "9.3.5",
-    "woocommerce/woocommerce-git-hooks": "*",
-    "dealerdirect/phpcodesniffer-composer-installer": "0.7.0"
-  },
-  "scripts": {
-    "pre-update-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::preHooks"
-    ],
-    "pre-install-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::preHooks"
-    ],
-    "post-install-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::postHooks"
-    ],
-    "post-update-cmd": [
-      "WooCommerce\\GitHooks\\Hooks::postHooks"
-    ],
-    "phpcs": [
-      "phpcs --extensions=php -s -p"
-    ],
-    "phpcbf": [
-      "phpcbf --extensions=php -p"
-    ]
-  },
-  "extra": {
-    "scripts-description": {
-      "test": "Run unit tests",
-      "phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
-      "phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
-    }
-  }
+	"name": "woocommerce/storefront",
+	"description": "Storefront is a robust and flexible WordPress theme, designed and built by the team at WooCommerce to help you make the most out of using the WooCommerce plugin to power your online store. It's available to download for free from the WordPress theme repository.",
+	"homepage": "https://woocommerce.com/",
+	"type": "wordpress-theme",
+	"license": "GPL-3.0+",
+	"require": {
+		"composer/installers": "1.11.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "3.6.0",
+		"wp-coding-standards/wpcs": "2.3.0",
+		"woocommerce/woocommerce-sniffs": "^0.1.0",
+		"phpcompatibility/php-compatibility": "9.3.5",
+		"woocommerce/woocommerce-git-hooks": "*",
+		"dealerdirect/phpcodesniffer-composer-installer": "0.7.0"
+	},
+	"scripts": {
+		"pre-update-cmd": [
+			"WooCommerce\\GitHooks\\Hooks::preHooks"
+		],
+		"pre-install-cmd": [
+			"WooCommerce\\GitHooks\\Hooks::preHooks"
+		],
+		"post-install-cmd": [
+			"WooCommerce\\GitHooks\\Hooks::postHooks"
+		],
+		"post-update-cmd": [
+			"WooCommerce\\GitHooks\\Hooks::postHooks"
+		],
+		"phpcs": [
+			"phpcs --extensions=php -s -p"
+		],
+		"phpcbf": [
+			"phpcbf --extensions=php -p"
+		]
+	},
+	"extra": {
+		"scripts-description": {
+			"test": "Run unit tests",
+			"phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
+			"phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+		}
+	}
 }
