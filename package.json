@@ -35,7 +35,11 @@
   "main": "Gruntfile.js",
   "devDependencies": {
     "@lodder/grunt-postcss": "3.0.1",
+    "@woocommerce/eslint-plugin": "^1.1.0",
     "@wordpress/env": "4.0.3",
+    "@wordpress/prettier-config": "^1.0.3",
+    "@wordpress/scripts": "^15.0.1",
+    "@wordpress/stylelint-config": "^19.0.3",
     "autoprefixer": "10.2.5",
     "bourbon": "7.0.0",
     "cssnano": "5.0.2",
