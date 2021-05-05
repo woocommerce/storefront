@@ -4,8 +4,6 @@ on:
     push:
         branches: [trunk]
     pull_request:
-        branches:
-            - update-build-tools
 jobs:
     Setup:
         name: Setup
