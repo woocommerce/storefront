@@ -615,6 +615,17 @@ a.remove {
 	}
 }
 
+.wc_request_button_is_disabled {
+
+	.blockUI {
+		cursor: not-allowed !important;
+
+		&::before {
+			content: none;
+		}
+	}
+}
+
 .woocommerce-pagination {
 
 	.next,
