@@ -1,5 +1,1 @@
-# Browsers that we support
-
-> 0.1%
-ie 8
-ie 9
+extends @wordpress/browserslist-config
