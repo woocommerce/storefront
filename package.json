@@ -14,9 +14,16 @@
 		"start": "grunt watch",
 		"labels:dry": "github-label-sync --labels ./.github/label-sync-config.json --allow-added-labels --dry-run woocommerce/storefront",
 		"labels:sync": "github-label-sync --labels ./.github/label-sync-config.json --allow-added-labels woocommerce/storefront",
+		"lint": "npm run lint:php && npm run lint:css && npm run lint:js",
+		"lint:ci": "npm run lint:js && npm run lint:css",
+		"lint:css": "stylelint 'assets/**/*.scss'",
+		"lint:css-fix": "stylelint 'assets/**/*.scss' --fix",
+		"lint:js": "wp-scripts lint-js --ext=js,ts,tsx",
+		"lint:js:report": "npm run lint:js -- --output-file eslint_report.json --ext=js,ts,tsx --format json",
+		"lint:js-fix": "eslint assets/js --ext=js,jsx,ts,tsx --fix",
+		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
-		"e2e": "jest",
-		"e2e:ci": "npm run wp-env start && npm run wp-env run tests-cli wp theme activate storefront && npm run e2e"
+		"test:e2e": "jest"
 	},
 	"jest": {
 		"preset": "jest-puppeteer",
@@ -36,12 +43,14 @@
 	"devDependencies": {
 		"@lodder/grunt-postcss": "3.0.1",
 		"@woocommerce/eslint-plugin": "^1.1.0",
+		"@wordpress/browserslist-config": "^3.0.3",
 		"@wordpress/env": "4.0.3",
 		"@wordpress/prettier-config": "^1.0.3",
 		"@wordpress/scripts": "^15.0.1",
 		"@wordpress/stylelint-config": "^19.0.3",
 		"autoprefixer": "10.2.5",
 		"bourbon": "7.0.0",
+		"browserslist": "^4.16.6",
 		"cssnano": "5.0.2",
 		"grunt": "1.4.0",
 		"grunt-checktextdomain": "1.0.1",
