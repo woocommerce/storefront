@@ -28,8 +28,6 @@
 			}
 		);
 
-		const footerBar2 = document.getElementsByClassName( 'storefront-handheld-footer-bar');
-
 		// Add focus class to body when an input field is focused.
 		// This is used to hide the Handheld Footer Bar when an input is focused.
 		const footerBar = document.getElementsByClassName(
