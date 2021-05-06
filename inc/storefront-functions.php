@@ -14,6 +14,9 @@ if ( ! function_exists( 'storefront_is_woocommerce_activated' ) ) {
 	}
 }
 
+if($lintcheck==true){
+	//should fail the lint check!
+}
 /**
  * Call a shortcode function by tag name.
  *
