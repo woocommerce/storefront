@@ -39,14 +39,10 @@ jobs:
                   npm run wp-env start
                   npm run wp-env run tests-cli wp theme activate storefront
 
-    E2ETests:
-        name: E2E Tests
-        needs: Setup
-        runs-on: ubuntu-latest
-        steps:
             - name: Running the tests
               run: |
                   npm run test:e2e
+
             - name: Archive debug artifacts (screenshots, HTML snapshots)
               uses: actions/upload-artifact@v2
               if: always()
