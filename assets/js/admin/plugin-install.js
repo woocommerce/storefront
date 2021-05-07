@@ -1,13 +1,13 @@
-( function( wp, $ ) {
+( function ( wp, $ ) {
 	'use strict';
 
 	if ( ! wp ) {
 		return;
 	}
 
-	$( function() {
-		$( document ).on( 'click', '.sf-install-now', function( event ) {
-			var $button = $( event.target );
+	$( function () {
+		$( document ).on( 'click', '.sf-install-now', function ( event ) {
+			const $button = $( event.target );
 
 			if ( $button.hasClass( 'activate-now' ) ) {
 				return true;
@@ -15,15 +15,21 @@
 
 			event.preventDefault();
 
-			if ( $button.hasClass( 'updating-message' ) || $button.hasClass( 'button-disabled' ) ) {
+			if (
+				$button.hasClass( 'updating-message' ) ||
+				$button.hasClass( 'button-disabled' )
+			) {
 				return;
 			}
 
-			if ( wp.updates.shouldRequestFilesystemCredentials && ! wp.updates.ajaxLocked ) {
+			if (
+				wp.updates.shouldRequestFilesystemCredentials &&
+				! wp.updates.ajaxLocked
+			) {
 				wp.updates.requestFilesystemCredentials( event );
 
-				$( document ).on( 'credential-modal-cancel', function() {
-					var $message = $( '.sf-install-now.updating-message' );
+				$( document ).on( 'credential-modal-cancel', function () {
+					const $message = $( '.sf-install-now.updating-message' );
 
 					$message
 						.removeClass( 'updating-message' )
@@ -34,8 +40,8 @@
 			}
 
 			wp.updates.installPlugin( {
-				slug: $button.data( 'slug' )
+				slug: $button.data( 'slug' ),
 			} );
-		});
-	});
-})( window.wp, jQuery );
+		} );
+	} );
+} )( window.wp, jQuery );

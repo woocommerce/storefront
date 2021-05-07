@@ -6,4 +6,4 @@ describe( 'Storefront', () => {
 	it( 'should have "built with Storefront" footer', async () => {
 		await expect( page ).toMatch( 'Built with Storefront & WooCommerce.' );
 	} );
-});
+} );

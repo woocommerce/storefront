@@ -83,6 +83,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 			$this->current_product = $post->ID;
 
 			// Try to get a valid product via `get_adjacent_post()`.
+			// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 			while ( $adjacent = $this->get_adjacent() ) {
 				$product = wc_get_product( $adjacent->ID );
 

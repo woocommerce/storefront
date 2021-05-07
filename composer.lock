@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9724b5bcbb25809847a81a10bc99a0a4",
+    "content-hash": "9113a7cc59a85375a5f1fc1ae0303f97",
     "packages": [
         {
             "name": "composer/installers",
@@ -502,6 +502,10 @@
                 "woocommerce",
                 "wordpress"
             ],
+            "support": {
+                "issues": "https://github.com/woocommerce/woocommerce-sniffs/issues",
+                "source": "https://github.com/woocommerce/woocommerce-sniffs/tree/master"
+            },
             "time": "2020-08-06T18:23:45+00:00"
         },
         {
@@ -558,5 +562,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
