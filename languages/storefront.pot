@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 3.6.0\n"
+"Project-Id-Version: Storefront 3.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2021-05-11 10:22:26+00:00\n"
+"POT-Creation-Date: 2021-05-25 10:02:41+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -385,17 +385,17 @@ msgstr ""
 msgid "Looking for more options?"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:33
+#: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:34
 msgid "Design your store with Storefront 🎨"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:34
+#: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:35
 msgid ""
 "Visit the Storefront settings page to start setup and customization of your "
 "shop."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:41
+#: inc/nux/class-storefront-nux-admin-inbox-messages-customize.php:42
 #: inc/nux/class-storefront-nux-admin.php:180
 #: inc/nux/class-storefront-nux-guided-tour.php:112
 msgid "Let's go!"
