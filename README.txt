@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.7.0
-Stable tag: 3.6.0
-Version: 3.6.0
+Stable tag: 3.7.0
+Version: 3.7.0
 WC requires at least: 4.2
 WC tested up to: 5.3
 License: GPLv3 or later
@@ -50,6 +50,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.7.0 - 2021-05-25 =
+- Fix - Fix compatibility problem with Gravity forms premium ([#1690](https://github.com/woocommerce/storefront/pull/1690))
+- Dev - Image optimization (imagealpha & imageoptim) ([#1691](https://github.com/woocommerce/storefront/pull/1691))
 
 = 3.6.0 - 2021-05-11 =
 - Fix – Fix potential error that can occur when product is null on sticky add to cart ([#1650](https://github.com/woocommerce/storefront/pull/1650))
