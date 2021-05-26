@@ -96,7 +96,7 @@
 		"prettier": "npm:wp-prettier@2.0.5",
 		"rtlcss": "3.2.0",
 		"susy": "2.2.14",
-		"uglify-js": "3.13.7"
+		"uglify-js": "3.13.8"
 	},
 	"engines": {
 		"node": "14.17.0",
