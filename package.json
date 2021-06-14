@@ -85,7 +85,7 @@
 		"bourbon": "7.0.0",
 		"browserslist": "4.16.6",
 		"concurrently": "6.2.0",
-		"github-label-sync": "2.0.0",
+		"github-label-sync": "2.0.1",
 		"jest": "27.0.4",
 		"jest-puppeteer": "5.0.4",
 		"lodash": "4.17.21",
