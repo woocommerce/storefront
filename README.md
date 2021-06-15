@@ -18,7 +18,7 @@ It features deep integration with WooCommerce core plus several of the most popu
 -   [WooCommerce Brands](https://woocommerce.com/products/brands/)
 -   [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/)
 
-For developers, Storefront is the perfect starting point for your project. It's lean and extensible codebase will allow you to easily add functionality to your site via child theme and/or custom plugin(s).
+For developers, Storefront is the perfect starting point for your project. Its lean and extensible codebase will allow you to easily add functionality to your site via a child theme and/or custom plugin(s).
 
 ## Storefront Status
 
