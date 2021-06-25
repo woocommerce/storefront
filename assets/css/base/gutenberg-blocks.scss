@@ -19,24 +19,25 @@
  * Front-end only styles
  */
 .hentry .entry-content {
+
+	.storefront-align-wide.page-template-template-fullwidth-php & .alignfull,
+	.storefront-align-wide.storefront-full-width-content & .alignfull {
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+	}
+
 	// Global
 	@media ( min-width: $container-width ) {
 
 		.storefront-align-wide.page-template-template-fullwidth-php &,
 		.storefront-align-wide.storefront-full-width-content & {
 
-			.alignfull,
 			.alignwide {
 				width: auto;
 				max-width: 1000%;
 				padding-left: ms(2);
 				padding-right: ms(2);
 				clear: both;
-			}
-
-			.alignfull {
-				margin-left: calc(50% - 50vw);
-				margin-right: calc(50% - 50vw);
 			}
 
 			.alignwide {
