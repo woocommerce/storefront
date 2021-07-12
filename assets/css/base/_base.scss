@@ -48,6 +48,11 @@ select {
 	max-width: 100%;
 }
 
+// Fix outdated summary style from _normalize.scss which prevents the arrow from appearing
+summary {
+  display: list-item;
+}
+
 h1,
 h2,
 h3,
