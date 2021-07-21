@@ -77,10 +77,10 @@
 	"devDependencies": {
 		"@woocommerce/eslint-plugin": "1.2.0",
 		"@wordpress/browserslist-config": "3.0.3",
-		"@wordpress/env": "4.0.5",
-		"@wordpress/prettier-config": "1.0.5",
+		"@wordpress/env": "4.1.0",
+		"@wordpress/prettier-config": "1.1.0",
 		"@wordpress/scripts": "15.0.1",
-		"@wordpress/stylelint-config": "19.0.5",
+		"@wordpress/stylelint-config": "19.1.0",
 		"autoprefixer": "10.3.1",
 		"bourbon": "7.0.0",
 		"browserslist": "4.16.6",
