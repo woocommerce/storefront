@@ -1,3 +1,4 @@
+name: ESLint Report
 on:
     workflow_run:
         workflows: ['Linting']
