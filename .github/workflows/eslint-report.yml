@@ -7,6 +7,10 @@ jobs:
     on-success:
         runs-on: ubuntu-latest
         steps:
+            - name: Download eslint_report.json
+              uses: actions/download-artifact@v2
+              with:
+                  name: eslint_report.json
             - name: Annotate Code Linting Results
               uses: ataylorme/eslint-annotate-action@1.2.0
               with:
