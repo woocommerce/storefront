@@ -3,7 +3,7 @@ name: End-to-End Tests
 on:
     push:
         branches: [trunk]
-    pull_request_target:
+    pull_request:
 jobs:
     Setup:
         name: Setup
