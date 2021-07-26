@@ -1,10 +1,8 @@
 name: Linting
-
 on:
     pull_request:
     push:
         branches: [trunk]
-
 jobs:
     Setup:
         name: Setup for Jobs
