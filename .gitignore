@@ -29,3 +29,4 @@ config.codekit
 
 # Composer
 vendor
+/eslint_report.json
