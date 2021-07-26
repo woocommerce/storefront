@@ -2,7 +2,8 @@ name: ESLint Report
 
 on:
     workflow_run:
-        workflows: ['JavaScript and CSS Linting']
+        workflows:
+            - JavaScript and CSS Linting
         types:
             - completed
 
