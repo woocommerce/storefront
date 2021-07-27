@@ -4,7 +4,7 @@ on:
         workflows: ['Linting']
         types: [completed]
 jobs:
-    on-success:
+    eslint-report:
         runs-on: ubuntu-latest
         steps:
             - name: Download eslint_report.json
@@ -12,6 +12,9 @@ jobs:
               with:
                   workflow: ${{ github.event.workflow_run.workflow_id }}
                   name: eslint_report.json
+            - uses: actions/checkout@v2
+              with:
+                  ref: ${{ github.event.workflow_run.head_branch }}
             - name: Annotate Code Linting Results
               uses: ataylorme/eslint-annotate-action@1.2.0
               with:
