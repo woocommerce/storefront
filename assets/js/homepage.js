@@ -3,15 +3,14 @@
  *
  * Handles behaviour of the homepage featured image
  */
-( function () {
+ ( function () {
 	/**
 	 * Set hero content dimensions / layout
 	 * Run adaptive backgrounds and set colors
 	 */
-	// eslint-disable-next-line @wordpress/no-global-event-listener
 	document.addEventListener( 'DOMContentLoaded', function () {
 		const homepageContent = document.querySelector(
-			'.page-template-template-homepage .type-page.has-post-thumbnail'
+			".page-template-template-homepage .type-page.has-post-thumbnail"
 		);
 
 		if ( ! homepageContent ) {
