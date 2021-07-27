@@ -39,21 +39,21 @@ jobs:
                       ${{ runner.OS }}-
             - name: Install Node Dependencies
               run: npm install
-            - if: ${{ github.event.pull_request.head.repo.full_name != github.repository }}
+            - if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
               name: Run ESLint
               run: npm run lint:js
-            - if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+            - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
               name: Save Code Linting Report JSON
               run: npm run lint:js:report
               # Continue to the next step even if this fails
               continue-on-error: true
-            - if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+            - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
               name: Upload ESLint report
               uses: actions/upload-artifact@v2
               with:
                   name: eslint_report.json
                   path: eslint_report.json
-            - if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+            - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
               name: Annotate Code Linting Results
               uses: ataylorme/eslint-annotate-action@1.2.0
               with:
