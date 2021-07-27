@@ -5,9 +5,8 @@ on:
         branches: [trunk]
 jobs:
     Setup:
-        name: Setup for Jobs
+        name: Setup Caches
         runs-on: ubuntu-latest
-
         steps:
             - uses: actions/checkout@v2
             - name: Cache node modules
@@ -22,11 +21,10 @@ jobs:
             - name: Install Node Dependencies
               run: npm install
 
-    JSLintingCheck:
+    eslint:
         name: Lint JavaScript
         needs: Setup
         runs-on: ubuntu-latest
-
         steps:
             - uses: actions/checkout@v2
             - name: Cache node modules
@@ -40,21 +38,12 @@ jobs:
                       ${{ runner.OS }}-
             - name: Install Node Dependencies
               run: npm install
-            - name: Save Code Linting Report JSON
-              run: npm run lint:js:report
-              # Continue to the next step even if this fails
-              continue-on-error: true
-            - name: Upload ESLint report
-              uses: actions/upload-artifact@v2
-              with:
-                  name: eslint_report.json
-                  path: eslint_report.json
+            - uses: bradennapier/eslint-plus-action@v3.4.2
 
-    CSSLintingCheck:
+    csslint:
         name: Lint CSS
         needs: Setup
         runs-on: ubuntu-latest
-
         steps:
             - uses: actions/checkout@v2
             - name: Cache node modules
