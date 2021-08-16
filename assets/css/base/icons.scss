@@ -199,7 +199,7 @@ input[type="submit"],
 .widget_search,
 .widget_product_search {
 
-	form {
+	form:not(.wp-block-search) {
 
 		&::before {
 
