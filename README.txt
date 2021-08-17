@@ -1,11 +1,11 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
-Tested up to: 5.7.0
-Stable tag: 3.7.0
-Version: 3.7.0
+Tested up to: 5.8.0
+Stable tag: 3.8.0
+Version: 3.8.0
 WC requires at least: 4.2
-WC tested up to: 5.3
+WC tested up to: 5.5
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -50,6 +50,13 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.8.0 - 2021-08-17 =
+- Fix – Several visual issues when a Search block was added to a widget area ([#1755](https://github.com/woocommerce/storefront/pull/1755))
+- Fix - Removed superfluous slashes from Star and WooCommerce fonts urls ([#1754](https://github.com/woocommerce/storefront/pull/1754))
+- Fix - Fix hidden disclosure arrow on <summary> tags ([#1727](https://github.com/woocommerce/storefront/pull/1727))
+- Fix - Remove full width image mobile margin and remove full width image block margins on mobile ([#1713](https://github.com/woocommerce/storefront/pull/1713))
+- Enhancement – Remove skip-link-focus-fix.js. ([#1653](https://github.com/woocommerce/storefront/pull/1653))
 
 = 3.7.0 - 2021-05-25 =
 - Fix - Fix compatibility problem with Gravity forms premium ([#1690](https://github.com/woocommerce/storefront/pull/1690))

@@ -4,14 +4,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 3.7.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2021-05-25 10:02:41+00:00\n"
+"POT-Creation-Date: 2021-08-17 12:05:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: node-wp-i18n 1.2.5\n"
+"X-Generator: node-wp-i18n 1.2.6\n"
 
 #: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
@@ -262,15 +262,15 @@ msgstr ""
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:350
+#: inc/class-storefront.php:349
 msgid "Expand child menu"
 msgstr ""
 
-#: inc/class-storefront.php:351
+#: inc/class-storefront.php:350
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/class-storefront.php:485
+#: inc/class-storefront.php:484
 msgid "Post Navigation"
 msgstr ""
 
