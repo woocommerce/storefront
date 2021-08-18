@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.8.0
-Stable tag: 3.8.0
-Version: 3.8.0
+Stable tag: 3.8.1
+Version: 3.8.1
 WC requires at least: 4.2
 WC tested up to: 5.5
 License: GPLv3 or later
@@ -50,6 +50,9 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 3.8.1 - 2021-08-18 =
+- Fix - The image shown in the Cover block will now respect the full-width setting. ([#1762](https://github.com/woocommerce/storefront/pull/1762))
 
 = 3.8.0 - 2021-08-17 =
 - Fix – Several visual issues when a Search block was added to a widget area ([#1755](https://github.com/woocommerce/storefront/pull/1755))
