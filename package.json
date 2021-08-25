@@ -79,7 +79,7 @@
 		"@wordpress/browserslist-config": "4.1.0",
 		"@wordpress/env": "4.1.0",
 		"@wordpress/prettier-config": "1.1.0",
-		"@wordpress/scripts": "17.1.0",
+		"@wordpress/scripts": "18.0.0",
 		"@wordpress/stylelint-config": "19.1.0",
 		"autoprefixer": "10.3.2",
 		"bourbon": "7.0.0",
