@@ -43,7 +43,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				$args = array(
 					'storefront_heading_color'           => '#333333',
 					'storefront_text_color'              => '#6d6d6d',
-					'storefront_accent_color'            => '#96588a',
+					'storefront_accent_color'            => '#7f54b3',
 					'storefront_hero_heading_color'      => '#000000',
 					'storefront_hero_text_color'         => '#000000',
 					'storefront_header_background_color' => '#ffffff',
@@ -232,7 +232,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			$wp_customize->add_setting(
 				'storefront_accent_color',
 				array(
-					'default'           => apply_filters( 'storefront_default_accent_color', '#96588a' ),
+					'default'           => apply_filters( 'storefront_default_accent_color', '#7f54b3' ),
 					'sanitize_callback' => 'sanitize_hex_color',
 				)
 			);
