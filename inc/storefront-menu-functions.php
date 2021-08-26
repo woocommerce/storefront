@@ -8,8 +8,6 @@
 /**
  * Filters the arguments for a single nav menu item.
  *
- * @since 1.0.0
- *
  * @param stdClass $args  An object of wp_nav_menu() arguments.
  * @param WP_Post  $item  Menu item data object.
  * @param int      $depth Depth of menu item. Used for padding.
