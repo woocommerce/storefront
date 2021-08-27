@@ -86,7 +86,7 @@
 		"browserslist": "4.16.8",
 		"concurrently": "6.2.1",
 		"github-label-sync": "2.0.2",
-		"jest": "27.0.6",
+		"jest": "27.1.0",
 		"jest-puppeteer": "5.0.4",
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.6",
