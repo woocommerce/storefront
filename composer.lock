@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8315ea63760ceeca9571e076a3608c4",
+    "content-hash": "e50197f68f2857d35f6a4ae9156b95a9",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v2.0.0",
+            "version": "v2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "5a546a8cc4607f38cfbd8e20b3de234e45b2110f"
+                "reference": "a241e78aaeb09781f5f5b92ac01ffd13ab43e5e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/5a546a8cc4607f38cfbd8e20b3de234e45b2110f",
-                "reference": "5a546a8cc4607f38cfbd8e20b3de234e45b2110f",
+                "url": "https://api.github.com/repos/composer/installers/zipball/a241e78aaeb09781f5f5b92ac01ffd13ab43e5e8",
+                "reference": "a241e78aaeb09781f5f5b92ac01ffd13ab43e5e8",
                 "shasum": ""
             },
             "require": {
@@ -131,7 +131,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/installers/issues",
-                "source": "https://github.com/composer/installers/tree/v2.0.0"
+                "source": "https://github.com/composer/installers/tree/v2.0.1"
             },
             "funding": [
                 {
@@ -147,7 +147,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-04T13:56:36+00:00"
+            "time": "2021-09-13T08:21:20+00:00"
         }
     ],
     "packages-dev": [
