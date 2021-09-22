@@ -83,7 +83,7 @@
 		"@wordpress/stylelint-config": "19.1.0",
 		"autoprefixer": "10.3.5",
 		"bourbon": "7.0.0",
-		"browserslist": "4.17.0",
+		"browserslist": "4.17.1",
 		"concurrently": "6.2.1",
 		"github-label-sync": "2.0.2",
 		"jest": "27.2.1",
