@@ -949,6 +949,10 @@ input[type="submit"],
 	}
 }
 
+.button.woocommerce-MyAccount-downloads-file {
+	@include wrap-break-word;
+}
+
 .wc-block-components-button:not(.is-link).disabled,
 .wc-block-components-button:not(.is-link):disabled {
 	opacity: 0.5;
