@@ -910,7 +910,6 @@ input[type="submit"],
 	text-shadow: none;
 	display: inline-block;
 	-webkit-appearance: none;
-	word-break: break-all;
 
 	&::after {
 		display: none;
@@ -948,6 +947,10 @@ input[type="submit"],
 			opacity: 0.5 !important;
 		}
 	}
+}
+
+.button.woocommerce-MyAccount-downloads-file {
+	@include wrap-break-word;
 }
 
 .wc-block-components-button:not(.is-link).disabled,
