@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 5.8.0
-Stable tag: 3.8.0
-Version: 3.9.0
+Stable tag: 3.9.1
+Version: 3.9.1
 WC requires at least: 4.2
 WC tested up to: 5.5
 License: GPLv3 or later
