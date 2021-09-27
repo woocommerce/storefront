@@ -51,6 +51,10 @@ Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq
 
 == Changelog ==
 
+= 3.9.0 - 2021-09-27 =
+- Enhancement - Update Woo's default color to #7f54b3 ([#1769](https://github.com/woocommerce/storefront/pull/1769))
+- Fix - Avoid text in buttons breaking in the middle of words ([#1797](https://github.com/woocommerce/storefront/pull/1797))
+
 = 3.8.0 - 2021-08-17 =
 - Fix – Several visual issues when a Search block was added to a widget area ([#1755](https://github.com/woocommerce/storefront/pull/1755))
 - Fix - Removed superfluous slashes from Star and WooCommerce fonts urls ([#1754](https://github.com/woocommerce/storefront/pull/1754))
