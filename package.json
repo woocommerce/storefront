@@ -81,7 +81,7 @@
 		"@wordpress/prettier-config": "1.1.1",
 		"@wordpress/scripts": "18.0.1",
 		"@wordpress/stylelint-config": "19.1.0",
-		"autoprefixer": "10.3.6",
+		"autoprefixer": "10.3.7",
 		"bourbon": "7.0.0",
 		"browserslist": "4.17.2",
 		"concurrently": "6.3.0",
