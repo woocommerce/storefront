@@ -1,5 +1,7 @@
 // Bourbon
 // See: https://www.bourbon.io/docs/latest/
+@use "sass:math";
+
 @import "bourbon";
 
 // Susy
@@ -301,8 +303,8 @@ table {
 
 // Main content width
 .wp-block {
-	$span-value: span(9) / 100;
-	max-width: calc(#{$container-width} * #{$span-value / ( $span-value * 0 + 1 )}); // Unitless hack.
+	$span-value: span(9) * 0.01;
+	max-width: calc(#{$container-width} * #{math.div($span-value, $span-value * 0 + 1)}); // Unitless hack.
 }
 
 .wp-block[data-align="wide"] {

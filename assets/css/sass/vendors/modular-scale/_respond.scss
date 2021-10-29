@@ -1,7 +1,9 @@
 // Stripping units is rarely a best practice and this function
 // should not be used elsewhere
+@use "sass:math";
+
 @function ms-unitless($val) {
-  $val: $val / ($val - $val + 1);
+  $val: math.div($val, $val - $val + 1);
   @return $val;
 }
 
