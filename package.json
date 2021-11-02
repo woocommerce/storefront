@@ -94,7 +94,7 @@
 		"postcss-cli": "9.0.1",
 		"puppeteer": "10.4.0",
 		"prettier": "npm:wp-prettier@2.0.5",
-		"rtlcss": "3.4.0",
+		"rtlcss": "3.5.0",
 		"susy": "2.2.14",
 		"uglify-js": "3.14.3"
 	},
