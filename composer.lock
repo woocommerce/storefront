@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cacc8908f07a4912aec8073654289ab4",
+    "content-hash": "72f035f89230451c3ff596bf81f4c864",
     "packages": [
         {
             "name": "composer/installers",
@@ -472,6 +472,10 @@
                 }
             ],
             "description": "WooCommerce Git Hooks",
+            "support": {
+                "issues": "https://github.com/woocommerce/woocommerce-git-hooks/issues",
+                "source": "https://github.com/woocommerce/woocommerce-git-hooks/tree/1.0.5"
+            },
             "time": "2017-12-18T16:55:42+00:00"
         },
         {
