@@ -84,7 +84,7 @@
 		"autoprefixer": "10.4.1",
 		"bourbon": "7.0.0",
 		"browserslist": "4.19.1",
-		"concurrently": "6.5.1",
+		"concurrently": "7.0.0",
 		"github-label-sync": "2.0.2",
 		"jest": "27.4.7",
 		"jest-puppeteer": "6.0.3",
