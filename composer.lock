@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2282dc085bad81ce4fd523c95f29804",
+    "content-hash": "8cf844c198a10c42adb50930583781e2",
     "packages": [
         {
             "name": "composer/installers",
@@ -337,16 +337,16 @@
         },
         {
             "name": "phpcompatibility/phpcompatibility-wp",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCompatibility/PHPCompatibilityWP.git",
-                "reference": "a792ab623069f0ce971b2417edef8d9632e32f75"
+                "reference": "d55de55f88697b9cdb94bccf04f14eb3b11cf308"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/a792ab623069f0ce971b2417edef8d9632e32f75",
-                "reference": "a792ab623069f0ce971b2417edef8d9632e32f75",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityWP/zipball/d55de55f88697b9cdb94bccf04f14eb3b11cf308",
+                "reference": "d55de55f88697b9cdb94bccf04f14eb3b11cf308",
                 "shasum": ""
             },
             "require": {
@@ -387,7 +387,7 @@
                 "issues": "https://github.com/PHPCompatibility/PHPCompatibilityWP/issues",
                 "source": "https://github.com/PHPCompatibility/PHPCompatibilityWP"
             },
-            "time": "2021-07-21T11:09:57+00:00"
+            "time": "2021-12-30T16:37:40+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -484,16 +484,16 @@
         },
         {
             "name": "woocommerce/woocommerce-sniffs",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/woocommerce/woocommerce-sniffs.git",
-                "reference": "eb604d751b61c42f31ff1aa24113c7c0de438553"
+                "reference": "5566270d280a300bc24bd0cb055a8b9325afdd6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/woocommerce/woocommerce-sniffs/zipball/eb604d751b61c42f31ff1aa24113c7c0de438553",
-                "reference": "eb604d751b61c42f31ff1aa24113c7c0de438553",
+                "url": "https://api.github.com/repos/woocommerce/woocommerce-sniffs/zipball/5566270d280a300bc24bd0cb055a8b9325afdd6b",
+                "reference": "5566270d280a300bc24bd0cb055a8b9325afdd6b",
                 "shasum": ""
             },
             "require": {
@@ -522,9 +522,9 @@
             ],
             "support": {
                 "issues": "https://github.com/woocommerce/woocommerce-sniffs/issues",
-                "source": "https://github.com/woocommerce/woocommerce-sniffs/tree/0.1.1"
+                "source": "https://github.com/woocommerce/woocommerce-sniffs/tree/0.1.2"
             },
-            "time": "2021-07-29T17:25:16+00:00"
+            "time": "2022-01-21T20:13:23+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
