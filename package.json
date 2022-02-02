@@ -87,7 +87,7 @@
 		"concurrently": "7.0.0",
 		"github-label-sync": "2.0.2",
 		"jest": "27.4.7",
-		"jest-puppeteer": "6.0.3",
+		"jest-puppeteer": "6.1.0",
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.6",
 		"onchange": "7.1.0",
