@@ -10,13 +10,13 @@
 	"archive": {
 		"exclude": [
 			"!/assets",
-			"/assets/css/sass",
-			"/assets/css/**/*.scss",
 			"!/languages",
 			"!/style.css",
 			"!/style-rtl.css",
 			"/assets/css/sass",
+			"/assets/css/**/*.scss",
 			"/e2e",
+			"/vendor",
 			"composer.json",
 			"composer.lock",
 			"package.json",
@@ -28,15 +28,8 @@
 			"STOREFRONT_STATUS.md",
 			"renovate.json",
 			"node_modules",
-			".stylelintrc.json",
-			".stylelintignore",
-			".editorconfig",
-			".gitignore",
-			".github",
-			".browserslistrc",
-			".eslintrc.js",
-			".prettierrc.js",
-			".wp-env.json"
+			"storefront.zip",
+			".*"
 		]
 	},
 	"require-dev": {
@@ -72,6 +65,12 @@
 			"test": "Run unit tests",
 			"phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
 			"phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"composer/installers": true
 		}
 	}
 }
