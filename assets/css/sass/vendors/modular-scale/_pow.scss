@@ -1,11 +1,13 @@
 // If a native exponent function doesnt exist
 // this one is needed.
+@use "sass:math";
+
 @function ms-pow($Base, $Exponent) {
 
   // Find and remove unit.
   // Avoids messyness with unit calculations
   $Unit: $Base * 0 + 1;
-  $Base: $Base/$Unit;
+  $Base: math.div($Base, $Unit);
 
   // This function doesnt support non-interger exponents.
   // Warn the user about why this is breaking.
@@ -30,7 +32,7 @@
   @else {
     // Libsass doesnt allow negitive values in loops
     @for $i from (-1 + 1) to (abs($Exponent) + 1) {
-      $Return: $Return / $Base;
+      $Return: math.div($Return, $Base);
     }
   }
 
