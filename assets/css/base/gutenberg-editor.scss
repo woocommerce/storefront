@@ -302,12 +302,13 @@ table {
  */
 
 // Main content width
+// These two rules are copied from https://github.com/woocommerce/storefront/issues/1320#issuecomment-868549528
 .wp-block {
-  max-width: calc(66.4989378333rem * 0.7391304348);
+	max-width: calc(66.4989378333rem * 0.7391304348);
 }
 
-.wp-block[data-align=wide] {
-  max-width: 75.9987860952rem;
+.wp-block[data-align="wide"] {
+	max-width: 75.9987860952rem;
 }
 
 .wp-block[data-align="full"] {
