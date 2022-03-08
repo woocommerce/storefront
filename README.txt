@@ -1,9 +1,9 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
-Tested up to: 5.8.0
-Stable tag: 3.9.1
-Version: 3.9.1
+Tested up to: 5.9.0
+Stable tag: 4.0.0
+Version: 4.0.0
 WC requires at least: 4.2
 WC tested up to: 5.5
 License: GPLv3 or later
@@ -50,6 +50,10 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 4.0.0 - 2022-03-08 =
+- Fix - Fix editor alignment issues with heading and blockquote blocks.
+- Dev – Update various dependencies.
 
 = 3.9.0 - 2021-09-27 =
 - Enhancement - Update Woo's default color to #7f54b3 ([#1769](https://github.com/woocommerce/storefront/pull/1769))
