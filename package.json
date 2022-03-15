@@ -81,7 +81,7 @@
 		"@wordpress/scripts": "22.2.1",
 		"autoprefixer": "10.4.3",
 		"bourbon": "7.2.0",
-		"browserslist": "4.20.0",
+		"browserslist": "4.20.2",
 		"concurrently": "7.0.0",
 		"github-label-sync": "2.0.2",
 		"jest": "27.5.1",
