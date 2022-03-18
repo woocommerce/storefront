@@ -5,7 +5,7 @@
 	"type": "wordpress-theme",
 	"license": "GPL-3.0+",
 	"require": {
-		"composer/installers": "2.0.1"
+		"composer/installers": "2.1.0"
 	},
 	"archive": {
 		"exclude": [
