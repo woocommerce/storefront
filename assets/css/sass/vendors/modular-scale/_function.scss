@@ -1,4 +1,6 @@
 // The main function that brings it all together
+@use "sass:math";
+
 @function ms($Value: 0, $Bases: $ms-base, $Ratios: $ms-ratio) {
 
   // If no multi-base or multi-ratio stuff is going on
@@ -14,7 +16,7 @@
     $Unit: nth($Bases, 1) * 0 + 1; // Extracts the unit from the base
     $Unitless-Bases: ();
     @each $Base in $Bases {
-      $Base: $Base/$Unit;
+      $Base: math.div($Base, $Unit);
       $Unitless-Bases: join($Unitless-Bases, $Base);
     }
 
