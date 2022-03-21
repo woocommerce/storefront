@@ -48,6 +48,11 @@ select {
 	max-width: 100%;
 }
 
+// Fix outdated summary style from _normalize.scss which prevents the arrow from appearing
+summary {
+	display: list-item;
+}
+
 h1,
 h2,
 h3,
@@ -905,7 +910,6 @@ input[type="submit"],
 	text-shadow: none;
 	display: inline-block;
 	-webkit-appearance: none;
-	word-break: break-all;
 
 	&::after {
 		display: none;
@@ -943,6 +947,10 @@ input[type="submit"],
 			opacity: 0.5 !important;
 		}
 	}
+}
+
+.button.woocommerce-MyAccount-downloads-file {
+	@include wrap-break-word;
 }
 
 .wc-block-components-button:not(.is-link).disabled,
@@ -1530,7 +1538,7 @@ button.menu-toggle {
 .widget_search,
 .widget_product_search {
 
-	form {
+	form:not(.wp-block-search) {
 		position: relative;
 
 		input[type="text"],

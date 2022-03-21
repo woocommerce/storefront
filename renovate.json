@@ -9,5 +9,6 @@
       "requiredStatusChecks": null
     }
   ],
-  "ignoreDeps": ["susy"]
+  "ignoreDeps": ["susy"],
+  "reviewers": ["team:kirigami"]
 }

@@ -1,0 +1,81 @@
+name: JavaScript and CSS Linting
+on:
+    pull_request:
+    push:
+        branches: [trunk]
+jobs:
+    Setup:
+        name: Setup for Jobs
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - name: Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: node_modules
+                  key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.OS }}-build-${{ env.cache-name }}-
+                      ${{ runner.OS }}-build-
+                      ${{ runner.OS }}-
+            - name: Install Node Dependencies
+              run: npm install
+
+    eslint:
+        name: Lint JavaScript
+        needs: Setup
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: node_modules
+                  key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.OS }}-build-${{ env.cache-name }}-
+                      ${{ runner.OS }}-build-
+                      ${{ runner.OS }}-
+            - name: Install Node Dependencies
+              run: npm install
+            - if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name != github.repository }}
+              name: Run ESLint
+              run: npm run lint:js
+            - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
+              name: Save Code Linting Report JSON
+              run: npm run lint:js:report
+              # Continue to the next step even if this fails
+              continue-on-error: true
+            - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
+              name: Upload ESLint report
+              uses: actions/upload-artifact@v3
+              with:
+                  name: eslint_report.json
+                  path: eslint_report.json
+            - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
+              name: Annotate Code Linting Results
+              uses: ataylorme/eslint-annotate-action@1.2.0
+              with:
+                  repo-token: '${{ secrets.GITHUB_TOKEN }}'
+                  report-json: 'eslint_report.json'
+
+    stylelint:
+        name: Lint CSS
+        needs: Setup
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: node_modules
+                  key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.OS }}-build-${{ env.cache-name }}-
+                      ${{ runner.OS }}-build-
+                      ${{ runner.OS }}-
+            - name: Install Node Dependencies
+              run: npm install
+            - name: Lint CSS
+              run: npm run lint:css

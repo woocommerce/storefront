@@ -5,25 +5,40 @@
 	"type": "wordpress-theme",
 	"license": "GPL-3.0+",
 	"require": {
-		"composer/installers": "1.11.0"
+		"composer/installers": "2.1.0"
 	},
 	"archive": {
 		"exclude": [
 			"!/assets",
+			"!/languages",
+			"!/vendor",
+			"!/style.css",
+			"!/style-rtl.css",
 			"/assets/css/sass",
 			"/assets/css/**/*.scss",
-			"!/languages",
-			"!/style.css",
-			"!/style-rtl.css"
+			"/e2e",
+			"composer.json",
+			"composer.lock",
+			"package.json",
+			"package-lock.json",
+			"phpcs.xml",
+			"phpunit.xml",
+			"README.md",
+			"CONTRIBUTING.md",
+			"STOREFRONT_STATUS.md",
+			"renovate.json",
+			"node_modules",
+			"storefront.zip",
+			".*"
 		]
 	},
 	"require-dev": {
-		"squizlabs/php_codesniffer": "3.6.0",
+		"squizlabs/php_codesniffer": "3.6.2",
 		"wp-coding-standards/wpcs": "2.3.0",
-		"woocommerce/woocommerce-sniffs": "0.1.0",
+		"woocommerce/woocommerce-sniffs": "0.1.2",
 		"phpcompatibility/php-compatibility": "9.3.5",
-		"woocommerce/woocommerce-git-hooks": "*",
-		"dealerdirect/phpcodesniffer-composer-installer": "0.7.0"
+		"woocommerce/woocommerce-git-hooks": "1.0.5",
+		"dealerdirect/phpcodesniffer-composer-installer": "0.7.2"
 	},
 	"scripts": {
 		"pre-update-cmd": [
@@ -50,6 +65,12 @@
 			"test": "Run unit tests",
 			"phpcs": "Analyze code against the WordPress coding standards with PHP_CodeSniffer",
 			"phpcbf": "Fix coding standards warnings/errors automatically with PHP Code Beautifier"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"composer/installers": true
 		}
 	}
 }

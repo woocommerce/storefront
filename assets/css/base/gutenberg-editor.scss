@@ -1,5 +1,7 @@
 // Bourbon
 // See: https://www.bourbon.io/docs/latest/
+@use "sass:math";
+
 @import "bourbon";
 
 // Susy
@@ -300,13 +302,13 @@ table {
  */
 
 // Main content width
+// These two rules are copied from https://github.com/woocommerce/storefront/issues/1320#issuecomment-868549528
 .wp-block {
-	$span-value: span(9) / 100;
-	max-width: calc(#{$container-width} * #{$span-value / ( $span-value * 0 + 1 )}); // Unitless hack.
+	max-width: calc(66.4989378333rem * 0.7391304348);
 }
 
 .wp-block[data-align="wide"] {
-	max-width: ms(19);
+	max-width: 75.9987860952rem;
 }
 
 .wp-block[data-align="full"] {
