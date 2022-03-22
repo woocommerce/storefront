@@ -552,6 +552,8 @@
 			transition: none;
 
 			> li {
+				vertical-align: top;
+
 				// The first level menu item
 				> a {
 					padding: ms(3) 1em;
@@ -567,6 +569,12 @@
 						}
 					}
 				}
+			}
+
+			.menu-item-description {
+				font-size: ms(-1);
+				opacity: 0.67;
+				margin: 0;
 			}
 
 			ul {
