@@ -78,7 +78,7 @@
 		"@woocommerce/eslint-plugin": "1.3.0",
 		"@wordpress/browserslist-config": "4.1.2",
 		"@wordpress/env": "4.7.0",
-		"@wordpress/scripts": "22.5.0",
+		"@wordpress/scripts": "23.1.0",
 		"autoprefixer": "10.4.7",
 		"bourbon": "7.2.0",
 		"browserslist": "4.20.3",
