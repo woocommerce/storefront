@@ -90,7 +90,7 @@
 		"node-wp-i18n": "1.2.6",
 		"onchange": "7.1.0",
 		"postcss-cli": "9.1.0",
-		"puppeteer": "14.1.0",
+		"puppeteer": "14.1.1",
 		"prettier": "npm:wp-prettier@2.0.5",
 		"rtlcss": "3.5.0",
 		"susy": "2.2.14",
