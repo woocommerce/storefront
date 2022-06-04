@@ -91,7 +91,7 @@
 		"onchange": "7.1.0",
 		"postcss-cli": "9.1.0",
 		"puppeteer": "14.2.1",
-		"prettier": "npm:wp-prettier@2.0.5",
+		"prettier": "npm:wp-prettier@2.6.2",
 		"rtlcss": "3.5.0",
 		"susy": "2.2.14",
 		"uglify-js": "3.15.5"
