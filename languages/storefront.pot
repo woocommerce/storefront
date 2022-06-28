@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 4.1.0\n"
+"Project-Id-Version: Storefront 4.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2022-04-04 08:40:25+00:00\n"
+"POT-Creation-Date: 2022-06-28 13:36:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -228,49 +228,49 @@ msgstr ""
 msgid "Huge"
 msgstr ""
 
-#: inc/class-storefront.php:247
+#: inc/class-storefront.php:259
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-storefront.php:253
+#: inc/class-storefront.php:265
 msgid "Below Header"
 msgstr ""
 
-#: inc/class-storefront.php:255
+#: inc/class-storefront.php:267
 msgid ""
 "Widgets added to this region will appear beneath the header and above the "
 "main content."
 msgstr ""
 
-#: inc/class-storefront.php:268
+#: inc/class-storefront.php:280
 #. translators: 1: column number
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-storefront.php:271
+#: inc/class-storefront.php:283
 #. translators: 1: column number
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-storefront.php:274
+#: inc/class-storefront.php:286
 #. translators: 1: row number, 2: column number
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-storefront.php:277
+#: inc/class-storefront.php:289
 #. translators: 1: column number, 2: row number
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:349
+#: inc/class-storefront.php:361
 msgid "Expand child menu"
 msgstr ""
 
-#: inc/class-storefront.php:350
+#: inc/class-storefront.php:362
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/class-storefront.php:484
+#: inc/class-storefront.php:496
 msgid "Post Navigation"
 msgstr ""
 
