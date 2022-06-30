@@ -89,7 +89,7 @@
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.6",
 		"onchange": "7.1.0",
-		"postcss-cli": "9.1.0",
+		"postcss-cli": "10.0.0",
 		"puppeteer": "14.4.1",
 		"prettier": "npm:wp-prettier@2.6.2",
 		"rtlcss": "3.5.0",
