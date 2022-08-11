@@ -1931,7 +1931,7 @@ p.stars {
 }
 
 .woocommerce-message,
-.woocommerce-info,
+body:not(.post-type-archive-product) .woocommerce-info,
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
@@ -2027,7 +2027,7 @@ p.no-comments {
 	list-style: none;
 }
 
-.woocommerce-info,
+body:not(.post-type-archive-product) .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
 	background-color: $info;
