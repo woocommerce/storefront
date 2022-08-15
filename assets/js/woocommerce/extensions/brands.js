@@ -15,8 +15,8 @@
 		const adminBar = document.body.classList.contains( 'admin-bar' )
 				? 32
 				: 0,
-			brandsContainerHeight = document.getElementById( 'brands_a_z' )
-				.scrollHeight,
+			brandsContainerHeight =
+				document.getElementById( 'brands_a_z' ).scrollHeight,
 			brandsAZHeight = brandsAZ[ 0 ].scrollHeight + 40;
 
 		const stickyBrandsAZ = function () {
