@@ -1931,7 +1931,7 @@ p.stars {
 }
 
 .woocommerce-message,
-body:not(.archive.woocommerce) .woocommerce-info,
+.woocommerce-info,
 .woocommerce-error,
 .woocommerce-noreviews,
 p.no-comments {
@@ -2027,11 +2027,24 @@ p.no-comments {
 	list-style: none;
 }
 
-body:not(.archive.woocommerce) .woocommerce-info,
+.woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
 	background-color: $info;
 }
+
+p.woocommerce-info.woocommerce-no-products-found {
+	background-color: transparent;
+	border: none;
+	color: inherit;
+	padding: 1em 2em;
+
+	&::before,
+	&::after {
+		content: none;
+	}
+}
+
 
 .woocommerce-error {
 	background-color: $error;
