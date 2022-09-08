@@ -770,23 +770,45 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 			return;
 		}
 
+		do_action( 'storefront_before_single_product_pagination' );
+
 		?>
 		<nav class="storefront-product-pagination" aria-label="<?php esc_attr_e( 'More products', 'storefront' ); ?>">
-			<?php if ( $previous_product ) : ?>
+			<?php
+			if ( $previous_product ) {
+
+				do_action( 'storefront_before_single_product_pagination_previous' );
+				?>
+
 				<a href="<?php echo esc_url( $previous_product->get_permalink() ); ?>" rel="prev">
 					<?php echo wp_kses_post( $previous_product->get_image() ); ?>
 					<span class="storefront-product-pagination__title"><?php echo wp_kses_post( $previous_product->get_name() ); ?></span>
 				</a>
-			<?php endif; ?>
 
-			<?php if ( $next_product ) : ?>
+				<?php
+
+				do_action( 'storefront_after_single_product_pagination_previous' );
+
+			}
+			
+			if ( $next_product ) {
+
+				do_action( 'storefront_before_single_product_pagination_next' );
+				?>
+
 				<a href="<?php echo esc_url( $next_product->get_permalink() ); ?>" rel="next">
 					<?php echo wp_kses_post( $next_product->get_image() ); ?>
 					<span class="storefront-product-pagination__title"><?php echo wp_kses_post( $next_product->get_name() ); ?></span>
 				</a>
-			<?php endif; ?>
+				<?php
+
+				do_action( 'storefront_after_single_product_pagination_next' );
+
+			} ?>
 		</nav><!-- .storefront-product-pagination -->
 		<?php
+
+		do_action( 'storefront_after_single_product_pagination' );
 	}
 }
 
