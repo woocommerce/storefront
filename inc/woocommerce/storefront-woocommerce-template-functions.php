@@ -851,6 +851,8 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 		wp_localize_script( 'storefront-sticky-add-to-cart', 'storefront_sticky_add_to_cart_params', $params );
 
 		wp_enqueue_script( 'storefront-sticky-add-to-cart' );
+
+		do_action( 'storefront_before_sticky_single_add_to_cart' );
 		?>
 			<section class="storefront-sticky-add-to-cart">
 				<div class="col-full">
@@ -868,6 +870,7 @@ if ( ! function_exists( 'storefront_sticky_single_add_to_cart' ) ) {
 				</div>
 			</section><!-- .storefront-sticky-add-to-cart -->
 		<?php
+		do_action( 'storefront_after_sticky_single_add_to_cart' );
 	}
 }
 
