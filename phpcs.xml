@@ -57,4 +57,12 @@
 	<rule ref="Generic.Arrays.DisallowShortArraySyntax.Found">
 		<exclude-pattern>src/*</exclude-pattern>
     </rule>
+
+	<rule ref="WooCommerce.Commenting.CommentHooks.MissingHookComment">
+		<exclude-pattern>*</exclude-pattern>
+    </rule>
+
+	<rule ref="WooCommerce.Commenting.CommentHooks.MissingSinceComment">
+		<exclude-pattern>*</exclude-pattern>
+    </rule>
 </ruleset>
