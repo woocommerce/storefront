@@ -233,7 +233,9 @@ if ( ! class_exists( 'Storefront_NUX_Starter_Content' ) ) :
 				$starter_content['posts'] = array_merge( $starter_content['posts'], $starter_content_wc_pages );
 			}
 
-			// Register support for starter content.
+			/**
+			 * Register support for starter content.
+			 */
 			add_theme_support( 'starter-content', apply_filters( 'storefront_starter_content', $starter_content ) );
 		}
 
