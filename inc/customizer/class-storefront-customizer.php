@@ -858,7 +858,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * @package  storefront
 			 * @since    2.0.0
 			 */
-			$brighten_factor       = apply_filters( 'storefront_brighten_factor', 25 );
+			$brighten_factor = apply_filters( 'storefront_brighten_factor', 25 );
 			/**
 			 * Filters for darkening color value.
 			 *
@@ -866,7 +866,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * @package  storefront
 			 * @since    2.0.0
 			 */
-			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
+			$darken_factor = apply_filters( 'storefront_darken_factor', -25 );
 
 			$styles = '
 			.main-navigation ul li a,
@@ -1072,7 +1072,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * @package  storefront
 			 * @since    2.0.0
 			 */
-			$darken_factor         = apply_filters( 'storefront_darken_factor', -25 );
+			$darken_factor = apply_filters( 'storefront_darken_factor', -25 );
 
 			// Gutenberg.
 			$styles = '
