@@ -1254,8 +1254,14 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 				/* WP <=5.3 */
 				.editor-styles-wrapper .editor-block-list__block,
 				/* WP >=5.4 */
-				.editor-styles-wrapper .block-editor-block-list__block:not(.wp-block-woocommerce-featured-product):not(.wp-block-woocommerce-featured-category) {
+				.editor-styles-wrapper .block-editor-block-list__block:not(:has(div.has-background-dim)) {
 					color: ' . $storefront_theme_mods['text_color'] . ';
+				}
+				/* This following ruleset is a fallback for browsers that do not support the :has() selector. It can be removed once support reaches our requirements. */
+				@supports not (selector(:has(*))) {
+					.editor-styles-wrapper .block-editor-block-list__block:not(.wp-block-woocommerce-featured-product, .wp-block-woocommerce-featured-category) {
+						color: ' . $storefront_theme_mods['text_color'] . ';
+					}
 				}
 
 				.editor-styles-wrapper a,
