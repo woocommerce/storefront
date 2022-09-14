@@ -77,7 +77,7 @@
 		"@wordpress/browserslist-config": "4.1.3",
 		"@wordpress/env": "4.9.0",
 		"@wordpress/scripts": "23.7.2",
-		"autoprefixer": "10.4.10",
+		"autoprefixer": "10.4.11",
 		"bourbon": "7.2.0",
 		"browserslist": "4.21.3",
 		"concurrently": "7.4.0",
