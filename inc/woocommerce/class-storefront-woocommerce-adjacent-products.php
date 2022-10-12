@@ -81,18 +81,20 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 
 			$product               = false;
 			$this->current_product = $post->ID;
+			$infinite_loop_blocker = array();
 
 			// Try to get a valid product via `get_adjacent_post()`.
 			// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
-			while ( $adjacent = $this->get_adjacent() ) {
+			while ( ( $adjacent = $this->get_adjacent() ) && ! in_array( $adjacent->ID, $infinite_loop_blocker, true ) ) {
 				$product = wc_get_product( $adjacent->ID );
 
 				if ( $product && $product->is_visible() ) {
 					break;
 				}
 
-				$product               = false;
-				$this->current_product = $adjacent->ID;
+				$product                 = false;
+				$this->current_product   = $adjacent->ID;
+				$infinite_loop_blocker[] = $adjacent->ID;
 			}
 
 			if ( $product ) {
