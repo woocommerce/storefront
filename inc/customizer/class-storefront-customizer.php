@@ -1097,6 +1097,12 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					background-color: ' . storefront_adjust_color_brightness( $storefront_theme_mods['button_background_color'], $darken_factor ) . ';
 				}
 
+				.wc-block-grid__products .wc-block-grid__product .wp-block-button__link {
+					background-color: ' . $storefront_theme_mods['button_background_color'] . ';
+					border-color: ' . $storefront_theme_mods['button_background_color'] . ';
+					color: ' . $storefront_theme_mods['button_text_color'] . ';
+				}
+
 				.wp-block-quote footer,
 				.wp-block-quote cite,
 				.wp-block-quote__citation {
