@@ -85,7 +85,7 @@
 		"jest": "27.5.1",
 		"jest-puppeteer": "6.1.1",
 		"lodash": "4.17.21",
-		"node-wp-i18n": "1.2.6",
+		"node-wp-i18n": "1.2.7",
 		"onchange": "7.1.0",
 		"postcss-cli": "9.1.0",
 		"puppeteer": "14.4.1",
