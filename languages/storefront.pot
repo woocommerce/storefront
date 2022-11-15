@@ -2,16 +2,16 @@
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 4.1.3\n"
+"Project-Id-Version: Storefront 4.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2022-08-23 19:58:14+00:00\n"
+"POT-Creation-Date: 2022-11-15 10:34:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: node-wp-i18n 1.2.6\n"
+"X-Generator: node-wp-i18n 1.2.7\n"
 
 #: 404.php:19
 msgid "Oops! That page can&rsquo;t be found."
@@ -294,94 +294,94 @@ msgid ""
 "it!"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:123
+#: inc/customizer/class-storefront-customizer.php:130
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:127
+#: inc/customizer/class-storefront-customizer.php:134
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:176
+#: inc/customizer/class-storefront-customizer.php:190
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:197
-#: inc/customizer/class-storefront-customizer.php:438
+#: inc/customizer/class-storefront-customizer.php:218
+#: inc/customizer/class-storefront-customizer.php:522
 msgid "Heading color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:221
-#: inc/customizer/class-storefront-customizer.php:354
-#: inc/customizer/class-storefront-customizer.php:462
-#: inc/customizer/class-storefront-customizer.php:546
+#: inc/customizer/class-storefront-customizer.php:249
+#: inc/customizer/class-storefront-customizer.php:417
+#: inc/customizer/class-storefront-customizer.php:553
+#: inc/customizer/class-storefront-customizer.php:658
 msgid "Text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:245
+#: inc/customizer/class-storefront-customizer.php:280
 msgid "Link / accent color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:269
+#: inc/customizer/class-storefront-customizer.php:311
 msgid "Hero heading color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:293
+#: inc/customizer/class-storefront-customizer.php:342
 msgid "Hero text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:308
+#: inc/customizer/class-storefront-customizer.php:357
 msgid "Header background image"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:330
-#: inc/customizer/class-storefront-customizer.php:414
-#: inc/customizer/class-storefront-customizer.php:522
+#: inc/customizer/class-storefront-customizer.php:386
+#: inc/customizer/class-storefront-customizer.php:491
+#: inc/customizer/class-storefront-customizer.php:627
 msgid "Background color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:378
-#: inc/customizer/class-storefront-customizer.php:486
+#: inc/customizer/class-storefront-customizer.php:448
+#: inc/customizer/class-storefront-customizer.php:584
 msgid "Link color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:392
+#: inc/customizer/class-storefront-customizer.php:462
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:394
+#: inc/customizer/class-storefront-customizer.php:464
 msgid "Customize the look & feel of your website footer."
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:500
+#: inc/customizer/class-storefront-customizer.php:598
 msgid "Buttons"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:502
+#: inc/customizer/class-storefront-customizer.php:600
 msgid "Customize the look & feel of your website buttons."
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:570
+#: inc/customizer/class-storefront-customizer.php:689
 msgid "Alternate button background color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:594
+#: inc/customizer/class-storefront-customizer.php:720
 msgid "Alternate button text color"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:608
+#: inc/customizer/class-storefront-customizer.php:734
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:628
+#: inc/customizer/class-storefront-customizer.php:761
 msgid "General Layout"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:645
+#: inc/customizer/class-storefront-customizer.php:782
 msgid "More"
 msgstr ""
 
-#: inc/customizer/class-storefront-customizer.php:663
+#: inc/customizer/class-storefront-customizer.php:800
 msgid "Looking for more options?"
 msgstr ""
 
@@ -553,114 +553,114 @@ msgid ""
 "phone number. You might also try a plugin to add a contact form."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:702
+#: inc/nux/class-storefront-nux-starter-content.php:704
 msgid "Accessories"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:703
-#: inc/nux/class-storefront-nux-starter-content.php:706
-#: inc/nux/class-storefront-nux-starter-content.php:709
+#: inc/nux/class-storefront-nux-starter-content.php:705
+#: inc/nux/class-storefront-nux-starter-content.php:708
+#: inc/nux/class-storefront-nux-starter-content.php:711
 msgid "A short category description"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:705
+#: inc/nux/class-storefront-nux-starter-content.php:707
 msgid "Hoodies"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:708
+#: inc/nux/class-storefront-nux-starter-content.php:710
 msgid "Tshirts"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:714
+#: inc/nux/class-storefront-nux-starter-content.php:716
 msgid "Beanie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:736
+#: inc/nux/class-storefront-nux-starter-content.php:738
 msgid "Belt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:758
+#: inc/nux/class-storefront-nux-starter-content.php:760
 msgid "Cap"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:780
+#: inc/nux/class-storefront-nux-starter-content.php:782
 msgid "Sunglasses"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:801
+#: inc/nux/class-storefront-nux-starter-content.php:803
 msgid "Hoodie with Logo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:822
+#: inc/nux/class-storefront-nux-starter-content.php:824
 msgid "Hoodie with Pocket"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:844
+#: inc/nux/class-storefront-nux-starter-content.php:846
 msgid "Hoodie with Zipper"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:865
+#: inc/nux/class-storefront-nux-starter-content.php:867
 msgid "Hoodie"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:887
+#: inc/nux/class-storefront-nux-starter-content.php:889
 msgid "Long Sleeve Tee"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:908
+#: inc/nux/class-storefront-nux-starter-content.php:910
 msgid "Polo"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:929
+#: inc/nux/class-storefront-nux-starter-content.php:931
 msgid "Tshirt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:950
+#: inc/nux/class-storefront-nux-starter-content.php:952
 msgid "Vneck Tshirt"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1019
+#: inc/nux/class-storefront-nux-starter-content.php:1021
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:276
 msgid "Shop by Category"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1027
+#: inc/nux/class-storefront-nux-starter-content.php:1029
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:331
 msgid "New In"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1035
+#: inc/nux/class-storefront-nux-starter-content.php:1037
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:443
 msgid "Fan Favorites"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1041
+#: inc/nux/class-storefront-nux-starter-content.php:1043
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:499
 msgid "On Sale"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1047
+#: inc/nux/class-storefront-nux-starter-content.php:1049
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:555
 msgid "Best Sellers"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1072
+#: inc/nux/class-storefront-nux-starter-content.php:1074
 msgid "Welcome"
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1076
+#: inc/nux/class-storefront-nux-starter-content.php:1078
 msgid ""
 "This is your homepage which is what most visitors will see when they first "
 "visit your shop."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1080
+#: inc/nux/class-storefront-nux-starter-content.php:1082
 msgid ""
 "You can change this text by editing the \"Welcome\" page via the \"Pages\" "
 "menu in your dashboard."
 msgstr ""
 
-#: inc/nux/class-storefront-nux-starter-content.php:1106
+#: inc/nux/class-storefront-nux-starter-content.php:1108
 #: inc/woocommerce/storefront-woocommerce-template-functions.php:387
 msgid "We Recommend"
 msgstr ""
@@ -848,19 +848,19 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:774
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:776
 msgid "More products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:838
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:840
 msgid "You're viewing:"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:874
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:876
 msgid "Shop by Brand"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:891
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:893
 msgid "Product Brands"
 msgstr ""
 
