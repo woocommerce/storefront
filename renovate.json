@@ -10,5 +10,6 @@
     }
   ],
   "ignoreDeps": ["susy"],
-  "reviewers": ["team:kirigami"]
+  "reviewers": ["team:woo-fse"],
+  "enabled": false
 }
