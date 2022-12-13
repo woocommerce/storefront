@@ -391,6 +391,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			$query_args = array(
 				'family' => implode( '|', $google_fonts ),
 				'subset' => rawurlencode( 'latin,latin-ext' ),
+				'display' => 'swap',
 			);
 
 			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
