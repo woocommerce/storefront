@@ -758,7 +758,9 @@ if ( ! function_exists( 'storefront_single_product_pagination' ) ) {
 			return;
 		}
 
-		// Show only products in the same category?
+		/**
+		 * Show only products in the same category?
+		 */
 		$in_same_term   = apply_filters( 'storefront_single_product_pagination_same_category', true );
 		$excluded_terms = apply_filters( 'storefront_single_product_pagination_excluded_terms', '' );
 		$taxonomy       = apply_filters( 'storefront_single_product_pagination_taxonomy', 'product_cat' );

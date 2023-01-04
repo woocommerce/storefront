@@ -2033,6 +2033,19 @@ p.no-comments {
 	background-color: $info;
 }
 
+.woocommerce-info.woocommerce-no-products-found {
+	background-color: transparent;
+	border: none;
+	color: inherit;
+	padding: 1em 0;
+
+	&::before,
+	&::after {
+		content: none;
+	}
+}
+
+
 .woocommerce-error {
 	background-color: $error;
 }
