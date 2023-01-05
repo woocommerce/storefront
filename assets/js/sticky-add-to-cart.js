@@ -76,14 +76,15 @@
 							'storefront-sticky-add-to-cart__content-button'
 						);
 
-						selectOptions[ 0 ].addEventListener( 'click', function (
-							event
-						) {
-							event.preventDefault();
-							document
-								.getElementById( 'product-' + productId )
-								.scrollIntoView();
-						} );
+						selectOptions[ 0 ].addEventListener(
+							'click',
+							function ( event ) {
+								event.preventDefault();
+								document
+									.getElementById( 'product-' + productId )
+									.scrollIntoView();
+							}
+						);
 					}
 				}
 			}
