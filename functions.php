@@ -69,3 +69,46 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
+
+
+/**
+* This code will add an option to change product quantity on the cart page and total price will be changed.
+*/
+
+add_filter( 'woocommerce_checkout_cart_item_quantity', '__return_empty_string' );
+
+// Add Quantity Inputs
+
+add_filter( 'woocommerce_cart_item_subtotal', 'wc_checkout_item_quantity_input', 9999, 3 );
+
+function wc_checkout_item_quantity_input( $product_quantity, $cart_item, $cart_item_key ) {
+    if ( is_checkout() ) {
+        $product = apply_filters( 'woocommerce_cart_item_product', $cart_item['data'], $cart_item, $cart_item_key );
+        $product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );   
+        $product_quantity = woocommerce_quantity_input( array(
+            'input_name'  => 'shipping_method_qty_' . $product_id,
+            'input_value' => $cart_item['quantity'],
+            'max_value'   => $product->get_max_purchase_quantity(),
+            'min_value'   => '0',
+        ), $product, false );
+        $product_quantity .= '<input type="hidden" name="product_key_' . $product_id . '" value="' . $cart_item_key . '">';
+    }
+    return $product_quantity;
+}
+
+// Detect Quantity Change and Recalculate Totals
+
+add_action( 'woocommerce_checkout_update_order_review', 'wc_update_item_quantity_checkout' );
+
+function wc_update_item_quantity_checkout( $post_data ) {
+    parse_str( $post_data, $post_data_array );
+    $updated_qty = false;
+    foreach ( $post_data_array as $key => $value ) {   
+        if ( substr( $key, 0, 20 ) === 'shipping_method_qty_' ) {         
+            $id = substr( $key, 20 );   
+            WC()->cart->set_quantity( $post_data_array['product_key_' . $id], $post_data_array[$key], false );
+            $updated_qty = true;
+        }      
+    }   
+    if ( $updated_qty ) WC()->cart->calculate_totals();
+}
