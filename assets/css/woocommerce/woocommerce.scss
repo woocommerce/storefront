@@ -715,6 +715,10 @@ ul.products,
 			font-size: ms(-1);
 			margin-top: 1em;
 		}
+
+		&.sold-individually .quantity {
+			display: none;
+		}
 	}
 }
 
