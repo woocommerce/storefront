@@ -58,7 +58,7 @@
 		"lint:js-fix": "eslint assets/js --ext=js,jsx,ts,tsx --fix",
 		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
-		"test:e2e": "npm run wp-env run tests-cli 'wp theme activate storefront' && jest"
+		"test:e2e": "npm run wp-env run tests-cli 'wp theme activate storefront' && cross-env wp-scripts test-e2e"
 	},
 	"jest": {
 		"preset": "jest-puppeteer",
@@ -77,21 +77,21 @@
 	"devDependencies": {
 		"@woocommerce/eslint-plugin": "1.3.0",
 		"@wordpress/browserslist-config": "4.1.3",
-		"@wordpress/env": "5.5.0",
+		"@wordpress/env": "5.14.0",
 		"@wordpress/scripts": "23.7.2",
 		"autoprefixer": "10.4.13",
 		"bourbon": "7.2.0",
 		"browserslist": "4.21.4",
 		"concurrently": "7.6.0",
+		"cross-env": "^7.0.3",
 		"github-label-sync": "2.2.0",
-		"jest": "27.5.1",
 		"jest-puppeteer": "6.1.1",
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.7",
 		"onchange": "7.1.0",
 		"postcss-cli": "9.1.0",
-		"puppeteer": "14.4.1",
 		"prettier": "npm:wp-prettier@2.6.2",
+		"puppeteer": "14.4.1",
 		"rtlcss": "4.0.0",
 		"susy": "2.2.14",
 		"uglify-js": "3.17.4"
