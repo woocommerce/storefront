@@ -4,7 +4,6 @@
  * Adds sticky functionality to the brands index.
  */
 ( function () {
-	// eslint-disable-next-line @wordpress/no-global-event-listener
 	document.addEventListener( 'DOMContentLoaded', function () {
 		const brandsAZ = document.getElementsByClassName( 'brands_index' );
 
@@ -38,7 +37,6 @@
 
 		stickyBrandsAZ();
 
-		// eslint-disable-next-line @wordpress/no-global-event-listener
 		window.addEventListener( 'scroll', function () {
 			stickyBrandsAZ();
 		} );

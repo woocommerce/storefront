@@ -1,6 +1,5 @@
 /*global storefront_sticky_add_to_cart_params */
 ( function () {
-	// eslint-disable-next-line @wordpress/no-global-event-listener
 	document.addEventListener( 'DOMContentLoaded', function () {
 		const stickyAddToCart = document.getElementsByClassName(
 			'storefront-sticky-add-to-cart'
@@ -48,7 +47,6 @@
 
 			stickyAddToCartToggle();
 
-			// eslint-disable-next-line @wordpress/no-global-event-listener
 			window.addEventListener( 'scroll', function () {
 				stickyAddToCartToggle();
 			} );

@@ -6,7 +6,6 @@
  */
 ( function () {
 	// Wait for DOM to be ready.
-	// eslint-disable-next-line @wordpress/no-global-event-listener
 	document.addEventListener( 'DOMContentLoaded', function () {
 		if (
 			document.getElementsByClassName( 'storefront-handheld-footer-bar' )
