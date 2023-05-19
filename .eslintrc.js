@@ -7,6 +7,7 @@ module.exports = {
 	rules: {
 		'woocommerce/feature-flag': 'off',
 		'@wordpress/no-global-active-element': 'warn',
+		camelcase: 'off',
 	},
 	ignorePatterns: [ '**/*.min.js' ],
 };

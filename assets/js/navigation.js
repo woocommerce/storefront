@@ -7,7 +7,6 @@
  * Also adds a focus class to parent li's for accessibility.
  */
 ( function () {
-	// eslint-disable-next-line @wordpress/no-global-event-listener
 	document.addEventListener( 'DOMContentLoaded', function () {
 		const container = document.getElementById( 'site-navigation' );
 		if ( ! container ) {
