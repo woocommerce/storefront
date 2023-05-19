@@ -1,11 +1,11 @@
 === Storefront ===
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
-Tested up to: 6.1.0
-Stable tag: 4.2.0
-Version: 4.2.0
+Tested up to: 6.2.1
+Stable tag: 4.3.0
+Version: 4.3.0
 WC requires at least: 4.2
-WC tested up to: 7.1.0
+WC tested up to: 7.7.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Tags: e-commerce, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments, accessibility-ready, rtl-language-support, footer-widgets, sticky-post, theme-options, editor-style
@@ -50,6 +50,9 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 4.3.0 - 2023-05-19 =
+- Fix – Adds nofollow value to rel attribute in footer credit link. ([#2096](https://github.com/woocommerce/storefront/pull/2096))
 
 = 4.2.0 - 2022-11-15 =
 - Fix – Edit, reply and author icons are now displayed in comment list form. ([#2066](https://github.com/woocommerce/storefront/pull/2066))
