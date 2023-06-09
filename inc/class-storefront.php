@@ -253,7 +253,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 *
 			 * @return void
 			 */
-			add_theme_support('block-template-parts');
+			add_theme_support( 'block-template-parts' );
 		}
 
 		/**

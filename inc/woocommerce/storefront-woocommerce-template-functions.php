@@ -115,6 +115,11 @@ if ( ! function_exists( 'storefront_product_search' ) ) {
 	}
 }
 
+/**
+ * Returns the output for the mini-cart block.
+ *
+ * @return string
+ */
 function storefront_get_block_mini_cart() {
 	global $storefront_block_mini_cart;
 	return $storefront_block_mini_cart ?? '';
@@ -143,10 +148,11 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 				</li> -->
 				<li>
 					<?php
-					//todo - consider adding a mechansim for either opt-in/opt-out of using the mini-cart block.
-					//old cart
-					//the_widget( 'WC_Widget_Cart', 'title=' );
-					//new cart
+					// todo - consider adding a mechansim for either opt-in/opt-out of using the mini-cart block.
+					// old cart
+					// the_widget( 'WC_Widget_Cart', 'title=' );
+					// new cart
+					// phpcs:disable WordPress.Security.EscapeOutput.OutputNotEscaped -- Escaped by via do_blocks() in header.php.
 					echo $block_mini_cart;
 					?>
 				</li>
