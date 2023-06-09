@@ -115,6 +115,11 @@ if ( ! function_exists( 'storefront_product_search' ) ) {
 	}
 }
 
+function storefront_get_block_mini_cart() {
+	global $storefront_block_mini_cart;
+	return $storefront_block_mini_cart ?? '';
+}
+
 if ( ! function_exists( 'storefront_header_cart' ) ) {
 	/**
 	 * Display Header Cart
@@ -124,6 +129,7 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 	 * @return void
 	 */
 	function storefront_header_cart() {
+		$block_mini_cart = storefront_get_block_mini_cart();
 		if ( storefront_is_woocommerce_activated() ) {
 			if ( is_cart() ) {
 				$class = 'current-menu-item';
@@ -131,14 +137,20 @@ if ( ! function_exists( 'storefront_header_cart' ) ) {
 				$class = '';
 			}
 			?>
-		<ul id="site-header-cart" class="site-header-cart menu">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php storefront_cart_link(); ?>
-			</li>
-			<li>
-				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
-			</li>
-		</ul>
+			<ul id="site-header-cart" class="site-header-cart menu">
+				<!-- <li class="<?php echo esc_attr( $class ); ?>">
+					<?php storefront_cart_link(); ?>
+				</li> -->
+				<li>
+					<?php
+					//todo - consider adding a mechansim for either opt-in/opt-out of using the mini-cart block.
+					//old cart
+					//the_widget( 'WC_Widget_Cart', 'title=' );
+					//new cart
+					echo $block_mini_cart;
+					?>
+				</li>
+			</ul>
 			<?php
 		}
 	}
