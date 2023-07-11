@@ -16,7 +16,7 @@ Storefront is the perfect theme for your next WooCommerce project.
 
 Storefront is the perfect theme for your next WooCommerce project. Designed and developed by WooCommerce Core developers, it features a bespoke integration with WooCommerce itself plus many of the most popular customer facing WooCommerce extensions. There are several layout & color options to personalize your shop, multiple widget regions, a responsive design and much more. Developers will love its lean and extensible codebase making it a joy to customize and extend. Looking for a WooCommerce theme? Look no further!
 
-For more information about Storefront please go to https://woocommerce.com/storefront/.
+For more information about Storefront please go to https://woocommerce.com/products/storefront/.
 
 For even more customization, check out Storefront extensions https://woocommerce.com/product-category/storefront-extensions/ and Storefront child themes https://woocommerce.com/product-category/themes/storefront-child-theme-themes/.
 
