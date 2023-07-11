@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Storefront 4.3.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2023-05-19 08:43:33+00:00\n"
+"POT-Creation-Date: 2023-07-11 17:42:45+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -874,7 +874,7 @@ msgid "Storefront"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://woocommerce.com/storefront/"
+msgid "https://woocommerce.com/products/storefront/"
 msgstr ""
 
 #. Description of the plugin/theme
