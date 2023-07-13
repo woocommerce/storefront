@@ -11,12 +11,12 @@
 		"exclude": [
 			"!/assets",
 			"!/languages",
-			"!/vendor",
 			"!/style.css",
 			"!/style-rtl.css",
 			"/assets/css/sass",
 			"/assets/css/**/*.scss",
 			"/e2e",
+			"/vendor",
 			"composer.json",
 			"composer.lock",
 			"package.json",
