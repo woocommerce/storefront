@@ -378,7 +378,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		}
 
 		/**
-		 * Limit Cart Sync functionality to specific WooCommerce pages
+		 * Limit Cart Sync functionality to specific WooCommerce pages or when the Widget Cart is active.
 		 * More details: https://developer.woocommerce.com/2023/06/16/best-practices-for-the-use-of-the-cart-fragments-api/
 		 *
 		 * @param string $script_data The script data.
@@ -387,7 +387,7 @@ if ( ! class_exists( 'Storefront' ) ) :
 		 */
 		public function limit_cart_sync_to_wc_pages( $script_data, $handle ) {
 			if ( 'wc-cart-fragments' === $handle ) {
-				if ( is_woocommerce() || is_cart() || is_checkout() ) {
+				if ( is_woocommerce() || is_cart() || is_checkout() || is_active_widget( false, false, 'woocommerce_widget_cart', true ) ) {
 					return $script_data;
 				}
 				return null;
