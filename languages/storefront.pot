@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 4.5.1\n"
+"Project-Id-Version: Storefront 4.5.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2023-08-10 12:04:33+00:00\n"
+"POT-Creation-Date: 2023-08-11 14:12:54+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -193,84 +193,84 @@ msgstr ""
 msgid "learn more"
 msgstr ""
 
-#: inc/class-storefront.php:96
+#: inc/class-storefront.php:95
 #: inc/nux/class-storefront-nux-starter-content.php:162
 msgid "Primary Menu"
 msgstr ""
 
-#: inc/class-storefront.php:97
+#: inc/class-storefront.php:96
 #: inc/nux/class-storefront-nux-starter-content.php:182
 msgid "Secondary Menu"
 msgstr ""
 
-#: inc/class-storefront.php:98
+#: inc/class-storefront.php:97
 #: inc/nux/class-storefront-nux-starter-content.php:192
 msgid "Handheld Menu"
 msgstr ""
 
-#: inc/class-storefront.php:203
+#: inc/class-storefront.php:202
 msgid "Small"
 msgstr ""
 
-#: inc/class-storefront.php:208
+#: inc/class-storefront.php:207
 msgid "Normal"
 msgstr ""
 
-#: inc/class-storefront.php:213
+#: inc/class-storefront.php:212
 msgid "Medium"
 msgstr ""
 
-#: inc/class-storefront.php:218
+#: inc/class-storefront.php:217
 msgid "Large"
 msgstr ""
 
-#: inc/class-storefront.php:223
+#: inc/class-storefront.php:222
 msgid "Huge"
 msgstr ""
 
-#: inc/class-storefront.php:260
+#: inc/class-storefront.php:259
 msgid "Sidebar"
 msgstr ""
 
-#: inc/class-storefront.php:266
+#: inc/class-storefront.php:265
 msgid "Below Header"
 msgstr ""
 
-#: inc/class-storefront.php:268
+#: inc/class-storefront.php:267
 msgid ""
 "Widgets added to this region will appear beneath the header and above the "
 "main content."
 msgstr ""
 
-#: inc/class-storefront.php:281
+#: inc/class-storefront.php:280
 #. translators: 1: column number
 msgid "Footer Column %1$d"
 msgstr ""
 
-#: inc/class-storefront.php:284
+#: inc/class-storefront.php:283
 #. translators: 1: column number
 msgid "Widgets added here will appear in column %1$d of the footer."
 msgstr ""
 
-#: inc/class-storefront.php:287
+#: inc/class-storefront.php:286
 #. translators: 1: row number, 2: column number
 msgid "Footer Row %1$d - Column %2$d"
 msgstr ""
 
-#: inc/class-storefront.php:290
+#: inc/class-storefront.php:289
 #. translators: 1: column number, 2: row number
 msgid "Widgets added here will appear in column %1$d of footer row %2$d."
 msgstr ""
 
-#: inc/class-storefront.php:364
+#: inc/class-storefront.php:363
 msgid "Expand child menu"
 msgstr ""
 
-#: inc/class-storefront.php:365
+#: inc/class-storefront.php:364
 msgid "Collapse child menu"
 msgstr ""
 
-#: inc/class-storefront.php:517
+#: inc/class-storefront.php:498
 msgid "Post Navigation"
 msgstr ""
 

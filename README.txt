@@ -2,8 +2,8 @@
 Contributors: automattic, tiagonoronha, jameskoster
 Requires at least: 5.3.4
 Tested up to: 6.2.2
-Stable tag: 4.5.1
-Version: 4.5.1
+Stable tag: 4.5.2
+Version: 4.5.2
 WC requires at least: 4.2
 WC tested up to: 8.0.0
 License: GPLv3 or later
@@ -50,6 +50,9 @@ To the best of our knowledge, Google doesn’t track nor share end user data.
 Privacy Policy for the Google Fonts API: https://developers.google.com/fonts/faq#what_does_using_the_google_fonts_api_mean_for_the_privacy_of_my_users
 
 == Changelog ==
+
+= 4.5.2 - 2023-08-11 =
+- Fix - Enqueue wc-cart-fragments script on all pages.
 
 = 4.5.1 - 2023-08-10 =
 - Fix - Load wc-cart-fragments-script when Mini Cart widget is active.
