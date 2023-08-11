@@ -1859,14 +1859,6 @@ p.stars {
 	}
 }
 
-.wc-block-grid__product-onsale {
-	position: absolute;
-}
-
-.onsale {
-	position: relative;
-}
-
 .wc-block-grid__product-onsale,
 .onsale {
 	border: 1px solid;
@@ -1880,6 +1872,14 @@ p.stars {
 	margin-bottom: 1em;
 	border-radius: 3px;
 	position: relative;
+}
+
+.onsale {
+	position: relative;
+}
+
+.wc-block-grid__product-onsale {
+	position: absolute;
 }
 
 .quantity {
