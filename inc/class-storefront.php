@@ -32,7 +32,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			add_filter( 'wp_page_menu_args', array( $this, 'page_menu_args' ) );
 			add_filter( 'navigation_markup_template', array( $this, 'navigation_markup_template' ) );
 			add_action( 'enqueue_embed_scripts', array( $this, 'print_embed_styles' ) );
-			add_filter( 'woocommerce_get_script_data', array( $this, 'limit_cart_sync_to_wc_pages' ), 10, 2 );
 		}
 
 		/**
