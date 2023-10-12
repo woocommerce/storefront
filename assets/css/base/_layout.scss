@@ -448,6 +448,7 @@
 				position: relative;
 				display: inline-block;
 				text-align: left;
+				vertical-align: text-top;
 
 				a {
 					display: block;
@@ -622,8 +623,13 @@
 				text-decoration: none;
 			}
 
-			ul {
+			.menu-item-description {
+				font-size: ms(-1);
+				opacity: 0.67;
+				margin: 1em 0 0;
+			}
 
+			ul {
 				a {
 					padding: 0.326em ms(-1);
 					background: rgba(#000, 0.05);
