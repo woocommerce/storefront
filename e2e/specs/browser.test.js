@@ -3,7 +3,7 @@ describe( 'Storefront', () => {
 		await page.goto( STORE_URL );
 	} );
 
-	it( 'should have "built with Storefront" footer', async () => {
-		await expect( page ).toMatch( 'Built with Storefront & WooCommerce.' );
+	it( 'should have "built with WooCommerce" footer', async () => {
+		await expect( page ).toMatch( 'Built with WooCommerce.' );
 	} );
 } );
