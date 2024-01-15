@@ -248,12 +248,16 @@ if ( ! function_exists( 'storefront_shop_messages' ) ) {
 					'height'          => true,
 					'viewbox'         => true,
 				),
-				'g'     => array( 'fill' => true ),
-				'title' => array( 'title' => true ),
+				'g'     => array(
+					'fill' => true,
+				),
+				'title' => array(
+					'title' => true,
+				),
 				'path'  => array(
-					'd'               => true,
-					'fill'            => true
-				)
+					'd'    => true,
+					'fill' => true,
+				),
 			);
 
 			$allowed_tags = array_merge( $kses_defaults, $svg_args );
@@ -261,7 +265,6 @@ if ( ! function_exists( 'storefront_shop_messages' ) ) {
 			echo wp_kses( storefront_do_shortcode( 'woocommerce_messages' ), $allowed_tags );
 		}
 	}
-
 }
 
 if ( ! function_exists( 'storefront_woocommerce_pagination' ) ) {
