@@ -44,7 +44,7 @@ WooCommerce customers can get support at the [WooCommerce support portal](https:
 
 If you have a patch, or you've stumbled upon an issue with Storefront core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/woocommerce/storefront/blob/master/CONTRIBUTING.md) for more information about how you can do this.
 
-If you have an idea or feature request please take a look at the [Storefront Ideasboard](http://ideas.woocommerce.com/forums/275029-storefront) to see if it's already been suggested, planned, or is under development. If not, please add it there.
+If you have an idea or feature request please take a look at the [Storefront Feature Requests](https://woo.com/feature-requests/storefront/) to see if it's already been suggested, planned, or is under development. If not, please add it there.
 
 You can keep up with the latest Storefront developments on the [dev blog](https://woocommerce.wordpress.com/category/storefront/).
 
