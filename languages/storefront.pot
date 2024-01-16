@@ -2,9 +2,9 @@
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Storefront 4.5.3\n"
+"Project-Id-Version: Storefront 4.5.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/storefront\n"
-"POT-Creation-Date: 2024-01-11 23:26:43+00:00\n"
+"POT-Creation-Date: 2024-01-16 06:14:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgid ""
 "below."
 msgstr ""
 
-#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:716
+#: 404.php:25 inc/woocommerce/storefront-woocommerce-template-functions.php:743
 msgid "Search"
 msgstr ""
 
@@ -32,12 +32,12 @@ msgid "Promoted Products"
 msgstr ""
 
 #: 404.php:45 404.php:47
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:297
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:324
 msgid "Product Categories"
 msgstr ""
 
 #: 404.php:60 404.php:62
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:464
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:491
 msgid "Popular Products"
 msgstr ""
 
@@ -620,27 +620,27 @@ msgid "Vneck Tshirt"
 msgstr ""
 
 #: inc/nux/class-storefront-nux-starter-content.php:1021
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:276
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:303
 msgid "Shop by Category"
 msgstr ""
 
 #: inc/nux/class-storefront-nux-starter-content.php:1029
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:331
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:358
 msgid "New In"
 msgstr ""
 
 #: inc/nux/class-storefront-nux-starter-content.php:1037
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:443
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:470
 msgid "Fan Favorites"
 msgstr ""
 
 #: inc/nux/class-storefront-nux-starter-content.php:1043
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:499
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:526
 msgid "On Sale"
 msgstr ""
 
 #: inc/nux/class-storefront-nux-starter-content.php:1049
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:555
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:582
 msgid "Best Sellers"
 msgstr ""
 
@@ -661,7 +661,7 @@ msgid ""
 msgstr ""
 
 #: inc/nux/class-storefront-nux-starter-content.php:1108
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:387
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:414
 msgid "We Recommend"
 msgstr ""
 
@@ -815,52 +815,52 @@ msgid_plural "%d items"
 msgstr[0] ""
 msgstr[1] ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:352
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:379
 msgid "Recent Products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:409
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:614
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:436
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:641
 msgid "Featured Products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:521
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:548
 msgid "On Sale Products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:576
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:603
 msgid "Best Selling Products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:627
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:654
 msgid "On Sale Now"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:640
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:667
 msgid "New In Store"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:732
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:759
 msgid "Cart"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:746
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:773
 msgid "My Account"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:776
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:803
 msgid "More products"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:840
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:867
 msgid "You're viewing:"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:876
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:903
 msgid "Shop by Brand"
 msgstr ""
 
-#: inc/woocommerce/storefront-woocommerce-template-functions.php:893
+#: inc/woocommerce/storefront-woocommerce-template-functions.php:920
 msgid "Product Brands"
 msgstr ""
 
