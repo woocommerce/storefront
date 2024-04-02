@@ -204,10 +204,10 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 	 * Display the site title or logo
 	 *
 	 * @since 2.1.0
-	 * @param bool $render Render the string or return it.
+	 * @param bool $echo Echo the string or return it.
 	 * @return string
 	 */
-	function storefront_site_title_or_logo( $render = true ) {
+	function storefront_site_title_or_logo( $echo = true ) {
 		if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) {
 			$logo = get_custom_logo();
 			$html = is_home() ? '<h1 class="logo">' . $logo . '</h1>' : $logo;
@@ -220,8 +220,8 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 				$html .= '<p class="site-description">' . esc_html( get_bloginfo( 'description', 'display' ) ) . '</p>';
 			}
 		}
-		$hello = [];
-		if ( ! $render ) {
+
+		if ( ! $echo ) {
 			return $html;
 		}
 
