@@ -220,7 +220,7 @@ if ( ! function_exists( 'storefront_site_title_or_logo' ) ) {
 				$html .= '<p class="site-description">' . esc_html( get_bloginfo( 'description', 'display' ) ) . '</p>';
 			}
 		}
-
+		$hello = [];
 		if ( ! $render ) {
 			return $html;
 		}
