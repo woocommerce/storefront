@@ -874,7 +874,7 @@ msgid "Storefront"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://woo.com/products/storefront/"
+msgid "https://woocommerce.com/products/storefront/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -894,7 +894,7 @@ msgid "Automattic"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://woo.com/"
+msgid "https://woocommerce.com/"
 msgstr ""
 
 #. Template Name of the plugin/theme
