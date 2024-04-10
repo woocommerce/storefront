@@ -18,7 +18,7 @@ Storefront is the perfect theme for your next WooCommerce project. Designed and 
 
 For more information about Storefront please go to https://woocommerce.com/products/storefront/.
 
-For even more customization, check out Storefront extensions https://woocommerce.com/product-category/storefront-extensions/ and Storefront child themes https://woocommerce.com/product-category/themes/storefront-child-theme-themes/.
+For even more customization, check out Storefront extensions https://woocommerce.com/product-category/storefront-extensions/ and Storefront child themes https://woocommerce.com/documentation/products/themes/storefront/child-themes/.
 
 == Installation ==
 

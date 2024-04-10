@@ -150,7 +150,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 						</p>
 
 						<p>
-							<a href="https://woocommerce.com/product-category/themes/storefront-child-theme-themes/?utm_source=storefront&utm_medium=product&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_html_e( 'Check \'em out', 'storefront' ); ?></a>
+							<a href="https://woocommerce.com/documentation/products/themes/storefront/child-themes/?utm_source=storefront&utm_medium=product&utm_campaign=storefrontaddons" class="storefront-button" target="_blank"><?php esc_html_e( 'Check \'em out', 'storefront' ); ?></a>
 						</p>
 					</div>
 				</div>
