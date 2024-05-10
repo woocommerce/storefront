@@ -221,6 +221,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 */
 			add_theme_support( 'responsive-embeds' );
 
+			/**
+			 * Add support for appearance tools.
+			 *
+			 * @link https://wordpress.org/documentation/wordpress-version/version-6-5/#add-appearance-tools-to-classic-themes
+			 */
+			add_theme_support( 'appearance-tools' );
+
 			add_theme_support(
 				'amp',
 				array(
