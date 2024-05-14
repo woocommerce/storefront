@@ -152,7 +152,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 				)
 			);
 
-
 			/**
 			 * Declare support for title theme feature.
 			 */
