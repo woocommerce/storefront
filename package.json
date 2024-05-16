@@ -33,7 +33,7 @@
 	"scripts": {
 		"build:dev": "npm run build:js && npm run build:css",
 		"build": "npm run build:js && npm run build:css && npm run makepot",
-		"postbuild": "npm run -s archive",
+		"postbuild": "npm run validate-build && npm run -s archive",
 		"archive": "rm -rf $npm_package_name && composer archive --file=$npm_package_name --format=zip",
 		"postarchive": "rm -rf $npm_package_name && unzip $npm_package_name.zip -d $npm_package_name && rm $npm_package_name.zip && zip -r $npm_package_name.zip $npm_package_name && rm -rf $npm_package_name",
 		"prebuild:js": "rm -f $npm_package_assets_js_min",
@@ -58,7 +58,8 @@
 		"lint:js-fix": "eslint assets/js --ext=js,jsx,ts,tsx --fix",
 		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
-		"test:e2e": "npm run wp-env run tests-cli 'wp theme activate storefront' && cross-env wp-scripts test-e2e"
+		"test:e2e": "npm run wp-env run tests-cli 'wp theme activate storefront' && cross-env wp-scripts test-e2e",
+		"validate-build": "./validate-build.sh"
 	},
 	"jest": {
 		"preset": "jest-puppeteer",
