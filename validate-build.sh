@@ -32,6 +32,7 @@ done < <(find "$base_dir" -type f -name "*.js" ! -name "*.min.js" -print0)
 
 # Exit with an error code if any .js file is missing its corresponding .min.js file
 if [ "$error_flag" -ne 0 ]; then
+  echo "Error: the ZIP could not be built because minified scripts are missing. Please ensure you are using the correct versions of NPM and Node.js."
   exit 1
 else
   echo "All .js files within $base_dir have corresponding .min.js files."
