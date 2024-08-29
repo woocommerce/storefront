@@ -38,6 +38,10 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			// Instead of loading Core CSS files, we only register the font families.
 			add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
 			add_filter( 'wp_enqueue_scripts', array( $this, 'add_core_fonts' ), 130 );
+			add_action(
+				'enqueue_block_editor_assets',
+				array( $this, 'add_woocommerce_font_to_editor' )
+			);
 		}
 
 		/**
@@ -125,6 +129,28 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 				font-style: normal;
 			}'
 			);
+		}
+
+		/**
+		 * Add WooCommerce fonts to the block editor.
+		 *
+		 * @since 4.6.0
+		 * @return void
+		 */
+		public function add_woocommerce_font_to_editor() {
+			$fonts_url = plugins_url( '/woocommerce/assets/fonts/' );
+			$inline_font = '
+				@font-face {
+					font-family: "WooCommerce";
+					src: url("' . $fonts_url . 'WooCommerce.woff2") format("woff2"),
+						url("' . $fonts_url . 'WooCommerce.woff") format("woff"),
+						url("' . $fonts_url . 'WooCommerce.ttf") format("truetype");
+					font-weight: normal;
+					font-style: normal;
+				}
+			';
+
+			wp_add_inline_style( 'wp-edit-blocks', $inline_font );
 		}
 
 		/**
