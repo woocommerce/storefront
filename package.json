@@ -58,7 +58,7 @@
 		"lint:js-fix": "eslint assets/js --ext=js,jsx,ts,tsx --fix",
 		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
-		"test:e2e": "npm run wp-env run tests-cli 'wp theme activate storefront' && cross-env wp-scripts test-e2e",
+		"test:e2e": "npm run wp-env run tests-cli wp theme activate storefront && cross-env wp-scripts test-e2e",
 		"validate-build": "./validate-build.sh"
 	},
 	"jest": {
