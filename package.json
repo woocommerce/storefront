@@ -97,7 +97,7 @@
 		"prettier": "npm:wp-prettier@^2.8.5",
 		"puppeteer": "23.2.1",
 		"rtlcss": "4.3.0",
-		"susy": "3.0.8",
+		"susy": "2.2.14",
 		"typescript": "5.5.4",
 		"uglify-js": "3.19.3"
 	},
