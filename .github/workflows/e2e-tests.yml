@@ -28,6 +28,11 @@ jobs:
               with:
                   node-version: 14.x
 
+            - name: Install Docker
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install -y docker-compose
+
             - name: Npm install and build
               run: |
                   npm ci
