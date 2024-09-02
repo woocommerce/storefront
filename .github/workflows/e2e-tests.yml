@@ -23,10 +23,10 @@ jobs:
                       ${{ runner.os }}-build-
                       ${{ runner.os }}-
 
-            - name: Use Node.js 14.x
+            - name: Use Node.js 20.x
               uses: actions/setup-node@v3
               with:
-                  node-version: 14.x
+                  node-version: 20.x
 
             - name: Npm install and build
               run: |
