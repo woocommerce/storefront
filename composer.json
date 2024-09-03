@@ -29,7 +29,6 @@
 			"renovate.json",
 			"node_modules",
 			"storefront.zip",
-			"build-js.sh",
 			"validate-build.sh",
 			".*"
 		]
