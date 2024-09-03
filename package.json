@@ -80,7 +80,7 @@
 		"@wordpress/browserslist-config": "6.6.0",
 		"@wordpress/env": "10.6.0",
 		"@wordpress/eslint-plugin": "16.0.13",
-		"@wordpress/prettier-config": "2.16.0",
+		"@wordpress/prettier-config": "2.25.13",
 		"@wordpress/scripts": "28.6.0",
 		"autoprefixer": "10.4.20",
 		"bourbon": "7.3.0",
