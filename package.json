@@ -7,16 +7,6 @@
 		"type": "git",
 		"url": "https://github.com/woothemes/storefront.git"
 	},
-	"assets": {
-		"js": {
-			"min": "assets/js/**/**/*.min.js assets/js/**/*.min.js assets/js/*.min.js",
-			"src": "assets/js/*.js assets/js/**/*.js assets/js/**/**/*.js"
-		},
-		"css": {
-			"min": "assets/css/**/*.css assets/css/**/**/*.css *.css",
-			"src": "assets/css/**/*.scss assets/css/**/**/*.scss *.scss"
-		}
-	},
 	"rtlcssConfig": {
 		"options": {
 			"autoRename": false,
@@ -36,13 +26,13 @@
 		"postbuild": "npm run validate-build && npm run -s archive",
 		"archive": "rm -rf $npm_package_name && composer archive --file=$npm_package_name --format=zip",
 		"postarchive": "rm -rf $npm_package_name && unzip $npm_package_name.zip -d $npm_package_name && rm $npm_package_name.zip && zip -r $npm_package_name.zip $npm_package_name && rm -rf $npm_package_name",
-		"prebuild:js": "rm -f $npm_package_assets_js_min",
+		"prebuild:js": "rm -f $npm_package_config_assets_js_min",
 		"build:js": "./build-js.sh",
-		"prebuild:css": "rm -f $npm_package_assets_css_min",
+		"prebuild:css": "rm -f $npm_package_config_assets_css_min",
 		"build:css": "echo \"$(tput setaf \"3\")Building CSS Files$(tput sgr0)\"; sass -I node_modules/bourbon/core -I node_modules/susy/sass assets/css:assets/css --style compressed --no-source-map && sass -I node_modules/bourbon/core -I node_modules/susy/sass style.scss:style.css --style compressed --no-source-map",
 		"postbuild:css": "npm run autoprefixer && npm run rtlcss",
-		"autoprefixer": "echo \"$(tput setaf \"3\")Running Autoprefixer$(tput sgr0)\"; for f in $npm_package_assets_css_min; do file=${f%.css}; postcss $f --use autoprefixer -r --verbose --no-map; done",
-		"rtlcss": "echo \"$(tput setaf \"3\")Building RTL CSS$(tput sgr0)\"; for f in $npm_package_assets_css_min; do file=${f%.css}; rtlcss $f $file-rtl.css; done",
+		"autoprefixer": "echo \"$(tput setaf \"3\")Running Autoprefixer$(tput sgr0)\"; for f in $npm_package_config_assets_css_min; do file=${f%.css}; postcss $f --use autoprefixer -r --verbose --no-map; done",
+		"rtlcss": "echo \"$(tput setaf \"3\")Building RTL CSS$(tput sgr0)\"; for f in $npm_package_config_assets_css_min; do file=${f%.css}; rtlcss $f $file-rtl.css; done",
 		"makepot": "echo \"$(tput setaf \"3\")Updating POT file$(tput sgr0)\"; wpi18n addtextdomain storefront; wpi18n makepot --domain-path languages --pot-file storefront.pot --type theme --exclude node_modules",
 		"watchsass": "sass -I node_modules/bourbon/core -I node_modules/susy/sass assets/css:assets/css --style compressed --watch --no-source-map",
 		"watchjs": "onchange \"assets/js/**/*.js\" -d 1000 -k -e \"assets/js/**/*.min.js\" -- npm run build:js",
@@ -70,9 +60,20 @@
 			"STORE_URL": "http://localhost:8802"
 		}
 	},
+	"lorem": "ipsum",
 	"config": {
 		"wp_org_slug": "storefront",
-		"translate": true
+		"translate": true,
+		"assets": {
+			"js": {
+				"min": "assets/js/**/**/*.min.js assets/js/**/*.min.js assets/js/*.min.js",
+				"src": "assets/js/*.js assets/js/**/*.js assets/js/**/**/*.js"
+			},
+			"css": {
+				"min": "assets/css/**/*.css assets/css/**/**/*.css *.css",
+				"src": "assets/css/**/*.scss assets/css/**/**/*.scss *.scss"
+			}
+		}
 	},
 	"license": "GPL-3.0+",
 	"devDependencies": {
