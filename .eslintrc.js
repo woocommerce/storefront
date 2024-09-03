@@ -8,6 +8,7 @@ module.exports = {
 		'woocommerce/feature-flag': 'off',
 		'@wordpress/no-global-active-element': 'warn',
 		camelcase: 'off',
+		'@typescript-eslint/no-this-alias': 'off',
 	},
 	ignorePatterns: [ '**/*.min.js' ],
 };
