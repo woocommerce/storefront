@@ -60,7 +60,6 @@
 			"STORE_URL": "http://localhost:8802"
 		}
 	},
-	"lorem": "ipsum",
 	"config": {
 		"wp_org_slug": "storefront",
 		"translate": true,
