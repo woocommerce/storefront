@@ -49,7 +49,7 @@ jobs:
               continue-on-error: true
             - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
               name: Upload ESLint report
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: eslint_report.json
                   path: eslint_report.json
