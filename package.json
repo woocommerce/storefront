@@ -58,7 +58,17 @@
 		],
 		"globals": {
 			"STORE_URL": "http://localhost:8802"
-		}
+		},
+		"reporters": [
+			"default",
+			[
+				"jest-html-reporters",
+				{
+					"publicPath": "./artifacts",
+					"filename": "report.html"
+				}
+			]
+		]
 	},
 	"config": {
 		"wp_org_slug": "storefront",
