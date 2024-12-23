@@ -100,7 +100,7 @@
 		"eslint-plugin-import": "2.29.1",
 		"github-label-sync": "2.3.1",
 		"jest-puppeteer": "10.1.0",
-		"jest-html-reporters": "^3.1.4",
+		"jest-html-reporters": "^3.1.7",
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.7",
 		"onchange": "7.1.0",
