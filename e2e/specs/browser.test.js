@@ -4,7 +4,10 @@ describe( 'Storefront', () => {
 	} );
 
 	it( 'should have "built with WooCommerce" footer', async () => {
-		const footerText = await page.evaluate( () => document.querySelector( 'body' ).innerText );
+		const footerText = await page.evaluate(
+			() => document.querySelector( 'body' ).innerText
+		);
 		expect( footerText ).toMatch( 'Built with WooCommerce.' );
+		expect( 1 ).toBe( 2 );
 	} );
 } );
