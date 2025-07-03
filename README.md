@@ -4,19 +4,19 @@
 
 <p align="center">
   <img src="https://poser.pugx.org/woocommerce/woocommerce/license" alt="license">
-  <a href="https://woo.com/"><img src="http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg" alt="Designed for WooCommerce"></a>
+  <a href="https://woocommerce.com/"><img src="http://img.shields.io/badge/Designed%20for-WooCommerce-a46497.svg" alt="Designed for WooCommerce"></a>
   <img src="https://img.shields.io/wordpress/theme/dt/storefront.svg" alt="WordPress.org downloads">
   <img src="https://img.shields.io/wordpress/theme/r/storefront.svg" alt="WordPress.org rating">
 </p>
 
-_Storefront_ is a robust and flexible [WordPress](https://wordpress.org) theme, designed and built by the team at [WooCommerce](https://woo.com/) to help you make the most out of using the [WooCommerce](https://woo.com) plugin to power your online store. It's available to download for free from the WordPress [theme repository](https://wordpress.org/themes/storefront/).
+_Storefront_ is a robust and flexible [WordPress](https://wordpress.org) theme, designed and built by the team at [WooCommerce](https://woocommerce.com/) to help you make the most out of using the [WooCommerce](https://woocommerce.com) plugin to power your online store. It's available to download for free from the WordPress [theme repository](https://wordpress.org/themes/storefront/).
 
 It features deep integration with WooCommerce core plus several of the most popular extensions:
 
--   [WooCommerce Bookings](https://woo.com/products/woocommerce-bookings/)
--   [WooCommerce Wishlists](https://woo.com/products/woocommerce-wishlists/)
--   [WooCommerce Brands](https://woo.com/products/brands/)
--   [WooCommerce Subscriptions](https://woo.com/products/woocommerce-subscriptions/)
+-   [WooCommerce Bookings](https://woocommerce.com/products/woocommerce-bookings/)
+-   [WooCommerce Wishlists](https://woocommerce.com/products/woocommerce-wishlists/)
+-   [WooCommerce Brands](https://woocommerce.com/products/brands/)
+-   [WooCommerce Subscriptions](https://woocommerce.com/products/woocommerce-subscriptions/)
 
 For developers, Storefront is the perfect starting point for your project. Its lean and extensible codebase will allow you to easily add functionality to your site via a child theme and/or custom plugin(s).
 
@@ -26,11 +26,11 @@ Please read [this document](./STOREFRONT_STATUS.md) explaining the current statu
 
 ## Storefront extensions
 
-Looking to take your storefront powered store to the next level? Be sure to checkout the premium [Storefront extensions](https://woo.com/product-category/storefront-extensions/).
+Looking to take your storefront powered store to the next level? Be sure to checkout the premium [Storefront extensions](https://woocommerce.com/product-category/storefront-extensions/).
 
 ## Storefront Documentation
 
-You can view detailed Storefront documentation on the [WooCommerce documentation website](https://woo.com/documentation/themes/storefront/).
+You can view detailed Storefront documentation on the [WooCommerce documentation website](https://woocommerce.com/documentation/themes/storefront/).
 
 ## Storefront in your language
 
@@ -38,13 +38,13 @@ Storefront translations can be downloaded from [WordPress.org](https://translate
 
 ## Storefront help & support
 
-WooCommerce customers can get support at the [WooCommerce support portal](https://woo.com/contact-us/). Otherwise, you can try posting on the [WordPress support forums](https://wordpress.org/support/theme/storefront/). Please remember, GitHub is for bug reports and contributions, _not_ support.
+WooCommerce customers can get support at the [WooCommerce support portal](https://woocommerce.com/contact-us/). Otherwise, you can try posting on the [WordPress support forums](https://wordpress.org/support/theme/storefront/). Please remember, GitHub is for bug reports and contributions, _not_ support.
 
 ## Contributing to Storefront
 
 If you have a patch, or you've stumbled upon an issue with Storefront core, you can contribute this back to the code. Please read our [contributor guidelines](https://github.com/woocommerce/storefront/blob/master/CONTRIBUTING.md) for more information about how you can do this.
 
-If you have an idea or feature request please take a look at the [Storefront Feature Requests](https://woo.com/feature-requests/storefront/) to see if it's already been suggested, planned, or is under development. If not, please add it there.
+If you have an idea or feature request please take a look at the [Storefront Feature Requests](https://woocommerce.com/feature-requests/storefront/) to see if it's already been suggested, planned, or is under development. If not, please add it there.
 
 You can keep up with the latest Storefront developments on the [dev blog](https://woocommerce.wordpress.com/category/storefront/).
 

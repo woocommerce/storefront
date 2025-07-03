@@ -1154,7 +1154,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 					color: ' . $storefront_theme_mods['hero_heading_color'] . ';
 				}
 
-				.wc-block-components-price-slider__range-input-progress,
+				div.wc-block-components-price-slider__range-input-progress,
 				.rtl .wc-block-components-price-slider__range-input-progress {
 					--range-color: ' . $storefront_theme_mods['accent_color'] . ';
 				}

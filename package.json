@@ -1,21 +1,11 @@
 {
 	"name": "storefront",
 	"title": "Storefront",
-	"version": "4.5.4",
-	"homepage": "https://woo.com/products/storefront/",
+	"version": "4.6.1",
+	"homepage": "https://woocommerce.com/products/storefront/",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/woothemes/storefront.git"
-	},
-	"assets": {
-		"js": {
-			"min": "assets/js/**/**/*.min.js assets/js/**/*.min.js assets/js/*.min.js",
-			"src": "assets/js/*.js assets/js/**/*.js assets/js/**/**/*.js"
-		},
-		"css": {
-			"min": "assets/css/**/*.css assets/css/**/**/*.css *.css",
-			"src": "assets/css/**/*.scss assets/css/**/**/*.scss *.scss"
-		}
 	},
 	"rtlcssConfig": {
 		"options": {
@@ -33,16 +23,16 @@
 	"scripts": {
 		"build:dev": "npm run build:js && npm run build:css",
 		"build": "npm run build:js && npm run build:css && npm run makepot",
-		"postbuild": "npm run -s archive",
+		"postbuild": "npm run validate-build && npm run -s archive",
 		"archive": "rm -rf $npm_package_name && composer archive --file=$npm_package_name --format=zip",
 		"postarchive": "rm -rf $npm_package_name && unzip $npm_package_name.zip -d $npm_package_name && rm $npm_package_name.zip && zip -r $npm_package_name.zip $npm_package_name && rm -rf $npm_package_name",
-		"prebuild:js": "rm -f $npm_package_assets_js_min",
-		"build:js": "echo \"$(tput setaf \"3\")Building JS Files$(tput sgr0)\"; for f in $npm_package_assets_js_src; do file=${f%.js}; echo \"$(tput setaf \"3\")Building $f$(tput sgr0)\"; node_modules/.bin/uglifyjs $f -c -m > $file.min.js; done",
-		"prebuild:css": "rm -f $npm_package_assets_css_min",
+		"prebuild:js": "rm -f $npm_package_config_assets_js_min",
+		"build:js": "echo \"$(tput setaf \"3\")Building JS Files$(tput sgr0)\"; for f in $npm_package_config_assets_js_src; do file=${f%.js}; echo \"$(tput setaf \"3\")Building $f$(tput sgr0)\"; node_modules/.bin/uglifyjs $f -c -m > $file.min.js; done",
+		"prebuild:css": "rm -f $npm_package_config_assets_css_min",
 		"build:css": "echo \"$(tput setaf \"3\")Building CSS Files$(tput sgr0)\"; sass -I node_modules/bourbon/core -I node_modules/susy/sass assets/css:assets/css --style compressed --no-source-map && sass -I node_modules/bourbon/core -I node_modules/susy/sass style.scss:style.css --style compressed --no-source-map",
 		"postbuild:css": "npm run autoprefixer && npm run rtlcss",
-		"autoprefixer": "echo \"$(tput setaf \"3\")Running Autoprefixer$(tput sgr0)\"; for f in $npm_package_assets_css_min; do file=${f%.css}; postcss $f --use autoprefixer -r --verbose --no-map; done",
-		"rtlcss": "echo \"$(tput setaf \"3\")Building RTL CSS$(tput sgr0)\"; for f in $npm_package_assets_css_min; do file=${f%.css}; rtlcss $f $file-rtl.css; done",
+		"autoprefixer": "echo \"$(tput setaf \"3\")Running Autoprefixer$(tput sgr0)\"; for f in $npm_package_config_assets_css_min; do file=${f%.css}; postcss $f --use autoprefixer -r --verbose --no-map; done",
+		"rtlcss": "echo \"$(tput setaf \"3\")Building RTL CSS$(tput sgr0)\"; for f in $npm_package_config_assets_css_min; do file=${f%.css}; rtlcss $f $file-rtl.css; done",
 		"makepot": "echo \"$(tput setaf \"3\")Updating POT file$(tput sgr0)\"; wpi18n addtextdomain storefront; wpi18n makepot --domain-path languages --pot-file storefront.pot --type theme --exclude node_modules",
 		"watchsass": "sass -I node_modules/bourbon/core -I node_modules/susy/sass assets/css:assets/css --style compressed --watch --no-source-map",
 		"watchjs": "onchange \"assets/js/**/*.js\" -d 1000 -k -e \"assets/js/**/*.min.js\" -- npm run build:js",
@@ -58,7 +48,8 @@
 		"lint:js-fix": "eslint assets/js --ext=js,jsx,ts,tsx --fix",
 		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
-		"test:e2e": "npm run wp-env run tests-cli 'wp theme activate storefront' && cross-env wp-scripts test-e2e"
+		"test:e2e": "npm run wp-env run tests-cli wp theme activate storefront && cross-env wp-scripts test-e2e",
+		"validate-build": "./validate-build.sh"
 	},
 	"jest": {
 		"preset": "jest-puppeteer",
@@ -67,41 +58,62 @@
 		],
 		"globals": {
 			"STORE_URL": "http://localhost:8802"
-		}
+		},
+		"reporters": [
+			"default",
+			[
+				"jest-html-reporters",
+				{
+					"publicPath": "./artifacts",
+					"filename": "report.html"
+				}
+			]
+		]
 	},
 	"config": {
 		"wp_org_slug": "storefront",
-		"translate": true
+		"translate": true,
+		"assets": {
+			"js": {
+				"min": "assets/js/**/**/*.min.js assets/js/**/*.min.js assets/js/*.min.js",
+				"src": "assets/js/*.js assets/js/**/*.js assets/js/**/**/*.js"
+			},
+			"css": {
+				"min": "assets/css/**/*.css assets/css/**/**/*.css *.css",
+				"src": "assets/css/**/*.scss assets/css/**/**/*.scss *.scss"
+			}
+		}
 	},
 	"license": "GPL-3.0+",
 	"devDependencies": {
-		"@woocommerce/eslint-plugin": "2.2.0",
-		"@wordpress/browserslist-config": "4.1.3",
-		"@wordpress/env": "5.14.0",
-		"@wordpress/eslint-plugin": "14.6.0",
-		"@wordpress/prettier-config": "2.16.0",
-		"@wordpress/scripts": "22.3.0",
-		"autoprefixer": "10.4.13",
-		"bourbon": "7.2.0",
-		"browserslist": "4.21.4",
-		"concurrently": "7.6.0",
-		"cross-env": "^7.0.3",
-		"eslint-plugin-import": "2.27.5",
-		"github-label-sync": "2.2.0",
-		"jest-puppeteer": "6.1.1",
+		"@woocommerce/eslint-plugin": "2.3.0",
+		"@wordpress/browserslist-config": "6.6.0",
+		"@wordpress/env": "10.6.0",
+		"@wordpress/eslint-plugin": "15.1.0",
+		"@wordpress/prettier-config": "2.25.13",
+		"@wordpress/scripts": "27.2.6",
+		"autoprefixer": "10.4.20",
+		"bourbon": "7.3.0",
+		"browserslist": "4.23.3",
+		"concurrently": "8.2.2",
+		"cross-env": "7.0.3",
+		"eslint-plugin-import": "2.29.1",
+		"github-label-sync": "2.3.1",
+		"jest-puppeteer": "10.1.0",
+		"jest-html-reporters": "^3.1.7",
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.7",
 		"onchange": "7.1.0",
-		"postcss-cli": "9.1.0",
-		"prettier": "npm:wp-prettier@2.6.2",
-		"puppeteer": "14.4.1",
-		"rtlcss": "4.0.0",
+		"postcss-cli": "11.0.0",
+		"prettier": "npm:wp-prettier@2.8.5",
+		"puppeteer": "23.2.1",
+		"rtlcss": "4.3.0",
 		"susy": "2.2.14",
-		"typescript": "5.0.4",
-		"uglify-js": "3.17.4"
+		"typescript": "5.5.4",
+		"uglify-js": "3.19.3"
 	},
 	"engines": {
-		"node": "14.21.1",
-		"npm": "9.1.3"
+		"node": "20.17.0",
+		"npm": "10.8.2"
 	}
 }

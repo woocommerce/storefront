@@ -49,13 +49,13 @@ jobs:
               continue-on-error: true
             - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
               name: Upload ESLint report
-              uses: actions/upload-artifact@v3
+              uses: actions/upload-artifact@v4
               with:
                   name: eslint_report.json
                   path: eslint_report.json
             - if: ${{ github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository }}
               name: Annotate Code Linting Results
-              uses: ataylorme/eslint-annotate-action@1.2.0
+              uses: ataylorme/eslint-annotate-action@a1bf7cb320a18aa53cb848a267ce9b7417221526 # v1.2.0
               with:
                   repo-token: '${{ secrets.GITHUB_TOKEN }}'
                   report-json: 'eslint_report.json'

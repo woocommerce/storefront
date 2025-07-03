@@ -1204,12 +1204,21 @@ table.cart {
 			padding-bottom: 1em;
 			margin-bottom: 1em;
 			border-bottom: 1px solid $color_border;
+
+			.coupon-error-notice {
+				color: $error;
+				text-align: left;
+			}
 		}
 
 		input {
 			display: block;
 			width: 100%;
 			margin: ms(-3) 0;
+
+			&.input-text.has-error {
+				box-shadow: inset 2px 0 0 $error;
+			}
 		}
 	}
 }
@@ -1275,6 +1284,14 @@ ul#shipping_method {
  */
 .checkout_coupon {
 	margin-bottom: ms(5);
+
+	.coupon-error-notice {
+		color: $error;
+	}
+
+	.input-text.has-error {
+		box-shadow: inset 2px 0 0 $error;
+	}
 }
 
 form.checkout {

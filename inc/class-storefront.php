@@ -153,21 +153,6 @@ if ( ! class_exists( 'Storefront' ) ) :
 			);
 
 			/**
-			 *  Add support for the Site Logo plugin and the site logo functionality in JetPack
-			 *  https://github.com/automattic/site-logo
-			 *  http://jetpack.me/
-			 */
-			add_theme_support(
-				'site-logo',
-				apply_filters(
-					'storefront_site_logo_args',
-					array(
-						'size' => 'full',
-					)
-				)
-			);
-
-			/**
 			 * Declare support for title theme feature.
 			 */
 			add_theme_support( 'title-tag' );
@@ -235,6 +220,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 			 * Add support for responsive embedded content.
 			 */
 			add_theme_support( 'responsive-embeds' );
+
+			/**
+			 * Add support for appearance tools.
+			 *
+			 * @link https://wordpress.org/documentation/wordpress-version/version-6-5/#add-appearance-tools-to-classic-themes
+			 */
+			add_theme_support( 'appearance-tools' );
 
 			add_theme_support(
 				'amp',
