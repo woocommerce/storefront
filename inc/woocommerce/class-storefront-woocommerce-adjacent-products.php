@@ -88,7 +88,7 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 			// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 			while ( $adjacent = $this->get_adjacent() ) {
 				if ( isset( $seen[ $adjacent->ID ] ) ) {
-					break; // give up if we're not making progress
+					break; // give up if we're not making progress.
 				}
 				$seen[ $adjacent->ID ] = true;
 
