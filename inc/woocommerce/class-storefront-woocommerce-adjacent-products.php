@@ -152,10 +152,11 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 			* product when the published date of products is the same.
 			* We're using simple string replacement instead of regex to have the performance impact
 			* as minimal as possible and matching the exact clause provided by WordPress.
+			*
 			* @see https://github.com/WordPress/wordpress-develop/commit/70ca20bcbb3cbdef483050c4764259324c07359e.
 			*/
 			if ( strpos( $where, 'AND p.ID ' ) !== false ) {
-				$search  = sprintf('AND p.ID %s ', $this->previous ? '<' : '>');
+				$search  = sprintf( 'AND p.ID %s ', $this->previous ? '<' : '>' );
 				$target  = $search . $post->ID;
 				$replace = $search . $new->ID;
 
