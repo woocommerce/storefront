@@ -81,22 +81,20 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 
 			$product               = false;
 			$this->current_product = $post->ID;
+			$iteration             = 0;
+			$limit                 = apply_filters( 'storefront_woocommerce_adjacent_products_max_iterations', 10 );
+			$seen_id               = false;
 
 			// Try to get a valid product via `get_adjacent_post()`.
-			$iteration        = 0;
-			$limit_iteration  = apply_filters( 'storefront_woocommerce_adjacent_products_max_iterations', 10 );
-			$maybe_product_id = false;
-
 			// phpcs:ignore WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 			while ( $adjacent = $this->get_adjacent() ) {
-				$iteration++;
-
-				if ( $iteration > $limit_iteration || $maybe_product_id === $adjacent->ID ) {
+				// Prevent infinite loops.
+				if ( ++$iteration > $limit || $seen_id === $adjacent->ID ) {
 					break;
 				}
 
-				$maybe_product_id = $adjacent->ID;
-				$product          = wc_get_product( $maybe_product_id );
+				$seen_id = $adjacent->ID;
+				$product = wc_get_product( $adjacent->ID );
 
 				if ( $product && $product->is_visible() ) {
 					break;
@@ -145,22 +143,24 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 		 * Filters the WHERE clause in the SQL for an adjacent post query, replacing the
 		 * date with date of the next post to consider.
 		 *
+		 * In WordPress 6.9, get_adjacent_post() also uses ID comparison. We need to replace
+		 * the ID to avoid returning the same product when dates are identical.
+		 * 
 		 * @since 2.4.3
 		 *
 		 * @param string $where The `WHERE` clause in the SQL.
-		 * @return WP_POST|false Post object if successful. False if no valid post is found.
+		 * @return string Modified WHERE clause.
 		 */
 		public function filter_post_where( $where ) {
 			global $post;
 
 			$new = get_post( $this->current_product );
 
-			$where = str_replace( $post->post_date, $new->post_date, $where );
-			$where = preg_replace(
-				'/AND p.ID [<>=]+ \d+/',
-				'AND p.ID ' . ( $this->previous ? '<' : '>' ) . ' ' . $new->ID,
-				$where
-			);
+			// Replace ID comparison for WP 6.9+ compatibility.
+			if ( false !== strpos( $where, 'AND p.ID ' ) ) {
+				$operator = $this->previous ? '<' : '>';
+				$where    = str_replace( "AND p.ID {$operator} {$post->ID}", "AND p.ID {$operator} {$new->ID}", $where );
+			}
 
 			return $where;
 		}
