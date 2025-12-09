@@ -1,7 +1,7 @@
 {
 	"name": "storefront",
 	"title": "Storefront",
-	"version": "4.6.1",
+	"version": "4.6.2",
 	"homepage": "https://woocommerce.com/products/storefront/",
 	"repository": {
 		"type": "git",
