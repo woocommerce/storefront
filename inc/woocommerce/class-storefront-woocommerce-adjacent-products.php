@@ -146,6 +146,22 @@ if ( ! class_exists( 'Storefront_WooCommerce_Adjacent_Products' ) ) :
 
 			$where = str_replace( $post->post_date, $new->post_date, $where );
 
+			/**
+			* In 6.9, the get_adjacent_post() function uses not only date but also ID to get the
+			* adjacent post. We need to replace the ID as well to avoid returning the same adjacent
+			* product when the published date of products is the same.
+			* We're using simple string replacement instead of regex to have the performance impact
+			* as minimal as possible and matching the exact clause provided by WordPress.
+			* @see https://github.com/WordPress/wordpress-develop/commit/70ca20bcbb3cbdef483050c4764259324c07359e.
+			*/
+			if ( strpos( $where, 'AND p.ID ' ) !== false ) {
+				$search  = sprintf('AND p.ID %s ', $this->previous ? '<' : '>');
+				$target  = $search . $post->ID;
+				$replace = $search . $new->ID;
+
+				$where = str_replace( $target, $replace, $where );
+			}
+
 			return $where;
 		}
 
