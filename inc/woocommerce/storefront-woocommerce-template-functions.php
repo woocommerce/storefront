@@ -8,11 +8,20 @@
 if ( ! function_exists( 'storefront_woo_cart_available' ) ) {
 	/**
 	 * Validates whether the Woo Cart instance is available in the request
+	 * Will also be `false` for logged-out users if the Coming Soon mode is enabled for store pages only.
 	 *
 	 * @since 2.6.0
 	 * @return bool
 	 */
 	function storefront_woo_cart_available() {
+		$coming_soon_helper_class = \Automattic\WooCommerce\Internal\ComingSoon\ComingSoonHelper::class;
+		if ( function_exists( 'wc_get_container' ) && class_exists( $coming_soon_helper_class ) ) {
+			$coming_soon_helper = wc_get_container()->get( $coming_soon_helper_class );
+			if ( ! is_user_logged_in() && $coming_soon_helper->is_store_coming_soon() ) {
+				return false;
+			}
+		}
+
 		$woo = WC();
 		return $woo instanceof \WooCommerce && $woo->cart instanceof \WC_Cart;
 	}
