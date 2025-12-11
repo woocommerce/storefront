@@ -1,0 +1,80 @@
+name: PHP Unit Tests
+
+on:
+    push:
+        branches:
+            - trunk
+    pull_request:
+    schedule:
+        - cron: '0 6 * * 1'
+
+jobs:
+    phpunit:
+        name: PHP Unit Tests (WP ${{ matrix.wordpress.name }})
+        runs-on: ubuntu-22.04
+        strategy:
+            matrix:
+                wordpress:
+                    - name: stable
+                      core: null
+                    - name: nightly
+                      core: https://wordpress.org/nightly-builds/wordpress-latest.zip
+        env:
+            WP_ENV_CORE: ${{ matrix.wordpress.core }}
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Use Node.js 20.x
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 20.x
+
+            - name: Cache npm
+              uses: actions/cache@v3
+              env:
+                  cache-name: cache-node-modules
+              with:
+                  path: ~/.npm
+                  key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.os }}-build-${{ env.cache-name }}-
+                      ${{ runner.os }}-build-
+                      ${{ runner.os }}-
+
+            - name: Install Node dependencies
+              run: npm ci
+
+            - name: Get Composer cache directory
+              id: composer-cache
+              run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+            - name: Cache Composer dependencies
+              uses: actions/cache@v3
+              with:
+                  path: ${{ steps.composer-cache.outputs.dir }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-composer-
+
+            - name: Set up PHP
+              uses: shivammathur/setup-php@0f7f1d08e3e32076e51cae65eb0b0c871405b16e # v2.24.1
+              with:
+                  php-version: '8.3'
+                  coverage: none
+                  tools: composer
+
+            - name: Install Composer dependencies
+              run: |
+                  composer install --prefer-dist --no-progress --no-ansi --no-interaction
+                  echo "${PWD}/vendor/bin" >> $GITHUB_PATH
+
+            - name: Start wp-env
+              run: npm run wp-env start -- --update
+
+            - name: Run PHP unit tests
+              run: npm run test:php
+
+            - name: Stop wp-env
+              if: always()
+              run: npm run wp-env stop
