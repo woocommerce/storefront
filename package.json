@@ -49,6 +49,7 @@
 		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
 		"test:e2e": "npm run wp-env run tests-cli wp theme activate storefront && cross-env wp-scripts test-e2e",
+		"test:php": "npm run wp-env run tests-cli -- --env-cwd=/var/www/html/wp-content/themes/storefront vendor/bin/phpunit",
 		"validate-build": "./validate-build.sh"
 	},
 	"jest": {

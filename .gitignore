@@ -30,3 +30,4 @@ config.codekit
 # Composer
 vendor
 /eslint_report.json
+.phpunit.result.cache
