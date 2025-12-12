@@ -13,7 +13,7 @@ class StorefrontWooCommerceAdjacentProductsTest extends WP_UnitTestCase {
 	public function test_next_product_skips_hidden_with_same_date() {
 		$date         = '2024-01-01 10:00:00';
 		$current_post = $this->create_product( $date );
-		$hidden_post  = $this->create_product( $date, true );
+		$hidden_next  = $this->create_product( $date, true );
 		$visible_next = $this->create_product( $date );
 
 		$GLOBALS['post'] = $current_post;
@@ -23,7 +23,7 @@ class StorefrontWooCommerceAdjacentProductsTest extends WP_UnitTestCase {
 
 		$this->assertInstanceOf( WC_Product::class, $result );
 		$this->assertSame( $visible_next->ID, $result->get_id(), 'Hidden adjacent product should be skipped.' );
-		$this->assertNotSame( $hidden_post->ID, $result->get_id(), 'Hidden product must not be returned.' );
+		$this->assertNotSame( $hidden_next->ID, $result->get_id(), 'Hidden product must not be returned.' );
 	}
 
 	/**
