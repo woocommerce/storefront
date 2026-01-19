@@ -92,7 +92,7 @@
 		"@wordpress/env": "10.6.0",
 		"@wordpress/eslint-plugin": "15.1.0",
 		"@wordpress/prettier-config": "2.25.13",
-		"@wordpress/scripts": "27.2.6",
+		"@wordpress/scripts": "30.0.0",
 		"autoprefixer": "10.4.20",
 		"bourbon": "7.3.0",
 		"browserslist": "4.23.3",
