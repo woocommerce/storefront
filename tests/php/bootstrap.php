@@ -35,4 +35,6 @@ tests_add_filter(
 require_once $wp_tests_dir . '/includes/bootstrap.php';
 
 // Load the class under test.
-require dirname( __DIR__, 2 ) . '/inc/woocommerce/class-storefront-woocommerce-adjacent-products.php';
+require_once dirname( __DIR__, 2 ) . '/inc/storefront-functions.php';
+require_once dirname( __DIR__, 2 ) . '/inc/storefront-template-functions.php';
+require_once dirname( __DIR__, 2 ) . '/inc/woocommerce/class-storefront-woocommerce-adjacent-products.php';

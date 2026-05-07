@@ -70,8 +70,8 @@ There are some other commands which may be used occasionally:
 -   `npm run build:css`: Runs the css build step only.
 -   `npm run build:js`: Runs the JS build step only.
 -   `npm run lint`: Checks source files against the PHP coding standards.
--   `npm run wp-env`: Provides access to a [wp-env development environment](https://developer.wordpress.org/block-editor/packages/packages-env/). This can be used for testing theme changes locally, or running e2e tests.
--   `npm run test:e2e`: Runs the end-to-end tests. Requires that the e2e environment is started (currently using wp-env).
+-   `npm run wp-env`: Provides access to a [wp-env development environment](https://developer.wordpress.org/block-editor/packages/packages-env/). This can be used for testing theme changes locally, or running PHP integration tests.
+-   `npm run test:php`: Runs the PHP integration tests. Requires that the wp-env environment is started.
 
 #### How To Submit A PR
 

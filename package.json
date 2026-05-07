@@ -43,33 +43,13 @@
 		"lint:ci": "npm run lint:js && npm run lint:css",
 		"lint:css": "stylelint 'assets/**/*.scss'",
 		"lint:css-fix": "stylelint 'assets/**/*.scss' --fix",
-		"lint:js": "wp-scripts lint-js assets/js --ext=js,ts,tsx",
+		"lint:js": "eslint assets/js --ext=js,ts,tsx",
 		"lint:js:report": "npm run lint:js -- --output-file eslint_report.json --ext=js,ts,tsx --format json",
 		"lint:js-fix": "eslint assets/js --ext=js,jsx,ts,tsx --fix",
 		"lint:php": "composer run-script phpcs ./inc",
 		"wp-env": "wp-env",
-		"test:e2e": "npm run wp-env run tests-cli wp theme activate storefront && cross-env wp-scripts test-e2e",
 		"test:php": "npm run wp-env run tests-cli -- --env-cwd=/var/www/html/wp-content/themes/storefront vendor/bin/phpunit",
 		"validate-build": "./validate-build.sh"
-	},
-	"jest": {
-		"preset": "jest-puppeteer",
-		"setupFilesAfterEnv": [
-			"expect-puppeteer"
-		],
-		"globals": {
-			"STORE_URL": "http://localhost:8802"
-		},
-		"reporters": [
-			"default",
-			[
-				"jest-html-reporters",
-				{
-					"publicPath": "./artifacts",
-					"filename": "report.html"
-				}
-			]
-		]
 	},
 	"config": {
 		"wp_org_slug": "storefront",
@@ -92,23 +72,22 @@
 		"@wordpress/env": "10.6.0",
 		"@wordpress/eslint-plugin": "15.1.0",
 		"@wordpress/prettier-config": "2.25.13",
-		"@wordpress/scripts": "27.2.6",
+		"@wordpress/stylelint-config": "21.41.0",
 		"autoprefixer": "10.4.20",
 		"bourbon": "7.3.0",
 		"browserslist": "4.23.3",
 		"concurrently": "8.2.2",
-		"cross-env": "7.0.3",
+		"eslint": "8.57.0",
 		"eslint-plugin-import": "2.29.1",
 		"github-label-sync": "2.3.1",
-		"jest-puppeteer": "10.1.0",
-		"jest-html-reporters": "^3.1.7",
 		"lodash": "4.17.21",
 		"node-wp-i18n": "1.2.7",
 		"onchange": "7.1.0",
 		"postcss-cli": "11.0.0",
 		"prettier": "npm:wp-prettier@2.8.5",
-		"puppeteer": "23.2.1",
 		"rtlcss": "4.3.0",
+		"sass": "1.77.8",
+		"stylelint": "14.16.1",
 		"susy": "2.2.14",
 		"typescript": "5.5.4",
 		"uglify-js": "3.19.3"

@@ -25,3 +25,4 @@ npm run test:php
 Currently, the following classes are tested:
 
 -   `Storefront_WooCommerce_Adjacent_Products` - Integration tests verifying adjacent product selection skips hidden products on identical publish dates.
+-   `storefront_credit()` - Integration test verifying the WooCommerce footer credit output.

@@ -3,7 +3,11 @@ module.exports = {
 	globals: {
 		jQuery: 'readonly',
 	},
-	settings: {},
+	settings: {
+		jest: {
+			version: 29,
+		},
+	},
 	rules: {
 		'woocommerce/feature-flag': 'off',
 		'@wordpress/no-global-active-element': 'warn',
