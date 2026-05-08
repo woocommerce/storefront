@@ -92,6 +92,9 @@
 		"typescript": "5.5.4",
 		"uglify-js": "3.19.3"
 	},
+	"overrides": {
+		"axios": "^1.15.1"
+	},
 	"engines": {
 		"node": "20.17.0",
 		"npm": "10.8.2"
