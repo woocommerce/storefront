@@ -79,3 +79,23 @@ jobs:
               run: npm install
             - name: Lint CSS
               run: npm run lint:css
+
+    build:
+        name: Validate Build
+        needs: Setup
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - name: Cache node modules
+              uses: actions/cache@v3
+              with:
+                  path: node_modules
+                  key: ${{ runner.OS }}-build-${{ hashFiles('**/package-lock.json') }}
+                  restore-keys: |
+                      ${{ runner.OS }}-build-${{ env.cache-name }}-
+                      ${{ runner.OS }}-build-
+                      ${{ runner.OS }}-
+            - name: Install Node Dependencies
+              run: npm install
+            - name: Build JS and CSS
+              run: npm run build:dev
