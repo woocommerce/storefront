@@ -100,13 +100,13 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 		 */
 		public function add_core_fonts() {
 			$fonts_url = plugins_url( '/woocommerce/assets/fonts/' );
+			// WooCommerce no longer ships .eot fonts (removed upstream), so omit those
+			// URLs to avoid 404s while keeping the remaining font formats.
 			wp_add_inline_style(
 				'storefront-woocommerce-style',
 				'@font-face {
 				font-family: star;
-				src: url(' . $fonts_url . 'star.eot);
 				src:
-					url(' . $fonts_url . 'star.eot?#iefix) format("embedded-opentype"),
 					url(' . $fonts_url . 'star.woff) format("woff"),
 					url(' . $fonts_url . 'star.ttf) format("truetype"),
 					url(' . $fonts_url . 'star.svg#star) format("svg");
@@ -115,9 +115,8 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 			@font-face {
 				font-family: WooCommerce;
-				src: url(' . $fonts_url . 'WooCommerce.eot);
 				src:
-					url(' . $fonts_url . 'WooCommerce.eot?#iefix) format("embedded-opentype"),
+					url(' . $fonts_url . 'WooCommerce.woff2) format("woff2"),
 					url(' . $fonts_url . 'WooCommerce.woff) format("woff"),
 					url(' . $fonts_url . 'WooCommerce.ttf) format("truetype"),
 					url(' . $fonts_url . 'WooCommerce.svg#WooCommerce) format("svg");
