@@ -17,7 +17,9 @@
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>
-			<property name="text_domain" type="array" value="storefront" />
+			<property name="text_domain" type="array">
+				<element value="storefront"/>
+			</property>
 		</properties>
 	</rule>
 
