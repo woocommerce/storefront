@@ -26,14 +26,14 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
-              uses: actions/checkout@v3
+              uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
 
             - name: Get Composer cache directory
               id: composer-cache
               run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
 
             - name: Set up Composer caching
-              uses: actions/cache@v3
+              uses: actions/cache@6f8efc29b200d32929f49075959781ed54ec270c # v3
               env:
                   cache-name: cache-composer-dependencies
               with:
