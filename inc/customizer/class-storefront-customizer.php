@@ -167,8 +167,8 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			/**
 			 * Custom controls
 			 */
-			require_once dirname( __FILE__ ) . '/class-storefront-customizer-control-radio-image.php';
-			require_once dirname( __FILE__ ) . '/class-storefront-customizer-control-arbitrary.php';
+			require_once __DIR__ . '/class-storefront-customizer-control-radio-image.php';
+			require_once __DIR__ . '/class-storefront-customizer-control-arbitrary.php';
 
 			/**
 			 * Filter for including additional custom controls.
@@ -178,7 +178,7 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 			 * @since    2.0.0
 			 */
 			if ( apply_filters( 'storefront_customizer_more', true ) ) {
-				require_once dirname( __FILE__ ) . '/class-storefront-customizer-control-more.php';
+				require_once __DIR__ . '/class-storefront-customizer-control-more.php';
 			}
 
 			/**
@@ -1402,7 +1402,6 @@ if ( ! class_exists( 'Storefront_Customizer' ) ) :
 
 			return true;
 		}
-
 	}
 
 endif;

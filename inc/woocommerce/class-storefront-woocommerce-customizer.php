@@ -329,7 +329,6 @@ if ( ! class_exists( 'Storefront_WooCommerce_Customizer' ) ) :
 		public function add_customizer_css() {
 			wp_add_inline_style( 'storefront-woocommerce-style', $this->get_css() );
 		}
-
 	}
 
 endif;
