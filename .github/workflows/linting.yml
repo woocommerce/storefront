@@ -7,6 +7,7 @@ jobs:
     Setup:
         name: Setup for Jobs
         runs-on: ubuntu-latest
+        timeout-minutes: 5
 
         steps:
             - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
@@ -26,6 +27,7 @@ jobs:
         name: Lint JavaScript
         needs: Setup
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
             - name: Cache node modules
@@ -64,6 +66,7 @@ jobs:
         name: Lint CSS
         needs: Setup
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
             - name: Cache node modules
@@ -84,6 +87,7 @@ jobs:
         name: Validate Build
         needs: Setup
         runs-on: ubuntu-latest
+        timeout-minutes: 5
         steps:
             - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
             - name: Cache node modules
