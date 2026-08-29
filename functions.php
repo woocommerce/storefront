@@ -66,6 +66,52 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
 }
 
 /**
+* Here’s a basic implementation of One-Click Checkout for WooCommerce. 
+* This code allows customers to instantly purchase a product with a single click, skipping the cart page, 
+* and proceeding directly to the checkout page with the product already in their cart.
+*/
+
+// Redirect to the Checkout page after adding a product to the cart
+add_filter('woocommerce_add_to_cart_redirect', 'one_click_checkout_redirect');
+
+function one_click_checkout_redirect($url) {
+    // Get the WooCommerce checkout page URL
+    $checkout_url = wc_get_checkout_url();
+    
+    return $checkout_url;
+}
+
+// Add a 'Buy Now' button on product pages
+add_action('woocommerce_after_add_to_cart_button', 'one_click_checkout_button');
+
+function one_click_checkout_button() {
+    global $product;
+    
+    // Create a custom 'Buy Now' button
+    echo '<a href="' . esc_url(add_query_arg('buy_now', $product->get_id())) . '" class="button buy-now-button">Buy Now</a>';
+}
+
+// Process the 'Buy Now' action
+add_action('template_redirect', 'one_click_checkout_process');
+
+function one_click_checkout_process() {
+    if (isset($_GET['buy_now'])) {
+        // Clear the cart
+        WC()->cart->empty_cart();
+
+        // Get the product ID from the URL
+        $product_id = intval($_GET['buy_now']);
+
+        // Add the product to the cart
+        WC()->cart->add_to_cart($product_id);
+
+        // Redirect to the checkout page
+        wp_safe_redirect(wc_get_checkout_url());
+        exit;
+    }
+}
+
+/**
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
