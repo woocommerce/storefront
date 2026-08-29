@@ -239,6 +239,13 @@ if ( ! class_exists( 'Storefront' ) ) :
 					),
 				)
 			);
+
+			/**
+			 * Add support for block emplate parts.
+			 *
+			 * @return void
+			 */
+			add_theme_support( 'block-template-parts' );
 		}
 
 		/**
