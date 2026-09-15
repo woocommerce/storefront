@@ -104,9 +104,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 				'storefront-woocommerce-style',
 				'@font-face {
 				font-family: star;
-				src: url(' . $fonts_url . 'star.eot);
 				src:
-					url(' . $fonts_url . 'star.eot?#iefix) format("embedded-opentype"),
 					url(' . $fonts_url . 'star.woff) format("woff"),
 					url(' . $fonts_url . 'star.ttf) format("truetype"),
 					url(' . $fonts_url . 'star.svg#star) format("svg");
@@ -115,9 +113,7 @@ if ( ! class_exists( 'Storefront_WooCommerce' ) ) :
 			}
 			@font-face {
 				font-family: WooCommerce;
-				src: url(' . $fonts_url . 'WooCommerce.eot);
 				src:
-					url(' . $fonts_url . 'WooCommerce.eot?#iefix) format("embedded-opentype"),
 					url(' . $fonts_url . 'WooCommerce.woff) format("woff"),
 					url(' . $fonts_url . 'WooCommerce.ttf) format("truetype"),
 					url(' . $fonts_url . 'WooCommerce.svg#WooCommerce) format("svg");
