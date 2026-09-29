@@ -138,7 +138,7 @@ if ( ! class_exists( 'Storefront_Admin' ) ) :
 						<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/admin/welcome-screen/child-themes.jpg" alt="Storefront Powerpack" />
 
 						<p>
-							<?php esc_html_e( 'Quickly and easily transform your shops appearance with Storefront child themes.', 'storefront' ); ?>
+							<?php esc_html_e( 'Quickly and easily transform your shop\'s appearance with Storefront child themes.', 'storefront' ); ?>
 						</p>
 
 						<p>
