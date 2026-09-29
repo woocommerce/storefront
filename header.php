@@ -15,6 +15,13 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<?php
+// Need to call do_blocks() here to ensure any script/styles are enqueued in wp_head.
+global $storefront_block_mini_cart;
+// todo: could potentially implement better default attributes for the block.
+$storefront_block_mini_cart = function_exists( 'do_blocks' ) ? do_blocks( '<!-- wp:woocommerce/mini-cart /-->' ) : null;
+?>
+
 <?php wp_head(); ?>
 </head>
 
