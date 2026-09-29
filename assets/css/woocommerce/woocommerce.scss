@@ -2891,7 +2891,8 @@ dl.variation {
 		}
 	}
 
-	#customer_details + #wc_checkout_add_ons {
+	#customer_details + #wc_checkout_add_ons,
+	#customer_details + wc-order-attribution-inputs + #wc_checkout_add_ons {
 
 		@include span( last 4 of 9 );
 	}
