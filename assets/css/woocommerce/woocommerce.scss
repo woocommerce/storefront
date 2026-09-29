@@ -462,6 +462,11 @@ ul.products,
 				text-align: center;
 			}
 
+			.woocommerce-product-gallery__image > a {
+				display: block;
+				outline-offset: -2px;
+			}
+
 			img {
 				margin: 0;
 			}
