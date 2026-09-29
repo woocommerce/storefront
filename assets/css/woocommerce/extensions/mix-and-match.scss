@@ -9,25 +9,34 @@
 @import "../../sass/utils/variables";
 @import "../../sass/vendors/modular-scale";
 
-.mnm_table {
+.single-product div.product {
 
-	.product-thumbnail,
-	.product-name,
-	.product-quantity,
-	.container-quantity {
-		padding: ms(-2) ms(-1) !important;
-	}
+	// Tabular layout.
+	.mnm_table {
 
-	.mnm_item {
-
-		img {
-			max-width: 100%;
+		.product-thumbnail,
+		.product-description,
+		.product-quantity {
+			padding: ms(-2) ms(-1) !important;
 		}
+
+		.mnm_item {
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		.product-quantity .quantity {
+			margin-right: 0;
+		}
+
 	}
 
-	.product-name {
-		vertical-align: middle;
+	.mnm-checkbox {
+		width: initial;
 	}
+
 }
 
 .cart,
