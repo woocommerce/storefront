@@ -16,12 +16,15 @@
 		const cart = document.querySelector( '.site-header-cart' );
 
 		cart.addEventListener( 'mouseover', function () {
-			const windowHeight = window.outerHeight,
-				cartBottomPos =
+			const windowHeight = window.outerHeight;
+			const shoppingCartContent =
 					this.querySelector(
 						'.widget_shopping_cart_content'
-					).getBoundingClientRect().bottom + this.offsetHeight,
-				cartList = this.querySelector( '.cart_list' );
+					);
+			const cartBottomPos = (shoppingCartContent)
+                ? shoppingCartContent.getBoundingClientRect().bottom + this.offsetHeight
+                : 0;
+			const cartList = document.querySelector( '.cart_list' );
 
 			if ( cartBottomPos > windowHeight ) {
 				cartList.style.maxHeight = '15em';
