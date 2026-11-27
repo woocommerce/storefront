@@ -69,3 +69,67 @@ if ( version_compare( get_bloginfo( 'version' ), '4.7.3', '>=' ) && ( is_admin()
  * Note: Do not add any custom code here. Please use a custom plugin so that your customizations aren't lost during updates.
  * https://github.com/woocommerce/theme-customisations
  */
+
+ // Add a new setting field for One-Click Checkout in WooCommerce settings
+add_filter('woocommerce_general_settings', 'add_one_click_checkout_setting');
+function add_one_click_checkout_setting($settings) {
+    $settings[] = array(
+        'name'     => __('One-Click Checkout', 'your-text-domain'),
+        'type'     => 'title',
+        'desc'     => __('Enable One-Click Checkout for returning customers.', 'your-text-domain'),
+        'id'       => 'one_click_checkout_title'
+    );
+
+    $settings[] = array(
+        'name'     => __('Enable One-Click Checkout', 'your-text-domain'),
+        'id'       => 'enable_one_click_checkout',
+        'type'     => 'checkbox',
+        'desc'     => __('Enable the One-Click Checkout feature.', 'your-text-domain'),
+        'default'  => 'no',
+    );
+
+    $settings[] = array('type' => 'sectionend', 'id' => 'one_click_checkout_title');
+
+    return $settings;
+}
+
+// Redirect users to the checkout page if One-Click Checkout is enabled and they are logged in
+add_filter('woocommerce_add_to_cart_redirect', 'one_click_checkout_redirect');
+function one_click_checkout_redirect($url) {
+    // Check if One-Click Checkout is enabled
+    if ('yes' === get_option('enable_one_click_checkout') && is_user_logged_in()) {
+        // Skip cart page and go directly to the checkout page
+        $checkout_url = wc_get_checkout_url();
+        return $checkout_url;
+    }
+
+    return $url;
+}
+
+// Pre-fill checkout form for returning customers if One-Click Checkout is enabled
+add_filter('woocommerce_checkout_fields', 'prefill_checkout_fields_for_returning_customers');
+function prefill_checkout_fields_for_returning_customers($fields) {
+    if ('yes' === get_option('enable_one_click_checkout') && is_user_logged_in()) {
+        $current_user = wp_get_current_user();
+        
+        // Pre-fill billing fields with user data
+        $fields['billing']['billing_first_name']['default'] = $current_user->billing_first_name;
+        $fields['billing']['billing_last_name']['default'] = $current_user->billing_last_name;
+        $fields['billing']['billing_email']['default'] = $current_user->user_email;
+        $fields['billing']['billing_phone']['default'] = $current_user->billing_phone;
+        $fields['billing']['billing_address_1']['default'] = $current_user->billing_address_1;
+        $fields['billing']['billing_city']['default'] = $current_user->billing_city;
+        $fields['billing']['billing_postcode']['default'] = $current_user->billing_postcode;
+        $fields['billing']['billing_country']['default'] = $current_user->billing_country;
+
+        // Pre-fill shipping fields if needed (optional)
+        // $fields['shipping']['shipping_first_name']['default'] = $current_user->shipping_first_name;
+        // $fields['shipping']['shipping_last_name']['default'] = $current_user->shipping_last_name;
+        // $fields['shipping']['shipping_address_1']['default'] = $current_user->shipping_address_1;
+        // $fields['shipping']['shipping_city']['default'] = $current_user->shipping_city;
+        // $fields['shipping']['shipping_postcode']['default'] = $current_user->shipping_postcode;
+        // $fields['shipping']['shipping_country']['default'] = $current_user->shipping_country;
+    }
+
+    return $fields;
+}
